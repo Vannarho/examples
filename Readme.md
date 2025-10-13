@@ -1,30 +1,117 @@
-# VRE Python Module
+# VRE
 
-We provide easy access to VRE via a pre-compiled Python module, updated with each release.
-The Python module provides the same functionality as the VRE command line executable and more.
+Vannarho Risk Engine (VRE) is aimed at establishing a transparent peer-reviewed framework for pricing and risk
+analysis that can serve as
 
-Some example scripts using this VRE module are provided in this VREPython directory.
+* a benchmarking, validation, training, teaching reference
+* an extensible foundation for tailored risk solutions
 
-Prerequisite: Python 3.9+
+VRE provides:
 
-If you are developing locally, install the module into your environment rather than tweaking `PYTHONPATH`.
-From `VREPython/`, run: `python -m pip install -e .`.
+* contemporary risk analytics and value adjustments (XVAs)
+* interfaces for trade/market data and system configuration (API and XML)
+* simple application launchers in Excel, LibreOffice, Python, Jupyter
+* various examples that demonstrate typical use cases
+* comprehensive test suites
 
-Otherwise install the pre-built Python module as follows:
+VRE is a c++23 library built on top of:
 
-Create a virtual environment: <code> python -m venv env1 </code>
+* [QuantLib](http://quantlib.org), the open source library
+* [The Open Source Risk Engine](http://www.opensourcerisk.org)
 
-Activate the virtual environment
-- on Windows: <code> .\env1\Scripts\activate.bat </code>
-- on macOS or Linux: <code> source env1/bin/activate </code>
+It extends QuantLib and The Open Source Risk Engine in terms of simulation models, financial instruments and pricing engines. For example:
 
-Then install VRE: <code> pip install vannarho-risk-engine </code>
+* Updated SACCR, SACVA (SA and SBM), FTRB (SA and SBM) modules with broad product and test coverage
+* Refactored c++23 codebase
+* New CUDA module handling multiple GPUs
+* Fast sensitivities for a broad range of trades using AAD and GPU
 
-Try the Python examples
-- Re-run the Swap exposure of the first Exposure example: <code> python vre.py </code>
-- Show how to access and post-process VRE in-memory results without reading files: <code> python vre2.py </code>
-- Demonstrate lower-level access to the QuantLib and QuantExt libraries: <code> python commodityforward.py </code>
-- Then try any of the Jupyter notebooks, in directories VREPython/Notebooks/Example_*;
-  install juypter: <code> python -m pip install jupyterlab </code>
-  start juypter: <code> python -m jupyterlab & </code>
-  and open any of the notebooks
+# Vannarho Risk Engine — Python Binary Wheels
+
+[![PyPI](https://img.shields.io/pypi/v/vannarho-risk-engine.svg)](https://pypi.org/project/vannarho-risk-engine/)
+[![Python Versions](https://img.shields.io/pypi/pyversions/vannarho-risk-engine.svg)](https://pypi.org/project/vannarho-risk-engine/)
+[![Platforms](https://img.shields.io/badge/wheels-linux%20%7C%20macOS%20%7C%20windows-blue)](#supported-platforms)
+[![License: BSD-3-Clause](https://img.shields.io/badge/license-BSD--3--Clause-blue.svg)](../LICENSE)
+
+High‑performance quantitative finance toolkit exposing VRE (Vannarho Risk Engine) to Python. Ships as prebuilt, self‑contained binary wheels that bundle core native libraries (QuantLib, QuantExt, VREData, VREAnalytics) behind a single `VRE` extension.
+
+* Import path: `import VRE`
+* Submodules: `VRE.ql`, `VRE.qle`, `VRE.vred`, `VRE.vrea`
+
+> Note: This is a binary distribution. Building from source is not required for end‑users and is not officially supported outside CI.
+
+## Installation
+
+Stable releases from PyPI:
+
+```
+python -m pip install --upgrade pip
+python -m pip install vannarho-risk-engine
+```
+
+No additional system packages are required; the wheel includes native dependencies. If you see a compiler invocation during install, you are likely installing from a source tree or an unsupported environment — see Troubleshooting.
+
+## Quickstart
+
+```python
+import VRE
+
+# Print a few top-level attributes and verify a minimal component is available
+print("VRE loaded. Submodules:", [m for m in dir(VRE) if m in ("ql", "qle", "vred", "vrea")])
+
+# Example: construct a QuantLib Date via the ql submodule
+Date = VRE.ql.Date
+today = Date.todaysDate()
+print("Today:", today)
+```
+
+## Supported Platforms
+
+Binary wheels are provided for:
+
+* CPython 3.9–3.13
+* Linux x86_64 (manylinux / musllinux where applicable)
+* macOS arm64 and x86_64 (universal2 where applicable)
+* Windows x86_64
+
+If your platform is not listed, pip may report “No matching distribution found”.
+
+## Examples and Notebooks
+
+End‑to‑end examples, tutorials, and Jupyter notebooks live in a companion repository:
+
+* <https://github.com/Vannarho/examples>
+
+This repo includes sample input data, portfolio XMLs, curve configurations, and small walkthroughs for pricing, exposure profiles, and XVA workflows.
+
+## Troubleshooting
+
+* ImportError: “DLL load failed” or “undefined symbol”
+  * Ensure you installed a prebuilt wheel (`pip install vannarho-risk-engine`).
+  * On Linux, avoid mixing system Python with wheels built for a different glibc/musl variant. Use the official CPython from python.org/pyenv.
+  * Check: `python -m pip show vannarho-risk-engine` and `pip debug --verbose`.
+
+* Build starts during pip install
+  * You’re likely installing from a source checkout or on an unsupported platform. Prefer the published wheels. If you must build from source, see `VREPython/tutorials.015.build_posix.md`.
+
+* Apple Silicon cross‑install
+  * On arm64 macOS, prefer a native arm64 Python. If you run an x86_64 Python under Rosetta, pip will fetch the x86_64 wheel.
+
+## Project Links
+
+* Documentation (in‑repo): `Docs/` and `RELEASE.md`
+* Examples & notebooks: placeholder <https://github.com/Vannarho/examples>
+* Issue tracker: <https://github.com/Vannarho/examples/issues>
+
+## Contributing
+
+Contributions are welcome. See `CONTRIBUTING.md` and `AGENTS.md` for code style, test policy, and development setup. For packaging changes, coordinate via issues to ensure cross‑platform compatibility.
+
+## Security & Support
+
+* Security contact: <security@vannarho.com>
+* For general support, open a GitHub issue with platform, Python version, wheel filename, and the output of `pip debug --verbose`.
+
+## License & Notices
+
+Distributed under the BSD‑3‑Clause license. See `LICENSE` and `NOTICE` for details and third‑party attributions.

@@ -1,0 +1,25 @@
+NOTICE for vre (1.0.0)
+======================
+
+Copyright (c) 2025 Growth Mindset Pty Ltd
+
+This product is licensed under: BSD-3-Clause. See LICENSE for the full text.
+
+Project URL: <https://github.com/Vannarho/VRE>
+Generated: 2025-09-23
+
+Third-party components and attributions
+--------------------------------------
+
+This software bundles or links against third-party libraries. Please review their licenses:
+
+- QuantLib — see QuantLib license (BSD-3-Clause) and project site: <https://www.quantlib.org/>
+- ORE — see license (BSD-style) and project site: <https://www.opensourcerisk.org/>
+- pybind11 — see license: <https://github.com/pybind/pybind11/blob/master/LICENSE>
+
+If additional dependencies are used in this build, add them here with license names and links.
+
+Notices
+-------
+
+This NOTICE file is provided for informational purposes only and does not modify the licensing terms.

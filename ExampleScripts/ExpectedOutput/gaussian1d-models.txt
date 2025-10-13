@@ -1,0 +1,55 @@
+RUN gaussian1d-models.py
+
+
+Explicit helper basket (fallback)
+--------------------------------------------------------------------------------
+       Expiry    Maturity Nominal      Rate Market vol
+0  2015-04-30  2020-04-30   1.000  0.400000   0.400000
+1  2016-05-02  2021-05-03   1.000  0.400000   0.400000
+
+Calibration (engine path)
+--------------------------------------------------------------------------------
+  Expiry Model sigma Model price (ccy) Market price (ccy) Model imp.vol Market imp.vol
+0           0.010000          0.000000           0.000000      0.400000       0.400000
+1           0.010000          0.000000           0.000000      0.400000       0.400000
+
+GSR calibration (Naive) — calibration quality
+--------------------------------------------------------------------------------
+n          : 2
+mean |err| : 0.000000
+max  |err| : 0.000000
+Traceback (most recent call last):
+  File "/Users/fordesmith/Documents/vre/Examples/VREPython/ExampleScripts/gaussian1d-models.py", line 478, in _guarded_nonstd_npv
+    _assert_nonzero(label, npv)
+  File "/Users/fordesmith/Documents/vre/Examples/VREPython/ExampleScripts/gaussian1d-models.py", line 144, in _assert_nonzero
+    raise RuntimeError(f"{name} is ~0.0 — adjust demo inputs (deeper ITM strike, higher vol, or model sigma)")
+RuntimeError: Bermudan NPV (ATM calibrated GSR) is ~0.0 — adjust demo inputs (deeper ITM strike, higher vol, or model sigma)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/fordesmith/Documents/vre/Examples/VREPython/ExampleScripts/gaussian1d-models.py", line 495, in _guarded_nonstd_npv
+    _assert_nonzero(label + " (retry)", npv2)
+  File "/Users/fordesmith/Documents/vre/Examples/VREPython/ExampleScripts/gaussian1d-models.py", line 144, in _assert_nonzero
+    raise RuntimeError(f"{name} is ~0.0 — adjust demo inputs (deeper ITM strike, higher vol, or model sigma)")
+RuntimeError: Bermudan NPV (ATM calibrated GSR) (retry) is ~0.0 — adjust demo inputs (deeper ITM strike, higher vol, or model sigma)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/fordesmith/Documents/vre/Examples/VREPython/ExampleScripts/gaussian1d-models.py", line 517, in _guarded_nonstd_npv
+    _assert_nonzero(label + " (retry2 deeper ITM)", npv3)
+  File "/Users/fordesmith/Documents/vre/Examples/VREPython/ExampleScripts/gaussian1d-models.py", line 144, in _assert_nonzero
+    raise RuntimeError(f"{name} is ~0.0 — adjust demo inputs (deeper ITM strike, higher vol, or model sigma)")
+RuntimeError: Bermudan NPV (ATM calibrated GSR) (retry2 deeper ITM) is ~0.0 — adjust demo inputs (deeper ITM strike, higher vol, or model sigma)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/fordesmith/Documents/vre/Examples/VREPython/ExampleScripts/gaussian1d-models.py", line 536, in <module>
+    _npv_atm = _guarded_nonstd_npv("Bermudan NPV (ATM calibrated GSR)", gsr, swaption3, t0_Ois)
+  File "/Users/fordesmith/Documents/vre/Examples/VREPython/ExampleScripts/gaussian1d-models.py", line 522, in _guarded_nonstd_npv
+    _assert_nonzero(label + " (retry3 sigma↑)", npv4)
+  File "/Users/fordesmith/Documents/vre/Examples/VREPython/ExampleScripts/gaussian1d-models.py", line 144, in _assert_nonzero
+    raise RuntimeError(f"{name} is ~0.0 — adjust demo inputs (deeper ITM strike, higher vol, or model sigma)")
+RuntimeError: Bermudan NPV (ATM calibrated GSR) (retry3 sigma↑) is ~0.0 — adjust demo inputs (deeper ITM strike, higher vol, or model sigma)

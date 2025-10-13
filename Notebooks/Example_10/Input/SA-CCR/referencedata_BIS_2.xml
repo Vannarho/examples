@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<ReferenceData>
+  <!-- SACCR envelope overrides as standalone ReferenceDatum entries -->
+  <ReferenceDatum type="SACCRAdditionalFields" id="CDS_FirmA">
+    <SACCRAdditionalFields>
+      <issuer_name>FirmA</issuer_name>
+      <sub_class>CreditSingle</sub_class>
+      <credit_rating>AA</credit_rating>
+    </SACCRAdditionalFields>
+  </ReferenceDatum>
+
+  <ReferenceDatum type="SACCRAdditionalFields" id="CDS_FirmB">
+    <SACCRAdditionalFields>
+      <issuer_name>FirmB</issuer_name>
+      <sub_class>CreditSingle</sub_class>
+      <credit_rating>BBB</credit_rating>
+    </SACCRAdditionalFields>
+  </ReferenceDatum>
+
+  <ReferenceDatum type="SACCRAdditionalFields" id="CDS_CDX_IG">
+    <SACCRAdditionalFields>
+      <issuer_name>CDX.IG</issuer_name>
+      <sub_class>CreditIndex</sub_class>
+      <credit_rating>IG</credit_rating>
+    </SACCRAdditionalFields>
+  </ReferenceDatum>
+</ReferenceData>

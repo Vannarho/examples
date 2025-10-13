@@ -1,0 +1,13 @@
+RUN conventions.py
+Conventions type is  <class 'VRE.vred.Conventions'>
+Loading conventions from: Input/conventions.xml
+Loaded conventions from string
+convObj is of type  <class 'VRE.vred.AverageOisConvention'>
+convObj ID =  USD-AVERAGE-OIS-CONVENTIONS
+convObj type() is  ConventionType.AverageOIS
+USD-FedFunds
+idx is of type  <class 'str'>
+index name is  USD-FedFunds
+<class 'VRE.ql.FedFunds'>
+<class 'VRE.ql.YieldTermStructure'>
+discount 10y =  0.9505294716052813

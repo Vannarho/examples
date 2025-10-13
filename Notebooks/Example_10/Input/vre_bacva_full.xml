@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<VRE>
+  <Setup>
+    <Parameter name="asofDate">2016-02-05</Parameter>
+    <Parameter name="inputPath">Input/SACVA</Parameter>
+    <Parameter name="outputPath">Output/bacva_full</Parameter>
+    <Parameter name="logFile">log.txt</Parameter>
+    <Parameter name="logMask">255</Parameter>
+    <Parameter name="marketDataFile">../../../../../Input/market_20160205.txt</Parameter>
+    <Parameter name="fixingDataFile">../../../../../Input/fixings_20160205.txt</Parameter>
+    <Parameter name="implyTodaysFixings">N</Parameter>
+    <Parameter name="curveConfigFile">../../../../../Input/curveconfig.xml</Parameter>
+    <Parameter name="conventionsFile">../../../../../Input/conventions.xml</Parameter>
+    <Parameter name="marketConfigFile">../../../../../Input/todaysmarket.xml</Parameter>
+    <Parameter name="pricingEnginesFile">pricingengine.xml</Parameter>
+    <Parameter name="portfolioFile">portfolio_sensi_inc_hedge.xml</Parameter>
+    <Parameter name="observationModel">Disable</Parameter>
+    <Parameter name="nThreads">1</Parameter>
+    <Parameter name="tradingDeskFile">../../../../../Input/tradingdesk.xml</Parameter>
+    <Parameter name="counterpartyFile">counterparty.xml</Parameter>
+  </Setup>
+  <Markets>
+    <Parameter name="lgmcalibration">collateral_inccy</Parameter>
+    <Parameter name="fxcalibration">xois_eur</Parameter>
+    <Parameter name="pricing">xois_eur</Parameter>
+    <Parameter name="simulation">xois_eur</Parameter>
+    <Parameter name="sensitivity">xois_eur</Parameter>
+  </Markets>
+  <Analytics>
+    <Analytic type="npv">
+      <Parameter name="active">Y</Parameter>
+      <Parameter name="baseCurrency">EUR</Parameter>
+      <Parameter name="outputFileName">npv.csv</Parameter>
+    </Analytic>
+    <Analytic type="saccr">
+      <Parameter name="active">Y</Parameter>
+      <Parameter name="simplifiedSACCR">N</Parameter>
+      <Parameter name="OEMSACCR">N</Parameter>
+      <Parameter name="ignoreMarginSACCR">N</Parameter>
+      <Parameter name="saccrOutputFileName">saccr_output.csv</Parameter>
+      <Parameter name="saccrTreeOutputFileName">saccr_output.json</Parameter>
+      <Parameter name="saccrCrifOutputFileName">saccr_crif.csv</Parameter>
+      <Parameter name="saccrPortfolioFile">portfolio_sensi_inc_hedge.xml</Parameter>
+      <Parameter name="saccrCollateralBalancesFile">collateralbalances.xml</Parameter>
+      <Parameter name="saccrCsaFile">netting.xml</Parameter>
+      <Parameter name="saccrBaseCurrency">EUR</Parameter>
+    </Analytic>
+    <Analytic type="sacva">
+      <Parameter name="active">Y</Parameter>
+      <Parameter name="saCvaMethod">BA_FULL</Parameter>
+    </Analytic>
+  </Analytics>
+</VRE>

@@ -10,7 +10,7 @@ VRE provides:
 
 * contemporary risk analytics and value adjustments (XVAs)
 * interfaces for trade/market data and system configuration (API and XML)
-* simple application launchers in Excel, LibreOffice, Python, Jupyter
+* simple application launchers in Python, Jupyter
 * various examples that demonstrate typical use cases
 * comprehensive test suites
 
@@ -23,8 +23,9 @@ It extends QuantLib and The Open Source Risk Engine in terms of simulation model
 
 * Updated SACCR, SACVA (SA and SBM), FTRB (SA and SBM) modules with broad product and test coverage
 * Refactored c++23 codebase
-* New CUDA module handling multiple GPUs
-* Fast sensitivities for a broad range of trades using AAD and GPU
+* New CUDA & Metal GPU modules (featuring on-device CE / forward and reverse AAD)
+* AAD using JIT compilation on CPU, delivering a 10-20x speed up versus vanilla AAD
+* Fast sensitivities for a broad range of trades using AAD and GPU (e.g. for SACVA-SBM and FRTB-SA)
 
 # Vannarho Risk Engine — Python Binary Wheels
 

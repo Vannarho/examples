@@ -1,0 +1,255 @@
+NOTICE   [2025-Oct-31 17:56:46.037211]        (VREAnalytics/vrea/app/vreapp.cpp:550) : initFromInputs done, requested analytics:SIMM
+NOTICE   [2025-Oct-31 17:56:46.037234]        (VREAnalytics/vrea/app/vreapp.cpp:583) : Global IncludeTodaysCashFlows is set false, value: na
+NOTICE   [2025-Oct-31 17:56:46.037250]        (VREAnalytics/vrea/app/vreapp.cpp:321) : VRE analytics starting
+WARNING  [2025-Oct-31 17:56:46.037263]        (VREAnalytics/vrea/app/vreapp.cpp:322) : Starting VREApp::analytics(): 179503104|179503104 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+DEBUG    [2025-Oct-31 17:56:46.037281]      (VREData/vred/marketdata/market.cpp:101) : Building default PseudoCurrencyMarketParameters
+DEBUG    [2025-Oct-31 17:56:46.037297]      (VREData/vred/marketdata/market.cpp:103) : PseudoCurrencyMarketParameters { TreatAsFX:True, BaseCurrency:}
+ALERT    [2025-Oct-31 17:56:46.037313]        (VREAnalytics/vrea/app/vreapp.cpp:295) : fixing data file not found
+WARNING  [2025-Oct-31 17:56:46.037325]        (VREAnalytics/vrea/app/vreapp.cpp:302) : dividend data file not found
+WARNING  [2025-Oct-31 17:56:46.037337]        (VREAnalytics/vrea/app/vreapp.cpp:310) : fixing cutoff date not set
+NOTICE   [2025-Oct-31 17:56:46.037350]   (VREData/vred/marketdata/csvloader.cpp:103) : CSVLoader loading from Input/market.txt
+DATA     [2025-Oct-31 17:56:46.037397]   (VREData/vred/marketdata/csvloader.cpp:155) : Added MarketDatum FX/RATE/EUR/CHF
+DATA     [2025-Oct-31 17:56:46.037420]   (VREData/vred/marketdata/csvloader.cpp:155) : Added MarketDatum FX/RATE/EUR/GBP
+DATA     [2025-Oct-31 17:56:46.037439]   (VREData/vred/marketdata/csvloader.cpp:155) : Added MarketDatum FX/RATE/EUR/JPY
+DATA     [2025-Oct-31 17:56:46.037457]   (VREData/vred/marketdata/csvloader.cpp:155) : Added MarketDatum FX/RATE/EUR/SEK
+DATA     [2025-Oct-31 17:56:46.037475]   (VREData/vred/marketdata/csvloader.cpp:155) : Added MarketDatum FX/RATE/EUR/USD
+DATA     [2025-Oct-31 17:56:46.037493]   (VREData/vred/marketdata/csvloader.cpp:155) : Added MarketDatum FX/RATE/USD/GBP
+DATA     [2025-Oct-31 17:56:46.037510]   (VREData/vred/marketdata/csvloader.cpp:155) : Added MarketDatum FX/RATE/USD/CHF
+NOTICE   [2025-Oct-31 17:56:46.037525]   (VREData/vred/marketdata/csvloader.cpp:195) : CSVLoader completed processing Input/market.txt
+NOTICE   [2025-Oct-31 17:56:46.037538]    (VREData/vred/marketdata/csvloader.cpp:82) : CSVLoader loaded 7 market data points for December 30th, 2019
+NOTICE   [2025-Oct-31 17:56:46.037550]    (VREData/vred/marketdata/csvloader.cpp:87) : CSVLoader loaded 0 fixings
+NOTICE   [2025-Oct-31 17:56:46.037561]    (VREData/vred/marketdata/csvloader.cpp:92) : CSVLoader loaded 0 dividends
+NOTICE   [2025-Oct-31 17:56:46.037573]    (VREData/vred/marketdata/csvloader.cpp:94) : CSVLoader complete.
+NOTICE   [2025-Oct-31 17:56:46.037604]  (...lytics/vrea/app/analyticsmanager.cpp:53) : register analytic with label 'SIMM' and sub-analytics SIMM
+NOTICE   [2025-Oct-31 17:56:46.037619]        (VREAnalytics/vrea/app/vreapp.cpp:344) : Available analytics: SIMM
+NOTICE   [2025-Oct-31 17:56:46.037631]        (VREAnalytics/vrea/app/vreapp.cpp:347) : Requested analytics: SIMM
+NOTICE   [2025-Oct-31 17:56:46.037648]  (...ytics/vrea/app/analyticsmanager.cpp:119) : AnalyticsManager::runAnalytics: populate loader for dates: December 30th, 2019
+NOTICE   [2025-Oct-31 17:56:46.037663]  (...ytics/vrea/app/marketdataloader.cpp:167) : Asking portfolio for its required fixings
+NOTICE   [2025-Oct-31 17:56:46.037677]  (...ytics/vrea/app/marketdataloader.cpp:179) : Add fixings possibly required for bootstrapping TodaysMarket
+NOTICE   [2025-Oct-31 17:56:46.037689]  (VREData/vred/portfolio/fixingdates.cpp:827) : Start adding market fixing dates for configuration 'default'
+DEBUG    [2025-Oct-31 17:56:46.037703]  (VREData/vred/portfolio/fixingdates.cpp:837) : Start adding market fixing dates for interest rate indices.
+DEBUG    [2025-Oct-31 17:56:46.037715]  (VREData/vred/portfolio/fixingdates.cpp:911) : Finished adding market fixing dates for interest rate indices.
+DATA     [2025-Oct-31 17:56:46.037729]  (VREData/vred/portfolio/fixingdates.cpp:925) : Adding date 2018-12-01 to fixings for inflation indices
+DATA     [2025-Oct-31 17:56:46.037744]  (VREData/vred/portfolio/fixingdates.cpp:925) : Adding date 2019-01-01 to fixings for inflation indices
+DATA     [2025-Oct-31 17:56:46.037756]  (VREData/vred/portfolio/fixingdates.cpp:925) : Adding date 2019-02-01 to fixings for inflation indices
+DATA     [2025-Oct-31 17:56:46.037768]  (VREData/vred/portfolio/fixingdates.cpp:925) : Adding date 2019-03-01 to fixings for inflation indices
+DATA     [2025-Oct-31 17:56:46.037780]  (VREData/vred/portfolio/fixingdates.cpp:925) : Adding date 2019-04-01 to fixings for inflation indices
+DATA     [2025-Oct-31 17:56:46.037792]  (VREData/vred/portfolio/fixingdates.cpp:925) : Adding date 2019-05-01 to fixings for inflation indices
+DATA     [2025-Oct-31 17:56:46.037804]  (VREData/vred/portfolio/fixingdates.cpp:925) : Adding date 2019-06-01 to fixings for inflation indices
+DATA     [2025-Oct-31 17:56:46.037815]  (VREData/vred/portfolio/fixingdates.cpp:925) : Adding date 2019-07-01 to fixings for inflation indices
+DATA     [2025-Oct-31 17:56:46.037827]  (VREData/vred/portfolio/fixingdates.cpp:925) : Adding date 2019-08-01 to fixings for inflation indices
+DATA     [2025-Oct-31 17:56:46.037839]  (VREData/vred/portfolio/fixingdates.cpp:925) : Adding date 2019-09-01 to fixings for inflation indices
+DATA     [2025-Oct-31 17:56:46.037850]  (VREData/vred/portfolio/fixingdates.cpp:925) : Adding date 2019-10-01 to fixings for inflation indices
+DATA     [2025-Oct-31 17:56:46.037862]  (VREData/vred/portfolio/fixingdates.cpp:925) : Adding date 2019-11-01 to fixings for inflation indices
+DATA     [2025-Oct-31 17:56:46.037874]  (VREData/vred/portfolio/fixingdates.cpp:925) : Adding date 2019-12-01 to fixings for inflation indices
+DATA     [2025-Oct-31 17:56:46.037886]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-10-01 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.037898]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-10-02 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.037910]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-10-03 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.037922]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-10-04 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.037933]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-10-05 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.037945]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-10-06 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.037957]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-10-07 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.037968]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-10-08 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.037980]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-10-09 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.037991]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-10-10 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038003]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-10-11 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038015]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-10-12 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038026]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-10-13 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038038]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-10-14 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038049]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-10-15 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038061]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-10-16 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038072]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-10-17 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038086]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-10-18 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038097]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-10-19 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038109]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-10-20 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038121]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-10-21 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038133]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-10-22 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038144]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-10-23 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038156]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-10-24 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038167]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-10-25 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038179]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-10-26 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038190]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-10-27 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038202]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-10-28 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038213]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-10-29 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038225]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-10-30 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038236]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-10-31 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038248]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-11-01 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038259]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-11-02 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038271]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-11-03 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038282]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-11-04 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038293]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-11-05 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038305]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-11-06 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038316]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-11-07 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038328]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-11-08 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038339]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-11-09 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038351]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-11-10 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038362]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-11-11 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038374]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-11-12 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038385]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-11-13 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038396]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-11-14 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038408]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-11-15 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038419]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-11-16 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038432]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-11-17 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038444]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-11-18 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038455]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-11-19 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038467]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-11-20 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038478]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-11-21 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038490]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-11-22 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038501]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-11-23 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038513]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-11-24 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038525]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-11-25 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038536]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-11-26 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038547]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-11-27 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038560]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-11-28 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038573]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-11-29 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038584]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-11-30 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038596]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-12-01 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038607]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-12-02 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038619]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-12-03 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038689]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-12-04 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038715]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-12-05 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038733]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-12-06 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038750]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-12-07 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038766]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-12-08 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038781]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-12-09 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038795]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-12-10 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038810]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-12-11 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038824]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-12-12 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038838]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-12-13 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038853]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-12-14 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038866]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-12-15 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038880]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-12-16 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038902]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-12-17 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038918]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-12-18 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038932]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-12-19 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038945]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-12-20 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038959]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-12-21 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038973]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-12-22 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.038986]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-12-23 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.039000]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-12-24 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.039014]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-12-25 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.039027]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-12-26 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.039041]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-12-27 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.039055]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-12-28 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.039068]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-12-29 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.039081]  (VREData/vred/portfolio/fixingdates.cpp:956) : Adding date 2019-12-30 to fixings for commodities
+DATA     [2025-Oct-31 17:56:46.039099]  (VREData/vred/portfolio/fixingdates.cpp:970) : Adding contract month and year (October,2019)
+DATA     [2025-Oct-31 17:56:46.039117]  (VREData/vred/portfolio/fixingdates.cpp:970) : Adding contract month and year (November,2019)
+DATA     [2025-Oct-31 17:56:46.039131]  (VREData/vred/portfolio/fixingdates.cpp:970) : Adding contract month and year (December,2019)
+DATA     [2025-Oct-31 17:56:46.039144]  (VREData/vred/portfolio/fixingdates.cpp:970) : Adding contract month and year (January,2020)
+DATA     [2025-Oct-31 17:56:46.039158]  (VREData/vred/portfolio/fixingdates.cpp:970) : Adding contract month and year (February,2020)
+NOTICE   [2025-Oct-31 17:56:46.039173]  (...ata/vred/portfolio/fixingdates.cpp:1024) : Finished adding market fixing dates for configuration 'default'
+NOTICE   [2025-Oct-31 17:56:46.039188]  (...ytics/vrea/app/marketdataloader.cpp:183) : Add fixing possibly required for equity index delta risk decomposition
+NOTICE   [2025-Oct-31 17:56:46.039213]      (VREData/vred/marketdata/fixings.cpp:70) : Added 0 of 0 fixings in 0.000000 seconds
+NOTICE   [2025-Oct-31 17:56:46.039231]  (...ytics/vrea/app/marketdataloader.cpp:259) : Adding the loaded fixings to the IndexManager
+NOTICE   [2025-Oct-31 17:56:46.039245]  (...ytics/vrea/app/marketdataloader.cpp:260) : Fixings size = 0
+NOTICE   [2025-Oct-31 17:56:46.039260]  (...ytics/vrea/app/marketdataloader.cpp:263) : Generating market datum set
+NOTICE   [2025-Oct-31 17:56:46.039281]  (...ytics/vrea/app/marketdataloader.cpp:281) : CurveConfigs require 0 quotes
+DATA     [2025-Oct-31 17:56:46.039310]  (.../vred/marketdata/inmemoryloader.cpp:125) : Added MarketDatum FX/RATE/EUR/CHF
+DATA     [2025-Oct-31 17:56:46.039334]  (.../vred/marketdata/inmemoryloader.cpp:125) : Added MarketDatum FX/RATE/EUR/GBP
+DATA     [2025-Oct-31 17:56:46.039354]  (.../vred/marketdata/inmemoryloader.cpp:125) : Added MarketDatum FX/RATE/EUR/JPY
+DATA     [2025-Oct-31 17:56:46.039373]  (.../vred/marketdata/inmemoryloader.cpp:125) : Added MarketDatum FX/RATE/EUR/SEK
+DATA     [2025-Oct-31 17:56:46.039393]  (.../vred/marketdata/inmemoryloader.cpp:125) : Added MarketDatum FX/RATE/EUR/USD
+DATA     [2025-Oct-31 17:56:46.039416]  (.../vred/marketdata/inmemoryloader.cpp:125) : Added MarketDatum FX/RATE/USD/CHF
+DATA     [2025-Oct-31 17:56:46.039435]  (.../vred/marketdata/inmemoryloader.cpp:125) : Added MarketDatum FX/RATE/USD/GBP
+NOTICE   [2025-Oct-31 17:56:46.039449]  (...ytics/vrea/app/marketdataloader.cpp:289) : Got market data
+NOTICE   [2025-Oct-31 17:56:46.039464]  (...nalytics/vrea/app/reportwriter.cpp:1174) : Writing MarketData report
+NOTICE   [2025-Oct-31 17:56:46.039481]  (...nalytics/vrea/app/reportwriter.cpp:1213) : MarketData report written
+NOTICE   [2025-Oct-31 17:56:46.039496]  (...nalytics/vrea/app/reportwriter.cpp:1218) : Writing Fixings report
+NOTICE   [2025-Oct-31 17:56:46.039512]  (...nalytics/vrea/app/reportwriter.cpp:1227) : Fixings report written
+NOTICE   [2025-Oct-31 17:56:46.039549]  (...nalytics/vrea/app/reportwriter.cpp:1232) : Writing Dividends report
+NOTICE   [2025-Oct-31 17:56:46.039564]  (...nalytics/vrea/app/reportwriter.cpp:1244) : Dividends report written
+NOTICE   [2025-Oct-31 17:56:46.039581]  (...ytics/vrea/app/analyticsmanager.cpp:145) : run analytic with label 'SIMM'
+WARNING  [2025-Oct-31 17:56:46.039621]      (VREAnalytics/vrea/app/analytic.cpp:105) : Starting SIMM Analytic::runAnalytic(): 179535872|179535872 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+NOTICE   [2025-Oct-31 17:56:46.039666]      (VREAnalytics/vrea/app/analytic.cpp:223) : Analytic::buildMarket called
+NOTICE   [2025-Oct-31 17:56:46.039706]  (.../vred/marketdata/bondspreadimply.cpp:53) : identify securities that require a spread imply for configuration default
+NOTICE   [2025-Oct-31 17:56:46.039724]  (...vred/marketdata/bondspreadimply.cpp:110) : got 0 securities
+NOTICE   [2025-Oct-31 17:56:46.039749]  (.../vred/marketdata/fxtriangulation.cpp:67) : FXTriangulation: initializing
+DATA     [2025-Oct-31 17:56:46.039765]  (.../vred/marketdata/fxtriangulation.cpp:76) : FXTriangulation: adding quote EURCHF
+DATA     [2025-Oct-31 17:56:46.039790]  (.../vred/marketdata/fxtriangulation.cpp:76) : FXTriangulation: adding quote EURGBP
+DATA     [2025-Oct-31 17:56:46.039807]  (.../vred/marketdata/fxtriangulation.cpp:76) : FXTriangulation: adding quote EURJPY
+DATA     [2025-Oct-31 17:56:46.039821]  (.../vred/marketdata/fxtriangulation.cpp:76) : FXTriangulation: adding quote EURSEK
+DATA     [2025-Oct-31 17:56:46.039835]  (.../vred/marketdata/fxtriangulation.cpp:76) : FXTriangulation: adding quote EURUSD
+DATA     [2025-Oct-31 17:56:46.039857]  (.../vred/marketdata/fxtriangulation.cpp:76) : FXTriangulation: adding quote USDCHF
+DATA     [2025-Oct-31 17:56:46.039871]  (.../vred/marketdata/fxtriangulation.cpp:76) : FXTriangulation: adding quote USDGBP
+NOTICE   [2025-Oct-31 17:56:46.039889]  (...vred/marketdata/fxtriangulation.cpp:114) : FXTriangulation: initialized with 7 quotes, 6 currencies.
+DEBUG    [2025-Oct-31 17:56:46.039914]  (.../vred/marketdata/dependencygraph.cpp:55) : Build dependency graph for TodaysMarket configuration default
+DEBUG    [2025-Oct-31 17:56:46.039933]  (...vred/marketdata/dependencygraph.cpp:171) : Dependency graph built with 0 vertices, 0 edges.
+DEBUG    [2025-Oct-31 17:56:46.039953]  (...vred/marketdata/dependencygraph.cpp:175) : Searching for cycles.
+DEBUG    [2025-Oct-31 17:56:46.039966]  (...vred/marketdata/dependencygraph.cpp:180) : Identified 0 cycles in dependency graph.
+DEBUG    [2025-Oct-31 17:56:46.039980]  (...vred/marketdata/dependencygraph.cpp:192) : Joining overlapping cycles (if any).
+DEBUG    [2025-Oct-31 17:56:46.039994]  (...vred/marketdata/dependencygraph.cpp:222) : Number of cycles after joining overlapping cycles: 0
+DEBUG    [2025-Oct-31 17:56:46.040008]  (...vred/marketdata/dependencygraph.cpp:229) : Build the reduced dependency graph where cycles are replaced by a single reduced node containing the set of nodes in the cylce.
+DEBUG    [2025-Oct-31 17:56:46.040022]  (...vred/marketdata/dependencygraph.cpp:271) : Reduced dependency graph built with 0 vertices, 0 edges.
+NOTICE   [2025-Oct-31 17:56:46.040037]  (...ta/vred/marketdata/todaysmarket.cpp:229) : Build objects in TodaysMarket lazily, i.e. when requested.
+NOTICE   [2025-Oct-31 17:56:46.040054]  (...ta/vred/marketdata/todaysmarket.cpp:234) : TodaysMarket build stats:
+NOTICE   [2025-Oct-31 17:56:46.040069]  (...ta/vred/marketdata/todaysmarket.cpp:240) : 3 add all fx quotes               :               0 ms         1              0 ms
+NOTICE   [2025-Oct-31 17:56:46.040084]  (...ta/vred/marketdata/todaysmarket.cpp:240) : 4 build dep graphs                :              10 ms         1             10 ms
+NOTICE   [2025-Oct-31 17:56:46.040097]  (...ta/vred/marketdata/todaysmarket.cpp:243) : Total build time              :              10 ms
+NOTICE   [2025-Oct-31 17:56:46.040114]      (VREAnalytics/vrea/app/analytic.cpp:261) : Market Build time 0.010000 sec
+NOTICE   [2025-Oct-31 17:56:46.040128]  (.../vrea/app/analytics/simmanalytic.cpp:45) : Get CRIF records from CRIF loader and fill amountUSD
+NOTICE   [2025-Oct-31 17:56:46.040145]  (...vrea/app/analytics/simmanalytic.cpp:119) : No CRIF input provided, generating CRIF for SIMM internally
+ALERT    [2025-Oct-31 17:56:46.040288]          (VREData/vred/utilities/log.cpp:209) : StructuredMessage { "category": "Error", "group": "Analytics", "message": "Could not find dependent Analytic CRIF", "sub_fields": [ { "name": "analyticType", "value": "SIMM" }, { "name": "exceptionType", "value": "Failed Analytic" } ] }
+NOTICE   [2025-Oct-31 17:56:46.040307]  (...ytics/vrea/app/analyticsmanager.cpp:154) : run analytic with label 'SIMM' finished.
+NOTICE   [2025-Oct-31 17:56:46.040323]  (...nalytics/vrea/app/reportwriter.cpp:1270) : Writing runtimes report
+NOTICE   [2025-Oct-31 17:56:46.040339]  (...nalytics/vrea/app/reportwriter.cpp:1294) : Finished writing runtimes report
+NOTICE   [2025-Oct-31 17:56:46.040354]  (...ytics/vrea/app/analyticsmanager.cpp:239) : report name dividends occurs 1 times
+NOTICE   [2025-Oct-31 17:56:46.040366]  (...ytics/vrea/app/analyticsmanager.cpp:239) : report name fixings occurs 1 times
+NOTICE   [2025-Oct-31 17:56:46.040378]  (...ytics/vrea/app/analyticsmanager.cpp:239) : report name marketdata occurs 1 times
+NOTICE   [2025-Oct-31 17:56:46.040390]  (...ytics/vrea/app/analyticsmanager.cpp:239) : report name runtimes occurs 1 times
+NOTICE   [2025-Oct-31 17:56:46.040401]  (...ytics/vrea/app/analyticsmanager.cpp:239) : report name todaysmarketcalibration occurs 1 times
+DEBUG    [2025-Oct-31 17:56:46.040413]  (...ytics/vrea/app/analyticsmanager.cpp:258) : AnalyticsManager::toFile(): reportNames mapping contains 36 entries
+DEBUG    [2025-Oct-31 17:56:46.040425]  (...ytics/vrea/app/analyticsmanager.cpp:260) :   mapping: logical='calibration' -> filename=''
+DEBUG    [2025-Oct-31 17:56:46.040436]  (...ytics/vrea/app/analyticsmanager.cpp:260) :   mapping: logical='cashflow' -> filename=''
+DEBUG    [2025-Oct-31 17:56:46.040448]  (...ytics/vrea/app/analyticsmanager.cpp:260) :   mapping: logical='crif' -> filename=''
+DEBUG    [2025-Oct-31 17:56:46.040460]  (...ytics/vrea/app/analyticsmanager.cpp:260) :   mapping: logical='cube' -> filename=''
+DEBUG    [2025-Oct-31 17:56:46.040471]  (...ytics/vrea/app/analyticsmanager.cpp:260) :   mapping: logical='curves' -> filename=''
+DEBUG    [2025-Oct-31 17:56:46.040483]  (...ytics/vrea/app/analyticsmanager.cpp:260) :   mapping: logical='dim_evolution' -> filename=''
+DEBUG    [2025-Oct-31 17:56:46.040494]  (...ytics/vrea/app/analyticsmanager.cpp:260) :   mapping: logical='jacobi' -> filename=''
+DEBUG    [2025-Oct-31 17:56:46.040506]  (...ytics/vrea/app/analyticsmanager.cpp:260) :   mapping: logical='jacobi_inverse' -> filename=''
+DEBUG    [2025-Oct-31 17:56:46.040517]  (...ytics/vrea/app/analyticsmanager.cpp:260) :   mapping: logical='market_objects' -> filename=''
+DEBUG    [2025-Oct-31 17:56:46.040528]  (...ytics/vrea/app/analyticsmanager.cpp:260) :   mapping: logical='netcube' -> filename=''
+DEBUG    [2025-Oct-31 17:56:46.040540]  (...ytics/vrea/app/analyticsmanager.cpp:260) :   mapping: logical='npv' -> filename=''
+DEBUG    [2025-Oct-31 17:56:46.040551]  (...ytics/vrea/app/analyticsmanager.cpp:260) :   mapping: logical='parConversionJacobi' -> filename=''
+DEBUG    [2025-Oct-31 17:56:46.040565]  (...ytics/vrea/app/analyticsmanager.cpp:260) :   mapping: logical='parConversionJacobi_inverse' -> filename=''
+DEBUG    [2025-Oct-31 17:56:46.040577]  (...ytics/vrea/app/analyticsmanager.cpp:260) :   mapping: logical='parConversionSensitivity' -> filename=''
+DEBUG    [2025-Oct-31 17:56:46.040589]  (...ytics/vrea/app/analyticsmanager.cpp:260) :   mapping: logical='parStress_ZeroStressData' -> filename=''
+DEBUG    [2025-Oct-31 17:56:46.040601]  (...ytics/vrea/app/analyticsmanager.cpp:260) :   mapping: logical='par_sensitivity' -> filename=''
+DEBUG    [2025-Oct-31 17:56:46.040612]  (...ytics/vrea/app/analyticsmanager.cpp:260) :   mapping: logical='parshifts' -> filename=''
+DEBUG    [2025-Oct-31 17:56:46.040623]  (...ytics/vrea/app/analyticsmanager.cpp:260) :   mapping: logical='pnl' -> filename=''
+DEBUG    [2025-Oct-31 17:56:46.040635]  (...ytics/vrea/app/analyticsmanager.cpp:260) :   mapping: logical='pnl_explain' -> filename=''
+DEBUG    [2025-Oct-31 17:56:46.040646]  (...ytics/vrea/app/analyticsmanager.cpp:260) :   mapping: logical='rawcube' -> filename=''
+DEBUG    [2025-Oct-31 17:56:46.040658]  (...ytics/vrea/app/analyticsmanager.cpp:260) :   mapping: logical='risk_factors' -> filename=''
+DEBUG    [2025-Oct-31 17:56:46.040669]  (...ytics/vrea/app/analyticsmanager.cpp:260) :   mapping: logical='saccr' -> filename=''
+DEBUG    [2025-Oct-31 17:56:46.040681]  (...ytics/vrea/app/analyticsmanager.cpp:260) :   mapping: logical='saccr_json_tree' -> filename=''
+DEBUG    [2025-Oct-31 17:56:46.040692]  (...ytics/vrea/app/analyticsmanager.cpp:260) :   mapping: logical='scenario' -> filename=''
+DEBUG    [2025-Oct-31 17:56:46.040703]  (...ytics/vrea/app/analyticsmanager.cpp:260) :   mapping: logical='scenariodata' -> filename=''
+DEBUG    [2025-Oct-31 17:56:46.040718]  (...ytics/vrea/app/analyticsmanager.cpp:260) :   mapping: logical='sensitivity' -> filename=''
+DEBUG    [2025-Oct-31 17:56:46.040734]  (...ytics/vrea/app/analyticsmanager.cpp:260) :   mapping: logical='sensitivity_scenario' -> filename=''
+DEBUG    [2025-Oct-31 17:56:46.040751]  (...ytics/vrea/app/analyticsmanager.cpp:260) :   mapping: logical='sensitivity_stress' -> filename=''
+DEBUG    [2025-Oct-31 17:56:46.040764]  (...ytics/vrea/app/analyticsmanager.cpp:260) :   mapping: logical='stress' -> filename=''
+DEBUG    [2025-Oct-31 17:56:46.040777]  (...ytics/vrea/app/analyticsmanager.cpp:260) :   mapping: logical='stress_ZeroStressData' -> filename=''
+DEBUG    [2025-Oct-31 17:56:46.040790]  (...ytics/vrea/app/analyticsmanager.cpp:260) :   mapping: logical='stress_cashflows' -> filename=''
+DEBUG    [2025-Oct-31 17:56:46.040803]  (...ytics/vrea/app/analyticsmanager.cpp:260) :   mapping: logical='timeAveragedNettedExposure' -> filename=''
+DEBUG    [2025-Oct-31 17:56:46.040816]  (...ytics/vrea/app/analyticsmanager.cpp:260) :   mapping: logical='var' -> filename=''
+DEBUG    [2025-Oct-31 17:56:46.040829]  (...ytics/vrea/app/analyticsmanager.cpp:260) :   mapping: logical='xva_sensi_jacobi' -> filename=''
+DEBUG    [2025-Oct-31 17:56:46.040842]  (...ytics/vrea/app/analyticsmanager.cpp:260) :   mapping: logical='xva_sensi_jacobi_inverse' -> filename=''
+DEBUG    [2025-Oct-31 17:56:46.040855]  (...ytics/vrea/app/analyticsmanager.cpp:260) :   mapping: logical='xva_stress' -> filename=''
+NOTICE   [2025-Oct-31 17:56:46.040869]       (VREData/vred/report/csvreport.cpp:127) : Opening CSV file report 'Output/SIMM2.4_1D/dividends.csv'
+NOTICE   [2025-Oct-31 17:56:46.040945]       (VREData/vred/report/csvreport.cpp:216) : CSV file report 'Output/SIMM2.4_1D/dividends.csv' closed.
+NOTICE   [2025-Oct-31 17:56:46.040961]  (...ytics/vrea/app/analyticsmanager.cpp:289) : report dividends written to Output/SIMM2.4_1D/dividends.csv
+NOTICE   [2025-Oct-31 17:56:46.040976]       (VREData/vred/report/csvreport.cpp:127) : Opening CSV file report 'Output/SIMM2.4_1D/fixings.csv'
+NOTICE   [2025-Oct-31 17:56:46.041023]       (VREData/vred/report/csvreport.cpp:216) : CSV file report 'Output/SIMM2.4_1D/fixings.csv' closed.
+NOTICE   [2025-Oct-31 17:56:46.041046]  (...ytics/vrea/app/analyticsmanager.cpp:289) : report fixings written to Output/SIMM2.4_1D/fixings.csv
+NOTICE   [2025-Oct-31 17:56:46.041059]       (VREData/vred/report/csvreport.cpp:127) : Opening CSV file report 'Output/SIMM2.4_1D/todaysmarketcalibration.csv'
+NOTICE   [2025-Oct-31 17:56:46.041104]       (VREData/vred/report/csvreport.cpp:216) : CSV file report 'Output/SIMM2.4_1D/todaysmarketcalibration.csv' closed.
+NOTICE   [2025-Oct-31 17:56:46.041117]  (...ytics/vrea/app/analyticsmanager.cpp:289) : report todaysmarketcalibration written to Output/SIMM2.4_1D/todaysmarketcalibration.csv
+NOTICE   [2025-Oct-31 17:56:46.041130]       (VREData/vred/report/csvreport.cpp:127) : Opening CSV file report 'Output/SIMM2.4_1D/marketdata.csv'
+NOTICE   [2025-Oct-31 17:56:46.041172]       (VREData/vred/report/csvreport.cpp:216) : CSV file report 'Output/SIMM2.4_1D/marketdata.csv' closed.
+NOTICE   [2025-Oct-31 17:56:46.041186]  (...ytics/vrea/app/analyticsmanager.cpp:289) : report marketdata written to Output/SIMM2.4_1D/marketdata.csv
+NOTICE   [2025-Oct-31 17:56:46.041198]       (VREData/vred/report/csvreport.cpp:127) : Opening CSV file report 'Output/SIMM2.4_1D/runtimes.csv'
+NOTICE   [2025-Oct-31 17:56:46.041244]       (VREData/vred/report/csvreport.cpp:216) : CSV file report 'Output/SIMM2.4_1D/runtimes.csv' closed.
+NOTICE   [2025-Oct-31 17:56:46.041257]  (...ytics/vrea/app/analyticsmanager.cpp:289) : report runtimes written to Output/SIMM2.4_1D/runtimes.csv
+ALERT    [2025-Oct-31 17:56:46.041284]        (VREAnalytics/vrea/app/vreapp.cpp:418) : Error in VRE analytics: Failed to run analytics SIMM
+WARNING  [2025-Oct-31 17:56:46.041297]        (VREAnalytics/vrea/app/vreapp.cpp:419) : Finishing VREApp::analytics(): 179765248|179765248 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+WARNING  [2025-Oct-31 17:56:46.041343]          (VREData/vred/utilities/log.cpp:209) : StructuredMessage { "category": "Warning", "group": "Analytics", "message": "Error in VRE analytics: Failed to run analytics SIMM", "sub_fields": [ { "name": "analyticType", "value": "VREApp::run()" }, { "name": "warningType", "value": "Error" } ] }

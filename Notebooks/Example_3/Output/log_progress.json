@@ -1,0 +1,23 @@
+{ "@timestamp": "2025-10-31T06:26:29.860813", "key": "Running XVA Analytic", "progress": 0, "total": 1 }
+{ "@timestamp": "2025-10-31T06:26:29.860930", "key": "XVA: Build Today's Market", "progress": 0, "total": 1 }
+{ "@timestamp": "2025-10-31T06:26:29.861293", "key": "XVA: Build Today's Market", "progress": 1, "total": 1 }
+{ "@timestamp": "2025-10-31T06:26:29.871618", "key": "XVA: Build AMC portfolio", "progress": 0, "total": 1 }
+{ "@timestamp": "2025-10-31T06:26:29.875168", "key": "XVA: Build AMC portfolio", "progress": 1, "total": 1 }
+{ "@timestamp": "2025-10-31T06:26:30.760960", "detail": "3 trades", "key": "XVA: Build AMC Cube...", "progress": 0, "total": 3 }
+{ "@timestamp": "2025-10-31T06:26:31.831064", "detail": "3 trades|3 trades|3 trades|3 trades", "key": "XVA: Build AMC Cube...", "progress": 1, "total": 12 }
+{ "@timestamp": "2025-10-31T06:26:31.831279", "detail": "3 trades|3 trades|3 trades|3 trades", "key": "XVA: Build AMC Cube...", "progress": 2, "total": 12 }
+{ "@timestamp": "2025-10-31T06:26:31.832084", "detail": "3 trades|3 trades|3 trades|3 trades", "key": "XVA: Build AMC Cube...", "progress": 3, "total": 12 }
+{ "@timestamp": "2025-10-31T06:26:31.832400", "detail": "3 trades|3 trades|3 trades|3 trades", "key": "XVA: Build AMC Cube...", "progress": 4, "total": 12 }
+{ "@timestamp": "2025-10-31T06:26:31.880069", "detail": "3 trades|3 trades|3 trades|3 trades", "key": "XVA: Build AMC Cube...", "progress": 5, "total": 12 }
+{ "@timestamp": "2025-10-31T06:26:31.880617", "detail": "3 trades|3 trades|3 trades|3 trades", "key": "XVA: Build AMC Cube...", "progress": 6, "total": 12 }
+{ "@timestamp": "2025-10-31T06:26:31.881025", "detail": "3 trades|3 trades|3 trades|3 trades", "key": "XVA: Build AMC Cube...", "progress": 7, "total": 12 }
+{ "@timestamp": "2025-10-31T06:26:31.881415", "detail": "3 trades|3 trades|3 trades|3 trades", "key": "XVA: Build AMC Cube...", "progress": 8, "total": 12 }
+{ "@timestamp": "2025-10-31T06:26:31.929238", "detail": "3 trades|3 trades|3 trades|3 trades", "key": "XVA: Build AMC Cube...", "progress": 9, "total": 12 }
+{ "@timestamp": "2025-10-31T06:26:31.929708", "detail": "3 trades|3 trades|3 trades|3 trades", "key": "XVA: Build AMC Cube...", "progress": 10, "total": 12 }
+{ "@timestamp": "2025-10-31T06:26:31.930385", "detail": "3 trades|3 trades|3 trades|3 trades", "key": "XVA: Build AMC Cube...", "progress": 11, "total": 12 }
+{ "@timestamp": "2025-10-31T06:26:31.931339", "detail": "3 trades|3 trades|3 trades|3 trades", "key": "XVA: Build AMC Cube...", "progress": 12, "total": 12 }
+{ "@timestamp": "2025-10-31T06:26:31.934090", "key": "XVA: Aggregation", "progress": 0, "total": 1 }
+{ "@timestamp": "2025-10-31T06:26:32.923671", "key": "XVA: Aggregation", "progress": 1, "total": 1 }
+{ "@timestamp": "2025-10-31T06:26:32.923730", "key": "XVA: Reports", "progress": 0, "total": 1 }
+{ "@timestamp": "2025-10-31T06:26:32.923820", "key": "XVA: Reports", "progress": 1, "total": 1 }
+{ "@timestamp": "2025-10-31T06:26:32.923844", "key": "Running XVA Analytic", "progress": 1, "total": 1 }

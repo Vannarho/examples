@@ -1,0 +1,6 @@
+#Key,Total,Count,Max,Min,Average
+PRICING|Run PRICINGAnalytic,50000,1,50000,50000,50000.00
+PRICING|buildMarket(),0,1,0,0,0.00
+PRICING|buildPortfolio(),0,1,0,0,0.00
+XVA|Run XVAAnalytic,480000,1,480000,480000,480000.00
+XVA|buildMarket(),0,1,0,0,0.00

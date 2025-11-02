@@ -1,0 +1,2 @@
+#TradeId,TradeType,NumberOfPricings,CumulativeTiming,AverageTiming
+dummytrade,Swap,5001,0,0

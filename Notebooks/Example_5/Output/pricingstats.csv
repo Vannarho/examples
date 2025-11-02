@@ -1,0 +1,2 @@
+#TradeId,TradeType,NumberOfPricings,CumulativeTiming,AverageTiming
+FX_TaRF,ScriptedTrade,2,310000,155000

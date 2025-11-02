@@ -1,4 +1,4 @@
-NOTICE for vre (1.0.0)
+NOTICE for vre (1.4.0)
 ======================
 
 Copyright (c) 2025 Growth Mindset Pty Ltd
@@ -14,8 +14,9 @@ Third-party components and attributions
 This software bundles or links against third-party libraries. Please review their licenses:
 
 - QuantLib — see QuantLib license (BSD-3-Clause) and project site: <https://www.quantlib.org/>
-- ORE — see license (BSD-style) and project site: <https://www.opensourcerisk.org/>
+- ORE — see  license (BSD-style) and project site: <https://www.opensourcerisk.org/>
 - pybind11 — see license: <https://github.com/pybind/pybind11/blob/master/LICENSE>
+- Enzyme - Enzyme AD - Apache License v2.0 with LLVM Exceptions see licence: <https://github.com/EnzymeAD/Enzyme/blob/main/LICENSE>
 
 If additional dependencies are used in this build, add them here with license names and links.
 

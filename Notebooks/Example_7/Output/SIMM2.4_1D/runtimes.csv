@@ -1,0 +1,3 @@
+#Key,Total,Count,Max,Min,Average
+SIMM|Run SIMMAnalytic,10000,1,10000,10000,10000.00
+SIMM|buildMarket(),10000,1,10000,10000,10000.00

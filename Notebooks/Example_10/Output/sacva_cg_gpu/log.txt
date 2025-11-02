@@ -1,0 +1,2 @@
+WARNING  [2025-Oct-31 16:30:27.019558]        (VREAnalytics/vrea/app/vreapp.cpp:775) : Calendar adjustments not found, using defaults
+WARNING  [2025-Oct-31 16:30:27.019586]        (VREAnalytics/vrea/app/vreapp.cpp:785) : Currency configurations not found, using defaults

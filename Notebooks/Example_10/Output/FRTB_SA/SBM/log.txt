@@ -1,0 +1,56 @@
+NOTICE   [2025-Oct-10 11:45:25.788269]    (VREAnalytics/vrea/app/parameters.cpp:133) : Parameters:
+NOTICE   [2025-Oct-10 11:45:25.788297]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = cashflow : active = Y
+NOTICE   [2025-Oct-10 11:45:25.788313]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = cashflow : outputFileName = flows.csv
+NOTICE   [2025-Oct-10 11:45:25.788328]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = curves : active = Y
+NOTICE   [2025-Oct-10 11:45:25.788343]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = curves : configuration = default
+NOTICE   [2025-Oct-10 11:45:25.788357]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = curves : grid = 240,1M
+NOTICE   [2025-Oct-10 11:45:25.788371]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = curves : outputFileName = curves.csv
+NOTICE   [2025-Oct-10 11:45:25.788385]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = frtb_sa : active = Y
+NOTICE   [2025-Oct-10 11:45:25.788399]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = frtb_sa : alignPillars = Y
+NOTICE   [2025-Oct-10 11:45:25.788411]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = frtb_sa : marketConfigFile = frtb_sa_simulation.xml
+NOTICE   [2025-Oct-10 11:45:25.788423]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = frtb_sa : method = Sensitivities-Based
+NOTICE   [2025-Oct-10 11:45:25.788435]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = frtb_sa : optimiseRiskFactors = Y
+NOTICE   [2025-Oct-10 11:45:25.788446]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = frtb_sa : outputJacobi = Y
+NOTICE   [2025-Oct-10 11:45:25.788458]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = frtb_sa : outputSensitivityThreshold = 0.000001
+NOTICE   [2025-Oct-10 11:45:25.788469]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = frtb_sa : parSensitivity = Y
+NOTICE   [2025-Oct-10 11:45:25.788481]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = frtb_sa : pricingEnginesFile = frtb_sa_pricingengine.xml
+NOTICE   [2025-Oct-10 11:45:25.788492]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = frtb_sa : recalibrateModels = Y
+NOTICE   [2025-Oct-10 11:45:25.788503]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = frtb_sa : sensitivityConfigFile = frtb_sa_sensitivity.xml
+NOTICE   [2025-Oct-10 11:45:25.788515]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = markets : fxcalibration = xois_eur
+NOTICE   [2025-Oct-10 11:45:25.788526]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = markets : lgmcalibration = collateral_inccy
+NOTICE   [2025-Oct-10 11:45:25.788538]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = markets : pricing = xois_eur
+NOTICE   [2025-Oct-10 11:45:25.788549]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = markets : sensitivity = xois_eur
+NOTICE   [2025-Oct-10 11:45:25.788561]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = markets : simulation = xois_eur
+NOTICE   [2025-Oct-10 11:45:25.788572]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = npv : active = Y
+NOTICE   [2025-Oct-10 11:45:25.788583]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = npv : baseCurrency = EUR
+NOTICE   [2025-Oct-10 11:45:25.788595]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = npv : outputFileName = npv.csv
+NOTICE   [2025-Oct-10 11:45:25.788607]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : asofDate = 2016-02-05
+NOTICE   [2025-Oct-10 11:45:25.788618]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : baseCurrency = EUR
+NOTICE   [2025-Oct-10 11:45:25.788630]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : conventionsFile = frtb_sa_conventions.xml
+NOTICE   [2025-Oct-10 11:45:25.788641]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : curveConfigFile = frtb_sa_curveconfig.xml
+NOTICE   [2025-Oct-10 11:45:25.788653]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : fixingDataFile = frtb_sa_fixings_20160205.txt
+NOTICE   [2025-Oct-10 11:45:25.788664]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : implyTodaysFixings = N
+NOTICE   [2025-Oct-10 11:45:25.788678]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : inputPath = Input/FRTB_SA
+NOTICE   [2025-Oct-10 11:45:25.788690]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : logFile = log.txt
+NOTICE   [2025-Oct-10 11:45:25.788701]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : logMask = 255
+NOTICE   [2025-Oct-10 11:45:25.788712]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : marketConfigFile = frtb_sa_todaysmarket.xml
+NOTICE   [2025-Oct-10 11:45:25.788724]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : marketDataFile = frtb_sa_market_20160205.txt
+NOTICE   [2025-Oct-10 11:45:25.788735]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : nThreads = 1
+NOTICE   [2025-Oct-10 11:45:25.788747]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : observationModel = None
+NOTICE   [2025-Oct-10 11:45:25.788758]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : outputPath = Output/FRTB_SA/SBM
+NOTICE   [2025-Oct-10 11:45:25.788769]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : portfolioFile = frtb_sa_portfolio.xml
+NOTICE   [2025-Oct-10 11:45:25.788780]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : pricingEnginesFile = frtb_sa_pricingengine.xml
+NOTICE   [2025-Oct-10 11:45:25.788791]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : referenceDataFile = trade_reference.xml
+NOTICE   [2025-Oct-10 11:45:25.788803]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : tradingDeskFile = ../../../Input/tradingdesk.xml
+NOTICE   [2025-Oct-10 11:45:25.788820]        (VREAnalytics/vrea/app/vreapp.cpp:754) : load VREAppInputParameters called
+WARNING  [2025-Oct-10 11:45:25.788834]        (VREAnalytics/vrea/app/vreapp.cpp:775) : Calendar adjustments not found, using defaults
+WARNING  [2025-Oct-10 11:45:25.788846]        (VREAnalytics/vrea/app/vreapp.cpp:785) : Currency configurations not found, using defaults
+NOTICE   [2025-Oct-10 11:45:25.788862]        (VREAnalytics/vrea/app/vreapp.cpp:799) : Loading trading desks from file: ../../../Input/tradingdesk.xml
+NOTICE   [2025-Oct-10 11:45:25.788977]  (VREData/vred/portfolio/tradingdesk.cpp:132) : TradingDesk XVA_DESK: using wildcard product set 'All'
+DEBUG    [2025-Oct-10 11:45:25.789018]  (...ed/portfolio/tradingdeskmanager.cpp:130) : TradingDesk XVA_DESK: wildcard product set expanded to 117 types
+NOTICE   [2025-Oct-10 11:45:25.789033]  (...ed/portfolio/tradingdeskmanager.cpp:136) : TradingDeskManager::fromXML completed: loaded 7 desks and 9 legal entities
+NOTICE   [2025-Oct-10 11:45:25.789048]        (VREAnalytics/vrea/app/vreapp.cpp:802) : vreapp: TradingDeskManager loaded from file: ../../../Input/tradingdesk.xml
+NOTICE   [2025-Oct-10 11:45:25.789063]        (VREAnalytics/vrea/app/vreapp.cpp:866) : Observation Mode is None
+NOTICE   [2025-Oct-10 11:45:25.789077]        (VREAnalytics/vrea/app/vreapp.cpp:896) : Loading reference data from file: "Input/FRTB_SA/trade_reference.xml"
+NOTICE   [2025-Oct-10 11:45:26.082659]     (VREAnalytics/vrea/app/parameters.cpp:66) : load VRE configuration from ./_vre_params_wrapped.xml
+NOTICE   [2025-Oct-10 11:45:26.082745]     (VREAnalytics/vrea/app/parameters.cpp:70) : load VRE configuration from ./_vre_params_wrapped.xml done.

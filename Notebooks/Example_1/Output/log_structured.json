@@ -1,0 +1,1 @@
+{ "category": "Warning", "group": "Fixing", "message": "Could not find required fixing ID.", "sub_fields": [ { "name": "exceptionType", "value": "Missing fixing" }, { "name": "fixingDate", "value": "2016-02-05" }, { "name": "fixingId", "value": "EUR-EURIBOR-6M" } ] }

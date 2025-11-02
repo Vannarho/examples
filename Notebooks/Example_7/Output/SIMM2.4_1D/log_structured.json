@@ -1,0 +1,2 @@
+{ "category": "Error", "group": "Analytics", "message": "Could not find dependent Analytic CRIF", "sub_fields": [ { "name": "analyticType", "value": "SIMM" }, { "name": "exceptionType", "value": "Failed Analytic" } ] }
+{ "category": "Warning", "group": "Analytics", "message": "Error in VRE analytics: Failed to run analytics SIMM", "sub_fields": [ { "name": "analyticType", "value": "VREApp::run()" }, { "name": "warningType", "value": "Error" } ] }

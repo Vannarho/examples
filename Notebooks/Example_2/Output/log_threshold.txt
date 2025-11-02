@@ -1,0 +1,457 @@
+NOTICE   [2025-Oct-31 16:25:13.167502]    (VREAnalytics/vrea/app/parameters.cpp:133) : Parameters:
+NOTICE   [2025-Oct-31 16:25:13.167536]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = cashflow : active = N
+NOTICE   [2025-Oct-31 16:25:13.167554]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = cashflow : outputFileName = flows.csv
+NOTICE   [2025-Oct-31 16:25:13.167570]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = curves : active = N
+NOTICE   [2025-Oct-31 16:25:13.167584]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = curves : configuration = default
+NOTICE   [2025-Oct-31 16:25:13.167599]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = curves : grid = 240,1M
+NOTICE   [2025-Oct-31 16:25:13.167613]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = curves : outputFileName = curves.csv
+NOTICE   [2025-Oct-31 16:25:13.167627]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = markets : fxcalibration = default
+NOTICE   [2025-Oct-31 16:25:13.167640]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = markets : lgmcalibration = collateral_inccy
+NOTICE   [2025-Oct-31 16:25:13.167653]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = markets : pricing = default
+NOTICE   [2025-Oct-31 16:25:13.167666]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = markets : simulation = default
+NOTICE   [2025-Oct-31 16:25:13.167680]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = npv : active = N
+NOTICE   [2025-Oct-31 16:25:13.167693]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = npv : baseCurrency = EUR
+NOTICE   [2025-Oct-31 16:25:13.167706]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = npv : outputFileName = npv.csv
+NOTICE   [2025-Oct-31 16:25:13.167720]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : asofDate = 2016-02-05
+NOTICE   [2025-Oct-31 16:25:13.167733]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : conventionsFile = conventions.xml
+NOTICE   [2025-Oct-31 16:25:13.167747]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : curveConfigFile = curveconfig.xml
+NOTICE   [2025-Oct-31 16:25:13.167760]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : fixingDataFile = fixings.txt
+NOTICE   [2025-Oct-31 16:25:13.167773]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : implyTodaysFixings = N
+NOTICE   [2025-Oct-31 16:25:13.167786]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : inputPath = Input
+NOTICE   [2025-Oct-31 16:25:13.167799]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : logFile = log_threshold.txt
+NOTICE   [2025-Oct-31 16:25:13.167812]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : logMask = 31
+NOTICE   [2025-Oct-31 16:25:13.167825]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : marketConfigFile = todaysmarket.xml
+NOTICE   [2025-Oct-31 16:25:13.167838]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : marketDataFile = market.txt
+NOTICE   [2025-Oct-31 16:25:13.167851]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : observationModel = Disable
+NOTICE   [2025-Oct-31 16:25:13.167864]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : outputPath = Output
+NOTICE   [2025-Oct-31 16:25:13.167877]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : portfolioFile = portfolio.xml
+NOTICE   [2025-Oct-31 16:25:13.167890]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : pricingEnginesFile = pricingengine.xml
+NOTICE   [2025-Oct-31 16:25:13.167903]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = simulation : active = N
+NOTICE   [2025-Oct-31 16:25:13.167916]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = simulation : baseCurrency = EUR
+NOTICE   [2025-Oct-31 16:25:13.167929]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = simulation : pricingEnginesFile = pricingengine.xml
+NOTICE   [2025-Oct-31 16:25:13.167942]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = simulation : simulationConfigFile = simulation.xml
+NOTICE   [2025-Oct-31 16:25:13.167956]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = xva : active = Y
+NOTICE   [2025-Oct-31 16:25:13.167973]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = xva : allocationMethod = Marginal
+NOTICE   [2025-Oct-31 16:25:13.167986]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = xva : baseCurrency = EUR
+NOTICE   [2025-Oct-31 16:25:13.167999]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = xva : calculationType = NoLag
+NOTICE   [2025-Oct-31 16:25:13.168012]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = xva : collateralFloor = Y
+NOTICE   [2025-Oct-31 16:25:13.168026]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = xva : colva = Y
+NOTICE   [2025-Oct-31 16:25:13.168038]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = xva : csaFile = netting_threshold.xml
+NOTICE   [2025-Oct-31 16:25:13.168051]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = xva : cubeFile = cube.csv.gz
+NOTICE   [2025-Oct-31 16:25:13.168064]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = xva : cva = Y
+NOTICE   [2025-Oct-31 16:25:13.168077]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = xva : dva = N
+NOTICE   [2025-Oct-31 16:25:13.168090]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = xva : dvaName = BANK
+NOTICE   [2025-Oct-31 16:25:13.168103]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = xva : exerciseNextBreak = N
+NOTICE   [2025-Oct-31 16:25:13.168116]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = xva : exposureProfiles = Y
+NOTICE   [2025-Oct-31 16:25:13.168129]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = xva : exposureProfilesByTrade = Y
+NOTICE   [2025-Oct-31 16:25:13.168142]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = xva : fva = Y
+NOTICE   [2025-Oct-31 16:25:13.168155]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = xva : fvaBorrowingCurve = BANK_EUR_BORROW
+NOTICE   [2025-Oct-31 16:25:13.168167]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = xva : fvaLendingCurve = BANK_EUR_LEND
+NOTICE   [2025-Oct-31 16:25:13.168180]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = xva : marginalAllocationLimit = 1.0
+NOTICE   [2025-Oct-31 16:25:13.168193]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = xva : quantile = 0.95
+NOTICE   [2025-Oct-31 16:25:13.168206]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = xva : scenarioFile = scenariodata.csv.gz
+NOTICE   [2025-Oct-31 16:25:13.168237]        (VREAnalytics/vrea/app/vreapp.cpp:754) : load VREAppInputParameters called
+WARNING  [2025-Oct-31 16:25:13.168254]        (VREAnalytics/vrea/app/vreapp.cpp:775) : Calendar adjustments not found, using defaults
+WARNING  [2025-Oct-31 16:25:13.168268]        (VREAnalytics/vrea/app/vreapp.cpp:785) : Currency configurations not found, using defaults
+NOTICE   [2025-Oct-31 16:25:13.168287]        (VREAnalytics/vrea/app/vreapp.cpp:866) : Observation Mode is Disable
+WARNING  [2025-Oct-31 16:25:13.168303]        (VREAnalytics/vrea/app/vreapp.cpp:899) : Reference data not found
+WARNING  [2025-Oct-31 16:25:13.168317]        (VREAnalytics/vrea/app/vreapp.cpp:908) : Script library not loaded
+NOTICE   [2025-Oct-31 16:25:13.168333]        (VREAnalytics/vrea/app/vreapp.cpp:913) : Loading conventions from file: "Input/conventions.xml"
+WARNING  [2025-Oct-31 16:25:13.169012]        (VREAnalytics/vrea/app/vreapp.cpp:924) : Using default Ibor fallback config
+WARNING  [2025-Oct-31 16:25:13.169030]        (VREAnalytics/vrea/app/vreapp.cpp:932) : Using default Basel Traffic Light config
+NOTICE   [2025-Oct-31 16:25:13.169045]        (VREAnalytics/vrea/app/vreapp.cpp:937) : Load curve configurations from file: 
+NOTICE   [2025-Oct-31 16:25:13.170627]        (VREAnalytics/vrea/app/vreapp.cpp:946) : Load pricing engine data from file: "Input/pricingengine.xml"
+NOTICE   [2025-Oct-31 16:25:13.171795]        (VREAnalytics/vrea/app/vreapp.cpp:955) : Loading today's market parameters from file"Input/todaysmarket.xml"
+WARNING  [2025-Oct-31 16:25:13.172415]  (...rketdata/todaysmarketparameters.cpp:205) : TodaysMarketParameters: the attribute 'currency' is deprecated for 'SwaptionVolatilities', use 'key' instead.
+NOTICE   [2025-Oct-31 16:25:13.172477]  (...lytics/vrea/app/inputparameters.cpp:222) : Loading portfolio from file: Input/portfolio.xml
+NOTICE   [2025-Oct-31 16:25:13.173211]     (VREData/vred/portfolio/portfolio.cpp:99) : Finished Parsing XML doc
+WARNING  [2025-Oct-31 16:25:13.173268]        (VREAnalytics/vrea/app/vreapp.cpp:977) : CounterpartyManager not found
+NOTICE   [2025-Oct-31 16:25:13.173297]        (VREAnalytics/vrea/app/vreapp.cpp:989) : MarketContext::fxcalibration = default
+NOTICE   [2025-Oct-31 16:25:13.173315]        (VREAnalytics/vrea/app/vreapp.cpp:989) : MarketContext::lgmcalibration = collateral_inccy
+NOTICE   [2025-Oct-31 16:25:13.173331]        (VREAnalytics/vrea/app/vreapp.cpp:989) : MarketContext::pricing = default
+NOTICE   [2025-Oct-31 16:25:13.173346]        (VREAnalytics/vrea/app/vreapp.cpp:989) : MarketContext::simulation = default
+NOTICE   [2025-Oct-31 16:25:13.173371]       (VREAnalytics/vrea/app/vreapp.cpp:1593) : SIMM
+NOTICE   [2025-Oct-31 16:25:13.173387]       (VREAnalytics/vrea/app/vreapp.cpp:1696) : IM SCHEDULE
+NOTICE   [2025-Oct-31 16:25:13.173411]       (VREAnalytics/vrea/app/vreapp.cpp:1896) : Loading simulation config from fileInput/simulation.xml
+WARNING  [2025-Oct-31 16:25:13.173534]  (...rio/scenariosimmarketparameters.cpp:760) : ScenarioSimMarket parameter Extrapolation should be FlatFwd or FlatZero, mapping deprecated boolean 'Y' to FlatFwd. Please change this in your configuration.
+WARNING  [2025-Oct-31 16:25:13.173625]  (.../vred/model/crossassetmodeldata.cpp:272) : Simulation/Parameters/Discretization is deprecated, use Simulation/CrossAssetModel/Discretization instead.
+NOTICE   [2025-Oct-31 16:25:13.173655]  (.../vred/model/crossassetmodeldata.cpp:292) : CrossAssetModelData: domesticCcy EUR
+NOTICE   [2025-Oct-31 16:25:13.173673]  (.../vred/model/crossassetmodeldata.cpp:296) : CrossAssetModelData: ccy EUR
+NOTICE   [2025-Oct-31 16:25:13.173689]  (.../vred/model/crossassetmodeldata.cpp:296) : CrossAssetModelData: ccy USD
+NOTICE   [2025-Oct-31 16:25:13.173704]  (.../vred/model/crossassetmodeldata.cpp:296) : CrossAssetModelData: ccy GBP
+NOTICE   [2025-Oct-31 16:25:13.173724]  (.../vred/model/crossassetmodeldata.cpp:320) : CrossAssetModelData: bootstrap tolerance = 0.0001
+NOTICE   [2025-Oct-31 16:25:13.173740]  (.../vred/model/crossassetmodeldata.cpp:323) : CrossAssetModelData: measure = ''
+WARNING  [2025-Oct-31 16:25:13.173763]         (VREData/vred/model/irlgmdata.cpp:33) : IrLgmData: attribute ccy is deprecated, use key instead.
+NOTICE   [2025-Oct-31 16:25:13.173781]         (VREData/vred/model/irlgmdata.cpp:36) : LGM with attribute (key) = default
+NOTICE   [2025-Oct-31 16:25:13.173805]         (VREData/vred/model/irlgmdata.cpp:54) : LGM calibration swaption 1Y x 19Y ATM
+NOTICE   [2025-Oct-31 16:25:13.173819]         (VREData/vred/model/irlgmdata.cpp:54) : LGM calibration swaption 2Y x 18Y ATM
+NOTICE   [2025-Oct-31 16:25:13.173832]         (VREData/vred/model/irlgmdata.cpp:54) : LGM calibration swaption 4Y x 16Y ATM
+NOTICE   [2025-Oct-31 16:25:13.173845]         (VREData/vred/model/irlgmdata.cpp:54) : LGM calibration swaption 6Y x 14Y ATM
+NOTICE   [2025-Oct-31 16:25:13.173859]         (VREData/vred/model/irlgmdata.cpp:54) : LGM calibration swaption 8Y x 12Y ATM
+NOTICE   [2025-Oct-31 16:25:13.173872]         (VREData/vred/model/irlgmdata.cpp:54) : LGM calibration swaption 10Y x 10Y ATM
+NOTICE   [2025-Oct-31 16:25:13.173886]         (VREData/vred/model/irlgmdata.cpp:54) : LGM calibration swaption 12Y x 8Y ATM
+NOTICE   [2025-Oct-31 16:25:13.173899]         (VREData/vred/model/irlgmdata.cpp:54) : LGM calibration swaption 14Y x 6Y ATM
+NOTICE   [2025-Oct-31 16:25:13.173912]         (VREData/vred/model/irlgmdata.cpp:54) : LGM calibration swaption 16Y x 4Y ATM
+NOTICE   [2025-Oct-31 16:25:13.173925]         (VREData/vred/model/irlgmdata.cpp:54) : LGM calibration swaption 18Y x 2Y ATM
+NOTICE   [2025-Oct-31 16:25:13.173938]         (VREData/vred/model/irlgmdata.cpp:54) : LGM calibration swaption 19Y x 1Y ATM
+NOTICE   [2025-Oct-31 16:25:13.173961]          (VREData/vred/model/lgmdata.cpp:137) : LGM Volatility calibrate = 1
+NOTICE   [2025-Oct-31 16:25:13.173978]          (VREData/vred/model/lgmdata.cpp:141) : LGM Volatility type = Hagan
+NOTICE   [2025-Oct-31 16:25:13.173992]          (VREData/vred/model/lgmdata.cpp:145) : LGM Volatility param type = Piecewise
+NOTICE   [2025-Oct-31 16:25:13.174009]          (VREData/vred/model/lgmdata.cpp:148) : LGM Volatility time grid size = 7
+NOTICE   [2025-Oct-31 16:25:13.174024]          (VREData/vred/model/lgmdata.cpp:151) : LGM Volatility initial values size = 8
+NOTICE   [2025-Oct-31 16:25:13.174038]          (VREData/vred/model/lgmdata.cpp:158) : LGM Reversion calibrate = 0
+NOTICE   [2025-Oct-31 16:25:13.174052]          (VREData/vred/model/lgmdata.cpp:162) : LGM Reversion type = HullWhite
+NOTICE   [2025-Oct-31 16:25:13.174065]          (VREData/vred/model/lgmdata.cpp:166) : LGM Reversion parameter type = Constant
+NOTICE   [2025-Oct-31 16:25:13.174079]          (VREData/vred/model/lgmdata.cpp:169) : LGM Reversion time grid size = 0
+NOTICE   [2025-Oct-31 16:25:13.174092]          (VREData/vred/model/lgmdata.cpp:172) : LGM Reversion initial values size = 1
+NOTICE   [2025-Oct-31 16:25:13.174106]          (VREData/vred/model/lgmdata.cpp:178) : LGM shift horizon = 20
+NOTICE   [2025-Oct-31 16:25:13.174120]          (VREData/vred/model/lgmdata.cpp:181) : LGM scaling = 1
+NOTICE   [2025-Oct-31 16:25:13.174134]      (VREData/vred/model/irmodeldata.cpp:119) : LGM with calibrationType_ = default
+NOTICE   [2025-Oct-31 16:25:13.174149]          (VREData/vred/model/lgmdata.cpp:192) : LgmData done
+NOTICE   [2025-Oct-31 16:25:13.174162]  (.../vred/model/crossassetmodeldata.cpp:344) : LGM calibration swaption 1Y x 19Y ATM
+NOTICE   [2025-Oct-31 16:25:13.174176]  (.../vred/model/crossassetmodeldata.cpp:344) : LGM calibration swaption 2Y x 18Y ATM
+NOTICE   [2025-Oct-31 16:25:13.174189]  (.../vred/model/crossassetmodeldata.cpp:344) : LGM calibration swaption 4Y x 16Y ATM
+NOTICE   [2025-Oct-31 16:25:13.174202]  (.../vred/model/crossassetmodeldata.cpp:344) : LGM calibration swaption 6Y x 14Y ATM
+NOTICE   [2025-Oct-31 16:25:13.174215]  (.../vred/model/crossassetmodeldata.cpp:344) : LGM calibration swaption 8Y x 12Y ATM
+NOTICE   [2025-Oct-31 16:25:13.174228]  (.../vred/model/crossassetmodeldata.cpp:344) : LGM calibration swaption 10Y x 10Y ATM
+NOTICE   [2025-Oct-31 16:25:13.174240]  (.../vred/model/crossassetmodeldata.cpp:344) : LGM calibration swaption 12Y x 8Y ATM
+NOTICE   [2025-Oct-31 16:25:13.174253]  (.../vred/model/crossassetmodeldata.cpp:344) : LGM calibration swaption 14Y x 6Y ATM
+NOTICE   [2025-Oct-31 16:25:13.174266]  (.../vred/model/crossassetmodeldata.cpp:344) : LGM calibration swaption 16Y x 4Y ATM
+NOTICE   [2025-Oct-31 16:25:13.174279]  (.../vred/model/crossassetmodeldata.cpp:344) : LGM calibration swaption 18Y x 2Y ATM
+NOTICE   [2025-Oct-31 16:25:13.174292]  (.../vred/model/crossassetmodeldata.cpp:344) : LGM calibration swaption 19Y x 1Y ATM
+NOTICE   [2025-Oct-31 16:25:13.174305]  (.../vred/model/crossassetmodeldata.cpp:349) : CrossAssetModelData: IR config built for key default
+WARNING  [2025-Oct-31 16:25:13.174318]         (VREData/vred/model/irlgmdata.cpp:33) : IrLgmData: attribute ccy is deprecated, use key instead.
+NOTICE   [2025-Oct-31 16:25:13.174331]         (VREData/vred/model/irlgmdata.cpp:36) : LGM with attribute (key) = EUR
+NOTICE   [2025-Oct-31 16:25:13.174347]         (VREData/vred/model/irlgmdata.cpp:54) : LGM calibration swaption 1Y x 19Y ATM
+NOTICE   [2025-Oct-31 16:25:13.174360]         (VREData/vred/model/irlgmdata.cpp:54) : LGM calibration swaption 2Y x 18Y ATM
+NOTICE   [2025-Oct-31 16:25:13.174372]         (VREData/vred/model/irlgmdata.cpp:54) : LGM calibration swaption 4Y x 16Y ATM
+NOTICE   [2025-Oct-31 16:25:13.174385]         (VREData/vred/model/irlgmdata.cpp:54) : LGM calibration swaption 6Y x 14Y ATM
+NOTICE   [2025-Oct-31 16:25:13.174398]         (VREData/vred/model/irlgmdata.cpp:54) : LGM calibration swaption 8Y x 12Y ATM
+NOTICE   [2025-Oct-31 16:25:13.174411]         (VREData/vred/model/irlgmdata.cpp:54) : LGM calibration swaption 10Y x 10Y ATM
+NOTICE   [2025-Oct-31 16:25:13.174429]         (VREData/vred/model/irlgmdata.cpp:54) : LGM calibration swaption 12Y x 8Y ATM
+NOTICE   [2025-Oct-31 16:25:13.174443]         (VREData/vred/model/irlgmdata.cpp:54) : LGM calibration swaption 14Y x 6Y ATM
+NOTICE   [2025-Oct-31 16:25:13.174455]         (VREData/vred/model/irlgmdata.cpp:54) : LGM calibration swaption 16Y x 4Y ATM
+NOTICE   [2025-Oct-31 16:25:13.174468]         (VREData/vred/model/irlgmdata.cpp:54) : LGM calibration swaption 18Y x 2Y ATM
+NOTICE   [2025-Oct-31 16:25:13.174481]         (VREData/vred/model/irlgmdata.cpp:54) : LGM calibration swaption 19Y x 1Y ATM
+NOTICE   [2025-Oct-31 16:25:13.174494]          (VREData/vred/model/lgmdata.cpp:137) : LGM Volatility calibrate = 1
+NOTICE   [2025-Oct-31 16:25:13.174507]          (VREData/vred/model/lgmdata.cpp:141) : LGM Volatility type = Hagan
+NOTICE   [2025-Oct-31 16:25:13.174520]          (VREData/vred/model/lgmdata.cpp:145) : LGM Volatility param type = Piecewise
+NOTICE   [2025-Oct-31 16:25:13.174534]          (VREData/vred/model/lgmdata.cpp:148) : LGM Volatility time grid size = 7
+NOTICE   [2025-Oct-31 16:25:13.174548]          (VREData/vred/model/lgmdata.cpp:151) : LGM Volatility initial values size = 8
+NOTICE   [2025-Oct-31 16:25:13.174562]          (VREData/vred/model/lgmdata.cpp:158) : LGM Reversion calibrate = 0
+NOTICE   [2025-Oct-31 16:25:13.174574]          (VREData/vred/model/lgmdata.cpp:162) : LGM Reversion type = HullWhite
+NOTICE   [2025-Oct-31 16:25:13.174587]          (VREData/vred/model/lgmdata.cpp:166) : LGM Reversion parameter type = Constant
+NOTICE   [2025-Oct-31 16:25:13.174600]          (VREData/vred/model/lgmdata.cpp:169) : LGM Reversion time grid size = 0
+NOTICE   [2025-Oct-31 16:25:13.174613]          (VREData/vred/model/lgmdata.cpp:172) : LGM Reversion initial values size = 1
+NOTICE   [2025-Oct-31 16:25:13.174627]          (VREData/vred/model/lgmdata.cpp:178) : LGM shift horizon = 20
+NOTICE   [2025-Oct-31 16:25:13.174640]          (VREData/vred/model/lgmdata.cpp:181) : LGM scaling = 1
+NOTICE   [2025-Oct-31 16:25:13.174653]      (VREData/vred/model/irmodeldata.cpp:119) : LGM with calibrationType_ = EUR
+NOTICE   [2025-Oct-31 16:25:13.174666]          (VREData/vred/model/lgmdata.cpp:192) : LgmData done
+NOTICE   [2025-Oct-31 16:25:13.174679]  (.../vred/model/crossassetmodeldata.cpp:344) : LGM calibration swaption 1Y x 19Y ATM
+NOTICE   [2025-Oct-31 16:25:13.174692]  (.../vred/model/crossassetmodeldata.cpp:344) : LGM calibration swaption 2Y x 18Y ATM
+NOTICE   [2025-Oct-31 16:25:13.174705]  (.../vred/model/crossassetmodeldata.cpp:344) : LGM calibration swaption 4Y x 16Y ATM
+NOTICE   [2025-Oct-31 16:25:13.174718]  (.../vred/model/crossassetmodeldata.cpp:344) : LGM calibration swaption 6Y x 14Y ATM
+NOTICE   [2025-Oct-31 16:25:13.174731]  (.../vred/model/crossassetmodeldata.cpp:344) : LGM calibration swaption 8Y x 12Y ATM
+NOTICE   [2025-Oct-31 16:25:13.174743]  (.../vred/model/crossassetmodeldata.cpp:344) : LGM calibration swaption 10Y x 10Y ATM
+NOTICE   [2025-Oct-31 16:25:13.174756]  (.../vred/model/crossassetmodeldata.cpp:344) : LGM calibration swaption 12Y x 8Y ATM
+NOTICE   [2025-Oct-31 16:25:13.174768]  (.../vred/model/crossassetmodeldata.cpp:344) : LGM calibration swaption 14Y x 6Y ATM
+NOTICE   [2025-Oct-31 16:25:13.174781]  (.../vred/model/crossassetmodeldata.cpp:344) : LGM calibration swaption 16Y x 4Y ATM
+NOTICE   [2025-Oct-31 16:25:13.174794]  (.../vred/model/crossassetmodeldata.cpp:344) : LGM calibration swaption 18Y x 2Y ATM
+NOTICE   [2025-Oct-31 16:25:13.174807]  (.../vred/model/crossassetmodeldata.cpp:344) : LGM calibration swaption 19Y x 1Y ATM
+NOTICE   [2025-Oct-31 16:25:13.174819]  (.../vred/model/crossassetmodeldata.cpp:349) : CrossAssetModelData: IR config built for key EUR
+NOTICE   [2025-Oct-31 16:25:13.174879]  (.../vred/model/crossassetmodeldata.cpp:621) : CrossAssetModelData: IR config added for ccy EUR
+NOTICE   [2025-Oct-31 16:25:13.174910]  (.../vred/model/crossassetmodeldata.cpp:597) : IR configuration missing for currency USD, using default
+NOTICE   [2025-Oct-31 16:25:13.174947]  (.../vred/model/crossassetmodeldata.cpp:621) : CrossAssetModelData: IR config added for ccy USD
+NOTICE   [2025-Oct-31 16:25:13.174976]  (.../vred/model/crossassetmodeldata.cpp:597) : IR configuration missing for currency GBP, using default
+NOTICE   [2025-Oct-31 16:25:13.175001]  (.../vred/model/crossassetmodeldata.cpp:621) : CrossAssetModelData: IR config added for ccy GBP
+NOTICE   [2025-Oct-31 16:25:13.175022]  (.../vred/model/crossassetmodeldata.cpp:379) : CrossAssetModelData: IR config currency 0 = EUR
+NOTICE   [2025-Oct-31 16:25:13.175043]  (.../vred/model/crossassetmodeldata.cpp:379) : CrossAssetModelData: IR config currency 1 = USD
+NOTICE   [2025-Oct-31 16:25:13.175063]  (.../vred/model/crossassetmodeldata.cpp:379) : CrossAssetModelData: IR config currency 2 = GBP
+NOTICE   [2025-Oct-31 16:25:13.175078]          (VREData/vred/model/fxbsdata.cpp:41) : CC-LGM foreignCcy = default
+NOTICE   [2025-Oct-31 16:25:13.175093]          (VREData/vred/model/fxbsdata.cpp:44) : CC-LGM domesticCcy = EUR
+NOTICE   [2025-Oct-31 16:25:13.175107]          (VREData/vred/model/fxbsdata.cpp:48) : CC-LGM calibration type = Bootstrap
+NOTICE   [2025-Oct-31 16:25:13.175120]          (VREData/vred/model/fxbsdata.cpp:52) : CC-LGM Sigma calibrate = 1
+NOTICE   [2025-Oct-31 16:25:13.175134]          (VREData/vred/model/fxbsdata.cpp:56) : CC-LGM Sigma parameter type = Piecewise
+NOTICE   [2025-Oct-31 16:25:13.175148]          (VREData/vred/model/fxbsdata.cpp:59) : CC-LGM Sigma time grid size = 7
+NOTICE   [2025-Oct-31 16:25:13.175162]          (VREData/vred/model/fxbsdata.cpp:62) : CC-LGM Sigma initial values size = 8
+NOTICE   [2025-Oct-31 16:25:13.175176]  (.../vred/model/crossassetmodeldata.cpp:393) : CC-LGM calibration option 1Y ATMF
+NOTICE   [2025-Oct-31 16:25:13.175190]  (.../vred/model/crossassetmodeldata.cpp:393) : CC-LGM calibration option 2Y ATMF
+NOTICE   [2025-Oct-31 16:25:13.175203]  (.../vred/model/crossassetmodeldata.cpp:393) : CC-LGM calibration option 3Y ATMF
+NOTICE   [2025-Oct-31 16:25:13.175215]  (.../vred/model/crossassetmodeldata.cpp:393) : CC-LGM calibration option 4Y ATMF
+NOTICE   [2025-Oct-31 16:25:13.175228]  (.../vred/model/crossassetmodeldata.cpp:393) : CC-LGM calibration option 5Y ATMF
+NOTICE   [2025-Oct-31 16:25:13.175241]  (.../vred/model/crossassetmodeldata.cpp:393) : CC-LGM calibration option 10Y ATMF
+NOTICE   [2025-Oct-31 16:25:13.175254]  (.../vred/model/crossassetmodeldata.cpp:398) : CrossAssetModelData: FX config built with key (foreign ccy) default
+NOTICE   [2025-Oct-31 16:25:13.175267]          (VREData/vred/model/fxbsdata.cpp:41) : CC-LGM foreignCcy = USD
+NOTICE   [2025-Oct-31 16:25:13.175280]          (VREData/vred/model/fxbsdata.cpp:44) : CC-LGM domesticCcy = EUR
+NOTICE   [2025-Oct-31 16:25:13.175292]          (VREData/vred/model/fxbsdata.cpp:48) : CC-LGM calibration type = Bootstrap
+NOTICE   [2025-Oct-31 16:25:13.175305]          (VREData/vred/model/fxbsdata.cpp:52) : CC-LGM Sigma calibrate = 1
+NOTICE   [2025-Oct-31 16:25:13.175318]          (VREData/vred/model/fxbsdata.cpp:56) : CC-LGM Sigma parameter type = Piecewise
+NOTICE   [2025-Oct-31 16:25:13.175332]          (VREData/vred/model/fxbsdata.cpp:59) : CC-LGM Sigma time grid size = 7
+NOTICE   [2025-Oct-31 16:25:13.175346]          (VREData/vred/model/fxbsdata.cpp:62) : CC-LGM Sigma initial values size = 8
+NOTICE   [2025-Oct-31 16:25:13.175360]  (.../vred/model/crossassetmodeldata.cpp:393) : CC-LGM calibration option 1Y ATMF
+NOTICE   [2025-Oct-31 16:25:13.175373]  (.../vred/model/crossassetmodeldata.cpp:393) : CC-LGM calibration option 2Y ATMF
+NOTICE   [2025-Oct-31 16:25:13.175386]  (.../vred/model/crossassetmodeldata.cpp:393) : CC-LGM calibration option 3Y ATMF
+NOTICE   [2025-Oct-31 16:25:13.175399]  (.../vred/model/crossassetmodeldata.cpp:393) : CC-LGM calibration option 4Y ATMF
+NOTICE   [2025-Oct-31 16:25:13.175411]  (.../vred/model/crossassetmodeldata.cpp:393) : CC-LGM calibration option 5Y ATMF
+NOTICE   [2025-Oct-31 16:25:13.175424]  (.../vred/model/crossassetmodeldata.cpp:393) : CC-LGM calibration option 10Y ATMF
+NOTICE   [2025-Oct-31 16:25:13.175440]  (.../vred/model/crossassetmodeldata.cpp:398) : CrossAssetModelData: FX config built with key (foreign ccy) USD
+NOTICE   [2025-Oct-31 16:25:13.175453]          (VREData/vred/model/fxbsdata.cpp:41) : CC-LGM foreignCcy = GBP
+NOTICE   [2025-Oct-31 16:25:13.175466]          (VREData/vred/model/fxbsdata.cpp:44) : CC-LGM domesticCcy = EUR
+NOTICE   [2025-Oct-31 16:25:13.175479]          (VREData/vred/model/fxbsdata.cpp:48) : CC-LGM calibration type = Bootstrap
+NOTICE   [2025-Oct-31 16:25:13.175492]          (VREData/vred/model/fxbsdata.cpp:52) : CC-LGM Sigma calibrate = 1
+NOTICE   [2025-Oct-31 16:25:13.175505]          (VREData/vred/model/fxbsdata.cpp:56) : CC-LGM Sigma parameter type = Piecewise
+NOTICE   [2025-Oct-31 16:25:13.175519]          (VREData/vred/model/fxbsdata.cpp:59) : CC-LGM Sigma time grid size = 7
+NOTICE   [2025-Oct-31 16:25:13.175532]          (VREData/vred/model/fxbsdata.cpp:62) : CC-LGM Sigma initial values size = 8
+NOTICE   [2025-Oct-31 16:25:13.175546]  (.../vred/model/crossassetmodeldata.cpp:393) : CC-LGM calibration option 1Y ATMF
+NOTICE   [2025-Oct-31 16:25:13.175559]  (.../vred/model/crossassetmodeldata.cpp:393) : CC-LGM calibration option 2Y ATMF
+NOTICE   [2025-Oct-31 16:25:13.175571]  (.../vred/model/crossassetmodeldata.cpp:393) : CC-LGM calibration option 3Y ATMF
+NOTICE   [2025-Oct-31 16:25:13.175584]  (.../vred/model/crossassetmodeldata.cpp:393) : CC-LGM calibration option 4Y ATMF
+NOTICE   [2025-Oct-31 16:25:13.175597]  (.../vred/model/crossassetmodeldata.cpp:393) : CC-LGM calibration option 5Y ATMF
+NOTICE   [2025-Oct-31 16:25:13.175610]  (.../vred/model/crossassetmodeldata.cpp:393) : CC-LGM calibration option 10Y ATMF
+NOTICE   [2025-Oct-31 16:25:13.175623]  (.../vred/model/crossassetmodeldata.cpp:398) : CrossAssetModelData: FX config built with key (foreign ccy) GBP
+NOTICE   [2025-Oct-31 16:25:13.175639]  (.../vred/model/crossassetmodeldata.cpp:650) : CrossAssetModelData: FX config added for foreign ccy USD
+NOTICE   [2025-Oct-31 16:25:13.175652]  (.../vred/model/crossassetmodeldata.cpp:650) : CrossAssetModelData: FX config added for foreign ccy GBP
+NOTICE   [2025-Oct-31 16:25:13.175665]  (.../vred/model/crossassetmodeldata.cpp:407) : CrossAssetModelData: FX config currency 0 = USD
+NOTICE   [2025-Oct-31 16:25:13.175678]  (.../vred/model/crossassetmodeldata.cpp:407) : CrossAssetModelData: FX config currency 1 = GBP
+NOTICE   [2025-Oct-31 16:25:13.175691]  (.../vred/model/crossassetmodeldata.cpp:430) : No Equity Models section found
+NOTICE   [2025-Oct-31 16:25:13.175705]  (.../vred/model/crossassetmodeldata.cpp:474) : No InflationIndexModels node found so no inflation models configured.
+NOTICE   [2025-Oct-31 16:25:13.175718]  (.../vred/model/crossassetmodeldata.cpp:517) : No CR model section found
+NOTICE   [2025-Oct-31 16:25:13.175732]  (.../vred/model/crossassetmodeldata.cpp:548) : No Commodity Models section found
+NOTICE   [2025-Oct-31 16:25:13.175745]  (.../vred/model/crossassetmodeldata.cpp:565) : No credit states section found
+NOTICE   [2025-Oct-31 16:25:13.175758]  (.../vred/model/crossassetmodeldata.cpp:569) : CrossAssetModelData: adding correlations.
+NOTICE   [2025-Oct-31 16:25:13.175771]  (...a/vred/model/crossassetmodeldata.cpp:76) : CrossAssetModelData: adding correlations.
+NOTICE   [2025-Oct-31 16:25:13.175828]  (.../vred/model/crossassetmodeldata.cpp:575) : CrossAssetModelData loading from XML done
+NOTICE   [2025-Oct-31 16:25:13.175942]  (...a/scenario/scenariogeneratordata.cpp:81) : ScenarioGeneratorData grid points size = 290
+NOTICE   [2025-Oct-31 16:25:13.175962]  (...a/scenario/scenariogeneratordata.cpp:85) : ScenarioGeneratorData sequence type = SobolBrownianBridge
+NOTICE   [2025-Oct-31 16:25:13.175977]  (...a/scenario/scenariogeneratordata.cpp:88) : ScenarioGeneratorData seed = 42
+NOTICE   [2025-Oct-31 16:25:13.175990]  (...a/scenario/scenariogeneratordata.cpp:91) : ScenarioGeneratorData samples = 1000
+NOTICE   [2025-Oct-31 16:25:13.176012]  (.../scenario/scenariogeneratordata.cpp:119) : Use lagged close out grid, lag period is 0D
+NOTICE   [2025-Oct-31 16:25:13.176028]  (.../scenario/scenariogeneratordata.cpp:129) : Use Mpor actual date mode
+NOTICE   [2025-Oct-31 16:25:13.176042]  (.../scenario/scenariogeneratordata.cpp:137) : ScenarioGeneratorData done.
+NOTICE   [2025-Oct-31 16:25:13.176057]       (VREAnalytics/vrea/app/vreapp.cpp:1910) : Load simulation pricing engine data from file: Input/pricingengine.xml
+WARNING  [2025-Oct-31 16:25:13.176133]       (VREAnalytics/vrea/app/vreapp.cpp:1923) : AMC pricing engine data not found, using standard pricing engines
+NOTICE   [2025-Oct-31 16:25:13.176162]       (VREAnalytics/vrea/app/vreapp.cpp:2426) : Load cube from file Output/cube.csv.gz
+NOTICE   [2025-Oct-31 16:25:13.176346]  (...a/scenario/scenariogeneratordata.cpp:81) : ScenarioGeneratorData grid points size = 290
+NOTICE   [2025-Oct-31 16:25:13.176362]  (...a/scenario/scenariogeneratordata.cpp:85) : ScenarioGeneratorData sequence type = SobolBrownianBridge
+NOTICE   [2025-Oct-31 16:25:13.176376]  (...a/scenario/scenariogeneratordata.cpp:88) : ScenarioGeneratorData seed = 42
+NOTICE   [2025-Oct-31 16:25:13.176390]  (...a/scenario/scenariogeneratordata.cpp:91) : ScenarioGeneratorData samples = 1000
+NOTICE   [2025-Oct-31 16:25:13.176416]  (.../scenario/scenariogeneratordata.cpp:119) : Use lagged close out grid, lag period is 0D
+NOTICE   [2025-Oct-31 16:25:13.176430]  (.../scenario/scenariogeneratordata.cpp:129) : Use Mpor actual date mode
+NOTICE   [2025-Oct-31 16:25:13.176443]  (.../scenario/scenariogeneratordata.cpp:137) : ScenarioGeneratorData done.
+NOTICE   [2025-Oct-31 16:25:13.738105]      (VREAnalytics/vrea/cube/cube_io.cpp:162) : loaded cube from Output/cube.csv.gz: asof = February 5th, 2016, dim = 3 x 289 x 1000 x 2, 1579003 data lines read.
+NOTICE   [2025-Oct-31 16:25:13.738212]       (VREAnalytics/vrea/app/vreapp.cpp:2429) : Cube loading done: ids=3 dates=289 samples=1000 depth=2
+NOTICE   [2025-Oct-31 16:25:13.738239]       (VREAnalytics/vrea/app/vreapp.cpp:2441) : Loading netting and csa data from file Input/netting_threshold.xml
+NOTICE   [2025-Oct-31 16:25:13.740417]       (VREAnalytics/vrea/app/vreapp.cpp:2474) : Load agg scen data from file Output/scenariodata.csv.gz
+NOTICE   [2025-Oct-31 16:25:14.410946]      (VREAnalytics/vrea/cube/cube_io.cpp:307) : loaded aggregation scenario data from Output/scenariodata.csv.gz: dimDates = 289, dimSamples = 1000, keys = 7, 2022999 data lines read.
+NOTICE   [2025-Oct-31 16:25:14.411062]       (VREAnalytics/vrea/app/vreapp.cpp:2476) : MktCube loading done
+WARNING  [2025-Oct-31 16:25:14.411106]       (VREAnalytics/vrea/app/vreapp.cpp:3094) : FRTB_SA sensitivity sim-market parameters not loaded
+WARNING  [2025-Oct-31 16:25:14.411124]       (VREAnalytics/vrea/app/vreapp.cpp:3103) : FRTB_SA sensitivity scenario data not loaded
+WARNING  [2025-Oct-31 16:25:14.411140]       (VREAnalytics/vrea/app/vreapp.cpp:3112) : Pricing-engine data not found for FRTB_SA sensitivity, using global pricingEngine
+NOTICE   [2025-Oct-31 16:25:14.411159]       (VREAnalytics/vrea/app/vreapp.cpp:3341) : Loading embedded saccrSupervisoryFactors
+NOTICE   [2025-Oct-31 16:25:14.411200]  (...lytics/vrea/app/inputparameters.cpp:794) : Loaded embedded SACCR Supervisory Factors successfully.
+WARNING  [2025-Oct-31 16:25:14.411220]       (VREAnalytics/vrea/app/vreapp.cpp:3367) : SACCR CRIF file not found
+NOTICE   [2025-Oct-31 16:25:14.411236]       (VREAnalytics/vrea/app/vreapp.cpp:3476) : analytics: 1
+NOTICE   [2025-Oct-31 16:25:14.411249]       (VREAnalytics/vrea/app/vreapp.cpp:3478) : analytic: XVA
+NOTICE   [2025-Oct-31 16:25:14.411263]       (VREAnalytics/vrea/app/vreapp.cpp:3480) : buildInputParameters done
+NOTICE   [2025-Oct-31 16:25:14.411276]  (...lytics/vrea/app/inputparameters.cpp:925) : OutputFileNameMap called
+NOTICE   [2025-Oct-31 16:25:14.411300]  (...ytics/vrea/app/inputparameters.cpp:1027) : OutputFileNameMap complete
+NOTICE   [2025-Oct-31 16:25:14.411315]        (VREAnalytics/vrea/app/vreapp.cpp:490) : initFromParameters done, requested analytics:XVA
+NOTICE   [2025-Oct-31 16:25:14.411329]        (VREAnalytics/vrea/app/vreapp.cpp:583) : Global IncludeTodaysCashFlows is set false, value: na
+NOTICE   [2025-Oct-31 16:25:14.411355]        (VREAnalytics/vrea/app/vreapp.cpp:321) : VRE analytics starting
+WARNING  [2025-Oct-31 16:25:14.411369]        (VREAnalytics/vrea/app/vreapp.cpp:322) : Starting VREApp::analytics(): 1105854464|1091518464 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+WARNING  [2025-Oct-31 16:25:14.411394]        (VREAnalytics/vrea/app/vreapp.cpp:302) : dividend data file not found
+WARNING  [2025-Oct-31 16:25:14.411408]        (VREAnalytics/vrea/app/vreapp.cpp:310) : fixing cutoff date not set
+NOTICE   [2025-Oct-31 16:25:14.411424]   (VREData/vred/marketdata/csvloader.cpp:103) : CSVLoader loading from Input/market.txt
+WARNING  [2025-Oct-31 16:25:14.436762]  (...ed/marketdata/marketdatumparser.cpp:727) : Deprecated MarketDatum::InstrumentType::CDS_INDEX, please use INDEX_CDS_TRANCHE/BASE_CORRELATION/IndexName/Term/DetachPoint or INDEX_CDS_TRANCHE/PRICE/IndexName/Term/AttachPoint/DetachPoint instead
+WARNING  [2025-Oct-31 16:25:14.436848]  (...ed/marketdata/marketdatumparser.cpp:727) : Deprecated MarketDatum::InstrumentType::CDS_INDEX, please use INDEX_CDS_TRANCHE/BASE_CORRELATION/IndexName/Term/DetachPoint or INDEX_CDS_TRANCHE/PRICE/IndexName/Term/AttachPoint/DetachPoint instead
+WARNING  [2025-Oct-31 16:25:14.436876]  (...ed/marketdata/marketdatumparser.cpp:727) : Deprecated MarketDatum::InstrumentType::CDS_INDEX, please use INDEX_CDS_TRANCHE/BASE_CORRELATION/IndexName/Term/DetachPoint or INDEX_CDS_TRANCHE/PRICE/IndexName/Term/AttachPoint/DetachPoint instead
+WARNING  [2025-Oct-31 16:25:14.436896]  (...ed/marketdata/marketdatumparser.cpp:727) : Deprecated MarketDatum::InstrumentType::CDS_INDEX, please use INDEX_CDS_TRANCHE/BASE_CORRELATION/IndexName/Term/DetachPoint or INDEX_CDS_TRANCHE/PRICE/IndexName/Term/AttachPoint/DetachPoint instead
+WARNING  [2025-Oct-31 16:25:14.436914]  (...ed/marketdata/marketdatumparser.cpp:727) : Deprecated MarketDatum::InstrumentType::CDS_INDEX, please use INDEX_CDS_TRANCHE/BASE_CORRELATION/IndexName/Term/DetachPoint or INDEX_CDS_TRANCHE/PRICE/IndexName/Term/AttachPoint/DetachPoint instead
+NOTICE   [2025-Oct-31 16:25:14.436953]   (VREData/vred/marketdata/csvloader.cpp:195) : CSVLoader completed processing Input/market.txt
+NOTICE   [2025-Oct-31 16:25:14.437387]    (VREData/vred/marketdata/csvloader.cpp:82) : CSVLoader loaded 7876 market data points for February 5th, 2016
+NOTICE   [2025-Oct-31 16:25:14.437503]   (VREData/vred/marketdata/csvloader.cpp:103) : CSVLoader loading from Input/fixings.txt
+NOTICE   [2025-Oct-31 16:25:14.442840]   (VREData/vred/marketdata/csvloader.cpp:195) : CSVLoader completed processing Input/fixings.txt
+NOTICE   [2025-Oct-31 16:25:14.442920]    (VREData/vred/marketdata/csvloader.cpp:87) : CSVLoader loaded 5452 fixings
+NOTICE   [2025-Oct-31 16:25:14.442948]    (VREData/vred/marketdata/csvloader.cpp:92) : CSVLoader loaded 0 dividends
+NOTICE   [2025-Oct-31 16:25:14.442965]    (VREData/vred/marketdata/csvloader.cpp:94) : CSVLoader complete.
+NOTICE   [2025-Oct-31 16:25:14.442993]  (...s/vrea/app/analytics/xvaanalytic.cpp:59) : XvaAnalytic::setUpConfigurations() called
+NOTICE   [2025-Oct-31 16:25:14.443019]  (...lytics/vrea/app/analyticsmanager.cpp:53) : register analytic with label 'XVA' and sub-analytics EXPOSURE,PFE,XVA
+NOTICE   [2025-Oct-31 16:25:14.443038]        (VREAnalytics/vrea/app/vreapp.cpp:344) : Available analytics: EXPOSURE,PFE,XVA
+NOTICE   [2025-Oct-31 16:25:14.443055]        (VREAnalytics/vrea/app/vreapp.cpp:347) : Requested analytics: XVA
+NOTICE   [2025-Oct-31 16:25:14.443083]  (...ytics/vrea/app/analyticsmanager.cpp:119) : AnalyticsManager::runAnalytics: populate loader for dates: February 5th, 2016
+NOTICE   [2025-Oct-31 16:25:14.443110]  (...ytics/vrea/app/marketdataloader.cpp:167) : Asking portfolio for its required fixings
+NOTICE   [2025-Oct-31 16:25:14.443132]  (...ytics/vrea/app/marketdataloader.cpp:174) : The portfolio depends on fixings from 0 indices
+NOTICE   [2025-Oct-31 16:25:14.443147]  (...ytics/vrea/app/marketdataloader.cpp:179) : Add fixings possibly required for bootstrapping TodaysMarket
+NOTICE   [2025-Oct-31 16:25:14.443171]  (VREData/vred/portfolio/fixingdates.cpp:827) : Start adding market fixing dates for configuration 'default'
+NOTICE   [2025-Oct-31 16:25:14.443677]  (...ata/vred/portfolio/fixingdates.cpp:1024) : Finished adding market fixing dates for configuration 'default'
+NOTICE   [2025-Oct-31 16:25:14.443694]  (VREData/vred/portfolio/fixingdates.cpp:827) : Start adding market fixing dates for configuration 'collateral_inccy'
+NOTICE   [2025-Oct-31 16:25:14.444062]  (...ata/vred/portfolio/fixingdates.cpp:1024) : Finished adding market fixing dates for configuration 'collateral_inccy'
+NOTICE   [2025-Oct-31 16:25:14.444078]  (VREData/vred/portfolio/fixingdates.cpp:827) : Start adding market fixing dates for configuration 'xois_eur'
+NOTICE   [2025-Oct-31 16:25:14.444436]  (...ata/vred/portfolio/fixingdates.cpp:1024) : Finished adding market fixing dates for configuration 'xois_eur'
+NOTICE   [2025-Oct-31 16:25:14.444454]  (VREData/vred/portfolio/fixingdates.cpp:827) : Start adding market fixing dates for configuration 'xois_usd'
+NOTICE   [2025-Oct-31 16:25:14.444806]  (...ata/vred/portfolio/fixingdates.cpp:1024) : Finished adding market fixing dates for configuration 'xois_usd'
+NOTICE   [2025-Oct-31 16:25:14.444821]  (VREData/vred/portfolio/fixingdates.cpp:827) : Start adding market fixing dates for configuration 'libor'
+NOTICE   [2025-Oct-31 16:25:14.445186]  (...ata/vred/portfolio/fixingdates.cpp:1024) : Finished adding market fixing dates for configuration 'libor'
+NOTICE   [2025-Oct-31 16:25:14.445201]  (...ytics/vrea/app/marketdataloader.cpp:183) : Add fixing possibly required for equity index delta risk decomposition
+NOTICE   [2025-Oct-31 16:25:14.445231]  (...ics/vrea/app/marketdatacsvloader.cpp:72) : MarketDataCsvLoader::retrieveFixings called: all fixings ? Y
+NOTICE   [2025-Oct-31 16:25:14.454659]      (VREData/vred/marketdata/fixings.cpp:70) : Added 5452 of 5452 fixings in 0.010000 seconds
+NOTICE   [2025-Oct-31 16:25:14.454804]  (...ytics/vrea/app/marketdataloader.cpp:259) : Adding the loaded fixings to the IndexManager
+NOTICE   [2025-Oct-31 16:25:14.454833]  (...ytics/vrea/app/marketdataloader.cpp:260) : Fixings size = 12
+NOTICE   [2025-Oct-31 16:25:14.454851]  (...ytics/vrea/app/marketdataloader.cpp:263) : Generating market datum set
+NOTICE   [2025-Oct-31 16:25:14.455923]  (...ytics/vrea/app/marketdataloader.cpp:281) : CurveConfigs require 833 quotes
+NOTICE   [2025-Oct-31 16:25:14.457625]  (...ytics/vrea/app/marketdataloader.cpp:289) : Got market data
+NOTICE   [2025-Oct-31 16:25:14.457725]  (...nalytics/vrea/app/reportwriter.cpp:1174) : Writing MarketData report
+NOTICE   [2025-Oct-31 16:25:14.458248]  (...nalytics/vrea/app/reportwriter.cpp:1213) : MarketData report written
+NOTICE   [2025-Oct-31 16:25:14.458303]  (...nalytics/vrea/app/reportwriter.cpp:1218) : Writing Fixings report
+NOTICE   [2025-Oct-31 16:25:14.458653]  (...nalytics/vrea/app/reportwriter.cpp:1227) : Fixings report written
+NOTICE   [2025-Oct-31 16:25:14.458670]  (...nalytics/vrea/app/reportwriter.cpp:1232) : Writing Dividends report
+NOTICE   [2025-Oct-31 16:25:14.458687]  (...nalytics/vrea/app/reportwriter.cpp:1244) : Dividends report written
+NOTICE   [2025-Oct-31 16:25:14.458702]  (...ytics/vrea/app/analyticsmanager.cpp:145) : run analytic with label 'XVA'
+WARNING  [2025-Oct-31 16:25:14.458724]      (VREAnalytics/vrea/app/analytic.cpp:105) : Starting XVA Analytic::runAnalytic(): 1105854464|1098874880 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+NOTICE   [2025-Oct-31 16:25:14.458749]  (.../vrea/app/analytics/xvaanalytic.cpp:869) : XVA analytic is running with amc cg mode 'Disabled'.
+NOTICE   [2025-Oct-31 16:25:14.458770]  (.../vrea/app/analytics/xvaanalytic.cpp:878) : Simulation IncludeTodaysCashFlows is defined: false
+NOTICE   [2025-Oct-31 16:25:14.458788]  (.../vrea/app/analytics/xvaanalytic.cpp:885) : Simulation IncludeReferenceDateEvents is set to false
+NOTICE   [2025-Oct-31 16:25:14.458805]  (.../vrea/app/analytics/xvaanalytic.cpp:887) : XVA analytic called with asof 2016-02-05
+NOTICE   [2025-Oct-31 16:25:14.458980]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:25:14.458832", "key": "Running XVA Analytic", "progress": 0, "total": 1 }
+NOTICE   [2025-Oct-31 16:25:14.459004]  (.../vrea/app/analytics/xvaanalytic.cpp:903) : XVA: Build Today's Market
+NOTICE   [2025-Oct-31 16:25:14.459029]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:25:14.459020", "key": "XVA: Build Today's Market", "progress": 0, "total": 1 }
+NOTICE   [2025-Oct-31 16:25:14.459045]      (VREAnalytics/vrea/app/analytic.cpp:223) : Analytic::buildMarket called
+NOTICE   [2025-Oct-31 16:25:14.459061]  (.../vred/marketdata/bondspreadimply.cpp:53) : identify securities that require a spread imply for configuration default
+NOTICE   [2025-Oct-31 16:25:14.459097]  (.../vred/marketdata/bondspreadimply.cpp:53) : identify securities that require a spread imply for configuration collateral_inccy
+NOTICE   [2025-Oct-31 16:25:14.459119]  (.../vred/marketdata/bondspreadimply.cpp:53) : identify securities that require a spread imply for configuration xois_eur
+NOTICE   [2025-Oct-31 16:25:14.459138]  (.../vred/marketdata/bondspreadimply.cpp:53) : identify securities that require a spread imply for configuration xois_usd
+NOTICE   [2025-Oct-31 16:25:14.459157]  (.../vred/marketdata/bondspreadimply.cpp:53) : identify securities that require a spread imply for configuration libor
+NOTICE   [2025-Oct-31 16:25:14.459178]  (...vred/marketdata/bondspreadimply.cpp:110) : got 0 securities
+NOTICE   [2025-Oct-31 16:25:14.459316]  (.../vred/marketdata/fxtriangulation.cpp:67) : FXTriangulation: initializing
+NOTICE   [2025-Oct-31 16:25:14.459337]  (...vred/marketdata/fxtriangulation.cpp:114) : FXTriangulation: initialized with 8 quotes, 7 currencies.
+NOTICE   [2025-Oct-31 16:25:14.459722]  (...ta/vred/marketdata/todaysmarket.cpp:229) : Build objects in TodaysMarket lazily, i.e. when requested.
+NOTICE   [2025-Oct-31 16:25:14.459740]  (...ta/vred/marketdata/todaysmarket.cpp:234) : TodaysMarket build stats:
+NOTICE   [2025-Oct-31 16:25:14.459756]  (...ta/vred/marketdata/todaysmarket.cpp:240) : 3 add all fx quotes               :               0 ms         1              0 ms
+NOTICE   [2025-Oct-31 16:25:14.459771]  (...ta/vred/marketdata/todaysmarket.cpp:240) : 4 build dep graphs                :               0 ms         1              0 ms
+NOTICE   [2025-Oct-31 16:25:14.459784]  (...ta/vred/marketdata/todaysmarket.cpp:243) : Total build time              :               0 ms
+NOTICE   [2025-Oct-31 16:25:14.459818]      (VREAnalytics/vrea/app/analytic.cpp:261) : Market Build time 0.000000 sec
+NOTICE   [2025-Oct-31 16:25:14.459840]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:25:14.459832", "key": "XVA: Build Today's Market", "progress": 1, "total": 1 }
+NOTICE   [2025-Oct-31 16:25:14.459857]     (VREData/vred/portfolio/portfolio.cpp:47) : Reset portfolio of size 3
+NOTICE   [2025-Oct-31 16:25:14.459875]      (VREAnalytics/vrea/app/analytic.cpp:285) : Build the portfolio
+NOTICE   [2025-Oct-31 16:25:14.459889]  (.../vrea/app/analytics/xvaanalytic.cpp:144) : XvaAnalytic::engineFactory() called
+NOTICE   [2025-Oct-31 16:25:14.459926]  (...ta/vred/portfolio/enginefactory.cpp:189) : Building EngineFactory
+NOTICE   [2025-Oct-31 16:25:14.460065]    (VREData/vred/portfolio/portfolio.cpp:133) : Building Portfolio of size 3 for context = 'analytic/XVA'
+WARNING  [2025-Oct-31 16:25:14.469779]  (.../vred/configuration/conventions.cpp:650) : receiveFrequency_ empty set to index tenor.
+WARNING  [2025-Oct-31 16:25:14.469880]  (.../vred/configuration/conventions.cpp:661) : payFrequency_ empty set to index tenor.
+NOTICE   [2025-Oct-31 16:25:14.511305]    (VREData/vred/portfolio/portfolio.cpp:161) : Built Portfolio. Initial size = 3, size now 3, built 0 failed trades, context is analytic/XVA
+NOTICE   [2025-Oct-31 16:25:14.511400]    (VREData/vred/portfolio/portfolio.cpp:162) : Build stats:
+NOTICE   [2025-Oct-31 16:25:14.511425]    (VREData/vred/portfolio/portfolio.cpp:166) : Swap                              3             50 ms (avg = 16.7)
+NOTICE   [2025-Oct-31 16:25:14.511457]      (VREAnalytics/vrea/app/analytic.cpp:294) : Filter trades that expire before February 5th, 2016
+NOTICE   [2025-Oct-31 16:25:14.511483]  (...vrea/app/analytics/xvaanalytic.cpp:1072) : Skip cube generation, load input cubes for XVA
+NOTICE   [2025-Oct-31 16:25:14.511528]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:25:14.511504", "key": "XVA: Load Cubes", "progress": 0, "total": 1 }
+NOTICE   [2025-Oct-31 16:25:14.511556]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:25:14.511548", "key": "XVA: Load Cubes", "progress": 1, "total": 1 }
+NOTICE   [2025-Oct-31 16:25:14.511580]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:25:14.511572", "key": "XVA: Aggregation", "progress": 0, "total": 1 }
+NOTICE   [2025-Oct-31 16:25:14.511610]  (.../portfolio/nettingsetdefinition.cpp:287) : NettingSetId='CPTY_A': Validating netting set definition
+NOTICE   [2025-Oct-31 16:25:14.511627]  (.../portfolio/nettingsetdefinition.cpp:294) : NettingSetId='CPTY_A': Validating netting set definition's CSA details
+NOTICE   [2025-Oct-31 16:25:14.511643]  (...s/vrea/app/analytics/xvaanalytic.cpp:82) : For netting-set CPTY_ACSA flag is 1
+NOTICE   [2025-Oct-31 16:25:14.511659]  (...s/vrea/app/analytics/xvaanalytic.cpp:91) : For netting-set CPTY_A, calculation type is NoLag
+NOTICE   [2025-Oct-31 16:25:14.511675]  (.../vrea/app/analytics/xvaanalytic.cpp:849) : baseCurrency EUR
+NOTICE   [2025-Oct-31 16:25:14.511697]  (...ics/vrea/aggregation/postprocess.cpp:95) : PostProcess: started.
+NOTICE   [2025-Oct-31 16:25:14.511715]  (...cs/vrea/aggregation/postprocess.cpp:112) : cube storage is regular: 0
+NOTICE   [2025-Oct-31 16:25:14.511729]  (...cs/vrea/aggregation/postprocess.cpp:113) : cube dates: 289
+NOTICE   [2025-Oct-31 16:25:14.511745]  (...cs/vrea/aggregation/postprocess.cpp:122) : AsOfDate = 2016-02-05
+NOTICE   [2025-Oct-31 16:25:14.511769]  (...a/aggregation/exposurecalculator.cpp:75) : Compute trade exposure profiles, regular (flipViewXVA = N)
+NOTICE   [2025-Oct-31 16:25:14.511790]  (...a/aggregation/exposurecalculator.cpp:94) : Aggregate exposure for trade Swap_1
+NOTICE   [2025-Oct-31 16:25:14.530602]  (...a/aggregation/exposurecalculator.cpp:94) : Aggregate exposure for trade Swap_2
+NOTICE   [2025-Oct-31 16:25:14.547921]  (...a/aggregation/exposurecalculator.cpp:94) : Aggregate exposure for trade Swap_3
+NOTICE   [2025-Oct-31 16:25:14.566656]  (...egation/nettedexposurecalculator.cpp:93) : Compute netting set exposure profiles
+NOTICE   [2025-Oct-31 16:25:14.567814]  (...gation/nettedexposurecalculator.cpp:163) : Aggregate exposure for netting set CPTY_A
+NOTICE   [2025-Oct-31 16:25:14.567847]  (...gation/nettedexposurecalculator.cpp:484) : Build collateral account balance paths for netting set CPTY_A
+NOTICE   [2025-Oct-31 16:25:14.567867]  (...gation/nettedexposurecalculator.cpp:490) : CSA FX rate for pair EUREUR = 1
+NOTICE   [2025-Oct-31 16:25:14.567954]  (...gation/nettedexposurecalculator.cpp:500) : CSA compounding rate for index EUR-EONIA = -0.001122 as of February 5th, 2016
+NOTICE   [2025-Oct-31 16:25:15.632162]  (...gation/nettedexposurecalculator.cpp:540) : Collateral account balance paths for netting set CPTY_A done
+NOTICE   [2025-Oct-31 16:25:15.632351]  (...gation/nettedexposurecalculator.cpp:190) : ApplyInitialMargin=0 for netting set CPTY_A, CSA IM=1, CSA IM Type=Bilateral, Analytics DIM=0
+ALERT    [2025-Oct-31 16:25:15.632378]  (...gation/nettedexposurecalculator.cpp:194) : ApplyInitialMargin deactivated in analytics, but active at netting set level CPTY_A
+NOTICE   [2025-Oct-31 16:25:15.799668]  (.../vrea/aggregation/xvacalculator.cpp:318) : Update XVA for trade Swap_1, regular (flipViewXVA = N)
+NOTICE   [2025-Oct-31 16:25:15.799927]  (...ta/vred/marketdata/defaultcurve.cpp:558) : Start building default curve of type HazardRate for curve CPTY_A_SR_USD
+NOTICE   [2025-Oct-31 16:25:15.799994]  (...ta/vred/marketdata/defaultcurve.cpp:172) : Loading explicit quotes for default curve CPTY_A_SR_USD
+NOTICE   [2025-Oct-31 16:25:15.800031]  (...ta/vred/marketdata/defaultcurve.cpp:200) : DefaultCurve CPTY_A_SR_USD using 11 default quotes of 11 requested quotes.
+NOTICE   [2025-Oct-31 16:25:15.800050]  (...ta/vred/marketdata/defaultcurve.cpp:590) : DefaultCurve: set up interpolated hazard rate curve
+NOTICE   [2025-Oct-31 16:25:15.800076]  (...ta/vred/marketdata/defaultcurve.cpp:608) : Finished building default curve of type HazardRate for curve CPTY_A_SR_USD
+NOTICE   [2025-Oct-31 16:25:15.800104]  (...ta/vred/marketdata/defaultcurve.cpp:310) : Start building default curve of type SpreadCDS for curve BANK_SR_USD
+NOTICE   [2025-Oct-31 16:25:15.800123]  (...ta/vred/marketdata/defaultcurve.cpp:172) : Loading explicit quotes for default curve BANK_SR_USD
+NOTICE   [2025-Oct-31 16:25:15.800151]  (...ta/vred/marketdata/defaultcurve.cpp:200) : DefaultCurve BANK_SR_USD using 7 default quotes of 7 requested quotes.
+NOTICE   [2025-Oct-31 16:25:15.800640]  (...ta/vred/marketdata/defaultcurve.cpp:552) : Finished building default curve of type SpreadCDS for curve BANK_SR_USD
+NOTICE   [2025-Oct-31 16:25:15.801477]  (.../vrea/aggregation/xvacalculator.cpp:318) : Update XVA for trade Swap_2, regular (flipViewXVA = N)
+NOTICE   [2025-Oct-31 16:25:15.802227]  (.../vrea/aggregation/xvacalculator.cpp:318) : Update XVA for trade Swap_3, regular (flipViewXVA = N)
+NOTICE   [2025-Oct-31 16:25:15.803006]  (.../vrea/aggregation/xvacalculator.cpp:405) : Update XVA for netting set CPTY_A, regular (flipViewXVA = N)
+NOTICE   [2025-Oct-31 16:25:15.803758]  (.../vrea/aggregation/xvacalculator.cpp:318) : Update XVA for trade Swap_1, regular (flipViewXVA = N)
+NOTICE   [2025-Oct-31 16:25:15.804521]  (.../vrea/aggregation/xvacalculator.cpp:318) : Update XVA for trade Swap_2, regular (flipViewXVA = N)
+NOTICE   [2025-Oct-31 16:25:15.805292]  (.../vrea/aggregation/xvacalculator.cpp:318) : Update XVA for trade Swap_3, regular (flipViewXVA = N)
+NOTICE   [2025-Oct-31 16:25:15.806058]  (.../vrea/aggregation/xvacalculator.cpp:405) : Update XVA for netting set CPTY_A, regular (flipViewXVA = N)
+NOTICE   [2025-Oct-31 16:25:15.807010]  (.../vrea/app/analytics/xvaanalytic.cpp:863) : post done
+NOTICE   [2025-Oct-31 16:25:15.807095]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:25:15.807068", "key": "XVA: Aggregation", "progress": 1, "total": 1 }
+NOTICE   [2025-Oct-31 16:25:15.807132]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:25:15.807123", "key": "XVA: Reports", "progress": 0, "total": 1 }
+NOTICE   [2025-Oct-31 16:25:15.807152]  (...vrea/app/analytics/xvaanalytic.cpp:1139) : Generating XVA reports and cube outputs
+NOTICE   [2025-Oct-31 16:25:15.807366]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:25:15.807356", "key": "XVA: Reports", "progress": 1, "total": 1 }
+NOTICE   [2025-Oct-31 16:25:15.807390]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:25:15.807383", "key": "Running XVA Analytic", "progress": 1, "total": 1 }
+WARNING  [2025-Oct-31 16:25:15.807406]      (VREAnalytics/vrea/app/analytic.cpp:110) : Finishing XVA Analytic::runAnalytic(): 1174913024|1173209088 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+NOTICE   [2025-Oct-31 16:25:15.807431]  (...ytics/vrea/app/analyticsmanager.cpp:154) : run analytic with label 'XVA' finished.
+NOTICE   [2025-Oct-31 16:25:15.807548]  (...rea/app/marketcalibrationreport.cpp:241) : Skipping curve EUR1D for label  as it has already been added
+WARNING  [2025-Oct-31 16:25:15.820136]  (.../vred/configuration/conventions.cpp:661) : payFrequency_ empty set to index tenor.
+NOTICE   [2025-Oct-31 16:25:15.849687]  (...nalytics/vrea/app/reportwriter.cpp:1249) : Writing Pricing stats report
+NOTICE   [2025-Oct-31 16:25:15.849785]  (...nalytics/vrea/app/reportwriter.cpp:1265) : Pricing stats report written
+NOTICE   [2025-Oct-31 16:25:15.849820]  (...nalytics/vrea/app/reportwriter.cpp:1270) : Writing runtimes report
+NOTICE   [2025-Oct-31 16:25:15.849844]  (...nalytics/vrea/app/reportwriter.cpp:1294) : Finished writing runtimes report
+NOTICE   [2025-Oct-31 16:25:15.849869]  (...ytics/vrea/app/analyticsmanager.cpp:239) : report name colva_nettingset_CPTY_A occurs 1 times
+NOTICE   [2025-Oct-31 16:25:15.849887]  (...ytics/vrea/app/analyticsmanager.cpp:239) : report name cva_sensitivity_nettingset_CPTY_A occurs 1 times
+NOTICE   [2025-Oct-31 16:25:15.849901]  (...ytics/vrea/app/analyticsmanager.cpp:239) : report name dividends occurs 1 times
+NOTICE   [2025-Oct-31 16:25:15.849915]  (...ytics/vrea/app/analyticsmanager.cpp:239) : report name exposure_nettingset_CPTY_A occurs 1 times
+NOTICE   [2025-Oct-31 16:25:15.849929]  (...ytics/vrea/app/analyticsmanager.cpp:239) : report name exposure_trade_Swap_1 occurs 1 times
+NOTICE   [2025-Oct-31 16:25:15.849943]  (...ytics/vrea/app/analyticsmanager.cpp:239) : report name exposure_trade_Swap_2 occurs 1 times
+NOTICE   [2025-Oct-31 16:25:15.849956]  (...ytics/vrea/app/analyticsmanager.cpp:239) : report name exposure_trade_Swap_3 occurs 1 times
+NOTICE   [2025-Oct-31 16:25:15.849969]  (...ytics/vrea/app/analyticsmanager.cpp:239) : report name fixings occurs 1 times
+NOTICE   [2025-Oct-31 16:25:15.849982]  (...ytics/vrea/app/analyticsmanager.cpp:239) : report name marketdata occurs 1 times
+NOTICE   [2025-Oct-31 16:25:15.849995]  (...ytics/vrea/app/analyticsmanager.cpp:239) : report name pricingstats occurs 1 times
+NOTICE   [2025-Oct-31 16:25:15.850008]  (...ytics/vrea/app/analyticsmanager.cpp:239) : report name runtimes occurs 1 times
+NOTICE   [2025-Oct-31 16:25:15.850024]  (...ytics/vrea/app/analyticsmanager.cpp:239) : report name todaysmarketcalibration occurs 1 times
+NOTICE   [2025-Oct-31 16:25:15.850037]  (...ytics/vrea/app/analyticsmanager.cpp:239) : report name xva occurs 1 times
+NOTICE   [2025-Oct-31 16:25:15.850054]       (VREData/vred/report/csvreport.cpp:127) : Opening CSV file report 'Output/dividends.csv'
+NOTICE   [2025-Oct-31 16:25:15.850201]       (VREData/vred/report/csvreport.cpp:216) : CSV file report 'Output/dividends.csv' closed.
+NOTICE   [2025-Oct-31 16:25:15.850221]  (...ytics/vrea/app/analyticsmanager.cpp:289) : report dividends written to Output/dividends.csv
+NOTICE   [2025-Oct-31 16:25:15.850238]       (VREData/vred/report/csvreport.cpp:127) : Opening CSV file report 'Output/fixings.csv'
+NOTICE   [2025-Oct-31 16:25:15.852381]       (VREData/vred/report/csvreport.cpp:216) : CSV file report 'Output/fixings.csv' closed.
+NOTICE   [2025-Oct-31 16:25:15.852429]  (...ytics/vrea/app/analyticsmanager.cpp:289) : report fixings written to Output/fixings.csv
+NOTICE   [2025-Oct-31 16:25:15.852452]       (VREData/vred/report/csvreport.cpp:127) : Opening CSV file report 'Output/todaysmarketcalibration.csv'
+NOTICE   [2025-Oct-31 16:25:15.852901]       (VREData/vred/report/csvreport.cpp:216) : CSV file report 'Output/todaysmarketcalibration.csv' closed.
+NOTICE   [2025-Oct-31 16:25:15.852921]  (...ytics/vrea/app/analyticsmanager.cpp:289) : report todaysmarketcalibration written to Output/todaysmarketcalibration.csv
+NOTICE   [2025-Oct-31 16:25:15.852939]       (VREData/vred/report/csvreport.cpp:127) : Opening CSV file report 'Output/marketdata.csv'
+NOTICE   [2025-Oct-31 16:25:15.853492]       (VREData/vred/report/csvreport.cpp:216) : CSV file report 'Output/marketdata.csv' closed.
+NOTICE   [2025-Oct-31 16:25:15.853519]  (...ytics/vrea/app/analyticsmanager.cpp:289) : report marketdata written to Output/marketdata.csv
+NOTICE   [2025-Oct-31 16:25:15.853534]       (VREData/vred/report/csvreport.cpp:127) : Opening CSV file report 'Output/pricingstats.csv'
+NOTICE   [2025-Oct-31 16:25:15.853601]       (VREData/vred/report/csvreport.cpp:216) : CSV file report 'Output/pricingstats.csv' closed.
+NOTICE   [2025-Oct-31 16:25:15.853618]  (...ytics/vrea/app/analyticsmanager.cpp:289) : report pricingstats written to Output/pricingstats.csv
+NOTICE   [2025-Oct-31 16:25:15.853632]       (VREData/vred/report/csvreport.cpp:127) : Opening CSV file report 'Output/runtimes.csv'
+NOTICE   [2025-Oct-31 16:25:15.853694]       (VREData/vred/report/csvreport.cpp:216) : CSV file report 'Output/runtimes.csv' closed.
+NOTICE   [2025-Oct-31 16:25:15.853709]  (...ytics/vrea/app/analyticsmanager.cpp:289) : report runtimes written to Output/runtimes.csv
+NOTICE   [2025-Oct-31 16:25:15.853723]       (VREData/vred/report/csvreport.cpp:127) : Opening CSV file report 'Output/colva_nettingset_CPTY_A.csv'
+NOTICE   [2025-Oct-31 16:25:15.854144]       (VREData/vred/report/csvreport.cpp:216) : CSV file report 'Output/colva_nettingset_CPTY_A.csv' closed.
+NOTICE   [2025-Oct-31 16:25:15.854161]  (...ytics/vrea/app/analyticsmanager.cpp:289) : report colva_nettingset_CPTY_A written to Output/colva_nettingset_CPTY_A.csv
+NOTICE   [2025-Oct-31 16:25:15.854177]       (VREData/vred/report/csvreport.cpp:127) : Opening CSV file report 'Output/cva_sensitivity_nettingset_CPTY_A.csv'
+NOTICE   [2025-Oct-31 16:25:15.854232]       (VREData/vred/report/csvreport.cpp:216) : CSV file report 'Output/cva_sensitivity_nettingset_CPTY_A.csv' closed.
+NOTICE   [2025-Oct-31 16:25:15.854248]  (...ytics/vrea/app/analyticsmanager.cpp:289) : report cva_sensitivity_nettingset_CPTY_A written to Output/cva_sensitivity_nettingset_CPTY_A.csv
+NOTICE   [2025-Oct-31 16:25:15.854262]       (VREData/vred/report/csvreport.cpp:127) : Opening CSV file report 'Output/exposure_nettingset_CPTY_A.csv'
+NOTICE   [2025-Oct-31 16:25:15.854808]       (VREData/vred/report/csvreport.cpp:216) : CSV file report 'Output/exposure_nettingset_CPTY_A.csv' closed.
+NOTICE   [2025-Oct-31 16:25:15.854852]  (...ytics/vrea/app/analyticsmanager.cpp:289) : report exposure_nettingset_CPTY_A written to Output/exposure_nettingset_CPTY_A.csv
+NOTICE   [2025-Oct-31 16:25:15.854884]       (VREData/vred/report/csvreport.cpp:127) : Opening CSV file report 'Output/exposure_trade_Swap_1.csv'
+NOTICE   [2025-Oct-31 16:25:15.855499]       (VREData/vred/report/csvreport.cpp:216) : CSV file report 'Output/exposure_trade_Swap_1.csv' closed.
+NOTICE   [2025-Oct-31 16:25:15.855520]  (...ytics/vrea/app/analyticsmanager.cpp:289) : report exposure_trade_Swap_1 written to Output/exposure_trade_Swap_1.csv
+NOTICE   [2025-Oct-31 16:25:15.855535]       (VREData/vred/report/csvreport.cpp:127) : Opening CSV file report 'Output/exposure_trade_Swap_2.csv'
+NOTICE   [2025-Oct-31 16:25:15.856111]       (VREData/vred/report/csvreport.cpp:216) : CSV file report 'Output/exposure_trade_Swap_2.csv' closed.
+NOTICE   [2025-Oct-31 16:25:15.856132]  (...ytics/vrea/app/analyticsmanager.cpp:289) : report exposure_trade_Swap_2 written to Output/exposure_trade_Swap_2.csv
+NOTICE   [2025-Oct-31 16:25:15.856146]       (VREData/vred/report/csvreport.cpp:127) : Opening CSV file report 'Output/exposure_trade_Swap_3.csv'
+NOTICE   [2025-Oct-31 16:25:15.856678]       (VREData/vred/report/csvreport.cpp:216) : CSV file report 'Output/exposure_trade_Swap_3.csv' closed.
+NOTICE   [2025-Oct-31 16:25:15.856698]  (...ytics/vrea/app/analyticsmanager.cpp:289) : report exposure_trade_Swap_3 written to Output/exposure_trade_Swap_3.csv
+NOTICE   [2025-Oct-31 16:25:15.856713]       (VREData/vred/report/csvreport.cpp:127) : Opening CSV file report 'Output/xva.csv'
+NOTICE   [2025-Oct-31 16:25:15.856778]       (VREData/vred/report/csvreport.cpp:216) : CSV file report 'Output/xva.csv' closed.
+NOTICE   [2025-Oct-31 16:25:15.856793]  (...ytics/vrea/app/analyticsmanager.cpp:289) : report xva written to Output/xva.csv
+WARNING  [2025-Oct-31 16:25:15.856811]        (VREAnalytics/vrea/app/vreapp.cpp:424) : Finishing VREApp::analytics(): 1174913024|1173946368 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+NOTICE   [2025-Oct-31 16:25:15.856833]        (VREAnalytics/vrea/app/vreapp.cpp:425) : VRE analytics done
+NOTICE   [2025-Oct-31 16:25:15.856849]        (VREAnalytics/vrea/app/vreapp.cpp:603) : VRE done.
+NOTICE   [2025-Oct-31 16:25:15.946921]     (VREAnalytics/vrea/app/parameters.cpp:66) : load VRE configuration from ./_vre_params_wrapped.xml
+NOTICE   [2025-Oct-31 16:25:15.947123]     (VREAnalytics/vrea/app/parameters.cpp:70) : load VRE configuration from ./_vre_params_wrapped.xml done.

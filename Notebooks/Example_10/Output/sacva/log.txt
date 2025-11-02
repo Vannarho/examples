@@ -1,0 +1,89 @@
+NOTICE   [2025-Oct-31 16:30:26.987472]    (VREAnalytics/vrea/app/parameters.cpp:133) : Parameters:
+NOTICE   [2025-Oct-31 16:30:26.987527]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = cashflow : active = Y
+NOTICE   [2025-Oct-31 16:30:26.987549]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = cashflow : outputFileName = flows.csv
+NOTICE   [2025-Oct-31 16:30:26.987565]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = curves : active = N
+NOTICE   [2025-Oct-31 16:30:26.987581]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = curves : configuration = default
+NOTICE   [2025-Oct-31 16:30:26.987595]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = curves : grid = 240,1M
+NOTICE   [2025-Oct-31 16:30:26.987609]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = curves : outputFileName = curves.csv
+NOTICE   [2025-Oct-31 16:30:26.987623]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = markets : fxcalibration = xois_eur
+NOTICE   [2025-Oct-31 16:30:26.987637]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = markets : lgmcalibration = collateral_inccy
+NOTICE   [2025-Oct-31 16:30:26.987651]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = markets : pricing = xois_eur
+NOTICE   [2025-Oct-31 16:30:26.987665]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = markets : sensitivity = xois_eur
+NOTICE   [2025-Oct-31 16:30:26.987677]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = markets : simulation = xois_eur
+NOTICE   [2025-Oct-31 16:30:26.987690]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = npv : active = Y
+NOTICE   [2025-Oct-31 16:30:26.987702]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = npv : baseCurrency = EUR
+NOTICE   [2025-Oct-31 16:30:26.987713]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = npv : outputFileName = npv.csv
+NOTICE   [2025-Oct-31 16:30:26.987726]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = saccr : OEMSACCR = N
+NOTICE   [2025-Oct-31 16:30:26.987738]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = saccr : active = Y
+NOTICE   [2025-Oct-31 16:30:26.987750]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = saccr : ignoreMarginSACCR = N
+NOTICE   [2025-Oct-31 16:30:26.987762]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = saccr : saccrBaseCurrency = EUR
+NOTICE   [2025-Oct-31 16:30:26.987774]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = saccr : saccrCollateralBalancesFile = collateralbalances.xml
+NOTICE   [2025-Oct-31 16:30:26.987786]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = saccr : saccrCrifOutputFileName = saccr_crif.csv
+NOTICE   [2025-Oct-31 16:30:26.987798]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = saccr : saccrCsaFile = netting.xml
+NOTICE   [2025-Oct-31 16:30:26.987810]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = saccr : saccrOutputFileName = saccr_output.csv
+NOTICE   [2025-Oct-31 16:30:26.987822]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = saccr : saccrPortfolioFile = portfolio_sensi.xml
+NOTICE   [2025-Oct-31 16:30:26.987834]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = saccr : saccrTreeOutputFileName = saccr_output.json
+NOTICE   [2025-Oct-31 16:30:26.987845]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = saccr : simplifiedSACCR = N
+NOTICE   [2025-Oct-31 16:30:26.987857]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = sacva : active = Y
+NOTICE   [2025-Oct-31 16:30:26.987869]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = sacva : saCvaMethod = SACVA
+NOTICE   [2025-Oct-31 16:30:26.987880]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = sacva : useUnhedgedCvaSensis = N
+NOTICE   [2025-Oct-31 16:30:26.987893]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : asofDate = 2016-02-05
+NOTICE   [2025-Oct-31 16:30:26.987905]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : conventionsFile = ../../Input/conventions.xml
+NOTICE   [2025-Oct-31 16:30:26.987917]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : counterpartyFile = counterparty.xml
+NOTICE   [2025-Oct-31 16:30:26.987928]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : curveConfigFile = ../../Input/curveconfig.xml
+NOTICE   [2025-Oct-31 16:30:26.987944]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : fixingDataFile = ../../Input/fixings_20160205.txt
+NOTICE   [2025-Oct-31 16:30:26.987956]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : implyTodaysFixings = N
+NOTICE   [2025-Oct-31 16:30:26.987968]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : inputPath = Input
+NOTICE   [2025-Oct-31 16:30:26.987980]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : logFile = log.txt
+NOTICE   [2025-Oct-31 16:30:26.987991]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : logMask = 31
+NOTICE   [2025-Oct-31 16:30:26.988003]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : marketConfigFile = ../../Input/todaysmarket.xml
+NOTICE   [2025-Oct-31 16:30:26.988020]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : marketDataFile = ../../Input/market_20160205.txt
+NOTICE   [2025-Oct-31 16:30:26.988034]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : observationModel = Disable
+NOTICE   [2025-Oct-31 16:30:26.988047]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : outputPath = Output/sacva
+NOTICE   [2025-Oct-31 16:30:26.988060]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : portfolioFile = portfolio_sensi.xml
+NOTICE   [2025-Oct-31 16:30:26.988074]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : pricingEnginesFile = pricingengine.xml
+NOTICE   [2025-Oct-31 16:30:26.988087]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : tradingDeskFile = ../../Input/tradingdesk.xml
+NOTICE   [2025-Oct-31 16:30:26.988101]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = simulation : active = N
+NOTICE   [2025-Oct-31 16:30:26.988114]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = simulation : aggregationScenarioDataDump = scenariodata.csv
+NOTICE   [2025-Oct-31 16:30:26.988127]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = simulation : aggregationScenarioDataFileName = scenariodata.csv.gz
+NOTICE   [2025-Oct-31 16:30:26.988140]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = simulation : allowPartialScenarios = N
+NOTICE   [2025-Oct-31 16:30:26.988153]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = simulation : amc = Y
+NOTICE   [2025-Oct-31 16:30:26.988166]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = simulation : amcPricingEnginesFile = pricingengine_amc.xml
+NOTICE   [2025-Oct-31 16:30:26.988179]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = simulation : amcTradeTypes = Swap,Swaption,FxOption
+NOTICE   [2025-Oct-31 16:30:26.988192]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = simulation : baseCurrency = EUR
+NOTICE   [2025-Oct-31 16:30:26.988205]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = simulation : cubeFile = cube.csv.gz
+NOTICE   [2025-Oct-31 16:30:26.988218]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = simulation : pricingEnginesFile = pricingengine.xml
+NOTICE   [2025-Oct-31 16:30:26.988231]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = simulation : simulationConfigFile = simulation.xml
+NOTICE   [2025-Oct-31 16:30:26.988244]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = simulation : storeScenarios = N
+NOTICE   [2025-Oct-31 16:30:26.988258]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = xva : active = N
+NOTICE   [2025-Oct-31 16:30:26.988271]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = xva : baseCurrency = EUR
+NOTICE   [2025-Oct-31 16:30:26.988284]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = xva : calculationType = NoLag
+NOTICE   [2025-Oct-31 16:30:26.988297]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = xva : csaFile = netting.xml
+NOTICE   [2025-Oct-31 16:30:26.988310]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = xva : cubeFile = cube.csv.gz
+NOTICE   [2025-Oct-31 16:30:26.988323]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = xva : cva = Y
+NOTICE   [2025-Oct-31 16:30:26.988338]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = xva : dim = N
+NOTICE   [2025-Oct-31 16:30:26.988352]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = xva : dimHorizonCalendarDays = 14
+NOTICE   [2025-Oct-31 16:30:26.988365]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = xva : dimModel = Regression
+NOTICE   [2025-Oct-31 16:30:26.988378]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = xva : dimQuantile = 0.99
+NOTICE   [2025-Oct-31 16:30:26.988391]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = xva : dimRegressionOrder = 2
+NOTICE   [2025-Oct-31 16:30:26.988407]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = xva : dimRegressors = 
+NOTICE   [2025-Oct-31 16:30:26.988420]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = xva : exposureProfiles = Y
+NOTICE   [2025-Oct-31 16:30:26.988433]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = xva : exposureProfilesByTrade = Y
+NOTICE   [2025-Oct-31 16:30:26.988446]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = xva : netCubeOutputFile = netcube.csv
+NOTICE   [2025-Oct-31 16:30:26.988459]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = xva : quantile = 0.95
+NOTICE   [2025-Oct-31 16:30:26.988472]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = xva : rawCubeOutputFile = rawcube.csv
+NOTICE   [2025-Oct-31 16:30:26.988485]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = xva : scenarioFile = scenariodata.csv.gz
+NOTICE   [2025-Oct-31 16:30:26.988499]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = xvaSensitivity : active = Y
+NOTICE   [2025-Oct-31 16:30:26.988512]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = xvaSensitivity : jacobiInverseOutputFile = xva_sensitivity_jacobi_inverse.csv
+NOTICE   [2025-Oct-31 16:30:26.988526]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = xvaSensitivity : jacobiOutputFile = xva_sensitivity_jacobi.csv
+NOTICE   [2025-Oct-31 16:30:26.988539]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = xvaSensitivity : marketConfigFile = xvasensimarket.xml
+NOTICE   [2025-Oct-31 16:30:26.988552]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = xvaSensitivity : outputJacobi = Y
+NOTICE   [2025-Oct-31 16:30:26.988566]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = xvaSensitivity : outputSensitivityThreshold = 0.000001
+NOTICE   [2025-Oct-31 16:30:26.988579]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = xvaSensitivity : parSensitivity = Y
+NOTICE   [2025-Oct-31 16:30:26.988592]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = xvaSensitivity : sensitivityConfigFile = sensitivity.xml
+NOTICE   [2025-Oct-31 16:30:26.988613]        (VREAnalytics/vrea/app/vreapp.cpp:754) : load VREAppInputParameters called
+WARNING  [2025-Oct-31 16:30:26.988629]        (VREAnalytics/vrea/app/vreapp.cpp:775) : Calendar adjustments not found, using defaults
+WARNING  [2025-Oct-31 16:30:26.988644]        (VREAnalytics/vrea/app/vreapp.cpp:785) : Currency configurations not found, using defaults
+NOTICE   [2025-Oct-31 16:30:26.988661]        (VREAnalytics/vrea/app/vreapp.cpp:799) : Loading trading desks from file: Input/../../Input/tradingdesk.xml
+NOTICE   [2025-Oct-31 16:30:27.003099]     (VREAnalytics/vrea/app/parameters.cpp:66) : load VRE configuration from ./_vre_params_wrapped.xml
+NOTICE   [2025-Oct-31 16:30:27.003196]     (VREAnalytics/vrea/app/parameters.cpp:70) : load VRE configuration from ./_vre_params_wrapped.xml done.

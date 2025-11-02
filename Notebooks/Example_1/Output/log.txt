@@ -1,0 +1,783 @@
+NOTICE   [2025-Oct-31 16:23:58.494549]        (VREAnalytics/vrea/app/vreapp.cpp:550) : initFromInputs done, requested analytics:CASHFLOW,EXPOSURE,NPV,SENSITIVITY,XVA
+NOTICE   [2025-Oct-31 16:23:58.494584]        (VREAnalytics/vrea/app/vreapp.cpp:583) : Global IncludeTodaysCashFlows is set false, value: na
+NOTICE   [2025-Oct-31 16:23:58.494604]        (VREAnalytics/vrea/app/vreapp.cpp:321) : VRE analytics starting
+WARNING  [2025-Oct-31 16:23:58.494619]        (VREAnalytics/vrea/app/vreapp.cpp:322) : Starting VREApp::analytics(): 224165888|224165888 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+WARNING  [2025-Oct-31 16:23:58.494643]        (VREAnalytics/vrea/app/vreapp.cpp:302) : dividend data file not found
+WARNING  [2025-Oct-31 16:23:58.494659]        (VREAnalytics/vrea/app/vreapp.cpp:310) : fixing cutoff date not set
+NOTICE   [2025-Oct-31 16:23:58.494673]   (VREData/vred/marketdata/csvloader.cpp:103) : CSVLoader loading from Input/market.txt
+NOTICE   [2025-Oct-31 16:23:58.494845]   (VREData/vred/marketdata/csvloader.cpp:195) : CSVLoader completed processing Input/market.txt
+NOTICE   [2025-Oct-31 16:23:58.494865]    (VREData/vred/marketdata/csvloader.cpp:82) : CSVLoader loaded 46 market data points for February 5th, 2016
+NOTICE   [2025-Oct-31 16:23:58.494880]   (VREData/vred/marketdata/csvloader.cpp:103) : CSVLoader loading from Input/fixings.txt
+NOTICE   [2025-Oct-31 16:23:58.494905]   (VREData/vred/marketdata/csvloader.cpp:195) : CSVLoader completed processing Input/fixings.txt
+NOTICE   [2025-Oct-31 16:23:58.494920]    (VREData/vred/marketdata/csvloader.cpp:87) : CSVLoader loaded 0 fixings
+NOTICE   [2025-Oct-31 16:23:58.494934]    (VREData/vred/marketdata/csvloader.cpp:92) : CSVLoader loaded 0 dividends
+NOTICE   [2025-Oct-31 16:23:58.494948]    (VREData/vred/marketdata/csvloader.cpp:94) : CSVLoader complete.
+NOTICE   [2025-Oct-31 16:23:58.495296]  (...lytics/vrea/app/analyticsmanager.cpp:53) : register analytic with label 'PRICING' and sub-analytics CASHFLOW,CASHFLOWNPV,NPV,SENSITIVITY
+NOTICE   [2025-Oct-31 16:23:58.495316]  (...s/vrea/app/analytics/xvaanalytic.cpp:59) : XvaAnalytic::setUpConfigurations() called
+NOTICE   [2025-Oct-31 16:23:58.495334]  (...lytics/vrea/app/analyticsmanager.cpp:53) : register analytic with label 'XVA' and sub-analytics EXPOSURE,PFE,XVA
+NOTICE   [2025-Oct-31 16:23:58.495350]        (VREAnalytics/vrea/app/vreapp.cpp:344) : Available analytics: CASHFLOW,CASHFLOWNPV,EXPOSURE,NPV,PFE,SENSITIVITY,XVA
+NOTICE   [2025-Oct-31 16:23:58.495364]        (VREAnalytics/vrea/app/vreapp.cpp:347) : Requested analytics: CASHFLOW,EXPOSURE,NPV,SENSITIVITY,XVA
+NOTICE   [2025-Oct-31 16:23:58.495384]  (...ytics/vrea/app/analyticsmanager.cpp:119) : AnalyticsManager::runAnalytics: populate loader for dates: February 5th, 2016
+NOTICE   [2025-Oct-31 16:23:58.495399]  (...ytics/vrea/app/marketdataloader.cpp:167) : Asking portfolio for its required fixings
+NOTICE   [2025-Oct-31 16:23:58.495416]  (...ytics/vrea/app/marketdataloader.cpp:174) : The portfolio depends on fixings from 1 indices
+NOTICE   [2025-Oct-31 16:23:58.495442]  (...ytics/vrea/app/marketdataloader.cpp:179) : Add fixings possibly required for bootstrapping TodaysMarket
+NOTICE   [2025-Oct-31 16:23:58.495456]  (VREData/vred/portfolio/fixingdates.cpp:827) : Start adding market fixing dates for configuration 'default'
+NOTICE   [2025-Oct-31 16:23:58.495642]  (...ata/vred/portfolio/fixingdates.cpp:1024) : Finished adding market fixing dates for configuration 'default'
+NOTICE   [2025-Oct-31 16:23:58.495658]  (...ytics/vrea/app/marketdataloader.cpp:183) : Add fixing possibly required for equity index delta risk decomposition
+NOTICE   [2025-Oct-31 16:23:58.495673]  (VREData/vred/portfolio/fixingdates.cpp:827) : Start adding market fixing dates for configuration 'default'
+NOTICE   [2025-Oct-31 16:23:58.495835]  (...ata/vred/portfolio/fixingdates.cpp:1024) : Finished adding market fixing dates for configuration 'default'
+NOTICE   [2025-Oct-31 16:23:58.495850]  (...ytics/vrea/app/marketdataloader.cpp:183) : Add fixing possibly required for equity index delta risk decomposition
+NOTICE   [2025-Oct-31 16:23:58.495876]  (...ics/vrea/app/marketdatacsvloader.cpp:72) : MarketDataCsvLoader::retrieveFixings called: all fixings ? Y
+NOTICE   [2025-Oct-31 16:23:58.495898]      (VREData/vred/marketdata/fixings.cpp:70) : Added 0 of 0 fixings in 0.000000 seconds
+WARNING  [2025-Oct-31 16:23:58.495969]          (VREData/vred/utilities/log.cpp:209) : StructuredMessage { "category": "Warning", "group": "Fixing", "message": "Could not find required fixing ID.", "sub_fields": [ { "name": "exceptionType", "value": "Missing fixing" }, { "name": "fixingDate", "value": "2016-02-05" }, { "name": "fixingId", "value": "EUR-EURIBOR-6M" } ] }
+NOTICE   [2025-Oct-31 16:23:58.495989]  (...ytics/vrea/app/marketdataloader.cpp:259) : Adding the loaded fixings to the IndexManager
+NOTICE   [2025-Oct-31 16:23:58.496003]  (...ytics/vrea/app/marketdataloader.cpp:260) : Fixings size = 5
+NOTICE   [2025-Oct-31 16:23:58.496017]  (...ytics/vrea/app/marketdataloader.cpp:263) : Generating market datum set
+NOTICE   [2025-Oct-31 16:23:58.496095]  (...ytics/vrea/app/marketdataloader.cpp:281) : CurveConfigs require 33 quotes
+NOTICE   [2025-Oct-31 16:23:58.496124]  (...ytics/vrea/app/marketdataloader.cpp:289) : Got market data
+NOTICE   [2025-Oct-31 16:23:58.496142]  (...nalytics/vrea/app/reportwriter.cpp:1174) : Writing MarketData report
+NOTICE   [2025-Oct-31 16:23:58.496172]  (...nalytics/vrea/app/reportwriter.cpp:1213) : MarketData report written
+NOTICE   [2025-Oct-31 16:23:58.496187]  (...nalytics/vrea/app/reportwriter.cpp:1218) : Writing Fixings report
+NOTICE   [2025-Oct-31 16:23:58.496202]  (...nalytics/vrea/app/reportwriter.cpp:1227) : Fixings report written
+NOTICE   [2025-Oct-31 16:23:58.496215]  (...nalytics/vrea/app/reportwriter.cpp:1232) : Writing Dividends report
+NOTICE   [2025-Oct-31 16:23:58.496230]  (...nalytics/vrea/app/reportwriter.cpp:1244) : Dividends report written
+NOTICE   [2025-Oct-31 16:23:58.496243]  (...ytics/vrea/app/analyticsmanager.cpp:145) : run analytic with label 'PRICING'
+WARNING  [2025-Oct-31 16:23:58.496258]      (VREAnalytics/vrea/app/analytic.cpp:105) : Starting PRICING Analytic::runAnalytic(): 224182272|224182272 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+NOTICE   [2025-Oct-31 16:23:58.496280]      (VREAnalytics/vrea/app/analytic.cpp:223) : Analytic::buildMarket called
+NOTICE   [2025-Oct-31 16:23:58.496295]  (.../vred/marketdata/bondspreadimply.cpp:53) : identify securities that require a spread imply for configuration default
+NOTICE   [2025-Oct-31 16:23:58.496317]  (...vred/marketdata/bondspreadimply.cpp:110) : got 0 securities
+NOTICE   [2025-Oct-31 16:23:58.496340]  (.../vred/marketdata/fxtriangulation.cpp:67) : FXTriangulation: initializing
+NOTICE   [2025-Oct-31 16:23:58.496357]  (...vred/marketdata/fxtriangulation.cpp:114) : FXTriangulation: initialized with 1 quotes, 2 currencies.
+NOTICE   [2025-Oct-31 16:23:58.496431]  (...ta/vred/marketdata/todaysmarket.cpp:229) : Build objects in TodaysMarket lazily, i.e. when requested.
+NOTICE   [2025-Oct-31 16:23:58.496447]  (...ta/vred/marketdata/todaysmarket.cpp:234) : TodaysMarket build stats:
+NOTICE   [2025-Oct-31 16:23:58.496461]  (...ta/vred/marketdata/todaysmarket.cpp:240) : 3 add all fx quotes               :               0 ms         1              0 ms
+NOTICE   [2025-Oct-31 16:23:58.496475]  (...ta/vred/marketdata/todaysmarket.cpp:240) : 4 build dep graphs                :               0 ms         1              0 ms
+NOTICE   [2025-Oct-31 16:23:58.496489]  (...ta/vred/marketdata/todaysmarket.cpp:243) : Total build time              :               0 ms
+NOTICE   [2025-Oct-31 16:23:58.496508]      (VREAnalytics/vrea/app/analytic.cpp:261) : Market Build time 0.000000 sec
+NOTICE   [2025-Oct-31 16:23:58.496523]     (VREData/vred/portfolio/portfolio.cpp:47) : Reset portfolio of size 1
+NOTICE   [2025-Oct-31 16:23:58.496561]      (VREAnalytics/vrea/app/analytic.cpp:285) : Build the portfolio
+NOTICE   [2025-Oct-31 16:23:58.496576]      (VREAnalytics/vrea/app/analytic.cpp:205) : Analytic::engineFactory() called
+NOTICE   [2025-Oct-31 16:23:58.496590]      (VREAnalytics/vrea/app/analytic.cpp:215) : MarketContext::pricing = default
+NOTICE   [2025-Oct-31 16:23:58.496609]  (...ta/vred/portfolio/enginefactory.cpp:189) : Building EngineFactory
+NOTICE   [2025-Oct-31 16:23:58.496708]    (VREData/vred/portfolio/portfolio.cpp:133) : Building Portfolio of size 1 for context = 'analytic/PRICING'
+NOTICE   [2025-Oct-31 16:23:58.496919]    (VREData/vred/portfolio/portfolio.cpp:161) : Built Portfolio. Initial size = 1, size now 1, built 0 failed trades, context is analytic/PRICING
+NOTICE   [2025-Oct-31 16:23:58.496935]    (VREData/vred/portfolio/portfolio.cpp:162) : Build stats:
+NOTICE   [2025-Oct-31 16:23:58.496949]    (VREData/vred/portfolio/portfolio.cpp:166) : Swap                              1              0 ms (avg = 0)
+NOTICE   [2025-Oct-31 16:23:58.496964]      (VREAnalytics/vrea/app/analytic.cpp:294) : Filter trades that expire before February 5th, 2016
+NOTICE   [2025-Oct-31 16:23:58.497007]  (VREAnalytics/vrea/app/reportwriter.cpp:144) : Writing cashflow report
+NOTICE   [2025-Oct-31 16:23:58.497163]  (VREAnalytics/vrea/app/reportwriter.cpp:224) : Cashflow report written
+NOTICE   [2025-Oct-31 16:23:58.497180]   (VREAnalytics/vrea/app/reportwriter.cpp:73) : portfolio valuation
+NOTICE   [2025-Oct-31 16:23:58.497229]  (VREAnalytics/vrea/app/reportwriter.cpp:136) : NPV file written
+NOTICE   [2025-Oct-31 16:23:58.497247]  (...a/app/analytics/pricinganalytic.cpp:112) : Write curves report
+NOTICE   [2025-Oct-31 16:23:58.497283]  (VREAnalytics/vrea/app/reportwriter.cpp:291) : Write curves... 
+NOTICE   [2025-Oct-31 16:23:58.498437]  (...ta/vred/marketdata/defaultcurve.cpp:310) : Start building default curve of type SpreadCDS for curve BANK_SR_EUR
+NOTICE   [2025-Oct-31 16:23:58.498455]  (...ta/vred/marketdata/defaultcurve.cpp:172) : Loading explicit quotes for default curve BANK_SR_EUR
+NOTICE   [2025-Oct-31 16:23:58.498471]  (...ta/vred/marketdata/defaultcurve.cpp:200) : DefaultCurve BANK_SR_EUR using 1 default quotes of 1 requested quotes.
+NOTICE   [2025-Oct-31 16:23:58.498538]  (...ta/vred/marketdata/defaultcurve.cpp:552) : Finished building default curve of type SpreadCDS for curve BANK_SR_EUR
+NOTICE   [2025-Oct-31 16:23:58.498566]  (...ta/vred/marketdata/defaultcurve.cpp:558) : Start building default curve of type HazardRate for curve CPTY_A_SR_EUR
+NOTICE   [2025-Oct-31 16:23:58.498581]  (...ta/vred/marketdata/defaultcurve.cpp:172) : Loading explicit quotes for default curve CPTY_A_SR_EUR
+NOTICE   [2025-Oct-31 16:23:58.498595]  (...ta/vred/marketdata/defaultcurve.cpp:200) : DefaultCurve CPTY_A_SR_EUR using 1 default quotes of 1 requested quotes.
+NOTICE   [2025-Oct-31 16:23:58.498610]  (...ta/vred/marketdata/defaultcurve.cpp:580) : DefaultCurve: add asof (February 5th, 2016), hazard rate 0.01, as not given
+NOTICE   [2025-Oct-31 16:23:58.498624]  (...ta/vred/marketdata/defaultcurve.cpp:590) : DefaultCurve: set up interpolated hazard rate curve
+NOTICE   [2025-Oct-31 16:23:58.498639]  (...ta/vred/marketdata/defaultcurve.cpp:608) : Finished building default curve of type HazardRate for curve CPTY_A_SR_EUR
+NOTICE   [2025-Oct-31 16:23:58.498743]  (...a/app/analytics/pricinganalytic.cpp:146) : Sensi Analysis - Initialise
+NOTICE   [2025-Oct-31 16:23:58.498759]  (...a/app/analytics/pricinganalytic.cpp:150) : Single-threaded sensi analysis
+NOTICE   [2025-Oct-31 16:23:58.498779]  (...a/app/analytics/pricinganalytic.cpp:157) : Single-threaded sensi analysis created
+NOTICE   [2025-Oct-31 16:23:58.498796]  (...parsensitivityinstrumentbuilder.cpp:128) : Build par instruments...
+NOTICE   [2025-Oct-31 16:23:58.498814]  (...parsensitivityinstrumentbuilder.cpp:157) : ParSensitivityAnalysis: Discount curve par instruments
+NOTICE   [2025-Oct-31 16:23:58.498828]  (...parsensitivityinstrumentbuilder.cpp:165) : ParSensitivityAnalysis: Discount curve ccy=EUR
+NOTICE   [2025-Oct-31 16:23:58.499600]  (...parsensitivityinstrumentbuilder.cpp:252) : ParSensitivityAnalysis: Equity spot par instruments
+NOTICE   [2025-Oct-31 16:23:58.499618]  (...parsensitivityinstrumentbuilder.cpp:319) : ParSensitivityAnalysis: Equity dividend yield par instruments
+NOTICE   [2025-Oct-31 16:23:58.499634]  (...parsensitivityinstrumentbuilder.cpp:385) : ParSensitivityAnalysis: Commodity curve par instruments
+NOTICE   [2025-Oct-31 16:23:58.499648]  (...parsensitivityinstrumentbuilder.cpp:446) : ParSensitivityAnalysis: Yield curve par instruments
+NOTICE   [2025-Oct-31 16:23:58.499662]  (...parsensitivityinstrumentbuilder.cpp:546) : ParSensitivityAnalysis: Index curve par instruments
+NOTICE   [2025-Oct-31 16:23:58.500793]  (...parsensitivityinstrumentbuilder.cpp:638) : ParSensitivityAnalysis: Cap/Floor par instruments
+NOTICE   [2025-Oct-31 16:23:58.500809]  (...parsensitivityinstrumentbuilder.cpp:709) : ParSensitivityAnalysis: CDS par instruments
+NOTICE   [2025-Oct-31 16:23:58.500823]  (...parsensitivityinstrumentbuilder.cpp:762) : ParSensitivityAnalysis: ZCI curve par instruments
+NOTICE   [2025-Oct-31 16:23:58.500837]  (...parsensitivityinstrumentbuilder.cpp:813) : ParSensitivityAnalysis: YOYI curve par instruments
+NOTICE   [2025-Oct-31 16:23:58.500850]  (...parsensitivityinstrumentbuilder.cpp:879) : ParSensitivityAnalysis: YOYI Cap/Floor par instruments
+NOTICE   [2025-Oct-31 16:23:58.500863]  (...parsensitivityinstrumentbuilder.cpp:938) : ParSensitivityAnalysis: CPI Cap/Floor par instruments
+NOTICE   [2025-Oct-31 16:23:58.500877]  (...parsensitivityinstrumentbuilder.cpp:983) : Par instrument building done, got 48 instruments
+NOTICE   [2025-Oct-31 16:23:58.500890]  (...a/app/analytics/pricinganalytic.cpp:187) : Sensi analysis - skip aligning pillars
+NOTICE   [2025-Oct-31 16:23:58.500905]  (...a/app/analytics/pricinganalytic.cpp:191) : Sensi analysis - generate
+NOTICE   [2025-Oct-31 16:23:58.500919]  (...vrea/engine/sensitivityanalysis.cpp:111) : Sensitivity analysis started...
+NOTICE   [2025-Oct-31 16:23:58.500935]  (...vrea/engine/sensitivityanalysis.cpp:138) : Need to process 1 sensi scenario sets resulting from 0 sensi templates in sensi config (different from default config) and 1 sensi templates in portfolio (including default config, if configured in pe config for a trade)
+NOTICE   [2025-Oct-31 16:23:58.500949]  (...vrea/engine/sensitivityanalysis.cpp:146) : SensitivitiyAnalysis::generateSensitivities(): use single-threaded engine to generate sensi cube. Using configuration 'default'
+NOTICE   [2025-Oct-31 16:23:58.500970]  (...vrea/scenario/scenariosimmarket.cpp:329) : building ScenarioSimMarket...
+NOTICE   [2025-Oct-31 16:23:58.501000]  (...rea/scenario/scenariosimmarket.cpp:2898) : built DiscountCurve                     1              0 ms
+NOTICE   [2025-Oct-31 16:23:58.501035]  (...rea/scenario/scenariosimmarket.cpp:2898) : built IndexCurve                        2              0 ms
+NOTICE   [2025-Oct-31 16:23:58.501052]  (.../vred/marketdata/fxtriangulation.cpp:67) : FXTriangulation: initializing
+NOTICE   [2025-Oct-31 16:23:58.501066]  (...vred/marketdata/fxtriangulation.cpp:114) : FXTriangulation: initialized with 0 quotes, 0 currencies.
+NOTICE   [2025-Oct-31 16:23:58.501087]  (...rea/scenario/scenariosimmarket.cpp:3395) : Applying 0 curve algebra rules...
+NOTICE   [2025-Oct-31 16:23:58.501101]  (...rea/scenario/scenariosimmarket.cpp:3026) : building base scenario
+NOTICE   [2025-Oct-31 16:23:58.501123]  (...rea/scenario/scenariosimmarket.cpp:3054) : building base scenario done
+NOTICE   [2025-Oct-31 16:23:58.501357]  (...io/sensitivityscenariogenerator.cpp:249) : sensitivity scenario generator finished generating scenarios.
+NOTICE   [2025-Oct-31 16:23:58.501380]  (...vrea/engine/sensitivityanalysis.cpp:193) : Run Sensitivity Scenarios for 1 out of 1 trades.
+NOTICE   [2025-Oct-31 16:23:58.501397]  (...ta/vred/portfolio/enginefactory.cpp:189) : Building EngineFactory
+NOTICE   [2025-Oct-31 16:23:58.501469]     (VREData/vred/portfolio/portfolio.cpp:47) : Reset portfolio of size 1
+NOTICE   [2025-Oct-31 16:23:58.501499]    (VREData/vred/portfolio/portfolio.cpp:133) : Building Portfolio of size 1 for context = 'sensi analysis'
+NOTICE   [2025-Oct-31 16:23:58.501633]    (VREData/vred/portfolio/portfolio.cpp:161) : Built Portfolio. Initial size = 1, size now 1, built 0 failed trades, context is sensi analysis
+NOTICE   [2025-Oct-31 16:23:58.501654]    (VREData/vred/portfolio/portfolio.cpp:162) : Build stats:
+NOTICE   [2025-Oct-31 16:23:58.501669]    (VREData/vred/portfolio/portfolio.cpp:166) : Swap                              1              0 ms (avg = 0)
+NOTICE   [2025-Oct-31 16:23:58.501684]  (...tics/vrea/engine/valuationengine.cpp:91) : Build cube with mporStickyDate=1, dryRun=false
+NOTICE   [2025-Oct-31 16:23:58.501700]  (...ics/vrea/engine/valuationengine.cpp:117) : Starting ValuationEngine for 1 trades, 97 samples and 1 dates.
+NOTICE   [2025-Oct-31 16:23:58.501713]  (...ics/vrea/engine/valuationengine.cpp:124) : Initialise 1 valuation calculators
+NOTICE   [2025-Oct-31 16:23:58.501728]  (...ics/vrea/engine/valuationengine.cpp:136) : Initialise state objects...
+NOTICE   [2025-Oct-31 16:23:58.501763]  (...ics/vrea/engine/valuationengine.cpp:177) : Total number of trades = 1
+NOTICE   [2025-Oct-31 16:23:58.501786]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 0 out of 97 steps (0%) completed
+NOTICE   [2025-Oct-31 16:23:58.501842]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.501801", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 0, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.501868]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 1 out of 97 steps (1%) completed
+NOTICE   [2025-Oct-31 16:23:58.501889]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.501882", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 1, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.501912]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 2 out of 97 steps (2%) completed
+NOTICE   [2025-Oct-31 16:23:58.501932]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.501926", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 2, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.501955]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 3 out of 97 steps (3%) completed
+NOTICE   [2025-Oct-31 16:23:58.501975]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.501969", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 3, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.501997]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 4 out of 97 steps (4%) completed
+NOTICE   [2025-Oct-31 16:23:58.502017]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.502010", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 4, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.502039]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 5 out of 97 steps (5%) completed
+NOTICE   [2025-Oct-31 16:23:58.502059]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.502052", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 5, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.502083]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 6 out of 97 steps (6%) completed
+NOTICE   [2025-Oct-31 16:23:58.502103]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.502096", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 6, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.502125]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 7 out of 97 steps (7%) completed
+NOTICE   [2025-Oct-31 16:23:58.502144]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.502138", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 7, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.502167]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 8 out of 97 steps (8%) completed
+NOTICE   [2025-Oct-31 16:23:58.502188]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.502182", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 8, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.502211]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 9 out of 97 steps (9%) completed
+NOTICE   [2025-Oct-31 16:23:58.502230]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.502224", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 9, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.502252]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 10 out of 97 steps (10%) completed
+NOTICE   [2025-Oct-31 16:23:58.502271]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.502265", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 10, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.502294]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 11 out of 97 steps (11%) completed
+NOTICE   [2025-Oct-31 16:23:58.502313]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.502307", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 11, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.502335]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 12 out of 97 steps (12%) completed
+NOTICE   [2025-Oct-31 16:23:58.502354]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.502348", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 12, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.502377]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 13 out of 97 steps (13%) completed
+NOTICE   [2025-Oct-31 16:23:58.502396]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.502390", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 13, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.502418]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 14 out of 97 steps (14%) completed
+NOTICE   [2025-Oct-31 16:23:58.502438]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.502432", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 14, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.502460]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 15 out of 97 steps (15%) completed
+NOTICE   [2025-Oct-31 16:23:58.502479]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.502473", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 15, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.502501]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 16 out of 97 steps (16%) completed
+NOTICE   [2025-Oct-31 16:23:58.502520]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.502514", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 16, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.502542]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 17 out of 97 steps (17%) completed
+NOTICE   [2025-Oct-31 16:23:58.502561]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.502555", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 17, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.502583]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 18 out of 97 steps (18%) completed
+NOTICE   [2025-Oct-31 16:23:58.502604]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.502598", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 18, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.502626]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 19 out of 97 steps (19%) completed
+NOTICE   [2025-Oct-31 16:23:58.502645]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.502639", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 19, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.502667]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 20 out of 97 steps (20%) completed
+NOTICE   [2025-Oct-31 16:23:58.502687]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.502681", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 20, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.502708]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 21 out of 97 steps (21%) completed
+NOTICE   [2025-Oct-31 16:23:58.502728]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.502722", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 21, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.502750]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 22 out of 97 steps (22%) completed
+NOTICE   [2025-Oct-31 16:23:58.502769]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.502763", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 22, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.502790]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 23 out of 97 steps (23%) completed
+NOTICE   [2025-Oct-31 16:23:58.502810]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.502804", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 23, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.502832]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 24 out of 97 steps (24%) completed
+NOTICE   [2025-Oct-31 16:23:58.502851]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.502845", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 24, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.502873]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 25 out of 97 steps (25%) completed
+NOTICE   [2025-Oct-31 16:23:58.502892]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.502886", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 25, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.502913]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 26 out of 97 steps (26%) completed
+NOTICE   [2025-Oct-31 16:23:58.502932]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.502926", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 26, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.502954]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 27 out of 97 steps (27%) completed
+NOTICE   [2025-Oct-31 16:23:58.502973]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.502967", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 27, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.502995]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 28 out of 97 steps (28%) completed
+NOTICE   [2025-Oct-31 16:23:58.503014]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.503008", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 28, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.503038]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 29 out of 97 steps (29%) completed
+NOTICE   [2025-Oct-31 16:23:58.503057]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.503051", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 29, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.503079]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 30 out of 97 steps (30%) completed
+NOTICE   [2025-Oct-31 16:23:58.503101]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.503092", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 30, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.503123]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 31 out of 97 steps (31%) completed
+NOTICE   [2025-Oct-31 16:23:58.503142]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.503136", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 31, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.503164]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 32 out of 97 steps (32%) completed
+NOTICE   [2025-Oct-31 16:23:58.503183]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.503177", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 32, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.503205]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 33 out of 97 steps (34%) completed
+NOTICE   [2025-Oct-31 16:23:58.503225]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.503219", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 33, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.503242]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 34 out of 97 steps (35%) completed
+NOTICE   [2025-Oct-31 16:23:58.503261]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.503255", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 34, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.503279]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 35 out of 97 steps (36%) completed
+NOTICE   [2025-Oct-31 16:23:58.503298]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.503292", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 35, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.503315]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 36 out of 97 steps (37%) completed
+NOTICE   [2025-Oct-31 16:23:58.503334]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.503328", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 36, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.503351]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 37 out of 97 steps (38%) completed
+NOTICE   [2025-Oct-31 16:23:58.503369]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.503364", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 37, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.503386]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 38 out of 97 steps (39%) completed
+NOTICE   [2025-Oct-31 16:23:58.503405]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.503400", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 38, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.503422]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 39 out of 97 steps (40%) completed
+NOTICE   [2025-Oct-31 16:23:58.503445]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.503439", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 39, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.503462]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 40 out of 97 steps (41%) completed
+NOTICE   [2025-Oct-31 16:23:58.503481]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.503475", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 40, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.503535]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 41 out of 97 steps (42%) completed
+NOTICE   [2025-Oct-31 16:23:58.503612]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.503588", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 41, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.503638]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 42 out of 97 steps (43%) completed
+NOTICE   [2025-Oct-31 16:23:58.503666]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.503657", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 42, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.503686]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 43 out of 97 steps (44%) completed
+NOTICE   [2025-Oct-31 16:23:58.503708]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.503701", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 43, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.503727]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 44 out of 97 steps (45%) completed
+NOTICE   [2025-Oct-31 16:23:58.503748]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.503741", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 44, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.503767]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 45 out of 97 steps (46%) completed
+NOTICE   [2025-Oct-31 16:23:58.503788]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.503781", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 45, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.503807]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 46 out of 97 steps (47%) completed
+NOTICE   [2025-Oct-31 16:23:58.503827]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.503821", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 46, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.503846]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 47 out of 97 steps (48%) completed
+NOTICE   [2025-Oct-31 16:23:58.503865]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.503859", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 47, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.503886]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 48 out of 97 steps (49%) completed
+NOTICE   [2025-Oct-31 16:23:58.503906]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.503900", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 48, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.503946]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 49 out of 97 steps (50%) completed
+NOTICE   [2025-Oct-31 16:23:58.503967]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.503961", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 49, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.504008]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 50 out of 97 steps (51%) completed
+NOTICE   [2025-Oct-31 16:23:58.504029]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.504022", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 50, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.504058]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 51 out of 97 steps (52%) completed
+NOTICE   [2025-Oct-31 16:23:58.504082]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.504076", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 51, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.504115]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 52 out of 97 steps (53%) completed
+NOTICE   [2025-Oct-31 16:23:58.504136]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.504129", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 52, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.504169]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 53 out of 97 steps (54%) completed
+NOTICE   [2025-Oct-31 16:23:58.504189]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.504183", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 53, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.504220]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 54 out of 97 steps (55%) completed
+NOTICE   [2025-Oct-31 16:23:58.504240]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.504234", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 54, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.504271]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 55 out of 97 steps (56%) completed
+NOTICE   [2025-Oct-31 16:23:58.504291]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.504285", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 55, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.504319]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 56 out of 97 steps (57%) completed
+NOTICE   [2025-Oct-31 16:23:58.504339]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.504333", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 56, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.504369]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 57 out of 97 steps (58%) completed
+NOTICE   [2025-Oct-31 16:23:58.504389]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.504383", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 57, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.504422]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 58 out of 97 steps (59%) completed
+NOTICE   [2025-Oct-31 16:23:58.504442]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.504436", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 58, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.504471]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 59 out of 97 steps (60%) completed
+NOTICE   [2025-Oct-31 16:23:58.504491]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.504485", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 59, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.504524]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 60 out of 97 steps (61%) completed
+NOTICE   [2025-Oct-31 16:23:58.504544]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.504538", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 60, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.504572]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 61 out of 97 steps (62%) completed
+NOTICE   [2025-Oct-31 16:23:58.504602]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.504586", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 61, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.504631]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 62 out of 97 steps (63%) completed
+NOTICE   [2025-Oct-31 16:23:58.504650]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.504644", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 62, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.504680]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 63 out of 97 steps (64%) completed
+NOTICE   [2025-Oct-31 16:23:58.504700]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.504694", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 63, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.504728]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 64 out of 97 steps (65%) completed
+NOTICE   [2025-Oct-31 16:23:58.504749]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.504742", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 64, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.504779]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 65 out of 97 steps (67%) completed
+NOTICE   [2025-Oct-31 16:23:58.504799]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.504793", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 65, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.504817]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 66 out of 97 steps (68%) completed
+NOTICE   [2025-Oct-31 16:23:58.504837]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.504831", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 66, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.504858]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 67 out of 97 steps (69%) completed
+NOTICE   [2025-Oct-31 16:23:58.504877]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.504871", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 67, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.504898]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 68 out of 97 steps (70%) completed
+NOTICE   [2025-Oct-31 16:23:58.504917]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.504911", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 68, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.504934]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 69 out of 97 steps (71%) completed
+NOTICE   [2025-Oct-31 16:23:58.504954]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.504948", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 69, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.504972]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 70 out of 97 steps (72%) completed
+NOTICE   [2025-Oct-31 16:23:58.504994]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.504987", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 70, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.505014]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 71 out of 97 steps (73%) completed
+NOTICE   [2025-Oct-31 16:23:58.505033]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.505028", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 71, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.505054]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 72 out of 97 steps (74%) completed
+NOTICE   [2025-Oct-31 16:23:58.505074]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.505068", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 72, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.505092]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 73 out of 97 steps (75%) completed
+NOTICE   [2025-Oct-31 16:23:58.505111]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.505105", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 73, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.505130]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 74 out of 97 steps (76%) completed
+NOTICE   [2025-Oct-31 16:23:58.505150]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.505144", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 74, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.505168]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 75 out of 97 steps (77%) completed
+NOTICE   [2025-Oct-31 16:23:58.505189]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.505183", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 75, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.505211]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 76 out of 97 steps (78%) completed
+NOTICE   [2025-Oct-31 16:23:58.505231]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.505225", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 76, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.505249]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 77 out of 97 steps (79%) completed
+NOTICE   [2025-Oct-31 16:23:58.505269]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.505263", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 77, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.505289]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 78 out of 97 steps (80%) completed
+NOTICE   [2025-Oct-31 16:23:58.505310]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.505304", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 78, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.505331]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 79 out of 97 steps (81%) completed
+NOTICE   [2025-Oct-31 16:23:58.505351]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.505345", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 79, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.505372]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 80 out of 97 steps (82%) completed
+NOTICE   [2025-Oct-31 16:23:58.505393]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.505387", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 80, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.505430]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 81 out of 97 steps (83%) completed
+NOTICE   [2025-Oct-31 16:23:58.505451]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.505445", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 81, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.505483]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 82 out of 97 steps (84%) completed
+NOTICE   [2025-Oct-31 16:23:58.505504]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.505498", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 82, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.505536]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 83 out of 97 steps (85%) completed
+NOTICE   [2025-Oct-31 16:23:58.505558]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.505552", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 83, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.505589]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 84 out of 97 steps (86%) completed
+NOTICE   [2025-Oct-31 16:23:58.505610]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.505604", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 84, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.505641]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 85 out of 97 steps (87%) completed
+NOTICE   [2025-Oct-31 16:23:58.505662]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.505656", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 85, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.505693]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 86 out of 97 steps (88%) completed
+NOTICE   [2025-Oct-31 16:23:58.505714]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.505708", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 86, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.505748]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 87 out of 97 steps (89%) completed
+NOTICE   [2025-Oct-31 16:23:58.505769]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.505763", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 87, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.505799]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 88 out of 97 steps (90%) completed
+NOTICE   [2025-Oct-31 16:23:58.505821]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.505815", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 88, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.505852]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 89 out of 97 steps (91%) completed
+NOTICE   [2025-Oct-31 16:23:58.505873]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.505867", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 89, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.505907]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 90 out of 97 steps (92%) completed
+NOTICE   [2025-Oct-31 16:23:58.505928]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.505922", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 90, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.505961]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 91 out of 97 steps (93%) completed
+NOTICE   [2025-Oct-31 16:23:58.505981]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.505975", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 91, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.506012]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 92 out of 97 steps (94%) completed
+NOTICE   [2025-Oct-31 16:23:58.506038]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.506026", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 92, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.506069]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 93 out of 97 steps (95%) completed
+NOTICE   [2025-Oct-31 16:23:58.506089]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.506083", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 93, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.506117]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 94 out of 97 steps (96%) completed
+NOTICE   [2025-Oct-31 16:23:58.506137]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.506131", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 94, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.506166]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 95 out of 97 steps (97%) completed
+NOTICE   [2025-Oct-31 16:23:58.506186]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.506179", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 95, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.506214]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 96 out of 97 steps (98%) completed
+NOTICE   [2025-Oct-31 16:23:58.506234]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.506228", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 96, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.506251]  (VREData/vred/utilities/progressbar.cpp:111) : sensitivities (1 trade, 97 samples): 97 out of 97 steps (100%) completed
+NOTICE   [2025-Oct-31 16:23:58.506277]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.506268", "detail": "1 trade, 97 samples", "key": "sensitivities", "progress": 97, "total": 97 }
+NOTICE   [2025-Oct-31 16:23:58.506324]  (...ics/vrea/engine/valuationengine.cpp:299) : ValuationEngine completed: loop 0.00 sec, pricing 0 sec, update 0 sec fixing 0
+NOTICE   [2025-Oct-31 16:23:58.506513]  (...vrea/engine/sensitivityanalysis.cpp:302) : Sensitivity analysis completed
+NOTICE   [2025-Oct-31 16:23:58.506542]  (...a/app/analytics/pricinganalytic.cpp:196) : Sensi analysis - write sensitivity report in memory
+NOTICE   [2025-Oct-31 16:23:58.506572]  (VREAnalytics/vrea/app/reportwriter.cpp:800) : Writing Sensitivity report
+NOTICE   [2025-Oct-31 16:23:58.506639]  (VREAnalytics/vrea/app/reportwriter.cpp:917) : Sensitivity report finished
+NOTICE   [2025-Oct-31 16:23:58.506661]  (...a/app/analytics/pricinganalytic.cpp:203) : Sensi analysis - write sensitivity scenario report in memory
+NOTICE   [2025-Oct-31 16:23:58.506676]  (VREAnalytics/vrea/app/reportwriter.cpp:715) : Writing Scenario report
+NOTICE   [2025-Oct-31 16:23:58.506716]  (VREAnalytics/vrea/app/reportwriter.cpp:794) : Scenario report finished
+NOTICE   [2025-Oct-31 16:23:58.506732]  (VREAnalytics/vrea/app/reportwriter.cpp:995) : Writing Sensitivity Config report
+NOTICE   [2025-Oct-31 16:23:58.506768]  (...nalytics/vrea/app/reportwriter.cpp:1015) : Sensitivity Config report finished.
+NOTICE   [2025-Oct-31 16:23:58.506785]  (...a/app/analytics/pricinganalytic.cpp:219) : Sensi analysis - par conversion
+NOTICE   [2025-Oct-31 16:23:58.506807]  (...a/engine/parsensitivityanalysis.cpp:235) : ParSensitivityAnalysis: start computeParInstrumentSensitivities; building par instruments
+NOTICE   [2025-Oct-31 16:23:58.506852]  (...parsensitivityinstrumentbuilder.cpp:128) : Build par instruments...
+NOTICE   [2025-Oct-31 16:23:58.507172]  (...parsensitivityinstrumentbuilder.cpp:157) : ParSensitivityAnalysis: Discount curve par instruments
+NOTICE   [2025-Oct-31 16:23:58.507189]  (...parsensitivityinstrumentbuilder.cpp:165) : ParSensitivityAnalysis: Discount curve ccy=EUR
+NOTICE   [2025-Oct-31 16:23:58.508037]  (...parsensitivityinstrumentbuilder.cpp:252) : ParSensitivityAnalysis: Equity spot par instruments
+NOTICE   [2025-Oct-31 16:23:58.508063]  (...parsensitivityinstrumentbuilder.cpp:319) : ParSensitivityAnalysis: Equity dividend yield par instruments
+NOTICE   [2025-Oct-31 16:23:58.508078]  (...parsensitivityinstrumentbuilder.cpp:385) : ParSensitivityAnalysis: Commodity curve par instruments
+NOTICE   [2025-Oct-31 16:23:58.508095]  (...parsensitivityinstrumentbuilder.cpp:446) : ParSensitivityAnalysis: Yield curve par instruments
+NOTICE   [2025-Oct-31 16:23:58.508109]  (...parsensitivityinstrumentbuilder.cpp:546) : ParSensitivityAnalysis: Index curve par instruments
+NOTICE   [2025-Oct-31 16:23:58.509140]  (...parsensitivityinstrumentbuilder.cpp:638) : ParSensitivityAnalysis: Cap/Floor par instruments
+NOTICE   [2025-Oct-31 16:23:58.509157]  (...parsensitivityinstrumentbuilder.cpp:709) : ParSensitivityAnalysis: CDS par instruments
+NOTICE   [2025-Oct-31 16:23:58.509171]  (...parsensitivityinstrumentbuilder.cpp:762) : ParSensitivityAnalysis: ZCI curve par instruments
+NOTICE   [2025-Oct-31 16:23:58.509190]  (...parsensitivityinstrumentbuilder.cpp:813) : ParSensitivityAnalysis: YOYI curve par instruments
+NOTICE   [2025-Oct-31 16:23:58.509209]  (...parsensitivityinstrumentbuilder.cpp:879) : ParSensitivityAnalysis: YOYI Cap/Floor par instruments
+NOTICE   [2025-Oct-31 16:23:58.509226]  (...parsensitivityinstrumentbuilder.cpp:938) : ParSensitivityAnalysis: CPI Cap/Floor par instruments
+NOTICE   [2025-Oct-31 16:23:58.509243]  (...parsensitivityinstrumentbuilder.cpp:983) : Par instrument building done, got 48 instruments
+NOTICE   [2025-Oct-31 16:23:58.509511]  (...a/engine/parsensitivityanalysis.cpp:396) : Caching base scenario par rates and float vols done.
+NOTICE   [2025-Oct-31 16:23:58.509527]  (...a/engine/parsensitivityanalysis.cpp:408) : Compute par rate and flat vol sensitivities
+NOTICE   [2025-Oct-31 16:23:58.513367]  (...a/engine/parsensitivityanalysis.cpp:656) : Computing par rate and flat vol sensitivities done
+NOTICE   [2025-Oct-31 16:23:58.513485]  (...a/engine/parsensitivityanalysis.cpp:805) : Transposed Jacobi matrix dimension 48 x 48
+NOTICE   [2025-Oct-31 16:23:58.513512]  (...a/engine/parsensitivityanalysis.cpp:818) : Populating the vector of zero and par shift sizes
+NOTICE   [2025-Oct-31 16:23:58.513535]  (...a/engine/parsensitivityanalysis.cpp:831) : Populating Transposed Jacobi matrix
+NOTICE   [2025-Oct-31 16:23:58.513651]  (...a/engine/parsensitivityanalysis.cpp:852) : Finished populating transposed Jacobi matrix, non-zero entries = 423 (18.3594%)
+NOTICE   [2025-Oct-31 16:23:58.513678]  (...a/engine/parsensitivityanalysis.cpp:854) : Populating block indices
+NOTICE   [2025-Oct-31 16:23:58.513695]  (...a/engine/parsensitivityanalysis.cpp:873) : Finished Populating block indices.
+NOTICE   [2025-Oct-31 16:23:58.513709]  (...a/engine/parsensitivityanalysis.cpp:875) : Invert Transposed Jacobi matrix
+NOTICE   [2025-Oct-31 16:23:58.513965]  (.../engine/parsensitivityanalysis.cpp:1002) : Inverse Jacobi done, condition number of Jacobi matrix is 4454.64
+NOTICE   [2025-Oct-31 16:23:58.513989]  (...a/app/analytics/pricinganalytic.cpp:238) : Sensi analysis - write par sensitivity report in memory
+NOTICE   [2025-Oct-31 16:23:58.514023]  (VREAnalytics/vrea/app/reportwriter.cpp:800) : Writing Sensitivity report
+NOTICE   [2025-Oct-31 16:23:58.514092]  (VREAnalytics/vrea/app/reportwriter.cpp:917) : Sensitivity report finished
+NOTICE   [2025-Oct-31 16:23:58.514117]  (...a/app/analytics/pricinganalytic.cpp:262) : Sensi Analysis - Completed
+WARNING  [2025-Oct-31 16:23:58.514135]      (VREAnalytics/vrea/app/analytic.cpp:110) : Finishing PRICING Analytic::runAnalytic(): 224247808|224247808 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+NOTICE   [2025-Oct-31 16:23:58.514160]  (...ytics/vrea/app/analyticsmanager.cpp:154) : run analytic with label 'PRICING' finished.
+NOTICE   [2025-Oct-31 16:23:58.514229]  (...rea/app/marketcalibrationreport.cpp:241) : Skipping curve EUR1D for label  as it has already been added
+NOTICE   [2025-Oct-31 16:23:58.514246]  (...rea/app/marketcalibrationreport.cpp:241) : Skipping curve EUR1D for label  as it has already been added
+NOTICE   [2025-Oct-31 16:23:58.514262]  (...rea/app/marketcalibrationreport.cpp:241) : Skipping curve EUR1D for label  as it has already been added
+NOTICE   [2025-Oct-31 16:23:58.514326]  (...rea/app/marketcalibrationreport.cpp:241) : Skipping curve GBP6M for label  as it has already been added
+NOTICE   [2025-Oct-31 16:23:58.514341]  (...rea/app/marketcalibrationreport.cpp:241) : Skipping curve GBP1D for label  as it has already been added
+NOTICE   [2025-Oct-31 16:23:58.514355]  (...ytics/vrea/app/analyticsmanager.cpp:145) : run analytic with label 'XVA'
+WARNING  [2025-Oct-31 16:23:58.514373]      (VREAnalytics/vrea/app/analytic.cpp:105) : Starting XVA Analytic::runAnalytic(): 224247808|224247808 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+NOTICE   [2025-Oct-31 16:23:58.514652]  (.../vrea/app/analytics/xvaanalytic.cpp:869) : XVA analytic is running with amc cg mode 'Disabled'.
+NOTICE   [2025-Oct-31 16:23:58.514675]  (.../vrea/app/analytics/xvaanalytic.cpp:878) : Simulation IncludeTodaysCashFlows is defined: false
+NOTICE   [2025-Oct-31 16:23:58.514691]  (.../vrea/app/analytics/xvaanalytic.cpp:885) : Simulation IncludeReferenceDateEvents is set to false
+NOTICE   [2025-Oct-31 16:23:58.514708]  (.../vrea/app/analytics/xvaanalytic.cpp:887) : XVA analytic called with asof 2016-02-05
+NOTICE   [2025-Oct-31 16:23:58.514742]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.514724", "key": "Running XVA Analytic", "progress": 0, "total": 1 }
+NOTICE   [2025-Oct-31 16:23:58.514763]  (.../vrea/app/analytics/xvaanalytic.cpp:903) : XVA: Build Today's Market
+NOTICE   [2025-Oct-31 16:23:58.514786]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.514778", "key": "XVA: Build Today's Market", "progress": 0, "total": 1 }
+NOTICE   [2025-Oct-31 16:23:58.514804]      (VREAnalytics/vrea/app/analytic.cpp:223) : Analytic::buildMarket called
+NOTICE   [2025-Oct-31 16:23:58.514823]  (.../vred/marketdata/bondspreadimply.cpp:53) : identify securities that require a spread imply for configuration default
+NOTICE   [2025-Oct-31 16:23:58.514859]  (...vred/marketdata/bondspreadimply.cpp:110) : got 0 securities
+NOTICE   [2025-Oct-31 16:23:58.514889]  (.../vred/marketdata/fxtriangulation.cpp:67) : FXTriangulation: initializing
+NOTICE   [2025-Oct-31 16:23:58.514906]  (...vred/marketdata/fxtriangulation.cpp:114) : FXTriangulation: initialized with 1 quotes, 2 currencies.
+NOTICE   [2025-Oct-31 16:23:58.514998]  (...ta/vred/marketdata/todaysmarket.cpp:229) : Build objects in TodaysMarket lazily, i.e. when requested.
+NOTICE   [2025-Oct-31 16:23:58.515015]  (...ta/vred/marketdata/todaysmarket.cpp:234) : TodaysMarket build stats:
+NOTICE   [2025-Oct-31 16:23:58.515030]  (...ta/vred/marketdata/todaysmarket.cpp:240) : 3 add all fx quotes               :               0 ms         1              0 ms
+NOTICE   [2025-Oct-31 16:23:58.515044]  (...ta/vred/marketdata/todaysmarket.cpp:240) : 4 build dep graphs                :               0 ms         1              0 ms
+NOTICE   [2025-Oct-31 16:23:58.515058]  (...ta/vred/marketdata/todaysmarket.cpp:243) : Total build time              :               0 ms
+NOTICE   [2025-Oct-31 16:23:58.515083]      (VREAnalytics/vrea/app/analytic.cpp:261) : Market Build time 0.000000 sec
+NOTICE   [2025-Oct-31 16:23:58.515111]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.515103", "key": "XVA: Build Today's Market", "progress": 1, "total": 1 }
+NOTICE   [2025-Oct-31 16:23:58.515126]  (.../vrea/app/analytics/xvaanalytic.cpp:961) : XVA: Build simulation market
+NOTICE   [2025-Oct-31 16:23:58.515192]  (...vrea/scenario/scenariosimmarket.cpp:329) : building ScenarioSimMarket...
+NOTICE   [2025-Oct-31 16:23:58.515262]  (...rea/scenario/scenariosimmarket.cpp:2898) : built DiscountCurve                     1              0 ms
+NOTICE   [2025-Oct-31 16:23:58.515365]  (...rea/scenario/scenariosimmarket.cpp:2898) : built IndexCurve                        2              0 ms
+NOTICE   [2025-Oct-31 16:23:58.515385]  (.../vred/marketdata/fxtriangulation.cpp:67) : FXTriangulation: initializing
+NOTICE   [2025-Oct-31 16:23:58.515402]  (...vred/marketdata/fxtriangulation.cpp:114) : FXTriangulation: initialized with 0 quotes, 0 currencies.
+NOTICE   [2025-Oct-31 16:23:58.515569]  (...rea/scenario/scenariosimmarket.cpp:3395) : Applying 0 curve algebra rules...
+NOTICE   [2025-Oct-31 16:23:58.515586]  (...rea/scenario/scenariosimmarket.cpp:3026) : building base scenario
+NOTICE   [2025-Oct-31 16:23:58.515610]  (...rea/scenario/scenariosimmarket.cpp:3054) : building base scenario done
+NOTICE   [2025-Oct-31 16:23:58.515637]  (.../vrea/app/analytics/xvaanalytic.cpp:964) : XVA: Build Scenario Generator
+NOTICE   [2025-Oct-31 16:23:58.515678]  (.../vrea/app/analytics/xvaanalytic.cpp:253) : XVA: Build Simulation Model (continueOnCalibrationError = false)
+NOTICE   [2025-Oct-31 16:23:58.515935]  (...ed/model/crossassetmodelbuilder.cpp:240) : Start building CrossAssetModel
+NOTICE   [2025-Oct-31 16:23:58.516102]       (VREData/vred/model/lgmbuilder.cpp:137) : LgmCalibration for qualifier EUR (ccy=EUR), configuration is default
+NOTICE   [2025-Oct-31 16:23:58.516383]  (...marketdata/genericyieldvolcurve.cpp:192) : GenericYieldVolCurve: read 1 vols and 0 shift quotes
+NOTICE   [2025-Oct-31 16:23:58.516755]  (...marketdata/genericyieldvolcurve.cpp:289) : Returning ATM surface for config EUR_SWPTN
+NOTICE   [2025-Oct-31 16:23:58.523787]  (...ed/model/crossassetmodelbuilder.cpp:240) : Start building CrossAssetModel
+NOTICE   [2025-Oct-31 16:23:58.523997]  (...cenario/scenariogeneratorbuilder.cpp:50) : ScenarioGeneratorBuilder::build() called
+NOTICE   [2025-Oct-31 16:23:58.525111]  (...crossassetmodelscenariogenerator.cpp:48) : CrossAssetModelScenarioGenerator ctor called
+NOTICE   [2025-Oct-31 16:23:58.525339]  (...rossassetmodelscenariogenerator.cpp:375) : CrossAssetModelScenarioGenerator ctor done
+NOTICE   [2025-Oct-31 16:23:58.525359]  (.../vrea/app/analytics/xvaanalytic.cpp:238) : simulation grid size 81
+NOTICE   [2025-Oct-31 16:23:58.525379]  (.../vrea/app/analytics/xvaanalytic.cpp:239) : simulation grid valuation dates 81
+NOTICE   [2025-Oct-31 16:23:58.525395]  (.../vrea/app/analytics/xvaanalytic.cpp:240) : simulation grid close-out dates 0
+NOTICE   [2025-Oct-31 16:23:58.525415]  (.../vrea/app/analytics/xvaanalytic.cpp:241) : simulation grid front date 2016-05-05
+NOTICE   [2025-Oct-31 16:23:58.525431]  (.../vrea/app/analytics/xvaanalytic.cpp:242) : simulation grid back date 2036-05-05
+NOTICE   [2025-Oct-31 16:23:58.525447]  (.../vrea/app/analytics/xvaanalytic.cpp:970) : XVA: Attach Scenario Generator to ScenarioSimMarket
+NOTICE   [2025-Oct-31 16:23:58.525480]  (.../vrea/app/analytics/xvaanalytic.cpp:365) : XVA: classicRun
+NOTICE   [2025-Oct-31 16:23:58.525496]  (.../vrea/app/analytics/xvaanalytic.cpp:370) : XVA: Build classic portfolio of size 1 linked to the simulation market
+NOTICE   [2025-Oct-31 16:23:58.525532]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.525511", "key": "XVA: Build Portfolio", "progress": 0, "total": 1 }
+NOTICE   [2025-Oct-31 16:23:58.525551]     (VREData/vred/portfolio/portfolio.cpp:47) : Reset portfolio of size 1
+NOTICE   [2025-Oct-31 16:23:58.525594]  (.../vrea/app/analytics/xvaanalytic.cpp:144) : XvaAnalytic::engineFactory() called
+NOTICE   [2025-Oct-31 16:23:58.525641]  (...ta/vred/portfolio/enginefactory.cpp:189) : Building EngineFactory
+NOTICE   [2025-Oct-31 16:23:58.525750]    (VREData/vred/portfolio/portfolio.cpp:133) : Building Portfolio of size 1 for context = 'analytic/XVA'
+NOTICE   [2025-Oct-31 16:23:58.525929]    (VREData/vred/portfolio/portfolio.cpp:161) : Built Portfolio. Initial size = 1, size now 1, built 0 failed trades, context is analytic/XVA
+NOTICE   [2025-Oct-31 16:23:58.525949]    (VREData/vred/portfolio/portfolio.cpp:162) : Build stats:
+NOTICE   [2025-Oct-31 16:23:58.525967]    (VREData/vred/portfolio/portfolio.cpp:166) : Swap                              1              0 ms (avg = 0)
+NOTICE   [2025-Oct-31 16:23:58.525983]  (.../vrea/app/analytics/xvaanalytic.cpp:384) : Filter trades that expire before February 5th, 2016
+NOTICE   [2025-Oct-31 16:23:58.526007]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.525998", "key": "XVA: Build Portfolio", "progress": 1, "total": 1 }
+NOTICE   [2025-Oct-31 16:23:58.526023]  (.../vrea/app/analytics/xvaanalytic.cpp:300) : XVA: initClassicRun
+NOTICE   [2025-Oct-31 16:23:58.526038]  (.../vrea/app/analytics/xvaanalytic.cpp:268) : XVA: Set cube depth
+NOTICE   [2025-Oct-31 16:23:58.526055]  (.../vrea/app/analytics/xvaanalytic.cpp:270) : XVA: Cube depth set to: 1
+NOTICE   [2025-Oct-31 16:23:58.526070]  (.../vrea/app/analytics/xvaanalytic.cpp:306) : XVA: Create asd 81 x 1000
+NOTICE   [2025-Oct-31 16:23:58.526085]  (.../vrea/app/analytics/xvaanalytic.cpp:277) : Init cube with depth 1
+NOTICE   [2025-Oct-31 16:23:58.526105]  (.../vrea/app/analytics/xvaanalytic.cpp:360) : XVA: initClassicRun completed
+NOTICE   [2025-Oct-31 16:23:58.526347]  (.../vrea/app/analytics/xvaanalytic.cpp:402) : XVA::buildCube
+NOTICE   [2025-Oct-31 16:23:58.526367]  (.../vrea/app/analytics/xvaanalytic.cpp:446) : XVA: Build Cube 1 x 81 x 1000
+NOTICE   [2025-Oct-31 16:23:58.526401]  (...tics/vrea/engine/valuationengine.cpp:91) : Build cube with mporStickyDate=0, dryRun=false
+NOTICE   [2025-Oct-31 16:23:58.526423]  (...ics/vrea/engine/valuationengine.cpp:117) : Starting ValuationEngine for 1 trades, 1000 samples and 81 dates.
+NOTICE   [2025-Oct-31 16:23:58.526438]  (...ics/vrea/engine/valuationengine.cpp:124) : Initialise 1 valuation calculators
+NOTICE   [2025-Oct-31 16:23:58.526455]  (...ics/vrea/engine/valuationengine.cpp:136) : Initialise state objects...
+NOTICE   [2025-Oct-31 16:23:58.526503]  (...ics/vrea/engine/valuationengine.cpp:177) : Total number of trades = 1
+NOTICE   [2025-Oct-31 16:23:58.530880]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 0 out of 1000 steps (0%) completed
+NOTICE   [2025-Oct-31 16:23:58.530943]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.530923", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 0, "total": 1000 }
+NOTICE   [2025-Oct-31 16:23:58.561915]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 10 out of 1000 steps (1%) completed
+NOTICE   [2025-Oct-31 16:23:58.561972]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.561954", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 10, "total": 1000 }
+NOTICE   [2025-Oct-31 16:23:58.592499]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 20 out of 1000 steps (2%) completed
+NOTICE   [2025-Oct-31 16:23:58.592587]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.592562", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 20, "total": 1000 }
+NOTICE   [2025-Oct-31 16:23:58.623447]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 30 out of 1000 steps (3%) completed
+NOTICE   [2025-Oct-31 16:23:58.623544]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.623514", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 30, "total": 1000 }
+NOTICE   [2025-Oct-31 16:23:58.654693]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 40 out of 1000 steps (4%) completed
+NOTICE   [2025-Oct-31 16:23:58.654794]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.654764", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 40, "total": 1000 }
+NOTICE   [2025-Oct-31 16:23:58.685752]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 50 out of 1000 steps (5%) completed
+NOTICE   [2025-Oct-31 16:23:58.685854]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.685832", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 50, "total": 1000 }
+NOTICE   [2025-Oct-31 16:23:58.716434]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 60 out of 1000 steps (6%) completed
+NOTICE   [2025-Oct-31 16:23:58.716514]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.716491", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 60, "total": 1000 }
+NOTICE   [2025-Oct-31 16:23:58.747345]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 70 out of 1000 steps (7%) completed
+NOTICE   [2025-Oct-31 16:23:58.747422]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.747405", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 70, "total": 1000 }
+NOTICE   [2025-Oct-31 16:23:58.778098]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 80 out of 1000 steps (8%) completed
+NOTICE   [2025-Oct-31 16:23:58.778167]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.778146", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 80, "total": 1000 }
+NOTICE   [2025-Oct-31 16:23:58.808420]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 90 out of 1000 steps (9%) completed
+NOTICE   [2025-Oct-31 16:23:58.808502]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.808479", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 90, "total": 1000 }
+NOTICE   [2025-Oct-31 16:23:58.838774]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 100 out of 1000 steps (10%) completed
+NOTICE   [2025-Oct-31 16:23:58.838834]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.838818", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 100, "total": 1000 }
+NOTICE   [2025-Oct-31 16:23:58.870516]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 110 out of 1000 steps (11%) completed
+NOTICE   [2025-Oct-31 16:23:58.870617]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.870587", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 110, "total": 1000 }
+NOTICE   [2025-Oct-31 16:23:58.901407]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 120 out of 1000 steps (12%) completed
+NOTICE   [2025-Oct-31 16:23:58.901484]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.901466", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 120, "total": 1000 }
+NOTICE   [2025-Oct-31 16:23:58.932083]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 130 out of 1000 steps (13%) completed
+NOTICE   [2025-Oct-31 16:23:58.932165]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.932141", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 130, "total": 1000 }
+NOTICE   [2025-Oct-31 16:23:58.962238]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 140 out of 1000 steps (14%) completed
+NOTICE   [2025-Oct-31 16:23:58.962280]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.962267", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 140, "total": 1000 }
+NOTICE   [2025-Oct-31 16:23:58.992339]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 150 out of 1000 steps (15%) completed
+NOTICE   [2025-Oct-31 16:23:58.992417]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:58.992395", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 150, "total": 1000 }
+NOTICE   [2025-Oct-31 16:23:59.023853]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 160 out of 1000 steps (16%) completed
+NOTICE   [2025-Oct-31 16:23:59.023954]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:59.023927", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 160, "total": 1000 }
+NOTICE   [2025-Oct-31 16:23:59.055504]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 170 out of 1000 steps (17%) completed
+NOTICE   [2025-Oct-31 16:23:59.055678]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:59.055649", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 170, "total": 1000 }
+NOTICE   [2025-Oct-31 16:23:59.087106]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 180 out of 1000 steps (18%) completed
+NOTICE   [2025-Oct-31 16:23:59.087220]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:59.087189", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 180, "total": 1000 }
+NOTICE   [2025-Oct-31 16:23:59.118481]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 190 out of 1000 steps (19%) completed
+NOTICE   [2025-Oct-31 16:23:59.118595]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:59.118553", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 190, "total": 1000 }
+NOTICE   [2025-Oct-31 16:23:59.149777]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 200 out of 1000 steps (20%) completed
+NOTICE   [2025-Oct-31 16:23:59.149881]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:59.149850", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 200, "total": 1000 }
+NOTICE   [2025-Oct-31 16:23:59.182505]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 210 out of 1000 steps (21%) completed
+NOTICE   [2025-Oct-31 16:23:59.182626]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:59.182591", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 210, "total": 1000 }
+NOTICE   [2025-Oct-31 16:23:59.213471]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 220 out of 1000 steps (22%) completed
+NOTICE   [2025-Oct-31 16:23:59.213608]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:59.213576", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 220, "total": 1000 }
+NOTICE   [2025-Oct-31 16:23:59.244775]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 230 out of 1000 steps (23%) completed
+NOTICE   [2025-Oct-31 16:23:59.244879]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:59.244850", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 230, "total": 1000 }
+NOTICE   [2025-Oct-31 16:23:59.275704]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 240 out of 1000 steps (24%) completed
+NOTICE   [2025-Oct-31 16:23:59.275808]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:59.275778", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 240, "total": 1000 }
+NOTICE   [2025-Oct-31 16:23:59.307076]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 250 out of 1000 steps (25%) completed
+NOTICE   [2025-Oct-31 16:23:59.307203]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:59.307170", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 250, "total": 1000 }
+NOTICE   [2025-Oct-31 16:23:59.338450]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 260 out of 1000 steps (26%) completed
+NOTICE   [2025-Oct-31 16:23:59.338557]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:59.338530", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 260, "total": 1000 }
+NOTICE   [2025-Oct-31 16:23:59.369714]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 270 out of 1000 steps (27%) completed
+NOTICE   [2025-Oct-31 16:23:59.369853]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:59.369814", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 270, "total": 1000 }
+NOTICE   [2025-Oct-31 16:23:59.400575]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 280 out of 1000 steps (28%) completed
+NOTICE   [2025-Oct-31 16:23:59.400686]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:59.400657", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 280, "total": 1000 }
+NOTICE   [2025-Oct-31 16:23:59.431845]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 290 out of 1000 steps (28%) completed
+NOTICE   [2025-Oct-31 16:23:59.431952]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:59.431920", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 290, "total": 1000 }
+NOTICE   [2025-Oct-31 16:23:59.462430]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 300 out of 1000 steps (30%) completed
+NOTICE   [2025-Oct-31 16:23:59.462514]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:59.462491", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 300, "total": 1000 }
+NOTICE   [2025-Oct-31 16:23:59.493037]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 310 out of 1000 steps (31%) completed
+NOTICE   [2025-Oct-31 16:23:59.493094]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:59.493077", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 310, "total": 1000 }
+NOTICE   [2025-Oct-31 16:23:59.524067]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 320 out of 1000 steps (32%) completed
+NOTICE   [2025-Oct-31 16:23:59.524195]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:59.524168", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 320, "total": 1000 }
+NOTICE   [2025-Oct-31 16:23:59.555092]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 330 out of 1000 steps (33%) completed
+NOTICE   [2025-Oct-31 16:23:59.555197]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:59.555170", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 330, "total": 1000 }
+NOTICE   [2025-Oct-31 16:23:59.585440]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 340 out of 1000 steps (34%) completed
+NOTICE   [2025-Oct-31 16:23:59.585540]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:59.585519", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 340, "total": 1000 }
+NOTICE   [2025-Oct-31 16:23:59.616276]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 350 out of 1000 steps (35%) completed
+NOTICE   [2025-Oct-31 16:23:59.616381]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:59.616352", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 350, "total": 1000 }
+NOTICE   [2025-Oct-31 16:23:59.647498]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 360 out of 1000 steps (36%) completed
+NOTICE   [2025-Oct-31 16:23:59.647598]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:59.647570", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 360, "total": 1000 }
+NOTICE   [2025-Oct-31 16:23:59.678365]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 370 out of 1000 steps (37%) completed
+NOTICE   [2025-Oct-31 16:23:59.678541]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:59.678512", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 370, "total": 1000 }
+NOTICE   [2025-Oct-31 16:23:59.709300]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 380 out of 1000 steps (38%) completed
+NOTICE   [2025-Oct-31 16:23:59.709409]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:59.709382", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 380, "total": 1000 }
+NOTICE   [2025-Oct-31 16:23:59.740226]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 390 out of 1000 steps (39%) completed
+NOTICE   [2025-Oct-31 16:23:59.740348]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:59.740319", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 390, "total": 1000 }
+NOTICE   [2025-Oct-31 16:23:59.771107]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 400 out of 1000 steps (40%) completed
+NOTICE   [2025-Oct-31 16:23:59.771205]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:59.771179", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 400, "total": 1000 }
+NOTICE   [2025-Oct-31 16:23:59.806532]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 410 out of 1000 steps (41%) completed
+NOTICE   [2025-Oct-31 16:23:59.806637]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:59.806607", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 410, "total": 1000 }
+NOTICE   [2025-Oct-31 16:23:59.837094]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 420 out of 1000 steps (42%) completed
+NOTICE   [2025-Oct-31 16:23:59.837196]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:59.837170", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 420, "total": 1000 }
+NOTICE   [2025-Oct-31 16:23:59.867605]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 430 out of 1000 steps (43%) completed
+NOTICE   [2025-Oct-31 16:23:59.867707]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:59.867678", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 430, "total": 1000 }
+NOTICE   [2025-Oct-31 16:23:59.898542]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 440 out of 1000 steps (44%) completed
+NOTICE   [2025-Oct-31 16:23:59.898653]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:59.898623", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 440, "total": 1000 }
+NOTICE   [2025-Oct-31 16:23:59.928892]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 450 out of 1000 steps (45%) completed
+NOTICE   [2025-Oct-31 16:23:59.928981]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:59.928956", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 450, "total": 1000 }
+NOTICE   [2025-Oct-31 16:23:59.959514]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 460 out of 1000 steps (46%) completed
+NOTICE   [2025-Oct-31 16:23:59.959612]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:59.959590", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 460, "total": 1000 }
+NOTICE   [2025-Oct-31 16:23:59.989941]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 470 out of 1000 steps (47%) completed
+NOTICE   [2025-Oct-31 16:23:59.990030]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:23:59.990006", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 470, "total": 1000 }
+NOTICE   [2025-Oct-31 16:24:00.020603]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 480 out of 1000 steps (48%) completed
+NOTICE   [2025-Oct-31 16:24:00.020735]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:24:00.020696", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 480, "total": 1000 }
+NOTICE   [2025-Oct-31 16:24:00.051304]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 490 out of 1000 steps (49%) completed
+NOTICE   [2025-Oct-31 16:24:00.051396]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:24:00.051374", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 490, "total": 1000 }
+NOTICE   [2025-Oct-31 16:24:00.081783]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 500 out of 1000 steps (50%) completed
+NOTICE   [2025-Oct-31 16:24:00.081845]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:24:00.081830", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 500, "total": 1000 }
+NOTICE   [2025-Oct-31 16:24:00.111913]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 510 out of 1000 steps (51%) completed
+NOTICE   [2025-Oct-31 16:24:00.111970]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:24:00.111957", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 510, "total": 1000 }
+NOTICE   [2025-Oct-31 16:24:00.142254]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 520 out of 1000 steps (52%) completed
+NOTICE   [2025-Oct-31 16:24:00.142319]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:24:00.142302", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 520, "total": 1000 }
+NOTICE   [2025-Oct-31 16:24:00.172545]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 530 out of 1000 steps (53%) completed
+NOTICE   [2025-Oct-31 16:24:00.172599]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:24:00.172584", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 530, "total": 1000 }
+NOTICE   [2025-Oct-31 16:24:00.202967]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 540 out of 1000 steps (54%) completed
+NOTICE   [2025-Oct-31 16:24:00.203016]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:24:00.203003", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 540, "total": 1000 }
+NOTICE   [2025-Oct-31 16:24:00.233752]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 550 out of 1000 steps (55%) completed
+NOTICE   [2025-Oct-31 16:24:00.233846]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:24:00.233821", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 550, "total": 1000 }
+NOTICE   [2025-Oct-31 16:24:00.264503]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 560 out of 1000 steps (56%) completed
+NOTICE   [2025-Oct-31 16:24:00.264586]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:24:00.264562", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 560, "total": 1000 }
+NOTICE   [2025-Oct-31 16:24:00.295067]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 570 out of 1000 steps (56%) completed
+NOTICE   [2025-Oct-31 16:24:00.295118]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:24:00.295104", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 570, "total": 1000 }
+NOTICE   [2025-Oct-31 16:24:00.325416]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 580 out of 1000 steps (57%) completed
+NOTICE   [2025-Oct-31 16:24:00.325472]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:24:00.325458", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 580, "total": 1000 }
+NOTICE   [2025-Oct-31 16:24:00.355810]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 590 out of 1000 steps (59%) completed
+NOTICE   [2025-Oct-31 16:24:00.355861]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:24:00.355850", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 590, "total": 1000 }
+NOTICE   [2025-Oct-31 16:24:00.386253]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 600 out of 1000 steps (60%) completed
+NOTICE   [2025-Oct-31 16:24:00.386310]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:24:00.386297", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 600, "total": 1000 }
+NOTICE   [2025-Oct-31 16:24:00.416692]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 610 out of 1000 steps (61%) completed
+NOTICE   [2025-Oct-31 16:24:00.416738]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:24:00.416725", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 610, "total": 1000 }
+NOTICE   [2025-Oct-31 16:24:00.447272]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 620 out of 1000 steps (62%) completed
+NOTICE   [2025-Oct-31 16:24:00.447366]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:24:00.447341", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 620, "total": 1000 }
+NOTICE   [2025-Oct-31 16:24:00.478335]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 630 out of 1000 steps (63%) completed
+NOTICE   [2025-Oct-31 16:24:00.478432]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:24:00.478405", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 630, "total": 1000 }
+NOTICE   [2025-Oct-31 16:24:00.510029]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 640 out of 1000 steps (64%) completed
+NOTICE   [2025-Oct-31 16:24:00.510134]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:24:00.510102", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 640, "total": 1000 }
+NOTICE   [2025-Oct-31 16:24:00.541000]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 650 out of 1000 steps (65%) completed
+NOTICE   [2025-Oct-31 16:24:00.541097]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:24:00.541070", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 650, "total": 1000 }
+NOTICE   [2025-Oct-31 16:24:00.572005]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 660 out of 1000 steps (66%) completed
+NOTICE   [2025-Oct-31 16:24:00.572113]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:24:00.572084", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 660, "total": 1000 }
+NOTICE   [2025-Oct-31 16:24:00.603288]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 670 out of 1000 steps (67%) completed
+NOTICE   [2025-Oct-31 16:24:00.603391]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:24:00.603365", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 670, "total": 1000 }
+NOTICE   [2025-Oct-31 16:24:00.634297]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 680 out of 1000 steps (68%) completed
+NOTICE   [2025-Oct-31 16:24:00.634396]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:24:00.634367", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 680, "total": 1000 }
+NOTICE   [2025-Oct-31 16:24:00.665745]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 690 out of 1000 steps (69%) completed
+NOTICE   [2025-Oct-31 16:24:00.665849]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:24:00.665820", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 690, "total": 1000 }
+NOTICE   [2025-Oct-31 16:24:00.696854]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 700 out of 1000 steps (70%) completed
+NOTICE   [2025-Oct-31 16:24:00.696957]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:24:00.696931", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 700, "total": 1000 }
+NOTICE   [2025-Oct-31 16:24:00.727878]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 710 out of 1000 steps (71%) completed
+NOTICE   [2025-Oct-31 16:24:00.727987]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:24:00.727959", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 710, "total": 1000 }
+NOTICE   [2025-Oct-31 16:24:00.759215]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 720 out of 1000 steps (72%) completed
+NOTICE   [2025-Oct-31 16:24:00.759327]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:24:00.759280", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 720, "total": 1000 }
+NOTICE   [2025-Oct-31 16:24:00.790435]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 730 out of 1000 steps (73%) completed
+NOTICE   [2025-Oct-31 16:24:00.790531]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:24:00.790505", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 730, "total": 1000 }
+NOTICE   [2025-Oct-31 16:24:00.821852]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 740 out of 1000 steps (74%) completed
+NOTICE   [2025-Oct-31 16:24:00.821951]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:24:00.821925", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 740, "total": 1000 }
+NOTICE   [2025-Oct-31 16:24:00.852757]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 750 out of 1000 steps (75%) completed
+NOTICE   [2025-Oct-31 16:24:00.852849]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:24:00.852824", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 750, "total": 1000 }
+NOTICE   [2025-Oct-31 16:24:00.883890]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 760 out of 1000 steps (76%) completed
+NOTICE   [2025-Oct-31 16:24:00.883997]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:24:00.883969", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 760, "total": 1000 }
+NOTICE   [2025-Oct-31 16:24:00.914276]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 770 out of 1000 steps (77%) completed
+NOTICE   [2025-Oct-31 16:24:00.914390]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:24:00.914352", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 770, "total": 1000 }
+NOTICE   [2025-Oct-31 16:24:00.945118]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 780 out of 1000 steps (78%) completed
+NOTICE   [2025-Oct-31 16:24:00.945208]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:24:00.945185", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 780, "total": 1000 }
+NOTICE   [2025-Oct-31 16:24:00.976229]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 790 out of 1000 steps (79%) completed
+NOTICE   [2025-Oct-31 16:24:00.976346]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:24:00.976313", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 790, "total": 1000 }
+NOTICE   [2025-Oct-31 16:24:01.007418]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 800 out of 1000 steps (80%) completed
+NOTICE   [2025-Oct-31 16:24:01.007529]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:24:01.007498", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 800, "total": 1000 }
+NOTICE   [2025-Oct-31 16:24:01.049639]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 810 out of 1000 steps (81%) completed
+NOTICE   [2025-Oct-31 16:24:01.049742]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:24:01.049714", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 810, "total": 1000 }
+NOTICE   [2025-Oct-31 16:24:01.080290]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 820 out of 1000 steps (82%) completed
+NOTICE   [2025-Oct-31 16:24:01.080420]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:24:01.080394", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 820, "total": 1000 }
+NOTICE   [2025-Oct-31 16:24:01.111390]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 830 out of 1000 steps (83%) completed
+NOTICE   [2025-Oct-31 16:24:01.111483]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:24:01.111458", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 830, "total": 1000 }
+NOTICE   [2025-Oct-31 16:24:01.142472]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 840 out of 1000 steps (84%) completed
+NOTICE   [2025-Oct-31 16:24:01.142589]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:24:01.142557", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 840, "total": 1000 }
+NOTICE   [2025-Oct-31 16:24:01.173286]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 850 out of 1000 steps (85%) completed
+NOTICE   [2025-Oct-31 16:24:01.173396]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:24:01.173370", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 850, "total": 1000 }
+NOTICE   [2025-Oct-31 16:24:01.203800]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 860 out of 1000 steps (86%) completed
+NOTICE   [2025-Oct-31 16:24:01.203883]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:24:01.203860", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 860, "total": 1000 }
+NOTICE   [2025-Oct-31 16:24:01.234490]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 870 out of 1000 steps (87%) completed
+NOTICE   [2025-Oct-31 16:24:01.234587]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:24:01.234561", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 870, "total": 1000 }
+NOTICE   [2025-Oct-31 16:24:01.265985]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 880 out of 1000 steps (88%) completed
+NOTICE   [2025-Oct-31 16:24:01.266074]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:24:01.266050", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 880, "total": 1000 }
+NOTICE   [2025-Oct-31 16:24:01.297805]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 890 out of 1000 steps (89%) completed
+NOTICE   [2025-Oct-31 16:24:01.297915]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:24:01.297884", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 890, "total": 1000 }
+NOTICE   [2025-Oct-31 16:24:01.329713]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 900 out of 1000 steps (90%) completed
+NOTICE   [2025-Oct-31 16:24:01.329802]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:24:01.329778", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 900, "total": 1000 }
+NOTICE   [2025-Oct-31 16:24:01.361218]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 910 out of 1000 steps (91%) completed
+NOTICE   [2025-Oct-31 16:24:01.361343]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:24:01.361313", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 910, "total": 1000 }
+NOTICE   [2025-Oct-31 16:24:01.392840]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 920 out of 1000 steps (92%) completed
+NOTICE   [2025-Oct-31 16:24:01.392949]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:24:01.392919", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 920, "total": 1000 }
+NOTICE   [2025-Oct-31 16:24:01.425093]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 930 out of 1000 steps (93%) completed
+NOTICE   [2025-Oct-31 16:24:01.425192]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:24:01.425165", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 930, "total": 1000 }
+NOTICE   [2025-Oct-31 16:24:01.456752]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 940 out of 1000 steps (94%) completed
+NOTICE   [2025-Oct-31 16:24:01.456841]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:24:01.456817", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 940, "total": 1000 }
+NOTICE   [2025-Oct-31 16:24:01.488380]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 950 out of 1000 steps (95%) completed
+NOTICE   [2025-Oct-31 16:24:01.488481]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:24:01.488454", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 950, "total": 1000 }
+NOTICE   [2025-Oct-31 16:24:01.520516]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 960 out of 1000 steps (96%) completed
+NOTICE   [2025-Oct-31 16:24:01.520627]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:24:01.520598", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 960, "total": 1000 }
+NOTICE   [2025-Oct-31 16:24:01.551495]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 970 out of 1000 steps (97%) completed
+NOTICE   [2025-Oct-31 16:24:01.551593]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:24:01.551566", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 970, "total": 1000 }
+NOTICE   [2025-Oct-31 16:24:01.581909]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 980 out of 1000 steps (98%) completed
+NOTICE   [2025-Oct-31 16:24:01.582017]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:24:01.581989", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 980, "total": 1000 }
+NOTICE   [2025-Oct-31 16:24:01.612682]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 990 out of 1000 steps (99%) completed
+NOTICE   [2025-Oct-31 16:24:01.612786]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:24:01.612760", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 990, "total": 1000 }
+NOTICE   [2025-Oct-31 16:24:01.640452]  (VREData/vred/utilities/progressbar.cpp:111) : XVA: Building cube (1 trade, 1000 samples): 1000 out of 1000 steps (100%) completed
+NOTICE   [2025-Oct-31 16:24:01.640538]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:24:01.640513", "detail": "1 trade, 1000 samples", "key": "XVA: Building cube", "progress": 1000, "total": 1000 }
+NOTICE   [2025-Oct-31 16:24:01.640567]  (...ics/vrea/engine/valuationengine.cpp:299) : ValuationEngine completed: loop 3.12 sec, pricing 0.42 sec, update 2.6 sec fixing 0
+NOTICE   [2025-Oct-31 16:24:01.640615]  (.../vrea/app/analytics/xvaanalytic.cpp:523) : XVA::buildCube done
+NOTICE   [2025-Oct-31 16:24:01.640640]  (.../vrea/app/analytics/xvaanalytic.cpp:395) : XVA: classicRun completed
+WARNING  [2025-Oct-31 16:24:01.640658]  (...vrea/app/analytics/xvaanalytic.cpp:1030) : We have generated a classic cube only
+NOTICE   [2025-Oct-31 16:24:01.640674]  (...vrea/app/analytics/xvaanalytic.cpp:1033) : NPV cube generation completed
+NOTICE   [2025-Oct-31 16:24:01.640692]  (...vrea/app/analytics/xvaanalytic.cpp:1039) : Classic portfolio size 1
+NOTICE   [2025-Oct-31 16:24:01.640708]  (...vrea/app/analytics/xvaanalytic.cpp:1040) : AMC portfolio size 0
+NOTICE   [2025-Oct-31 16:24:01.640724]  (...vrea/app/analytics/xvaanalytic.cpp:1046) : Total portfolio size 1
+NOTICE   [2025-Oct-31 16:24:01.640756]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:24:01.640742", "key": "XVA: Aggregation", "progress": 0, "total": 1 }
+NOTICE   [2025-Oct-31 16:24:01.640826]  (.../portfolio/nettingsetdefinition.cpp:287) : NettingSetId='CPTY_A': Validating netting set definition
+NOTICE   [2025-Oct-31 16:24:01.640848]  (...s/vrea/app/analytics/xvaanalytic.cpp:82) : For netting-set CPTY_ACSA flag is 0
+NOTICE   [2025-Oct-31 16:24:01.640865]  (.../vrea/app/analytics/xvaanalytic.cpp:849) : baseCurrency EUR
+NOTICE   [2025-Oct-31 16:24:01.640894]  (...ics/vrea/aggregation/postprocess.cpp:95) : PostProcess: started.
+NOTICE   [2025-Oct-31 16:24:01.640925]  (...cs/vrea/aggregation/postprocess.cpp:112) : cube storage is regular: 1
+NOTICE   [2025-Oct-31 16:24:01.640940]  (...cs/vrea/aggregation/postprocess.cpp:113) : cube dates: 81
+NOTICE   [2025-Oct-31 16:24:01.640962]  (...cs/vrea/aggregation/postprocess.cpp:122) : AsOfDate = 2016-02-05
+NOTICE   [2025-Oct-31 16:24:01.640994]  (...a/aggregation/exposurecalculator.cpp:75) : Compute trade exposure profiles, regular (flipViewXVA = N)
+NOTICE   [2025-Oct-31 16:24:01.641016]  (...a/aggregation/exposurecalculator.cpp:94) : Aggregate exposure for trade Swap
+NOTICE   [2025-Oct-31 16:24:01.645682]  (...egation/nettedexposurecalculator.cpp:93) : Compute netting set exposure profiles
+NOTICE   [2025-Oct-31 16:24:01.645924]  (...gation/nettedexposurecalculator.cpp:163) : Aggregate exposure for netting set CPTY_A
+NOTICE   [2025-Oct-31 16:24:01.645967]  (...gation/nettedexposurecalculator.cpp:473) : CSA missing or inactive for netting set CPTY_A
+NOTICE   [2025-Oct-31 16:24:01.649416]  (.../vrea/aggregation/xvacalculator.cpp:318) : Update XVA for trade Swap, regular (flipViewXVA = N)
+NOTICE   [2025-Oct-31 16:24:01.649496]  (...ta/vred/marketdata/defaultcurve.cpp:558) : Start building default curve of type HazardRate for curve CPTY_A_SR_EUR
+NOTICE   [2025-Oct-31 16:24:01.649526]  (...ta/vred/marketdata/defaultcurve.cpp:172) : Loading explicit quotes for default curve CPTY_A_SR_EUR
+NOTICE   [2025-Oct-31 16:24:01.649549]  (...ta/vred/marketdata/defaultcurve.cpp:200) : DefaultCurve CPTY_A_SR_EUR using 1 default quotes of 1 requested quotes.
+NOTICE   [2025-Oct-31 16:24:01.649568]  (...ta/vred/marketdata/defaultcurve.cpp:580) : DefaultCurve: add asof (February 5th, 2016), hazard rate 0.01, as not given
+NOTICE   [2025-Oct-31 16:24:01.649584]  (...ta/vred/marketdata/defaultcurve.cpp:590) : DefaultCurve: set up interpolated hazard rate curve
+NOTICE   [2025-Oct-31 16:24:01.649604]  (...ta/vred/marketdata/defaultcurve.cpp:608) : Finished building default curve of type HazardRate for curve CPTY_A_SR_EUR
+NOTICE   [2025-Oct-31 16:24:01.649649]  (.../vrea/aggregation/xvacalculator.cpp:405) : Update XVA for netting set CPTY_A, regular (flipViewXVA = N)
+NOTICE   [2025-Oct-31 16:24:01.649681]  (...ea/aggregation/exposureallocator.cpp:46) : Compute allocated trade exposures
+NOTICE   [2025-Oct-31 16:24:01.649702]  (...ea/aggregation/exposureallocator.cpp:68) : Completed calculating allocated trade exposures
+NOTICE   [2025-Oct-31 16:24:01.649724]  (.../vrea/aggregation/xvacalculator.cpp:318) : Update XVA for trade Swap, regular (flipViewXVA = N)
+NOTICE   [2025-Oct-31 16:24:01.649752]  (.../vrea/aggregation/xvacalculator.cpp:405) : Update XVA for netting set CPTY_A, regular (flipViewXVA = N)
+NOTICE   [2025-Oct-31 16:24:01.649813]  (.../vrea/app/analytics/xvaanalytic.cpp:863) : post done
+NOTICE   [2025-Oct-31 16:24:01.649852]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:24:01.649832", "key": "XVA: Aggregation", "progress": 1, "total": 1 }
+NOTICE   [2025-Oct-31 16:24:01.649878]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:24:01.649870", "key": "XVA: Reports", "progress": 0, "total": 1 }
+NOTICE   [2025-Oct-31 16:24:01.649908]  (...vrea/app/analytics/xvaanalytic.cpp:1139) : Generating XVA reports and cube outputs
+NOTICE   [2025-Oct-31 16:24:01.650023]  (...nalytics/vrea/app/reportwriter.cpp:1327) : Writing cube report
+NOTICE   [2025-Oct-31 16:24:01.654666]  (...nalytics/vrea/app/reportwriter.cpp:1392) : Cube report written
+NOTICE   [2025-Oct-31 16:24:01.654773]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:24:01.654747", "key": "XVA: Reports", "progress": 1, "total": 1 }
+NOTICE   [2025-Oct-31 16:24:01.654808]          (VREData/vred/utilities/log.cpp:127) : ProgressMessage { "@timestamp": "2025-10-31T06:24:01.654799", "key": "Running XVA Analytic", "progress": 1, "total": 1 }
+WARNING  [2025-Oct-31 16:24:01.654826]      (VREAnalytics/vrea/app/analytic.cpp:110) : Finishing XVA Analytic::runAnalytic(): 482738176|482738176 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+NOTICE   [2025-Oct-31 16:24:01.654856]  (...ytics/vrea/app/analyticsmanager.cpp:154) : run analytic with label 'XVA' finished.
+NOTICE   [2025-Oct-31 16:24:01.654881]  (...rea/app/marketcalibrationreport.cpp:241) : Skipping curve EUR1D for label  as it has already been added
+NOTICE   [2025-Oct-31 16:24:01.654901]  (...rea/app/marketcalibrationreport.cpp:241) : Skipping curve EUR1D for label  as it has already been added
+NOTICE   [2025-Oct-31 16:24:01.654918]  (...rea/app/marketcalibrationreport.cpp:241) : Skipping curve EUR1D for label  as it has already been added
+NOTICE   [2025-Oct-31 16:24:01.654936]  (...rea/app/marketcalibrationreport.cpp:241) : Skipping curve EUR1D for label  as it has already been added
+NOTICE   [2025-Oct-31 16:24:01.654952]  (...rea/app/marketcalibrationreport.cpp:241) : Skipping curve EUR6M for label  as it has already been added
+NOTICE   [2025-Oct-31 16:24:01.655053]  (...rea/app/marketcalibrationreport.cpp:241) : Skipping curve GBP6M for label  as it has already been added
+NOTICE   [2025-Oct-31 16:24:01.655113]  (...nalytics/vrea/app/reportwriter.cpp:1249) : Writing Pricing stats report
+NOTICE   [2025-Oct-31 16:24:01.655131]  (...nalytics/vrea/app/reportwriter.cpp:1265) : Pricing stats report written
+NOTICE   [2025-Oct-31 16:24:01.655150]  (...nalytics/vrea/app/reportwriter.cpp:1270) : Writing runtimes report
+NOTICE   [2025-Oct-31 16:24:01.655171]  (...nalytics/vrea/app/reportwriter.cpp:1294) : Finished writing runtimes report
+NOTICE   [2025-Oct-31 16:24:01.655194]  (...ytics/vrea/app/analyticsmanager.cpp:239) : report name cashflow occurs 1 times
+NOTICE   [2025-Oct-31 16:24:01.655208]  (...ytics/vrea/app/analyticsmanager.cpp:239) : report name colva_nettingset_CPTY_A occurs 1 times
+NOTICE   [2025-Oct-31 16:24:01.655222]  (...ytics/vrea/app/analyticsmanager.cpp:239) : report name curves occurs 1 times
+NOTICE   [2025-Oct-31 16:24:01.655235]  (...ytics/vrea/app/analyticsmanager.cpp:239) : report name cva_sensitivity_nettingset_CPTY_A occurs 1 times
+NOTICE   [2025-Oct-31 16:24:01.655249]  (...ytics/vrea/app/analyticsmanager.cpp:239) : report name dividends occurs 1 times
+NOTICE   [2025-Oct-31 16:24:01.655262]  (...ytics/vrea/app/analyticsmanager.cpp:239) : report name exposure_nettingset_CPTY_A occurs 1 times
+NOTICE   [2025-Oct-31 16:24:01.655275]  (...ytics/vrea/app/analyticsmanager.cpp:239) : report name exposure_trade_Swap occurs 1 times
+NOTICE   [2025-Oct-31 16:24:01.655288]  (...ytics/vrea/app/analyticsmanager.cpp:239) : report name fixings occurs 1 times
+NOTICE   [2025-Oct-31 16:24:01.655302]  (...ytics/vrea/app/analyticsmanager.cpp:239) : report name marketdata occurs 1 times
+NOTICE   [2025-Oct-31 16:24:01.655314]  (...ytics/vrea/app/analyticsmanager.cpp:239) : report name netcube occurs 1 times
+NOTICE   [2025-Oct-31 16:24:01.655327]  (...ytics/vrea/app/analyticsmanager.cpp:239) : report name npv occurs 1 times
+NOTICE   [2025-Oct-31 16:24:01.655340]  (...ytics/vrea/app/analyticsmanager.cpp:239) : report name par_sensitivity occurs 1 times
+NOTICE   [2025-Oct-31 16:24:01.655356]  (...ytics/vrea/app/analyticsmanager.cpp:239) : report name pricingstats occurs 1 times
+NOTICE   [2025-Oct-31 16:24:01.655369]  (...ytics/vrea/app/analyticsmanager.cpp:239) : report name runtimes occurs 1 times
+NOTICE   [2025-Oct-31 16:24:01.655382]  (...ytics/vrea/app/analyticsmanager.cpp:239) : report name scenario occurs 1 times
+NOTICE   [2025-Oct-31 16:24:01.655395]  (...ytics/vrea/app/analyticsmanager.cpp:239) : report name sensitivity occurs 1 times
+NOTICE   [2025-Oct-31 16:24:01.655408]  (...ytics/vrea/app/analyticsmanager.cpp:239) : report name sensitivity_config occurs 1 times
+NOTICE   [2025-Oct-31 16:24:01.655421]  (...ytics/vrea/app/analyticsmanager.cpp:239) : report name sensitivity_scenario occurs 1 times
+NOTICE   [2025-Oct-31 16:24:01.655434]  (...ytics/vrea/app/analyticsmanager.cpp:239) : report name todaysmarketcalibration occurs 1 times
+NOTICE   [2025-Oct-31 16:24:01.655448]  (...ytics/vrea/app/analyticsmanager.cpp:239) : report name xva occurs 1 times
+NOTICE   [2025-Oct-31 16:24:01.655468]       (VREData/vred/report/csvreport.cpp:127) : Opening CSV file report 'Output/flows.csv'
+NOTICE   [2025-Oct-31 16:24:01.655825]       (VREData/vred/report/csvreport.cpp:216) : CSV file report 'Output/flows.csv' closed.
+NOTICE   [2025-Oct-31 16:24:01.655843]  (...ytics/vrea/app/analyticsmanager.cpp:289) : report cashflow written to Output/flows.csv
+NOTICE   [2025-Oct-31 16:24:01.655858]       (VREData/vred/report/csvreport.cpp:127) : Opening CSV file report 'Output/dividends.csv'
+NOTICE   [2025-Oct-31 16:24:01.655928]       (VREData/vred/report/csvreport.cpp:216) : CSV file report 'Output/dividends.csv' closed.
+NOTICE   [2025-Oct-31 16:24:01.655944]  (...ytics/vrea/app/analyticsmanager.cpp:289) : report dividends written to Output/dividends.csv
+NOTICE   [2025-Oct-31 16:24:01.655958]       (VREData/vred/report/csvreport.cpp:127) : Opening CSV file report 'Output/fixings.csv'
+NOTICE   [2025-Oct-31 16:24:01.656023]       (VREData/vred/report/csvreport.cpp:216) : CSV file report 'Output/fixings.csv' closed.
+NOTICE   [2025-Oct-31 16:24:01.656040]  (...ytics/vrea/app/analyticsmanager.cpp:289) : report fixings written to Output/fixings.csv
+NOTICE   [2025-Oct-31 16:24:01.656055]       (VREData/vred/report/csvreport.cpp:127) : Opening CSV file report 'Output/todaysmarketcalibration.csv'
+NOTICE   [2025-Oct-31 16:24:01.656238]       (VREData/vred/report/csvreport.cpp:216) : CSV file report 'Output/todaysmarketcalibration.csv' closed.
+NOTICE   [2025-Oct-31 16:24:01.656253]  (...ytics/vrea/app/analyticsmanager.cpp:289) : report todaysmarketcalibration written to Output/todaysmarketcalibration.csv
+NOTICE   [2025-Oct-31 16:24:01.656268]       (VREData/vred/report/csvreport.cpp:127) : Opening CSV file report 'Output/marketdata.csv'
+NOTICE   [2025-Oct-31 16:24:01.656340]       (VREData/vred/report/csvreport.cpp:216) : CSV file report 'Output/marketdata.csv' closed.
+NOTICE   [2025-Oct-31 16:24:01.656355]  (...ytics/vrea/app/analyticsmanager.cpp:289) : report marketdata written to Output/marketdata.csv
+NOTICE   [2025-Oct-31 16:24:01.656369]       (VREData/vred/report/csvreport.cpp:127) : Opening CSV file report 'Output/curves.csv'
+NOTICE   [2025-Oct-31 16:24:01.657415]       (VREData/vred/report/csvreport.cpp:216) : CSV file report 'Output/curves.csv' closed.
+NOTICE   [2025-Oct-31 16:24:01.657430]  (...ytics/vrea/app/analyticsmanager.cpp:289) : report curves written to Output/curves.csv
+NOTICE   [2025-Oct-31 16:24:01.657445]       (VREData/vred/report/csvreport.cpp:127) : Opening CSV file report 'Output/npv.csv'
+NOTICE   [2025-Oct-31 16:24:01.657516]       (VREData/vred/report/csvreport.cpp:216) : CSV file report 'Output/npv.csv' closed.
+NOTICE   [2025-Oct-31 16:24:01.657531]  (...ytics/vrea/app/analyticsmanager.cpp:289) : report npv written to Output/npv.csv
+NOTICE   [2025-Oct-31 16:24:01.657546]       (VREData/vred/report/csvreport.cpp:127) : Opening CSV file report 'Output/par_sensitivity.csv'
+NOTICE   [2025-Oct-31 16:24:01.657621]       (VREData/vred/report/csvreport.cpp:216) : CSV file report 'Output/par_sensitivity.csv' closed.
+NOTICE   [2025-Oct-31 16:24:01.657637]  (...ytics/vrea/app/analyticsmanager.cpp:289) : report par_sensitivity written to Output/par_sensitivity.csv
+NOTICE   [2025-Oct-31 16:24:01.657652]       (VREData/vred/report/csvreport.cpp:127) : Opening CSV file report 'Output/sensitivity.csv'
+NOTICE   [2025-Oct-31 16:24:01.657733]       (VREData/vred/report/csvreport.cpp:216) : CSV file report 'Output/sensitivity.csv' closed.
+NOTICE   [2025-Oct-31 16:24:01.657748]  (...ytics/vrea/app/analyticsmanager.cpp:289) : report sensitivity written to Output/sensitivity.csv
+NOTICE   [2025-Oct-31 16:24:01.657764]       (VREData/vred/report/csvreport.cpp:127) : Opening CSV file report 'Output/sensitivity_config.csv'
+NOTICE   [2025-Oct-31 16:24:01.657836]       (VREData/vred/report/csvreport.cpp:216) : CSV file report 'Output/sensitivity_config.csv' closed.
+NOTICE   [2025-Oct-31 16:24:01.657851]  (...ytics/vrea/app/analyticsmanager.cpp:289) : report sensitivity_config written to Output/sensitivity_config.csv
+NOTICE   [2025-Oct-31 16:24:01.657865]       (VREData/vred/report/csvreport.cpp:127) : Opening CSV file report 'Output/sensitivity_scenario.csv'
+NOTICE   [2025-Oct-31 16:24:01.657962]       (VREData/vred/report/csvreport.cpp:216) : CSV file report 'Output/sensitivity_scenario.csv' closed.
+NOTICE   [2025-Oct-31 16:24:01.658029]  (...ytics/vrea/app/analyticsmanager.cpp:289) : report sensitivity_scenario written to Output/sensitivity_scenario.csv
+NOTICE   [2025-Oct-31 16:24:01.658093]       (VREData/vred/report/csvreport.cpp:127) : Opening CSV file report 'Output/pricingstats.csv'
+NOTICE   [2025-Oct-31 16:24:01.658248]       (VREData/vred/report/csvreport.cpp:216) : CSV file report 'Output/pricingstats.csv' closed.
+NOTICE   [2025-Oct-31 16:24:01.658294]  (...ytics/vrea/app/analyticsmanager.cpp:289) : report pricingstats written to Output/pricingstats.csv
+NOTICE   [2025-Oct-31 16:24:01.658348]       (VREData/vred/report/csvreport.cpp:127) : Opening CSV file report 'Output/runtimes.csv'
+NOTICE   [2025-Oct-31 16:24:01.658447]       (VREData/vred/report/csvreport.cpp:216) : CSV file report 'Output/runtimes.csv' closed.
+NOTICE   [2025-Oct-31 16:24:01.658492]  (...ytics/vrea/app/analyticsmanager.cpp:289) : report runtimes written to Output/runtimes.csv
+NOTICE   [2025-Oct-31 16:24:01.658536]       (VREData/vred/report/csvreport.cpp:127) : Opening CSV file report 'Output/colva_nettingset_CPTY_A.csv'
+NOTICE   [2025-Oct-31 16:24:01.658747]       (VREData/vred/report/csvreport.cpp:216) : CSV file report 'Output/colva_nettingset_CPTY_A.csv' closed.
+NOTICE   [2025-Oct-31 16:24:01.658763]  (...ytics/vrea/app/analyticsmanager.cpp:289) : report colva_nettingset_CPTY_A written to Output/colva_nettingset_CPTY_A.csv
+NOTICE   [2025-Oct-31 16:24:01.658777]       (VREData/vred/report/csvreport.cpp:127) : Opening CSV file report 'Output/cva_sensitivity_nettingset_CPTY_A.csv'
+NOTICE   [2025-Oct-31 16:24:01.658856]       (VREData/vred/report/csvreport.cpp:216) : CSV file report 'Output/cva_sensitivity_nettingset_CPTY_A.csv' closed.
+NOTICE   [2025-Oct-31 16:24:01.658871]  (...ytics/vrea/app/analyticsmanager.cpp:289) : report cva_sensitivity_nettingset_CPTY_A written to Output/cva_sensitivity_nettingset_CPTY_A.csv
+NOTICE   [2025-Oct-31 16:24:01.658885]       (VREData/vred/report/csvreport.cpp:127) : Opening CSV file report 'Output/exposure_nettingset_CPTY_A.csv'
+NOTICE   [2025-Oct-31 16:24:01.659297]       (VREData/vred/report/csvreport.cpp:216) : CSV file report 'Output/exposure_nettingset_CPTY_A.csv' closed.
+NOTICE   [2025-Oct-31 16:24:01.659321]  (...ytics/vrea/app/analyticsmanager.cpp:289) : report exposure_nettingset_CPTY_A written to Output/exposure_nettingset_CPTY_A.csv
+NOTICE   [2025-Oct-31 16:24:01.659341]       (VREData/vred/report/csvreport.cpp:127) : Opening CSV file report 'Output/exposure_trade_Swap.csv'
+NOTICE   [2025-Oct-31 16:24:01.659549]       (VREData/vred/report/csvreport.cpp:216) : CSV file report 'Output/exposure_trade_Swap.csv' closed.
+NOTICE   [2025-Oct-31 16:24:01.659572]  (...ytics/vrea/app/analyticsmanager.cpp:289) : report exposure_trade_Swap written to Output/exposure_trade_Swap.csv
+NOTICE   [2025-Oct-31 16:24:01.659586]       (VREData/vred/report/csvreport.cpp:127) : Opening CSV file report 'Output/netcube.csv'
+NOTICE   [2025-Oct-31 16:24:01.701699]       (VREData/vred/report/csvreport.cpp:216) : CSV file report 'Output/netcube.csv' closed.
+NOTICE   [2025-Oct-31 16:24:01.701769]  (...ytics/vrea/app/analyticsmanager.cpp:289) : report netcube written to Output/netcube.csv
+NOTICE   [2025-Oct-31 16:24:01.701795]       (VREData/vred/report/csvreport.cpp:127) : Opening CSV file report 'Output/scenario.csv'
+NOTICE   [2025-Oct-31 16:24:02.250786]       (VREData/vred/report/csvreport.cpp:216) : CSV file report 'Output/scenario.csv' closed.
+NOTICE   [2025-Oct-31 16:24:02.250863]  (...ytics/vrea/app/analyticsmanager.cpp:289) : report scenario written to Output/scenario.csv
+NOTICE   [2025-Oct-31 16:24:02.250891]       (VREData/vred/report/csvreport.cpp:127) : Opening CSV file report 'Output/xva.csv'
+NOTICE   [2025-Oct-31 16:24:02.251013]       (VREData/vred/report/csvreport.cpp:216) : CSV file report 'Output/xva.csv' closed.
+NOTICE   [2025-Oct-31 16:24:02.251035]  (...ytics/vrea/app/analyticsmanager.cpp:289) : report xva written to Output/xva.csv
+NOTICE   [2025-Oct-31 16:24:02.251055]        (VREAnalytics/vrea/app/vreapp.cpp:373) : write npv cube cube
+NOTICE   [2025-Oct-31 16:24:02.251073]        (VREAnalytics/vrea/app/vreapp.cpp:377) : write npv cube cube to file Output/cube.csv.gz
+NOTICE   [2025-Oct-31 16:24:02.272994]        (VREAnalytics/vrea/app/vreapp.cpp:396) : write market cube scenariodata to file Output/scenariodata.csv.gz
+WARNING  [2025-Oct-31 16:24:02.355357]        (VREAnalytics/vrea/app/vreapp.cpp:424) : Finishing VREApp::analytics(): 482869248|482869248 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+NOTICE   [2025-Oct-31 16:24:02.355434]        (VREAnalytics/vrea/app/vreapp.cpp:425) : VRE analytics done
+NOTICE   [2025-Oct-31 16:24:02.355457]        (VREAnalytics/vrea/app/vreapp.cpp:603) : VRE done.

@@ -1,0 +1,13 @@
+#TradeId,TradeType,NumberOfPricings,CumulativeTiming,AverageTiming
+BermSwp_01,Swaption,3,340000,113333
+BermSwp_02,Swaption,3,330000,110000
+BermSwp_03,Swaption,3,330000,110000
+BermSwp_04,Swaption,3,340000,113333
+BermSwp_05,Swaption,3,340000,113333
+BermSwp_06,Swaption,3,340000,113333
+BermSwp_07,Swaption,3,330000,110000
+BermSwp_08,Swaption,3,340000,113333
+BermSwp_09,Swaption,3,350000,116666
+BermSwp_10,Swaption,3,330000,110000
+BermSwp_11,Swaption,3,340000,113333
+BermSwp_12,Swaption,3,340000,113333

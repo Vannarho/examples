@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<CollateralBalances>
-  <CollateralBalance>
-    <NettingSetId>NS1</NettingSetId>
-    <Currency>USD</Currency>
-    <InitialMargin>150000</InitialMargin>
-    <VariationMargin>50000</VariationMargin>
-  </CollateralBalance>
-</CollateralBalances>

@@ -1,0 +1,20 @@
+WARNING  [2025-Oct-31 16:27:27.861485]        (VREAnalytics/vrea/app/vreapp.cpp:775) : Calendar adjustments not found, using defaults
+WARNING  [2025-Oct-31 16:27:27.861543]        (VREAnalytics/vrea/app/vreapp.cpp:785) : Currency configurations not found, using defaults
+WARNING  [2025-Oct-31 16:27:27.861570]        (VREAnalytics/vrea/app/vreapp.cpp:899) : Reference data not found
+WARNING  [2025-Oct-31 16:27:27.862272]        (VREAnalytics/vrea/app/vreapp.cpp:924) : Using default Ibor fallback config
+WARNING  [2025-Oct-31 16:27:27.862291]        (VREAnalytics/vrea/app/vreapp.cpp:932) : Using default Basel Traffic Light config
+WARNING  [2025-Oct-31 16:27:27.863550]        (VREAnalytics/vrea/app/vreapp.cpp:977) : CounterpartyManager not found
+WARNING  [2025-Oct-31 16:27:27.863980]  (.../vred/model/crossassetmodeldata.cpp:272) : Simulation/Parameters/Discretization is deprecated, use Simulation/CrossAssetModel/Discretization instead.
+WARNING  [2025-Oct-31 16:27:27.864015]         (VREData/vred/model/irlgmdata.cpp:33) : IrLgmData: attribute ccy is deprecated, use key instead.
+WARNING  [2025-Oct-31 16:27:27.864283]       (VREAnalytics/vrea/app/vreapp.cpp:3094) : FRTB_SA sensitivity sim-market parameters not loaded
+WARNING  [2025-Oct-31 16:27:27.864298]       (VREAnalytics/vrea/app/vreapp.cpp:3103) : FRTB_SA sensitivity scenario data not loaded
+WARNING  [2025-Oct-31 16:27:27.864312]       (VREAnalytics/vrea/app/vreapp.cpp:3112) : Pricing-engine data not found for FRTB_SA sensitivity, using global pricingEngine
+WARNING  [2025-Oct-31 16:27:27.864346]       (VREAnalytics/vrea/app/vreapp.cpp:3367) : SACCR CRIF file not found
+WARNING  [2025-Oct-31 16:27:27.864375]        (VREAnalytics/vrea/app/vreapp.cpp:322) : Starting VREApp::analytics(): 208158720|208158720 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+WARNING  [2025-Oct-31 16:27:27.864401]        (VREAnalytics/vrea/app/vreapp.cpp:302) : dividend data file not found
+WARNING  [2025-Oct-31 16:27:27.864415]        (VREAnalytics/vrea/app/vreapp.cpp:310) : fixing cutoff date not set
+WARNING  [2025-Oct-31 16:27:27.882143]      (VREAnalytics/vrea/app/analytic.cpp:105) : Starting PRICING Analytic::runAnalytic(): 215269376|215269376 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+WARNING  [2025-Oct-31 16:27:28.009791]      (VREAnalytics/vrea/app/analytic.cpp:110) : Finishing PRICING Analytic::runAnalytic(): 232898560|232898560 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+WARNING  [2025-Oct-31 16:27:28.010178]      (VREAnalytics/vrea/app/analytic.cpp:105) : Starting XVA Analytic::runAnalytic(): 233275392|233275392 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+WARNING  [2025-Oct-31 16:27:28.567882]      (VREAnalytics/vrea/app/analytic.cpp:110) : Finishing XVA Analytic::runAnalytic(): 516587520|516587520 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+WARNING  [2025-Oct-31 16:27:29.090700]        (VREAnalytics/vrea/app/vreapp.cpp:424) : Finishing VREApp::analytics(): 516767744|516767744 (peakMemoryUsage (bytes) | memoryUsage (bytes))

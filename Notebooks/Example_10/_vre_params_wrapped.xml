@@ -3,7 +3,7 @@
   <Setup>
     <Parameter name="asofDate">2016-02-05</Parameter>
     <Parameter name="inputPath">Input/FRTB_SA</Parameter>
-    <Parameter name="outputPath">Output/FRTB_SA/SBM</Parameter>
+    <Parameter name="outputPath">Output/FRTB_SA/Simplified</Parameter>
     <Parameter name="logFile">log.txt</Parameter>
     <Parameter name="logMask">255</Parameter>
     <Parameter name="marketDataFile">frtb_sa_market_20160205.txt</Parameter>
@@ -16,7 +16,7 @@
     <Parameter name="portfolioFile">frtb_sa_portfolio.xml</Parameter>
     <Parameter name="observationModel">None</Parameter>
     <Parameter name="referenceDataFile">trade_reference.xml</Parameter>
-    <Parameter name="tradingDeskFile">../../../../../Input/tradingdesk.xml</Parameter>
+    <Parameter name="tradingDeskFile">../../../Input/tradingdesk.xml</Parameter>
     <Parameter name="baseCurrency">EUR</Parameter>
     <Parameter name="nThreads">1</Parameter>
   </Setup>
@@ -28,7 +28,7 @@
     <Parameter name="sensitivity">xois_eur</Parameter>
   </Markets>
   <Analytics>
-    <Analytic type="npv">
+      <Analytic type="npv">
       <Parameter name="active">Y</Parameter>
       <Parameter name="baseCurrency">EUR</Parameter>
       <Parameter name="outputFileName">npv.csv</Parameter>
@@ -45,8 +45,8 @@
     </Analytic>
     <Analytic type="frtb_sa">
       <Parameter name="active">Y</Parameter>
-      <Parameter name="method">Sensitivities-Based</Parameter>
-      <!-- embedded FRTB_SA sensitivity configuration -->
+      <Parameter name="method">Simplified</Parameter>
+      <!-- embedded FRTB-SA sensitivity configuration -->
       <Parameter name="marketConfigFile">frtb_sa_simulation.xml</Parameter>
       <Parameter name="sensitivityConfigFile">frtb_sa_sensitivity.xml</Parameter>
       <Parameter name="pricingEnginesFile">frtb_sa_pricingengine.xml</Parameter>

@@ -10,22 +10,25 @@ VRE provides:
 
 * contemporary risk analytics and value adjustments (XVAs)
 * interfaces for trade/market data and system configuration (API and XML)
-* simple application launchers in Python, Jupyter
+* simple application launchers in Jupyter
 * various examples that demonstrate typical use cases
 * comprehensive test suites
 
-VRE is a c++23 library built on top of:
+VRE is a c++23 library based on
 
 * [QuantLib](http://quantlib.org), the open source library
 * [The Open Source Risk Engine](http://www.opensourcerisk.org)
+* [Enzyme AD](https://enzyme.mit.edu)
+* [pybind11](https://github.com/pybind/pybind11)
 
 It extends QuantLib and The Open Source Risk Engine in terms of simulation models, financial instruments and pricing engines. For example:
 
-* Updated SACCR, SACVA (SA and SBM), FTRB (SA and SBM) modules with broad product and test coverage
-* Refactored c++23 codebase
-* New CUDA & Metal GPU modules (featuring on-device CE / forward and reverse AAD)
-* AAD using JIT compilation on CPU, delivering a 10-20x speed up versus vanilla AAD
-* Fast sensitivities for a broad range of trades using AAD and GPU (e.g. for SACVA-SBM and FRTB-SA)
+* Updated SACCR, SACVA (SA and SBM), FTRB (SA and SBM) modules with broad product coverage
+* Refactored C++23 codebase
+* JIT AD kernels for 25x speed up vs vanilla AD
+* SIMD support (initially NEON with AVX / AVX512 upcoming)
+* New Metal and CUDA GPU modules (native CE and multi-GPU upcoming)
+* Fast sensitivities for a broad range of products using AAD and GPU
 
 # Vannarho Risk Engine — Python Binary Wheels
 
@@ -70,10 +73,10 @@ print("Today:", today)
 
 Binary wheels are provided for:
 
-* CPython 3.9–3.13
-* Linux x86_64 (manylinux / musllinux where applicable)
-* macOS arm64 and x86_64 (universal2 where applicable)
-* Windows x86_64
+* CPython 3.13
+* Linux x86_64 (manylinux / musllinux where applicable - "vanilla" and JIT Kernel version - CUDA support in an upcoming release)
+* macOS arm64 (universal2 where applicable with "vanilla" and JIT Kernel versions including Metal GPU support)
+* Windows x86_64 ("vanilla" version with CUDA support in an upcoming release)
 
 If your platform is not listed, pip may report “No matching distribution found”.
 
@@ -81,7 +84,7 @@ If your platform is not listed, pip may report “No matching distribution found
 
 End‑to‑end examples, tutorials, and Jupyter notebooks live in a companion repository:
 
-* <https://github.com/Vannarho/examples>
+* Placeholder: <https://github.com/vannarho/examples>
 
 This repo includes sample input data, portfolio XMLs, curve configurations, and small walkthroughs for pricing, exposure profiles, and XVA workflows.
 
@@ -92,9 +95,6 @@ This repo includes sample input data, portfolio XMLs, curve configurations, and 
   * On Linux, avoid mixing system Python with wheels built for a different glibc/musl variant. Use the official CPython from python.org/pyenv.
   * Check: `python -m pip show vannarho-risk-engine` and `pip debug --verbose`.
 
-* Build starts during pip install
-  * You’re likely installing from a source checkout or on an unsupported platform. Prefer the published wheels. If you must build from source, see `VREPython/tutorials.015.build_posix.md`.
-
 * Apple Silicon cross‑install
   * On arm64 macOS, prefer a native arm64 Python. If you run an x86_64 Python under Rosetta, pip will fetch the x86_64 wheel.
 
@@ -103,6 +103,7 @@ This repo includes sample input data, portfolio XMLs, curve configurations, and 
 * Documentation (in‑repo): `Docs/` and `RELEASE.md`
 * Examples & notebooks: placeholder <https://github.com/Vannarho/examples>
 * Issue tracker: <https://github.com/Vannarho/examples/issues>
+* Changelog: `CHANGELOG.md` (to be added)
 
 ## Contributing
 
@@ -110,7 +111,7 @@ Contributions are welcome. See `CONTRIBUTING.md` and `AGENTS.md` for code style,
 
 ## Security & Support
 
-* Security contact: <security@vannarho.com>
+* Security contact: <info@vannarho.com>
 * For general support, open a GitHub issue with platform, Python version, wheel filename, and the output of `pip debug --verbose`.
 
 ## License & Notices

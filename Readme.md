@@ -27,6 +27,7 @@ It extends QuantLib and The Open Source Risk Engine in terms of simulation model
 * Refactored C++23 codebase
 * JIT AD kernels for 25x speed up vs vanilla AD
 * SIMD support (initially NEON with AVX / AVX512 upcoming)
+* Updated engines e.g. crossgammadelta pricing engine
 * New Metal and CUDA GPU modules (native CE and multi-GPU upcoming)
 * Fast sensitivities for a broad range of products using AAD and GPU
 

@@ -1,0 +1,4 @@
+**/.env
+Notebooks/Example_?/Output/
+Notebooks/Example_[0-9][0-9]/Output/
+requirements.txt

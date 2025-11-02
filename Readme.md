@@ -1,7 +1,6 @@
-# VRE
+# Vannarho Risk Engine - Python Distributions and Examples
 
-Vannarho Risk Engine (VRE) is aimed at establishing a transparent peer-reviewed framework for pricing and risk
-analysis that can serve as
+Vannarho Risk Engine (VRE) is aimed at establishing a transparent peer-reviewed framework for pricing and risk analysis that can serve as
 
 * a benchmarking, validation, training, teaching reference
 * an extensible foundation for tailored risk solutions
@@ -33,8 +32,6 @@ It extends QuantLib and The Open Source Risk Engine in terms of simulation model
 
 # Vannarho Risk Engine — Python Binary Wheels
 
-[![PyPI](https://img.shields.io/pypi/v/vannarho-risk-engine.svg)](https://pypi.org/project/vannarho-risk-engine/)
-[![Python Versions](https://img.shields.io/pypi/pyversions/vannarho-risk-engine.svg)](https://pypi.org/project/vannarho-risk-engine/)
 [![Platforms](https://img.shields.io/badge/wheels-linux%20%7C%20macOS%20%7C%20windows-blue)](#supported-platforms)
 [![License: BSD-3-Clause](https://img.shields.io/badge/license-BSD--3--Clause-blue.svg)](../LICENSE)
 
@@ -45,13 +42,92 @@ High‑performance quantitative finance toolkit exposing VRE (Vannarho Risk Engi
 
 > Note: This is a binary distribution. Building from source is not required for end‑users and is not officially supported outside CI.
 
-## Installation
+# Vannarho Risk Engine – Example Repository Setup
 
-Stable releases from PyPI:
+These instructions explain how to clone the example repo and install the appropriate **Vannarho Risk Engine** wheel.
+
+---
+
+## 1. Clone the repository
+
+```bash
+git clone https://github.com/Vannarho/examples.git
+cd examples
+```
+
+This repository contains Jupyter notebooks and scripts demonstrating how to use the Vannarho Risk Engine.
+
+---
+
+## 2. (Optional) Create and activate a virtual environment
+
+**macOS / Linux:**
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+**Windows (PowerShell):**
+
+```bash
+python -m venv venv
+venv\Scripts\Activate.ps1
+```
+
+---
+
+## 3. Install base dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+If no `requirements.txt` file is provided, ensure you have at least:
+
+```bash
+pip install numpy pandas matplotlib
+```
+
+---
+
+## 4. Install the appropriate Vannarho Risk Engine wheel
+
+Choose the correct wheel for your use case (both are macOS arm64 builds):
+
+| Variant | File | Description |
+|----------|------|--------------|
+| **JIT Enzyme Kernels** | `vannarho_risk_engine-0.0.1.post1-cp313-cp313-macosx_26_0_arm64.whl` | Includes Enzyme-based JIT kernel compilation for accelerated sensitivity and GPU workflows. |
+| **Vanilla Engine** | `vannarho_risk_engine-0.0.1.post2-cp313-cp313-macosx_26_0_arm64.whl` | Standard runtime build without Enzyme or JIT components. |
+
+### Install one of the two
+
+```bash
+# JIT Enzyme build
+pip install https://github.com/Vannarho/examples/releases/download/v0.0.1/vannarho_risk_engine-0.0.1.post1-cp313-cp313-macosx_26_0_arm64.whl
+
+# Vanilla build
+pip install https://github.com/Vannarho/examples/releases/download/v0.0.1/vannarho_risk_engine-0.0.1.post2-cp313-cp313-macosx_26_0_arm64.whl
+```
+
+## 5. Verify installation
+
+Check that the package imports correctly:
+
+```bash
+python -c "import vannarho_risk_engine; print(vannarho_risk_engine.__version__)"
+```
+
+Expected output:
 
 ```
-python -m pip install --upgrade pip
-python -m pip install vannarho-risk-engine
+0.0.1.post1
+```
+
+or
+
+```
+0.0.1.post2
 ```
 
 No additional system packages are required; the wheel includes native dependencies. If you see a compiler invocation during install, you are likely installing from a source tree or an unsupported environment — see Troubleshooting.
@@ -81,34 +157,12 @@ Binary wheels are provided for:
 
 If your platform is not listed, pip may report “No matching distribution found”.
 
-## Examples and Notebooks
-
-End‑to‑end examples, tutorials, and Jupyter notebooks live in a companion repository:
-
-* Placeholder: <https://github.com/vannarho/examples>
-
-This repo includes sample input data, portfolio XMLs, curve configurations, and small walkthroughs for pricing, exposure profiles, and XVA workflows.
-
-## Troubleshooting
-
-* ImportError: “DLL load failed” or “undefined symbol”
-  * Ensure you installed a prebuilt wheel (`pip install vannarho-risk-engine`).
-  * On Linux, avoid mixing system Python with wheels built for a different glibc/musl variant. Use the official CPython from python.org/pyenv.
-  * Check: `python -m pip show vannarho-risk-engine` and `pip debug --verbose`.
-
-* Apple Silicon cross‑install
-  * On arm64 macOS, prefer a native arm64 Python. If you run an x86_64 Python under Rosetta, pip will fetch the x86_64 wheel.
-
 ## Project Links
 
 * Documentation (in‑repo): `Docs/` and `RELEASE.md`
 * Examples & notebooks: placeholder <https://github.com/Vannarho/examples>
 * Issue tracker: <https://github.com/Vannarho/examples/issues>
 * Changelog: `CHANGELOG.md` (to be added)
-
-## Contributing
-
-Contributions are welcome. See `CONTRIBUTING.md` and `AGENTS.md` for code style, test policy, and development setup. For packaging changes, coordinate via issues to ensure cross‑platform compatibility.
 
 ## Security & Support
 

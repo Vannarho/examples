@@ -5,5 +5,7 @@ requirements.txt
 
 build/
 
+wheelhouse/
+
 Notebooks/Example_?/Output/
 Examples/Example_[0-9][0-9]/Output/

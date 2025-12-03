@@ -174,29 +174,7 @@ pip install --force-reinstall \
 variant is newest/available for your platform, so pin the explicit post release
 if you care which runtime you receive.
 
-## 4. Install the appropriate Vannarho Risk Engine wheel
-
-Choose the correct wheel for your use case (both are macOS arm64 builds; Linux
-and Windows artifacts follow the same `.post1`/`.post2` pattern):
-
-| Variant | File | Description |
-|----------|------|--------------|
-| **JIT Enzyme Kernels** | `vannarho_risk_engine-0.5.0.post1-cp313-cp313-macosx_26_0_arm64.whl` | Includes Enzyme-based JIT kernel compilation, SIMD-optimised CPU kernels, and GPU workflows (Metal on macOS, CUDA on Windows/Linux). |
-| **Vanilla Engine** | `vannarho_risk_engine-0.5.0.post2-cp313-cp313-macosx_26_0_arm64.whl` | Standard runtime build without Enzyme, GPU, or precompiled kernel payloads. |
-
-### Install one of the two
-
-Replace the version/tag below with the specific release you plan to use:
-
-```bash
-# JIT Enzyme build
-pip install https://github.com/Vannarho/examples/releases/download/v0.5.0/vannarho_risk_engine-0.5.0.post1-cp313-cp313-macosx_26_0_arm64.whl
-
-# Vanilla build
-pip install https://github.com/Vannarho/examples/releases/download/v0.5.0/vannarho_risk_engine-0.5.0.post2-cp313-cp313-macosx_26_0_arm64.whl
-```
-
-## 5. Verify installation
+## 4. Verify installation
 
 Check that the package imports correctly:
 
@@ -238,7 +216,6 @@ print("Today:", today)
 
 Binary wheels are provided for:
 
-* CPython 3.13
 * Linux x86_64 (manylinux / musllinux where applicable — vanilla and kernel variants; CUDA enablement lands in an upcoming release)
 * macOS arm64 (universal2 when possible with vanilla and kernel variants, including Metal GPU support)
 * Windows x86_64 (vanilla variant today, CUDA support coming in a future post release)

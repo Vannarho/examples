@@ -1,9 +1,34 @@
 import sys
 from pathlib import Path
+from typing import Optional
+import os
+import platform
+import shutil
+import subprocess
+import tempfile
 import pandas as pd
 import xml.etree.ElementTree as ET
 from datetime import datetime
 from IPython.display import Markdown, display
+
+_THIS_DIR = Path(__file__).resolve().parent
+
+def _find_repo_root(start: Path) -> Path | None:
+    markers = {'.git', '.hg', '.svn', 'README.md', 'requirements.txt'}
+    for p in [start] + list(start.parents):
+        if any((p / m).exists() for m in markers):
+            return p
+    return None
+
+_REPO_ROOT = _find_repo_root(_THIS_DIR)
+# Prefer the explicit path (repo-relative), then cwd, then nearby parents
+_DEF_SEARCH_ROOTS = []
+for root in [Path.cwd(), _REPO_ROOT, _THIS_DIR, _THIS_DIR.parent]:
+    if root and root not in _DEF_SEARCH_ROOTS:
+        _DEF_SEARCH_ROOTS.append(root)
+for root in list(Path.cwd().parents)[:4] + list(_THIS_DIR.parents)[:4]:
+    if root not in _DEF_SEARCH_ROOTS:
+        _DEF_SEARCH_ROOTS.append(root)
 
 def format_report(report):
     import pandas as _pd
@@ -22,14 +47,16 @@ def format_report(report):
             data[name] = list(report.dataAsPeriod(i))
     return _pd.DataFrame(data)
 
-_DEF_SEARCH_ROOTS = [Path.cwd()] + [p for p in Path.cwd().parents][:4]
-
 def resolve(relpath: str) -> str:
     rel = Path(relpath)
     if rel.is_absolute() and rel.exists():
         return str(rel)
     if rel.exists():
         return str(rel)
+    if _REPO_ROOT:
+        cand = _REPO_ROOT / relpath
+        if cand.exists():
+            return str(cand)
     for root in _DEF_SEARCH_ROOTS:
         cand = root / relpath
         if cand.exists():
@@ -39,6 +66,141 @@ def resolve(relpath: str) -> str:
             if rel.name == c.name:
                 return str(c)
     return relpath
+
+
+# --- GPU helpers (mirror script runner behaviour for notebooks) ---
+
+def _detect_external_compute_device() -> str:
+    """Best-effort detection of a GPU name compatible with VRE's ExternalComputeDevice."""
+    override = os.getenv("EXTERNAL_COMPUTE_DEVICE")
+    if override:
+        return override
+    system = platform.system()
+
+    def _nvidia_name():
+        try:
+            out = subprocess.check_output(
+                ["nvidia-smi", "--query-gpu=name", "--format=csv,noheader"],
+                stderr=subprocess.DEVNULL,
+                text=True,
+                timeout=2,
+            )
+            names = [l.strip() for l in out.splitlines() if l.strip()]
+            return names[0] if names else None
+        except Exception:
+            return None
+
+    if system == "Linux":
+        name = _nvidia_name()
+        if not name:
+            raise RuntimeError(
+                "No NVIDIA GPU detected (set EXTERNAL_COMPUTE_DEVICE to override)"
+            )
+        return f"CUDA/NVIDIA/{name}"
+
+    if system == "Darwin":
+        # Prefer Metal/OpenCL device detection via pyopencl if present
+        try:
+            import pyopencl as cl  # type: ignore
+
+            for p in cl.get_platforms():
+                gpus = [d for d in p.get_devices() if d.type & cl.device_type.GPU]
+                if gpus:
+                    vendor = p.vendor or p.name or "Apple"
+                    return f"OpenCL/{vendor}/{gpus[0].name}"
+        except Exception:
+            pass
+        try:
+            brand = subprocess.check_output(
+                ["sysctl", "-n", "machdep.cpu.brand_string"], text=True
+            ).strip()
+            # Simple Apple GPU heuristics
+            for m in ("M4", "M3", "M2", "M1"):
+                if m in brand:
+                    return f"Metal/Apple/Apple {brand}"
+        except Exception:
+            pass
+        raise RuntimeError(
+            "No Apple GPU detected (set EXTERNAL_COMPUTE_DEVICE to override)"
+        )
+
+    raise RuntimeError(f"Unsupported platform for GPU detection: {system}")
+
+
+def _ensure_parameter(root: ET.Element, name: str, value: str):
+    for p in root.iter("Parameter"):
+        if p.get("name") == name:
+            p.text = value
+            return
+    params = root.find(".//Parameters") or root
+    ET.SubElement(params, "Parameter", name=name).text = value
+
+
+def _patch_external_device_param(xml_path: Path, device_str: str):
+    tree = ET.parse(xml_path)
+    root = tree.getroot()
+    names = {"ExternalComputeDevice", "xvaCgExternalComputeDevice"}
+    bool_names = {"UseExternalComputeDevice", "xvaCgUseExternalComputeDevice"}
+    for p in root.iter("Parameter"):
+        if p.get("name") in names:
+            p.text = device_str
+        if p.get("name") in bool_names:
+            p.text = "true"
+    for name in names:
+        _ensure_parameter(root, name, device_str)
+    for name in bool_names:
+        _ensure_parameter(root, name, "true")
+    tree.write(xml_path, encoding="utf-8", xml_declaration=True)
+
+
+def _rewrite_parameter(xml_path: Path, name: str, value: str):
+    tree = ET.parse(xml_path)
+    root = tree.getroot()
+    _ensure_parameter(root, name, value)
+    tree.write(xml_path, encoding="utf-8", xml_declaration=True)
+
+
+def prepare_gpu_xml(main_xml: str, pricing_engine_xml: Optional[str] = None, extra_xmls=None) -> str:
+    """Create patched GPU-aware copies of the provided XMLs and return the main XML path.
+
+    The patched XMLs:
+    - point ExternalComputeDevice/xvaCgExternalComputeDevice to the detected GPU (or override)
+    - ensure UseExternalComputeDevice flags are enabled
+    - optionally switch the pricingEnginesFile in the main XML to a patched GPU engine copy
+    """
+    device = _detect_external_compute_device()
+    extra_xmls = extra_xmls or []
+
+    def _patched_copy(src: Path) -> Path:
+        dst = src.with_name(f"{src.stem}_gpu_patched{src.suffix}")
+        dst.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(src, dst)
+        _patch_external_device_param(dst, device)
+        return dst
+
+    main_path = Path(resolve(main_xml))
+    if not main_path.exists():
+        raise FileNotFoundError(f"Main XML not found: {main_xml}")
+    main_patched = _patched_copy(main_path)
+
+    patched_pricing = None
+    if pricing_engine_xml:
+        pe_src = Path(resolve(pricing_engine_xml))
+        if pe_src.exists():
+            patched_pricing = _patched_copy(pe_src)
+            # Update main XML to point to the patched pricing engine file (basename keeps inputPath relative)
+            _rewrite_parameter(main_patched, "pricingEnginesFile", patched_pricing.name)
+
+    for extra in extra_xmls:
+        extra_path = Path(resolve(extra))
+        if extra_path.exists():
+            _patched_copy(extra_path)
+
+    print(f"[gpu] Using device: {device}")
+    if patched_pricing:
+        print(f"[gpu] Patched pricing engine XML: {patched_pricing}")
+    print(f"[gpu] Patched main XML: {main_patched}")
+    return str(main_patched)
 
 def list_reports(app):
     try:

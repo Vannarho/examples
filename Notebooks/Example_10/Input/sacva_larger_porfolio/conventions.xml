@@ -1,0 +1,239 @@
+<?xml version="1.0"?>
+<Conventions>
+  <!-- Deposits (index-based) -->
+  <Deposit>
+    <Id>EUR-ON-DEPOSIT-ESTER</Id>
+    <IndexBased>true</IndexBased>
+    <Index>EUR-ESTER</Index>
+  </Deposit>
+  <Deposit>
+    <Id>EUR-ON-DEPOSIT</Id>
+    <IndexBased>true</IndexBased>
+    <Index>EUR-ESTER</Index>
+  </Deposit>
+  <Deposit>
+    <Id>EUR-DEPOSIT</Id>
+    <IndexBased>true</IndexBased>
+    <Index>EUR-EURIBOR</Index>
+  </Deposit>
+  <Zero>
+    <Id>EUR-ZERO-CONVENTIONS-TENOR-BASED</Id>
+    <TenorBased>true</TenorBased>
+    <DayCounter>A365</DayCounter>
+    <Compounding>Continuous</Compounding>
+    <CompoundingFrequency>Daily</CompoundingFrequency>
+    <TenorCalendar>TARGET</TenorCalendar>
+    <SpotLag>2</SpotLag>
+    <SpotCalendar>TARGET</SpotCalendar>
+    <RollConvention>Following</RollConvention>
+    <EOM>false</EOM>
+  </Zero>
+  <!-- Add generic EURIBOR deposit conventions expected by curveconfig (EUR-EURIBOR-CONVENTIONS) -->
+  <Deposit>
+    <Id>EUR-EURIBOR-CONVENTIONS</Id>
+    <IndexBased>true</IndexBased>
+    <Index>EUR-EURIBOR</Index>
+  </Deposit>
+  <Deposit>
+    <Id>USD-ON-SOFR-DEPOSIT</Id>
+    <IndexBased>true</IndexBased>
+    <Index>USD-SOFR</Index>
+  </Deposit>
+  <Deposit>
+    <Id>GBP-ON-DEPOSIT-SONIA</Id>
+    <IndexBased>true</IndexBased>
+    <Index>GBP-SONIA</Index>
+  </Deposit>
+
+  <!-- OIS -->
+  <OIS>
+    <Id>EUR-ESTER-OIS</Id>
+    <SpotLag>1</SpotLag>
+    <Index>EUR-ESTER</Index>
+    <FixedDayCounter>A360</FixedDayCounter>
+    <PaymentLag>1</PaymentLag>
+    <EOM>false</EOM>
+    <FixedFrequency>Annual</FixedFrequency>
+    <FixedConvention>MF</FixedConvention>
+    <FixedPaymentConvention>MF</FixedPaymentConvention>
+    <Rule>Backward</Rule>
+  </OIS>
+  <OIS>
+    <Id>USD-SOFR-OIS</Id>
+    <SpotLag>0</SpotLag>
+    <Index>USD-SOFR</Index>
+    <FixedDayCounter>A360</FixedDayCounter>
+    <PaymentLag>2</PaymentLag>
+    <EOM>false</EOM>
+    <FixedFrequency>Annual</FixedFrequency>
+    <FixedConvention>MF</FixedConvention>
+    <FixedPaymentConvention>MF</FixedPaymentConvention>
+    <Rule>Backward</Rule>
+  </OIS>
+
+  <!-- USD LIBOR deposit conventions (IndexBased uses base name; instrument tenor supplies 3M/6M) -->
+  <Deposit>
+    <Id>USD-LIBOR-3M-DEPOSIT</Id>
+    <IndexBased>true</IndexBased>
+    <Index>USD-LIBOR</Index>
+  </Deposit>
+  <Deposit>
+    <Id>USD-LIBOR-6M-DEPOSIT</Id>
+    <IndexBased>true</IndexBased>
+    <Index>USD-LIBOR</Index>
+  </Deposit>
+  <OIS>
+    <Id>GBP-SONIA-OIS</Id>
+    <SpotLag>0</SpotLag>
+    <Index>GBP-SONIA</Index>
+    <FixedDayCounter>A365F</FixedDayCounter>
+    <PaymentLag>1</PaymentLag>
+    <EOM>false</EOM>
+    <FixedFrequency>Annual</FixedFrequency>
+    <FixedConvention>Following</FixedConvention>
+    <FixedPaymentConvention>Following</FixedPaymentConvention>
+    <Rule>Backward</Rule>
+  </OIS>
+
+  <!-- Minimal IRS conventions used by CMS swap index definitions -->
+  <Swap>
+    <Id>EUR-6M-SWAP-CONVENTIONS</Id>
+    <FixedCalendar>TARGET</FixedCalendar>
+    <FixedFrequency>Annual</FixedFrequency>
+    <FixedConvention>MF</FixedConvention>
+    <FixedDayCounter>30/360</FixedDayCounter>
+    <Index>EUR-EURIBOR-6M</Index>
+  </Swap>
+
+  <Swap>
+    <Id>EUR-3M-SWAP-CONVENTIONS</Id>
+    <FixedCalendar>TARGET</FixedCalendar>
+    <FixedFrequency>Annual</FixedFrequency>
+    <FixedConvention>MF</FixedConvention>
+    <FixedDayCounter>30/360</FixedDayCounter>
+    <Index>EUR-EURIBOR-3M</Index>
+  </Swap>
+  <Swap>
+    <Id>USD-3M-SWAP-CONVENTIONS</Id>
+    <FixedCalendar>US,UK</FixedCalendar>
+    <FixedFrequency>Semiannual</FixedFrequency>
+    <FixedConvention>MF</FixedConvention>
+    <FixedDayCounter>30/360</FixedDayCounter>
+    <Index>USD-LIBOR-3M</Index>
+  </Swap>
+  <Swap>
+    <Id>GBP-6M-SWAP-CONVENTIONS</Id>
+    <FixedCalendar>UK</FixedCalendar>
+    <FixedFrequency>Annual</FixedFrequency>
+    <FixedConvention>MF</FixedConvention>
+    <FixedDayCounter>30/360</FixedDayCounter>
+    <Index>GBP-LIBOR-6M</Index>
+  </Swap>
+
+  <!-- SwapIndex identifiers expected by todaysmarket.xml -->
+  <SwapIndex>
+    <Id>EUR-CMS-1Y</Id>
+    <Conventions>EUR-6M-SWAP-CONVENTIONS</Conventions>
+  </SwapIndex>
+  <SwapIndex>
+    <Id>EUR-CMS-30Y</Id>
+    <Conventions>EUR-6M-SWAP-CONVENTIONS</Conventions>
+  </SwapIndex>
+  <SwapIndex>
+    <Id>USD-CMS-SOFR-1Y</Id>
+    <Conventions>USD-3M-SWAP-CONVENTIONS</Conventions>
+  </SwapIndex>
+  <SwapIndex>
+    <Id>USD-CMS-SOFR-30Y</Id>
+    <Conventions>USD-3M-SWAP-CONVENTIONS</Conventions>
+  </SwapIndex>
+  <!-- Backward-compat IDs used by curveconfig: map to the same swap conventions -->
+  <SwapIndex>
+    <Id>USD-CMS-1Y</Id>
+    <Conventions>USD-3M-SWAP-CONVENTIONS</Conventions>
+  </SwapIndex>
+  <SwapIndex>
+    <Id>USD-CMS-30Y</Id>
+    <Conventions>USD-3M-SWAP-CONVENTIONS</Conventions>
+  </SwapIndex>
+  <SwapIndex>
+    <Id>GBP-CMS-SONIA-1Y</Id>
+    <Conventions>GBP-6M-SWAP-CONVENTIONS</Conventions>
+  </SwapIndex>
+  <SwapIndex>
+    <Id>GBP-CMS-SONIA-30Y</Id>
+    <Conventions>GBP-6M-SWAP-CONVENTIONS</Conventions>
+  </SwapIndex>
+
+  <!-- Minimal CDS conventions used by default curve builders -->
+  <CDS>
+    <Id>CDS-STANDARD-CONVENTIONS</Id>
+    <SettlementDays>1</SettlementDays>
+    <Calendar>WeekendsOnly</Calendar>
+    <Frequency>Quarterly</Frequency>
+    <PaymentConvention>Following</PaymentConvention>
+    <Rule>CDS2015</Rule>
+    <DayCounter>A360</DayCounter>
+    <SettlesAccrual>true</SettlesAccrual>
+    <PaysAtDefaultTime>true</PaysAtDefaultTime>
+  </CDS>
+
+  <!-- Additional conventions for EURIBOR projection curves -->
+  <Swap>
+    <Id>EUR-EURIBOR-3M-SWAP</Id>
+    <FixedCalendar>TARGET</FixedCalendar>
+    <FixedFrequency>Annual</FixedFrequency>
+    <FixedConvention>MF</FixedConvention>
+    <FixedDayCounter>30/360</FixedDayCounter>
+    <Index>EUR-EURIBOR-3M</Index>
+  </Swap>
+  <Swap>
+    <Id>EUR-EURIBOR-6M-SWAP</Id>
+    <FixedCalendar>TARGET</FixedCalendar>
+    <FixedFrequency>Annual</FixedFrequency>
+    <FixedConvention>MF</FixedConvention>
+    <FixedDayCounter>30/360</FixedDayCounter>
+    <Index>EUR-EURIBOR-6M</Index>
+  </Swap>
+
+  <!-- FRA conventions required by EUR3M / EUR6M curve segments -->
+  <FRA>
+    <Id>EUR-3M-FRA-CONVENTIONS</Id>
+    <Index>EUR-EURIBOR-3M</Index>
+  </FRA>
+  <FRA>
+    <Id>EUR-6M-FRA-CONVENTIONS</Id>
+    <Index>EUR-EURIBOR-6M</Index>
+  </FRA>
+
+  <!-- USD FRA conventions for USD3M / USD6M curves -->
+  <FRA>
+    <Id>USD-3M-FRA-CONVENTIONS</Id>
+    <Index>USD-LIBOR-3M</Index>
+  </FRA>
+  <FRA>
+    <Id>USD-6M-FRA-CONVENTIONS</Id>
+    <Index>USD-LIBOR-6M</Index>
+  </FRA>
+  <FRA>
+    <Id>USD-1M-FRA-CONVENTIONS</Id>
+    <Index>USD-LIBOR-1M</Index>
+  </FRA>
+
+  <!-- USD tenor-basis and BMA basis swap conventions required by curveconfig -->
+  <TenorBasisSwap>
+    <Id>USD-LIBOR-1M-3M-BASIS-CONVENTIONS</Id>
+    <PayIndex>USD-LIBOR-3M</PayIndex>
+    <ReceiveIndex>USD-LIBOR-1M</ReceiveIndex>
+  </TenorBasisSwap>
+  <TenorBasisSwap>
+    <Id>USD-LIBOR-3M-6M-BASIS-CONVENTIONS</Id>
+    <PayIndex>USD-LIBOR-6M</PayIndex>
+    <ReceiveIndex>USD-LIBOR-3M</ReceiveIndex>
+  </TenorBasisSwap>
+  <BMABasisSwap>
+    <Id>USD-LIBOR-SIFMA-3M-BASIS-CONVENTIONS</Id>
+    <Index>USD-LIBOR-3M</Index>
+    <BMAIndex>USD-SIFMA</BMAIndex>
+  </BMABasisSwap>
+</Conventions>

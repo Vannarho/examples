@@ -1,0 +1,291 @@
+<?xml version="1.0"?>
+<TodaysMarket>
+  <Configuration id="default">
+    <DiscountingCurvesId>default</DiscountingCurvesId>
+    <YieldCurvesId>default</YieldCurvesId>
+    <IndexForwardingCurvesId>default</IndexForwardingCurvesId>
+    <SwapIndexCurvesId>default</SwapIndexCurvesId>
+    <FxSpotsId>default</FxSpotsId>
+    <FxVolatilitiesId>default</FxVolatilitiesId>
+    <SwaptionVolatilitiesId>xois_eur</SwaptionVolatilitiesId>
+    <CapFloorVolatilitiesId>default</CapFloorVolatilitiesId>
+    <EquityCurvesId>default</EquityCurvesId>
+    <EquityVolatilitiesId>default</EquityVolatilitiesId>
+    <CommodityCurvesId>default</CommodityCurvesId>
+    <CommodityVolatilitiesId>default</CommodityVolatilitiesId>
+  </Configuration>
+  <Configuration id="xois_eur">
+    <DiscountingCurvesId>xois_eur</DiscountingCurvesId>
+    <YieldCurvesId>xois_eur</YieldCurvesId>
+    <IndexForwardingCurvesId>xois_eur</IndexForwardingCurvesId>
+    <SwapIndexCurvesId>xois_eur</SwapIndexCurvesId>
+    <FxSpotsId>default</FxSpotsId>
+    <FxVolatilitiesId>xois_eur</FxVolatilitiesId>
+    <SwaptionVolatilitiesId>xois_eur</SwaptionVolatilitiesId>
+    <CapFloorVolatilitiesId>xois_eur</CapFloorVolatilitiesId>
+    <EquityCurvesId>default</EquityCurvesId>
+    <EquityVolatilitiesId>default</EquityVolatilitiesId>
+    <CommodityCurvesId>xois_eur</CommodityCurvesId>
+    <CommodityVolatilitiesId>xois_eur</CommodityVolatilitiesId>
+  </Configuration>
+
+  <!-- FX spots/vols from the global Input/todaysmarket.xml through ids above -->
+  <FxVolatilities id="default">
+    <FxVolatility pair="EURUSD">FXVolatility/EUR/USD/EURUSD</FxVolatility>
+    <FxVolatility pair="HKDEUR">FXVolatility/EUR/USD/EURUSD</FxVolatility>
+    <FxVolatility pair="EURHKD">FXVolatility/EUR/USD/EURUSD</FxVolatility>
+  </FxVolatilities>
+
+  <FxVolatilities id="xois_eur">
+    <FxVolatility pair="EURUSD">FXVolatility/EUR/USD/EURUSD</FxVolatility>
+    <FxVolatility pair="HKDEUR">FXVolatility/EUR/USD/EURUSD</FxVolatility>
+    <FxVolatility pair="EURHKD">FXVolatility/EUR/USD/EURUSD</FxVolatility>
+  </FxVolatilities>
+
+  <!-- Minimal yield/discounting sets needed for EQ curves in this example -->
+  <YieldCurves id="default">
+    <YieldCurve name="EUR1D">Yield/EUR/EUR1D</YieldCurve>
+    <YieldCurve name="EUR3M">Yield/EUR/EUR3M</YieldCurve>
+    <YieldCurve name="EUR6M">Yield/EUR/EUR6M</YieldCurve>
+    <YieldCurve name="BOND_YIELD_EUR">Yield/EUR/BOND_YIELD_EUR</YieldCurve>
+    <YieldCurve name="USD1D">Yield/USD/USD1D</YieldCurve>
+    <YieldCurve name="USD3M">Yield/USD/USD3M</YieldCurve>
+    <!-- Allow HSCEI to reference HKD proxy curve -->
+    <YieldCurve name="USD1D_HKD">Yield/HKD/USD1D_HKD</YieldCurve>
+  </YieldCurves>
+
+  <YieldCurves id="xois_eur">
+    <YieldCurve name="EUR1D">Yield/EUR/EUR1D</YieldCurve>
+    <YieldCurve name="EUR3M">Yield/EUR/EUR3M</YieldCurve>
+    <YieldCurve name="EUR6M">Yield/EUR/EUR6M</YieldCurve>
+    <YieldCurve name="BOND_YIELD_EUR">Yield/EUR/BOND_YIELD_EUR</YieldCurve>
+    <YieldCurve name="USD1D">Yield/USD/USD1D</YieldCurve>
+    <YieldCurve name="USD3M">Yield/USD/USD3M</YieldCurve>
+    <!-- HSCEI uses USD1D rates as proxy under HKD spec for this dataset -->
+    <YieldCurve name="USD1D_HKD">Yield/HKD/USD1D_HKD</YieldCurve>
+  </YieldCurves>
+
+  <DiscountingCurves id="default">
+    <DiscountingCurve currency="EUR">Yield/EUR/EUR1D</DiscountingCurve>
+    <DiscountingCurve currency="USD">Yield/USD/USD1D</DiscountingCurve>
+    <DiscountingCurve currency="HKD">Yield/HKD/USD1D_HKD</DiscountingCurve>
+  </DiscountingCurves>
+
+  <DiscountingCurves id="xois_eur">
+    <DiscountingCurve currency="EUR">Yield/EUR/EUR1D</DiscountingCurve>
+    <DiscountingCurve currency="USD">Yield/USD/USD1D</DiscountingCurve>
+    <DiscountingCurve currency="HKD">Yield/HKD/USD1D_HKD</DiscountingCurve>
+  </DiscountingCurves>
+
+  <!-- Index forwarding curves used by swaps and model calibration -->
+  <IndexForwardingCurves id="default">
+    <Index name="EUR-EURIBOR-3M">Yield/EUR/EUR3M</Index>
+    <Index name="EUR-EURIBOR-6M">Yield/EUR/EUR6M</Index>
+    <Index name="EUR-EONIA">Yield/EUR/EUR1D</Index>
+    <Index name="EUR-ESTER">Yield/EUR/EUR1D</Index>
+    <Index name="USD-LIBOR-3M">Yield/USD/USD3M</Index>
+    <Index name="USD-LIBOR-6M">Yield/USD/USD6M</Index>
+    <Index name="USD-FedFunds">Yield/USD/USD1D</Index>
+  </IndexForwardingCurves>
+
+  <IndexForwardingCurves id="xois_eur">
+    <Index name="EUR-EURIBOR-3M">Yield/EUR/EUR3M</Index>
+    <Index name="EUR-EURIBOR-6M">Yield/EUR/EUR6M</Index>
+    <Index name="EUR-EONIA">Yield/EUR/EUR1D</Index>
+    <Index name="EUR-ESTER">Yield/EUR/EUR1D</Index>
+    <Index name="USD-LIBOR-3M">Yield/USD/USD3M</Index>
+    <Index name="USD-LIBOR-6M">Yield/USD/USD6M</Index>
+    <Index name="USD-FedFunds">Yield/USD/USD1D</Index>
+  </IndexForwardingCurves>
+
+  <!-- Swap index curves for CMS: provide discounting index mapping -->
+  <SwapIndexCurves id="default">
+    <SwapIndex name="EUR-CMS-1Y">
+      <Discounting>EUR-ESTER</Discounting>
+    </SwapIndex>
+    <SwapIndex name="EUR-CMS-30Y">
+      <Discounting>EUR-ESTER</Discounting>
+    </SwapIndex>
+    <SwapIndex name="USD-CMS-1Y">
+      <Discounting>USD-FedFunds</Discounting>
+    </SwapIndex>
+    <SwapIndex name="USD-CMS-30Y">
+      <Discounting>USD-FedFunds</Discounting>
+    </SwapIndex>
+  </SwapIndexCurves>
+  <SwapIndexCurves id="xois_eur">
+    <SwapIndex name="EUR-CMS-1Y">
+      <Discounting>EUR-ESTER</Discounting>
+    </SwapIndex>
+    <SwapIndex name="EUR-CMS-30Y">
+      <Discounting>EUR-ESTER</Discounting>
+    </SwapIndex>
+    <SwapIndex name="USD-CMS-1Y">
+      <Discounting>USD-FedFunds</Discounting>
+    </SwapIndex>
+    <SwapIndex name="USD-CMS-30Y">
+      <Discounting>USD-FedFunds</Discounting>
+    </SwapIndex>
+  </SwapIndexCurves>
+
+  <!-- Note: Swap index mappings are provided in simulation.xml; todaysmarket does not define SwapIndices. -->
+
+  <!-- Provide HKD FX spot so triangulation to EUR works in sim/sensi -->
+  <FxSpots id="default">
+    <FxSpot pair="EURUSD">FX/EUR/USD</FxSpot>
+    <FxSpot pair="EURGBP">FX/EUR/GBP</FxSpot>
+    <FxSpot pair="EURCHF">FX/EUR/CHF</FxSpot>
+    <FxSpot pair="EURJPY">FX/EUR/JPY</FxSpot>
+    <FxSpot pair="GBPUSD">FX/GBP/USD</FxSpot>
+    <FxSpot pair="USDCHF">FX/USD/CHF</FxSpot>
+    <FxSpot pair="EURHKD">FX/EUR/HKD</FxSpot>
+    <FxSpot pair="HKDEUR">FX/HKD/EUR</FxSpot>
+  </FxSpots>
+
+  <EquityCurves id="default">
+    <EquityCurve name="SP5">Equity/USD/SP5</EquityCurve>
+    <EquityCurve name="SP5-USD">Equity/USD/SP5</EquityCurve>
+    <EquityCurve name="SPX">Equity/USD/SPX</EquityCurve>
+    <EquityCurve name="SPX-USD">Equity/USD/SPX</EquityCurve>
+    <EquityCurve name="SX5E">Equity/EUR/SX5E</EquityCurve>
+    <EquityCurve name="SX5E-EUR">Equity/EUR/SX5E</EquityCurve>
+    <EquityCurve name="HSCEI">Equity/HKD/HSCEI</EquityCurve>
+    <EquityCurve name="HSCEI-HKD">Equity/HKD/HSCEI</EquityCurve>
+  </EquityCurves>
+
+  <EquityCurves id="xois_eur">
+    <EquityCurve name="SP5">Equity/USD/SP5</EquityCurve>
+    <EquityCurve name="SP5-USD">Equity/USD/SP5</EquityCurve>
+    <EquityCurve name="SPX">Equity/USD/SPX</EquityCurve>
+    <EquityCurve name="SPX-USD">Equity/USD/SPX</EquityCurve>
+    <EquityCurve name="SX5E">Equity/EUR/SX5E</EquityCurve>
+    <EquityCurve name="SX5E-EUR">Equity/EUR/SX5E</EquityCurve>
+    <EquityCurve name="HSCEI">Equity/HKD/HSCEI</EquityCurve>
+    <EquityCurve name="HSCEI-HKD">Equity/HKD/HSCEI</EquityCurve>
+  </EquityCurves>
+
+  <EquityVolatilities id="default">
+    <EquityVolatility name="SP5">EquityVolatility/USD/SP5</EquityVolatility>
+    <EquityVolatility name="SP5-USD">EquityVolatility/USD/SP5</EquityVolatility>
+    <EquityVolatility name="SPX">EquityVolatility/USD/SPX</EquityVolatility>
+    <EquityVolatility name="SPX-USD">EquityVolatility/USD/SPX</EquityVolatility>
+    <EquityVolatility name="SX5E">EquityVolatility/EUR/SX5E</EquityVolatility>
+    <EquityVolatility name="SX5E-EUR">EquityVolatility/EUR/SX5E</EquityVolatility>
+    <EquityVolatility name="HSCEI">EquityVolatility/HKD/HSCEI</EquityVolatility>
+    <EquityVolatility name="HSCEI-HKD">EquityVolatility/HKD/HSCEI</EquityVolatility>
+  </EquityVolatilities>
+
+  <EquityVolatilities id="xois_eur">
+    <EquityVolatility name="SP5">EquityVolatility/USD/SP5</EquityVolatility>
+    <EquityVolatility name="SP5-USD">EquityVolatility/USD/SP5</EquityVolatility>
+    <EquityVolatility name="SPX">EquityVolatility/USD/SPX</EquityVolatility>
+    <EquityVolatility name="SPX-USD">EquityVolatility/USD/SPX</EquityVolatility>
+    <EquityVolatility name="SX5E">EquityVolatility/EUR/SX5E</EquityVolatility>
+    <EquityVolatility name="SX5E-EUR">EquityVolatility/EUR/SX5E</EquityVolatility>
+    <EquityVolatility name="HSCEI">EquityVolatility/HKD/HSCEI</EquityVolatility>
+    <EquityVolatility name="HSCEI-HKD">EquityVolatility/HKD/HSCEI</EquityVolatility>
+  </EquityVolatilities>
+
+  <!-- Commodity market mappings for GOLD and WTI (used by scripted COM trades) -->
+  <CommodityCurves id="default">
+    <!-- Provide both COMDTY_* and bare names to satisfy scripted trade index lookups -->
+    <CommodityCurve name="COMDTY_GOLD_USD">Commodity/USD/GOLD_USD</CommodityCurve>
+    <CommodityCurve name="COMDTY_WTI_USD">Commodity/USD/WTI_USD</CommodityCurve>
+    <CommodityCurve name="GOLD_USD">Commodity/USD/GOLD_USD</CommodityCurve>
+    <CommodityCurve name="WTI_USD">Commodity/USD/WTI_USD</CommodityCurve>
+  </CommodityCurves>
+  <CommodityCurves id="xois_eur">
+    <CommodityCurve name="COMDTY_GOLD_USD">Commodity/USD/GOLD_USD</CommodityCurve>
+    <CommodityCurve name="COMDTY_WTI_USD">Commodity/USD/WTI_USD</CommodityCurve>
+    <CommodityCurve name="GOLD_USD">Commodity/USD/GOLD_USD</CommodityCurve>
+    <CommodityCurve name="WTI_USD">Commodity/USD/WTI_USD</CommodityCurve>
+  </CommodityCurves>
+
+  <CommodityVolatilities id="default">
+    <!-- Provide COMDTY_* and bare names to satisfy scripted options -->
+    <CommodityVolatility name="COMDTY_GOLD_USD">CommodityVolatility/USD/GOLD_USD_VOLS</CommodityVolatility>
+    <CommodityVolatility name="COMDTY_WTI_USD">CommodityVolatility/USD/WTI_USD_VOLS</CommodityVolatility>
+    <CommodityVolatility name="GOLD_USD">CommodityVolatility/USD/GOLD_USD_VOLS</CommodityVolatility>
+    <CommodityVolatility name="WTI_USD">CommodityVolatility/USD/WTI_USD_VOLS</CommodityVolatility>
+  </CommodityVolatilities>
+  <CommodityVolatilities id="xois_eur">
+    <CommodityVolatility name="COMDTY_GOLD_USD">CommodityVolatility/USD/GOLD_USD_VOLS</CommodityVolatility>
+    <CommodityVolatility name="COMDTY_WTI_USD">CommodityVolatility/USD/WTI_USD_VOLS</CommodityVolatility>
+    <CommodityVolatility name="GOLD_USD">CommodityVolatility/USD/GOLD_USD_VOLS</CommodityVolatility>
+    <CommodityVolatility name="WTI_USD">CommodityVolatility/USD/WTI_USD_VOLS</CommodityVolatility>
+  </CommodityVolatilities>
+
+  <!-- Swaption vols required by sim market (EUR + USD) -->
+  <SwaptionVolatilities id="xois_eur">
+    <SwaptionVolatility currency="EUR">SwaptionVolatility/EUR/EUR_SW_N</SwaptionVolatility>
+    <SwaptionVolatility currency="USD">SwaptionVolatility/USD/USD_SW_N</SwaptionVolatility>
+    <SwaptionVolatility currency="HKD">SwaptionVolatility/USD/USD_SW_N</SwaptionVolatility>
+  </SwaptionVolatilities>
+
+  <SwaptionVolatilities id="default">
+    <SwaptionVolatility currency="EUR">SwaptionVolatility/EUR/EUR_SW_N</SwaptionVolatility>
+    <SwaptionVolatility currency="USD">SwaptionVolatility/USD/USD_SW_N</SwaptionVolatility>
+    <SwaptionVolatility currency="HKD">SwaptionVolatility/USD/USD_SW_N</SwaptionVolatility>
+  </SwaptionVolatilities>
+
+  <!-- Cap/Floor vols required by sim market (EUR + USD) -->
+  <CapFloorVolatilities id="default">
+    <CapFloorVolatility currency="EUR">CapFloorVolatility/EUR/EUR_CF_N</CapFloorVolatility>
+    <CapFloorVolatility currency="USD">CapFloorVolatility/USD/USD_CF_N</CapFloorVolatility>
+  </CapFloorVolatilities>
+
+  <CapFloorVolatilities id="xois_eur">
+    <CapFloorVolatility currency="EUR">CapFloorVolatility/EUR/EUR_CF_N</CapFloorVolatility>
+    <CapFloorVolatility currency="USD">CapFloorVolatility/USD/USD_CF_N</CapFloorVolatility>
+  </CapFloorVolatilities>
+
+  <!-- Default curves used by XVA (BANK etc.) -->
+  <DefaultCurves id="default">
+    <DefaultCurve name="BANK">Default/USD/BANK_SR_USD</DefaultCurve>
+    <DefaultCurve name="CPTY_A">Default/USD/CPTY_A_SR_USD</DefaultCurve>
+    <DefaultCurve name="CPTY_B">Default/USD/CPTY_A_SR_USD</DefaultCurve>
+    <DefaultCurve name="CPTY_C">Default/EUR/CPTY_C_SR_EUR</DefaultCurve>
+    <DefaultCurve name="FirmA">Default/USD/BANK_SR_USD</DefaultCurve>
+    <DefaultCurve name="FirmB">Default/USD/BANK_SR_USD</DefaultCurve>
+    <DefaultCurve name="CDXIG">Default/USD/CDXIG</DefaultCurve>
+    <DefaultCurve name="BOND_YIELD_EUR_OVER_OIS">Default/EUR/BOND_YIELD_EUR_OVER_OIS</DefaultCurve>
+  </DefaultCurves>
+
+  <DefaultCurves id="xois_eur">
+    <DefaultCurve name="BANK">Default/USD/BANK_SR_USD</DefaultCurve>
+    <DefaultCurve name="CPTY_A">Default/USD/CPTY_A_SR_USD</DefaultCurve>
+    <DefaultCurve name="CPTY_B">Default/USD/CPTY_A_SR_USD</DefaultCurve>
+    <DefaultCurve name="CPTY_C">Default/EUR/CPTY_C_SR_EUR</DefaultCurve>
+    <DefaultCurve name="FirmA">Default/USD/BANK_SR_USD</DefaultCurve>
+    <DefaultCurve name="FirmB">Default/USD/BANK_SR_USD</DefaultCurve>
+    <DefaultCurve name="CDXIG">Default/USD/CDXIG</DefaultCurve>
+    <DefaultCurve name="BOND_YIELD_EUR_OVER_OIS">Default/EUR/BOND_YIELD_EUR_OVER_OIS</DefaultCurve>
+  </DefaultCurves>
+
+  <!-- Commodity mappings required by scripted COM trades (GOLD, WTI) -->
+  <CommodityCurves id="default">
+    <CommodityCurve name="COMDTY_GOLD_USD">Commodity/USD/GOLD_USD</CommodityCurve>
+    <CommodityCurve name="COMDTY_WTI_USD">Commodity/USD/WTI_USD</CommodityCurve>
+    <CommodityCurve name="GOLD_USD">Commodity/USD/GOLD_USD</CommodityCurve>
+    <CommodityCurve name="WTI_USD">Commodity/USD/WTI_USD</CommodityCurve>
+  </CommodityCurves>
+  <CommodityCurves id="xois_eur">
+    <CommodityCurve name="COMDTY_GOLD_USD">Commodity/USD/GOLD_USD</CommodityCurve>
+    <CommodityCurve name="COMDTY_WTI_USD">Commodity/USD/WTI_USD</CommodityCurve>
+    <CommodityCurve name="GOLD_USD">Commodity/USD/GOLD_USD</CommodityCurve>
+    <CommodityCurve name="WTI_USD">Commodity/USD/WTI_USD</CommodityCurve>
+  </CommodityCurves>
+  <CommodityVolatilities id="default">
+    <CommodityVolatility name="COMDTY_GOLD_USD">CommodityVolatility/USD/GOLD_USD_VOLS</CommodityVolatility>
+    <CommodityVolatility name="COMDTY_WTI_USD">CommodityVolatility/USD/WTI_USD_VOLS</CommodityVolatility>
+    <CommodityVolatility name="GOLD_USD">CommodityVolatility/USD/GOLD_USD_VOLS</CommodityVolatility>
+    <CommodityVolatility name="WTI_USD">CommodityVolatility/USD/WTI_USD_VOLS</CommodityVolatility>
+  </CommodityVolatilities>
+  <CommodityVolatilities id="xois_eur">
+    <CommodityVolatility name="COMDTY_GOLD_USD">CommodityVolatility/USD/GOLD_USD_VOLS</CommodityVolatility>
+    <CommodityVolatility name="COMDTY_WTI_USD">CommodityVolatility/USD/WTI_USD_VOLS</CommodityVolatility>
+    <CommodityVolatility name="GOLD_USD">CommodityVolatility/USD/GOLD_USD_VOLS</CommodityVolatility>
+    <CommodityVolatility name="WTI_USD">CommodityVolatility/USD/WTI_USD_VOLS</CommodityVolatility>
+  </CommodityVolatilities>
+
+</TodaysMarket>

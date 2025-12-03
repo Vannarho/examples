@@ -1,0 +1,2 @@
+{ "category": "Error", "group": "Analytics", "message": "simulation data points missing from scenario, exit.", "sub_fields": [ { "name": "analyticType", "value": "PNL_EXPLAIN" }, { "name": "exceptionType", "value": "Failed Analytic" } ] }
+{ "category": "Warning", "group": "Analytics", "message": "Error in VRE analytics: Failed to run analytics PNL_EXPLAIN", "sub_fields": [ { "name": "analyticType", "value": "VREApp::run()" }, { "name": "warningType", "value": "Error" } ] }

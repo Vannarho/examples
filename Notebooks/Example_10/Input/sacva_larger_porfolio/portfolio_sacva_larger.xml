@@ -1,0 +1,705 @@
+<Portfolio>
+<!-- Removed Swap_EUR_1 scripted swap to avoid CG graph on swap in this SA-CVA CG example -->
+<!-- Nov-25 FASTSENSI follow-up: scale equity/commodity notionals so SA-CVA capital picks up visible CG contributions. -->
+  <Trade id="EqCall_SP5">
+    <TradeType>ScriptedTrade</TradeType>
+    <Envelope>
+      <CounterParty>CPTY_A</CounterParty>
+      <NettingSetId>CPTY_A</NettingSetId>
+      <DeskId>EQUITY_DESK</DeskId>
+    </Envelope>
+    <ScriptedTradeData>
+      <ScriptName>EquityOption</ScriptName>
+      <Data>
+        <Number><Name>LongShort</Name><Value>1</Value></Number>
+        <Number><Name>PutCall</Name><Value>1</Value></Number>
+        <Number><Name>Quantity</Name><Value>20000</Value></Number>
+        <Index><Name>Underlying</Name><Value>EQ-SP5</Value></Index>
+        <Currency><Name>PayCcy</Name><Value>USD</Value></Currency>
+        <Number><Name>Strike</Name><Value>2200</Value></Number>
+        <Event><Name>Expiry</Name><Value>2018-02-05</Value></Event>
+        <Event><Name>Settlement</Name><Value>2018-02-05</Value></Event>
+        <Number><Name>OptionFlow</Name><Value>0</Value></Number>
+      </Data>
+    </ScriptedTradeData>
+  </Trade>
+  <Trade id="EqPut_SP5">
+    <TradeType>ScriptedTrade</TradeType>
+    <Envelope>
+      <CounterParty>CPTY_A</CounterParty>
+      <NettingSetId>CPTY_A</NettingSetId>
+      <DeskId>EQUITY_DESK</DeskId>
+    </Envelope>
+    <ScriptedTradeData>
+      <ScriptName>EquityOption</ScriptName>
+      <Data>
+        <Number><Name>LongShort</Name><Value>-1</Value></Number>
+        <Number><Name>PutCall</Name><Value>-1</Value></Number>
+        <Number><Name>Quantity</Name><Value>12000</Value></Number>
+        <Index><Name>Underlying</Name><Value>EQ-SP5</Value></Index>
+        <Currency><Name>PayCcy</Name><Value>USD</Value></Currency>
+        <Number><Name>Strike</Name><Value>2000</Value></Number>
+        <Event><Name>Expiry</Name><Value>2018-02-05</Value></Event>
+        <Event><Name>Settlement</Name><Value>2018-02-05</Value></Event>
+        <Number><Name>OptionFlow</Name><Value>0</Value></Number>
+      </Data>
+    </ScriptedTradeData>
+  </Trade>
+  <Trade id="EqFwd_SP5">
+    <TradeType>ScriptedTrade</TradeType>
+    <Envelope>
+      <CounterParty>CPTY_A</CounterParty>
+      <NettingSetId>CPTY_A</NettingSetId>
+      <DeskId>EQUITY_DESK</DeskId>
+    </Envelope>
+    <ScriptedTradeData>
+      <ScriptName>EquityForward</ScriptName>
+      <Data>
+        <Number><Name>LongShort</Name><Value>-1</Value></Number>
+        <Number><Name>Quantity</Name><Value>10000</Value></Number>
+        <Index><Name>Underlying</Name><Value>EQ-SP5</Value></Index>
+        <Currency><Name>PayCcy</Name><Value>USD</Value></Currency>
+        <Number><Name>Strike</Name><Value>2147.56</Value></Number>
+        <Event><Name>Maturity</Name><Value>2018-02-05</Value></Event>
+        <Event><Name>PayDate</Name><Value>2018-02-05</Value></Event>
+      </Data>
+    </ScriptedTradeData>
+</Trade>
+
+  <!-- Long-dated Commodity Forward on WTI (quanto EUR) to drive 5Y/10Y curve deltas -->
+  <Trade id="ComFwd_WTI_QuantoEUR_Long2024">
+    <TradeType>ScriptedTrade</TradeType>
+    <Envelope>
+      <CounterParty>CPTY_A</CounterParty>
+      <NettingSetId>CPTY_A</NettingSetId>
+      <DeskId>COMMODITY_DESK</DeskId>
+    </Envelope>
+    <ScriptedTradeData>
+      <ScriptName>CommodityForward</ScriptName>
+      <Data>
+        <Number><Name>LongShort</Name><Value>1</Value></Number>
+        <Index><Name>Underlying</Name><Value>COMM-COMDTY_WTI_USD</Value></Index>
+        <Number><Name>Quantity</Name><Value>60000</Value></Number>
+        <Number><Name>Strike</Name><Value>55</Value></Number>
+        <Currency><Name>PayCcy</Name><Value>EUR</Value></Currency>
+        <!-- Maturity long-dated to load 5Y/10Y COM curve buckets -->
+        <Event><Name>Maturity</Name><Value>2024-12-31</Value></Event>
+        <Event><Name>PayDate</Name><Value>2024-12-31</Value></Event>
+      </Data>
+    </ScriptedTradeData>
+  </Trade>
+
+  <!-- WTI forwards targeted at ~5Y and ~10Y to activate 5Y/10Y curve keys -->
+  <Trade id="ComFwd_WTI_QuantoEUR_5Y">
+    <TradeType>ScriptedTrade</TradeType>
+    <Envelope>
+      <CounterParty>CPTY_A</CounterParty>
+      <NettingSetId>CPTY_A</NettingSetId>
+      <DeskId>COMMODITY_DESK</DeskId>
+    </Envelope>
+    <ScriptedTradeData>
+      <ScriptName>CommodityForward</ScriptName>
+      <Data>
+        <Number><Name>LongShort</Name><Value>1</Value></Number>
+        <Index><Name>Underlying</Name><Value>COMM-COMDTY_WTI_USD</Value></Index>
+        <Number><Name>Quantity</Name><Value>50000</Value></Number>
+        <Number><Name>Strike</Name><Value>49.5</Value></Number>
+        <Currency><Name>PayCcy</Name><Value>EUR</Value></Currency>
+        <Event><Name>Maturity</Name><Value>2021-02-05</Value></Event>
+        <Event><Name>PayDate</Name><Value>2021-02-05</Value></Event>
+      </Data>
+    </ScriptedTradeData>
+  </Trade>
+
+  <Trade id="ComFwd_WTI_QuantoEUR_10Y">
+    <TradeType>ScriptedTrade</TradeType>
+    <Envelope>
+      <CounterParty>CPTY_A</CounterParty>
+      <NettingSetId>CPTY_A</NettingSetId>
+      <DeskId>COMMODITY_DESK</DeskId>
+    </Envelope>
+    <ScriptedTradeData>
+      <ScriptName>CommodityForward</ScriptName>
+      <Data>
+        <Number><Name>LongShort</Name><Value>1</Value></Number>
+        <Index><Name>Underlying</Name><Value>COMM-COMDTY_WTI_USD</Value></Index>
+        <Number><Name>Quantity</Name><Value>60000</Value></Number>
+        <Number><Name>Strike</Name><Value>52.0</Value></Number>
+        <Currency><Name>PayCcy</Name><Value>EUR</Value></Currency>
+        <Event><Name>Maturity</Name><Value>2026-02-05</Value></Event>
+        <Event><Name>PayDate</Name><Value>2026-02-05</Value></Event>
+      </Data>
+    </ScriptedTradeData>
+  </Trade>
+
+  <!-- GOLD: long-dated forward (domestic USD) to exercise second commodity bucket -->
+  <Trade id="ComFwd_GOLD_USD_Long2024">
+    <TradeType>ScriptedTrade</TradeType>
+    <Envelope>
+      <CounterParty>CPTY_A</CounterParty>
+      <NettingSetId>CPTY_A</NettingSetId>
+      <DeskId>COMMODITY_DESK</DeskId>
+    </Envelope>
+    <ScriptedTradeData>
+      <ScriptName>CommodityForward</ScriptName>
+      <Data>
+        <Number><Name>LongShort</Name><Value>1</Value></Number>
+        <Index><Name>Underlying</Name><Value>COMM-COMDTY_GOLD_USD</Value></Index>
+        <Number><Name>Quantity</Name><Value>15000</Value></Number>
+        <Number><Name>Strike</Name><Value>1200</Value></Number>
+        <Currency><Name>PayCcy</Name><Value>USD</Value></Currency>
+        <Event><Name>Maturity</Name><Value>2024-12-31</Value></Event>
+        <Event><Name>PayDate</Name><Value>2024-12-31</Value></Event>
+      </Data>
+    </ScriptedTradeData>
+  </Trade>
+
+  <!-- GOLD: long-dated Asian to add vega/delta at long tenors -->
+  <Trade id="ComAsian_GOLD_Monthly_Long_USD">
+    <TradeType>ScriptedTrade</TradeType>
+    <Envelope>
+      <CounterParty>CPTY_A</CounterParty>
+      <NettingSetId>CPTY_A</NettingSetId>
+      <DeskId>COMMODITY_DESK</DeskId>
+    </Envelope>
+    <ScriptedTradeData>
+      <ScriptName>CommodityAsianArithmeticCG</ScriptName>
+      <Data>
+        <Number><Name>LongShort</Name><Value>1</Value></Number>
+        <Number><Name>PutCall</Name><Value>1</Value></Number>
+        <Number><Name>Quantity</Name><Value>12000</Value></Number>
+        <Index><Name>Underlying</Name><Value>COMM-COMDTY_GOLD_USD</Value></Index>
+        <Currency><Name>PayCcy</Name><Value>USD</Value></Currency>
+        <Number><Name>Strike</Name><Value>1200</Value></Number>
+        <Event>
+          <Name>ObservationDates</Name>
+          <ScheduleData>
+            <Rules>
+              <StartDate>2019-01-01</StartDate>
+              <EndDate>2024-12-31</EndDate>
+              <Tenor>1M</Tenor>
+              <Calendar>TARGET</Calendar>
+              <Convention>F</Convention>
+              <Rule>Forward</Rule>
+            </Rules>
+          </ScheduleData>
+        </Event>
+        <Event><Name>Expiry</Name><Value>2024-12-31</Value></Event>
+        <Event><Name>Settlement</Name><Value>2024-12-31</Value></Event>
+        <Number><Name>OptionFlow</Name><Value>0</Value></Number>
+      </Data>
+    </ScriptedTradeData>
+  </Trade>
+
+  <!-- Equity barrier option (up-and-out) using EquityBarrierOptionCG script -->
+  <Trade id="EqBarrier_UO_SP5">
+    <TradeType>ScriptedTrade</TradeType>
+    <Envelope>
+      <CounterParty>CPTY_A</CounterParty>
+      <NettingSetId>CPTY_A</NettingSetId>
+      <DeskId>EQUITY_DESK</DeskId>
+    </Envelope>
+    <ScriptedTradeData>
+      <ScriptName>EquityBarrierOptionCG</ScriptName>
+      <Data>
+        <Number><Name>LongShort</Name><Value>1</Value></Number>
+        <Number><Name>PutCall</Name><Value>1</Value></Number>
+        <Number><Name>Quantity</Name><Value>5000</Value></Number>
+        <Index><Name>Underlying</Name><Value>EQ-SP5</Value></Index>
+        <Currency><Name>PayCcy</Name><Value>USD</Value></Currency>
+        <Number><Name>Strike</Name><Value>2200</Value></Number>
+        <Number><Name>BarrierLevel</Name><Value>2500</Value></Number>
+        <Number><Name>BarrierType</Name><Value>3</Value></Number>
+        <Event><Name>Expiry</Name><Value>2018-02-05</Value></Event>
+        <Event><Name>Settlement</Name><Value>2018-02-05</Value></Event>
+        <Event>
+          <Name>ObservationDates</Name>
+          <ScheduleData>
+            <Rules>
+              <StartDate>2017-02-05</StartDate>
+              <EndDate>2018-02-05</EndDate>
+              <Tenor>1M</Tenor>
+              <Calendar>TARGET</Calendar>
+              <Convention>F</Convention>
+              <Rule>Forward</Rule>
+            </Rules>
+          </ScheduleData>
+        </Event>
+        <Number><Name>OptionFlow</Name><Value>0</Value></Number>
+      </Data>
+    </ScriptedTradeData>
+  </Trade>
+
+  <!-- Equity digital (cash-or-nothing) using EquityDigitalCG script -->
+  <Trade id="EqDigital_SP5">
+    <TradeType>ScriptedTrade</TradeType>
+    <Envelope>
+      <CounterParty>CPTY_A</CounterParty>
+      <NettingSetId>CPTY_A</NettingSetId>
+      <DeskId>EQUITY_DESK</DeskId>
+    </Envelope>
+    <ScriptedTradeData>
+      <ScriptName>EquityDigitalCG</ScriptName>
+      <Data>
+        <Number><Name>LongShort</Name><Value>1</Value></Number>
+        <Number><Name>PutCall</Name><Value>1</Value></Number>
+        <Index><Name>Underlying</Name><Value>EQ-SP5</Value></Index>
+        <Currency><Name>PayCcy</Name><Value>USD</Value></Currency>
+        <Number><Name>Strike</Name><Value>2200</Value></Number>
+        <Number><Name>Payout</Name><Value>50000</Value></Number>
+        <Event><Name>Expiry</Name><Value>2018-02-05</Value></Event>
+        <Event><Name>Settlement</Name><Value>2018-02-05</Value></Event>
+        <Number><Name>OptionFlow</Name><Value>0</Value></Number>
+      </Data>
+    </ScriptedTradeData>
+  </Trade>
+  <!-- Additional equity forward to exercise bucket 12 (EU index) -->
+  <Trade id="EqFwd_SX5E">
+    <TradeType>ScriptedTrade</TradeType>
+    <Envelope>
+      <CounterParty>CPTY_A</CounterParty>
+      <NettingSetId>CPTY_A</NettingSetId>
+      <DeskId>EQUITY_DESK</DeskId>
+    </Envelope>
+    <ScriptedTradeData>
+      <ScriptName>EquityForward</ScriptName>
+      <Data>
+        <Number><Name>LongShort</Name><Value>1</Value></Number>
+        <Number><Name>Quantity</Name><Value>20000</Value></Number>
+        <Index><Name>Underlying</Name><Value>EQ-SX5E</Value></Index>
+        <Currency><Name>PayCcy</Name><Value>EUR</Value></Currency>
+        <Number><Name>Strike</Name><Value>3300</Value></Number>
+        <Event><Name>Maturity</Name><Value>2018-06-05</Value></Event>
+        <Event><Name>PayDate</Name><Value>2018-06-05</Value></Event>
+      </Data>
+    </ScriptedTradeData>
+  </Trade>
+
+  <!-- Additional equity forward to exercise bucket 12 (US index: SPX) -->
+  <Trade id="EqFwd_SPX">
+    <TradeType>ScriptedTrade</TradeType>
+    <Envelope>
+      <CounterParty>CPTY_A</CounterParty>
+      <NettingSetId>CPTY_A</NettingSetId>
+      <DeskId>EQUITY_DESK</DeskId>
+    </Envelope>
+    <ScriptedTradeData>
+      <ScriptName>EquityForward</ScriptName>
+      <Data>
+        <Number><Name>LongShort</Name><Value>1</Value></Number>
+        <Number><Name>Quantity</Name><Value>20000</Value></Number>
+        <Index><Name>Underlying</Name><Value>EQ-SPX</Value></Index>
+        <Currency><Name>PayCcy</Name><Value>USD</Value></Currency>
+        <Number><Name>Strike</Name><Value>2350</Value></Number>
+        <Event><Name>Maturity</Name><Value>2018-06-15</Value></Event>
+        <Event><Name>PayDate</Name><Value>2018-06-15</Value></Event>
+      </Data>
+    </ScriptedTradeData>
+  </Trade>
+
+  <!-- Forward on HSCEI (Emerging index → bucket 13) to exercise cross-bucket aggregation -->
+  <Trade id="EqFwd_HSCEI">
+    <TradeType>ScriptedTrade</TradeType>
+    <Envelope>
+      <CounterParty>CPTY_A</CounterParty>
+      <NettingSetId>CPTY_A</NettingSetId>
+      <DeskId>EQUITY_DESK</DeskId>
+    </Envelope>
+    <ScriptedTradeData>
+      <ScriptName>EquityForward</ScriptName>
+      <Data>
+        <Number><Name>LongShort</Name><Value>1</Value></Number>
+        <Number><Name>Quantity</Name><Value>40000</Value></Number>
+        <Index><Name>Underlying</Name><Value>EQ-HSCEI</Value></Index>
+        <Currency><Name>PayCcy</Name><Value>HKD</Value></Currency>
+        <Number><Name>Strike</Name><Value>8000</Value></Number>
+        <Event><Name>Maturity</Name><Value>2018-06-30</Value></Event>
+        <Event><Name>PayDate</Name><Value>2018-06-30</Value></Event>
+      </Data>
+    </ScriptedTradeData>
+  </Trade>
+
+  <!-- Asian basket option (domestic) using script AsianBasketOption -->
+  <Trade id="EqAsianBasket_Domestic">
+    <TradeType>ScriptedTrade</TradeType>
+    <Envelope>
+      <CounterParty>CPTY_A</CounterParty>
+      <NettingSetId>CPTY_A</NettingSetId>
+      <DeskId>EQUITY_DESK</DeskId>
+    </Envelope>
+    <ScriptedTradeData>
+      <ScriptName>AsianBasketOption</ScriptName>
+      <Data>
+        <Event><Name>Expiry</Name><Value>2017-02-05</Value></Event>
+        <Event><Name>Settlement</Name><Value>2017-02-05</Value></Event>
+        <Event>
+          <Name>ObservationDates</Name>
+          <ScheduleData>
+            <Rules>
+              <StartDate>2016-03-05</StartDate>
+              <EndDate>2017-02-05</EndDate>
+              <Tenor>1M</Tenor>
+              <Calendar>TARGET</Calendar>
+              <Convention>F</Convention>
+              <Rule>Forward</Rule>
+            </Rules>
+          </ScheduleData>
+        </Event>
+        <Number><Name>PutCall</Name><Value>1</Value></Number>
+        <Number><Name>LongShort</Name><Value>1</Value></Number>
+        <Number><Name>Notional</Name><Value>5000</Value></Number>
+        <Number><Name>Strike</Name><Value>2200</Value></Number>
+        <Index>
+          <Name>Underlyings</Name>
+          <Values>
+            <Value>EQ-SP5</Value>
+            <Value>EQ-SX5E</Value>
+          </Values>
+        </Index>
+        <Number>
+          <Name>Weights</Name>
+          <Values>
+            <Value>0.5</Value>
+            <Value>0.5</Value>
+          </Values>
+        </Number>
+        <Currency><Name>PayCcy</Name><Value>EUR</Value></Currency>
+      </Data>
+    </ScriptedTradeData>
+  </Trade>
+
+  <!-- Asian basket option (quanto via PayCcy EUR on USD equity) -->
+  <Trade id="EqAsianBasket_Quanto">
+    <TradeType>ScriptedTrade</TradeType>
+    <Envelope>
+      <CounterParty>CPTY_A</CounterParty>
+      <NettingSetId>CPTY_A</NettingSetId>
+      <DeskId>EQUITY_DESK</DeskId>
+    </Envelope>
+    <ScriptedTradeData>
+      <ScriptName>AsianBasketOption</ScriptName>
+      <Data>
+        <Event><Name>Expiry</Name><Value>2017-06-05</Value></Event>
+        <Event><Name>Settlement</Name><Value>2017-06-05</Value></Event>
+        <Event>
+          <Name>ObservationDates</Name>
+          <ScheduleData>
+            <Rules>
+              <StartDate>2016-03-05</StartDate>
+              <EndDate>2017-06-05</EndDate>
+              <Tenor>1M</Tenor>
+              <Calendar>TARGET</Calendar>
+              <Convention>F</Convention>
+              <Rule>Forward</Rule>
+            </Rules>
+          </ScheduleData>
+        </Event>
+        <Number><Name>PutCall</Name><Value>1</Value></Number>
+        <Number><Name>LongShort</Name><Value>1</Value></Number>
+        <Number><Name>Notional</Name><Value>5000</Value></Number>
+        <Number><Name>Strike</Name><Value>2300</Value></Number>
+        <Index>
+          <Name>Underlyings</Name>
+          <Values>
+            <Value>EQ-SP5</Value>
+            <Value>EQ-SX5E</Value>
+          </Values>
+        </Index>
+        <Number>
+          <Name>Weights</Name>
+          <Values>
+            <Value>0.6</Value>
+            <Value>0.4</Value>
+          </Values>
+        </Number>
+        <Currency><Name>PayCcy</Name><Value>EUR</Value></Currency>
+      </Data>
+    </ScriptedTradeData>
+  </Trade>
+
+  <!-- American vanilla (weekly grid) using EquityAmericanVanillaCG script -->
+  <Trade id="EqAmer_SP5_Weekly">
+    <TradeType>ScriptedTrade</TradeType>
+    <Envelope>
+      <CounterParty>CPTY_A</CounterParty>
+      <NettingSetId>CPTY_A</NettingSetId>
+      <DeskId>EQUITY_DESK</DeskId>
+    </Envelope>
+    <ScriptedTradeData>
+      <ScriptName>EquityAmericanVanillaCG</ScriptName>
+      <Data>
+        <Number><Name>LongShort</Name><Value>1</Value></Number>
+        <Number><Name>PutCall</Name><Value>1</Value></Number>
+        <Number><Name>Quantity</Name><Value>4000</Value></Number>
+        <Index><Name>Underlying</Name><Value>EQ-SP5</Value></Index>
+        <Currency><Name>PayCcy</Name><Value>USD</Value></Currency>
+        <!-- FASTSENSI-12 Phase D (FASTSENSI-43): bump to ensure positive NPV in example run -->
+        <Number><Name>Strike</Name><Value>2000</Value></Number>
+        <Event>
+          <Name>ExerciseDates</Name>
+          <ScheduleData>
+            <Rules>
+              <StartDate>2016-02-12</StartDate>
+              <EndDate>2018-02-05</EndDate>
+              <Tenor>1W</Tenor>
+              <Calendar>TARGET</Calendar>
+              <Convention>F</Convention>
+              <Rule>Forward</Rule>
+            </Rules>
+          </ScheduleData>
+        </Event>
+      </Data>
+    </ScriptedTradeData>
+  </Trade>
+
+  <!-- Bermudan vanilla (monthly grid) using EquityBermudanVanillaCG script -->
+  <Trade id="EqBerm_SP5_Monthly">
+    <TradeType>ScriptedTrade</TradeType>
+    <Envelope>
+      <CounterParty>CPTY_A</CounterParty>
+      <NettingSetId>CPTY_A</NettingSetId>
+      <DeskId>EQUITY_DESK</DeskId>
+    </Envelope>
+    <ScriptedTradeData>
+      <ScriptName>EquityBermudanVanillaCG</ScriptName>
+      <Data>
+        <Number><Name>LongShort</Name><Value>1</Value></Number>
+        <Number><Name>PutCall</Name><Value>1</Value></Number>
+        <Number><Name>Quantity</Name><Value>4000</Value></Number>
+        <Index><Name>Underlying</Name><Value>EQ-SP5</Value></Index>
+        <Currency><Name>PayCcy</Name><Value>USD</Value></Currency>
+        <Number><Name>Strike</Name><Value>2200</Value></Number>
+        <Event>
+          <Name>ExerciseDates</Name>
+          <ScheduleData>
+            <Rules>
+              <StartDate>2016-03-05</StartDate>
+              <EndDate>2018-02-05</EndDate>
+              <Tenor>1M</Tenor>
+              <Calendar>TARGET</Calendar>
+              <Convention>F</Convention>
+              <Rule>Forward</Rule>
+            </Rules>
+          </ScheduleData>
+        </Event>
+      </Data>
+    </ScriptedTradeData>
+  </Trade>
+
+  <!-- Commodity Forward on GOLD (domestic USD) using CommodityForward script -->
+  <Trade id="ComFwd_GOLD_USD">
+    <TradeType>ScriptedTrade</TradeType>
+    <Envelope>
+      <CounterParty>CPTY_A</CounterParty>
+      <NettingSetId>CPTY_A</NettingSetId>
+      <DeskId>COMMODITY_DESK</DeskId>
+    </Envelope>
+    <ScriptedTradeData>
+      <ScriptName>CommodityForward</ScriptName>
+      <Data>
+        <Number><Name>LongShort</Name><Value>1</Value></Number>
+        <Index><Name>Underlying</Name><Value>COMM-COMDTY_GOLD_USD</Value></Index>
+        <Number><Name>Quantity</Name><Value>5000</Value></Number>
+        <Number><Name>Strike</Name><Value>1250</Value></Number>
+        <Currency><Name>PayCcy</Name><Value>USD</Value></Currency>
+        <Event><Name>Maturity</Name><Value>2018-02-05</Value></Event>
+        <Event><Name>PayDate</Name><Value>2018-02-05</Value></Event>
+      </Data>
+    </ScriptedTradeData>
+  </Trade>
+
+  <!-- Commodity Forward on WTI (quanto EUR) using CommodityForward script -->
+  <Trade id="ComFwd_WTI_QuantoEUR">
+    <TradeType>ScriptedTrade</TradeType>
+    <Envelope>
+      <CounterParty>CPTY_A</CounterParty>
+      <NettingSetId>CPTY_A</NettingSetId>
+      <DeskId>COMMODITY_DESK</DeskId>
+    </Envelope>
+    <ScriptedTradeData>
+      <ScriptName>CommodityForward</ScriptName>
+      <Data>
+        <Number><Name>LongShort</Name><Value>1</Value></Number>
+        <Index><Name>Underlying</Name><Value>COMM-COMDTY_WTI_USD</Value></Index>
+        <Number><Name>Quantity</Name><Value>30000</Value></Number>
+        <Number><Name>Strike</Name><Value>45</Value></Number>
+        <Currency><Name>PayCcy</Name><Value>EUR</Value></Currency>
+        <Event><Name>Maturity</Name><Value>2018-02-05</Value></Event>
+        <Event><Name>PayDate</Name><Value>2018-02-05</Value></Event>
+      </Data>
+    </ScriptedTradeData>
+  </Trade>
+
+  <!-- Commodity Bermudan Vanilla (quanto EUR) using CommodityBermudanVanillaCG script -->
+  <Trade id="ComBerm_WTI_QuantoEUR">
+    <TradeType>ScriptedTrade</TradeType>
+    <Envelope>
+      <CounterParty>CPTY_A</CounterParty>
+      <NettingSetId>CPTY_A</NettingSetId>
+      <DeskId>COMMODITY_DESK</DeskId>
+    </Envelope>
+    <ScriptedTradeData>
+      <ScriptName>CommodityBermudanVanillaCG</ScriptName>
+      <Data>
+        <Number><Name>LongShort</Name><Value>1</Value></Number>
+        <Number><Name>PutCall</Name><Value>1</Value></Number>
+        <Number><Name>Quantity</Name><Value>3000</Value></Number>
+        <Index><Name>Underlying</Name><Value>COMM-COMDTY_WTI_USD</Value></Index>
+        <Currency><Name>PayCcy</Name><Value>EUR</Value></Currency>
+        <!-- FASTSENSI-12 Phase D (FASTSENSI-43): bump to ensure positive NPV in example run -->
+        <Number><Name>Strike</Name><Value>38</Value></Number>
+        <Event>
+          <Name>ExerciseDates</Name>
+          <ScheduleData>
+            <Rules>
+              <StartDate>2017-02-05</StartDate>
+              <EndDate>2018-02-05</EndDate>
+              <Tenor>1M</Tenor>
+              <Calendar>TARGET</Calendar>
+              <Convention>F</Convention>
+              <Rule>Forward</Rule>
+            </Rules>
+          </ScheduleData>
+        </Event>
+      </Data>
+    </ScriptedTradeData>
+  </Trade>
+
+  <!-- Commodity Barrier Option (Up-and-In call, monthly monitoring) using CommodityBarrierOptionCG -->
+  <Trade id="ComBarrier_WTI_UpIn_EUR">
+    <TradeType>ScriptedTrade</TradeType>
+    <Envelope>
+      <CounterParty>CPTY_A</CounterParty>
+      <NettingSetId>CPTY_A</NettingSetId>
+      <DeskId>COMMODITY_DESK</DeskId>
+    </Envelope>
+    <ScriptedTradeData>
+      <ScriptName>CommodityBarrierOptionCG</ScriptName>
+      <Data>
+        <Number><Name>LongShort</Name><Value>1</Value></Number>
+        <Number><Name>PutCall</Name><Value>1</Value></Number>
+        <Number><Name>Quantity</Name><Value>4000</Value></Number>
+        <Index><Name>Underlying</Name><Value>COMM-COMDTY_WTI_USD</Value></Index>
+        <Currency><Name>PayCcy</Name><Value>EUR</Value></Currency>
+        <Number><Name>Strike</Name><Value>50</Value></Number>
+        <Number><Name>BarrierLevel</Name><Value>55</Value></Number>
+        <Number><Name>BarrierType</Name><Value>1</Value></Number>
+        <Event><Name>Expiry</Name><Value>2018-02-05</Value></Event>
+        <Event><Name>Settlement</Name><Value>2018-02-05</Value></Event>
+        <Event>
+          <Name>ObservationDates</Name>
+          <ScheduleData>
+            <Rules>
+              <StartDate>2017-02-05</StartDate>
+              <EndDate>2018-02-05</EndDate>
+              <Tenor>1M</Tenor>
+              <Calendar>TARGET</Calendar>
+              <Convention>F</Convention>
+              <Rule>Forward</Rule>
+            </Rules>
+          </ScheduleData>
+        </Event>
+        <Number><Name>OptionFlow</Name><Value>0</Value></Number>
+      </Data>
+    </ScriptedTradeData>
+  </Trade>
+
+  <!-- Commodity Digital (cash-or-nothing call) using CommodityDigitalCG -->
+  <Trade id="ComDigital_WTI_Call_EUR">
+    <TradeType>ScriptedTrade</TradeType>
+    <Envelope>
+      <CounterParty>CPTY_A</CounterParty>
+      <NettingSetId>CPTY_A</NettingSetId>
+      <DeskId>COMMODITY_DESK</DeskId>
+    </Envelope>
+    <ScriptedTradeData>
+      <ScriptName>CommodityDigitalCG</ScriptName>
+      <Data>
+        <Number><Name>LongShort</Name><Value>1</Value></Number>
+        <Number><Name>PutCall</Name><Value>1</Value></Number>
+        <Index><Name>Underlying</Name><Value>COMM-COMDTY_WTI_USD</Value></Index>
+        <Currency><Name>PayCcy</Name><Value>EUR</Value></Currency>
+        <Number><Name>Strike</Name><Value>50</Value></Number>
+        <Number><Name>Payout</Name><Value>300000</Value></Number>
+        <Event><Name>Expiry</Name><Value>2018-02-05</Value></Event>
+        <Event><Name>Settlement</Name><Value>2018-02-05</Value></Event>
+        <Number><Name>OptionFlow</Name><Value>0</Value></Number>
+      </Data>
+    </ScriptedTradeData>
+  </Trade>
+
+  <!-- Commodity Asian Arithmetic (monthly monitoring) using CommodityAsianArithmeticCG -->
+  <Trade id="ComAsian_WTI_Monthly_EUR">
+    <TradeType>ScriptedTrade</TradeType>
+    <Envelope>
+      <CounterParty>CPTY_A</CounterParty>
+      <NettingSetId>CPTY_A</NettingSetId>
+      <DeskId>COMMODITY_DESK</DeskId>
+    </Envelope>
+    <ScriptedTradeData>
+      <ScriptName>CommodityAsianArithmeticCG</ScriptName>
+      <Data>
+        <Number><Name>LongShort</Name><Value>1</Value></Number>
+        <Number><Name>PutCall</Name><Value>1</Value></Number>
+        <Number><Name>Quantity</Name><Value>4000</Value></Number>
+        <Index><Name>Underlying</Name><Value>COMM-COMDTY_WTI_USD</Value></Index>
+        <Currency><Name>PayCcy</Name><Value>EUR</Value></Currency>
+        <Number><Name>Strike</Name><Value>50</Value></Number>
+        <Event>
+          <Name>ObservationDates</Name>
+          <ScheduleData>
+            <Rules>
+              <StartDate>2017-02-05</StartDate>
+              <EndDate>2018-02-05</EndDate>
+              <Tenor>1M</Tenor>
+              <Calendar>TARGET</Calendar>
+              <Convention>F</Convention>
+              <Rule>Forward</Rule>
+            </Rules>
+          </ScheduleData>
+        </Event>
+        <Event><Name>Expiry</Name><Value>2018-02-05</Value></Event>
+        <Event><Name>Settlement</Name><Value>2018-02-05</Value></Event>
+        <Number><Name>OptionFlow</Name><Value>0</Value></Number>
+      </Data>
+    </ScriptedTradeData>
+  </Trade>
+
+  <!-- Long-dated Commodity Asian Arithmetic (monthly monitoring) to increase long-dated vega/delta -->
+  <Trade id="ComAsian_WTI_Monthly_Long_EUR">
+    <TradeType>ScriptedTrade</TradeType>
+    <Envelope>
+      <CounterParty>CPTY_A</CounterParty>
+      <NettingSetId>CPTY_A</NettingSetId>
+      <DeskId>COMMODITY_DESK</DeskId>
+    </Envelope>
+    <ScriptedTradeData>
+      <ScriptName>CommodityAsianArithmeticCG</ScriptName>
+      <Data>
+        <Number><Name>LongShort</Name><Value>1</Value></Number>
+        <Number><Name>PutCall</Name><Value>1</Value></Number>
+        <Number><Name>Quantity</Name><Value>20000</Value></Number>
+        <Index><Name>Underlying</Name><Value>COMM-COMDTY_WTI_USD</Value></Index>
+        <Currency><Name>PayCcy</Name><Value>EUR</Value></Currency>
+        <Number><Name>Strike</Name><Value>55</Value></Number>
+        <Event>
+          <Name>ObservationDates</Name>
+          <ScheduleData>
+            <Rules>
+              <StartDate>2019-01-01</StartDate>
+              <EndDate>2024-12-31</EndDate>
+              <Tenor>1M</Tenor>
+              <Calendar>TARGET</Calendar>
+              <Convention>F</Convention>
+              <Rule>Forward</Rule>
+            </Rules>
+          </ScheduleData>
+        </Event>
+        <Event><Name>Expiry</Name><Value>2024-12-31</Value></Event>
+        <Event><Name>Settlement</Name><Value>2024-12-31</Value></Event>
+        <Number><Name>OptionFlow</Name><Value>0</Value></Number>
+      </Data>
+    </ScriptedTradeData>
+  </Trade>
+
+</Portfolio>

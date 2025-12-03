@@ -1,0 +1,39 @@
+#TradeId,ResultId,ResultType,ResultValue
+SwapLeg,PV01[1],double,95.450300
+SwapLeg,PricingConfigEngine,string,DiscountingSwapEngine
+SwapLeg,PricingConfigModel,string,DiscountedCashflows
+SwapLeg,PricingConfigProductType,string,Swap
+SwapLeg,amount[1],double,50000.000000
+SwapLeg,atmForward,double,-0.000000
+SwapLeg,currentNotional[1],double,1000000.000000
+SwapLeg,isPayer[1],bool,false
+SwapLeg,isdaAssetClass,string,Interest Rate
+SwapLeg,isdaBaseProduct,string,IR Swap
+SwapLeg,isdaSubProduct,string,Fixed Fixed
+SwapLeg,isdaTransaction,string,
+SwapLeg,legNPV[1],double,47725.150117
+SwapLeg,legType[1],string,Fixed
+SwapLeg,notionalCurrency[1],string,USD
+SwapLeg,originalNotional[1],double,1000000.000000
+SwapLeg,paymentDate[1],string,2024-02-01
+SwapLeg,rate[1],double,0.050000
+SwapLeg,startDate,string,2023-02-01
+SwapLegFlow,PV01[1],double,95.137104
+SwapLegFlow,PricingConfigEngine,string,DiscountingSwapEngine
+SwapLegFlow,PricingConfigModel,string,DiscountedCashflows
+SwapLegFlow,PricingConfigProductType,string,Swap
+SwapLegFlow,amount[1],double,49861.111111
+SwapLegFlow,atmForward,double,-0.000000
+SwapLegFlow,currentNotional[1],double,1000000.000000
+SwapLegFlow,isPayer[1],bool,false
+SwapLegFlow,isdaAssetClass,string,Interest Rate
+SwapLegFlow,isdaBaseProduct,string,IR Swap
+SwapLegFlow,isdaSubProduct,string,Fixed Fixed
+SwapLegFlow,isdaTransaction,string,
+SwapLegFlow,legNPV[1],double,47568.552161
+SwapLegFlow,legType[1],string,Fixed
+SwapLegFlow,notionalCurrency[1],string,USD
+SwapLegFlow,originalNotional[1],double,1000000.000000
+SwapLegFlow,paymentDate[1],string,2024-02-05
+SwapLegFlow,rate[1],double,0.050000
+SwapLegFlow,startDate,string,2022-02-07

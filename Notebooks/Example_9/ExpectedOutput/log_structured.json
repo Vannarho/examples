@@ -1,0 +1,1 @@
+{ "category": "Error", "group": "Trade", "message": "TradeFactory::getBuilder(Swap): no builder found", "sub_fields": [ { "name": "exceptionType", "value": "Error parsing Trade XML" }, { "name": "tradeId", "value": "Swap_20y" }, { "name": "tradeType", "value": "Swap" } ] }

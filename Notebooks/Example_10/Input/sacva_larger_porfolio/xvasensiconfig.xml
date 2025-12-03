@@ -1,0 +1,188 @@
+<?xml version="1.0"?>
+<SensitivityAnalysis>
+  <DiscountCurves>
+    <DiscountCurve ccy="EUR">
+      <ShiftType>Absolute</ShiftType>
+      <ShiftSize>1E-6</ShiftSize>
+      <ShiftTenors>6M, 1Y, 2Y, 3Y, 5Y, 7Y, 10Y</ShiftTenors>
+      <ParConversion>
+        <Instruments>DEP, DEP, DEP, DEP, OIS, OIS, OIS, OIS, OIS, OIS, OIS, OIS</Instruments>
+        <SingleCurve>true</SingleCurve>
+        <Conventions>
+          <Convention id="DEP">EUR-ON-DEPOSIT-ESTER</Convention>
+          <Convention id="OIS">EUR-ESTER-OIS</Convention>
+        </Conventions>
+      </ParConversion>
+    </DiscountCurve>
+  </DiscountCurves>
+  <IndexCurves>
+    <IndexCurve index="EUR-ESTER">
+      <ShiftType>Absolute</ShiftType>
+      <ShiftSize>1E-6</ShiftSize>
+      <ShiftTenors>6M, 1Y, 2Y, 3Y, 5Y, 7Y, 10Y</ShiftTenors>
+      <ParConversion>
+        <Instruments>DEP, DEP, DEP, DEP, OIS, OIS, OIS, OIS, OIS, OIS, OIS, OIS</Instruments>
+        <SingleCurve>true</SingleCurve>
+        <Conventions>
+          <Convention id="DEP">EUR-ON-DEPOSIT-ESTER</Convention>
+          <Convention id="OIS">EUR-ESTER-OIS</Convention>
+        </Conventions>
+      </ParConversion>
+    </IndexCurve>
+    <IndexCurve index="EUR-EURIBOR-3M">
+      <ShiftType>Absolute</ShiftType>
+      <ShiftSize>1E-6</ShiftSize>
+      <ShiftTenors>6M, 1Y, 2Y, 3Y, 5Y, 7Y, 10Y</ShiftTenors>
+      <ParConversion>
+        <Instruments>DEP, DEP, DEP, DEP, IRS, IRS, IRS, IRS, IRS, IRS, IRS, IRS</Instruments>
+        <SingleCurve>false</SingleCurve>
+        <Conventions>
+          <Convention id="DEP">EUR-DEPOSIT</Convention>
+          <Convention id="IRS">EUR-EURIBOR-3M-SWAP</Convention>
+        </Conventions>
+      </ParConversion>
+    </IndexCurve>
+    <IndexCurve index="EUR-EURIBOR-6M">
+      <ShiftType>Absolute</ShiftType>
+      <ShiftSize>1E-6</ShiftSize>
+      <ShiftTenors>6M, 1Y, 2Y, 3Y, 5Y, 7Y, 10Y</ShiftTenors>
+      <ParConversion>
+        <Instruments>DEP, DEP, DEP, DEP, IRS, IRS, IRS, IRS, IRS, IRS, IRS, IRS</Instruments>
+        <SingleCurve>false</SingleCurve>
+        <Conventions>
+          <Convention id="DEP">EUR-DEPOSIT</Convention>
+          <Convention id="IRS">EUR-EURIBOR-6M-SWAP</Convention>
+        </Conventions>
+      </ParConversion>
+    </IndexCurve>
+  </IndexCurves>
+  <CreditCurves>
+    <CreditCurve name="BANK">
+      <Currency>USD</Currency>
+      <ShiftType>Absolute</ShiftType>
+      <ShiftSize>1E-6</ShiftSize>
+      <ShiftTenors>6M, 1Y, 2Y, 3Y, 5Y, 7Y, 10Y</ShiftTenors>
+    </CreditCurve>
+  </CreditCurves>
+  <EquitySpots>
+    <EquitySpot equity="SP5">
+      <ShiftType>Relative</ShiftType>
+      <ShiftSize>0.01</ShiftSize>
+      <ShiftScheme>Forward</ShiftScheme>
+    </EquitySpot>
+    <EquitySpot equity="SPX">
+      <ShiftType>Relative</ShiftType>
+      <ShiftSize>0.01</ShiftSize>
+      <ShiftScheme>Forward</ShiftScheme>
+    </EquitySpot>
+    <EquitySpot equity="SX5E">
+      <ShiftType>Relative</ShiftType>
+      <ShiftSize>0.01</ShiftSize>
+      <ShiftScheme>Forward</ShiftScheme>
+    </EquitySpot>
+    <EquitySpot equity="HSCEI">
+      <ShiftType>Relative</ShiftType>
+      <ShiftSize>0.01</ShiftSize>
+      <ShiftScheme>Forward</ShiftScheme>
+    </EquitySpot>
+  </EquitySpots>
+  <DividendYieldCurves>
+    <DividendYieldCurve equity="SP5">
+      <ShiftType>Absolute</ShiftType>
+      <ShiftSize>1.0E-6</ShiftSize>
+      <ShiftScheme>Forward</ShiftScheme>
+      <ShiftTenors>6M,1Y,2Y</ShiftTenors>
+    </DividendYieldCurve>
+    <DividendYieldCurve equity="SPX">
+      <ShiftType>Absolute</ShiftType>
+      <ShiftSize>1.0E-6</ShiftSize>
+      <ShiftScheme>Forward</ShiftScheme>
+      <ShiftTenors>6M,1Y,2Y</ShiftTenors>
+    </DividendYieldCurve>
+    <DividendYieldCurve equity="SX5E">
+      <ShiftType>Absolute</ShiftType>
+      <ShiftSize>1.0E-6</ShiftSize>
+      <ShiftScheme>Forward</ShiftScheme>
+      <ShiftTenors>6M,1Y,2Y</ShiftTenors>
+    </DividendYieldCurve>
+    <DividendYieldCurve equity="HSCEI">
+      <ShiftType>Absolute</ShiftType>
+      <ShiftSize>1.0E-6</ShiftSize>
+      <ShiftScheme>Forward</ShiftScheme>
+      <ShiftTenors>6M,1Y,2Y</ShiftTenors>
+    </DividendYieldCurve>
+  </DividendYieldCurves>
+  <EquityVolatilities>
+    <EquityVolatility equity="SP5">
+      <ShiftType>Relative</ShiftType>
+      <ShiftSize>0.01</ShiftSize>
+      <ShiftExpiries>6M</ShiftExpiries>
+      <ShiftStrikes>0.0</ShiftStrikes>
+    </EquityVolatility>
+    <EquityVolatility equity="SPX">
+      <ShiftType>Relative</ShiftType>
+      <ShiftSize>0.01</ShiftSize>
+      <ShiftExpiries>6M</ShiftExpiries>
+      <ShiftStrikes>0.0</ShiftStrikes>
+    </EquityVolatility>
+    <EquityVolatility equity="SX5E">
+      <ShiftType>Relative</ShiftType>
+      <ShiftSize>0.01</ShiftSize>
+      <ShiftExpiries>6M</ShiftExpiries>
+      <ShiftStrikes>0.0</ShiftStrikes>
+    </EquityVolatility>
+  </EquityVolatilities>
+  <!-- Add COM to CG SA-CVA sensi set to register commodity deltas/vegas -->
+  <CommodityCurves>
+    <CommodityCurve name="COMDTY_WTI_USD">
+      <Currency>USD</Currency>
+      <ShiftType>Relative</ShiftType>
+      <ShiftSize>0.01</ShiftSize>
+      <ShiftScheme>Forward</ShiftScheme>
+      <ShiftTenors>1Y,5Y,10Y</ShiftTenors>
+    </CommodityCurve>
+    <CommodityCurve name="COMDTY_GOLD_USD">
+      <Currency>USD</Currency>
+      <ShiftType>Relative</ShiftType>
+      <ShiftSize>0.01</ShiftSize>
+      <ShiftScheme>Forward</ShiftScheme>
+      <ShiftTenors>1Y,5Y,10Y</ShiftTenors>
+    </CommodityCurve>
+  </CommodityCurves>
+  <CommodityVolatilities>
+    <CommodityVolatility name="COMDTY_WTI_USD">
+      <ShiftType>Relative</ShiftType>
+      <ShiftSize>0.01</ShiftSize>
+      <ShiftExpiries>6M,1Y,2Y,3Y,4Y,5Y,7Y,10Y</ShiftExpiries>
+      <ShiftStrikes>0.9,1.0,1.167,1.333,1.5,1.667,1.833,2.0</ShiftStrikes>
+    </CommodityVolatility>
+    <CommodityVolatility name="COMDTY_GOLD_USD">
+      <ShiftType>Relative</ShiftType>
+      <ShiftSize>0.01</ShiftSize>
+      <ShiftExpiries>1Y,5Y,10Y</ShiftExpiries>
+      <ShiftStrikes>0.0</ShiftStrikes>
+    </CommodityVolatility>
+  </CommodityVolatilities>
+  <SwaptionVolatilities>
+    <SwaptionVolatility ccy="EUR">
+      <ShiftType>Absolute</ShiftType>
+      <ShiftSize>1E-6</ShiftSize>
+      <ShiftExpiries>1Y,  2Y,  3Y, 4Y, 5Y, 7Y, 10Y, 12Y, 15Y, 20Y, 30Y</ShiftExpiries>
+      <ShiftStrikes>0.000000</ShiftStrikes>
+      <ShiftTerms>1Y,  2Y,  3Y, 4Y, 5Y, 7Y, 10Y, 12Y, 15Y, 20Y, 30Y</ShiftTerms>
+    </SwaptionVolatility>
+  </SwaptionVolatilities>
+  <ComputeGamma>false</ComputeGamma>
+  <UseSpreadedTermStructures>true</UseSpreadedTermStructures>
+  <!-- Capture quanto deltas via FX spot bump -->
+  <FxSpots>
+    <FxSpot ccypair="EURUSD">
+      <ShiftType>Relative</ShiftType>
+      <ShiftSize>0.01</ShiftSize>
+      <ShiftScheme>Forward</ShiftScheme>
+    </FxSpot>
+  </FxSpots>
+  <TwoSidedDeltaKeyTypes>
+    <RiskFactorKeyType>FXSpot</RiskFactorKeyType>
+  </TwoSidedDeltaKeyTypes>
+</SensitivityAnalysis>

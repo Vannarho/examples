@@ -1,0 +1,9 @@
+#NettingSetId,RiskType,Bucket,RiskFactor,MarginType,RiskWeight
+,Equity,11,HSCEI,Delta,0.700000
+,Equity,11,SP5,Delta,0.700000
+,Equity,11,SPX,Delta,0.700000
+,Equity,11,SX5E,Delta,0.700000
+CPTY_A,Equity,11,HSCEI,Delta,0.700000
+CPTY_A,Equity,11,SP5,Delta,0.700000
+CPTY_A,Equity,11,SPX,Delta,0.700000
+CPTY_A,Equity,11,SX5E,Delta,0.700000

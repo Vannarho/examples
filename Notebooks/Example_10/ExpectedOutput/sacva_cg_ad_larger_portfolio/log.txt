@@ -1,0 +1,322 @@
+WARNING  [2025-Dec-03 19:02:46.510124]        (VREAnalytics/vrea/app/vreapp.cpp:776) : Calendar adjustments not found, using defaults
+WARNING  [2025-Dec-03 19:02:46.510172]        (VREAnalytics/vrea/app/vreapp.cpp:786) : Currency configurations not found, using defaults
+WARNING  [2025-Dec-03 19:02:46.511069]        (VREAnalytics/vrea/app/vreapp.cpp:946) : Using default Ibor fallback config
+WARNING  [2025-Dec-03 19:02:46.511097]        (VREAnalytics/vrea/app/vreapp.cpp:954) : Using default Basel Traffic Light config
+WARNING  [2025-Dec-03 19:02:46.511878]  (...rketdata/todaysmarketparameters.cpp:205) : TodaysMarketParameters: the attribute 'currency' is deprecated for 'SwaptionVolatilities', use 'key' instead.
+WARNING  [2025-Dec-03 19:02:46.511908]  (...rketdata/todaysmarketparameters.cpp:205) : TodaysMarketParameters: the attribute 'currency' is deprecated for 'SwaptionVolatilities', use 'key' instead.
+WARNING  [2025-Dec-03 19:02:46.511926]  (...rketdata/todaysmarketparameters.cpp:205) : TodaysMarketParameters: the attribute 'currency' is deprecated for 'CapFloorVolatilities', use 'key' instead.
+WARNING  [2025-Dec-03 19:02:46.511943]  (...rketdata/todaysmarketparameters.cpp:205) : TodaysMarketParameters: the attribute 'currency' is deprecated for 'CapFloorVolatilities', use 'key' instead.
+WARNING  [2025-Dec-03 19:02:46.512297]  (...cenario/sensitivityscenariodata.cpp:289) : SensitivityData: attribute 'ccy' for SwaptionVolatilities is deprecated, use 'key' instead.
+WARNING  [2025-Dec-03 19:02:46.512471]  (...rio/scenariosimmarketparameters.cpp:760) : ScenarioSimMarket parameter Extrapolation should be FlatFwd or FlatZero, mapping deprecated boolean 'Y' to FlatFwd. Please change this in your configuration.
+WARNING  [2025-Dec-03 19:02:46.512495]  (...rio/scenariosimmarketparameters.cpp:832) : ScenarioSimMarketParameters: SwaptionVolatilities/Currencies is deprecated, use Keys instead.
+WARNING  [2025-Dec-03 19:02:46.512519]  (...io/scenariosimmarketparameters.cpp:1001) : ScenarioSimMarketParameters: CapFloorVolatilities/Currencies is deprecated, use Keys instead.
+WARNING  [2025-Dec-03 19:02:46.512591]  (.../vred/model/crossassetmodeldata.cpp:272) : Simulation/Parameters/Discretization is deprecated, use Simulation/CrossAssetModel/Discretization instead.
+WARNING  [2025-Dec-03 19:02:46.512623]         (VREData/vred/model/irlgmdata.cpp:33) : IrLgmData: attribute ccy is deprecated, use key instead.
+WARNING  [2025-Dec-03 19:02:46.512653]         (VREData/vred/model/irlgmdata.cpp:33) : IrLgmData: attribute ccy is deprecated, use key instead.
+WARNING  [2025-Dec-03 19:02:46.513331]  (...cenario/sensitivityscenariodata.cpp:289) : SensitivityData: attribute 'ccy' for SwaptionVolatilities is deprecated, use 'key' instead.
+WARNING  [2025-Dec-03 19:02:46.513361]  (...cenario/sensitivityscenariodata.cpp:289) : SensitivityData: attribute 'ccy' for SwaptionVolatilities is deprecated, use 'key' instead.
+WARNING  [2025-Dec-03 19:02:46.513406]       (VREAnalytics/vrea/app/vreapp.cpp:3166) : FRTB_SA sensitivity sim-market parameters not loaded
+WARNING  [2025-Dec-03 19:02:46.513424]       (VREAnalytics/vrea/app/vreapp.cpp:3175) : FRTB_SA sensitivity scenario data not loaded
+WARNING  [2025-Dec-03 19:02:46.513438]       (VREAnalytics/vrea/app/vreapp.cpp:3184) : Pricing-engine data not found for FRTB_SA sensitivity, using global pricingEngine
+WARNING  [2025-Dec-03 19:02:46.513502]       (VREAnalytics/vrea/app/vreapp.cpp:3439) : SACCR CRIF file not found
+WARNING  [2025-Dec-03 19:02:46.513559]        (VREAnalytics/vrea/app/vreapp.cpp:323) : Starting VREApp::analytics(): 201883648|201883648 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+WARNING  [2025-Dec-03 19:02:46.513586]        (VREAnalytics/vrea/app/vreapp.cpp:303) : dividend data file not found
+WARNING  [2025-Dec-03 19:02:46.513601]        (VREAnalytics/vrea/app/vreapp.cpp:311) : fixing cutoff date not set
+WARNING  [2025-Dec-03 19:02:46.530715]  (...ed/marketdata/marketdatumparser.cpp:727) : Deprecated MarketDatum::InstrumentType::CDS_INDEX, please use INDEX_CDS_TRANCHE/BASE_CORRELATION/IndexName/Term/DetachPoint or INDEX_CDS_TRANCHE/PRICE/IndexName/Term/AttachPoint/DetachPoint instead
+WARNING  [2025-Dec-03 19:02:46.530763]  (...ed/marketdata/marketdatumparser.cpp:727) : Deprecated MarketDatum::InstrumentType::CDS_INDEX, please use INDEX_CDS_TRANCHE/BASE_CORRELATION/IndexName/Term/DetachPoint or INDEX_CDS_TRANCHE/PRICE/IndexName/Term/AttachPoint/DetachPoint instead
+WARNING  [2025-Dec-03 19:02:46.530783]  (...ed/marketdata/marketdatumparser.cpp:727) : Deprecated MarketDatum::InstrumentType::CDS_INDEX, please use INDEX_CDS_TRANCHE/BASE_CORRELATION/IndexName/Term/DetachPoint or INDEX_CDS_TRANCHE/PRICE/IndexName/Term/AttachPoint/DetachPoint instead
+WARNING  [2025-Dec-03 19:02:46.530800]  (...ed/marketdata/marketdatumparser.cpp:727) : Deprecated MarketDatum::InstrumentType::CDS_INDEX, please use INDEX_CDS_TRANCHE/BASE_CORRELATION/IndexName/Term/DetachPoint or INDEX_CDS_TRANCHE/PRICE/IndexName/Term/AttachPoint/DetachPoint instead
+WARNING  [2025-Dec-03 19:02:46.530817]  (...ed/marketdata/marketdatumparser.cpp:727) : Deprecated MarketDatum::InstrumentType::CDS_INDEX, please use INDEX_CDS_TRANCHE/BASE_CORRELATION/IndexName/Term/DetachPoint or INDEX_CDS_TRANCHE/PRICE/IndexName/Term/AttachPoint/DetachPoint instead
+WARNING  [2025-Dec-03 19:02:46.545205]  (...guration/capfloorvolcurveconfig.cpp:142) : CapFloorVolatilityCurveConfig (EUR_CF_N): The IborIndex node is deprecated, use Index instead.
+WARNING  [2025-Dec-03 19:02:46.545299]  (...guration/capfloorvolcurveconfig.cpp:142) : CapFloorVolatilityCurveConfig (USD_CF_N): The IborIndex node is deprecated, use Index instead.
+WARNING  [2025-Dec-03 19:02:46.549985]      (VREAnalytics/vrea/app/analytic.cpp:105) : Starting PRICING Analytic::runAnalytic(): 211353600|211353600 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+WARNING  [2025-Dec-03 19:02:46.581837]  (...rtfolio/builders/scriptedtrade.cpp:1089) : no correlation provided for COMM-COMDTY_WTI_USD ~ FX-GENERIC-USD-EUR(did not find object FX-GENERIC-USD-EUR/COMM-COMDTY_WTI_USD in CorrelationCurves)
+WARNING  [2025-Dec-03 19:02:46.586924]  (VREData/vred/marketdata/fxvolcurve.cpp:923) : no fx option conventions given in fxvol curve config for EURUSD, assuming defaults
+WARNING  [2025-Dec-03 19:02:46.593676]  (...rtfolio/builders/scriptedtrade.cpp:1089) : no correlation provided for COMM-COMDTY_WTI_USD ~ FX-GENERIC-USD-EUR(did not find object FX-GENERIC-USD-EUR/COMM-COMDTY_WTI_USD in CorrelationCurves)
+WARNING  [2025-Dec-03 19:02:46.721407]  (...rtfolio/builders/scriptedtrade.cpp:1089) : no correlation provided for COMM-COMDTY_WTI_USD ~ FX-GENERIC-USD-EUR(did not find object FX-GENERIC-USD-EUR/COMM-COMDTY_WTI_USD in CorrelationCurves)
+WARNING  [2025-Dec-03 19:02:46.729558]  (...rtfolio/builders/scriptedtrade.cpp:1089) : no correlation provided for COMM-COMDTY_WTI_USD ~ FX-GENERIC-USD-EUR(did not find object FX-GENERIC-USD-EUR/COMM-COMDTY_WTI_USD in CorrelationCurves)
+WARNING  [2025-Dec-03 19:02:46.737321]  (...rtfolio/builders/scriptedtrade.cpp:1089) : no correlation provided for COMM-COMDTY_WTI_USD ~ FX-GENERIC-USD-EUR(did not find object FX-GENERIC-USD-EUR/COMM-COMDTY_WTI_USD in CorrelationCurves)
+WARNING  [2025-Dec-03 19:02:46.739092]  (...rtfolio/builders/scriptedtrade.cpp:1089) : no correlation provided for COMM-COMDTY_WTI_USD ~ FX-GENERIC-USD-EUR(did not find object FX-GENERIC-USD-EUR/COMM-COMDTY_WTI_USD in CorrelationCurves)
+WARNING  [2025-Dec-03 19:02:46.739910]  (...rtfolio/builders/scriptedtrade.cpp:1089) : no correlation provided for COMM-COMDTY_WTI_USD ~ FX-GENERIC-USD-EUR(did not find object FX-GENERIC-USD-EUR/COMM-COMDTY_WTI_USD in CorrelationCurves)
+WARNING  [2025-Dec-03 19:02:46.740729]  (...rtfolio/builders/scriptedtrade.cpp:1089) : no correlation provided for COMM-COMDTY_WTI_USD ~ FX-GENERIC-USD-EUR(did not find object FX-GENERIC-USD-EUR/COMM-COMDTY_WTI_USD in CorrelationCurves)
+WARNING  [2025-Dec-03 19:02:46.741534]  (...rtfolio/builders/scriptedtrade.cpp:1089) : no correlation provided for COMM-COMDTY_WTI_USD ~ FX-GENERIC-USD-EUR(did not find object FX-GENERIC-USD-EUR/COMM-COMDTY_WTI_USD in CorrelationCurves)
+WARNING  [2025-Dec-03 19:02:48.287333]  (...rtfolio/builders/scriptedtrade.cpp:1089) : no correlation provided for EQ-SP5 ~ EQ-SX5E(did not find object EQ-SX5E/EQ-SP5 in CorrelationCurves)
+WARNING  [2025-Dec-03 19:02:48.287416]  (...rtfolio/builders/scriptedtrade.cpp:1089) : no correlation provided for EQ-SP5 ~ FX-GENERIC-USD-EUR(did not find object FX-GENERIC-USD-EUR/EQ-SP5 in CorrelationCurves)
+WARNING  [2025-Dec-03 19:02:48.287453]  (...rtfolio/builders/scriptedtrade.cpp:1089) : no correlation provided for EQ-SX5E ~ FX-GENERIC-USD-EUR(did not find object FX-GENERIC-USD-EUR/EQ-SX5E in CorrelationCurves)
+WARNING  [2025-Dec-03 19:02:48.337084]  (...rtfolio/builders/scriptedtrade.cpp:1089) : no correlation provided for EQ-SP5 ~ EQ-SX5E(did not find object EQ-SX5E/EQ-SP5 in CorrelationCurves)
+WARNING  [2025-Dec-03 19:02:48.337153]  (...rtfolio/builders/scriptedtrade.cpp:1089) : no correlation provided for EQ-SP5 ~ FX-GENERIC-USD-EUR(did not find object FX-GENERIC-USD-EUR/EQ-SP5 in CorrelationCurves)
+WARNING  [2025-Dec-03 19:02:48.337189]  (...rtfolio/builders/scriptedtrade.cpp:1089) : no correlation provided for EQ-SX5E ~ FX-GENERIC-USD-EUR(did not find object FX-GENERIC-USD-EUR/EQ-SX5E in CorrelationCurves)
+WARNING  [2025-Dec-03 19:03:02.382632]  (.../vred/configuration/conventions.cpp:650) : receiveFrequency_ empty set to index tenor.
+WARNING  [2025-Dec-03 19:03:02.382713]  (.../vred/configuration/conventions.cpp:661) : payFrequency_ empty set to index tenor.
+WARNING  [2025-Dec-03 19:03:02.386631]      (VREAnalytics/vrea/app/analytic.cpp:110) : Finishing PRICING Analytic::runAnalytic(): 322797568|322797568 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+WARNING  [2025-Dec-03 19:03:02.386976]      (VREAnalytics/vrea/app/analytic.cpp:105) : Starting XVA Analytic::runAnalytic(): 323125248|323125248 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+ALERT    [2025-Dec-03 19:03:02.395848]  (...vrea/scenario/scenariosimmarket.cpp:139) : CurveID: YieldCurve/BENCHMARK_EUR: skipping this object in scenario sim market (scenario data was not written for this object.): did not find object BENCHMARK_EUR of type yield curve / ibor index under configuration 'xois_eur' or 'default' in YieldCurves
+WARNING  [2025-Dec-03 19:03:03.573832]  (VREData/vred/marketdata/fxvolcurve.cpp:923) : no fx option conventions given in fxvol curve config for EURUSD, assuming defaults
+ALERT    [2025-Dec-03 19:03:03.574166]  (...vrea/scenario/scenariosimmarket.cpp:139) : CurveID: DividendYield/HSCEI: skipping this object in scenario sim market (scenario data was written for this object.): did not find object USD1D_HKD of type yield curve / ibor index under configuration 'default' or 'default' in YieldCurves
+WARNING  [2025-Dec-03 19:03:03.705102]  (...rtfolio/builders/scriptedtrade.cpp:1089) : no correlation provided for COMM-COMDTY_WTI_USD ~ FX-GENERIC-USD-EUR(did not find object FX-GENERIC-USD-EUR/COMM-COMDTY_WTI_USD in CorrelationCurves)
+WARNING  [2025-Dec-03 19:03:03.706850]  (...rtfolio/builders/scriptedtrade.cpp:1089) : no correlation provided for COMM-COMDTY_WTI_USD ~ FX-GENERIC-USD-EUR(did not find object FX-GENERIC-USD-EUR/COMM-COMDTY_WTI_USD in CorrelationCurves)
+WARNING  [2025-Dec-03 19:03:03.707943]  (...rtfolio/builders/scriptedtrade.cpp:1089) : no correlation provided for COMM-COMDTY_WTI_USD ~ FX-GENERIC-USD-EUR(did not find object FX-GENERIC-USD-EUR/COMM-COMDTY_WTI_USD in CorrelationCurves)
+WARNING  [2025-Dec-03 19:03:03.708591]  (...rtfolio/builders/scriptedtrade.cpp:1089) : no correlation provided for COMM-COMDTY_WTI_USD ~ FX-GENERIC-USD-EUR(did not find object FX-GENERIC-USD-EUR/COMM-COMDTY_WTI_USD in CorrelationCurves)
+WARNING  [2025-Dec-03 19:03:03.708905]  (...rtfolio/builders/scriptedtrade.cpp:1089) : no correlation provided for COMM-COMDTY_WTI_USD ~ FX-GENERIC-USD-EUR(did not find object FX-GENERIC-USD-EUR/COMM-COMDTY_WTI_USD in CorrelationCurves)
+WARNING  [2025-Dec-03 19:03:03.709307]  (...rtfolio/builders/scriptedtrade.cpp:1089) : no correlation provided for COMM-COMDTY_WTI_USD ~ FX-GENERIC-USD-EUR(did not find object FX-GENERIC-USD-EUR/COMM-COMDTY_WTI_USD in CorrelationCurves)
+WARNING  [2025-Dec-03 19:03:03.709480]  (...rtfolio/builders/scriptedtrade.cpp:1089) : no correlation provided for COMM-COMDTY_WTI_USD ~ FX-GENERIC-USD-EUR(did not find object FX-GENERIC-USD-EUR/COMM-COMDTY_WTI_USD in CorrelationCurves)
+WARNING  [2025-Dec-03 19:03:03.709643]  (...rtfolio/builders/scriptedtrade.cpp:1089) : no correlation provided for COMM-COMDTY_WTI_USD ~ FX-GENERIC-USD-EUR(did not find object FX-GENERIC-USD-EUR/COMM-COMDTY_WTI_USD in CorrelationCurves)
+WARNING  [2025-Dec-03 19:03:03.709804]  (...rtfolio/builders/scriptedtrade.cpp:1089) : no correlation provided for COMM-COMDTY_WTI_USD ~ FX-GENERIC-USD-EUR(did not find object FX-GENERIC-USD-EUR/COMM-COMDTY_WTI_USD in CorrelationCurves)
+WARNING  [2025-Dec-03 19:03:03.710430]  (...rtfolio/builders/scriptedtrade.cpp:1089) : no correlation provided for EQ-SP5 ~ EQ-SX5E(did not find object EQ-SX5E/EQ-SP5 in CorrelationCurves)
+WARNING  [2025-Dec-03 19:03:03.710459]  (...rtfolio/builders/scriptedtrade.cpp:1089) : no correlation provided for EQ-SP5 ~ FX-GENERIC-USD-EUR(did not find object FX-GENERIC-USD-EUR/EQ-SP5 in CorrelationCurves)
+WARNING  [2025-Dec-03 19:03:03.710487]  (...rtfolio/builders/scriptedtrade.cpp:1089) : no correlation provided for EQ-SX5E ~ FX-GENERIC-USD-EUR(did not find object FX-GENERIC-USD-EUR/EQ-SX5E in CorrelationCurves)
+WARNING  [2025-Dec-03 19:03:03.710656]  (...rtfolio/builders/scriptedtrade.cpp:1089) : no correlation provided for EQ-SP5 ~ EQ-SX5E(did not find object EQ-SX5E/EQ-SP5 in CorrelationCurves)
+WARNING  [2025-Dec-03 19:03:03.710683]  (...rtfolio/builders/scriptedtrade.cpp:1089) : no correlation provided for EQ-SP5 ~ FX-GENERIC-USD-EUR(did not find object FX-GENERIC-USD-EUR/EQ-SP5 in CorrelationCurves)
+WARNING  [2025-Dec-03 19:03:03.710710]  (...rtfolio/builders/scriptedtrade.cpp:1089) : no correlation provided for EQ-SX5E ~ FX-GENERIC-USD-EUR(did not find object FX-GENERIC-USD-EUR/EQ-SX5E in CorrelationCurves)
+WARNING  [2025-Dec-03 19:03:04.324654]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #20463
+WARNING  [2025-Dec-03 19:03:04.326880]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #20461
+WARNING  [2025-Dec-03 19:03:04.329038]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #20459
+WARNING  [2025-Dec-03 19:03:04.331246]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #20457
+WARNING  [2025-Dec-03 19:03:04.333555]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #20455
+WARNING  [2025-Dec-03 19:03:04.336003]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #20453
+WARNING  [2025-Dec-03 19:03:04.338420]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #20451
+WARNING  [2025-Dec-03 19:03:04.340828]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #20449
+WARNING  [2025-Dec-03 19:03:04.343225]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #20447
+WARNING  [2025-Dec-03 19:03:04.345622]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #20445
+WARNING  [2025-Dec-03 19:03:04.348024]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #20443
+WARNING  [2025-Dec-03 19:03:04.350406]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #20441
+WARNING  [2025-Dec-03 19:03:04.352793]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #20439
+WARNING  [2025-Dec-03 19:03:04.355177]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #20437
+WARNING  [2025-Dec-03 19:03:04.357547]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #20435
+WARNING  [2025-Dec-03 19:03:04.359853]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #20433
+WARNING  [2025-Dec-03 19:03:04.362195]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #20431
+WARNING  [2025-Dec-03 19:03:04.364613]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #20429
+WARNING  [2025-Dec-03 19:03:04.367008]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #20427
+WARNING  [2025-Dec-03 19:03:04.369389]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #20425
+WARNING  [2025-Dec-03 19:03:04.371767]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #20423
+WARNING  [2025-Dec-03 19:03:04.374169]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #20421
+WARNING  [2025-Dec-03 19:03:04.376554]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #20419
+WARNING  [2025-Dec-03 19:03:04.378929]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #20417
+WARNING  [2025-Dec-03 19:03:04.379531]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #20344
+WARNING  [2025-Dec-03 19:03:04.379558]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #20342
+WARNING  [2025-Dec-03 19:03:04.379596]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #20336
+WARNING  [2025-Dec-03 19:03:04.379613]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #20335
+WARNING  [2025-Dec-03 19:03:04.379640]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #20314
+WARNING  [2025-Dec-03 19:03:04.379666]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #20308
+WARNING  [2025-Dec-03 19:03:04.379694]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #20307
+WARNING  [2025-Dec-03 19:03:04.379717]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #20282
+WARNING  [2025-Dec-03 19:03:04.379744]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #20276
+WARNING  [2025-Dec-03 19:03:04.379759]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #20275
+WARNING  [2025-Dec-03 19:03:04.379782]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #20250
+WARNING  [2025-Dec-03 19:03:04.379810]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #20244
+WARNING  [2025-Dec-03 19:03:04.379827]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #20243
+WARNING  [2025-Dec-03 19:03:04.379849]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #20218
+WARNING  [2025-Dec-03 19:03:04.379876]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #20212
+WARNING  [2025-Dec-03 19:03:04.379891]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #20211
+WARNING  [2025-Dec-03 19:03:04.379914]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #20186
+WARNING  [2025-Dec-03 19:03:04.379943]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #20180
+WARNING  [2025-Dec-03 19:03:04.379959]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #20179
+WARNING  [2025-Dec-03 19:03:04.379984]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #20175
+WARNING  [2025-Dec-03 19:03:04.380013]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #20169
+WARNING  [2025-Dec-03 19:03:04.380032]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #20168
+WARNING  [2025-Dec-03 19:03:04.380056]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #20143
+WARNING  [2025-Dec-03 19:03:04.380083]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #20137
+WARNING  [2025-Dec-03 19:03:04.380101]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #20136
+WARNING  [2025-Dec-03 19:03:04.380123]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #20111
+WARNING  [2025-Dec-03 19:03:04.380153]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #20105
+WARNING  [2025-Dec-03 19:03:04.380168]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #20104
+WARNING  [2025-Dec-03 19:03:04.380190]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #20079
+WARNING  [2025-Dec-03 19:03:04.380217]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #20073
+WARNING  [2025-Dec-03 19:03:04.380232]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #20072
+WARNING  [2025-Dec-03 19:03:04.380254]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #20047
+WARNING  [2025-Dec-03 19:03:04.380280]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #20041
+WARNING  [2025-Dec-03 19:03:04.380295]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #20040
+WARNING  [2025-Dec-03 19:03:04.380320]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #20015
+WARNING  [2025-Dec-03 19:03:04.380346]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #20009
+WARNING  [2025-Dec-03 19:03:04.380361]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #20008
+WARNING  [2025-Dec-03 19:03:04.380386]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #19993
+WARNING  [2025-Dec-03 19:03:04.380413]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #19987
+WARNING  [2025-Dec-03 19:03:04.380428]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #19986
+WARNING  [2025-Dec-03 19:03:04.380450]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #19971
+WARNING  [2025-Dec-03 19:03:04.380477]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #19965
+WARNING  [2025-Dec-03 19:03:04.380492]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #19964
+WARNING  [2025-Dec-03 19:03:04.380516]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #19949
+WARNING  [2025-Dec-03 19:03:04.380542]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #19943
+WARNING  [2025-Dec-03 19:03:04.380558]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #19942
+WARNING  [2025-Dec-03 19:03:04.380580]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #19938
+WARNING  [2025-Dec-03 19:03:04.380608]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #19932
+WARNING  [2025-Dec-03 19:03:04.380623]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #19931
+WARNING  [2025-Dec-03 19:03:04.380650]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #19916
+WARNING  [2025-Dec-03 19:03:04.380678]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #19910
+WARNING  [2025-Dec-03 19:03:04.380693]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #19909
+WARNING  [2025-Dec-03 19:03:04.380716]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #19894
+WARNING  [2025-Dec-03 19:03:04.380742]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #19888
+WARNING  [2025-Dec-03 19:03:04.380757]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #19887
+WARNING  [2025-Dec-03 19:03:04.380781]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #19872
+WARNING  [2025-Dec-03 19:03:04.380808]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #19866
+WARNING  [2025-Dec-03 19:03:04.380825]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #19865
+WARNING  [2025-Dec-03 19:03:04.380848]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #19850
+WARNING  [2025-Dec-03 19:03:04.380874]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #19844
+WARNING  [2025-Dec-03 19:03:04.380889]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #19843
+WARNING  [2025-Dec-03 19:03:04.380912]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #19828
+WARNING  [2025-Dec-03 19:03:04.380938]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #19822
+WARNING  [2025-Dec-03 19:03:04.380953]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #19821
+WARNING  [2025-Dec-03 19:03:04.380976]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #19806
+WARNING  [2025-Dec-03 19:03:04.381005]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #19800
+WARNING  [2025-Dec-03 19:03:04.381020]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #19799
+WARNING  [2025-Dec-03 19:03:04.381042]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #19784
+WARNING  [2025-Dec-03 19:03:04.381070]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #19778
+WARNING  [2025-Dec-03 19:03:04.381087]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #19777
+WARNING  [2025-Dec-03 19:03:04.383873]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #19530
+WARNING  [2025-Dec-03 19:03:04.383912]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #19528
+WARNING  [2025-Dec-03 19:03:04.383942]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #19524
+WARNING  [2025-Dec-03 19:03:04.383960]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #19522
+WARNING  [2025-Dec-03 19:03:04.383991]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #19502
+WARNING  [2025-Dec-03 19:03:04.384021]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #19498
+WARNING  [2025-Dec-03 19:03:04.384038]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #19496
+WARNING  [2025-Dec-03 19:03:04.384442]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #16367
+WARNING  [2025-Dec-03 19:03:04.384474]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #16365
+WARNING  [2025-Dec-03 19:03:04.384501]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #16359
+WARNING  [2025-Dec-03 19:03:04.384516]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #16358
+WARNING  [2025-Dec-03 19:03:04.384539]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #16335
+WARNING  [2025-Dec-03 19:03:04.384566]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #16329
+WARNING  [2025-Dec-03 19:03:04.384581]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #16328
+WARNING  [2025-Dec-03 19:03:04.384607]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #16305
+WARNING  [2025-Dec-03 19:03:04.384634]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #16299
+WARNING  [2025-Dec-03 19:03:04.384649]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #16298
+WARNING  [2025-Dec-03 19:03:04.384671]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #16275
+WARNING  [2025-Dec-03 19:03:04.384700]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #16269
+WARNING  [2025-Dec-03 19:03:04.384715]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #16268
+WARNING  [2025-Dec-03 19:03:04.384737]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #16245
+WARNING  [2025-Dec-03 19:03:04.384765]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #16239
+WARNING  [2025-Dec-03 19:03:04.384780]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #16238
+WARNING  [2025-Dec-03 19:03:04.384815]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #16215
+WARNING  [2025-Dec-03 19:03:04.384843]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #16209
+WARNING  [2025-Dec-03 19:03:04.384858]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #16208
+WARNING  [2025-Dec-03 19:03:04.384880]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #16185
+WARNING  [2025-Dec-03 19:03:04.384906]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #16179
+WARNING  [2025-Dec-03 19:03:04.384921]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #16178
+WARNING  [2025-Dec-03 19:03:04.384943]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #16155
+WARNING  [2025-Dec-03 19:03:04.384969]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #16149
+WARNING  [2025-Dec-03 19:03:04.384984]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #16148
+WARNING  [2025-Dec-03 19:03:04.385007]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #16125
+WARNING  [2025-Dec-03 19:03:04.385033]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #16119
+WARNING  [2025-Dec-03 19:03:04.385048]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #16118
+WARNING  [2025-Dec-03 19:03:04.385070]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #16095
+WARNING  [2025-Dec-03 19:03:04.385095]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #16089
+WARNING  [2025-Dec-03 19:03:04.385117]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #16088
+WARNING  [2025-Dec-03 19:03:04.385140]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #16065
+WARNING  [2025-Dec-03 19:03:04.385169]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #16059
+WARNING  [2025-Dec-03 19:03:04.385184]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #16058
+WARNING  [2025-Dec-03 19:03:04.385207]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #16035
+WARNING  [2025-Dec-03 19:03:04.385233]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #16029
+WARNING  [2025-Dec-03 19:03:04.385248]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #16028
+WARNING  [2025-Dec-03 19:03:04.407092]  (...io/sensitivityscenariogenerator.cpp:455) : Currency USD in simmarket is not included in sensitivities analysis
+WARNING  [2025-Dec-03 19:03:04.407159]  (...io/sensitivityscenariogenerator.cpp:455) : Currency HKD in simmarket is not included in sensitivities analysis
+WARNING  [2025-Dec-03 19:03:04.407236]  (...io/sensitivityscenariogenerator.cpp:455) : Currency USD in simmarket is not included in sensitivities analysis
+WARNING  [2025-Dec-03 19:03:04.407258]  (...io/sensitivityscenariogenerator.cpp:455) : Currency HKD in simmarket is not included in sensitivities analysis
+WARNING  [2025-Dec-03 19:03:04.407275]  (...io/sensitivityscenariogenerator.cpp:560) : Index EUR-EONIA in simmarket is not included in sensitivities analysis
+WARNING  [2025-Dec-03 19:03:04.407291]  (...io/sensitivityscenariogenerator.cpp:560) : Index USD-FedFunds in simmarket is not included in sensitivities analysis
+WARNING  [2025-Dec-03 19:03:04.407306]  (...io/sensitivityscenariogenerator.cpp:560) : Index USD-LIBOR-3M in simmarket is not included in sensitivities analysis
+WARNING  [2025-Dec-03 19:03:04.407320]  (...io/sensitivityscenariogenerator.cpp:560) : Index USD-LIBOR-6M in simmarket is not included in sensitivities analysis
+WARNING  [2025-Dec-03 19:03:04.407376]  (...io/sensitivityscenariogenerator.cpp:593) : Day counter lookup in simulation market failed for index EUR-ESTER, using default A365
+ALERT    [2025-Dec-03 19:03:04.407419]  (...io/sensitivityscenariogenerator.cpp:260) : skip scenario generation for key IndexCurve/EUR-ESTER/0: SimpleScenario does not provide data for key IndexCurve/EUR-ESTER/0
+WARNING  [2025-Dec-03 19:03:04.407475]  (...io/sensitivityscenariogenerator.cpp:560) : Index EUR-EONIA in simmarket is not included in sensitivities analysis
+WARNING  [2025-Dec-03 19:03:04.407490]  (...io/sensitivityscenariogenerator.cpp:560) : Index USD-FedFunds in simmarket is not included in sensitivities analysis
+WARNING  [2025-Dec-03 19:03:04.407505]  (...io/sensitivityscenariogenerator.cpp:560) : Index USD-LIBOR-3M in simmarket is not included in sensitivities analysis
+WARNING  [2025-Dec-03 19:03:04.407522]  (...io/sensitivityscenariogenerator.cpp:560) : Index USD-LIBOR-6M in simmarket is not included in sensitivities analysis
+WARNING  [2025-Dec-03 19:03:04.407537]  (...io/sensitivityscenariogenerator.cpp:708) : Yield Curve BENCHMARK_EUR in simmarket is not included in sensitivities analysis
+WARNING  [2025-Dec-03 19:03:04.407559]  (...io/sensitivityscenariogenerator.cpp:708) : Yield Curve BENCHMARK_EUR in simmarket is not included in sensitivities analysis
+WARNING  [2025-Dec-03 19:03:04.407584]  (...io/sensitivityscenariogenerator.cpp:352) : FX pair EURHKD in simmarket is not included in sensitivities analysis
+WARNING  [2025-Dec-03 19:03:04.407599]  (...io/sensitivityscenariogenerator.cpp:352) : FX pair HKDEUR in simmarket is not included in sensitivities analysis
+WARNING  [2025-Dec-03 19:03:04.407616]  (...io/sensitivityscenariogenerator.cpp:352) : FX pair EURHKD in simmarket is not included in sensitivities analysis
+WARNING  [2025-Dec-03 19:03:04.407639]  (...io/sensitivityscenariogenerator.cpp:352) : FX pair HKDEUR in simmarket is not included in sensitivities analysis
+WARNING  [2025-Dec-03 19:03:04.440489]      (VREAnalytics/vrea/app/analytic.cpp:110) : Finishing XVA Analytic::runAnalytic(): 536592384|536592384 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+WARNING  [2025-Dec-03 19:03:04.454054]      (VREAnalytics/vrea/app/analytic.cpp:105) : Starting SACCR Analytic::runAnalytic(): 536608768|536608768 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+WARNING  [2025-Dec-03 19:03:04.484718]  (...rtfolio/builders/scriptedtrade.cpp:1089) : no correlation provided for COMM-COMDTY_WTI_USD ~ FX-GENERIC-USD-EUR(did not find object FX-GENERIC-USD-EUR/COMM-COMDTY_WTI_USD in CorrelationCurves)
+WARNING  [2025-Dec-03 19:03:04.489534]  (VREData/vred/marketdata/fxvolcurve.cpp:923) : no fx option conventions given in fxvol curve config for EURUSD, assuming defaults
+WARNING  [2025-Dec-03 19:03:04.496168]  (...rtfolio/builders/scriptedtrade.cpp:1089) : no correlation provided for COMM-COMDTY_WTI_USD ~ FX-GENERIC-USD-EUR(did not find object FX-GENERIC-USD-EUR/COMM-COMDTY_WTI_USD in CorrelationCurves)
+WARNING  [2025-Dec-03 19:03:04.623380]  (...rtfolio/builders/scriptedtrade.cpp:1089) : no correlation provided for COMM-COMDTY_WTI_USD ~ FX-GENERIC-USD-EUR(did not find object FX-GENERIC-USD-EUR/COMM-COMDTY_WTI_USD in CorrelationCurves)
+WARNING  [2025-Dec-03 19:03:04.631592]  (...rtfolio/builders/scriptedtrade.cpp:1089) : no correlation provided for COMM-COMDTY_WTI_USD ~ FX-GENERIC-USD-EUR(did not find object FX-GENERIC-USD-EUR/COMM-COMDTY_WTI_USD in CorrelationCurves)
+WARNING  [2025-Dec-03 19:03:04.639373]  (...rtfolio/builders/scriptedtrade.cpp:1089) : no correlation provided for COMM-COMDTY_WTI_USD ~ FX-GENERIC-USD-EUR(did not find object FX-GENERIC-USD-EUR/COMM-COMDTY_WTI_USD in CorrelationCurves)
+WARNING  [2025-Dec-03 19:03:04.641057]  (...rtfolio/builders/scriptedtrade.cpp:1089) : no correlation provided for COMM-COMDTY_WTI_USD ~ FX-GENERIC-USD-EUR(did not find object FX-GENERIC-USD-EUR/COMM-COMDTY_WTI_USD in CorrelationCurves)
+WARNING  [2025-Dec-03 19:03:04.641862]  (...rtfolio/builders/scriptedtrade.cpp:1089) : no correlation provided for COMM-COMDTY_WTI_USD ~ FX-GENERIC-USD-EUR(did not find object FX-GENERIC-USD-EUR/COMM-COMDTY_WTI_USD in CorrelationCurves)
+WARNING  [2025-Dec-03 19:03:04.642672]  (...rtfolio/builders/scriptedtrade.cpp:1089) : no correlation provided for COMM-COMDTY_WTI_USD ~ FX-GENERIC-USD-EUR(did not find object FX-GENERIC-USD-EUR/COMM-COMDTY_WTI_USD in CorrelationCurves)
+WARNING  [2025-Dec-03 19:03:04.643462]  (...rtfolio/builders/scriptedtrade.cpp:1089) : no correlation provided for COMM-COMDTY_WTI_USD ~ FX-GENERIC-USD-EUR(did not find object FX-GENERIC-USD-EUR/COMM-COMDTY_WTI_USD in CorrelationCurves)
+WARNING  [2025-Dec-03 19:03:06.193300]  (...rtfolio/builders/scriptedtrade.cpp:1089) : no correlation provided for EQ-SP5 ~ EQ-SX5E(did not find object EQ-SX5E/EQ-SP5 in CorrelationCurves)
+WARNING  [2025-Dec-03 19:03:06.193391]  (...rtfolio/builders/scriptedtrade.cpp:1089) : no correlation provided for EQ-SP5 ~ FX-GENERIC-USD-EUR(did not find object FX-GENERIC-USD-EUR/EQ-SP5 in CorrelationCurves)
+WARNING  [2025-Dec-03 19:03:06.193428]  (...rtfolio/builders/scriptedtrade.cpp:1089) : no correlation provided for EQ-SX5E ~ FX-GENERIC-USD-EUR(did not find object FX-GENERIC-USD-EUR/EQ-SX5E in CorrelationCurves)
+WARNING  [2025-Dec-03 19:03:06.242904]  (...rtfolio/builders/scriptedtrade.cpp:1089) : no correlation provided for EQ-SP5 ~ EQ-SX5E(did not find object EQ-SX5E/EQ-SP5 in CorrelationCurves)
+WARNING  [2025-Dec-03 19:03:06.242956]  (...rtfolio/builders/scriptedtrade.cpp:1089) : no correlation provided for EQ-SP5 ~ FX-GENERIC-USD-EUR(did not find object FX-GENERIC-USD-EUR/EQ-SP5 in CorrelationCurves)
+WARNING  [2025-Dec-03 19:03:06.242987]  (...rtfolio/builders/scriptedtrade.cpp:1089) : no correlation provided for EQ-SX5E ~ FX-GENERIC-USD-EUR(did not find object FX-GENERIC-USD-EUR/EQ-SX5E in CorrelationCurves)
+WARNING  [2025-Dec-03 19:03:20.164439]  (...cr/calculation/singletradeaddon.cpp:235) : Trade ComAsian_GOLD_Monthly_Long_USD has unrecognized asset class=''. Setting adjustedNotional_ to 0.
+WARNING  [2025-Dec-03 19:03:20.164512]  (...cr/calculation/singletradeaddon.cpp:278) : Trade ComAsian_GOLD_Monthly_Long_USD has empty BuySell flag. Assuming 'Buy' for supervisory‑delta.
+WARNING  [2025-Dec-03 19:03:20.164543]  (...cr/calculation/singletradeaddon.cpp:235) : Trade ComAsian_WTI_Monthly_EUR has unrecognized asset class=''. Setting adjustedNotional_ to 0.
+WARNING  [2025-Dec-03 19:03:20.164564]  (...cr/calculation/singletradeaddon.cpp:278) : Trade ComAsian_WTI_Monthly_EUR has empty BuySell flag. Assuming 'Buy' for supervisory‑delta.
+WARNING  [2025-Dec-03 19:03:20.164580]  (...cr/calculation/singletradeaddon.cpp:235) : Trade ComAsian_WTI_Monthly_Long_EUR has unrecognized asset class=''. Setting adjustedNotional_ to 0.
+WARNING  [2025-Dec-03 19:03:20.164598]  (...cr/calculation/singletradeaddon.cpp:278) : Trade ComAsian_WTI_Monthly_Long_EUR has empty BuySell flag. Assuming 'Buy' for supervisory‑delta.
+WARNING  [2025-Dec-03 19:03:20.164614]  (...cr/calculation/singletradeaddon.cpp:235) : Trade ComBarrier_WTI_UpIn_EUR has unrecognized asset class=''. Setting adjustedNotional_ to 0.
+WARNING  [2025-Dec-03 19:03:20.164629]  (...cr/calculation/singletradeaddon.cpp:278) : Trade ComBarrier_WTI_UpIn_EUR has empty BuySell flag. Assuming 'Buy' for supervisory‑delta.
+WARNING  [2025-Dec-03 19:03:20.164645]  (...cr/calculation/singletradeaddon.cpp:235) : Trade ComBerm_WTI_QuantoEUR has unrecognized asset class=''. Setting adjustedNotional_ to 0.
+WARNING  [2025-Dec-03 19:03:20.164659]  (...cr/calculation/singletradeaddon.cpp:278) : Trade ComBerm_WTI_QuantoEUR has empty BuySell flag. Assuming 'Buy' for supervisory‑delta.
+WARNING  [2025-Dec-03 19:03:20.164673]  (...cr/calculation/singletradeaddon.cpp:235) : Trade ComDigital_WTI_Call_EUR has unrecognized asset class=''. Setting adjustedNotional_ to 0.
+WARNING  [2025-Dec-03 19:03:20.164687]  (...cr/calculation/singletradeaddon.cpp:278) : Trade ComDigital_WTI_Call_EUR has empty BuySell flag. Assuming 'Buy' for supervisory‑delta.
+WARNING  [2025-Dec-03 19:03:20.164702]  (...cr/calculation/singletradeaddon.cpp:235) : Trade ComFwd_GOLD_USD has unrecognized asset class=''. Setting adjustedNotional_ to 0.
+WARNING  [2025-Dec-03 19:03:20.164716]  (...cr/calculation/singletradeaddon.cpp:278) : Trade ComFwd_GOLD_USD has empty BuySell flag. Assuming 'Buy' for supervisory‑delta.
+WARNING  [2025-Dec-03 19:03:20.164731]  (...cr/calculation/singletradeaddon.cpp:235) : Trade ComFwd_GOLD_USD_Long2024 has unrecognized asset class=''. Setting adjustedNotional_ to 0.
+WARNING  [2025-Dec-03 19:03:20.164745]  (...cr/calculation/singletradeaddon.cpp:278) : Trade ComFwd_GOLD_USD_Long2024 has empty BuySell flag. Assuming 'Buy' for supervisory‑delta.
+WARNING  [2025-Dec-03 19:03:20.164759]  (...cr/calculation/singletradeaddon.cpp:235) : Trade ComFwd_WTI_QuantoEUR has unrecognized asset class=''. Setting adjustedNotional_ to 0.
+WARNING  [2025-Dec-03 19:03:20.164773]  (...cr/calculation/singletradeaddon.cpp:278) : Trade ComFwd_WTI_QuantoEUR has empty BuySell flag. Assuming 'Buy' for supervisory‑delta.
+WARNING  [2025-Dec-03 19:03:20.164787]  (...cr/calculation/singletradeaddon.cpp:235) : Trade ComFwd_WTI_QuantoEUR_10Y has unrecognized asset class=''. Setting adjustedNotional_ to 0.
+WARNING  [2025-Dec-03 19:03:20.164800]  (...cr/calculation/singletradeaddon.cpp:278) : Trade ComFwd_WTI_QuantoEUR_10Y has empty BuySell flag. Assuming 'Buy' for supervisory‑delta.
+WARNING  [2025-Dec-03 19:03:20.164814]  (...cr/calculation/singletradeaddon.cpp:235) : Trade ComFwd_WTI_QuantoEUR_5Y has unrecognized asset class=''. Setting adjustedNotional_ to 0.
+WARNING  [2025-Dec-03 19:03:20.164828]  (...cr/calculation/singletradeaddon.cpp:278) : Trade ComFwd_WTI_QuantoEUR_5Y has empty BuySell flag. Assuming 'Buy' for supervisory‑delta.
+WARNING  [2025-Dec-03 19:03:20.164842]  (...cr/calculation/singletradeaddon.cpp:235) : Trade ComFwd_WTI_QuantoEUR_Long2024 has unrecognized asset class=''. Setting adjustedNotional_ to 0.
+WARNING  [2025-Dec-03 19:03:20.164864]  (...cr/calculation/singletradeaddon.cpp:278) : Trade ComFwd_WTI_QuantoEUR_Long2024 has empty BuySell flag. Assuming 'Buy' for supervisory‑delta.
+WARNING  [2025-Dec-03 19:03:20.164879]  (...cr/calculation/singletradeaddon.cpp:235) : Trade EqAmer_SP5_Weekly has unrecognized asset class=''. Setting adjustedNotional_ to 0.
+WARNING  [2025-Dec-03 19:03:20.164893]  (...cr/calculation/singletradeaddon.cpp:278) : Trade EqAmer_SP5_Weekly has empty BuySell flag. Assuming 'Buy' for supervisory‑delta.
+WARNING  [2025-Dec-03 19:03:20.164907]  (...cr/calculation/singletradeaddon.cpp:235) : Trade EqAsianBasket_Domestic has unrecognized asset class=''. Setting adjustedNotional_ to 0.
+WARNING  [2025-Dec-03 19:03:20.164921]  (...cr/calculation/singletradeaddon.cpp:278) : Trade EqAsianBasket_Domestic has empty BuySell flag. Assuming 'Buy' for supervisory‑delta.
+WARNING  [2025-Dec-03 19:03:20.164934]  (...cr/calculation/singletradeaddon.cpp:235) : Trade EqAsianBasket_Quanto has unrecognized asset class=''. Setting adjustedNotional_ to 0.
+WARNING  [2025-Dec-03 19:03:20.164948]  (...cr/calculation/singletradeaddon.cpp:278) : Trade EqAsianBasket_Quanto has empty BuySell flag. Assuming 'Buy' for supervisory‑delta.
+WARNING  [2025-Dec-03 19:03:20.164962]  (...cr/calculation/singletradeaddon.cpp:235) : Trade EqBarrier_UO_SP5 has unrecognized asset class=''. Setting adjustedNotional_ to 0.
+WARNING  [2025-Dec-03 19:03:20.164976]  (...cr/calculation/singletradeaddon.cpp:278) : Trade EqBarrier_UO_SP5 has empty BuySell flag. Assuming 'Buy' for supervisory‑delta.
+WARNING  [2025-Dec-03 19:03:20.164990]  (...cr/calculation/singletradeaddon.cpp:235) : Trade EqBerm_SP5_Monthly has unrecognized asset class=''. Setting adjustedNotional_ to 0.
+WARNING  [2025-Dec-03 19:03:20.165003]  (...cr/calculation/singletradeaddon.cpp:278) : Trade EqBerm_SP5_Monthly has empty BuySell flag. Assuming 'Buy' for supervisory‑delta.
+WARNING  [2025-Dec-03 19:03:20.165017]  (...cr/calculation/singletradeaddon.cpp:235) : Trade EqCall_SP5 has unrecognized asset class=''. Setting adjustedNotional_ to 0.
+WARNING  [2025-Dec-03 19:03:20.165031]  (...cr/calculation/singletradeaddon.cpp:278) : Trade EqCall_SP5 has empty BuySell flag. Assuming 'Buy' for supervisory‑delta.
+WARNING  [2025-Dec-03 19:03:20.165045]  (...cr/calculation/singletradeaddon.cpp:235) : Trade EqDigital_SP5 has unrecognized asset class=''. Setting adjustedNotional_ to 0.
+WARNING  [2025-Dec-03 19:03:20.165058]  (...cr/calculation/singletradeaddon.cpp:278) : Trade EqDigital_SP5 has empty BuySell flag. Assuming 'Buy' for supervisory‑delta.
+WARNING  [2025-Dec-03 19:03:20.165072]  (...cr/calculation/singletradeaddon.cpp:235) : Trade EqFwd_HSCEI has unrecognized asset class=''. Setting adjustedNotional_ to 0.
+WARNING  [2025-Dec-03 19:03:20.165086]  (...cr/calculation/singletradeaddon.cpp:278) : Trade EqFwd_HSCEI has empty BuySell flag. Assuming 'Buy' for supervisory‑delta.
+WARNING  [2025-Dec-03 19:03:20.165100]  (...cr/calculation/singletradeaddon.cpp:235) : Trade EqFwd_SP5 has unrecognized asset class=''. Setting adjustedNotional_ to 0.
+WARNING  [2025-Dec-03 19:03:20.165113]  (...cr/calculation/singletradeaddon.cpp:278) : Trade EqFwd_SP5 has empty BuySell flag. Assuming 'Buy' for supervisory‑delta.
+WARNING  [2025-Dec-03 19:03:20.165127]  (...cr/calculation/singletradeaddon.cpp:235) : Trade EqFwd_SPX has unrecognized asset class=''. Setting adjustedNotional_ to 0.
+WARNING  [2025-Dec-03 19:03:20.165141]  (...cr/calculation/singletradeaddon.cpp:278) : Trade EqFwd_SPX has empty BuySell flag. Assuming 'Buy' for supervisory‑delta.
+WARNING  [2025-Dec-03 19:03:20.165154]  (...cr/calculation/singletradeaddon.cpp:235) : Trade EqFwd_SX5E has unrecognized asset class=''. Setting adjustedNotional_ to 0.
+WARNING  [2025-Dec-03 19:03:20.165168]  (...cr/calculation/singletradeaddon.cpp:278) : Trade EqFwd_SX5E has empty BuySell flag. Assuming 'Buy' for supervisory‑delta.
+WARNING  [2025-Dec-03 19:03:20.165186]  (...cr/calculation/singletradeaddon.cpp:235) : Trade EqPut_SP5 has unrecognized asset class=''. Setting adjustedNotional_ to 0.
+WARNING  [2025-Dec-03 19:03:20.165201]  (...cr/calculation/singletradeaddon.cpp:278) : Trade EqPut_SP5 has empty BuySell flag. Assuming 'Buy' for supervisory‑delta.
+ALERT    [2025-Dec-03 19:03:20.167084]  (...vrea/saccr/crif/crifdatamapping.cpp:290) : crifdatamapping: generated 57 CRIF records
+WARNING  [2025-Dec-03 19:03:20.167277]      (VREAnalytics/vrea/app/analytic.cpp:110) : Finishing SACCR Analytic::runAnalytic(): 588234752|588234752 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+WARNING  [2025-Dec-03 19:03:20.174004]      (VREAnalytics/vrea/app/analytic.cpp:105) : Starting XVA_SENSITIVITY Analytic::runAnalytic(): 588234752|588234752 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+WARNING  [2025-Dec-03 19:03:20.174095]  (...rea/sacva/sacvasensitivityloader.cpp:73) : Failed to parse risk factor description 'spot' in risk factor FXSpot/EURUSD/0/spot into a period
+WARNING  [2025-Dec-03 19:03:20.174120]  (...rea/sacva/sacvasensitivityloader.cpp:73) : Failed to parse risk factor description 'spot' in risk factor EquitySpot/SP5/0/spot into a period
+WARNING  [2025-Dec-03 19:03:20.174140]  (...rea/sacva/sacvasensitivityloader.cpp:73) : Failed to parse risk factor description 'spot' in risk factor EquitySpot/SPX/0/spot into a period
+WARNING  [2025-Dec-03 19:03:20.174159]  (...rea/sacva/sacvasensitivityloader.cpp:73) : Failed to parse risk factor description 'spot' in risk factor EquitySpot/SX5E/0/spot into a period
+ALERT    [2025-Dec-03 19:03:20.174177]  (...ea/sacva/sacvasensitivityloader.cpp:137) : Cannot distinguish CreditReference from CreditCounterparty risk for risk factor SurvivalProbability/BANK/0/6M
+WARNING  [2025-Dec-03 19:03:20.174194]      (VREAnalytics/vrea/app/analytic.cpp:110) : Finishing XVA_SENSITIVITY Analytic::runAnalytic(): 588349440|588349440 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+WARNING  [2025-Dec-03 19:03:20.174212]      (VREAnalytics/vrea/app/analytic.cpp:105) : Starting SA_CVA Analytic::runAnalytic(): 588349440|588349440 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+WARNING  [2025-Dec-03 19:03:20.174228]      (VREAnalytics/vrea/app/analytic.cpp:105) : Starting XVA_SENSITIVITY Analytic::runAnalytic(): 588349440|588349440 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+WARNING  [2025-Dec-03 19:03:20.174244]  (...vrea/app/analytics/sacvaanalytic.cpp:66) : SA-CVA: raw CVA sensi provider size=11
+WARNING  [2025-Dec-03 19:03:20.174374]  (...tics/vrea/sacva/sacvacalculator.cpp:299) : no hedge sensitivity found for CreditCounterparty 2 Delta BANK/6M, treating as zero hedge in hedged mode
+WARNING  [2025-Dec-03 19:03:20.174398]  (...tics/vrea/sacva/sacvacalculator.cpp:299) : no hedge sensitivity found for Equity 11 Delta HSCEI, treating as zero hedge in hedged mode
+WARNING  [2025-Dec-03 19:03:20.174414]  (...tics/vrea/sacva/sacvacalculator.cpp:299) : no hedge sensitivity found for Equity 11 Delta SP5, treating as zero hedge in hedged mode
+WARNING  [2025-Dec-03 19:03:20.174429]  (...tics/vrea/sacva/sacvacalculator.cpp:299) : no hedge sensitivity found for Equity 11 Delta SPX, treating as zero hedge in hedged mode
+WARNING  [2025-Dec-03 19:03:20.174444]  (...tics/vrea/sacva/sacvacalculator.cpp:299) : no hedge sensitivity found for Equity 11 Delta SX5E, treating as zero hedge in hedged mode
+WARNING  [2025-Dec-03 19:03:20.174460]  (...tics/vrea/sacva/sacvacalculator.cpp:299) : no hedge sensitivity found for Commodity 1 Delta COMDTY_WTI_USD, treating as zero hedge in hedged mode
+WARNING  [2025-Dec-03 19:03:20.174475]  (...tics/vrea/sacva/sacvacalculator.cpp:299) : no hedge sensitivity found for Commodity 2 Delta COMDTY_GOLD_USD, treating as zero hedge in hedged mode
+WARNING  [2025-Dec-03 19:03:20.174495]  (...tics/vrea/sacva/sacvacalculator.cpp:299) : no hedge sensitivity found for CreditCounterparty 2 Delta BANK/6M, treating as zero hedge in hedged mode
+WARNING  [2025-Dec-03 19:03:20.174511]  (...tics/vrea/sacva/sacvacalculator.cpp:299) : no hedge sensitivity found for Equity 11 Delta HSCEI, treating as zero hedge in hedged mode
+WARNING  [2025-Dec-03 19:03:20.174529]  (...tics/vrea/sacva/sacvacalculator.cpp:299) : no hedge sensitivity found for Equity 11 Delta SP5, treating as zero hedge in hedged mode
+WARNING  [2025-Dec-03 19:03:20.174544]  (...tics/vrea/sacva/sacvacalculator.cpp:299) : no hedge sensitivity found for Equity 11 Delta SPX, treating as zero hedge in hedged mode
+WARNING  [2025-Dec-03 19:03:20.174558]  (...tics/vrea/sacva/sacvacalculator.cpp:299) : no hedge sensitivity found for Equity 11 Delta SX5E, treating as zero hedge in hedged mode
+WARNING  [2025-Dec-03 19:03:20.174573]  (...tics/vrea/sacva/sacvacalculator.cpp:299) : no hedge sensitivity found for Commodity 1 Delta COMDTY_WTI_USD, treating as zero hedge in hedged mode
+WARNING  [2025-Dec-03 19:03:20.174588]  (...tics/vrea/sacva/sacvacalculator.cpp:299) : no hedge sensitivity found for Commodity 2 Delta COMDTY_GOLD_USD, treating as zero hedge in hedged mode
+WARNING  [2025-Dec-03 19:03:20.174615]      (VREAnalytics/vrea/app/analytic.cpp:110) : Finishing SA_CVA Analytic::runAnalytic(): 588447744|588447744 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+WARNING  [2025-Dec-03 19:03:20.182812]        (VREAnalytics/vrea/app/vreapp.cpp:425) : Finishing VREApp::analytics(): 588464128|588464128 (peakMemoryUsage (bytes) | memoryUsage (bytes))

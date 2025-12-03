@@ -1,0 +1,17 @@
+#NettingSet,RiskType,CvaType,MarginType,RiskFactor,Bucket,FxOrientation,Value
+,ForeignExchange,CvaAggregate,Delta,FXSpot,USD,USDEUR,1004.3575
+,CreditCounterparty,CvaAggregate,Delta,BANK/6M,2,USDEUR,1279314.9877
+,Equity,CvaAggregate,Delta,HSCEI,11,USDEUR,-6747.7048
+,Equity,CvaAggregate,Delta,SP5,11,USDEUR,4530.2074
+,Equity,CvaAggregate,Delta,SPX,11,USDEUR,-6490.7519
+,Equity,CvaAggregate,Delta,SX5E,11,USDEUR,-13338.9010
+,Commodity,CvaAggregate,Delta,COMDTY_GOLD_USD,2,USDEUR,31.0947
+,Commodity,CvaAggregate,Delta,COMDTY_WTI_USD,1,USDEUR,301.5501
+CPTY_A,ForeignExchange,CvaAggregate,Delta,FXSpot,USD,USDEUR,1004.3575
+CPTY_A,CreditCounterparty,CvaAggregate,Delta,BANK/6M,2,USDEUR,1279314.9877
+CPTY_A,Equity,CvaAggregate,Delta,HSCEI,11,USDEUR,-6747.7048
+CPTY_A,Equity,CvaAggregate,Delta,SP5,11,USDEUR,4530.2074
+CPTY_A,Equity,CvaAggregate,Delta,SPX,11,USDEUR,-6490.7519
+CPTY_A,Equity,CvaAggregate,Delta,SX5E,11,USDEUR,-13338.9010
+CPTY_A,Commodity,CvaAggregate,Delta,COMDTY_GOLD_USD,2,USDEUR,31.0947
+CPTY_A,Commodity,CvaAggregate,Delta,COMDTY_WTI_USD,1,USDEUR,301.5501

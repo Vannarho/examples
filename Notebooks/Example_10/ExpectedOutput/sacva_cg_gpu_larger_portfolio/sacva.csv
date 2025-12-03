@@ -1,0 +1,17 @@
+#NettingSetId,RiskType,MarginType,Bucket,Analytic,Value
+,All,All,All,SA_CVA_CAPITAL,77990.4441
+CPTY_A,All,All,All,SA_CVA_CAPITAL,77990.4441
+,CreditCounterparty,Delta,2,SA_CVA_CAPITAL,63965.7494
+,CreditCounterparty,Delta,All,SA_CVA_CAPITAL,63965.7494
+,Equity,Delta,11,SA_CVA_CAPITAL,13931.4414
+,Equity,Delta,All,SA_CVA_CAPITAL,13931.4414
+,Commodity,Delta,1,SA_CVA_CAPITAL,90.4650
+,Commodity,Delta,2,SA_CVA_CAPITAL,10.8831
+,Commodity,Delta,All,SA_CVA_CAPITAL,93.2533
+CPTY_A,CreditCounterparty,Delta,2,SA_CVA_CAPITAL,63965.7494
+CPTY_A,CreditCounterparty,Delta,All,SA_CVA_CAPITAL,63965.7494
+CPTY_A,Equity,Delta,11,SA_CVA_CAPITAL,13931.4414
+CPTY_A,Equity,Delta,All,SA_CVA_CAPITAL,13931.4414
+CPTY_A,Commodity,Delta,1,SA_CVA_CAPITAL,90.4650
+CPTY_A,Commodity,Delta,2,SA_CVA_CAPITAL,10.8831
+CPTY_A,Commodity,Delta,All,SA_CVA_CAPITAL,93.2533

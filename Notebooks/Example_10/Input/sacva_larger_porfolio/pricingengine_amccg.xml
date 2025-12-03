@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<PricingEngines>
+  <Product type="ScriptedTrade">
+    <Model>Generic</Model>
+    <ModelParameters>
+      <Parameter name="Model">GaussianCam</Parameter>
+      <Parameter name="BaseCcy">EUR</Parameter>
+      <Parameter name="EnforceBaseCcy">false</Parameter>
+      <Parameter name="GridCoarsening">3M(1W),1Y(1M),5Y(3M),10Y(1Y),50Y(5Y)</Parameter>
+      <Parameter name="IrReversion_EUR">0.01</Parameter>
+      <Parameter name="IrReversion_GBP">0.01</Parameter>
+      <Parameter name="IrReversion_USD">0.01</Parameter>
+      <Parameter name="IrReversion_HKD">0.01</Parameter>
+      <Parameter name="FullDynamicFx">true</Parameter>
+      <Parameter name="FullDynamicIr">true</Parameter>
+      <Parameter name="InfModelType">JY</Parameter>
+      <!-- CG: Measure and scheme (model-level semantics) -->
+      <!-- EquityCgUseDomesticMeasure: if true, evolve EQ under domestic measure (parity/sensi-critical)
+           Allowed values: true | false -->
+      <Parameter name="EquityCgUseDomesticMeasure">true</Parameter>
+      <!-- EquityCgUseMidpoint: if true, sample H/sigma at midpoint per step (stability, better matching)
+           Allowed values: true | false -->
+      <Parameter name="EquityCgUseMidpoint">true</Parameter>
+      <!-- CommodityCgUseDomesticMeasure: domestic measure for COM (WTI/GOLD), aligns quanto drift to base ccy
+           Allowed values: true | false -->
+      <Parameter name="CommodityCgUseDomesticMeasure">true</Parameter>
+    </ModelParameters>
+    <Engine>Generic</Engine>
+    <EngineParameters>
+      <Parameter name="Engine">MC</Parameter>
+      <Parameter name="Samples">8192</Parameter>
+      <Parameter name="RegressionOrder">4</Parameter>
+      <Parameter name="TimeStepsPerYear">24</Parameter>
+      <Parameter name="Interactive">false</Parameter>
+      <Parameter name="BootstrapTolerance">1.0</Parameter>
+      <Parameter name="ZeroVolatility">false</Parameter>
+      <Parameter name="Interactive">false</Parameter>
+      <Parameter name="UseCG">true</Parameter>
+      <!-- CG: CE/regression behavior (engine-level) -->
+      <!-- CeOnlyAddReg: if true, CE uses only explicit addRegressors (no model state in CE), improves AAD stability
+           Allowed values: true | false -->
+      <Parameter name="CeOnlyAddReg">true</Parameter>
+      <!-- AdCeFreezeBasis: freeze CE basis during backprop (stabilises AAD); mirrors historical env VRE_AD_CE_FREEZE_BASIS
+           Allowed values: true | false -->
+      <Parameter name="AdCeFreezeBasis">true</Parameter>
+
+
+      <!-- ScriptedTrade CG controls can be specified here flat, or nested under <ScriptedTradeCg> below.
+           The builder currently supports both forms; the nested block is preferred for clarity. -->
+      <ScriptedTradeCg>
+        <!-- American-style exercise and basis controls -->
+        <!-- AmericanCGExerciseGridPolicy: controls how exercise dates are regressed
+             Allowed values: Hybrid | Weekly | Monthly -->
+        <Parameter name="AmericanCGExerciseGridPolicy">Hybrid</Parameter>
+        <!-- AmericanCGHybridNearWeeks: near-expiry weekly window length when using Hybrid policy
+             Allowed values: positive integer (e.g., 26) -->
+        <Parameter name="AmericanCGHybridNearWeeks">26</Parameter>
+        <!-- AmericanCGBasisType: choose second regressor; default Ln
+             Allowed values: Const | Time | H2 | Ln | Y2 -->
+        <Parameter name="AmericanCGBasisType">Ln</Parameter>
+        <!-- AmericanCGAlwaysContinue: if true, always take continuation (diagnostic)
+             Allowed values: true | false -->
+        <Parameter name="AmericanCGAlwaysContinue">false</Parameter>
+
+        <!-- Bermudan-style LSM controls -->
+        <!-- BermudanCGCenterRegressors: if true, center regressors per date (recommended)
+             Allowed values: true | false -->
+        <Parameter name="BermudanCGCenterRegressors">true</Parameter>
+        <!-- BermudanCGFirstStepAddY: if true, include scaled-Y regressor at first NPV step (tuning)
+             Allowed values: true | false -->
+        <Parameter name="BermudanCGFirstStepAddY">false</Parameter>
+      </ScriptedTradeCg>
+    </EngineParameters>
+  </Product>
+  <Product type="Swap">
+    <Model>CrossAssetModel</Model>
+    <ModelParameters/>
+    <Engine>AMCCG</Engine>
+    <EngineParameters/>
+  </Product>
+  <Product type="FxForward">
+    <Model>CrossAssetModel</Model>
+    <ModelParameters/>
+    <Engine>AMCCG</Engine>
+    <EngineParameters/>
+  </Product>
+  <Product type="CrossCurrencySwap">
+    <Model>CrossAssetModel</Model>
+    <ModelParameters/>
+    <Engine>AMCCG</Engine>
+    <EngineParameters/>
+  </Product>
+  <Product type="FxOption">
+    <Model>CrossAssetModel</Model>
+    <ModelParameters/>
+    <Engine>AMCCG</Engine>
+    <EngineParameters/>
+  </Product>
+  <Product type="EquityForward">
+    <Model>DiscountedCashflows</Model>
+    <ModelParameters/>
+    <Engine>DiscountingEquityForwardEngine</Engine>
+    <EngineParameters/>
+  </Product>
+  <Product type="EquityOption">
+    <Model>BlackScholesMerton</Model>
+    <ModelParameters/>
+    <Engine>AnalyticEuropeanEngine</Engine>
+    <EngineParameters/>
+  </Product>
+  <Product type="BermudanSwaption">
+    <Model>LGM</Model>
+    <ModelParameters/>
+    <Engine>AMCCG</Engine>
+    <EngineParameters/>
+  </Product>
+  <Product type="MultiLegOption">
+    <Model>CrossAssetModel</Model>
+    <ModelParameters/>
+    <Engine>AMCCG</Engine>
+    <EngineParameters/>
+  </Product>
+</PricingEngines>

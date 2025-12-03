@@ -1,0 +1,9 @@
+{ "@timestamp": "2025-12-03T09:03:02.387000", "key": "Running XVA Analytic", "progress": 0, "total": 1 }
+{ "@timestamp": "2025-12-03T09:03:02.387371", "key": "XVA: Build Today's Market", "progress": 0, "total": 1 }
+{ "@timestamp": "2025-12-03T09:03:02.387964", "key": "XVA: Build Today's Market", "progress": 1, "total": 1 }
+{ "@timestamp": "2025-12-03T09:03:03.643480", "key": "XVA: CG Build", "progress": 0, "total": 1 }
+{ "@timestamp": "2025-12-03T09:03:03.986740", "key": "XVA: CG Build", "progress": 1, "total": 1 }
+{ "@timestamp": "2025-12-03T09:03:03.987086", "key": "XVA: Forward Evaluation", "progress": 0, "total": 1 }
+{ "@timestamp": "2025-12-03T09:03:04.323047", "key": "XVA: Forward Evaluation", "progress": 1, "total": 1 }
+{ "@timestamp": "2025-12-03T09:03:04.323166", "key": "XVA: Backward Derivatives", "progress": 0, "total": 1 }
+{ "@timestamp": "2025-12-03T09:03:04.438814", "key": "XVA: Backward Derivatives", "progress": 1, "total": 1 }

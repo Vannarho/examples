@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<NettingSetDefinitions>
+  <NettingSet>
+    <NettingSetId>NS1</NettingSetId>
+    <ActiveCSAFlag>true</ActiveCSAFlag>
+    <CSADetails>
+      <Bilateral>Bilateral</Bilateral>
+      <CSACurrency>USD</CSACurrency>
+      <Index>EUR-EONIA</Index>
+      <ThresholdPay>0</ThresholdPay>
+      <ThresholdReceive>0</ThresholdReceive>
+      <MinimumTransferAmountPay>5000</MinimumTransferAmountPay>
+      <MinimumTransferAmountReceive>5000</MinimumTransferAmountReceive>
+      <IndependentAmount>
+        <IndependentAmountHeld>150000</IndependentAmountHeld>
+        <IndependentAmountType>FIXED</IndependentAmountType>
+      </IndependentAmount>
+      <MarginingFrequency>
+        <CallFrequency>5D</CallFrequency>
+        <PostFrequency>5D</PostFrequency>
+      </MarginingFrequency>
+      <MarginPeriodOfRisk>10D</MarginPeriodOfRisk>
+      <CollateralCompoundingSpreadReceive>0.00</CollateralCompoundingSpreadReceive>
+      <CollateralCompoundingSpreadPay>0.00</CollateralCompoundingSpreadPay>
+      <EligibleCollaterals>
+        <Currencies>
+          <Currency>USD</Currency>
+        </Currencies>
+      </EligibleCollaterals>
+    </CSADetails>
+  </NettingSet>
+</NettingSetDefinitions>

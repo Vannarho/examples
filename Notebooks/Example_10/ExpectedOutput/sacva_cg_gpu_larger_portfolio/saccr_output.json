@@ -1,0 +1,748 @@
+{
+    "counterparties": [
+        {
+            "EAD": 67826091.77715363,
+            "PFE": 0.0,
+            "addon": 0.0,
+            "id": "CPTY_A",
+            "index": 0,
+            "nettingSets": [
+                {
+                    "EAD": 67826091.77715363,
+                    "PFE": 0.0,
+                    "addon": 0.0,
+                    "alpha": 1.4,
+                    "applyMarginCallDisputes": false,
+                    "assetClasses": {
+                        "Commodity": {
+                            "addon": 0.0
+                        },
+                        "Credit": {
+                            "addon": 0.0,
+                            "idiosynchraticComponent": 0.0,
+                            "systematicComponent": 0.0
+                        },
+                        "Equity": {
+                            "addon": 0.0,
+                            "idiosynchraticComponent": 0.0,
+                            "systematicComponent": 0.0
+                        },
+                        "FX": {
+                            "addon": 0.0
+                        },
+                        "IRD": {
+                            "addon": 0.0
+                        },
+                        "Other": {
+                            "addon": 0.0,
+                            "otherSubClasses": [
+                                {
+                                    "addon": 0.0,
+                                    "otherSubClass": "normal_trades_",
+                                    "supervisoryFactor": 0.08,
+                                    "trades": [
+                                        {
+                                            "exposure": {
+                                                "adjustedNotional": 0.0,
+                                                "effectiveNotional": 0.0,
+                                                "maturityFactor": 1.0,
+                                                "supervisoryDelta": 1.0
+                                            },
+                                            "id": "ComAsian_GOLD_Monthly_Long_USD",
+                                            "trade": {
+                                                "assetClass": "",
+                                                "buySell": "",
+                                                "counterparty": "CPTY_A",
+                                                "creditRating": "",
+                                                "currency": "USD",
+                                                "fixingDays": 0,
+                                                "id": "ComAsian_GOLD_Monthly_Long_USD",
+                                                "isAveraged": false,
+                                                "mTm": 993892.0780450813,
+                                                "nettingSet": "CPTY_A",
+                                                "optionType": "",
+                                                "payLegType": "Fixed",
+                                                "quantity": 0,
+                                                "recLegType": "Floating",
+                                                "subClass": "",
+                                                "timeBucket": 0,
+                                                "tradeType": "CommodityAsianArithmeticCG"
+                                            }
+                                        },
+                                        {
+                                            "exposure": {
+                                                "adjustedNotional": 0.0,
+                                                "effectiveNotional": 0.0,
+                                                "maturityFactor": 1.0,
+                                                "supervisoryDelta": 1.0
+                                            },
+                                            "id": "ComAsian_WTI_Monthly_EUR",
+                                            "trade": {
+                                                "assetClass": "",
+                                                "buySell": "",
+                                                "counterparty": "CPTY_A",
+                                                "creditRating": "",
+                                                "currency": "EUR",
+                                                "fixingDays": 0,
+                                                "id": "ComAsian_WTI_Monthly_EUR",
+                                                "isAveraged": false,
+                                                "mTm": 0.0,
+                                                "nettingSet": "CPTY_A",
+                                                "optionType": "",
+                                                "payLegType": "Fixed",
+                                                "quantity": 0,
+                                                "recLegType": "Floating",
+                                                "subClass": "",
+                                                "timeBucket": 0,
+                                                "tradeType": "CommodityAsianArithmeticCG"
+                                            }
+                                        },
+                                        {
+                                            "exposure": {
+                                                "adjustedNotional": 0.0,
+                                                "effectiveNotional": 0.0,
+                                                "maturityFactor": 1.0,
+                                                "supervisoryDelta": 1.0
+                                            },
+                                            "id": "ComAsian_WTI_Monthly_Long_EUR",
+                                            "trade": {
+                                                "assetClass": "",
+                                                "buySell": "",
+                                                "counterparty": "CPTY_A",
+                                                "creditRating": "",
+                                                "currency": "EUR",
+                                                "fixingDays": 0,
+                                                "id": "ComAsian_WTI_Monthly_Long_EUR",
+                                                "isAveraged": false,
+                                                "mTm": 788.6978532671928,
+                                                "nettingSet": "CPTY_A",
+                                                "optionType": "",
+                                                "payLegType": "Fixed",
+                                                "quantity": 0,
+                                                "recLegType": "Floating",
+                                                "subClass": "",
+                                                "timeBucket": 0,
+                                                "tradeType": "CommodityAsianArithmeticCG"
+                                            }
+                                        },
+                                        {
+                                            "exposure": {
+                                                "adjustedNotional": 0.0,
+                                                "effectiveNotional": 0.0,
+                                                "maturityFactor": 1.0,
+                                                "supervisoryDelta": 1.0
+                                            },
+                                            "id": "ComBarrier_WTI_UpIn_EUR",
+                                            "trade": {
+                                                "assetClass": "",
+                                                "buySell": "",
+                                                "counterparty": "CPTY_A",
+                                                "creditRating": "",
+                                                "currency": "EUR",
+                                                "fixingDays": 0,
+                                                "id": "ComBarrier_WTI_UpIn_EUR",
+                                                "isAveraged": false,
+                                                "mTm": 1.9045403003692627,
+                                                "nettingSet": "CPTY_A",
+                                                "optionType": "",
+                                                "payLegType": "Fixed",
+                                                "quantity": 0,
+                                                "recLegType": "Floating",
+                                                "subClass": "",
+                                                "timeBucket": 0,
+                                                "tradeType": "CommodityBarrierOptionCG"
+                                            }
+                                        },
+                                        {
+                                            "exposure": {
+                                                "adjustedNotional": 0.0,
+                                                "effectiveNotional": 0.0,
+                                                "maturityFactor": 1.0,
+                                                "supervisoryDelta": 1.0
+                                            },
+                                            "id": "ComBerm_WTI_QuantoEUR",
+                                            "trade": {
+                                                "assetClass": "",
+                                                "buySell": "",
+                                                "counterparty": "CPTY_A",
+                                                "creditRating": "",
+                                                "currency": "EUR",
+                                                "fixingDays": 0,
+                                                "id": "ComBerm_WTI_QuantoEUR",
+                                                "isAveraged": false,
+                                                "mTm": 0.0,
+                                                "nettingSet": "CPTY_A",
+                                                "optionType": "",
+                                                "payLegType": "Fixed",
+                                                "quantity": 0,
+                                                "recLegType": "Floating",
+                                                "subClass": "",
+                                                "timeBucket": 0,
+                                                "tradeType": "CommodityBermudanVanillaCG"
+                                            }
+                                        },
+                                        {
+                                            "exposure": {
+                                                "adjustedNotional": 0.0,
+                                                "effectiveNotional": 0.0,
+                                                "maturityFactor": 1.0,
+                                                "supervisoryDelta": 1.0
+                                            },
+                                            "id": "ComDigital_WTI_Call_EUR",
+                                            "trade": {
+                                                "assetClass": "",
+                                                "buySell": "",
+                                                "counterparty": "CPTY_A",
+                                                "creditRating": "",
+                                                "currency": "EUR",
+                                                "fixingDays": 0,
+                                                "id": "ComDigital_WTI_Call_EUR",
+                                                "isAveraged": false,
+                                                "mTm": 185.22010803222656,
+                                                "nettingSet": "CPTY_A",
+                                                "optionType": "",
+                                                "payLegType": "Fixed",
+                                                "quantity": 0,
+                                                "recLegType": "Floating",
+                                                "subClass": "",
+                                                "timeBucket": 0,
+                                                "tradeType": "CommodityDigitalCG"
+                                            }
+                                        },
+                                        {
+                                            "exposure": {
+                                                "adjustedNotional": 0.0,
+                                                "effectiveNotional": 0.0,
+                                                "maturityFactor": 1.0,
+                                                "supervisoryDelta": 1.0
+                                            },
+                                            "id": "ComFwd_GOLD_USD",
+                                            "trade": {
+                                                "assetClass": "",
+                                                "buySell": "",
+                                                "counterparty": "CPTY_A",
+                                                "creditRating": "",
+                                                "currency": "USD",
+                                                "fixingDays": 0,
+                                                "id": "ComFwd_GOLD_USD",
+                                                "isAveraged": false,
+                                                "mTm": -468343.7079878375,
+                                                "nettingSet": "CPTY_A",
+                                                "optionType": "",
+                                                "payLegType": "Fixed",
+                                                "quantity": 0,
+                                                "recLegType": "Floating",
+                                                "subClass": "",
+                                                "timeBucket": 0,
+                                                "tradeType": "CommodityForward"
+                                            }
+                                        },
+                                        {
+                                            "exposure": {
+                                                "adjustedNotional": 0.0,
+                                                "effectiveNotional": 0.0,
+                                                "maturityFactor": 1.0,
+                                                "supervisoryDelta": 1.0
+                                            },
+                                            "id": "ComFwd_GOLD_USD_Long2024",
+                                            "trade": {
+                                                "assetClass": "",
+                                                "buySell": "",
+                                                "counterparty": "CPTY_A",
+                                                "creditRating": "",
+                                                "currency": "USD",
+                                                "fixingDays": 0,
+                                                "id": "ComFwd_GOLD_USD_Long2024",
+                                                "isAveraged": false,
+                                                "mTm": -605381.4716825485,
+                                                "nettingSet": "CPTY_A",
+                                                "optionType": "",
+                                                "payLegType": "Fixed",
+                                                "quantity": 0,
+                                                "recLegType": "Floating",
+                                                "subClass": "",
+                                                "timeBucket": 0,
+                                                "tradeType": "CommodityForward"
+                                            }
+                                        },
+                                        {
+                                            "exposure": {
+                                                "adjustedNotional": 0.0,
+                                                "effectiveNotional": 0.0,
+                                                "maturityFactor": 1.0,
+                                                "supervisoryDelta": 1.0
+                                            },
+                                            "id": "ComFwd_WTI_QuantoEUR",
+                                            "trade": {
+                                                "assetClass": "",
+                                                "buySell": "",
+                                                "counterparty": "CPTY_A",
+                                                "creditRating": "",
+                                                "currency": "EUR",
+                                                "fixingDays": 0,
+                                                "id": "ComFwd_WTI_QuantoEUR",
+                                                "isAveraged": false,
+                                                "mTm": -426099.05341171846,
+                                                "nettingSet": "CPTY_A",
+                                                "optionType": "",
+                                                "payLegType": "Fixed",
+                                                "quantity": 0,
+                                                "recLegType": "Floating",
+                                                "subClass": "",
+                                                "timeBucket": 0,
+                                                "tradeType": "CommodityForward"
+                                            }
+                                        },
+                                        {
+                                            "exposure": {
+                                                "adjustedNotional": 0.0,
+                                                "effectiveNotional": 0.0,
+                                                "maturityFactor": 1.0,
+                                                "supervisoryDelta": 1.0
+                                            },
+                                            "id": "ComFwd_WTI_QuantoEUR_10Y",
+                                            "trade": {
+                                                "assetClass": "",
+                                                "buySell": "",
+                                                "counterparty": "CPTY_A",
+                                                "creditRating": "",
+                                                "currency": "EUR",
+                                                "fixingDays": 0,
+                                                "id": "ComFwd_WTI_QuantoEUR_10Y",
+                                                "isAveraged": false,
+                                                "mTm": -1165031.7626129687,
+                                                "nettingSet": "CPTY_A",
+                                                "optionType": "",
+                                                "payLegType": "Fixed",
+                                                "quantity": 0,
+                                                "recLegType": "Floating",
+                                                "subClass": "",
+                                                "timeBucket": 0,
+                                                "tradeType": "CommodityForward"
+                                            }
+                                        },
+                                        {
+                                            "exposure": {
+                                                "adjustedNotional": 0.0,
+                                                "effectiveNotional": 0.0,
+                                                "maturityFactor": 1.0,
+                                                "supervisoryDelta": 1.0
+                                            },
+                                            "id": "ComFwd_WTI_QuantoEUR_5Y",
+                                            "trade": {
+                                                "assetClass": "",
+                                                "buySell": "",
+                                                "counterparty": "CPTY_A",
+                                                "creditRating": "",
+                                                "currency": "EUR",
+                                                "fixingDays": 0,
+                                                "id": "ComFwd_WTI_QuantoEUR_5Y",
+                                                "isAveraged": false,
+                                                "mTm": -932092.3237104714,
+                                                "nettingSet": "CPTY_A",
+                                                "optionType": "",
+                                                "payLegType": "Fixed",
+                                                "quantity": 0,
+                                                "recLegType": "Floating",
+                                                "subClass": "",
+                                                "timeBucket": 0,
+                                                "tradeType": "CommodityForward"
+                                            }
+                                        },
+                                        {
+                                            "exposure": {
+                                                "adjustedNotional": 0.0,
+                                                "effectiveNotional": 0.0,
+                                                "maturityFactor": 1.0,
+                                                "supervisoryDelta": 1.0
+                                            },
+                                            "id": "ComFwd_WTI_QuantoEUR_Long2024",
+                                            "trade": {
+                                                "assetClass": "",
+                                                "buySell": "",
+                                                "counterparty": "CPTY_A",
+                                                "creditRating": "",
+                                                "currency": "EUR",
+                                                "fixingDays": 0,
+                                                "id": "ComFwd_WTI_QuantoEUR_Long2024",
+                                                "isAveraged": false,
+                                                "mTm": -1373056.247612819,
+                                                "nettingSet": "CPTY_A",
+                                                "optionType": "",
+                                                "payLegType": "Fixed",
+                                                "quantity": 0,
+                                                "recLegType": "Floating",
+                                                "subClass": "",
+                                                "timeBucket": 0,
+                                                "tradeType": "CommodityForward"
+                                            }
+                                        },
+                                        {
+                                            "exposure": {
+                                                "adjustedNotional": 0.0,
+                                                "effectiveNotional": 0.0,
+                                                "maturityFactor": 1.0,
+                                                "supervisoryDelta": 1.0
+                                            },
+                                            "id": "EqAmer_SP5_Weekly",
+                                            "trade": {
+                                                "assetClass": "",
+                                                "buySell": "",
+                                                "counterparty": "CPTY_A",
+                                                "creditRating": "",
+                                                "currency": "USD",
+                                                "fixingDays": 0,
+                                                "id": "EqAmer_SP5_Weekly",
+                                                "isAveraged": false,
+                                                "mTm": 589289.0625,
+                                                "nettingSet": "CPTY_A",
+                                                "optionType": "",
+                                                "payLegType": "Fixed",
+                                                "quantity": 0,
+                                                "recLegType": "Floating",
+                                                "subClass": "",
+                                                "timeBucket": 0,
+                                                "tradeType": "EquityAmericanVanillaCG"
+                                            }
+                                        },
+                                        {
+                                            "exposure": {
+                                                "adjustedNotional": 0.0,
+                                                "effectiveNotional": 0.0,
+                                                "maturityFactor": 1.0,
+                                                "supervisoryDelta": 1.0
+                                            },
+                                            "id": "EqAsianBasket_Domestic",
+                                            "trade": {
+                                                "assetClass": "",
+                                                "buySell": "",
+                                                "counterparty": "CPTY_A",
+                                                "creditRating": "",
+                                                "currency": "EUR",
+                                                "fixingDays": 0,
+                                                "id": "EqAsianBasket_Domestic",
+                                                "isAveraged": false,
+                                                "mTm": 6601394.830698397,
+                                                "nettingSet": "CPTY_A",
+                                                "notional": 5000.0,
+                                                "optionType": "",
+                                                "payLegType": "Fixed",
+                                                "quantity": 0,
+                                                "recLegType": "Floating",
+                                                "subClass": "",
+                                                "timeBucket": 0,
+                                                "tradeType": "AsianBasketOption"
+                                            }
+                                        },
+                                        {
+                                            "exposure": {
+                                                "adjustedNotional": 0.0,
+                                                "effectiveNotional": 0.0,
+                                                "maturityFactor": 1.0,
+                                                "supervisoryDelta": 1.0
+                                            },
+                                            "id": "EqAsianBasket_Quanto",
+                                            "trade": {
+                                                "assetClass": "",
+                                                "buySell": "",
+                                                "counterparty": "CPTY_A",
+                                                "creditRating": "",
+                                                "currency": "EUR",
+                                                "fixingDays": 0,
+                                                "id": "EqAsianBasket_Quanto",
+                                                "isAveraged": false,
+                                                "mTm": 5857677.466560274,
+                                                "nettingSet": "CPTY_A",
+                                                "notional": 5000.0,
+                                                "optionType": "",
+                                                "payLegType": "Fixed",
+                                                "quantity": 0,
+                                                "recLegType": "Floating",
+                                                "subClass": "",
+                                                "timeBucket": 0,
+                                                "tradeType": "AsianBasketOption"
+                                            }
+                                        },
+                                        {
+                                            "exposure": {
+                                                "adjustedNotional": 0.0,
+                                                "effectiveNotional": 0.0,
+                                                "maturityFactor": 1.0,
+                                                "supervisoryDelta": 1.0
+                                            },
+                                            "id": "EqBarrier_UO_SP5",
+                                            "trade": {
+                                                "assetClass": "",
+                                                "buySell": "",
+                                                "counterparty": "CPTY_A",
+                                                "creditRating": "",
+                                                "currency": "USD",
+                                                "fixingDays": 0,
+                                                "id": "EqBarrier_UO_SP5",
+                                                "isAveraged": false,
+                                                "mTm": 28255.433049544692,
+                                                "nettingSet": "CPTY_A",
+                                                "optionType": "",
+                                                "payLegType": "Fixed",
+                                                "quantity": 0,
+                                                "recLegType": "Floating",
+                                                "subClass": "",
+                                                "timeBucket": 0,
+                                                "tradeType": "EquityBarrierOptionCG"
+                                            }
+                                        },
+                                        {
+                                            "exposure": {
+                                                "adjustedNotional": 0.0,
+                                                "effectiveNotional": 0.0,
+                                                "maturityFactor": 1.0,
+                                                "supervisoryDelta": 1.0
+                                            },
+                                            "id": "EqBerm_SP5_Monthly",
+                                            "trade": {
+                                                "assetClass": "",
+                                                "buySell": "",
+                                                "counterparty": "CPTY_A",
+                                                "creditRating": "",
+                                                "currency": "USD",
+                                                "fixingDays": 0,
+                                                "id": "EqBerm_SP5_Monthly",
+                                                "isAveraged": false,
+                                                "mTm": 0.0,
+                                                "nettingSet": "CPTY_A",
+                                                "optionType": "",
+                                                "payLegType": "Fixed",
+                                                "quantity": 0,
+                                                "recLegType": "Floating",
+                                                "subClass": "",
+                                                "timeBucket": 0,
+                                                "tradeType": "EquityBermudanVanillaCG"
+                                            }
+                                        },
+                                        {
+                                            "exposure": {
+                                                "adjustedNotional": 0.0,
+                                                "effectiveNotional": 0.0,
+                                                "maturityFactor": 1.0,
+                                                "supervisoryDelta": 1.0
+                                            },
+                                            "id": "EqCall_SP5",
+                                            "trade": {
+                                                "assetClass": "",
+                                                "buySell": "",
+                                                "counterparty": "CPTY_A",
+                                                "creditRating": "",
+                                                "currency": "USD",
+                                                "fixingDays": 0,
+                                                "id": "EqCall_SP5",
+                                                "isAveraged": false,
+                                                "mTm": 4916824.773316398,
+                                                "nettingSet": "CPTY_A",
+                                                "optionType": "",
+                                                "payLegType": "Fixed",
+                                                "quantity": 0,
+                                                "recLegType": "Floating",
+                                                "subClass": "",
+                                                "timeBucket": 0,
+                                                "tradeType": "EquityOption"
+                                            }
+                                        },
+                                        {
+                                            "exposure": {
+                                                "adjustedNotional": 0.0,
+                                                "effectiveNotional": 0.0,
+                                                "maturityFactor": 1.0,
+                                                "supervisoryDelta": 1.0
+                                            },
+                                            "id": "EqDigital_SP5",
+                                            "trade": {
+                                                "assetClass": "",
+                                                "buySell": "",
+                                                "counterparty": "CPTY_A",
+                                                "creditRating": "",
+                                                "currency": "USD",
+                                                "fixingDays": 0,
+                                                "id": "EqDigital_SP5",
+                                                "isAveraged": false,
+                                                "mTm": 18456.90040397644,
+                                                "nettingSet": "CPTY_A",
+                                                "optionType": "",
+                                                "payLegType": "Fixed",
+                                                "quantity": 0,
+                                                "recLegType": "Floating",
+                                                "subClass": "",
+                                                "timeBucket": 0,
+                                                "tradeType": "EquityDigitalCG"
+                                            }
+                                        },
+                                        {
+                                            "exposure": {
+                                                "adjustedNotional": 0.0,
+                                                "effectiveNotional": 0.0,
+                                                "maturityFactor": 1.0,
+                                                "supervisoryDelta": 1.0
+                                            },
+                                            "id": "EqFwd_HSCEI",
+                                            "trade": {
+                                                "assetClass": "",
+                                                "buySell": "",
+                                                "counterparty": "CPTY_A",
+                                                "creditRating": "",
+                                                "currency": "HKD",
+                                                "fixingDays": 0,
+                                                "id": "EqFwd_HSCEI",
+                                                "isAveraged": false,
+                                                "mTm": 36611937.28723068,
+                                                "nettingSet": "CPTY_A",
+                                                "optionType": "",
+                                                "payLegType": "Fixed",
+                                                "quantity": 0,
+                                                "recLegType": "Floating",
+                                                "subClass": "",
+                                                "timeBucket": 0,
+                                                "tradeType": "EquityForward"
+                                            }
+                                        },
+                                        {
+                                            "exposure": {
+                                                "adjustedNotional": 0.0,
+                                                "effectiveNotional": 0.0,
+                                                "maturityFactor": 1.0,
+                                                "supervisoryDelta": 1.0
+                                            },
+                                            "id": "EqFwd_SP5",
+                                            "trade": {
+                                                "assetClass": "",
+                                                "buySell": "",
+                                                "counterparty": "CPTY_A",
+                                                "creditRating": "",
+                                                "currency": "USD",
+                                                "fixingDays": 0,
+                                                "id": "EqFwd_SP5",
+                                                "isAveraged": false,
+                                                "mTm": 569054.0640079901,
+                                                "nettingSet": "CPTY_A",
+                                                "optionType": "",
+                                                "payLegType": "Fixed",
+                                                "quantity": 0,
+                                                "recLegType": "Floating",
+                                                "subClass": "",
+                                                "timeBucket": 0,
+                                                "tradeType": "EquityForward"
+                                            }
+                                        },
+                                        {
+                                            "exposure": {
+                                                "adjustedNotional": 0.0,
+                                                "effectiveNotional": 0.0,
+                                                "maturityFactor": 1.0,
+                                                "supervisoryDelta": 1.0
+                                            },
+                                            "id": "EqFwd_SPX",
+                                            "trade": {
+                                                "assetClass": "",
+                                                "buySell": "",
+                                                "counterparty": "CPTY_A",
+                                                "creditRating": "",
+                                                "currency": "USD",
+                                                "fixingDays": 0,
+                                                "id": "EqFwd_SPX",
+                                                "isAveraged": false,
+                                                "mTm": -402246.4688952714,
+                                                "nettingSet": "CPTY_A",
+                                                "optionType": "",
+                                                "payLegType": "Fixed",
+                                                "quantity": 0,
+                                                "recLegType": "Floating",
+                                                "subClass": "",
+                                                "timeBucket": 0,
+                                                "tradeType": "EquityForward"
+                                            }
+                                        },
+                                        {
+                                            "exposure": {
+                                                "adjustedNotional": 0.0,
+                                                "effectiveNotional": 0.0,
+                                                "maturityFactor": 1.0,
+                                                "supervisoryDelta": 1.0
+                                            },
+                                            "id": "EqFwd_SX5E",
+                                            "trade": {
+                                                "assetClass": "",
+                                                "buySell": "",
+                                                "counterparty": "CPTY_A",
+                                                "creditRating": "",
+                                                "currency": "EUR",
+                                                "fixingDays": 0,
+                                                "id": "EqFwd_SX5E",
+                                                "isAveraged": false,
+                                                "mTm": 524132.5794914663,
+                                                "nettingSet": "CPTY_A",
+                                                "optionType": "",
+                                                "payLegType": "Fixed",
+                                                "quantity": 0,
+                                                "recLegType": "Floating",
+                                                "subClass": "",
+                                                "timeBucket": 0,
+                                                "tradeType": "EquityForward"
+                                            }
+                                        },
+                                        {
+                                            "exposure": {
+                                                "adjustedNotional": 0.0,
+                                                "effectiveNotional": 0.0,
+                                                "maturityFactor": 1.0,
+                                                "supervisoryDelta": 1.0
+                                            },
+                                            "id": "EqPut_SP5",
+                                            "trade": {
+                                                "assetClass": "",
+                                                "buySell": "",
+                                                "counterparty": "CPTY_A",
+                                                "creditRating": "",
+                                                "currency": "USD",
+                                                "fixingDays": 0,
+                                                "id": "EqPut_SP5",
+                                                "isAveraged": false,
+                                                "mTm": -2892430.8496391773,
+                                                "nettingSet": "CPTY_A",
+                                                "optionType": "",
+                                                "payLegType": "Fixed",
+                                                "quantity": 0,
+                                                "recLegType": "Floating",
+                                                "subClass": "",
+                                                "timeBucket": 0,
+                                                "tradeType": "EquityOption"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    },
+                    "counterpartyIndex": 0,
+                    "hasIlliquidCollateralOrOTCNotEasilyReplaced": false,
+                    "id": "CPTY_A",
+                    "index": 0,
+                    "isMargined": false,
+                    "replacementCost": {
+                        "rc": 48447208.4122526,
+                        "v": 48447208.4122526,
+                        "v_c": 48447208.4122526
+                    },
+                    "replacementCost.rc": 48447208.4122526,
+                    "replacementCost.v": 48447208.4122526,
+                    "replacementCost.v_c": 48447208.4122526
+                }
+            ],
+            "replacementCost": {
+                "rc": 48447208.4122526,
+                "v": 48447208.4122526,
+                "v_c": 48447208.4122526
+            },
+            "replacementCost.rc": 48447208.4122526,
+            "replacementCost.v": 48447208.4122526,
+            "replacementCost.v_c": 48447208.4122526
+        }
+    ]
+}

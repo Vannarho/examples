@@ -1,0 +1,31 @@
+NOTICE   [2025-Dec-03 19:42:27.778116]    (VREAnalytics/vrea/app/parameters.cpp:133) : Parameters:
+NOTICE   [2025-Dec-03 19:42:27.778192]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = markets : fxcalibration = xois_eur
+NOTICE   [2025-Dec-03 19:42:27.778217]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = markets : lgmcalibration = collateral_inccy
+NOTICE   [2025-Dec-03 19:42:27.778236]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = markets : pricing = xois_eur
+NOTICE   [2025-Dec-03 19:42:27.778253]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = markets : sensitivity = xois_eur
+NOTICE   [2025-Dec-03 19:42:27.778268]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = markets : simulation = xois_eur
+NOTICE   [2025-Dec-03 19:42:27.778283]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = scenario : active = Y
+NOTICE   [2025-Dec-03 19:42:27.778299]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = scenario : scenarioOutputFile = scenario.csv
+NOTICE   [2025-Dec-03 19:42:27.778312]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = scenario : simulationConfigFile = simulation.xml
+NOTICE   [2025-Dec-03 19:42:27.778325]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : asofDate = 2016-02-05
+NOTICE   [2025-Dec-03 19:42:27.778338]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : baseCurrency = EUR
+NOTICE   [2025-Dec-03 19:42:27.778354]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : conventionsFile = ../../Input/conventions.xml
+NOTICE   [2025-Dec-03 19:42:27.778367]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : curveConfigFile = ../../Input/curveconfig.xml
+NOTICE   [2025-Dec-03 19:42:27.778380]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : fixingDataFile = ../../Input/fixings_20160205.txt
+NOTICE   [2025-Dec-03 19:42:27.778394]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : implyTodaysFixings = N
+NOTICE   [2025-Dec-03 19:42:27.778407]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : inputPath = Input
+NOTICE   [2025-Dec-03 19:42:27.778420]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : logFile = log.txt
+NOTICE   [2025-Dec-03 19:42:27.778433]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : logMask = 31
+NOTICE   [2025-Dec-03 19:42:27.778446]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : marketConfigFile = ../../Input/todaysmarket.xml
+NOTICE   [2025-Dec-03 19:42:27.778460]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : marketDataFile = ../../Input/market_20160205_flat.txt
+NOTICE   [2025-Dec-03 19:42:27.778473]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : nThreads = 1
+NOTICE   [2025-Dec-03 19:42:27.778486]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : observationModel = None
+NOTICE   [2025-Dec-03 19:42:27.778499]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : outputPath = Output
+NOTICE   [2025-Dec-03 19:42:27.778512]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : pricingEnginesFile = ../../Input/pricingengine.xml
+NOTICE   [2025-Dec-03 19:42:27.778565]        (VREAnalytics/vrea/app/vreapp.cpp:755) : load VREAppInputParameters called
+WARNING  [2025-Dec-03 19:42:27.778583]        (VREAnalytics/vrea/app/vreapp.cpp:776) : Calendar adjustments not found, using defaults
+WARNING  [2025-Dec-03 19:42:27.778598]        (VREAnalytics/vrea/app/vreapp.cpp:786) : Currency configurations not found, using defaults
+NOTICE   [2025-Dec-03 19:42:27.778620]        (VREAnalytics/vrea/app/vreapp.cpp:888) : Observation Mode is None
+WARNING  [2025-Dec-03 19:42:27.778639]        (VREAnalytics/vrea/app/vreapp.cpp:921) : Reference data not found
+WARNING  [2025-Dec-03 19:42:27.778654]        (VREAnalytics/vrea/app/vreapp.cpp:930) : Script library not loaded
+NOTICE   [2025-Dec-03 19:42:27.778669]        (VREAnalytics/vrea/app/vreapp.cpp:935) : Loading conventions from file: "Input/../../Input/conventions.xml"

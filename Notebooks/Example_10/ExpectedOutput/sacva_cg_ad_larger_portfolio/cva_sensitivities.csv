@@ -1,0 +1,12 @@
+#NettingSet,RiskFactor,ShiftType,ShiftSize,Currency,BaseCva,Delta
+CPTY_A,ForeignExchange/Delta/EURUSD/0D,Relative,0.011323,EUR,0.00,11.3727
+CPTY_A,Equity/Delta/SP5/0D,Relative,21.475600,EUR,0.00,-398.7685
+CPTY_A,Equity/Delta/SPX/0D,Relative,24.150700,EUR,0.00,676.4371
+CPTY_A,Equity/Delta/SX5E/0D,Relative,35.790200,EUR,0.00,1390.3339
+CPTY_A,Equity/Delta/HSCEI/6M,Relative,0.000001,EUR,0.00,-0.0067
+CPTY_A,Equity/Delta/SP5/6M,Relative,0.000001,EUR,0.00,0.0045
+CPTY_A,Equity/Delta/SPX/6M,Relative,0.000001,EUR,0.00,-0.0065
+CPTY_A,Equity/Delta/SX5E/6M,Relative,0.000001,EUR,0.00,-0.0134
+CPTY_A,CreditCounterparty/Delta/BANK/6M,Relative,0.000001,EUR,0.00,1.2793
+CPTY_A,Commodity/Delta/COMDTY_GOLD_USD/1Y,Relative,11.605933,EUR,0.00,360.8826
+CPTY_A,Commodity/Delta/COMDTY_WTI_USD/1Y,Relative,0.408686,EUR,0.00,123.2392

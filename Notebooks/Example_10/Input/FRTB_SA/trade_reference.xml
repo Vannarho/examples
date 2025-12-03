@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReferenceData>
+ <!-- Equity reference data for FRTB_SA bucketing (Table 9) -->
+  <ReferenceDatum id="FTSE">
+    <Type>Equity</Type>
+    <EquityReferenceData>
+      <EquityId>FTSE</EquityId>
+      <EquityName>FTSE Index</EquityName>
+      <Currency>GBP</Currency>
+      <ScalingFactor>1</ScalingFactor>
+      <ExchangeCode>FTSE</ExchangeCode>
+      <IsIndex>true</IsIndex>
+      <EquityStartDate>20100101</EquityStartDate>
+      <ProxyIdentifier>FTSE</ProxyIdentifier>
+      <SimmBucket>10</SimmBucket>
+      <CrifQualifier>FTSE</CrifQualifier>
+      <ProxyVolatilityId>FTSE_VOL</ProxyVolatilityId>
+      <MarketCap>2.0e12</MarketCap>
+      <Economy>Advanced</Economy>
+      <Sector>All</Sector>
+    </EquityReferenceData>
+  </ReferenceDatum>
+
+  <ReferenceDatum id="SPX">
+    <Type>Equity</Type>
+    <EquityReferenceData>
+      <EquityId>SPX</EquityId>
+      <EquityName>S&amp;P 500</EquityName>
+      <Currency>USD</Currency>
+      <ScalingFactor>1</ScalingFactor>
+      <ExchangeCode>SPX</ExchangeCode>
+      <IsIndex>true</IsIndex>
+      <EquityStartDate>20100101</EquityStartDate>
+      <ProxyIdentifier>SPX</ProxyIdentifier>
+      <SimmBucket>10</SimmBucket>
+      <CrifQualifier>SPX</CrifQualifier>
+      <ProxyVolatilityId>SPX_VOL</ProxyVolatilityId>
+      <MarketCap>30e12</MarketCap>
+      <Economy>Advanced</Economy>
+      <Sector>All</Sector>
+    </EquityReferenceData>
+</ReferenceData>
+  <!-- <ReferenceDatum id="CPTY_1">
+        <Type>Credit</Type>
+        <CreditReferenceData>
+            <Name>CPTY_1</Name>
+            <SubClass>Corporate</SubClass>
+            <EntityType>Corporate</EntityType>
+        </CreditReferenceData>
+    </ReferenceDatum>
+    <ReferenceDatum id="CPTY_2">
+        <Type>Credit</Type>
+        <CreditReferenceData>
+            <Name>CPTY_2</Name>
+            <SubClass>Corporate</SubClass>
+            <EntityType>Corporate</EntityType>
+        </CreditReferenceData>
+    </ReferenceDatum>
+    <ReferenceDatum id="CPTY_3">
+        <Type>Credit</Type>
+        <CreditReferenceData>
+            <Name>CPTY_3</Name>
+            <SubClass>Corporate</SubClass>
+            <EntityType>Corporate</EntityType>
+        </CreditReferenceData>
+    </ReferenceDatum> 
+    <ReferenceDatum id="CPTY_C">
+        <Type>CreditIndex</Type>
+        <CreditIndexReferenceData>
+            <IndexFamily>Generic</IndexFamily>
+            <Underlying>
+                <Name>CPTY_1</Name>
+                <Weight>0.3333333333</Weight>
+            </Underlying>
+            <Underlying>
+                <Name>CPTY_2</Name>
+                <Weight>0.3333333333</Weight>
+            </Underlying>
+            <Underlying>
+                <Name>CPTY_3</Name>
+                <Weight>0.3333333334</Weight>
+            </Underlying> 
+        </CreditIndexReferenceData>
+    </ReferenceDatum> 
+
+
+  <ReferenceDatum id="CPTY_C">
+    <Type>Bond</Type>
+    <BondReferenceData>
+      <SubType>Muni</SubType>
+      <IssuerId>CPTY_C</IssuerId>
+      <CreditCurveId>ZERO</CreditCurveId>
+      <ReferenceCurveId>EURBENCHMARK-EUR-6M</ReferenceCurveId>
+      <SettlementDays>2</SettlementDays>
+      <Calendar>TARGET</Calendar>
+      <IssueDate>20110215</IssueDate>
+      <LegData>
+        <LegType>Fixed</LegType>
+        <Payer>false</Payer>
+        <Currency>EUR</Currency>
+        <Notionals>
+          <Notional>1</Notional>
+        </Notionals>
+        <DayCounter>ActActISMA</DayCounter>
+        <PaymentConvention>F</PaymentConvention>
+        <FixedLegData>
+          <Rates>
+            <Rate>0.02</Rate>
+          </Rates>
+        </FixedLegData>
+        <ScheduleData>
+          <Rules>
+            <StartDate>20190103</StartDate>
+            <EndDate>20200103</EndDate>
+            <Tenor>1Y</Tenor>
+            <Calendar>TARGET</Calendar>
+            <Convention>U</Convention>
+            <TermConvention>U</TermConvention>
+            <Rule>Forward</Rule>
+            <EndOfMonth/>
+            <FirstDate/>
+            <LastDate/>
+          </Rules>
+        </ScheduleData>
+      </LegData>
+    </BondReferenceData>
+  </ReferenceDatum>  -->
+
+
+    <!--Credit curve reference used for pricing-->
+    <!-- <ReferenceDatum id="BANK">
+        <Type>CreditIndex</Type>
+        <CreditIndexReferenceData>
+            <IndexFamily>Generic</IndexFamily>
+            <Underlying>
+                <Name>CDXIG</Name>
+                <Weight>1.0</Weight>
+            </Underlying>
+        </CreditIndexReferenceData>
+    </ReferenceDatum> -->
+
+    <!-- <ReferenceDatum id="CDXIG">
+    <Type>CreditIndex</Type>
+    <CreditIndexReferenceData>
+      <IndexFamily>CDX</IndexFamily>
+      <Underlying>
+        <Name>RED:007G93|SNRFOR|USD|XR14</Name>
+        <Weight>0.0080000000000000002</Weight>
+      </Underlying>
+    </CreditIndexReferenceData>
+  </ReferenceDatum>  -->
+</ReferenceData>

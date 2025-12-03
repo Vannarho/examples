@@ -1,0 +1,173 @@
+NOTICE   [2025-Dec-03 19:49:30.634422]    (VREAnalytics/vrea/app/parameters.cpp:133) : Parameters:
+NOTICE   [2025-Dec-03 19:49:30.634487]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = markets : fxcalibration = xois_eur
+NOTICE   [2025-Dec-03 19:49:30.634504]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = markets : lgmcalibration = collateral_inccy
+NOTICE   [2025-Dec-03 19:49:30.634519]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = markets : pricing = xois_eur
+NOTICE   [2025-Dec-03 19:49:30.634534]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = markets : sensitivity = xois_eur
+NOTICE   [2025-Dec-03 19:49:30.634548]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = markets : simulation = xois_eur
+NOTICE   [2025-Dec-03 19:49:30.634565]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = scenario : active = Y
+NOTICE   [2025-Dec-03 19:49:30.634580]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = scenario : scenarioOutputFile = scenario.csv
+NOTICE   [2025-Dec-03 19:49:30.634594]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = scenario : simulationConfigFile = simulation.xml
+NOTICE   [2025-Dec-03 19:49:30.634608]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : asofDate = 2016-02-05
+NOTICE   [2025-Dec-03 19:49:30.634622]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : baseCurrency = EUR
+NOTICE   [2025-Dec-03 19:49:30.634637]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : conventionsFile = other/conventions.xml
+NOTICE   [2025-Dec-03 19:49:30.634651]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : curveConfigFile = other/curveconfig.xml
+NOTICE   [2025-Dec-03 19:49:30.634665]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : fixingDataFile = other/fixings_20160205.txt
+NOTICE   [2025-Dec-03 19:49:30.634678]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : implyTodaysFixings = N
+NOTICE   [2025-Dec-03 19:49:30.634691]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : inputPath = Input/8_1
+NOTICE   [2025-Dec-03 19:49:30.634704]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : logFile = log.txt
+NOTICE   [2025-Dec-03 19:49:30.634719]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : logMask = 31
+NOTICE   [2025-Dec-03 19:49:30.634733]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : marketConfigFile = other/todaysmarket.xml
+NOTICE   [2025-Dec-03 19:49:30.634746]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : marketDataFile = other/market_20160205_flat.txt
+NOTICE   [2025-Dec-03 19:49:30.634759]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : nThreads = 1
+NOTICE   [2025-Dec-03 19:49:30.634772]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : observationModel = None
+NOTICE   [2025-Dec-03 19:49:30.634785]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : outputPath = Output/8_1
+NOTICE   [2025-Dec-03 19:49:30.634798]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : pricingEnginesFile = other/pricingengine.xml
+NOTICE   [2025-Dec-03 19:49:30.634848]        (VREAnalytics/vrea/app/vreapp.cpp:755) : load VREAppInputParameters called
+WARNING  [2025-Dec-03 19:49:30.634865]        (VREAnalytics/vrea/app/vreapp.cpp:776) : Calendar adjustments not found, using defaults
+WARNING  [2025-Dec-03 19:49:30.634880]        (VREAnalytics/vrea/app/vreapp.cpp:786) : Currency configurations not found, using defaults
+NOTICE   [2025-Dec-03 19:49:30.634901]        (VREAnalytics/vrea/app/vreapp.cpp:888) : Observation Mode is None
+WARNING  [2025-Dec-03 19:49:30.634920]        (VREAnalytics/vrea/app/vreapp.cpp:921) : Reference data not found
+WARNING  [2025-Dec-03 19:49:30.634934]        (VREAnalytics/vrea/app/vreapp.cpp:930) : Script library not loaded
+NOTICE   [2025-Dec-03 19:49:30.634949]        (VREAnalytics/vrea/app/vreapp.cpp:935) : Loading conventions from file: "Input/8_1/other/conventions.xml"
+WARNING  [2025-Dec-03 19:49:30.635243]        (VREAnalytics/vrea/app/vreapp.cpp:946) : Using default Ibor fallback config
+WARNING  [2025-Dec-03 19:49:30.635264]        (VREAnalytics/vrea/app/vreapp.cpp:954) : Using default Basel Traffic Light config
+NOTICE   [2025-Dec-03 19:49:30.635281]        (VREAnalytics/vrea/app/vreapp.cpp:959) : Load curve configurations from file: 
+NOTICE   [2025-Dec-03 19:49:30.635727]        (VREAnalytics/vrea/app/vreapp.cpp:968) : Load pricing engine data from file: "Input/8_1/other/pricingengine.xml"
+NOTICE   [2025-Dec-03 19:49:30.635827]        (VREAnalytics/vrea/app/vreapp.cpp:977) : Loading today's market parameters from file"Input/8_1/other/todaysmarket.xml"
+WARNING  [2025-Dec-03 19:49:30.635947]  (...rketdata/todaysmarketparameters.cpp:205) : TodaysMarketParameters: the attribute 'currency' is deprecated for 'SwaptionVolatilities', use 'key' instead.
+WARNING  [2025-Dec-03 19:49:30.635970]  (...rketdata/todaysmarketparameters.cpp:205) : TodaysMarketParameters: the attribute 'currency' is deprecated for 'CapFloorVolatilities', use 'key' instead.
+WARNING  [2025-Dec-03 19:49:30.636002]        (VREAnalytics/vrea/app/vreapp.cpp:990) : Portfolio data not provided
+WARNING  [2025-Dec-03 19:49:30.636015]        (VREAnalytics/vrea/app/vreapp.cpp:999) : CounterpartyManager not found
+NOTICE   [2025-Dec-03 19:49:30.636028]       (VREAnalytics/vrea/app/vreapp.cpp:1011) : MarketContext::fxcalibration = xois_eur
+NOTICE   [2025-Dec-03 19:49:30.636040]       (VREAnalytics/vrea/app/vreapp.cpp:1011) : MarketContext::lgmcalibration = collateral_inccy
+NOTICE   [2025-Dec-03 19:49:30.636055]       (VREAnalytics/vrea/app/vreapp.cpp:1011) : MarketContext::pricing = xois_eur
+NOTICE   [2025-Dec-03 19:49:30.636069]       (VREAnalytics/vrea/app/vreapp.cpp:1011) : MarketContext::sensitivity = xois_eur
+NOTICE   [2025-Dec-03 19:49:30.636081]       (VREAnalytics/vrea/app/vreapp.cpp:1011) : MarketContext::simulation = xois_eur
+NOTICE   [2025-Dec-03 19:49:30.636099]       (VREAnalytics/vrea/app/vreapp.cpp:1163) : Loading scenario simulation config from fileInput/8_1/simulation.xml
+NOTICE   [2025-Dec-03 19:49:30.636236]       (VREAnalytics/vrea/app/vreapp.cpp:1615) : SIMM
+NOTICE   [2025-Dec-03 19:49:30.636252]       (VREAnalytics/vrea/app/vreapp.cpp:1718) : IM SCHEDULE
+WARNING  [2025-Dec-03 19:49:30.636287]       (VREAnalytics/vrea/app/vreapp.cpp:3166) : FRTB_SA sensitivity sim-market parameters not loaded
+WARNING  [2025-Dec-03 19:49:30.636301]       (VREAnalytics/vrea/app/vreapp.cpp:3175) : FRTB_SA sensitivity scenario data not loaded
+WARNING  [2025-Dec-03 19:49:30.636315]       (VREAnalytics/vrea/app/vreapp.cpp:3184) : Pricing-engine data not found for FRTB_SA sensitivity, using global pricingEngine
+NOTICE   [2025-Dec-03 19:49:30.636332]       (VREAnalytics/vrea/app/vreapp.cpp:3413) : Loading embedded saccrSupervisoryFactors
+NOTICE   [2025-Dec-03 19:49:30.636365]  (...lytics/vrea/app/inputparameters.cpp:938) : Loaded embedded SACCR Supervisory Factors successfully.
+WARNING  [2025-Dec-03 19:49:30.636381]       (VREAnalytics/vrea/app/vreapp.cpp:3439) : SACCR CRIF file not found
+NOTICE   [2025-Dec-03 19:49:30.636397]       (VREAnalytics/vrea/app/vreapp.cpp:3548) : analytics: 1
+NOTICE   [2025-Dec-03 19:49:30.636411]       (VREAnalytics/vrea/app/vreapp.cpp:3550) : analytic: SCENARIO
+NOTICE   [2025-Dec-03 19:49:30.636424]       (VREAnalytics/vrea/app/vreapp.cpp:3552) : buildInputParameters done
+NOTICE   [2025-Dec-03 19:49:30.636437]  (...ytics/vrea/app/inputparameters.cpp:1069) : OutputFileNameMap called
+NOTICE   [2025-Dec-03 19:49:30.636459]  (...ytics/vrea/app/inputparameters.cpp:1171) : OutputFileNameMap complete
+NOTICE   [2025-Dec-03 19:49:30.636477]        (VREAnalytics/vrea/app/vreapp.cpp:491) : initFromParameters done, requested analytics:SCENARIO
+NOTICE   [2025-Dec-03 19:49:30.636494]        (VREAnalytics/vrea/app/vreapp.cpp:584) : Global IncludeTodaysCashFlows is set false, value: na
+NOTICE   [2025-Dec-03 19:49:30.636510]        (VREAnalytics/vrea/app/vreapp.cpp:322) : VRE analytics starting
+WARNING  [2025-Dec-03 19:49:30.636524]        (VREAnalytics/vrea/app/vreapp.cpp:323) : Starting VREApp::analytics(): 35094528|35094528 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+WARNING  [2025-Dec-03 19:49:30.636552]        (VREAnalytics/vrea/app/vreapp.cpp:303) : dividend data file not found
+WARNING  [2025-Dec-03 19:49:30.636567]        (VREAnalytics/vrea/app/vreapp.cpp:311) : fixing cutoff date not set
+NOTICE   [2025-Dec-03 19:49:30.636582]   (VREData/vred/marketdata/csvloader.cpp:103) : CSVLoader loading from Input/8_1/other/market_20160205_flat.txt
+NOTICE   [2025-Dec-03 19:49:30.652021]   (VREData/vred/marketdata/csvloader.cpp:195) : CSVLoader completed processing Input/8_1/other/market_20160205_flat.txt
+NOTICE   [2025-Dec-03 19:49:30.652443]    (VREData/vred/marketdata/csvloader.cpp:82) : CSVLoader loaded 7776 market data points for February 5th, 2016
+NOTICE   [2025-Dec-03 19:49:30.652558]   (VREData/vred/marketdata/csvloader.cpp:103) : CSVLoader loading from Input/8_1/other/fixings_20160205.txt
+NOTICE   [2025-Dec-03 19:49:30.656966]   (VREData/vred/marketdata/csvloader.cpp:195) : CSVLoader completed processing Input/8_1/other/fixings_20160205.txt
+NOTICE   [2025-Dec-03 19:49:30.657000]    (VREData/vred/marketdata/csvloader.cpp:87) : CSVLoader loaded 5454 fixings
+NOTICE   [2025-Dec-03 19:49:30.657019]    (VREData/vred/marketdata/csvloader.cpp:92) : CSVLoader loaded 0 dividends
+NOTICE   [2025-Dec-03 19:49:30.657034]    (VREData/vred/marketdata/csvloader.cpp:94) : CSVLoader complete.
+NOTICE   [2025-Dec-03 19:49:30.657057]  (...lytics/vrea/app/analyticsmanager.cpp:53) : register analytic with label 'SCENARIO' and sub-analytics SCENARIO
+NOTICE   [2025-Dec-03 19:49:30.657078]        (VREAnalytics/vrea/app/vreapp.cpp:345) : Available analytics: SCENARIO
+NOTICE   [2025-Dec-03 19:49:30.657103]        (VREAnalytics/vrea/app/vreapp.cpp:348) : Requested analytics: SCENARIO
+NOTICE   [2025-Dec-03 19:49:30.657132]  (...ytics/vrea/app/analyticsmanager.cpp:119) : AnalyticsManager::runAnalytics: populate loader for dates: February 5th, 2016
+NOTICE   [2025-Dec-03 19:49:30.657155]  (...ytics/vrea/app/marketdataloader.cpp:167) : Asking portfolio for its required fixings
+NOTICE   [2025-Dec-03 19:49:30.657171]  (...ytics/vrea/app/marketdataloader.cpp:179) : Add fixings possibly required for bootstrapping TodaysMarket
+NOTICE   [2025-Dec-03 19:49:30.657187]  (VREData/vred/portfolio/fixingdates.cpp:827) : Start adding market fixing dates for configuration 'default'
+NOTICE   [2025-Dec-03 19:49:30.658119]  (...ata/vred/portfolio/fixingdates.cpp:1024) : Finished adding market fixing dates for configuration 'default'
+NOTICE   [2025-Dec-03 19:49:30.658136]  (VREData/vred/portfolio/fixingdates.cpp:827) : Start adding market fixing dates for configuration 'collateral_inccy'
+NOTICE   [2025-Dec-03 19:49:30.658644]  (...ata/vred/portfolio/fixingdates.cpp:1024) : Finished adding market fixing dates for configuration 'collateral_inccy'
+NOTICE   [2025-Dec-03 19:49:30.658660]  (VREData/vred/portfolio/fixingdates.cpp:827) : Start adding market fixing dates for configuration 'xois_eur'
+NOTICE   [2025-Dec-03 19:49:30.659138]  (...ata/vred/portfolio/fixingdates.cpp:1024) : Finished adding market fixing dates for configuration 'xois_eur'
+NOTICE   [2025-Dec-03 19:49:30.659156]  (VREData/vred/portfolio/fixingdates.cpp:827) : Start adding market fixing dates for configuration 'xois_usd'
+NOTICE   [2025-Dec-03 19:49:30.659628]  (...ata/vred/portfolio/fixingdates.cpp:1024) : Finished adding market fixing dates for configuration 'xois_usd'
+NOTICE   [2025-Dec-03 19:49:30.659644]  (VREData/vred/portfolio/fixingdates.cpp:827) : Start adding market fixing dates for configuration 'libor'
+NOTICE   [2025-Dec-03 19:49:30.660142]  (...ata/vred/portfolio/fixingdates.cpp:1024) : Finished adding market fixing dates for configuration 'libor'
+NOTICE   [2025-Dec-03 19:49:30.660157]  (...ytics/vrea/app/marketdataloader.cpp:183) : Add fixing possibly required for equity index delta risk decomposition
+NOTICE   [2025-Dec-03 19:49:30.660203]  (...ics/vrea/app/marketdatacsvloader.cpp:72) : MarketDataCsvLoader::retrieveFixings called: all fixings ? Y
+NOTICE   [2025-Dec-03 19:49:30.665739]      (VREData/vred/marketdata/fixings.cpp:70) : Added 5454 of 5454 fixings in 0.000000 seconds
+NOTICE   [2025-Dec-03 19:49:30.665845]  (...ytics/vrea/app/marketdataloader.cpp:259) : Adding the loaded fixings to the IndexManager
+NOTICE   [2025-Dec-03 19:49:30.665874]  (...ytics/vrea/app/marketdataloader.cpp:260) : Fixings size = 27
+NOTICE   [2025-Dec-03 19:49:30.665892]  (...ytics/vrea/app/marketdataloader.cpp:263) : Generating market datum set
+WARNING  [2025-Dec-03 19:49:30.666284]  (...guration/capfloorvolcurveconfig.cpp:142) : CapFloorVolatilityCurveConfig (EUR_CF_N): The IborIndex node is deprecated, use Index instead.
+WARNING  [2025-Dec-03 19:49:30.666352]  (...guration/capfloorvolcurveconfig.cpp:142) : CapFloorVolatilityCurveConfig (GBP_CF_N): The IborIndex node is deprecated, use Index instead.
+WARNING  [2025-Dec-03 19:49:30.666414]  (...guration/capfloorvolcurveconfig.cpp:142) : CapFloorVolatilityCurveConfig (USD_CF_N): The IborIndex node is deprecated, use Index instead.
+WARNING  [2025-Dec-03 19:49:30.666606]  (.../configuration/cdsvolcurveconfig.cpp:95) : Using an Expiries node only in CDSVolatilityCurveConfig is deprecated. A volatility configuration node should be used instead.
+WARNING  [2025-Dec-03 19:49:30.666629]  (.../configuration/cdsvolcurveconfig.cpp:95) : Using an Expiries node only in CDSVolatilityCurveConfig is deprecated. A volatility configuration node should be used instead.
+NOTICE   [2025-Dec-03 19:49:30.667701]  (...ytics/vrea/app/marketdataloader.cpp:281) : CurveConfigs require 2505 quotes
+NOTICE   [2025-Dec-03 19:49:30.669252]  (...ytics/vrea/app/marketdataloader.cpp:289) : Got market data
+NOTICE   [2025-Dec-03 19:49:30.669481]  (...nalytics/vrea/app/reportwriter.cpp:1174) : Writing MarketData report
+NOTICE   [2025-Dec-03 19:49:30.670924]  (...nalytics/vrea/app/reportwriter.cpp:1213) : MarketData report written
+NOTICE   [2025-Dec-03 19:49:30.671042]  (...nalytics/vrea/app/reportwriter.cpp:1218) : Writing Fixings report
+NOTICE   [2025-Dec-03 19:49:30.671416]  (...nalytics/vrea/app/reportwriter.cpp:1227) : Fixings report written
+NOTICE   [2025-Dec-03 19:49:30.671435]  (...nalytics/vrea/app/reportwriter.cpp:1232) : Writing Dividends report
+NOTICE   [2025-Dec-03 19:49:30.671451]  (...nalytics/vrea/app/reportwriter.cpp:1244) : Dividends report written
+NOTICE   [2025-Dec-03 19:49:30.671465]  (...ytics/vrea/app/analyticsmanager.cpp:145) : run analytic with label 'SCENARIO'
+WARNING  [2025-Dec-03 19:49:30.671485]      (VREAnalytics/vrea/app/analytic.cpp:105) : Starting SCENARIO Analytic::runAnalytic(): 47497216|47497216 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+NOTICE   [2025-Dec-03 19:49:30.671504]  (...a/app/analytics/scenarioanalytic.cpp:36) : ScenarioAnalytic::runAnalytic called
+NOTICE   [2025-Dec-03 19:49:30.671521]      (VREAnalytics/vrea/app/analytic.cpp:223) : Analytic::buildMarket called
+NOTICE   [2025-Dec-03 19:49:30.671535]  (.../vred/marketdata/bondspreadimply.cpp:53) : identify securities that require a spread imply for configuration default
+ALERT    [2025-Dec-03 19:49:30.671733]          (VREData/vred/utilities/log.cpp:209) : StructuredMessage { "category": "Error", "group": "Curve", "message": "No security spread or bond price to imply the spread is given. Will proceed assuming a zero spread.", "sub_fields": [ { "name": "curveId", "value": "Security/ISIN:XS0983610930" }, { "name": "exceptionType", "value": "Missing security spread" } ] }
+ALERT    [2025-Dec-03 19:49:30.671786]          (VREData/vred/utilities/log.cpp:209) : StructuredMessage { "category": "Error", "group": "Curve", "message": "No security spread or bond price to imply the spread is given. Will proceed assuming a zero spread.", "sub_fields": [ { "name": "curveId", "value": "Security/SECURITY_2" }, { "name": "exceptionType", "value": "Missing security spread" } ] }
+NOTICE   [2025-Dec-03 19:49:30.671808]  (.../vred/marketdata/bondspreadimply.cpp:53) : identify securities that require a spread imply for configuration collateral_inccy
+NOTICE   [2025-Dec-03 19:49:30.671832]  (.../vred/marketdata/bondspreadimply.cpp:53) : identify securities that require a spread imply for configuration xois_eur
+NOTICE   [2025-Dec-03 19:49:30.671858]  (.../vred/marketdata/bondspreadimply.cpp:53) : identify securities that require a spread imply for configuration xois_usd
+NOTICE   [2025-Dec-03 19:49:30.671880]  (.../vred/marketdata/bondspreadimply.cpp:53) : identify securities that require a spread imply for configuration libor
+NOTICE   [2025-Dec-03 19:49:30.671903]  (...vred/marketdata/bondspreadimply.cpp:110) : got 0 securities
+NOTICE   [2025-Dec-03 19:49:30.672035]  (.../vred/marketdata/fxtriangulation.cpp:67) : FXTriangulation: initializing
+NOTICE   [2025-Dec-03 19:49:30.672055]  (...vred/marketdata/fxtriangulation.cpp:114) : FXTriangulation: initialized with 5 quotes, 6 currencies.
+NOTICE   [2025-Dec-03 19:49:30.672609]  (...ta/vred/marketdata/todaysmarket.cpp:229) : Build objects in TodaysMarket lazily, i.e. when requested.
+NOTICE   [2025-Dec-03 19:49:30.672627]  (...ta/vred/marketdata/todaysmarket.cpp:234) : TodaysMarket build stats:
+NOTICE   [2025-Dec-03 19:49:30.672644]  (...ta/vred/marketdata/todaysmarket.cpp:240) : 3 add all fx quotes               :               0 ms         1              0 ms
+NOTICE   [2025-Dec-03 19:49:30.672659]  (...ta/vred/marketdata/todaysmarket.cpp:240) : 4 build dep graphs                :               0 ms         1              0 ms
+NOTICE   [2025-Dec-03 19:49:30.672673]  (...ta/vred/marketdata/todaysmarket.cpp:243) : Total build time              :               0 ms
+NOTICE   [2025-Dec-03 19:49:30.672720]      (VREAnalytics/vrea/app/analytic.cpp:261) : Market Build time 0.000000 sec
+NOTICE   [2025-Dec-03 19:49:30.672736]  (...a/app/analytics/scenarioanalytic.cpp:40) : Building scenario simulation market for date 2016-02-05
+NOTICE   [2025-Dec-03 19:49:30.672760]  (...vrea/scenario/scenariosimmarket.cpp:329) : building ScenarioSimMarket...
+NOTICE   [2025-Dec-03 19:49:30.706566]  (...rea/scenario/scenariosimmarket.cpp:2898) : built DiscountCurve                     2             30 ms
+ALERT    [2025-Dec-03 19:49:30.706740]  (...vrea/scenario/scenariosimmarket.cpp:139) : CurveID: IndexCurve/USD-Libor-3M: skipping this object in scenario sim market (scenario data was not written for this object.): did not find object 'USD-Libor-3M' of type ibor index under configuration 'default' or 'default'
+NOTICE   [2025-Dec-03 19:49:30.706761]  (...rea/scenario/scenariosimmarket.cpp:2898) : built IndexCurve                        4              0 ms
+NOTICE   [2025-Dec-03 19:49:30.706783]  (.../vred/marketdata/fxtriangulation.cpp:67) : FXTriangulation: initializing
+NOTICE   [2025-Dec-03 19:49:30.706800]  (...vred/marketdata/fxtriangulation.cpp:114) : FXTriangulation: initialized with 0 quotes, 0 currencies.
+NOTICE   [2025-Dec-03 19:49:30.706827]  (...rea/scenario/scenariosimmarket.cpp:3395) : Applying 0 curve algebra rules...
+NOTICE   [2025-Dec-03 19:49:30.706842]  (...rea/scenario/scenariosimmarket.cpp:3026) : building base scenario
+NOTICE   [2025-Dec-03 19:49:30.706870]  (...rea/scenario/scenariosimmarket.cpp:3054) : building base scenario done
+WARNING  [2025-Dec-03 19:49:30.706925]      (VREAnalytics/vrea/app/analytic.cpp:110) : Finishing SCENARIO Analytic::runAnalytic(): 53313536|53313536 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+NOTICE   [2025-Dec-03 19:49:30.706948]  (...ytics/vrea/app/analyticsmanager.cpp:154) : run analytic with label 'SCENARIO' finished.
+NOTICE   [2025-Dec-03 19:49:30.712101]  (...rea/app/marketcalibrationreport.cpp:241) : Skipping curve EUR1D for label  as it has already been added
+WARNING  [2025-Dec-03 19:49:30.725875]  (.../vred/configuration/conventions.cpp:650) : receiveFrequency_ empty set to index tenor.
+WARNING  [2025-Dec-03 19:49:30.725916]  (.../vred/configuration/conventions.cpp:661) : payFrequency_ empty set to index tenor.
+WARNING  [2025-Dec-03 19:49:30.735024]  (.../vred/configuration/conventions.cpp:661) : payFrequency_ empty set to index tenor.
+NOTICE   [2025-Dec-03 19:49:30.762318]  (...nalytics/vrea/app/reportwriter.cpp:1270) : Writing runtimes report
+NOTICE   [2025-Dec-03 19:49:30.762358]  (...nalytics/vrea/app/reportwriter.cpp:1294) : Finished writing runtimes report
+NOTICE   [2025-Dec-03 19:49:30.762393]  (...ytics/vrea/app/analyticsmanager.cpp:239) : report name dividends occurs 1 times
+NOTICE   [2025-Dec-03 19:49:30.762411]  (...ytics/vrea/app/analyticsmanager.cpp:239) : report name fixings occurs 1 times
+NOTICE   [2025-Dec-03 19:49:30.762462]  (...ytics/vrea/app/analyticsmanager.cpp:239) : report name marketdata occurs 1 times
+NOTICE   [2025-Dec-03 19:49:30.762507]  (...ytics/vrea/app/analyticsmanager.cpp:239) : report name runtimes occurs 1 times
+NOTICE   [2025-Dec-03 19:49:30.762530]  (...ytics/vrea/app/analyticsmanager.cpp:239) : report name scenario occurs 1 times
+NOTICE   [2025-Dec-03 19:49:30.762547]  (...ytics/vrea/app/analyticsmanager.cpp:239) : report name todaysmarketcalibration occurs 1 times
+NOTICE   [2025-Dec-03 19:49:30.762568]       (VREData/vred/report/csvreport.cpp:127) : Opening CSV file report 'Output/8_1/dividends.csv'
+NOTICE   [2025-Dec-03 19:49:30.762835]       (VREData/vred/report/csvreport.cpp:216) : CSV file report 'Output/8_1/dividends.csv' closed.
+NOTICE   [2025-Dec-03 19:49:30.762899]  (...ytics/vrea/app/analyticsmanager.cpp:289) : report dividends written to Output/8_1/dividends.csv
+NOTICE   [2025-Dec-03 19:49:30.762916]       (VREData/vred/report/csvreport.cpp:127) : Opening CSV file report 'Output/8_1/fixings.csv'
+NOTICE   [2025-Dec-03 19:49:30.764807]       (VREData/vred/report/csvreport.cpp:216) : CSV file report 'Output/8_1/fixings.csv' closed.
+NOTICE   [2025-Dec-03 19:49:30.764835]  (...ytics/vrea/app/analyticsmanager.cpp:289) : report fixings written to Output/8_1/fixings.csv
+NOTICE   [2025-Dec-03 19:49:30.764853]       (VREData/vred/report/csvreport.cpp:127) : Opening CSV file report 'Output/8_1/todaysmarketcalibration.csv'
+NOTICE   [2025-Dec-03 19:49:30.765259]       (VREData/vred/report/csvreport.cpp:216) : CSV file report 'Output/8_1/todaysmarketcalibration.csv' closed.
+NOTICE   [2025-Dec-03 19:49:30.765277]  (...ytics/vrea/app/analyticsmanager.cpp:289) : report todaysmarketcalibration written to Output/8_1/todaysmarketcalibration.csv
+NOTICE   [2025-Dec-03 19:49:30.765293]       (VREData/vred/report/csvreport.cpp:127) : Opening CSV file report 'Output/8_1/marketdata.csv'
+NOTICE   [2025-Dec-03 19:49:30.766310]       (VREData/vred/report/csvreport.cpp:216) : CSV file report 'Output/8_1/marketdata.csv' closed.
+NOTICE   [2025-Dec-03 19:49:30.766325]  (...ytics/vrea/app/analyticsmanager.cpp:289) : report marketdata written to Output/8_1/marketdata.csv
+NOTICE   [2025-Dec-03 19:49:30.766343]       (VREData/vred/report/csvreport.cpp:127) : Opening CSV file report 'Output/8_1/scenario.csv'
+NOTICE   [2025-Dec-03 19:49:30.766428]       (VREData/vred/report/csvreport.cpp:216) : CSV file report 'Output/8_1/scenario.csv' closed.
+NOTICE   [2025-Dec-03 19:49:30.766446]  (...ytics/vrea/app/analyticsmanager.cpp:289) : report scenario written to Output/8_1/scenario.csv
+NOTICE   [2025-Dec-03 19:49:30.766462]       (VREData/vred/report/csvreport.cpp:127) : Opening CSV file report 'Output/8_1/runtimes.csv'
+NOTICE   [2025-Dec-03 19:49:30.766519]       (VREData/vred/report/csvreport.cpp:216) : CSV file report 'Output/8_1/runtimes.csv' closed.
+NOTICE   [2025-Dec-03 19:49:30.766536]  (...ytics/vrea/app/analyticsmanager.cpp:289) : report runtimes written to Output/8_1/runtimes.csv
+WARNING  [2025-Dec-03 19:49:30.766561]        (VREAnalytics/vrea/app/vreapp.cpp:425) : Finishing VREApp::analytics(): 54673408|54673408 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+NOTICE   [2025-Dec-03 19:49:30.766584]        (VREAnalytics/vrea/app/vreapp.cpp:426) : VRE analytics done
+NOTICE   [2025-Dec-03 19:49:30.766603]        (VREAnalytics/vrea/app/vreapp.cpp:604) : VRE done.

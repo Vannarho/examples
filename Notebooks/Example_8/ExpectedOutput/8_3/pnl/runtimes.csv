@@ -1,0 +1,8 @@
+#Key,Total,Count,Max,Min,Average
+PNL|MPOR|buildMarket(),0,1,0,0,0.00
+PNL|Run PNLAnalytic,110000,1,110000,110000,110000.00
+PNL|buildMarket(),0,1,0,0,0.00
+PNL|buildPortfolio(),0,5,0,0,0.00
+PRICING|Run PRICINGAnalytic,50000,1,50000,50000,50000.00
+PRICING|buildMarket(),0,1,0,0,0.00
+PRICING|buildPortfolio(),0,1,0,0,0.00

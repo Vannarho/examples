@@ -1,0 +1,370 @@
+<CurveConfiguration>
+  <YieldCurves>
+    <!-- EUR OIS (ESTER) -->
+    <YieldCurve>
+      <CurveId>EUR-ESTER</CurveId>
+      <CurveDescription>EUR ESTER OIS</CurveDescription>
+      <Currency>EUR</Currency>
+      <DiscountCurve>EUR-ESTER</DiscountCurve>
+      <Segments>
+        
+        <Simple>
+          <Type>OIS</Type>
+          <Quotes>
+            <Quote optional="true">IR_SWAP/RATE/EUR/2D/1D/1W</Quote>
+            <Quote optional="true">IR_SWAP/RATE/EUR/2D/1D/1M</Quote>
+            <Quote optional="true">IR_SWAP/RATE/EUR/2D/1D/3M</Quote>
+            <Quote optional="true">IR_SWAP/RATE/EUR/2D/1D/6M</Quote>
+            <Quote optional="true">IR_SWAP/RATE/EUR/2D/1D/1Y</Quote>
+            <Quote optional="true">IR_SWAP/RATE/EUR/2D/1D/2Y</Quote>
+            <Quote optional="true">IR_SWAP/RATE/EUR/2D/1D/3Y</Quote>
+            <Quote optional="true">IR_SWAP/RATE/EUR/2D/1D/5Y</Quote>
+            <Quote optional="true">IR_SWAP/RATE/EUR/2D/1D/10Y</Quote>
+            <Quote optional="true">IR_SWAP/RATE/EUR/2D/1D/30Y</Quote>
+          </Quotes>
+          <Conventions>EUR-ESTER-OIS</Conventions>
+          <PillarChoice>LastRelevantPillarDate</PillarChoice>
+          <Priority>0</Priority>
+          <MinDistance>1</MinDistance>
+        </Simple>
+      </Segments>
+      <InterpolationVariable>Discount</InterpolationVariable>
+      <InterpolationMethod>LogLinear</InterpolationMethod>
+      <YieldCurveDayCounter>A365</YieldCurveDayCounter>
+      <Extrapolation>true</Extrapolation>
+    </YieldCurve>
+
+    <!-- USD OIS (SOFR) -->
+    <YieldCurve>
+      <CurveId>USD-SOFR</CurveId>
+      <CurveDescription>USD SOFR OIS</CurveDescription>
+      <Currency>USD</Currency>
+      <DiscountCurve>USD-SOFR</DiscountCurve>
+      <Segments>
+        
+        <Simple>
+          <Type>OIS</Type>
+          <Quotes>
+            <Quote optional="true">IR_SWAP/RATE/USD/2D/1D/1W</Quote>
+            <Quote optional="true">IR_SWAP/RATE/USD/2D/1D/1M</Quote>
+            <Quote optional="true">IR_SWAP/RATE/USD/2D/1D/3M</Quote>
+            <Quote optional="true">IR_SWAP/RATE/USD/2D/1D/6M</Quote>
+            <Quote optional="true">IR_SWAP/RATE/USD/2D/1D/1Y</Quote>
+            <Quote optional="true">IR_SWAP/RATE/USD/2D/1D/2Y</Quote>
+            <Quote optional="true">IR_SWAP/RATE/USD/2D/1D/3Y</Quote>
+            <Quote optional="true">IR_SWAP/RATE/USD/2D/1D/5Y</Quote>
+            <Quote optional="true">IR_SWAP/RATE/USD/2D/1D/10Y</Quote>
+            <Quote optional="true">IR_SWAP/RATE/USD/2D/1D/30Y</Quote>
+          </Quotes>
+          <Conventions>USD-SOFR-OIS</Conventions>
+          <PillarChoice>LastRelevantPillarDate</PillarChoice>
+          <Priority>0</Priority>
+          <MinDistance>1</MinDistance>
+        </Simple>
+      </Segments>
+      <InterpolationVariable>Discount</InterpolationVariable>
+      <InterpolationMethod>LogLinear</InterpolationMethod>
+      <YieldCurveDayCounter>A365</YieldCurveDayCounter>
+      <Extrapolation>true</Extrapolation>
+    </YieldCurve>
+
+    <!-- USD discount in EUR collateral (if needed) -->
+    
+
+    <!-- GBP OIS (SONIA) -->
+    <YieldCurve>
+      <CurveId>GBP-SONIA</CurveId>
+      <CurveDescription>GBP SONIA OIS</CurveDescription>
+      <Currency>GBP</Currency>
+      <DiscountCurve>GBP-SONIA</DiscountCurve>
+      <Segments>
+        
+        <Simple>
+          <Type>OIS</Type>
+          <Quotes>
+            <Quote optional="true">IR_SWAP/RATE/GBP/SONIA/0D/0D/1W</Quote>
+            <Quote optional="true">IR_SWAP/RATE/GBP/SONIA/0D/0D/1M</Quote>
+            <Quote optional="true">IR_SWAP/RATE/GBP/SONIA/0D/0D/3M</Quote>
+            <Quote optional="true">IR_SWAP/RATE/GBP/SONIA/0D/0D/6M</Quote>
+            <Quote optional="true">IR_SWAP/RATE/GBP/SONIA/0D/0D/1Y</Quote>
+            <Quote optional="true">IR_SWAP/RATE/GBP/SONIA/0D/0D/2Y</Quote>
+            <Quote optional="true">IR_SWAP/RATE/GBP/SONIA/0D/0D/3Y</Quote>
+            <Quote optional="true">IR_SWAP/RATE/GBP/SONIA/0D/0D/5Y</Quote>
+            <Quote optional="true">IR_SWAP/RATE/GBP/SONIA/0D/0D/10Y</Quote>
+            <Quote optional="true">IR_SWAP/RATE/GBP/SONIA/0D/0D/30Y</Quote>
+          </Quotes>
+          <Conventions>GBP-SONIA-OIS</Conventions>
+          <PillarChoice>LastRelevantPillarDate</PillarChoice>
+          <Priority>0</Priority>
+          <MinDistance>1</MinDistance>
+        </Simple>
+      </Segments>
+      <InterpolationVariable>Discount</InterpolationVariable>
+      <InterpolationMethod>LogLinear</InterpolationMethod>
+      <YieldCurveDayCounter>A365</YieldCurveDayCounter>
+      <Extrapolation>true</Extrapolation>
+    </YieldCurve>
+
+    <!-- EUR EURIBOR 3M projection curve (discounts on EUR-ESTER) -->
+    <YieldCurve>
+      <CurveId>EUR-EURIBOR-3M</CurveId>
+      <CurveDescription>EUR EURIBOR 3M forward curve</CurveDescription>
+      <Currency>EUR</Currency>
+      <DiscountCurve>EUR-ESTER</DiscountCurve>
+      <Segments>
+        <Simple>
+          <Type>Deposit</Type>
+          <Quotes>
+            <Quote>MM/RATE/EUR/2D/1W</Quote>
+            <Quote>MM/RATE/EUR/2D/1M</Quote>
+            <Quote>MM/RATE/EUR/2D/3M</Quote>
+          </Quotes>
+          <Conventions>EUR-DEPOSIT</Conventions>
+          <PillarChoice>LastRelevantPillarDate</PillarChoice>
+          <Priority>0</Priority>
+          <MinDistance>1</MinDistance>
+        </Simple>
+        <Simple>
+          <Type>Swap</Type>
+          <Quotes>
+            <Quote>IR_SWAP/RATE/EUR/2D/3M/1Y</Quote>
+            <Quote>IR_SWAP/RATE/EUR/2D/3M/2Y</Quote>
+            <Quote>IR_SWAP/RATE/EUR/2D/3M/3Y</Quote>
+            <Quote>IR_SWAP/RATE/EUR/2D/3M/5Y</Quote>
+            <Quote>IR_SWAP/RATE/EUR/2D/3M/7Y</Quote>
+            <Quote>IR_SWAP/RATE/EUR/2D/3M/10Y</Quote>
+            <Quote>IR_SWAP/RATE/EUR/2D/3M/15Y</Quote>
+            <Quote>IR_SWAP/RATE/EUR/2D/3M/20Y</Quote>
+            <Quote>IR_SWAP/RATE/EUR/2D/3M/30Y</Quote>
+          </Quotes>
+          <Conventions>EUR-EURIBOR-3M-SWAP</Conventions>
+          <PillarChoice>LastRelevantPillarDate</PillarChoice>
+          <Priority>0</Priority>
+          <MinDistance>1</MinDistance>
+        </Simple>
+      </Segments>
+      <InterpolationVariable>Discount</InterpolationVariable>
+      <InterpolationMethod>LogLinear</InterpolationMethod>
+      <YieldCurveDayCounter>A365</YieldCurveDayCounter>
+      <Extrapolation>true</Extrapolation>
+    </YieldCurve>
+
+    <!-- EUR EURIBOR 6M projection curve (discounts on EUR-ESTER) -->
+    <YieldCurve>
+      <CurveId>EUR-EURIBOR-6M</CurveId>
+      <CurveDescription>EUR EURIBOR 6M forward curve</CurveDescription>
+      <Currency>EUR</Currency>
+      <DiscountCurve>EUR-ESTER</DiscountCurve>
+      <Segments>
+        <Simple>
+          <Type>Deposit</Type>
+          <Quotes>
+            <Quote>MM/RATE/EUR/2D/1M</Quote>
+            <Quote>MM/RATE/EUR/2D/6M</Quote>
+          </Quotes>
+          <Conventions>EUR-DEPOSIT</Conventions>
+          <PillarChoice>LastRelevantPillarDate</PillarChoice>
+          <Priority>0</Priority>
+          <MinDistance>1</MinDistance>
+        </Simple>
+        <Simple>
+          <Type>Swap</Type>
+          <Quotes>
+            <Quote>IR_SWAP/RATE/EUR/2D/6M/2Y</Quote>
+            <Quote>IR_SWAP/RATE/EUR/2D/6M/3Y</Quote>
+            <Quote>IR_SWAP/RATE/EUR/2D/6M/5Y</Quote>
+            <Quote>IR_SWAP/RATE/EUR/2D/6M/7Y</Quote>
+            <Quote>IR_SWAP/RATE/EUR/2D/6M/10Y</Quote>
+            <Quote>IR_SWAP/RATE/EUR/2D/6M/15Y</Quote>
+            <Quote>IR_SWAP/RATE/EUR/2D/6M/20Y</Quote>
+            <Quote>IR_SWAP/RATE/EUR/2D/6M/30Y</Quote>
+          </Quotes>
+          <Conventions>EUR-EURIBOR-6M-SWAP</Conventions>
+          <PillarChoice>LastRelevantPillarDate</PillarChoice>
+          <Priority>0</Priority>
+          <MinDistance>1</MinDistance>
+        </Simple>
+      </Segments>
+      <InterpolationVariable>Discount</InterpolationVariable>
+      <InterpolationMethod>LogLinear</InterpolationMethod>
+      <YieldCurveDayCounter>A365</YieldCurveDayCounter>
+      <Extrapolation>true</Extrapolation>
+    </YieldCurve>
+  </YieldCurves>
+
+  <SwaptionVolatilities>
+    <SwaptionVolatility>
+      <CurveId>EUR</CurveId>
+      <CurveDescription>EUR normal swaption vol (flat grid)</CurveDescription>
+      <Dimension>ATM</Dimension>
+      <VolatilityType>Normal</VolatilityType>
+      <Extrapolation>Flat</Extrapolation>
+      <DayCounter>Actual/365 (Fixed)</DayCounter>
+      <Calendar>TARGET</Calendar>
+      <BusinessDayConvention>Following</BusinessDayConvention>
+      <OptionTenors>1Y,5Y,10Y</OptionTenors>
+      <SwapTenors>1Y,5Y,10Y</SwapTenors>
+      <ShortSwapIndexBase>EUR-CMS-1Y</ShortSwapIndexBase>
+      <SwapIndexBase>EUR-CMS-30Y</SwapIndexBase>
+    </SwaptionVolatility>
+    <SwaptionVolatility>
+      <CurveId>EUR-EURIBOR-6M</CurveId>
+      <CurveDescription>EUR-EURIBOR-6M normal swaption vol (flat grid)</CurveDescription>
+      <Dimension>ATM</Dimension>
+      <VolatilityType>Normal</VolatilityType>
+      <Extrapolation>Flat</Extrapolation>
+      <DayCounter>Actual/365 (Fixed)</DayCounter>
+      <Calendar>TARGET</Calendar>
+      <BusinessDayConvention>Following</BusinessDayConvention>
+      <OptionTenors>1Y,5Y,10Y</OptionTenors>
+      <SwapTenors>1Y,5Y,10Y</SwapTenors>
+      <ShortSwapIndexBase>EUR-CMS-1Y</ShortSwapIndexBase>
+      <SwapIndexBase>EUR-CMS-30Y</SwapIndexBase>
+    </SwaptionVolatility>
+  </SwaptionVolatilities>
+
+  <!-- Default curves needed for CDS if present in jobs -->
+  <DefaultCurves>
+    <DefaultCurve>
+      <CurveId>BANK</CurveId>
+      <CurveDescription>BANK SR CDS USD</CurveDescription>
+      <Currency>USD</Currency>
+      <Configurations>
+        <Configuration priority="0">
+          <Type>SpreadCDS</Type>
+          <DiscountCurve>Yield/USD/USD-SOFR</DiscountCurve>
+          <DayCounter>Actual/365 (Fixed)</DayCounter>
+          <RecoveryRate>RECOVERY_RATE/RATE/BANK/SR/USD</RecoveryRate>
+          <Quotes>
+            <Quote>CDS/CREDIT_SPREAD/BANK/SR/USD/1Y</Quote>
+            <Quote>CDS/CREDIT_SPREAD/BANK/SR/USD/2Y</Quote>
+            <Quote>CDS/CREDIT_SPREAD/BANK/SR/USD/3Y</Quote>
+            <Quote>CDS/CREDIT_SPREAD/BANK/SR/USD/4Y</Quote>
+            <Quote>CDS/CREDIT_SPREAD/BANK/SR/USD/5Y</Quote>
+            <Quote>CDS/CREDIT_SPREAD/BANK/SR/USD/7Y</Quote>
+            <Quote>CDS/CREDIT_SPREAD/BANK/SR/USD/10Y</Quote>
+          </Quotes>
+          <Conventions>CDS-STANDARD-CONVENTIONS</Conventions>
+          <Extrapolation>true</Extrapolation>
+          <BootstrapConfig>
+            <Accuracy>0.0000000000010000</Accuracy>
+            <GlobalAccuracy>0.0000000000010000</GlobalAccuracy>
+            <DontThrow>false</DontThrow>
+            <MaxAttempts>5</MaxAttempts>
+            <MaxFactor>2</MaxFactor>
+            <MinFactor>2</MinFactor>
+            <DontThrowSteps>10</DontThrowSteps>
+          </BootstrapConfig>
+          <AllowNegativeRates>false</AllowNegativeRates>
+        </Configuration>
+      </Configurations>
+    </DefaultCurve>
+
+    <!-- Alias with repository-standard ID pattern used by other examples -->
+    <DefaultCurve>
+      <CurveId>BANK_SR_USD</CurveId>
+      <CurveDescription>BANK SR CDS USD (alias)</CurveDescription>
+      <Currency>USD</Currency>
+      <Configurations>
+        <Configuration priority="0">
+          <Type>SpreadCDS</Type>
+          <DiscountCurve>Yield/USD/USD-SOFR</DiscountCurve>
+          <DayCounter>Actual/365 (Fixed)</DayCounter>
+          <RecoveryRate>RECOVERY_RATE/RATE/BANK/SR/USD</RecoveryRate>
+          <Quotes>
+            <Quote>CDS/CREDIT_SPREAD/BANK/SR/USD/1Y</Quote>
+            <Quote>CDS/CREDIT_SPREAD/BANK/SR/USD/2Y</Quote>
+            <Quote>CDS/CREDIT_SPREAD/BANK/SR/USD/3Y</Quote>
+            <Quote>CDS/CREDIT_SPREAD/BANK/SR/USD/4Y</Quote>
+            <Quote>CDS/CREDIT_SPREAD/BANK/SR/USD/5Y</Quote>
+            <Quote>CDS/CREDIT_SPREAD/BANK/SR/USD/7Y</Quote>
+            <Quote>CDS/CREDIT_SPREAD/BANK/SR/USD/10Y</Quote>
+          </Quotes>
+          <Conventions>CDS-STANDARD-CONVENTIONS</Conventions>
+          <Extrapolation>true</Extrapolation>
+          <BootstrapConfig>
+            <Accuracy>0.0000000000010000</Accuracy>
+            <GlobalAccuracy>0.0000000000010000</GlobalAccuracy>
+            <DontThrow>false</DontThrow>
+            <MaxAttempts>5</MaxAttempts>
+            <MaxFactor>2</MaxFactor>
+            <MinFactor>2</MinFactor>
+            <DontThrowSteps>10</DontThrowSteps>
+          </BootstrapConfig>
+          <AllowNegativeRates>false</AllowNegativeRates>
+        </Configuration>
+      </Configurations>
+    </DefaultCurve>
+
+    <DefaultCurve>
+      <CurveId>CPTY_A</CurveId>
+      <CurveDescription>CPTY_A SR HR USD</CurveDescription>
+      <Currency>USD</Currency>
+      <Type>HazardRate</Type>
+      <DiscountCurve/>
+      <DayCounter>A365</DayCounter>
+      <RecoveryRate>RECOVERY_RATE/RATE/CPTY_A/SR/USD</RecoveryRate>
+      <Quotes>
+        <Quote>HAZARD_RATE/RATE/CPTY_A/SR/USD/0Y</Quote>
+        <Quote>HAZARD_RATE/RATE/CPTY_A/SR/USD/1Y</Quote>
+        <Quote>HAZARD_RATE/RATE/CPTY_A/SR/USD/2Y</Quote>
+        <Quote>HAZARD_RATE/RATE/CPTY_A/SR/USD/3Y</Quote>
+        <Quote>HAZARD_RATE/RATE/CPTY_A/SR/USD/4Y</Quote>
+        <Quote>HAZARD_RATE/RATE/CPTY_A/SR/USD/5Y</Quote>
+        <Quote>HAZARD_RATE/RATE/CPTY_A/SR/USD/7Y</Quote>
+        <Quote>HAZARD_RATE/RATE/CPTY_A/SR/USD/10Y</Quote>
+        <Quote>HAZARD_RATE/RATE/CPTY_A/SR/USD/15Y</Quote>
+        <Quote>HAZARD_RATE/RATE/CPTY_A/SR/USD/20Y</Quote>
+        <Quote>HAZARD_RATE/RATE/CPTY_A/SR/USD/30Y</Quote>
+      </Quotes>
+      <Conventions>CDS-STANDARD-CONVENTIONS</Conventions>
+    </DefaultCurve>
+
+    <DefaultCurve>
+      <CurveId>CPTY_A_SR_USD</CurveId>
+      <CurveDescription>CPTY_A SR HR USD (alias)</CurveDescription>
+      <Currency>USD</Currency>
+      <Type>HazardRate</Type>
+      <DiscountCurve/>
+      <DayCounter>A365</DayCounter>
+      <RecoveryRate>RECOVERY_RATE/RATE/CPTY_A/SR/USD</RecoveryRate>
+      <Quotes>
+        <Quote>HAZARD_RATE/RATE/CPTY_A/SR/USD/0Y</Quote>
+        <Quote>HAZARD_RATE/RATE/CPTY_A/SR/USD/1Y</Quote>
+        <Quote>HAZARD_RATE/RATE/CPTY_A/SR/USD/2Y</Quote>
+        <Quote>HAZARD_RATE/RATE/CPTY_A/SR/USD/3Y</Quote>
+        <Quote>HAZARD_RATE/RATE/CPTY_A/SR/USD/4Y</Quote>
+        <Quote>HAZARD_RATE/RATE/CPTY_A/SR/USD/5Y</Quote>
+        <Quote>HAZARD_RATE/RATE/CPTY_A/SR/USD/7Y</Quote>
+        <Quote>HAZARD_RATE/RATE/CPTY_A/SR/USD/10Y</Quote>
+        <Quote>HAZARD_RATE/RATE/CPTY_A/SR/USD/15Y</Quote>
+        <Quote>HAZARD_RATE/RATE/CPTY_A/SR/USD/20Y</Quote>
+        <Quote>HAZARD_RATE/RATE/CPTY_A/SR/USD/30Y</Quote>
+      </Quotes>
+      <Conventions>CDS-STANDARD-CONVENTIONS</Conventions>
+    </DefaultCurve>
+</DefaultCurves>
+
+  <!-- Minimal FX Volatility surface (no-op flat vols) to satisfy builds when FX vols are requested -->
+  <FXVolatilities>
+    <FXVolatility>
+      <CurveId>EURUSD</CurveId>
+      <CurveDescription>Flat EURUSD FX vol (no-op)</CurveDescription>
+      <Dimension>ATM</Dimension>
+      <VolatilityType>Lognormal</VolatilityType>
+      <Extrapolation>Flat</Extrapolation>
+      <DayCounter>Actual/365 (Fixed)</DayCounter>
+      <Calendar>TARGET</Calendar>
+      <BusinessDayConvention>Following</BusinessDayConvention>
+      <Expiries>1Y</Expiries>
+      <FXSpotID>FX/EUR/USD</FXSpotID>
+      <FXForeignCurveID>Yield/EUR/EUR-ESTER</FXForeignCurveID>
+      <FXDomesticCurveID>Yield/USD/USD-SOFR</FXDomesticCurveID>
+      <Quotes>
+        <!-- Flat 1% vol at 1Y -->
+        <Quote>FX_OPTION/RR_25/EUR/USD/1Y</Quote>
+      </Quotes>
+      <Report/>
+    </FXVolatility>
+  </FXVolatilities>
+</CurveConfiguration>

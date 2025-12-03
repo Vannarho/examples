@@ -1,0 +1,4 @@
+#TradeId,Type,CashflowNo,LegNo,PayDate,FlowType,Amount,Currency,Coupon,Accrual,AccrualStartDate,AccrualEndDate,AccruedAmount,fixingDate,fixingValue,Notional,DiscountFactor,PresentValue,FXRate(Local-Base),PresentValue(Base),BaseCurrency,FloorStrike,CapStrike,FloorVolatility,CapVolatility,EffectiveFloorVolatility,EffectiveCapVolatility
+SwapLeg,Swap,1,0,2024-02-01,Interest,#N/A,USD,0.0500000000,1.0000000000,2023-02-01,2024-02-01,0.0000,#N/A,#N/A,1000000.0000,0.9528169849,#N/A,1.0000000000,#N/A,USD,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A
+SwapLegFlow,Swap,1,0,2023-02-06,Interest,#N/A,USD,0.0500000000,0.9972222222,2022-02-07,2023-02-06,49166.6667,#N/A,#N/A,1000000.0000,0.9992463821,#N/A,1.0000000000,#N/A,USD,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A
+SwapLegFlow,Swap,2,0,2024-02-05,Interest,#N/A,USD,0.0500000000,0.9972222222,2023-02-06,2024-02-05,0.0000,#N/A,#N/A,1000000.0000,0.9524110841,#N/A,1.0000000000,#N/A,USD,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A

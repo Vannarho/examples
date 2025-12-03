@@ -1,7 +1,5 @@
 
 # Copyright (C) 2019 Quaternion Risk Manaement Ltd
-# Copyright (C) 2025 Growth Mindset Pty Ltd 
-
 # All rights reserved.
 
 from VRE import *

@@ -1,6 +1,3 @@
-RUN gaussian1d-models.py
-
-
 Explicit helper basket (fallback)
 --------------------------------------------------------------------------------
        Expiry    Maturity Nominal      Rate Market vol
@@ -18,38 +15,98 @@ GSR calibration (Naive) — calibration quality
 n          : 2
 mean |err| : 0.000000
 max  |err| : 0.000000
-Traceback (most recent call last):
-  File "/Users/fordesmith/Documents/vre/Examples/VREPython/ExampleScripts/gaussian1d-models.py", line 478, in _guarded_nonstd_npv
-    _assert_nonzero(label, npv)
-  File "/Users/fordesmith/Documents/vre/Examples/VREPython/ExampleScripts/gaussian1d-models.py", line 144, in _assert_nonzero
-    raise RuntimeError(f"{name} is ~0.0 — adjust demo inputs (deeper ITM strike, higher vol, or model sigma)")
-RuntimeError: Bermudan NPV (ATM calibrated GSR) is ~0.0 — adjust demo inputs (deeper ITM strike, higher vol, or model sigma)
 
-During handling of the above exception, another exception occurred:
+Bermudan NPV (ATM calibrated GSR) (standard fallback): 0.000000
 
-Traceback (most recent call last):
-  File "/Users/fordesmith/Documents/vre/Examples/VREPython/ExampleScripts/gaussian1d-models.py", line 495, in _guarded_nonstd_npv
-    _assert_nonzero(label + " (retry)", npv2)
-  File "/Users/fordesmith/Documents/vre/Examples/VREPython/ExampleScripts/gaussian1d-models.py", line 144, in _assert_nonzero
-    raise RuntimeError(f"{name} is ~0.0 — adjust demo inputs (deeper ITM strike, higher vol, or model sigma)")
-RuntimeError: Bermudan NPV (ATM calibrated GSR) (retry) is ~0.0 — adjust demo inputs (deeper ITM strike, higher vol, or model sigma)
+Explicit helper basket (fallback)
+--------------------------------------------------------------------------------
+       Expiry    Maturity Nominal      Rate Market vol
+0  2015-04-30  2020-04-30   1.000  0.400000   0.400000
+1  2016-05-02  2021-05-03   1.000  0.400000   0.400000
 
-During handling of the above exception, another exception occurred:
+Calibration (engine path)
+--------------------------------------------------------------------------------
+  Expiry Model sigma Model price (ccy) Market price (ccy) Model imp.vol Market imp.vol
+0           0.010000          0.000000           0.000000      0.400000       0.400000
+1           0.010000          0.000000           0.000000      0.400000       0.400000
+Empty DataFrame
+Columns: [Expiry, Model sigma, Model price (ccy), Market price (ccy), Model imp.vol, Market imp.vol]
+Index: []
 
-Traceback (most recent call last):
-  File "/Users/fordesmith/Documents/vre/Examples/VREPython/ExampleScripts/gaussian1d-models.py", line 517, in _guarded_nonstd_npv
-    _assert_nonzero(label + " (retry2 deeper ITM)", npv3)
-  File "/Users/fordesmith/Documents/vre/Examples/VREPython/ExampleScripts/gaussian1d-models.py", line 144, in _assert_nonzero
-    raise RuntimeError(f"{name} is ~0.0 — adjust demo inputs (deeper ITM strike, higher vol, or model sigma)")
-RuntimeError: Bermudan NPV (ATM calibrated GSR) (retry2 deeper ITM) is ~0.0 — adjust demo inputs (deeper ITM strike, higher vol, or model sigma)
+Bermudan NPV (deal strike calibrated GSR) (standard fallback): 0.000000
 
-During handling of the above exception, another exception occurred:
+Explicit helper basket (Nonstandard #3)
+--------------------------------------------------------------------------------
+       Expiry    Maturity Nominal      Rate Market vol
+0  2015-04-30  2020-04-30   1.000  0.400000   0.400000
+1  2016-05-02  2021-05-03   1.000  0.400000   0.400000
+  Expiry  Model sigma  Model price (ccy)  Market price (ccy)  Model imp.vol  Market imp.vol
+0                0.01                0.0                 0.0            0.4             0.4
+1                0.01                0.0                 0.0            0.4             0.4
+Explicit helper basket (Nonstandard #3)
+     Type  Market value
+0  helper      0.027090
+1  helper      0.034795
 
-Traceback (most recent call last):
-  File "/Users/fordesmith/Documents/vre/Examples/VREPython/ExampleScripts/gaussian1d-models.py", line 536, in <module>
-    _npv_atm = _guarded_nonstd_npv("Bermudan NPV (ATM calibrated GSR)", gsr, swaption3, t0_Ois)
-  File "/Users/fordesmith/Documents/vre/Examples/VREPython/ExampleScripts/gaussian1d-models.py", line 522, in _guarded_nonstd_npv
-    _assert_nonzero(label + " (retry3 sigma↑)", npv4)
-  File "/Users/fordesmith/Documents/vre/Examples/VREPython/ExampleScripts/gaussian1d-models.py", line 144, in _assert_nonzero
-    raise RuntimeError(f"{name} is ~0.0 — adjust demo inputs (deeper ITM strike, higher vol, or model sigma)")
-RuntimeError: Bermudan NPV (ATM calibrated GSR) (retry3 sigma↑) is ~0.0 — adjust demo inputs (deeper ITM strike, higher vol, or model sigma)
+Nonstandard #3 Bermudan NPV (pre-OAS) (standard fallback): 0.000000
+Empty DataFrame
+Columns: [Expiry, Maturity, Nominal (ccy), Rate, Strike]
+Index: []
+
+Nonstandard #3 Bermudan NPV (post-OAS) (standard fallback): 0.000000
+       Expiry    Maturity  Nominal  Rate  Market vol
+0  2015-04-30  2020-04-30      1.0   0.4         0.4
+1  2016-05-02  2021-05-03      1.0   0.4         0.4
+
+FloatFloat Bermudan NPV (GSR) (standard fallback): 0.000000
+[info] underlyingValue not available from this engine
+
+FloatFloat Bermudan NPV (Markov) (standard fallback): 0.000000
+
+
+FloatFloat Bermudan NPVs
+--------------------------------------------------------------------------------
+GSR    : 0.000000
+Markov : 0.000000
+
+Markov helper errors
+--------------------------------------------------------------------------------
+helper[0] error : 0.000000
+helper[1] error : 0.000000
+  Expiry  Model sigma  Model price (ccy)  Market price (ccy)  Model imp.vol  Market imp.vol
+0                0.01                0.0                 0.0            0.2             0.2
+1                0.01                0.0                 0.0            0.2             0.2
+
+
+================================================================================
+Summary
+================================================================================
+
+Headline NPVs
+--------------------------------------------------------------------------------
+GSR calibration (Naive) max |err|                             : 0.000000
+Bermudan NPV (ATM calibrated GSR) (standard fallback)         : 0.000000
+Bermudan NPV (deal strike calibrated GSR) (standard fallback) : 0.000000
+Nonstandard #3 Bermudan NPV (pre-OAS) (standard fallback)     : 0.000000
+Nonstandard #3 Bermudan NPV (post-OAS) (standard fallback)    : 0.000000
+FloatFloat Bermudan NPV (GSR) (standard fallback)             : 0.000000
+FloatFloat Bermudan NPV (Markov) (standard fallback)          : 0.000000
+
+Notes
+--------------------------------------------------------------------------------
+As a final remark we note that the calibration to coterminal swaptions is not particularly reasonable here, because the European call rights are not well represented by these swaptions. Secondly, our CMS swaption is sensitive to the correlation between the 10y swap rate and the Euribor 6M rate. Since the Markov model is one factor it will most probably underestimate the market value by construction.
+
+Further Notes on Vol Surface and Calibration
+--------------------------------------------------------------------------------
+
+Recommendations
+--------------------------------------------------------------------------------
+Vol type        : Prefer a normal-vol (Bachelier) SwaptionVolatilityMatrix with ≥3 option tenors × ≥2 swap tenors.
+Monotonicity    : Ensure vols are arbitrage-consistent (no jagged dips) to stabilise MF calibration.
+Engine vol type : Use engines consistent with the vol type (Bachelier engines for normal vols).
+Strike policy   : Align basket strike policy (ATM vs DeltaGamma) for both GSR and MF when comparing.
+Weights         : Consider error weighting by maturity/vega when minimising (e.g., relative price error).
+MF steps        : Add MF step dates at each exercise and key CMS fixing dates; tune sigma prior (e.g., 1–2%).
+GSR steps       : Use the same exercise-date steps for GSR sigma; calibrate with the same optimiser/EC.
+Curves          : Keep discount/forward curves identical across models and helpers; verify index conventions.
+Diagnostics     : Track mean/max |model−market| for both models and reject fits above a chosen threshold.

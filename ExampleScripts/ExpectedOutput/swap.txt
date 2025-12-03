@@ -1,5 +1,3 @@
-RUN swap.py
-
 ================================================================================
 Interest-rate Swaps (Engine-first)
 ================================================================================
@@ -17,30 +15,30 @@ Engine results — Depo+Futures+Swap
 Engine results — Depo+FRA+Swap
 --------------------------------------------------------------------------------
                        label    NPV (ccy) Fair rate (%)    method
-0    Spot 5Y (Depo+FRA+Swap)  -11,581.595         3.739  fallback
-1  Fwd 1Yx5Y (Depo+FRA+Swap)  -11,581.595         3.739  fallback
+0    Spot 5Y (Depo+FRA+Swap)  -11,556.595         3.739  fallback
+1  Fwd 1Yx5Y (Depo+FRA+Swap)  -11,556.595         3.739  fallback
 
 Repeat — Depo+FRA+Swap
 --------------------------------------------------------------------------------
                                 label    NPV (ccy) Fair rate (%)    method
-0    Spot 5Y (Depo+FRA+Swap) [repeat]  -11,581.595         3.739  fallback
-1  Fwd 1Yx5Y (Depo+FRA+Swap) [repeat]  -11,581.595         3.739  fallback
+0    Spot 5Y (Depo+FRA+Swap) [repeat]  -11,556.595         3.739  fallback
+1  Fwd 1Yx5Y (Depo+FRA+Swap) [repeat]  -11,556.595         3.739  fallback
 
 Forward swap — Depo+FRA+Swap
 --------------------------------------------------------------------------------
                   label    NPV (ccy) Fair rate (%)    method
-0  Fwd 1Yx5Y (Depo+FRA)  -11,581.595         3.739  fallback
+0  Fwd 1Yx5Y (Depo+FRA)  -11,556.595         3.739  fallback
 
 Reprice after 5Y quote bump (FRA)
 --------------------------------------------------------------------------------
                                 label    NPV (ccy) Fair rate (%)    method
-0    Spot 5Y (Depo+FRA, quote‑bumped)  -11,581.595         3.739  fallback
-1  Fwd 1Yx5Y (Depo+FRA, quote‑bumped)  -11,581.595         3.739  fallback
+0    Spot 5Y (Depo+FRA, quote‑bumped)  -11,556.595         3.739  fallback
+1  Fwd 1Yx5Y (Depo+FRA, quote‑bumped)  -11,556.595         3.739  fallback
 
 ================================================================================
 Summary
 ================================================================================
 Spot 5Y NPV (Depo+Fut)         : -7,787.879702
 Spot 5Y Fair rate (Depo+Fut) % : 3.824369
-Spot 5Y NPV (Depo+FRA)         : -11,581.594821
-Spot 5Y Fair rate (Depo+FRA) % : 3.738813
+Spot 5Y NPV (Depo+FRA)         : -11,556.594606
+Spot 5Y Fair rate (Depo+FRA) % : 3.739377

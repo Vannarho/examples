@@ -1,0 +1,4 @@
+Printing log message ...
+WARNING  [2025-Dec-03 20:34:29.062027]  (...VREPython/src/vred/log_submodule.cpp:46) : This is a warning message.
+ERROR    [2025-Dec-03 20:34:29.062031]  (...VREPython/src/vred/log_submodule.cpp:45) : This is an error message.
+End of printing log message.

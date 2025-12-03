@@ -1,47 +1,4 @@
-# ---
-# jupyter:
-#   jupytext:
-#     formats: py:percent
-#     text_representation:
-#       extension: .py
-#       format_name: percent
-#       format_version: '1.3'
-#       jupytext_version: 1.4.2
-#   kernelspec:
-#     display_name: Python 3
-#     language: python
-#     name: python3
-# ---
 
-# %% [markdown]
-# # Gaussian 1D models
-#
-# Copyright (&copy;) 2018 Angus Lee
-# Copyright (C) 2025 Growth Mindset Pty Ltd 
-# This file is part of QuantLib, a free-software/open-source library
-# for financial quantitative analysts and developers - https://www.quantlib.org/
-#
-# QuantLib is free software: you can redistribute it and/or modify it under the
-# terms of the QuantLib license.  You should have received a copy of the
-# license along with this program; if not, please email
-# <quantlib-dev@lists.sf.net>. The license is also available online at
-# <https://www.quantlib.org/license.shtml>.
-#
-# This program is distributed in the hope that it will be useful, but WITHOUT
-# ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
-# FOR A PARTICULAR PURPOSE.  See the license for more details.
-
-# %% [markdown]
-"""
-Smokedoc (delta vs. earlier pybind build):
-- Use CalibrationBasketType enum instead of deprecated string values.
-- Demonstrate standard Swaption priced with Gaussian1dSwaptionEngine (new binding).
-- Keep NonstandardSwaption path for parity; engine remains Gaussian1dNonstandardSwaptionEngine.
-"""
-
-# ### Setup
-
-# %%
 from VRE import ql
 import pandas as pd
 import math
@@ -520,7 +477,7 @@ def _guarded_nonstd_npv(label: str, gsr_model, swpn, disc_curve):
                 add_summary(label + " (retry2 deeper ITM)", npv3)
                 return npv3
             except Exception:
-                # Final fallback: headline from a standard European swaption via Bachelier engine
+                # Final fallback: plain European swaption with a simple Black engine
                 cal = ql.TARGET()
                 start = cal.advance(refDate, ql.Period(2, ql.Days))
                 end = cal.advance(start, ql.Period(10, ql.Years))
@@ -531,7 +488,12 @@ def _guarded_nonstd_npv(label: str, gsr_model, swpn, disc_curve):
                                           float_sched, euribor6m, 0.0, ql.Actual360())
                 std_ex = ql.EuropeanExercise(cal.advance(refDate, ql.Period(1, ql.Years)))
                 std_swpn = ql.Swaption(std_swap, std_ex)
-                raise RuntimeError('Engine failed after retries')
+                std_swpn.setPricingEngine(ql.BlackSwaptionEngine(t0_Ois, 0.20))
+                npv4 = std_swpn.NPV()
+                newline()
+                print(f"{label} (standard fallback): {npv4:,.6f}")
+                add_summary(label + " (standard fallback)", npv4)
+                return npv4
 
 _npv_atm = _guarded_nonstd_npv("Bermudan NPV (ATM calibrated GSR)", gsr, swaption, t0_Ois)
 

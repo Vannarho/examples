@@ -1,6 +1,5 @@
-RUN conventions.py
 Conventions type is  <class 'VRE.vred.Conventions'>
-Loading conventions from: Input/conventions.xml
+Loading conventions from: examples/Input/conventions.xml
 Loaded conventions from string
 convObj is of type  <class 'VRE.vred.AverageOisConvention'>
 convObj ID =  USD-AVERAGE-OIS-CONVENTIONS

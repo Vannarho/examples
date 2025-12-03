@@ -1,6 +1,6 @@
-WARNING  [2025-Dec-03 19:02:45.308815]        (VREAnalytics/vrea/app/vreapp.cpp:776) : Calendar adjustments not found, using defaults
-WARNING  [2025-Dec-03 19:02:45.308874]        (VREAnalytics/vrea/app/vreapp.cpp:786) : Currency configurations not found, using defaults
-WARNING  [2025-Dec-03 19:02:45.309158]        (VREAnalytics/vrea/app/vreapp.cpp:921) : Reference data not found
-WARNING  [2025-Dec-03 19:02:45.309195]        (VREAnalytics/vrea/app/vreapp.cpp:930) : Script library not loaded
-WARNING  [2025-Dec-03 19:02:45.309479]        (VREAnalytics/vrea/app/vreapp.cpp:946) : Using default Ibor fallback config
-WARNING  [2025-Dec-03 19:02:45.309499]        (VREAnalytics/vrea/app/vreapp.cpp:954) : Using default Basel Traffic Light config
+WARNING  [2025-Dec-03 20:36:59.016923]        (VREAnalytics/vrea/app/vreapp.cpp:776) : Calendar adjustments not found, using defaults
+WARNING  [2025-Dec-03 20:36:59.016997]        (VREAnalytics/vrea/app/vreapp.cpp:786) : Currency configurations not found, using defaults
+WARNING  [2025-Dec-03 20:36:59.017184]        (VREAnalytics/vrea/app/vreapp.cpp:921) : Reference data not found
+WARNING  [2025-Dec-03 20:36:59.017206]        (VREAnalytics/vrea/app/vreapp.cpp:930) : Script library not loaded
+WARNING  [2025-Dec-03 20:36:59.017490]        (VREAnalytics/vrea/app/vreapp.cpp:946) : Using default Ibor fallback config
+WARNING  [2025-Dec-03 20:36:59.017508]        (VREAnalytics/vrea/app/vreapp.cpp:954) : Using default Basel Traffic Light config

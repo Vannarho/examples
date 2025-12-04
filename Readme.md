@@ -82,7 +82,7 @@ venv\Scripts\Activate.ps1
 pip install -r requirements.txt
 ```
 
-If no `requirements.txt` file is provided, ensure you have at least:
+Ensure you have at least:
 
 ```bash
 pip install numpy pandas matplotlib
@@ -152,27 +152,15 @@ depending on the environment without code changes.
 ## Installing a specific variant
 
 Wheels are versioned using [PEP 440](https://peps.python.org/pep-0440/) post
-releases. Append `.post1` or `.post2` when calling `pip install`:
+releases. 
 
-```bash
-# Kernel / GPU enabled wheel
-python -m pip install "vannarho-risk-engine==0.5.0.post1"
-
-# Baseline, no kernels
-python -m pip install "vannarho-risk-engine==0.5.0.post2"
-```
-
-When testing locally, you can also install from the build artifacts:
+Install from the build artifacts:
 
 ```bash
 # From this repo
 pip install --force-reinstall \
-  VREPython/wheelhouse/cpu_kernels/vannarho_risk_engine-0.5.0.post1-<tag>.whl
+  VREPython/wheelhouse/cpu_kernels/vannarho_risk_engine-0.6.2.post1-<tag>.whl
 ```
-
-`pip install vannarho-risk-engine` (without a suffix) will install whichever
-variant is newest/available for your platform, so pin the explicit post release
-if you care which runtime you receive.
 
 ## 4. Verify installation
 
@@ -182,21 +170,15 @@ Check that the package imports correctly:
 python -c "import VRE; import vannarho_risk_engine; print(vannarho_risk_engine.__version__)"
 ```
 
-Expected output:
+Expected output e.g.:
 
 ```
-0.5.0.post1
+0.6.2.post1
 ```
 
-or
-
-```
-0.5.0.post2
-```
 
 No additional system packages are required; the wheel includes native
-dependencies. If you see a compiler invocation during install, you are likely
-installing from a source tree or an unsupported environment — see Troubleshooting.
+dependencies. 
 
 ## Quickstart
 
@@ -216,9 +198,9 @@ print("Today:", today)
 
 Binary wheels are provided for:
 
-* Linux x86_64 (manylinux / musllinux where applicable — vanilla and kernel variants; CUDA enablement lands in an upcoming release)
+* Linux x86_64 (manylinux / musllinux where applicable — vanilla and kernel variants; CUDA enablement)
 * macOS arm64 (universal2 when possible with vanilla and kernel variants, including Metal GPU support)
-* Windows x86_64 (vanilla variant today, CUDA support coming in a future post release)
+* Windows x86_64 (vanilla and kernel variants, CUDA support if relevant device available)
 
 If your platform is not listed, pip may report “No matching distribution found”.
 

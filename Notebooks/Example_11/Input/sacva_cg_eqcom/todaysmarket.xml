@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<TodaysMarket>
+  <Configuration id="default">
+    <DiscountingCurvesId>default</DiscountingCurvesId>
+    <YieldCurvesId>default</YieldCurvesId>
+    <IndexForwardingCurvesId>default</IndexForwardingCurvesId>
+    <FxSpotsId>default</FxSpotsId>
+    <FxVolatilitiesId>default</FxVolatilitiesId>
+    <EquityCurvesId>default</EquityCurvesId>
+    <EquityVolatilitiesId>default</EquityVolatilitiesId>
+    <CommodityCurvesId>default</CommodityCurvesId>
+    <CommodityVolatilitiesId>default</CommodityVolatilitiesId>
+    <DefaultCurvesId>default</DefaultCurvesId>
+  </Configuration>
+
+  <!-- CG path uses xois_eur but keep the mappings identical to default to avoid missing objects -->
+  <Configuration id="xois_eur">
+    <DiscountingCurvesId>default</DiscountingCurvesId>
+    <YieldCurvesId>default</YieldCurvesId>
+    <IndexForwardingCurvesId>default</IndexForwardingCurvesId>
+    <FxSpotsId>default</FxSpotsId>
+    <FxVolatilitiesId>default</FxVolatilitiesId>
+    <EquityCurvesId>default</EquityCurvesId>
+    <EquityVolatilitiesId>default</EquityVolatilitiesId>
+    <CommodityCurvesId>default</CommodityCurvesId>
+    <CommodityVolatilitiesId>default</CommodityVolatilitiesId>
+    <DefaultCurvesId>default</DefaultCurvesId>
+  </Configuration>
+
+  <YieldCurves id="default">
+    <YieldCurve name="EUR1D">Yield/EUR/EUR1D</YieldCurve>
+    <YieldCurve name="EUR3M">Yield/EUR/EUR3M</YieldCurve>
+    <YieldCurve name="EUR6M">Yield/EUR/EUR6M</YieldCurve>
+    <YieldCurve name="USD1D">Yield/USD/USD1D</YieldCurve>
+    <YieldCurve name="USD3M">Yield/USD/USD3M</YieldCurve>
+    <YieldCurve name="USD6M">Yield/USD/USD6M</YieldCurve>
+  </YieldCurves>
+
+  <DiscountingCurves id="default">
+    <DiscountingCurve currency="EUR">Yield/EUR/EUR1D</DiscountingCurve>
+    <DiscountingCurve currency="USD">Yield/USD/USD1D</DiscountingCurve>
+  </DiscountingCurves>
+
+  <IndexForwardingCurves id="default">
+    <Index name="EUR-ESTER">Yield/EUR/EUR1D</Index>
+    <Index name="EUR-EURIBOR-3M">Yield/EUR/EUR3M</Index>
+    <Index name="EUR-EURIBOR-6M">Yield/EUR/EUR6M</Index>
+    <Index name="USD-FedFunds">Yield/USD/USD1D</Index>
+    <Index name="USD-SOFR">Yield/USD/USD1D</Index>
+    <Index name="USD-LIBOR-3M">Yield/USD/USD3M</Index>
+    <Index name="USD-LIBOR-6M">Yield/USD/USD6M</Index>
+  </IndexForwardingCurves>
+
+  <FxSpots id="default">
+    <FxSpot pair="EURUSD">FX/EUR/USD</FxSpot>
+  </FxSpots>
+
+  <FxVolatilities id="default">
+    <FxVolatility pair="EURUSD">FXVolatility/EUR/USD/EURUSD</FxVolatility>
+  </FxVolatilities>
+
+  <EquityCurves id="default">
+    <EquityCurve name="SP5">Equity/USD/SP5</EquityCurve>
+    <EquityCurve name="SP5-USD">Equity/USD/SP5</EquityCurve>
+    <EquityCurve name="EQ-SP5">Equity/USD/SP5</EquityCurve>
+  </EquityCurves>
+
+  <EquityVolatilities id="default">
+    <EquityVolatility name="SP5">EquityVolatility/USD/SP5</EquityVolatility>
+    <EquityVolatility name="SP5-USD">EquityVolatility/USD/SP5</EquityVolatility>
+    <EquityVolatility name="EQ-SP5">EquityVolatility/USD/SP5</EquityVolatility>
+  </EquityVolatilities>
+
+  <CommodityCurves id="default">
+    <CommodityCurve name="COMDTY_WTI_USD">Commodity/USD/WTI_USD</CommodityCurve>
+    <CommodityCurve name="WTI_USD">Commodity/USD/WTI_USD</CommodityCurve>
+  </CommodityCurves>
+
+  <CommodityVolatilities id="default">
+    <CommodityVolatility name="COMDTY_WTI_USD">CommodityVolatility/USD/WTI_USD_VOLS</CommodityVolatility>
+    <CommodityVolatility name="WTI_USD">CommodityVolatility/USD/WTI_USD_VOLS</CommodityVolatility>
+  </CommodityVolatilities>
+
+  <DefaultCurves id="default">
+    <DefaultCurve name="BANK">Default/USD/BANK</DefaultCurve>
+    <DefaultCurve name="CPTY_A">Default/USD/CPTY_A_SR_USD</DefaultCurve>
+  </DefaultCurves>
+
+</TodaysMarket>

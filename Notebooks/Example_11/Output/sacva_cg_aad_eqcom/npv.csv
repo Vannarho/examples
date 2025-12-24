@@ -1,0 +1,3 @@
+#TradeId,TradeType,Maturity,MaturityTime,NPV,NpvCurrency,NPV(Base),BaseCurrency,Notional,NotionalCurrency,Notional(Base),NettingSet,CounterParty
+ComFwd_WTI_QuantoEUR_5Y,ScriptedTrade,2021-02-05,5.000262,-6798.111159,USD,-6003.985334,EUR,20000.00,USD,17663.69,CPTY_A,CPTY_A
+EqCall_SP5_FD,ScriptedTrade,2018-02-05,2.000262,1373794.979095,USD,1213314.215347,EUR,17600000.00,USD,15544044.43,CPTY_A,CPTY_A

@@ -1,0 +1,15 @@
+#NettingSet,RiskType,CvaType,MarginType,RiskFactor,Bucket,FxOrientation,Value
+,InterestRate,CvaAggregate,Delta,1Y,USD,EURUSD,-66890.9709
+,InterestRate,CvaAggregate,Delta,5Y,USD,EURUSD,-55333.9869
+,ForeignExchange,CvaAggregate,Delta,FXSpot,USD,EURUSD,68334.5584
+,CreditCounterparty,CvaAggregate,Delta,BANK/1Y,2,EURUSD,-187069.4326
+,CreditCounterparty,CvaAggregate,Delta,BANK/5Y,2,EURUSD,4589856.1554
+,Equity,CvaAggregate,Delta,SP5,11,EURUSD,-1030402.8343
+,Commodity,CvaAggregate,Delta,COMDTY_WTI_USD,1,EURUSD,1235.5195
+CPTY_A,InterestRate,CvaAggregate,Delta,1Y,USD,EURUSD,-66890.9709
+CPTY_A,InterestRate,CvaAggregate,Delta,5Y,USD,EURUSD,-55333.9869
+CPTY_A,ForeignExchange,CvaAggregate,Delta,FXSpot,USD,EURUSD,68334.5584
+CPTY_A,CreditCounterparty,CvaAggregate,Delta,BANK/1Y,2,EURUSD,-187069.4326
+CPTY_A,CreditCounterparty,CvaAggregate,Delta,BANK/5Y,2,EURUSD,4589856.1554
+CPTY_A,Equity,CvaAggregate,Delta,SP5,11,EURUSD,-1030402.8343
+CPTY_A,Commodity,CvaAggregate,Delta,COMDTY_WTI_USD,1,EURUSD,1235.5195

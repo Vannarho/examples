@@ -16,7 +16,7 @@
     <Parameter name="portfolioFile">portfolio_sacva_eqcom.xml</Parameter>
     <Parameter name="counterpartyFile">counterparty.xml</Parameter>
     <Parameter name="observationModel">Disable</Parameter>
-    <Parameter name="scriptLibrary">../scriptlibrary_master.xml</Parameter>
+    <Parameter name="scriptLibrary">../../../Input/scriptlibrary_master.xml</Parameter>
     <Parameter name="referenceDataFile">referencedata.xml</Parameter>
     <Parameter name="nThreads">1</Parameter>
   </Setup>

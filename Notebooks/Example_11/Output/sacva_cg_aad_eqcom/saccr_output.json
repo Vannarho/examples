@@ -1,0 +1,130 @@
+{
+    "counterparties": [
+        {
+            "EAD": 1913795.6151108406,
+            "PFE": 0.0,
+            "addon": 0.0,
+            "id": "CPTY_A",
+            "index": 0,
+            "nettingSets": [
+                {
+                    "EAD": 1913795.6151108406,
+                    "PFE": 0.0,
+                    "addon": 0.0,
+                    "alpha": 1.4,
+                    "applyMarginCallDisputes": false,
+                    "assetClasses": {
+                        "Commodity": {
+                            "addon": 0.0
+                        },
+                        "Credit": {
+                            "addon": 0.0,
+                            "idiosynchraticComponent": 0.0,
+                            "systematicComponent": 0.0
+                        },
+                        "Equity": {
+                            "addon": 0.0,
+                            "idiosynchraticComponent": 0.0,
+                            "systematicComponent": 0.0
+                        },
+                        "FX": {
+                            "addon": 0.0
+                        },
+                        "IRD": {
+                            "addon": 0.0
+                        },
+                        "Other": {
+                            "addon": 0.0,
+                            "otherSubClasses": [
+                                {
+                                    "addon": 0.0,
+                                    "otherSubClass": "normal_trades_",
+                                    "supervisoryFactor": 0.08,
+                                    "trades": [
+                                        {
+                                            "exposure": {
+                                                "adjustedNotional": 0.0,
+                                                "effectiveNotional": 0.0,
+                                                "maturityFactor": 1.0,
+                                                "supervisoryDelta": 1.0
+                                            },
+                                            "id": "ComFwd_WTI_QuantoEUR_5Y",
+                                            "trade": {
+                                                "assetClass": "",
+                                                "buySell": "",
+                                                "counterparty": "CPTY_A",
+                                                "creditRating": "",
+                                                "currency": "USD",
+                                                "fixingDays": 0,
+                                                "id": "ComFwd_WTI_QuantoEUR_5Y",
+                                                "isAveraged": false,
+                                                "mTm": -6798.111158641695,
+                                                "nettingSet": "CPTY_A",
+                                                "optionType": "",
+                                                "payLegType": "Fixed",
+                                                "quantity": 0,
+                                                "recLegType": "Floating",
+                                                "subClass": "",
+                                                "timeBucket": 0,
+                                                "tradeType": "CommodityForward"
+                                            }
+                                        },
+                                        {
+                                            "exposure": {
+                                                "adjustedNotional": 0.0,
+                                                "effectiveNotional": 0.0,
+                                                "maturityFactor": 1.0,
+                                                "supervisoryDelta": 1.0
+                                            },
+                                            "id": "EqCall_SP5_FD",
+                                            "trade": {
+                                                "assetClass": "",
+                                                "buySell": "",
+                                                "counterparty": "CPTY_A",
+                                                "creditRating": "",
+                                                "currency": "USD",
+                                                "fixingDays": 0,
+                                                "id": "EqCall_SP5_FD",
+                                                "isAveraged": false,
+                                                "mTm": 1373794.9790949565,
+                                                "nettingSet": "CPTY_A",
+                                                "optionType": "",
+                                                "payLegType": "Fixed",
+                                                "quantity": 0,
+                                                "recLegType": "Floating",
+                                                "subClass": "",
+                                                "timeBucket": 0,
+                                                "tradeType": "EquityOption"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    },
+                    "counterpartyIndex": 0,
+                    "hasIlliquidCollateralOrOTCNotEasilyReplaced": false,
+                    "id": "CPTY_A",
+                    "index": 0,
+                    "isMargined": false,
+                    "replacementCost": {
+                        "rc": 1366996.8679363148,
+                        "v": 1366996.8679363148,
+                        "v_c": 1366996.8679363148
+                    },
+                    "replacementCost.rc": 1366996.8679363148,
+                    "replacementCost.v": 1366996.8679363148,
+                    "replacementCost.v_c": 1366996.8679363148
+                }
+            ],
+            "replacementCost": {
+                "rc": 1366996.8679363148,
+                "v": 1366996.8679363148,
+                "v_c": 1366996.8679363148
+            },
+            "replacementCost.rc": 1366996.8679363148,
+            "replacementCost.v": 1366996.8679363148,
+            "replacementCost.v_c": 1366996.8679363148
+        }
+    ]
+}

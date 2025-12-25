@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<!--
+Copyright (C) 2025 Growth Mindset Pty Ltd
+All rights reserved.
+
+This file is part of VRE, a free-software/open-source library
+for transparent pricing and risk analysis
+
+VRE is free software: you can redistribute it and/or modify it
+under the terms of the Modified BSD License. You should have received a
+copy of the license along with this program.
+
+This program is distributed on the basis that it will form a useful
+contribution to risk analytics and model standardisation, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE. See the license for more details.
+
+/*! \file Examples/VREPython/Notebooks/Example_11/Input/vre_sacva_fd_eqcom.xml
+\brief SA-CVA finite-difference (bump) example for EQ/COM trades
+\ingroup sacva
+*/
+-->
+<VRE>
+  <Setup>
+    <Parameter name="asofDate">2016-02-05</Parameter>
+    <Parameter name="inputPath">Input</Parameter>
+    <Parameter name="outputPath">Output/sacva_fd_eqcom</Parameter>
+    <Parameter name="logFile">log_fd_eqcom.txt</Parameter>
+    <Parameter name="logMask">15</Parameter>
+    <Parameter name="marketDataFile">sacva_fd_eqcom/market_20160205.txt</Parameter>
+    <Parameter name="fixingDataFile">sacva_fd_eqcom/fixings_20160205.txt</Parameter>
+    <Parameter name="implyTodaysFixings">N</Parameter>
+    <Parameter name="curveConfigFile">sacva_fd_eqcom/curveconfig.xml</Parameter>
+    <Parameter name="conventionsFile">sacva_fd_eqcom/conventions.xml</Parameter>
+    <Parameter name="marketConfigFile">sacva_fd_eqcom/todaysmarket_fd_eqcom.xml</Parameter>
+    <Parameter name="pricingEnginesFile">sacva_fd_eqcom/pricingengine.xml</Parameter>
+    <Parameter name="portfolioFile">sacva_fd_eqcom/portfolio_fd_eqcom.xml</Parameter>
+    <Parameter name="counterpartyFile">sacva_fd_eqcom/counterparty.xml</Parameter>
+    <Parameter name="observationModel">Disable</Parameter>
+    <Parameter name="scriptLibrary">scriptlibrary_master.xml</Parameter>
+    <Parameter name="referenceDataFile">sacva_fd_eqcom/referencedata.xml</Parameter>
+    <Parameter name="nThreads">1</Parameter>
+  </Setup>
+  <Markets>
+    <Parameter name="lgmcalibration">default</Parameter>
+    <Parameter name="fxcalibration">default</Parameter>
+    <Parameter name="pricing">default</Parameter>
+    <Parameter name="simulation">default</Parameter>
+    <Parameter name="sensitivity">default</Parameter>
+  </Markets>
+  <Analytics>
+    <Analytic type="npv">
+      <Parameter name="active">Y</Parameter>
+      <Parameter name="baseCurrency">EUR</Parameter>
+      <Parameter name="outputFileName">npv.csv</Parameter>
+    </Analytic>
+    <Analytic type="cashflow">
+      <Parameter name="active">Y</Parameter>
+      <Parameter name="outputFileName">flows.csv</Parameter>
+    </Analytic>
+    <!-- Classic FD XVA sensitivities to compare against CG/AAD -->
+    <Analytic type="simulation">
+      <Parameter name="active">N</Parameter>
+      <Parameter name="amc">N</Parameter>
+      <Parameter name="simulationConfigFile">sacva_fd_eqcom/simulation.xml</Parameter>
+      <Parameter name="pricingEnginesFile">sacva_fd_eqcom/pricingengine.xml</Parameter>
+      <Parameter name="amcPricingEnginesFile">sacva_fd_eqcom/pricingengine_amc.xml</Parameter>
+      <Parameter name="baseCurrency">EUR</Parameter>
+      <Parameter name="storeScenarios">N</Parameter>
+      <Parameter name="cubeFile">cube.csv</Parameter>
+      <Parameter name="aggregationScenarioDataFileName">scenariodata.csv</Parameter>
+      <Parameter name="allowPartialScenarios">Y</Parameter>
+    </Analytic>
+    <!-- XVA analytic kept inactive but supplies netting/cube config so the XVA sensitivity
+         pipeline can build its managers for Classic FD runs. -->
+    <Analytic type="xva">
+      <Parameter name="active">N</Parameter>
+      <Parameter name="csaFile">sacva_fd_eqcom/netting.xml</Parameter>
+      <Parameter name="cubeFile">cube.csv</Parameter>
+      <Parameter name="scenarioFile">scenariodata.csv</Parameter>
+      <Parameter name="baseCurrency">EUR</Parameter>
+      <Parameter name="exposureProfiles">Y</Parameter>
+      <Parameter name="exposureProfilesByTrade">Y</Parameter>
+      <Parameter name="quantile">0.95</Parameter>
+      <Parameter name="calculationType">NoLag</Parameter>
+      <Parameter name="cva">Y</Parameter>
+      <Parameter name="rawCubeOutputFile">rawcube.csv</Parameter>
+      <Parameter name="netCubeOutputFile">netcube.csv</Parameter>
+      <Parameter name="dim">N</Parameter>
+      <Parameter name="dimModel">Regression</Parameter>
+      <Parameter name="dimRegressors"/>
+      <Parameter name="dimQuantile">0.99</Parameter>
+      <Parameter name="dimHorizonCalendarDays">14</Parameter>
+      <Parameter name="dimRegressionOrder">2</Parameter>
+    </Analytic>
+    <Analytic type="xvaSensitivity">
+      <Parameter name="active">Y</Parameter>
+      <Parameter name="marketConfigFile">sacva_fd_eqcom/simulation.xml</Parameter>
+      <Parameter name="sensitivityConfigFile">sacva_fd_eqcom/sensitivity.xml</Parameter>
+      <Parameter name="sensiSource">Classic</Parameter>
+      <Parameter name="allowPartialScenarios">Y</Parameter>
+      <Parameter name="parSensitivity">Y</Parameter>
+      <Parameter name="outputSensitivityThreshold">0.000001</Parameter>
+      <Parameter name="outputJacobi">N</Parameter>
+      <Parameter name="flipViewXVA">false</Parameter>
+    </Analytic>
+    <Analytic type="sacva">
+      <Parameter name="active">Y</Parameter>
+      <Parameter name="saCvaMethod">SACVA</Parameter>
+      <Parameter name="useUnhedgedCvaSensis">N</Parameter>
+    </Analytic>
+  </Analytics>
+</VRE>

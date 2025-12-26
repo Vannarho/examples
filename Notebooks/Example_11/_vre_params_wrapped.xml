@@ -5,7 +5,7 @@
     <Parameter name="inputPath">Input</Parameter>
     <Parameter name="outputPath">Output/sacva_fd_aad_eqcom</Parameter>
     <Parameter name="logFile">log_fd_aad_eqcom.txt</Parameter>
-    <Parameter name="logMask">65535</Parameter>
+    <Parameter name="logMask">15</Parameter>
     <Parameter name="marketDataFile">sacva_fd_eqcom/market_20160205.txt</Parameter>
     <Parameter name="fixingDataFile">sacva_fd_eqcom/fixings_20160205.txt</Parameter>
     <Parameter name="implyTodaysFixings">N</Parameter>

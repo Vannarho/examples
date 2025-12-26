@@ -1,0 +1,3 @@
+#TradeId,TradeType,NumberOfPricings,CumulativeTiming,AverageTiming
+ComFwd_WTI_QuantoEUR_5Y,CommodityForward,1180021,910000,0
+EqCall_SP5_FD,EquityOption,460021,680000,1

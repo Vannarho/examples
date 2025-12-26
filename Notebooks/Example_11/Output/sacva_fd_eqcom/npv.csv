@@ -1,0 +1,3 @@
+#TradeId,TradeType,Maturity,MaturityTime,NPV,NpvCurrency,NPV(Base),BaseCurrency,Notional,NotionalCurrency,Notional(Base),NettingSet,CounterParty
+ComFwd_WTI_QuantoEUR_5Y,CommodityForward,2021-02-05,5.000262,-6889.799224,USD,-6084.962798,EUR,990000.00,USD,874352.50,CPTY_A,CPTY_A
+EqCall_SP5_FD,EquityOption,2018-02-05,2.000262,1375610.444082,USD,1214917.605598,EUR,17600000.00,USD,15544044.43,CPTY_A,CPTY_A

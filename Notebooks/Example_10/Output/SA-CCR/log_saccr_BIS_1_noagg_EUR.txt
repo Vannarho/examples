@@ -1,53 +1,53 @@
-NOTICE   [2025-Dec-24 17:32:38.042865]    (VREAnalytics/vrea/app/parameters.cpp:133) : Parameters:
-NOTICE   [2025-Dec-24 17:32:38.042903]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = cashflow : active = N
-NOTICE   [2025-Dec-24 17:32:38.042923]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = cashflow : outputFileName = flows.csv
-NOTICE   [2025-Dec-24 17:32:38.042940]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = curves : active = N
-NOTICE   [2025-Dec-24 17:32:38.042956]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = curves : configuration = default
-NOTICE   [2025-Dec-24 17:32:38.042971]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = curves : grid = 240,1M
-NOTICE   [2025-Dec-24 17:32:38.042985]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = curves : outputFileName = curves.csv
-NOTICE   [2025-Dec-24 17:32:38.042999]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = curves : outputTodaysMarketCalibration = Y
-NOTICE   [2025-Dec-24 17:32:38.043014]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = markets : eqcalibration = libor
-NOTICE   [2025-Dec-24 17:32:38.043028]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = markets : fxcalibration = libor
-NOTICE   [2025-Dec-24 17:32:38.043042]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = markets : lgmcalibration = libor
-NOTICE   [2025-Dec-24 17:32:38.043055]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = markets : pricing = libor
-NOTICE   [2025-Dec-24 17:32:38.043069]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = markets : simulation = libor
-NOTICE   [2025-Dec-24 17:32:38.043083]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = npv : active = N
-NOTICE   [2025-Dec-24 17:32:38.043097]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = npv : additionalResults = Y
-NOTICE   [2025-Dec-24 17:32:38.043110]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = npv : additionalResultsReportPrecision = 12
-NOTICE   [2025-Dec-24 17:32:38.043124]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = npv : baseCurrency = EUR
-NOTICE   [2025-Dec-24 17:32:38.043137]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = npv : outputFileName = npv.csv
-NOTICE   [2025-Dec-24 17:32:38.043152]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = saccr : OEMSACCR = N
-NOTICE   [2025-Dec-24 17:32:38.043165]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = saccr : active = Y
-NOTICE   [2025-Dec-24 17:32:38.043181]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = saccr : ignoreMarginSACCR = N
-NOTICE   [2025-Dec-24 17:32:38.043195]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = saccr : saccrBaseCurrency = EUR
-NOTICE   [2025-Dec-24 17:32:38.043208]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = saccr : saccrCollateralBalancesFile = collateralbalances_BIS_1.xml
-NOTICE   [2025-Dec-24 17:32:38.043222]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = saccr : saccrCrifFile = saccrcrif_BIS_1.csv
-NOTICE   [2025-Dec-24 17:32:38.043235]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = saccr : saccrCrifOutputFileName = saccr_crif_BIS_1_noagg.csv
-NOTICE   [2025-Dec-24 17:32:38.043249]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = saccr : saccrCsaFile = netting_BIS_1.xml
-NOTICE   [2025-Dec-24 17:32:38.043262]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = saccr : saccrOutputFileName = saccr_output_BIS_1_noagg.csv
-NOTICE   [2025-Dec-24 17:32:38.043276]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = saccr : saccrPortfolioFile = portfolio_BIS_1.xml
-NOTICE   [2025-Dec-24 17:32:38.043290]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = saccr : saccrTreeOutputFileName = saccr_output_BIS_1_noagg.json
-NOTICE   [2025-Dec-24 17:32:38.043303]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = saccr : simplifiedSACCR = N
-NOTICE   [2025-Dec-24 17:32:38.043317]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : asofDate = 2016-02-05
-NOTICE   [2025-Dec-24 17:32:38.043331]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : calendarAdjustment = ../../../../../Input/calendaradjustment.xml
-NOTICE   [2025-Dec-24 17:32:38.043348]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : continueOnError = false
-NOTICE   [2025-Dec-24 17:32:38.043362]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : conventionsFile = ../../../../../Input/conventions.xml
-NOTICE   [2025-Dec-24 17:32:38.043376]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : counterpartyFile = counterparty.xml
-NOTICE   [2025-Dec-24 17:32:38.043389]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : currencyConfiguration = ../../../../../Input/currencies.xml
-NOTICE   [2025-Dec-24 17:32:38.043403]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : curveConfigFile = curveconfig.xml
-NOTICE   [2025-Dec-24 17:32:38.043416]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : fixingDataFile = fixings_20160205.txt
-NOTICE   [2025-Dec-24 17:32:38.043430]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : implyTodaysFixings = Y
-NOTICE   [2025-Dec-24 17:32:38.043443]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : inputPath = Input/SA-CCR
-NOTICE   [2025-Dec-24 17:32:38.043456]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : logFile = log_saccr_BIS_1_noagg_EUR.txt
-NOTICE   [2025-Dec-24 17:32:38.043470]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : logMask = 255
-NOTICE   [2025-Dec-24 17:32:38.043483]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : marketConfigFile = todaysmarket.xml
-NOTICE   [2025-Dec-24 17:32:38.043496]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : marketDataFile = market_20160205.txt
-NOTICE   [2025-Dec-24 17:32:38.043510]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : observationModel = None
-NOTICE   [2025-Dec-24 17:32:38.043523]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : outputPath = Output/SA-CCR
-NOTICE   [2025-Dec-24 17:32:38.043536]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : portfolioFile = portfolio_BIS_1.xml
-NOTICE   [2025-Dec-24 17:32:38.043550]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : pricingEnginesFile = ../../../../../Input/pricingengine.xml
-NOTICE   [2025-Dec-24 17:32:38.043563]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : tradingDeskFile = ../../../../../Input/tradingdesk.xml
-NOTICE   [2025-Dec-24 17:32:38.043589]        (VREAnalytics/vrea/app/vreapp.cpp:755) : load VREAppInputParameters called
-NOTICE   [2025-Dec-24 17:32:38.043615]        (VREAnalytics/vrea/app/vreapp.cpp:773) : Loading calendar adjustments from file: "Input/SA-CCR/../../../../../Input/calendaradjustment.xml"
-NOTICE   [2025-Dec-24 17:33:04.484272]     (VREAnalytics/vrea/app/parameters.cpp:66) : load VRE configuration from ./_vre_params_wrapped.xml
-NOTICE   [2025-Dec-24 17:33:04.484375]     (VREAnalytics/vrea/app/parameters.cpp:70) : load VRE configuration from ./_vre_params_wrapped.xml done.
+NOTICE   [2025-Dec-26 11:27:57.178427]    (VREAnalytics/vrea/app/parameters.cpp:133) : Parameters:
+NOTICE   [2025-Dec-26 11:27:57.178468]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = cashflow : active = N
+NOTICE   [2025-Dec-26 11:27:57.178492]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = cashflow : outputFileName = flows.csv
+NOTICE   [2025-Dec-26 11:27:57.178512]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = curves : active = N
+NOTICE   [2025-Dec-26 11:27:57.178530]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = curves : configuration = default
+NOTICE   [2025-Dec-26 11:27:57.178547]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = curves : grid = 240,1M
+NOTICE   [2025-Dec-26 11:27:57.178563]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = curves : outputFileName = curves.csv
+NOTICE   [2025-Dec-26 11:27:57.178580]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = curves : outputTodaysMarketCalibration = Y
+NOTICE   [2025-Dec-26 11:27:57.178596]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = markets : eqcalibration = libor
+NOTICE   [2025-Dec-26 11:27:57.178612]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = markets : fxcalibration = libor
+NOTICE   [2025-Dec-26 11:27:57.178628]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = markets : lgmcalibration = libor
+NOTICE   [2025-Dec-26 11:27:57.178644]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = markets : pricing = libor
+NOTICE   [2025-Dec-26 11:27:57.178660]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = markets : simulation = libor
+NOTICE   [2025-Dec-26 11:27:57.178676]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = npv : active = N
+NOTICE   [2025-Dec-26 11:27:57.178692]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = npv : additionalResults = Y
+NOTICE   [2025-Dec-26 11:27:57.178707]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = npv : additionalResultsReportPrecision = 12
+NOTICE   [2025-Dec-26 11:27:57.178723]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = npv : baseCurrency = EUR
+NOTICE   [2025-Dec-26 11:27:57.178739]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = npv : outputFileName = npv.csv
+NOTICE   [2025-Dec-26 11:27:57.178755]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = saccr : OEMSACCR = N
+NOTICE   [2025-Dec-26 11:27:57.178771]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = saccr : active = Y
+NOTICE   [2025-Dec-26 11:27:57.178786]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = saccr : ignoreMarginSACCR = N
+NOTICE   [2025-Dec-26 11:27:57.178802]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = saccr : saccrBaseCurrency = EUR
+NOTICE   [2025-Dec-26 11:27:57.178818]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = saccr : saccrCollateralBalancesFile = collateralbalances_BIS_1.xml
+NOTICE   [2025-Dec-26 11:27:57.178834]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = saccr : saccrCrifFile = saccrcrif_BIS_1.csv
+NOTICE   [2025-Dec-26 11:27:57.178908]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = saccr : saccrCrifOutputFileName = saccr_crif_BIS_1_noagg.csv
+NOTICE   [2025-Dec-26 11:27:57.178937]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = saccr : saccrCsaFile = netting_BIS_1.xml
+NOTICE   [2025-Dec-26 11:27:57.178956]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = saccr : saccrOutputFileName = saccr_output_BIS_1_noagg.csv
+NOTICE   [2025-Dec-26 11:27:57.178975]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = saccr : saccrPortfolioFile = portfolio_BIS_1.xml
+NOTICE   [2025-Dec-26 11:27:57.178992]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = saccr : saccrTreeOutputFileName = saccr_output_BIS_1_noagg.json
+NOTICE   [2025-Dec-26 11:27:57.179008]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = saccr : simplifiedSACCR = N
+NOTICE   [2025-Dec-26 11:27:57.179027]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : asofDate = 2016-02-05
+NOTICE   [2025-Dec-26 11:27:57.179043]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : calendarAdjustment = ../../../../../Input/calendaradjustment.xml
+NOTICE   [2025-Dec-26 11:27:57.179067]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : continueOnError = false
+NOTICE   [2025-Dec-26 11:27:57.179083]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : conventionsFile = ../../../../../Input/conventions.xml
+NOTICE   [2025-Dec-26 11:27:57.179099]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : counterpartyFile = counterparty.xml
+NOTICE   [2025-Dec-26 11:27:57.179114]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : currencyConfiguration = ../../../../../Input/currencies.xml
+NOTICE   [2025-Dec-26 11:27:57.179130]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : curveConfigFile = curveconfig.xml
+NOTICE   [2025-Dec-26 11:27:57.179145]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : fixingDataFile = fixings_20160205.txt
+NOTICE   [2025-Dec-26 11:27:57.179161]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : implyTodaysFixings = Y
+NOTICE   [2025-Dec-26 11:27:57.179176]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : inputPath = Input/SA-CCR
+NOTICE   [2025-Dec-26 11:27:57.179191]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : logFile = log_saccr_BIS_1_noagg_EUR.txt
+NOTICE   [2025-Dec-26 11:27:57.179206]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : logMask = 255
+NOTICE   [2025-Dec-26 11:27:57.179221]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : marketConfigFile = todaysmarket.xml
+NOTICE   [2025-Dec-26 11:27:57.179236]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : marketDataFile = market_20160205.txt
+NOTICE   [2025-Dec-26 11:27:57.179251]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : observationModel = None
+NOTICE   [2025-Dec-26 11:27:57.179266]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : outputPath = Output/SA-CCR
+NOTICE   [2025-Dec-26 11:27:57.179281]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : portfolioFile = portfolio_BIS_1.xml
+NOTICE   [2025-Dec-26 11:27:57.179296]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : pricingEnginesFile = ../../../../../Input/pricingengine.xml
+NOTICE   [2025-Dec-26 11:27:57.179311]    (VREAnalytics/vrea/app/parameters.cpp:136) : group = setup : tradingDeskFile = ../../../../../Input/tradingdesk.xml
+NOTICE   [2025-Dec-26 11:27:57.179334]        (VREAnalytics/vrea/app/vreapp.cpp:755) : load VREAppInputParameters called
+NOTICE   [2025-Dec-26 11:27:57.179354]        (VREAnalytics/vrea/app/vreapp.cpp:773) : Loading calendar adjustments from file: "Input/SA-CCR/../../../../../Input/calendaradjustment.xml"
+NOTICE   [2025-Dec-26 11:28:28.699974]     (VREAnalytics/vrea/app/parameters.cpp:66) : load VRE configuration from ./_vre_params_wrapped.xml
+NOTICE   [2025-Dec-26 11:28:28.700162]     (VREAnalytics/vrea/app/parameters.cpp:70) : load VRE configuration from ./_vre_params_wrapped.xml done.

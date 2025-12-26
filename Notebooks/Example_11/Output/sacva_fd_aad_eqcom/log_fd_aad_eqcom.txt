@@ -1,0 +1,125 @@
+WARNING  [2025-Dec-26 11:33:57.313001]        (VREAnalytics/vrea/app/vreapp.cpp:776) : Calendar adjustments not found, using defaults
+WARNING  [2025-Dec-26 11:33:57.313049]        (VREAnalytics/vrea/app/vreapp.cpp:786) : Currency configurations not found, using defaults
+WARNING  [2025-Dec-26 11:33:57.313667]        (VREAnalytics/vrea/app/vreapp.cpp:946) : Using default Ibor fallback config
+WARNING  [2025-Dec-26 11:33:57.313685]        (VREAnalytics/vrea/app/vreapp.cpp:954) : Using default Basel Traffic Light config
+WARNING  [2025-Dec-26 11:33:57.314388]  (...cenario/sensitivityscenariodata.cpp:289) : SensitivityData: attribute 'ccy' for SwaptionVolatilities is deprecated, use 'key' instead.
+WARNING  [2025-Dec-26 11:33:57.314500]  (...rio/scenariosimmarketparameters.cpp:760) : ScenarioSimMarket parameter Extrapolation should be FlatFwd or FlatZero, mapping deprecated boolean 'Y' to FlatFwd. Please change this in your configuration.
+WARNING  [2025-Dec-26 11:33:57.314524]  (...rio/scenariosimmarketparameters.cpp:832) : ScenarioSimMarketParameters: SwaptionVolatilities/Currencies is deprecated, use Keys instead.
+WARNING  [2025-Dec-26 11:33:57.314587]  (.../vred/model/crossassetmodeldata.cpp:272) : Simulation/Parameters/Discretization is deprecated, use Simulation/CrossAssetModel/Discretization instead.
+WARNING  [2025-Dec-26 11:33:57.314618]         (VREData/vred/model/irlgmdata.cpp:33) : IrLgmData: attribute ccy is deprecated, use key instead.
+WARNING  [2025-Dec-26 11:33:57.314648]         (VREData/vred/model/irlgmdata.cpp:33) : IrLgmData: attribute ccy is deprecated, use key instead.
+WARNING  [2025-Dec-26 11:33:57.315033]  (...rio/scenariosimmarketparameters.cpp:760) : ScenarioSimMarket parameter Extrapolation should be FlatFwd or FlatZero, mapping deprecated boolean 'Y' to FlatFwd. Please change this in your configuration.
+WARNING  [2025-Dec-26 11:33:57.315052]  (...rio/scenariosimmarketparameters.cpp:832) : ScenarioSimMarketParameters: SwaptionVolatilities/Currencies is deprecated, use Keys instead.
+WARNING  [2025-Dec-26 11:33:57.315123]       (VREAnalytics/vrea/app/vreapp.cpp:3166) : FRTB_SA sensitivity sim-market parameters not loaded
+WARNING  [2025-Dec-26 11:33:57.315139]       (VREAnalytics/vrea/app/vreapp.cpp:3175) : FRTB_SA sensitivity scenario data not loaded
+WARNING  [2025-Dec-26 11:33:57.315153]       (VREAnalytics/vrea/app/vreapp.cpp:3184) : Pricing-engine data not found for FRTB_SA sensitivity, using global pricingEngine
+WARNING  [2025-Dec-26 11:33:57.315188]       (VREAnalytics/vrea/app/vreapp.cpp:3439) : SACCR CRIF file not found
+WARNING  [2025-Dec-26 11:33:57.315214]        (VREAnalytics/vrea/app/vreapp.cpp:323) : Starting VREApp::analytics(): 175276032|175276032 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+WARNING  [2025-Dec-26 11:33:57.315238]        (VREAnalytics/vrea/app/vreapp.cpp:303) : dividend data file not found
+WARNING  [2025-Dec-26 11:33:57.315251]        (VREAnalytics/vrea/app/vreapp.cpp:311) : fixing cutoff date not set
+WARNING  [2025-Dec-26 11:33:57.331634]  (...ed/marketdata/marketdatumparser.cpp:727) : Deprecated MarketDatum::InstrumentType::CDS_INDEX, please use INDEX_CDS_TRANCHE/BASE_CORRELATION/IndexName/Term/DetachPoint or INDEX_CDS_TRANCHE/PRICE/IndexName/Term/AttachPoint/DetachPoint instead
+WARNING  [2025-Dec-26 11:33:57.331668]  (...ed/marketdata/marketdatumparser.cpp:727) : Deprecated MarketDatum::InstrumentType::CDS_INDEX, please use INDEX_CDS_TRANCHE/BASE_CORRELATION/IndexName/Term/DetachPoint or INDEX_CDS_TRANCHE/PRICE/IndexName/Term/AttachPoint/DetachPoint instead
+WARNING  [2025-Dec-26 11:33:57.331686]  (...ed/marketdata/marketdatumparser.cpp:727) : Deprecated MarketDatum::InstrumentType::CDS_INDEX, please use INDEX_CDS_TRANCHE/BASE_CORRELATION/IndexName/Term/DetachPoint or INDEX_CDS_TRANCHE/PRICE/IndexName/Term/AttachPoint/DetachPoint instead
+WARNING  [2025-Dec-26 11:33:57.331702]  (...ed/marketdata/marketdatumparser.cpp:727) : Deprecated MarketDatum::InstrumentType::CDS_INDEX, please use INDEX_CDS_TRANCHE/BASE_CORRELATION/IndexName/Term/DetachPoint or INDEX_CDS_TRANCHE/PRICE/IndexName/Term/AttachPoint/DetachPoint instead
+WARNING  [2025-Dec-26 11:33:57.331723]  (...ed/marketdata/marketdatumparser.cpp:727) : Deprecated MarketDatum::InstrumentType::CDS_INDEX, please use INDEX_CDS_TRANCHE/BASE_CORRELATION/IndexName/Term/DetachPoint or INDEX_CDS_TRANCHE/PRICE/IndexName/Term/AttachPoint/DetachPoint instead
+WARNING  [2025-Dec-26 11:33:57.347555]      (VREAnalytics/vrea/app/analytic.cpp:105) : Starting PRICING Analytic::runAnalytic(): 184795136|184795136 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+WARNING  [2025-Dec-26 11:33:57.363342]      (VREAnalytics/vrea/app/analytic.cpp:110) : Finishing PRICING Analytic::runAnalytic(): 191217664|191217664 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+WARNING  [2025-Dec-26 11:33:57.368601]  (.../vred/configuration/conventions.cpp:650) : receiveFrequency_ empty set to index tenor.
+WARNING  [2025-Dec-26 11:33:57.368638]  (.../vred/configuration/conventions.cpp:661) : payFrequency_ empty set to index tenor.
+WARNING  [2025-Dec-26 11:33:57.371576]      (VREAnalytics/vrea/app/analytic.cpp:105) : Starting XVA Analytic::runAnalytic(): 191987712|191987712 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+WARNING  [2025-Dec-26 11:33:57.382454]  (VREData/vred/marketdata/fxvolcurve.cpp:923) : no fx option conventions given in fxvol curve config for EURUSD, assuming defaults
+WARNING  [2025-Dec-26 11:33:58.183842]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #11877
+WARNING  [2025-Dec-26 11:33:58.187917]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #11875
+WARNING  [2025-Dec-26 11:33:58.191870]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #11873
+WARNING  [2025-Dec-26 11:33:58.195814]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #11871
+WARNING  [2025-Dec-26 11:33:58.199768]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #11869
+WARNING  [2025-Dec-26 11:33:58.203710]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #11867
+WARNING  [2025-Dec-26 11:33:58.207683]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #11865
+WARNING  [2025-Dec-26 11:33:58.211644]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #11863
+WARNING  [2025-Dec-26 11:33:58.215598]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #11861
+WARNING  [2025-Dec-26 11:33:58.219522]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #11859
+WARNING  [2025-Dec-26 11:33:58.223472]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #11857
+WARNING  [2025-Dec-26 11:33:58.227421]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #11855
+WARNING  [2025-Dec-26 11:33:58.231364]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #11853
+WARNING  [2025-Dec-26 11:33:58.235385]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #11851
+WARNING  [2025-Dec-26 11:33:58.239569]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #11849
+WARNING  [2025-Dec-26 11:33:58.243822]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #11847
+WARNING  [2025-Dec-26 11:33:58.247855]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #11845
+WARNING  [2025-Dec-26 11:33:58.251905]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #11843
+WARNING  [2025-Dec-26 11:33:58.255866]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #11841
+WARNING  [2025-Dec-26 11:33:58.259846]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #11839
+WARNING  [2025-Dec-26 11:33:58.263778]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #11837
+WARNING  [2025-Dec-26 11:33:58.267698]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #11835
+WARNING  [2025-Dec-26 11:33:58.271630]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #11833
+WARNING  [2025-Dec-26 11:33:58.275588]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #11831
+WARNING  [2025-Dec-26 11:33:58.279518]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #11829
+WARNING  [2025-Dec-26 11:33:58.283483]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #11827
+WARNING  [2025-Dec-26 11:33:58.287419]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #11825
+WARNING  [2025-Dec-26 11:33:58.291359]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #11823
+WARNING  [2025-Dec-26 11:33:58.295297]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #11821
+WARNING  [2025-Dec-26 11:33:58.299235]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #11819
+WARNING  [2025-Dec-26 11:33:58.303189]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #11817
+WARNING  [2025-Dec-26 11:33:58.307152]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #11815
+WARNING  [2025-Dec-26 11:33:58.311079]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #11813
+WARNING  [2025-Dec-26 11:33:58.315001]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #11811
+WARNING  [2025-Dec-26 11:33:58.318958]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #11809
+WARNING  [2025-Dec-26 11:33:58.322957]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #11807
+WARNING  [2025-Dec-26 11:33:58.326898]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #11805
+WARNING  [2025-Dec-26 11:33:58.330839]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #11803
+WARNING  [2025-Dec-26 11:33:58.334781]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #11801
+WARNING  [2025-Dec-26 11:33:58.338760]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #11799
+WARNING  [2025-Dec-26 11:33:58.342711]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #11797
+WARNING  [2025-Dec-26 11:33:58.346663]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #11795
+WARNING  [2025-Dec-26 11:33:58.350627]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #11793
+WARNING  [2025-Dec-26 11:33:58.354542]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #11791
+WARNING  [2025-Dec-26 11:33:58.358499]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #11789
+WARNING  [2025-Dec-26 11:33:58.362456]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #11787
+WARNING  [2025-Dec-26 11:33:58.366392]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #11785
+WARNING  [2025-Dec-26 11:33:58.370333]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #11783
+WARNING  [2025-Dec-26 11:33:58.374276]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #11781
+WARNING  [2025-Dec-26 11:33:58.378242]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #11779
+WARNING  [2025-Dec-26 11:33:58.382185]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #11777
+WARNING  [2025-Dec-26 11:33:58.386131]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #11775
+WARNING  [2025-Dec-26 11:33:58.390078]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #11773
+WARNING  [2025-Dec-26 11:33:58.394056]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #11771
+WARNING  [2025-Dec-26 11:33:58.397976]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #11769
+WARNING  [2025-Dec-26 11:33:58.401922]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #11767
+WARNING  [2025-Dec-26 11:33:58.405849]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #11765
+WARNING  [2025-Dec-26 11:33:58.409767]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #11763
+WARNING  [2025-Dec-26 11:33:58.413708]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #11761
+WARNING  [2025-Dec-26 11:33:58.417655]  (...a/vred/scripting/models/modelcg.cpp:392) : CE adjoint fallback (missing snapshot) for node #11759
+WARNING  [2025-Dec-26 11:33:58.432965]  (...io/sensitivityscenariogenerator.cpp:560) : Index USD-LIBOR-3M in simmarket is not included in sensitivities analysis
+WARNING  [2025-Dec-26 11:33:58.433041]  (...io/sensitivityscenariogenerator.cpp:593) : Day counter lookup in simulation market failed for index EUR-EURIBOR-3M, using default A365
+ALERT    [2025-Dec-26 11:33:58.433066]  (...io/sensitivityscenariogenerator.cpp:260) : skip scenario generation for key IndexCurve/EUR-EURIBOR-3M/0: SimpleScenario does not provide data for key IndexCurve/EUR-EURIBOR-3M/0
+WARNING  [2025-Dec-26 11:33:58.433095]  (...io/sensitivityscenariogenerator.cpp:593) : Day counter lookup in simulation market failed for index USD-FedFunds, using default A365
+ALERT    [2025-Dec-26 11:33:58.433113]  (...io/sensitivityscenariogenerator.cpp:260) : skip scenario generation for key IndexCurve/USD-FedFunds/0: SimpleScenario does not provide data for key IndexCurve/USD-FedFunds/0
+WARNING  [2025-Dec-26 11:33:58.433131]  (...io/sensitivityscenariogenerator.cpp:560) : Index USD-LIBOR-3M in simmarket is not included in sensitivities analysis
+ALERT    [2025-Dec-26 11:33:58.433158]  (...io/sensitivityscenariogenerator.cpp:260) : skip scenario generation for key EquitySpot/SPX/0: SimpleScenario does not provide data for key EquitySpot/SPX/0
+WARNING  [2025-Dec-26 11:33:58.433196]  (...o/sensitivityscenariogenerator.cpp:1097) : Day counter lookup in simulation market failed for equity vol surface SPX, using default A365
+ALERT    [2025-Dec-26 11:33:58.433214]  (...io/sensitivityscenariogenerator.cpp:260) : skip scenario generation for key EquityVolatility/SPX/0: SimpleScenario does not provide data for key EquityVolatility/SPX/0
+WARNING  [2025-Dec-26 11:33:58.441128]      (VREAnalytics/vrea/app/analytic.cpp:110) : Finishing XVA Analytic::runAnalytic(): 279134208|279134208 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+WARNING  [2025-Dec-26 11:33:58.454023]      (VREAnalytics/vrea/app/analytic.cpp:105) : Starting XVA_SENSITIVITY Analytic::runAnalytic(): 279166976|279166976 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+WARNING  [2025-Dec-26 11:33:58.454094]  (...rea/sacva/sacvasensitivityloader.cpp:73) : Failed to parse risk factor description 'spot' in risk factor EquitySpot/SP5/0/spot into a period
+ALERT    [2025-Dec-26 11:33:58.454115]  (...ea/sacva/sacvasensitivityloader.cpp:137) : Cannot distinguish CreditReference from CreditCounterparty risk for risk factor SurvivalProbability/BANK/0/6M
+ALERT    [2025-Dec-26 11:33:58.454141]  (...ea/sacva/sacvasensitivityloader.cpp:137) : Cannot distinguish CreditReference from CreditCounterparty risk for risk factor SurvivalProbability/BANK/1/1Y
+ALERT    [2025-Dec-26 11:33:58.454157]  (...ea/sacva/sacvasensitivityloader.cpp:137) : Cannot distinguish CreditReference from CreditCounterparty risk for risk factor SurvivalProbability/BANK/2/5Y
+WARNING  [2025-Dec-26 11:33:58.454172]      (VREAnalytics/vrea/app/analytic.cpp:110) : Finishing XVA_SENSITIVITY Analytic::runAnalytic(): 279298048|279298048 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+WARNING  [2025-Dec-26 11:33:58.454190]      (VREAnalytics/vrea/app/analytic.cpp:105) : Starting SA_CVA Analytic::runAnalytic(): 279298048|279298048 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+WARNING  [2025-Dec-26 11:33:58.454207]      (VREAnalytics/vrea/app/analytic.cpp:105) : Starting XVA_SENSITIVITY Analytic::runAnalytic(): 279298048|279298048 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+WARNING  [2025-Dec-26 11:33:58.454222]  (...vrea/app/analytics/sacvaanalytic.cpp:66) : SA-CVA: raw CVA sensi provider size=9
+WARNING  [2025-Dec-26 11:33:58.454302]  (...tics/vrea/sacva/sacvacalculator.cpp:299) : no hedge sensitivity found for InterestRate USD Delta 1Y, treating as zero hedge in hedged mode
+WARNING  [2025-Dec-26 11:33:58.454319]  (...tics/vrea/sacva/sacvacalculator.cpp:299) : no hedge sensitivity found for InterestRate USD Delta 5Y, treating as zero hedge in hedged mode
+WARNING  [2025-Dec-26 11:33:58.454337]  (...tics/vrea/sacva/sacvacalculator.cpp:299) : no hedge sensitivity found for CreditCounterparty 2 Delta BANK/1Y, treating as zero hedge in hedged mode
+WARNING  [2025-Dec-26 11:33:58.454352]  (...tics/vrea/sacva/sacvacalculator.cpp:299) : no hedge sensitivity found for CreditCounterparty 2 Delta BANK/5Y, treating as zero hedge in hedged mode
+WARNING  [2025-Dec-26 11:33:58.454367]  (...tics/vrea/sacva/sacvacalculator.cpp:299) : no hedge sensitivity found for CreditCounterparty 2 Delta BANK/6M, treating as zero hedge in hedged mode
+WARNING  [2025-Dec-26 11:33:58.454384]  (...tics/vrea/sacva/sacvacalculator.cpp:299) : no hedge sensitivity found for Equity 11 Delta SP5, treating as zero hedge in hedged mode
+WARNING  [2025-Dec-26 11:33:58.454400]  (...tics/vrea/sacva/sacvacalculator.cpp:299) : no hedge sensitivity found for Commodity 1 Delta COMDTY_WTI_USD, treating as zero hedge in hedged mode
+WARNING  [2025-Dec-26 11:33:58.454415]  (...tics/vrea/sacva/sacvacalculator.cpp:299) : no hedge sensitivity found for InterestRate USD Delta 1Y, treating as zero hedge in hedged mode
+WARNING  [2025-Dec-26 11:33:58.454430]  (...tics/vrea/sacva/sacvacalculator.cpp:299) : no hedge sensitivity found for InterestRate USD Delta 5Y, treating as zero hedge in hedged mode
+WARNING  [2025-Dec-26 11:33:58.454448]  (...tics/vrea/sacva/sacvacalculator.cpp:299) : no hedge sensitivity found for CreditCounterparty 2 Delta BANK/1Y, treating as zero hedge in hedged mode
+WARNING  [2025-Dec-26 11:33:58.454463]  (...tics/vrea/sacva/sacvacalculator.cpp:299) : no hedge sensitivity found for CreditCounterparty 2 Delta BANK/5Y, treating as zero hedge in hedged mode
+WARNING  [2025-Dec-26 11:33:58.454477]  (...tics/vrea/sacva/sacvacalculator.cpp:299) : no hedge sensitivity found for CreditCounterparty 2 Delta BANK/6M, treating as zero hedge in hedged mode
+WARNING  [2025-Dec-26 11:33:58.454494]  (...tics/vrea/sacva/sacvacalculator.cpp:299) : no hedge sensitivity found for Equity 11 Delta SP5, treating as zero hedge in hedged mode
+WARNING  [2025-Dec-26 11:33:58.454509]  (...tics/vrea/sacva/sacvacalculator.cpp:299) : no hedge sensitivity found for Commodity 1 Delta COMDTY_WTI_USD, treating as zero hedge in hedged mode
+WARNING  [2025-Dec-26 11:33:58.454537]      (VREAnalytics/vrea/app/analytic.cpp:110) : Finishing SA_CVA Analytic::runAnalytic(): 279412736|279412736 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+WARNING  [2025-Dec-26 11:33:58.458618]        (VREAnalytics/vrea/app/vreapp.cpp:425) : Finishing VREApp::analytics(): 279445504|279445504 (peakMemoryUsage (bytes) | memoryUsage (bytes))

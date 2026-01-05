@@ -1,6 +1,6 @@
 # Vannarho Risk Engine - Python Distributions and Examples
 
-Vannarho Risk Engine (VRE) is aimed at establishing a transparent peer-reviewed framework for pricing and risk analysis that can serve as
+Vannarho Risk Engine (VRE) is the deterministic core at the centre of the Vannarho Risk as a Service offering. It is aimed at establishing a transparent peer-reviewed framework for pricing and risk analysis that can serve as
 
 * a benchmarking, validation, training, teaching reference
 * an extensible foundation for tailored risk solutions

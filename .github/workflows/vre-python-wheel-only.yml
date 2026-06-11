@@ -44,7 +44,11 @@ jobs:
             -p "$VRE_WHEEL_ASSET" \
             -D wheelhouse
           .venv/bin/python -m pip install --no-deps "wheelhouse/$VRE_WHEEL_ASSET"
-          .venv/bin/python -m ipykernel install --prefix .venv --name vre-wheel-313 --display-name "VRE wheel cp313"
+          rm -rf .jupyter-kernels
+          .venv/bin/python -m ipykernel install \
+            --prefix "$GITHUB_WORKSPACE/.jupyter-kernels" \
+            --name vre-wheel-313 \
+            --display-name "VRE wheel cp313"
 
       - name: Prepare clean examples tree
         run: |
@@ -85,6 +89,8 @@ jobs:
       - name: Execute notebooks
         run: |
           set -e
+          export JUPYTER_PATH="$GITHUB_WORKSPACE/.jupyter-kernels/share/jupyter"
+          "$GITHUB_WORKSPACE/.venv/bin/python" -m jupyter kernelspec list
           BASE="$VRE_EXAMPLES_DIR/notebooks"
           OUT="$RUNNER_TEMP/vre_notebook_exec"
           for rel in \
@@ -109,6 +115,7 @@ jobs:
                   --execute "$(basename "$rel")" \
                   --output-dir "$OUT/$(dirname "$rel")" \
                   --ExecutePreprocessor.kernel_name=vre-wheel-313 \
+                  --ExecutePreprocessor.startup_timeout=180 \
                   --ExecutePreprocessor.timeout=1800
             )
           done

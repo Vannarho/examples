@@ -1,4 +1,6 @@
 
+from _wheel_guard import require_installed_vre
+require_installed_vre()
 from VRE import ql
 import pandas as pd
 import math

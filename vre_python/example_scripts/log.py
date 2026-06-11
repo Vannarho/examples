@@ -2,6 +2,8 @@
 # Copyright (C) 2019 Quaternion Risk Manaement Ltd
 # All rights reserved.
 
+from _wheel_guard import require_installed_vre
+require_installed_vre()
 from VRE import *
 
 fileLogger = FileLogger("log.txt")

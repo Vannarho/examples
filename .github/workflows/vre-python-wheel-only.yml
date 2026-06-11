@@ -103,6 +103,51 @@ jobs:
               assert "build" not in path.parts
           PY
 
+      - name: Prove local VRE shadow is rejected
+        run: |
+          SHADOW="$RUNNER_TEMP/vre_shadow"
+          rm -rf "$SHADOW"
+          mkdir -p "$SHADOW/vre"
+          printf 'SENTINEL = "local VRE shadow"\n' > "$SHADOW/VRE.py"
+          printf 'SENTINEL = "local VREData shadow"\n' > "$SHADOW/VREData.py"
+          printf 'SENTINEL = "local vre package shadow"\n' > "$SHADOW/vre/__init__.py"
+
+          set +e
+          PYTHONPATH="$SHADOW" "$GITHUB_WORKSPACE/.venv/bin/python" \
+            "$VRE_EXAMPLES_DIR/example_scripts/log.py" \
+            > "$RUNNER_TEMP/vre_shadow_script.log" 2>&1
+          rc=$?
+          set -e
+          if [ "$rc" -eq 0 ]; then
+            cat "$RUNNER_TEMP/vre_shadow_script.log"
+            echo "Expected standalone script to reject PYTHONPATH VRE shadow"
+            exit 1
+          fi
+          grep -E "outside the installed vannarho-risk-engine wheel|must import VRE from the installed" \
+            "$RUNNER_TEMP/vre_shadow_script.log"
+
+          set +e
+          (
+            cd "$VRE_EXAMPLES_DIR/notebooks/example_1"
+            env PYTHONPATH="$SHADOW" VRE_PYBIND_FORCE_BUILD_DIR= VRE_PYBIND_BUILD_DIR= VRE_NOTEBOOK_BUILD_ROOT= \
+              "$GITHUB_WORKSPACE/.venv/bin/python" -m nbconvert \
+                --to notebook \
+                --execute hello.ipynb \
+                --output-dir "$RUNNER_TEMP/vre_shadow_notebook" \
+                --ExecutePreprocessor.kernel_name=vre-wheel-313 \
+                --ExecutePreprocessor.startup_timeout=180 \
+                --ExecutePreprocessor.timeout=180
+          ) > "$RUNNER_TEMP/vre_shadow_notebook.log" 2>&1
+          rc=$?
+          set -e
+          if [ "$rc" -eq 0 ]; then
+            cat "$RUNNER_TEMP/vre_shadow_notebook.log"
+            echo "Expected notebook to reject PYTHONPATH VRE shadow"
+            exit 1
+          fi
+          grep -E "outside the installed vannarho-risk-engine wheel|must import VRE from the installed" \
+            "$RUNNER_TEMP/vre_shadow_notebook.log"
+
       - name: Run aggregate examples
         run: |
           cd "$VRE_EXAMPLES_DIR"

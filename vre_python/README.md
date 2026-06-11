@@ -4,6 +4,11 @@ These examples run against the installed `vannarho-risk-engine` pybind wheel onl
 They do not require `PYTHONPATH`, local source-tree imports, or in-repo C++ build
 artifacts.
 
+The script and notebook entrypoints fail closed if `VRE`, `VREData`, or `vre`
+resolve outside the installed `vannarho-risk-engine` distribution. CI also
+injects fake local VRE modules through `PYTHONPATH` and verifies that the
+examples reject the shadowed import path.
+
 ## macOS wheel install
 
 The current promoted macOS wheels are attached to the examples

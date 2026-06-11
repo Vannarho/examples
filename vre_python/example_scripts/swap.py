@@ -39,6 +39,8 @@
 # FOR A PARTICULAR PURPOSE.  See the license for more details.
 
 # %%
+from _wheel_guard import require_installed_vre
+require_installed_vre()
 from VRE import ql
 import math
 import pandas as pd

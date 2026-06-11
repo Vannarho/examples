@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import contextlib
+import importlib.metadata as metadata
 import os
 import platform
 import re
@@ -16,6 +17,11 @@ from pathlib import Path
 
 NOTEBOOKS_ROOT = Path(__file__).resolve().parent
 QLE_DEVICE_LABEL = "@qle.computeenvironment.testEnvironmentInit"
+_BUILD_ENV_VARS = (
+    "VRE_PYBIND_FORCE_BUILD_DIR",
+    "VRE_PYBIND_BUILD_DIR",
+    "VRE_NOTEBOOK_BUILD_ROOT",
+)
 
 
 def _env_truthy(name: str) -> bool:
@@ -99,16 +105,33 @@ def print_banner(title: str) -> None:
 
 
 def _import_installed_vre():
-    import VRE
+    try:
+        dist = metadata.distribution("vannarho-risk-engine")
+    except metadata.PackageNotFoundError as exc:
+        raise RuntimeError("vannarho-risk-engine is not installed; install the pybind wheel first") from exc
 
+    import VRE
+    import VREData
+    import vre
+
+    dist_root = Path(dist.locate_file("")).resolve()
     executable = Path(sys.executable).resolve()
     prefix = Path(sys.prefix).resolve()
+    modules = (("VRE", VRE), ("VREData", VREData), ("vre", vre))
+    for module_name, module in modules:
+        module_path = Path(getattr(module, "__file__", "")).resolve()
+        if any(part == "build" for part in module_path.parts):
+            raise RuntimeError(f"Notebook examples must not import {module_name} from a build tree: {module_path}")
+        try:
+            module_path.relative_to(dist_root)
+        except ValueError as exc:
+            raise RuntimeError(
+                f"Notebook examples must import {module_name} from the installed "
+                f"vannarho-risk-engine wheel, not {module_path}"
+            ) from exc
     module_path = Path(getattr(VRE, "__file__", "")).resolve()
-    in_site_packages = any(part in {"site-packages", "dist-packages"} for part in module_path.parts)
-    if not in_site_packages:
-        raise RuntimeError(f"Notebook examples must import VRE from an installed wheel, not {module_path}")
-    if any(part == "build" for part in module_path.parts):
-        raise RuntimeError(f"Notebook examples must not import VRE from a build tree: {module_path}")
+    print(f"[wheel] distribution={dist.metadata['Name']} {dist.version}")
+    print(f"[wheel] root={dist_root}")
     print(f"[wheel] python={executable}")
     print(f"[wheel] prefix={prefix}")
     print(f"[wheel] module={module_path}")
@@ -118,6 +141,9 @@ def _import_installed_vre():
 def _import_vre_runtime():
     if _env_truthy("VRE_PYBIND_FORCE_BUILD_DIR"):
         raise RuntimeError("Notebook examples are wheel-only; VRE_PYBIND_FORCE_BUILD_DIR is not supported")
+    for name in _BUILD_ENV_VARS[1:]:
+        if os.environ.get(name):
+            raise RuntimeError(f"Notebook examples are wheel-only; {name} is not supported")
     return _import_installed_vre()
 
 

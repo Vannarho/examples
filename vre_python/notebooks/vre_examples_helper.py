@@ -495,7 +495,10 @@ def run_example(example):
         os.chdir(os.path.join(os.getcwd(), example))
         filename = "run.py"
         sys.argv = [filename, 0]
-        exit_code = subprocess.call([sys.executable, filename])
+        env = os.environ.copy()
+        for key in ("PYTHONPATH", "VRE_PYBIND_FORCE_BUILD_DIR", "VRE_PYBIND_BUILD_DIR", "VRE_NOTEBOOK_BUILD_ROOT"):
+            env.pop(key, None)
+        exit_code = subprocess.call([sys.executable, filename], env=env)
         os.chdir(os.path.dirname(os.getcwd()))
         print_on_console('-' * 50)
         print_on_console('')

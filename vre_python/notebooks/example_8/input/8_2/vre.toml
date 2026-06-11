@@ -1,0 +1,36 @@
+[setup]
+asofDate = "2019-02-25"
+inputPath = "input_bundle/8_2__vre"
+outputPath = "Output/8_2"
+logFile = "log.txt"
+logMask = "15"
+marketDataFile = "market.txt"
+fixingDataFile = "fixings.txt"
+implyTodaysFixings = "N"
+curveConfigFile = "runtime_policy/resolved_curve_configuration.json"
+conventionsFile = "reference_registry/convention_manifest.json"
+marketConfigFile = "runtime_policy/resolved_todays_market.json"
+pricingEnginesFile = "runtime_policy/pricingengine/resolved_pricing_policy.json"
+observationModel = "None"
+baseCurrency = "EUR"
+portfolioFile = "portfolio.xml"
+nThreads = "1"
+
+[markets]
+lgmcalibration = "default"
+fxcalibration = "default"
+pricing = "default"
+simulation = "default"
+sensitivity = "default"
+
+[analytics]
+[analytics.historicalSimulationVar]
+active = "Y"
+historicalScenarioFile = "scenarios.csv"
+simulationConfigFile = "runtime_policy/scenario_market_profile.json"
+historicalPeriod = "2016-09-16,2019-02-25"
+mporDays = "10"
+mporCalendar = "USD"
+mporOverlappingPeriods = "true"
+quantiles = "0.01,0.05,0.95,0.99"
+outputFile = "var.csv"

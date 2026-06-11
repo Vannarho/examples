@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Portfolio>
+  <Trade id="CDS_FirmA">
+    <TradeType>CreditDefaultSwap</TradeType>
+    <Envelope>
+      <CounterParty>CPTY_B</CounterParty>
+      <NettingSetId>CPTY_B</NettingSetId>
+      <DeskId>CREDIT_DESK</DeskId>
+      <AdditionalFields />
+    </Envelope>
+    <CreditDefaultSwapData>
+      <IssuerId>FirmA</IssuerId>
+      <CreditCurveId>FirmA</CreditCurveId>
+      <SettlesAccrual>Y</SettlesAccrual>
+      <PaysAtDefaultTime>Y</PaysAtDefaultTime>
+      <ProtectionStart>20160206</ProtectionStart>
+      <UpfrontDate>20160208</UpfrontDate>
+      <UpfrontFee>0.0</UpfrontFee>
+      <LegData>
+        <LegType>Fixed</LegType>
+        <Payer>true</Payer>
+        <Currency>USD</Currency>
+        <Notionals>
+          <Notional>10000000.000000</Notional>
+        </Notionals>
+        <DayCounter>A360</DayCounter>
+        <PaymentConvention>F</PaymentConvention>
+        <FixedLegData>
+          <Rates>
+            <Rate>0.01</Rate>
+          </Rates>
+        </FixedLegData>
+        <ScheduleData>
+          <Rules>
+            <StartDate>20160205</StartDate>
+            <EndDate>20190205</EndDate>
+            <Tenor>3M</Tenor>
+            <Calendar>US</Calendar>
+            <Convention>F</Convention>
+            <TermConvention>F</TermConvention>
+            <Rule>CDS2015</Rule>
+            <EndOfMonth />
+            <FirstDate />
+            <LastDate />
+          </Rules>
+        </ScheduleData>
+      </LegData>
+    </CreditDefaultSwapData>
+  </Trade>
+  <Trade id="CDS_FirmB">
+    <TradeType>CreditDefaultSwap</TradeType>
+    <Envelope>
+      <CounterParty>CPTY_B</CounterParty>
+      <NettingSetId>CPTY_B</NettingSetId>
+      <DeskId>CREDIT_DESK</DeskId>
+      <AdditionalFields />
+    </Envelope>
+    <CreditDefaultSwapData>
+      <IssuerId>FirmB</IssuerId>
+      <CreditCurveId>FirmB</CreditCurveId>
+      <SettlesAccrual>Y</SettlesAccrual>
+      <PaysAtDefaultTime>Y</PaysAtDefaultTime>
+      <ProtectionStart>20160206</ProtectionStart>
+      <UpfrontDate>20160208</UpfrontDate>
+      <UpfrontFee>0.0</UpfrontFee>
+      <LegData>
+        <LegType>Fixed</LegType>
+        <Payer>false</Payer>
+        <Currency>EUR</Currency>
+        <Notionals>
+          <Notional>10000000.000000</Notional>
+        </Notionals>
+        <DayCounter>A360</DayCounter>
+        <PaymentConvention>F</PaymentConvention>
+        <FixedLegData>
+          <Rates>
+            <Rate>0.01</Rate>
+          </Rates>
+        </FixedLegData>
+        <ScheduleData>
+          <Rules>
+            <StartDate>20160205</StartDate>
+            <EndDate>20220205</EndDate>
+            <Tenor>3M</Tenor>
+            <Calendar>US</Calendar>
+            <Convention>F</Convention>
+            <TermConvention>F</TermConvention>
+            <Rule>CDS2015</Rule>
+            <EndOfMonth />
+            <FirstDate />
+            <LastDate />
+          </Rules>
+        </ScheduleData>
+      </LegData>
+    </CreditDefaultSwapData>
+  </Trade>
+  <Trade id="CDS_CDX_IG">
+    <TradeType>CreditDefaultSwap</TradeType>
+    <Envelope>
+      <CounterParty>CPTY_B</CounterParty>
+      <NettingSetId>CPTY_B</NettingSetId>
+      <DeskId>CREDIT_DESK</DeskId>
+      <AdditionalFields />
+    </Envelope>
+    <CreditDefaultSwapData>
+      <IssuerId>CDXIG</IssuerId>
+      <CreditCurveId>CDXIG</CreditCurveId>
+      <SettlesAccrual>Y</SettlesAccrual>
+      <PaysAtDefaultTime>Y</PaysAtDefaultTime>
+      <ProtectionStart>20160206</ProtectionStart>
+      <UpfrontDate>20160208</UpfrontDate>
+      <UpfrontFee>0.0</UpfrontFee>
+      <LegData>
+        <LegType>Fixed</LegType>
+        <Payer>true</Payer>
+        <Currency>USD</Currency>
+        <Notionals>
+          <Notional>10000000.000000</Notional>
+        </Notionals>
+        <DayCounter>A360</DayCounter>
+        <PaymentConvention>F</PaymentConvention>
+        <FixedLegData>
+          <Rates>
+            <Rate>0.01</Rate>
+          </Rates>
+        </FixedLegData>
+        <ScheduleData>
+          <Rules>
+            <StartDate>20160205</StartDate>
+            <EndDate>20210205</EndDate>
+            <Tenor>3M</Tenor>
+            <Calendar>US</Calendar>
+            <Convention>F</Convention>
+            <TermConvention>F</TermConvention>
+            <Rule>CDS2015</Rule>
+            <EndOfMonth />
+            <FirstDate />
+            <LastDate />
+          </Rules>
+        </ScheduleData>
+      </LegData>
+    </CreditDefaultSwapData>
+  </Trade>
+</Portfolio>

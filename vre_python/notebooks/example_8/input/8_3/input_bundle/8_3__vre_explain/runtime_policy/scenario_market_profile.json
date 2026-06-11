@@ -1,0 +1,130 @@
+{
+  "schemaVersion": "1.0.0",
+  "seedVersion": "1.0.0",
+  "traceabilityRefs": {
+    "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+    "epic": "docs/architecture/scope_runtime_migration.yaml",
+    "sourceXml": "vre_python/notebooks/example_8/input/8_3/simulation.xml",
+    "spec": "docs/architecture/scope_runtime_migration.yaml"
+  },
+  "marketDefinitionText": "<Market>\n    <BaseCurrency>USD</BaseCurrency>\n    <Currencies>\n      <Currency>EUR</Currency>\n      <Currency>USD</Currency>\n    </Currencies>\n    <YieldCurves>\n      <Configuration curve=\"\">\n        <Tenors>2W, 1M, 3M, 6M, 1Y, 2Y, 3Y, 5Y, 10Y, 15Y, 20Y, 30Y</Tenors>\n        <Interpolation>LogLinear</Interpolation>\n        <Extrapolation>FlatZero</Extrapolation>\n      </Configuration>\n    \n      <Simulate>true</Simulate></YieldCurves>\n    <FxRates>\n      <CurrencyPairs>\n        <CurrencyPair>EURUSD</CurrencyPair>\n        <CurrencyPair>USDEUR</CurrencyPair>\n      </CurrencyPairs>\n    </FxRates>\n    <Indices>\n      <Index>EUR-EONIA</Index>\n      <Index>EUR-ESTER</Index>\n      <Index>EUR-EURIBOR-3M</Index>\n      <Index>EUR-EURIBOR-6M</Index>\n      <Index>USD-FedFunds</Index>\n      <Index>USD-LIBOR-3M</Index>\n      <Index>USD-SOFR</Index>\n    </Indices>\n    <SwapIndices>\n      <SwapIndex>\n        <Name>EUR-CMS-1Y</Name>\n        <DiscountingIndex>EUR-EONIA</DiscountingIndex>\n      </SwapIndex>\n      <SwapIndex>\n        <Name>EUR-CMS-30Y</Name>\n        <DiscountingIndex>EUR-EONIA</DiscountingIndex>\n      </SwapIndex>\n      <SwapIndex>\n        <Name>USD-CMS-1Y</Name>\n        <DiscountingIndex>USD-FedFunds</DiscountingIndex>\n      </SwapIndex>\n      <SwapIndex>\n        <Name>USD-CMS-30Y</Name>\n        <DiscountingIndex>USD-FedFunds</DiscountingIndex>\n      </SwapIndex>\n      <SwapIndex>\n        <Name>USD-CMS-SOFR-1Y</Name>\n        <DiscountingIndex>USD-SOFR</DiscountingIndex>\n      </SwapIndex>\n      <SwapIndex>\n        <Name>USD-CMS-SOFR-30Y</Name>\n        <DiscountingIndex>USD-SOFR</DiscountingIndex>\n      </SwapIndex>\n    </SwapIndices>\n    <SwaptionVolatilities>\n      <Simulate>false</Simulate>\n      <ReactionToTimeDecay>ForwardVariance</ReactionToTimeDecay>\n      <Keys>\n        <Key>EUR</Key>\n        <Key>USD</Key>\n      </Keys>\n      <Expiries>2W,1M,3M,6M,1Y,2Y,3Y,5Y,7Y,10Y,15Y,20Y,30Y</Expiries>\n      <Terms>1Y, 2Y, 3Y, 4Y, 5Y, 6Y, 7Y, 8Y, 9Y, 10Y, 15Y, 20Y, 25Y, 30Y</Terms>\n    \n      <Currencies><Currency>EUR</Currency><Currency>USD</Currency></Currencies></SwaptionVolatilities>\n    <FxVolatilities>\n      <Simulate>false</Simulate>\n      <ReactionToTimeDecay>ForwardVariance</ReactionToTimeDecay>\n      <CurrencyPairs><CurrencyPair>EURUSD</CurrencyPair></CurrencyPairs>\n      <Expiries>2W, 1M, 3M, 6M, 1Y, 2Y, 3Y, 5Y, 10Y, 15Y, 20Y, 30Y</Expiries>\n    </FxVolatilities>\n    <BenchmarkCurves>\n      <BenchmarkCurve>\n        <Currency>EUR</Currency>\n        <Name>EUR-IN-USD</Name>\n      </BenchmarkCurve>\n    </BenchmarkCurves>\n  </Market>\n",
+  "marketDefinition": {
+    "BaseCurrency": "USD",
+    "BenchmarkCurves": {
+      "BenchmarkCurve": {
+        "Currency": "EUR",
+        "Name": "EUR-IN-USD"
+      }
+    },
+    "Currencies": {
+      "Currency": [
+        "EUR",
+        "USD"
+      ]
+    },
+    "FxRates": {
+      "CurrencyPairs": {
+        "CurrencyPair": [
+          "EURUSD",
+          "USDEUR"
+        ]
+      }
+    },
+    "FxVolatilities": {
+      "CurrencyPairs": {
+        "CurrencyPair": "EURUSD"
+      },
+      "Expiries": "2W, 1M, 3M, 6M, 1Y, 2Y, 3Y, 5Y, 10Y, 15Y, 20Y, 30Y",
+      "ReactionToTimeDecay": "ForwardVariance",
+      "Simulate": false
+    },
+    "Indices": {
+      "Index": [
+        "EUR-EONIA",
+        "EUR-ESTER",
+        "EUR-EURIBOR-3M",
+        "EUR-EURIBOR-6M",
+        "USD-FedFunds",
+        "USD-LIBOR-3M",
+        "USD-SOFR"
+      ]
+    },
+    "SwapIndices": {
+      "SwapIndex": [
+        {
+          "DiscountingIndex": "EUR-EONIA",
+          "Name": "EUR-CMS-1Y"
+        },
+        {
+          "DiscountingIndex": "EUR-EONIA",
+          "Name": "EUR-CMS-30Y"
+        },
+        {
+          "DiscountingIndex": "USD-FedFunds",
+          "Name": "USD-CMS-1Y"
+        },
+        {
+          "DiscountingIndex": "USD-FedFunds",
+          "Name": "USD-CMS-30Y"
+        },
+        {
+          "DiscountingIndex": "USD-SOFR",
+          "Name": "USD-CMS-SOFR-1Y"
+        },
+        {
+          "DiscountingIndex": "USD-SOFR",
+          "Name": "USD-CMS-SOFR-30Y"
+        }
+      ]
+    },
+    "SwaptionVolatilities": {
+      "Expiries": "2W,1M,3M,6M,1Y,2Y,3Y,5Y,7Y,10Y,15Y,20Y,30Y",
+      "Keys": {
+        "Key": [
+          "EUR",
+          "USD"
+        ]
+      },
+      "ReactionToTimeDecay": "ForwardVariance",
+      "Simulate": false,
+      "Terms": "1Y, 2Y, 3Y, 4Y, 5Y, 6Y, 7Y, 8Y, 9Y, 10Y, 15Y, 20Y, 25Y, 30Y",
+      "Currencies": {
+        "Currency": [
+          "EUR",
+          "USD"
+        ]
+      }
+    },
+    "YieldCurves": {
+      "Configuration": {
+        "Extrapolation": "FlatZero",
+        "Interpolation": "LogLinear",
+        "Tenors": "2W, 1M, 3M, 6M, 1Y, 2Y, 3Y, 5Y, 10Y, 15Y, 20Y, 30Y",
+        "_attributes": {
+          "curve": ""
+        }
+      },
+      "Simulate": true
+    },
+    "AggregationScenarioDataIndices": {
+      "Index": [
+        "EUR-ESTER",
+        "USD-SOFR"
+      ]
+    },
+    "DefaultCurves": {
+      "Names": {
+        "Name": [
+          "CPTY"
+        ]
+      },
+      "Tenors": "1Y,2Y,3Y,5Y,10Y",
+      "SimulateSurvivalProbabilities": false,
+      "SimulateRecoveryRates": false,
+      "Calendars": {
+        "Calendar": "TARGET"
+      },
+      "Extrapolation": "FlatZero"
+    }
+  }
+}

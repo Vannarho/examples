@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0.0",
+  "seedVersion": "1.0.0",
+  "traceabilityRefs": {
+    "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+    "epic": "docs/architecture/scope_runtime_migration.yaml",
+    "sourceXml": "vre_python/notebooks/example_10/input/sacva_larger_porfolio/xvasensiconfig.xml",
+    "spec": "docs/architecture/scope_runtime_migration.yaml"
+  },
+  "profileId": "xvasensiconfig",
+  "parConversionExcludes": [],
+  "twoSidedDeltaKeyTypes": [
+    "FXSpot"
+  ],
+  "crossGammaFilter": []
+}

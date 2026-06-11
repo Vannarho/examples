@@ -1,0 +1,29 @@
+[setup]
+asofDate = "2019-02-25"
+inputPath = "input_bundle/8_1__vre"
+outputPath = "Output/8_1"
+logFile = "log.txt"
+logMask = "15"
+marketDataFile = "market_20190225_flat.txt"
+fixingDataFile = "fixings_20190225.txt"
+implyTodaysFixings = "N"
+curveConfigFile = "runtime_policy/resolved_curve_configuration.json"
+conventionsFile = "reference_registry/convention_manifest.json"
+marketConfigFile = "runtime_policy/resolved_todays_market.json"
+pricingEnginesFile = "runtime_policy/pricingengine/resolved_pricing_policy.json"
+observationModel = "None"
+baseCurrency = "EUR"
+nThreads = "1"
+
+[markets]
+lgmcalibration = "collateral_inccy"
+fxcalibration = "xois_eur"
+pricing = "xois_eur"
+simulation = "xois_eur"
+sensitivity = "xois_eur"
+
+[analytics]
+[analytics.scenario]
+active = "Y"
+simulationConfigFile = "runtime_policy/scenario_market_profile.json"
+scenarioOutputFile = "scenario.csv"

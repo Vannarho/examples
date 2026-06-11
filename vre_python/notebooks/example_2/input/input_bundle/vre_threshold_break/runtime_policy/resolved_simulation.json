@@ -1,0 +1,426 @@
+{
+  "schemaVersion": "1.0.0",
+  "seedVersion": "1.0.0",
+  "publishedAt": "examples/vre_python/notebooks/example_2/input/vre_threshold_break.toml",
+  "contentHash": "4d1e163c8f9f7c18a34693109738b4380ad9fc6d24b5daafc9d6a50240b154c7",
+  "sourceLineage": {
+    "runtimePath": "examples/vre_python/notebooks/example_2/input_bundle/vre_threshold_break/runtime_policy/simulation_runtime.toml",
+    "profilePath": "examples/vre_python/notebooks/example_2/input_bundle/vre_threshold_break/runtime_policy/xam_profile.yaml",
+    "correlationsPath": "examples/vre_python/notebooks/example_2/input_bundle/vre_threshold_break/runtime_policy/xam_correlation_set.json",
+    "generator": "tools/ci/publish_simulation_contracts.py",
+    "traceabilityRefs": {
+      "runtime": {
+        "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+        "epic": "docs/architecture/scope_runtime_migration.yaml",
+        "sourceXml": "vre_python/notebooks/example_2/input/simulation.xml",
+        "spec": "docs/architecture/scope_runtime_migration.yaml"
+      },
+      "profile": {
+        "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+        "epic": "docs/architecture/scope_runtime_migration.yaml",
+        "sourceXml": "vre_python/notebooks/example_2/input/simulation.xml",
+        "spec": "docs/architecture/scope_runtime_migration.yaml"
+      },
+      "correlations": {
+        "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+        "epic": "docs/architecture/scope_runtime_migration.yaml",
+        "sourceXml": "vre_python/notebooks/example_2/input/simulation.xml",
+        "spec": "docs/architecture/scope_runtime_migration.yaml"
+      },
+      "market": {
+        "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+        "epic": "docs/architecture/scope_runtime_migration.yaml",
+        "sourceXml": "vre_python/notebooks/example_2/input/simulation.xml",
+        "spec": "docs/architecture/scope_runtime_migration.yaml"
+      }
+    },
+    "marketPath": "examples/vre_python/notebooks/example_2/input_bundle/vre_threshold_break/runtime_policy/scenario_market_profile.json"
+  },
+  "simulationRuntime": {
+    "schemaVersion": "1.0.0",
+    "seedVersion": "1.0.0",
+    "traceabilityRefs": {
+      "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+      "epic": "docs/architecture/scope_runtime_migration.yaml",
+      "sourceXml": "vre_python/notebooks/example_2/input/simulation.xml",
+      "spec": "docs/architecture/scope_runtime_migration.yaml"
+    },
+    "grid": "290,2W",
+    "calendar": "EUR,USD,GBP,CHF",
+    "sequence": "SobolBrownianBridge",
+    "scenarioGenerator": "Simple",
+    "seed": 42,
+    "samples": 1000,
+    "ordering": "Steps",
+    "directionIntegers": "JoeKuoD7",
+    "closeOutLag": "0D",
+    "mporMode": "ActualDate"
+  },
+  "crossAssetModelProfile": {
+    "schemaVersion": "1.0.0",
+    "seedVersion": "1.0.0",
+    "traceabilityRefs": {
+      "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+      "epic": "docs/architecture/scope_runtime_migration.yaml",
+      "sourceXml": "vre_python/notebooks/example_2/input/simulation.xml",
+      "spec": "docs/architecture/scope_runtime_migration.yaml"
+    },
+    "domesticCurrency": "EUR",
+    "factors": {
+      "currencies": [
+        "EUR",
+        "USD",
+        "GBP"
+      ],
+      "equities": [],
+      "inflationIndices": [],
+      "creditNames": [],
+      "commodities": []
+    },
+    "bootstrapTolerance": 0.0001,
+    "integration": {
+      "discretization": "Exact",
+      "salvagingAlgorithm": "None",
+      "piecewise": true
+    },
+    "modelBlocks": {
+      "interestRate": [
+        {
+          "modelType": "LGM",
+          "key": "default",
+          "parameters": {
+            "CalibrationSwaptions": {
+              "Expiries": "1Y,  2Y,  4Y,  6Y,  8Y, 10Y, 12Y, 14Y, 16Y, 18Y, 19Y",
+              "Strikes": "",
+              "Terms": "19Y, 18Y, 16Y, 14Y, 12Y, 10Y,  8Y,  6Y,  4Y,  2Y,  1Y"
+            },
+            "CalibrationType": "Bootstrap",
+            "ParameterTransformation": {
+              "Scaling": 1.0,
+              "ShiftHorizon": 20.0
+            },
+            "Reversion": {
+              "Calibrate": false,
+              "InitialValue": 0.03,
+              "ParamType": "Constant",
+              "ReversionType": "HullWhite",
+              "TimeGrid": ""
+            },
+            "Volatility": {
+              "Calibrate": true,
+              "InitialValue": "0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01",
+              "ParamType": "Piecewise",
+              "TimeGrid": "1.0, 2.0, 3.0, 4.0, 5.0, 7.0, 10.0",
+              "VolatilityType": "Hagan"
+            }
+          }
+        },
+        {
+          "modelType": "LGM",
+          "key": "EUR",
+          "parameters": {
+            "CalibrationSwaptions": {
+              "Expiries": "1Y,  2Y,  4Y,  6Y,  8Y, 10Y, 12Y, 14Y, 16Y, 18Y, 19Y",
+              "Strikes": "",
+              "Terms": "19Y, 18Y, 16Y, 14Y, 12Y, 10Y,  8Y,  6Y,  4Y,  2Y,  1Y"
+            },
+            "CalibrationType": "Bootstrap",
+            "ParameterTransformation": {
+              "Scaling": 1.0,
+              "ShiftHorizon": 20.0
+            },
+            "Reversion": {
+              "Calibrate": false,
+              "InitialValue": 0.03,
+              "ParamType": "Constant",
+              "ReversionType": "HullWhite",
+              "TimeGrid": ""
+            },
+            "Volatility": {
+              "Calibrate": true,
+              "InitialValue": "0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01",
+              "ParamType": "Piecewise",
+              "TimeGrid": "1.0, 2.0, 3.0, 4.0, 5.0, 7.0, 10.0",
+              "VolatilityType": "Hagan"
+            }
+          }
+        }
+      ],
+      "foreignExchange": [
+        {
+          "modelType": "CrossCcyLGM",
+          "key": "default",
+          "parameters": {
+            "CalibrationOptions": {
+              "Expiries": "1Y, 2Y, 3Y, 4Y, 5Y, 10Y",
+              "Strikes": ""
+            },
+            "CalibrationType": "Bootstrap",
+            "DomesticCcy": "EUR",
+            "Sigma": {
+              "Calibrate": true,
+              "InitialValue": "0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1",
+              "ParamType": "Piecewise",
+              "TimeGrid": "1.0, 2.0, 3.0, 4.0, 5.0, 7.0, 10.0"
+            }
+          }
+        },
+        {
+          "modelType": "CrossCcyLGM",
+          "key": "USD",
+          "parameters": {
+            "CalibrationOptions": {
+              "Expiries": "1Y, 2Y, 3Y, 4Y, 5Y, 10Y",
+              "Strikes": ""
+            },
+            "CalibrationType": "Bootstrap",
+            "DomesticCcy": "EUR",
+            "Sigma": {
+              "Calibrate": true,
+              "InitialValue": "0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1",
+              "ParamType": "Piecewise",
+              "TimeGrid": "1.0, 2.0, 3.0, 4.0, 5.0, 7.0, 10.0"
+            }
+          }
+        },
+        {
+          "modelType": "CrossCcyLGM",
+          "key": "GBP",
+          "parameters": {
+            "CalibrationOptions": {
+              "Expiries": "1Y, 2Y, 3Y, 4Y, 5Y, 10Y",
+              "Strikes": ""
+            },
+            "CalibrationType": "Bootstrap",
+            "DomesticCcy": "EUR",
+            "Sigma": {
+              "Calibrate": true,
+              "InitialValue": "0.1, 0.1, 0.1, 0.1, 0.1, 0.1,  0.1, 0.1",
+              "ParamType": "Piecewise",
+              "TimeGrid": "1.0, 2.0, 3.0, 4.0, 5.0, 7.0, 10.0"
+            }
+          }
+        }
+      ],
+      "equity": [],
+      "inflation": [],
+      "credit": [],
+      "commodity": []
+    }
+  },
+  "crossAssetModelCorrelations": {
+    "schemaVersion": "1.0.0",
+    "seedVersion": "1.0.0",
+    "traceabilityRefs": {
+      "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+      "epic": "docs/architecture/scope_runtime_migration.yaml",
+      "sourceXml": "vre_python/notebooks/example_2/input/simulation.xml",
+      "spec": "docs/architecture/scope_runtime_migration.yaml"
+    },
+    "correlations": [
+      {
+        "factor1": {
+          "type": "IR",
+          "name": "EUR"
+        },
+        "factor2": {
+          "type": "IR",
+          "name": "USD"
+        },
+        "value": 0.3
+      },
+      {
+        "factor1": {
+          "type": "IR",
+          "name": "EUR"
+        },
+        "factor2": {
+          "type": "IR",
+          "name": "GBP"
+        },
+        "value": 0.3
+      },
+      {
+        "factor1": {
+          "type": "IR",
+          "name": "USD"
+        },
+        "factor2": {
+          "type": "IR",
+          "name": "GBP"
+        },
+        "value": 0.3
+      },
+      {
+        "factor1": {
+          "type": "IR",
+          "name": "EUR"
+        },
+        "factor2": {
+          "type": "FX",
+          "name": "USDEUR"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "IR",
+          "name": "EUR"
+        },
+        "factor2": {
+          "type": "FX",
+          "name": "GBPEUR"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "IR",
+          "name": "GBP"
+        },
+        "factor2": {
+          "type": "FX",
+          "name": "USDEUR"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "IR",
+          "name": "GBP"
+        },
+        "factor2": {
+          "type": "FX",
+          "name": "GBPEUR"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "IR",
+          "name": "USD"
+        },
+        "factor2": {
+          "type": "FX",
+          "name": "USDEUR"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "IR",
+          "name": "USD"
+        },
+        "factor2": {
+          "type": "FX",
+          "name": "GBPEUR"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "FX",
+          "name": "USDEUR"
+        },
+        "factor2": {
+          "type": "FX",
+          "name": "GBPEUR"
+        },
+        "value": 0.0
+      }
+    ]
+  },
+  "scenarioMarketProfile": {
+    "schemaVersion": "1.0.0",
+    "seedVersion": "1.0.0",
+    "traceabilityRefs": {
+      "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+      "epic": "docs/architecture/scope_runtime_migration.yaml",
+      "sourceXml": "vre_python/notebooks/example_2/input/simulation.xml",
+      "spec": "docs/architecture/scope_runtime_migration.yaml"
+    },
+    "marketDefinitionText": "<Market>\n    \n    <BaseCurrency>EUR</BaseCurrency>\n    <Currencies>\n      <Currency>EUR</Currency>\n      <Currency>USD</Currency>\n      <Currency>GBP</Currency>\n    </Currencies>\n    <YieldCurves>\n      <Configuration>\n        <Tenors>3M,6M,1Y,2Y,3Y,4Y,5Y,7Y,10Y,12Y,15Y,20Y</Tenors>\n        <Interpolation>LogLinear</Interpolation>\n        \n        <Extrapolation>Y</Extrapolation>\n      </Configuration>\n    </YieldCurves>\n    <Indices>\n      <Index>EUR-EURIBOR-6M</Index>\n      <Index>EUR-EURIBOR-3M</Index>\n      <Index>EUR-EONIA</Index>\n      <Index>USD-LIBOR-3M</Index>\n      <Index>GBP-LIBOR-6M</Index>\n      <Index>GBP-LIBOR-3M</Index>\n    </Indices>\n    <SwapIndices>\n      <SwapIndex>\n        <Name>EUR-CMS-1Y</Name>\n        <DiscountingIndex>EUR-EONIA</DiscountingIndex>\n      </SwapIndex>\n      <SwapIndex>\n        <Name>EUR-CMS-30Y</Name>\n        <DiscountingIndex>EUR-EONIA</DiscountingIndex>\n      </SwapIndex>\n    </SwapIndices>\n    <DefaultCurves>\n      <Names />\n      <Tenors>6M,1Y,2Y</Tenors>\n    </DefaultCurves>\n    \n    <SwaptionVolatilities>\n      <Simulate>false</Simulate>\n      <ReactionToTimeDecay>ForwardVariance</ReactionToTimeDecay>\n      \n      <Keys>\n        <Key>EUR</Key>\n        <Key>USD</Key>\n        <Key>GBP</Key>\n      </Keys>\n      <Expiries>6M,1Y,2Y,3Y,5Y,10Y,12Y,15Y,20Y</Expiries>\n      <Terms>1Y,2Y,3Y,4Y,5Y,7Y,10Y,15Y,20Y,30Y</Terms>\n    </SwaptionVolatilities>\n    <FxVolatilities>\n      <Simulate>false</Simulate>\n      <ReactionToTimeDecay>ForwardVariance</ReactionToTimeDecay>\n      \n      <CurrencyPairs>\n        <CurrencyPair>USDEUR</CurrencyPair>\n        <CurrencyPair>GBPEUR</CurrencyPair>\n      </CurrencyPairs>\n      <Expiries>6M,1Y,2Y,3Y,4Y,5Y,7Y,10Y</Expiries>\n    </FxVolatilities>\n    \n    <AggregationScenarioDataCurrencies>\n      <Currency>EUR</Currency>\n      <Currency>GBP</Currency>\n      <Currency>USD</Currency>\n    </AggregationScenarioDataCurrencies>\n    <AggregationScenarioDataIndices>\n      <Index>EUR-EURIBOR-3M</Index>\n      <Index>EUR-EONIA</Index>\n      <Index>USD-LIBOR-3M</Index>\n      <Index>GBP-LIBOR-3M</Index>\n    </AggregationScenarioDataIndices>\n  </Market>\n",
+    "marketDefinition": {
+      "AggregationScenarioDataCurrencies": {
+        "Currency": [
+          "EUR",
+          "GBP",
+          "USD"
+        ]
+      },
+      "AggregationScenarioDataIndices": {
+        "Index": [
+          "EUR-EURIBOR-3M",
+          "EUR-EONIA",
+          "USD-LIBOR-3M",
+          "GBP-LIBOR-3M"
+        ]
+      },
+      "BaseCurrency": "EUR",
+      "Currencies": {
+        "Currency": [
+          "EUR",
+          "USD",
+          "GBP"
+        ]
+      },
+      "DefaultCurves": {
+        "Names": "",
+        "Tenors": "6M,1Y,2Y"
+      },
+      "FxVolatilities": {
+        "CurrencyPairs": {
+          "CurrencyPair": [
+            "USDEUR",
+            "GBPEUR"
+          ]
+        },
+        "Expiries": "6M,1Y,2Y,3Y,4Y,5Y,7Y,10Y",
+        "ReactionToTimeDecay": "ForwardVariance",
+        "Simulate": false
+      },
+      "Indices": {
+        "Index": [
+          "EUR-EURIBOR-6M",
+          "EUR-EURIBOR-3M",
+          "EUR-EONIA",
+          "USD-LIBOR-3M",
+          "GBP-LIBOR-6M",
+          "GBP-LIBOR-3M"
+        ]
+      },
+      "SwapIndices": {
+        "SwapIndex": [
+          {
+            "DiscountingIndex": "EUR-EONIA",
+            "Name": "EUR-CMS-1Y"
+          },
+          {
+            "DiscountingIndex": "EUR-EONIA",
+            "Name": "EUR-CMS-30Y"
+          }
+        ]
+      },
+      "SwaptionVolatilities": {
+        "Expiries": "6M,1Y,2Y,3Y,5Y,10Y,12Y,15Y,20Y",
+        "Keys": {
+          "Key": [
+            "EUR",
+            "USD",
+            "GBP"
+          ]
+        },
+        "ReactionToTimeDecay": "ForwardVariance",
+        "Simulate": false,
+        "Terms": "1Y,2Y,3Y,4Y,5Y,7Y,10Y,15Y,20Y,30Y"
+      },
+      "YieldCurves": {
+        "Configuration": {
+          "Extrapolation": true,
+          "Interpolation": "LogLinear",
+          "Tenors": "3M,6M,1Y,2Y,3Y,4Y,5Y,7Y,10Y,12Y,15Y,20Y"
+        }
+      }
+    }
+  }
+}

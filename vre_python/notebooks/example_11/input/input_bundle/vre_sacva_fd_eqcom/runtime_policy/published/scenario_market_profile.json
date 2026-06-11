@@ -1,0 +1,197 @@
+{
+  "schemaVersion": "1.0.0",
+  "seedVersion": "1.0.0",
+  "traceabilityRefs": {
+    "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+    "epic": "docs/architecture/scope_runtime_migration.yaml",
+    "sourceXml": "vre_python/notebooks/example_11/input/sacva_fd_eqcom/simulation.xml",
+    "spec": "docs/architecture/scope_runtime_migration.yaml"
+  },
+  "marketDefinitionText": "<Market>\n\n    <BaseCurrency>EUR</BaseCurrency>\n\n    <Currencies>\n      <Currency>EUR</Currency>\n      <Currency>USD</Currency>\n    </Currencies>\n\n    <YieldCurves>\n      <Configuration>\n        <Tenors>1Y,5Y</Tenors>\n        <Interpolation>LogLinear</Interpolation>\n        <Extrapolation>Y</Extrapolation>\n      </Configuration>\n    </YieldCurves>\n\n    <Indices><Index>EUR-EONIA</Index><Index>EUR-ESTER</Index><Index>EUR-EURIBOR-12M</Index><Index>EUR-EURIBOR-1M</Index><Index>EUR-EURIBOR-3M</Index><Index>EUR-EURIBOR-6M</Index><Index>USD-FedFunds</Index><Index>USD-LIBOR-1M</Index><Index>USD-LIBOR-3M</Index><Index>USD-LIBOR-6M</Index><Index>USD-SOFR</Index></Indices>\n<FxRates><CurrencyPairs><CurrencyPair>EURUSD</CurrencyPair><CurrencyPair>USDEUR</CurrencyPair></CurrencyPairs></FxRates>\n\n    \n    <SwapIndices><SwapIndex><Name>EUR-CMS-1Y</Name><DiscountingIndex>EUR-ESTER</DiscountingIndex></SwapIndex><SwapIndex><Name>EUR-CMS-30Y</Name><DiscountingIndex>EUR-ESTER</DiscountingIndex></SwapIndex><SwapIndex><Name>USD-CMS-1Y</Name><DiscountingIndex>USD-SOFR</DiscountingIndex></SwapIndex><SwapIndex><Name>USD-CMS-30Y</Name><DiscountingIndex>USD-SOFR</DiscountingIndex></SwapIndex></SwapIndices>\n\n    <FxVolatilities><Simulate>false</Simulate><CurrencyPairs><CurrencyPair>USDEUR</CurrencyPair></CurrencyPairs><ReactionToTimeDecay>ForwardVariance</ReactionToTimeDecay><Expiries>1Y,5Y</Expiries><Surface><StandardDeviations>0.0</StandardDeviations></Surface></FxVolatilities>\n\n    <SwaptionVolatilities>\n      <Simulate>false</Simulate>\n      <Currencies>\n        <Currency>EUR</Currency>\n        <Currency>USD</Currency>\n      </Currencies>\n      <ReactionToTimeDecay>ForwardVariance</ReactionToTimeDecay>\n      <Expiries>1Y,5Y,7Y</Expiries>\n      <Terms>5Y,10Y</Terms>\n      <SimulateATMOnly>true</SimulateATMOnly>\n    </SwaptionVolatilities>\n\n    <Equities>\n      <SimulateDividendYield>false</SimulateDividendYield>\n      <Names>\n        <Name>SP5</Name>\n      </Names>\n      <DividendTenors>6M,1Y,2Y</DividendTenors>\n    </Equities>\n\n    <EquityVolatilities>\n      <Simulate>true</Simulate>\n      <ReactionToTimeDecay>ForwardVariance</ReactionToTimeDecay>\n      <Names>\n        <Name>SP5</Name>\n      </Names>\n      <Expiries>6M,5Y,10Y</Expiries>\n    </EquityVolatilities>\n\n    <Commodities>\n      <Simulate>true</Simulate>\n      <Names>\n        <Name>COMDTY_WTI_USD</Name>\n      </Names>\n      <Tenors>0D,1Y,5Y,10Y</Tenors>\n    </Commodities>\n    <CommodityVolatilities>\n      <Simulate>true</Simulate>\n      <ReactionToTimeDecay>ForwardForward</ReactionToTimeDecay>\n      <Names>\n        <Name id=\"COMDTY_WTI_USD\">\n          <Expiries>1Y,5Y,10Y</Expiries>\n          <Moneyness>30.0,40.0,50.0,60.0</Moneyness>\n        </Name>\n      </Names>\n    </CommodityVolatilities>\n\n  \n    <Securities><Simulate>false</Simulate></Securities>\n    <Securities>\n      <Simulate>false</Simulate>\n      <Names>\n      <Name>SECURITY_2</Name>\n      <Name>SECURITY_3</Name>\n      <Name>SECURITY_4</Name>\n      <Name>SECURITY_5</Name>\n      </Names>\n    </Securities>\n  \n    <AggregationScenarioDataCurrencies><Currency>EUR</Currency><Currency>USD</Currency></AggregationScenarioDataCurrencies>\n    <AggregationScenarioDataIndices><Index>EUR-EONIA</Index><Index>EUR-ESTER</Index><Index>EUR-EURIBOR-12M</Index><Index>EUR-EURIBOR-1M</Index><Index>EUR-EURIBOR-3M</Index><Index>EUR-EURIBOR-6M</Index><Index>USD-FedFunds</Index><Index>USD-LIBOR-1M</Index><Index>USD-LIBOR-3M</Index><Index>USD-LIBOR-6M</Index><Index>USD-SOFR</Index></AggregationScenarioDataIndices>\n    <AggregationScenarioDataSurvivalWeights><Name>CPTY_A</Name></AggregationScenarioDataSurvivalWeights>\n    <DefaultCurves><SimulateSurvivalProbabilities>true</SimulateSurvivalProbabilities>\n      <Names><Name>CPTY_A</Name><Name>BANK</Name></Names></DefaultCurves>\n    <AggregationScenarioDataCommodities><Name>COMDTY_WTI_USD</Name></AggregationScenarioDataCommodities></Market>\n\n",
+  "marketDefinition": {
+    "BaseCurrency": "EUR",
+    "Commodities": {
+      "Names": {
+        "Name": "COMDTY_WTI_USD"
+      },
+      "Simulate": true,
+      "Tenors": "0D,1Y,5Y,10Y"
+    },
+    "CommodityVolatilities": {
+      "Names": {
+        "Name": {
+          "Expiries": "1Y,5Y,10Y",
+          "Moneyness": "30.0,40.0,50.0,60.0",
+          "_attributes": {
+            "id": "COMDTY_WTI_USD"
+          }
+        }
+      },
+      "ReactionToTimeDecay": "ForwardForward",
+      "Simulate": true
+    },
+    "Currencies": {
+      "Currency": [
+        "EUR",
+        "USD"
+      ]
+    },
+    "Equities": {
+      "DividendTenors": "6M,1Y,2Y",
+      "Names": {
+        "Name": "SP5"
+      },
+      "SimulateDividendYield": false
+    },
+    "EquityVolatilities": {
+      "Expiries": "6M,5Y,10Y",
+      "Names": {
+        "Name": "SP5"
+      },
+      "ReactionToTimeDecay": "ForwardVariance",
+      "Simulate": true
+    },
+    "FxRates": {
+      "CurrencyPairs": {
+        "CurrencyPair": [
+          "EURUSD",
+          "USDEUR"
+        ]
+      },
+      "Simulate": true
+    },
+    "FxVolatilities": {
+      "CurrencyPairs": {
+        "CurrencyPair": "USDEUR"
+      },
+      "Expiries": "1Y,5Y",
+      "ReactionToTimeDecay": "ForwardVariance",
+      "Simulate": false,
+      "Surface": {
+        "StandardDeviations": "0.0"
+      }
+    },
+    "Indices": {
+      "Index": [
+        "EUR-EONIA",
+        "EUR-ESTER",
+        "EUR-EURIBOR-12M",
+        "EUR-EURIBOR-1M",
+        "EUR-EURIBOR-3M",
+        "EUR-EURIBOR-6M",
+        "USD-FedFunds",
+        "USD-LIBOR-1M",
+        "USD-LIBOR-3M",
+        "USD-LIBOR-6M",
+        "USD-SOFR"
+      ]
+    },
+    "SwapIndices": {
+      "SwapIndex": [
+        {
+          "DiscountingIndex": "EUR-ESTER",
+          "Name": "EUR-CMS-1Y"
+        },
+        {
+          "DiscountingIndex": "EUR-ESTER",
+          "Name": "EUR-CMS-30Y"
+        },
+        {
+          "DiscountingIndex": "USD-SOFR",
+          "Name": "USD-CMS-1Y"
+        },
+        {
+          "DiscountingIndex": "USD-SOFR",
+          "Name": "USD-CMS-30Y"
+        }
+      ]
+    },
+    "SwaptionVolatilities": {
+      "Currencies": {
+        "Currency": [
+          "EUR",
+          "USD"
+        ]
+      },
+      "Expiries": "1Y,5Y,7Y",
+      "ReactionToTimeDecay": "ForwardVariance",
+      "Simulate": false,
+      "SimulateATMOnly": true,
+      "Terms": "5Y,10Y"
+    },
+    "YieldCurves": {
+      "Configuration": [
+        {
+          "Extrapolation": true,
+          "Interpolation": "LogLinear",
+          "Tenors": "1Y,5Y"
+        },
+        {
+          "_attributes": {
+            "curve": "BOND_YIELD_EUR"
+          },
+          "Tenors": "5Y,10Y",
+          "Interpolation": "LogLinear",
+          "Extrapolation": true
+        }
+      ]
+    },
+    "Securities": {
+      "Simulate": false,
+      "Names": {
+        "Name": [
+          "SECURITY_2",
+          "SECURITY_3",
+          "SECURITY_4",
+          "SECURITY_5"
+        ]
+      }
+    },
+    "AggregationScenarioDataCurrencies": {
+      "Currency": [
+        "EUR",
+        "USD"
+      ]
+    },
+    "AggregationScenarioDataIndices": {
+      "Index": [
+        "EUR-EONIA",
+        "EUR-ESTER",
+        "EUR-EURIBOR-12M",
+        "EUR-EURIBOR-1M",
+        "EUR-EURIBOR-3M",
+        "EUR-EURIBOR-6M",
+        "USD-FedFunds",
+        "USD-LIBOR-1M",
+        "USD-LIBOR-3M",
+        "USD-LIBOR-6M",
+        "USD-SOFR"
+      ]
+    },
+    "AggregationScenarioDataSurvivalWeights": {
+      "Name": [
+        "CPTY_A"
+      ]
+    },
+    "DefaultCurves": {
+      "Names": {
+        "Name": [
+          "CPTY_A",
+          "BANK"
+        ]
+      },
+      "Tenors": "1Y,2Y,3Y,5Y,10Y",
+      "SimulateSurvivalProbabilities": true,
+      "SimulateRecoveryRates": false,
+      "Calendars": {
+        "Calendar": "TARGET"
+      },
+      "Extrapolation": "FlatZero"
+    },
+    "AggregationScenarioDataCommodities": {
+      "Name": [
+        "COMDTY_WTI_USD"
+      ]
+    }
+  }
+}

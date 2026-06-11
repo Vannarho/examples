@@ -1,0 +1,1013 @@
+{
+  "schemaVersion": "1.0.0",
+  "seedVersion": "1.0.0",
+  "publishedAt": "examples/vre_python/notebooks/example_11/input/vre_sacva_fd_aad_eqcom.toml",
+  "contentHash": "ae756afc6a40d6fb458a420ad8451432313e135d69622e03fbd5ba6f50793084",
+  "sourceLineage": {
+    "runtimePath": "examples/vre_python/notebooks/example_11/input_bundle/vre_sacva_fd_aad_eqcom/runtime_policy/simulation_runtime.toml",
+    "profilePath": "examples/vre_python/notebooks/example_11/input_bundle/vre_sacva_fd_aad_eqcom/runtime_policy/xam_profile.yaml",
+    "correlationsPath": "examples/vre_python/notebooks/example_11/input_bundle/vre_sacva_fd_aad_eqcom/runtime_policy/xam_correlation_set.json",
+    "generator": "tools/ci/publish_simulation_contracts.py",
+    "traceabilityRefs": {
+      "runtime": {
+        "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+        "epic": "docs/architecture/scope_runtime_migration.yaml",
+        "sourceXml": "vre_python/notebooks/example_11/input/sacva_fd_eqcom/simulation.xml",
+        "spec": "docs/architecture/scope_runtime_migration.yaml"
+      },
+      "profile": {
+        "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+        "epic": "docs/architecture/scope_runtime_migration.yaml",
+        "sourceXml": "vre_python/notebooks/example_11/input/sacva_fd_eqcom/simulation.xml",
+        "spec": "docs/architecture/scope_runtime_migration.yaml"
+      },
+      "correlations": {
+        "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+        "epic": "docs/architecture/scope_runtime_migration.yaml",
+        "sourceXml": "vre_python/notebooks/example_11/input/sacva_fd_eqcom/simulation.xml",
+        "spec": "docs/architecture/scope_runtime_migration.yaml"
+      },
+      "market": {
+        "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+        "epic": "docs/architecture/scope_runtime_migration.yaml",
+        "sourceXml": "vre_python/notebooks/example_11/input/sacva_fd_eqcom/simulation.xml",
+        "spec": "docs/architecture/scope_runtime_migration.yaml"
+      }
+    },
+    "marketPath": "examples/vre_python/notebooks/example_11/input_bundle/vre_sacva_fd_aad_eqcom/runtime_policy/scenario_market_profile.json"
+  },
+  "simulationRuntime": {
+    "schemaVersion": "1.0.0",
+    "seedVersion": "1.0.0",
+    "traceabilityRefs": {
+      "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+      "epic": "docs/architecture/scope_runtime_migration.yaml",
+      "sourceXml": "vre_python/notebooks/example_11/input/sacva_fd_eqcom/simulation.xml",
+      "spec": "docs/architecture/scope_runtime_migration.yaml"
+    },
+    "grid": "60,1M",
+    "calendar": "EUR,USD,GBP,CHF",
+    "dayCounter": "A365F",
+    "sequence": "SobolBrownianBridge",
+    "scenarioGenerator": "Simple",
+    "seed": 42,
+    "samples": 1000,
+    "ordering": "Steps",
+    "directionIntegers": "JoeKuoD7"
+  },
+  "crossAssetModelProfile": {
+    "schemaVersion": "1.0.0",
+    "seedVersion": "1.0.0",
+    "traceabilityRefs": {
+      "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+      "epic": "docs/architecture/scope_runtime_migration.yaml",
+      "sourceXml": "vre_python/notebooks/example_11/input/sacva_fd_eqcom/simulation.xml",
+      "spec": "docs/architecture/scope_runtime_migration.yaml"
+    },
+    "domesticCurrency": "EUR",
+    "factors": {
+      "currencies": [
+        "EUR",
+        "USD"
+      ],
+      "equities": [
+        "SP5"
+      ],
+      "inflationIndices": [],
+      "creditNames": [
+        "BANK",
+        "CPTY_A"
+      ],
+      "commodities": [
+        "COMDTY_WTI_USD"
+      ]
+    },
+    "bootstrapTolerance": 0.0001,
+    "integration": {
+      "discretization": "Euler",
+      "salvagingAlgorithm": "None",
+      "piecewise": true
+    },
+    "modelBlocks": {
+      "interestRate": [
+        {
+          "modelType": "LGM",
+          "key": "default",
+          "parameters": {
+            "CalibrationSwaptions": {
+              "Expiries": "1Y,  2Y,  4Y,  6Y,  8Y, 10Y, 12Y, 14Y, 16Y, 18Y, 19Y",
+              "Strikes": "",
+              "Terms": "19Y, 18Y, 16Y, 14Y, 12Y, 10Y,  8Y,  6Y,  4Y,  2Y,  1Y"
+            },
+            "CalibrationType": "Bootstrap",
+            "ParameterTransformation": {
+              "Scaling": 1.0,
+              "ShiftHorizon": 0.0
+            },
+            "Reversion": {
+              "Calibrate": false,
+              "InitialValue": 0.03,
+              "ParamType": "Constant",
+              "ReversionType": "HullWhite",
+              "TimeGrid": ""
+            },
+            "Volatility": {
+              "Calibrate": true,
+              "InitialValue": "0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01",
+              "ParamType": "Piecewise",
+              "TimeGrid": "1.0, 2.0, 3.0, 4.0, 5.0, 7.0, 10.0",
+              "VolatilityType": "Hagan"
+            }
+          }
+        },
+        {
+          "modelType": "LGM",
+          "key": "EUR",
+          "parameters": {
+            "CalibrationSwaptions": {
+              "Expiries": "1Y,  2Y,  4Y,  6Y,  8Y, 10Y, 12Y, 14Y, 16Y, 18Y, 19Y",
+              "Strikes": "",
+              "Terms": "19Y, 18Y, 16Y, 14Y, 12Y, 10Y,  8Y,  6Y,  4Y,  2Y,  1Y"
+            },
+            "CalibrationType": "Bootstrap",
+            "ParameterTransformation": {
+              "Scaling": 1.0,
+              "ShiftHorizon": 0.0
+            },
+            "Reversion": {
+              "Calibrate": false,
+              "InitialValue": 0.03,
+              "ParamType": "Constant",
+              "ReversionType": "HullWhite",
+              "TimeGrid": ""
+            },
+            "Volatility": {
+              "Calibrate": true,
+              "InitialValue": "0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01",
+              "ParamType": "Piecewise",
+              "TimeGrid": "1.0, 2.0, 3.0, 4.0, 5.0, 7.0, 10.0",
+              "VolatilityType": "Hagan"
+            }
+          }
+        }
+      ],
+      "foreignExchange": [
+        {
+          "modelType": "CrossCcyLGM",
+          "key": "default",
+          "parameters": {
+            "CalibrationOptions": {
+              "Expiries": "1Y, 2Y, 3Y, 4Y, 5Y, 10Y",
+              "Strikes": ""
+            },
+            "CalibrationType": "Bootstrap",
+            "DomesticCcy": "EUR",
+            "Sigma": {
+              "Calibrate": true,
+              "InitialValue": "0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1",
+              "ParamType": "Piecewise",
+              "TimeGrid": "1.0, 2.0, 3.0, 4.0, 5.0, 7.0, 10.0"
+            }
+          }
+        },
+        {
+          "modelType": "CrossCcyLGM",
+          "key": "USD",
+          "parameters": {
+            "CalibrationOptions": {
+              "Expiries": "1Y, 2Y, 3Y, 4Y, 5Y, 10Y",
+              "Strikes": ""
+            },
+            "CalibrationType": "Bootstrap",
+            "DomesticCcy": "EUR",
+            "Sigma": {
+              "Calibrate": true,
+              "InitialValue": "0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1",
+              "ParamType": "Piecewise",
+              "TimeGrid": "1.0, 2.0, 3.0, 4.0, 5.0, 7.0, 10.0"
+            }
+          }
+        }
+      ],
+      "equity": [
+        {
+          "modelType": "CrossAssetLGM",
+          "key": "default",
+          "parameters": {
+            "CalibrationOptions": {
+              "Expiries": "1Y, 2Y, 3Y, 4Y, 5Y, 10Y",
+              "Strikes": ""
+            },
+            "CalibrationType": "Bootstrap",
+            "Currency": "EUR",
+            "Sigma": {
+              "Calibrate": true,
+              "InitialValue": "0.1, 0.1, 0.1, 0.1, 0.1, 0.1,  0.1, 0.1",
+              "ParamType": "Piecewise",
+              "TimeGrid": "1.0, 2.0, 3.0, 4.0, 5.0, 7.0, 10.0"
+            }
+          }
+        },
+        {
+          "modelType": "CrossAssetLGM",
+          "key": "SP5",
+          "parameters": {
+            "CalibrationOptions": {
+              "Expiries": "6M, 5Y, 10Y",
+              "Strikes": ""
+            },
+            "CalibrationType": "Bootstrap",
+            "Currency": "USD",
+            "Sigma": {
+              "Calibrate": true,
+              "InitialValue": "0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1",
+              "ParamType": "Piecewise",
+              "TimeGrid": "1.0, 2.0, 3.0, 4.0, 5.0, 7.0, 10.0"
+            }
+          }
+        }
+      ],
+      "inflation": [],
+      "credit": [
+        {
+          "modelType": "LGM",
+          "key": "default",
+          "parameters": {
+            "CalibrationCdsOptions": {
+              "Expiries": "1Y,2Y,4Y,6Y,8Y,10Y,12Y,14Y,16Y,18Y,19Y",
+              "Strikes": "",
+              "Terms": "19Y,18Y,16Y,14Y,12Y,10Y,8Y,6Y,4Y,2Y,1Y"
+            },
+            "CalibrationType": "None",
+            "ParameterTransformation": {
+              "Scaling": 1.0,
+              "ShiftHorizon": 0.0
+            },
+            "Reversion": {
+              "Calibrate": false,
+              "InitialValue": 0.03,
+              "ParamType": "Constant",
+              "ReversionType": "HullWhite",
+              "TimeGrid": ""
+            },
+            "Volatility": {
+              "Calibrate": false,
+              "InitialValue": "0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01",
+              "ParamType": "Constant",
+              "TimeGrid": "1.0,2.0,3.0,4.0,5.0,7.0,10.0",
+              "VolatilityType": "Hagan"
+            }
+          }
+        }
+      ],
+      "commodity": [
+        {
+          "modelType": "CommoditySchwartz",
+          "key": "COMDTY_WTI_USD",
+          "parameters": {
+            "CalibrationOptions": {
+              "Expiries": "1Y,5Y,10Y",
+              "Strikes": ""
+            },
+            "CalibrationType": "BestFit",
+            "Currency": "USD",
+            "DriftFreeState": true,
+            "Kappa": {
+              "Calibrate": false,
+              "InitialValue": 0.5
+            },
+            "Sigma": {
+              "Calibrate": true,
+              "InitialValue": 0.25
+            }
+          }
+        }
+      ]
+    },
+    "creditStates": {
+      "numberOfFactors": 2
+    }
+  },
+  "crossAssetModelCorrelations": {
+    "schemaVersion": "1.0.0",
+    "seedVersion": "1.0.0",
+    "traceabilityRefs": {
+      "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+      "epic": "docs/architecture/scope_runtime_migration.yaml",
+      "sourceXml": "vre_python/notebooks/example_11/input/sacva_fd_eqcom/simulation.xml",
+      "spec": "docs/architecture/scope_runtime_migration.yaml"
+    },
+    "correlations": [
+      {
+        "factor1": {
+          "type": "IR",
+          "name": "EUR"
+        },
+        "factor2": {
+          "type": "IR",
+          "name": "USD"
+        },
+        "value": 0.3
+      },
+      {
+        "factor1": {
+          "type": "IR",
+          "name": "EUR"
+        },
+        "factor2": {
+          "type": "FX",
+          "name": "EURUSD"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "IR",
+          "name": "USD"
+        },
+        "factor2": {
+          "type": "FX",
+          "name": "EURUSD"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "COM",
+          "name": "WTI_USD"
+        },
+        "factor2": {
+          "type": "FX",
+          "name": "EURUSD"
+        },
+        "value": -0.2
+      },
+      {
+        "factor1": {
+          "type": "COM",
+          "name": "WTI_USD"
+        },
+        "factor2": {
+          "type": "IR",
+          "name": "USD"
+        },
+        "value": 0.1
+      },
+      {
+        "factor1": {
+          "type": "IR",
+          "name": "EUR"
+        },
+        "factor2": {
+          "type": "FX",
+          "name": "USDEUR"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "IR",
+          "name": "USD"
+        },
+        "factor2": {
+          "type": "FX",
+          "name": "USDEUR"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "FX",
+          "name": "EURUSD"
+        },
+        "factor2": {
+          "type": "FX",
+          "name": "USDEUR"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "COM",
+          "name": "COMDTY_WTI_USD"
+        },
+        "factor2": {
+          "type": "EQ",
+          "name": "SP5"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "COM",
+          "name": "COMDTY_WTI_USD"
+        },
+        "factor2": {
+          "type": "IR",
+          "name": "EUR"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "COM",
+          "name": "COMDTY_WTI_USD"
+        },
+        "factor2": {
+          "type": "IR",
+          "name": "USD"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "EQ",
+          "name": "SP5"
+        },
+        "factor2": {
+          "type": "IR",
+          "name": "EUR"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "EQ",
+          "name": "SP5"
+        },
+        "factor2": {
+          "type": "IR",
+          "name": "USD"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "FX",
+          "name": "EURUSD"
+        },
+        "factor2": {
+          "type": "COM",
+          "name": "COMDTY_WTI_USD"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "FX",
+          "name": "EURUSD"
+        },
+        "factor2": {
+          "type": "EQ",
+          "name": "SP5"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "FX",
+          "name": "USDEUR"
+        },
+        "factor2": {
+          "type": "COM",
+          "name": "COMDTY_WTI_USD"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "FX",
+          "name": "USDEUR"
+        },
+        "factor2": {
+          "type": "EQ",
+          "name": "SP5"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "FX",
+          "name": "EURUSD"
+        },
+        "factor2": {
+          "type": "CR",
+          "name": "BANK"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "FX",
+          "name": "EURUSD"
+        },
+        "factor2": {
+          "type": "CR",
+          "name": "CPTY_A"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "FX",
+          "name": "USDEUR"
+        },
+        "factor2": {
+          "type": "CR",
+          "name": "BANK"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "FX",
+          "name": "USDEUR"
+        },
+        "factor2": {
+          "type": "CR",
+          "name": "CPTY_A"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "COM",
+          "name": "COMDTY_WTI_USD"
+        },
+        "factor2": {
+          "type": "CR",
+          "name": "BANK"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "COM",
+          "name": "COMDTY_WTI_USD"
+        },
+        "factor2": {
+          "type": "CR",
+          "name": "CPTY_A"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "CR",
+          "name": "BANK"
+        },
+        "factor2": {
+          "type": "CR",
+          "name": "CPTY_A"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "CR",
+          "name": "BANK"
+        },
+        "factor2": {
+          "type": "EQ",
+          "name": "SP5"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "CR",
+          "name": "BANK"
+        },
+        "factor2": {
+          "type": "IR",
+          "name": "EUR"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "CR",
+          "name": "BANK"
+        },
+        "factor2": {
+          "type": "IR",
+          "name": "USD"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "CR",
+          "name": "CPTY_A"
+        },
+        "factor2": {
+          "type": "EQ",
+          "name": "SP5"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "CR",
+          "name": "CPTY_A"
+        },
+        "factor2": {
+          "type": "IR",
+          "name": "EUR"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "CR",
+          "name": "CPTY_A"
+        },
+        "factor2": {
+          "type": "IR",
+          "name": "USD"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "FX",
+          "name": "EURUSD"
+        },
+        "factor2": {
+          "type": "CrState",
+          "name": "0"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "FX",
+          "name": "EURUSD"
+        },
+        "factor2": {
+          "type": "CrState",
+          "name": "1"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "FX",
+          "name": "USDEUR"
+        },
+        "factor2": {
+          "type": "CrState",
+          "name": "0"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "FX",
+          "name": "USDEUR"
+        },
+        "factor2": {
+          "type": "CrState",
+          "name": "1"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "COM",
+          "name": "COMDTY_WTI_USD"
+        },
+        "factor2": {
+          "type": "CrState",
+          "name": "0"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "COM",
+          "name": "COMDTY_WTI_USD"
+        },
+        "factor2": {
+          "type": "CrState",
+          "name": "1"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "CR",
+          "name": "BANK"
+        },
+        "factor2": {
+          "type": "CrState",
+          "name": "0"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "CR",
+          "name": "BANK"
+        },
+        "factor2": {
+          "type": "CrState",
+          "name": "1"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "CR",
+          "name": "CPTY_A"
+        },
+        "factor2": {
+          "type": "CrState",
+          "name": "0"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "CR",
+          "name": "CPTY_A"
+        },
+        "factor2": {
+          "type": "CrState",
+          "name": "1"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "CrState",
+          "name": "0"
+        },
+        "factor2": {
+          "type": "CrState",
+          "name": "1"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "CrState",
+          "name": "0"
+        },
+        "factor2": {
+          "type": "EQ",
+          "name": "SP5"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "CrState",
+          "name": "0"
+        },
+        "factor2": {
+          "type": "IR",
+          "name": "EUR"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "CrState",
+          "name": "0"
+        },
+        "factor2": {
+          "type": "IR",
+          "name": "USD"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "CrState",
+          "name": "1"
+        },
+        "factor2": {
+          "type": "EQ",
+          "name": "SP5"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "CrState",
+          "name": "1"
+        },
+        "factor2": {
+          "type": "IR",
+          "name": "EUR"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "CrState",
+          "name": "1"
+        },
+        "factor2": {
+          "type": "IR",
+          "name": "USD"
+        },
+        "value": 0.0
+      }
+    ]
+  },
+  "scenarioMarketProfile": {
+    "schemaVersion": "1.0.0",
+    "seedVersion": "1.0.0",
+    "traceabilityRefs": {
+      "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+      "epic": "docs/architecture/scope_runtime_migration.yaml",
+      "sourceXml": "vre_python/notebooks/example_11/input/sacva_fd_eqcom/simulation.xml",
+      "spec": "docs/architecture/scope_runtime_migration.yaml"
+    },
+    "marketDefinitionText": "<Market>\n\n    <BaseCurrency>EUR</BaseCurrency>\n\n    <Currencies>\n      <Currency>EUR</Currency>\n      <Currency>USD</Currency>\n    </Currencies>\n\n    <YieldCurves>\n      <Configuration>\n        <Tenors>1Y,5Y</Tenors>\n        <Interpolation>LogLinear</Interpolation>\n        <Extrapolation>Y</Extrapolation>\n      </Configuration>\n    </YieldCurves>\n\n    <Indices><Index>EUR-EONIA</Index><Index>EUR-ESTER</Index><Index>EUR-EURIBOR-12M</Index><Index>EUR-EURIBOR-1M</Index><Index>EUR-EURIBOR-3M</Index><Index>EUR-EURIBOR-6M</Index><Index>USD-FedFunds</Index><Index>USD-LIBOR-1M</Index><Index>USD-LIBOR-3M</Index><Index>USD-LIBOR-6M</Index><Index>USD-SOFR</Index></Indices>\n<FxRates><CurrencyPairs><CurrencyPair>EURUSD</CurrencyPair><CurrencyPair>USDEUR</CurrencyPair></CurrencyPairs></FxRates>\n\n    \n    <SwapIndices><SwapIndex><Name>EUR-CMS-1Y</Name><DiscountingIndex>EUR-ESTER</DiscountingIndex></SwapIndex><SwapIndex><Name>EUR-CMS-30Y</Name><DiscountingIndex>EUR-ESTER</DiscountingIndex></SwapIndex><SwapIndex><Name>USD-CMS-1Y</Name><DiscountingIndex>USD-SOFR</DiscountingIndex></SwapIndex><SwapIndex><Name>USD-CMS-30Y</Name><DiscountingIndex>USD-SOFR</DiscountingIndex></SwapIndex></SwapIndices>\n\n    <FxVolatilities><Simulate>false</Simulate><CurrencyPairs><CurrencyPair>USDEUR</CurrencyPair></CurrencyPairs><ReactionToTimeDecay>ForwardVariance</ReactionToTimeDecay><Expiries>6M,1Y,5Y,10Y</Expiries><Surface><StandardDeviations>0.0</StandardDeviations></Surface></FxVolatilities>\n\n    <SwaptionVolatilities>\n      <Simulate>false</Simulate>\n      <Currencies>\n        <Currency>EUR</Currency>\n        <Currency>USD</Currency>\n      </Currencies>\n      <ReactionToTimeDecay>ForwardVariance</ReactionToTimeDecay>\n      <Expiries>1Y,2Y,3Y,4Y,5Y,7Y,10Y,12Y,15Y,20Y,30Y</Expiries>\n      <Terms>1Y,2Y,3Y,4Y,5Y,7Y,10Y,12Y,15Y,20Y,30Y</Terms>\n      <SimulateATMOnly>true</SimulateATMOnly>\n    </SwaptionVolatilities>\n\n    <Equities>\n      <SimulateDividendYield>false</SimulateDividendYield>\n      <Names>\n        <Name>SP5</Name>\n      </Names>\n      <DividendTenors>6M,1Y,2Y</DividendTenors>\n    </Equities>\n\n    <EquityVolatilities>\n      <Simulate>true</Simulate>\n      <ReactionToTimeDecay>ForwardVariance</ReactionToTimeDecay>\n      <Names>\n        <Name>SP5</Name>\n      </Names>\n      <Expiries>6M,5Y,10Y</Expiries>\n    </EquityVolatilities>\n\n    <Commodities>\n      <Simulate>true</Simulate>\n      <Names>\n        <Name>COMDTY_WTI_USD</Name>\n      </Names>\n      <Tenors>0D,1Y,5Y,10Y</Tenors>\n    </Commodities>\n    <CommodityVolatilities>\n      <Simulate>true</Simulate>\n      <ReactionToTimeDecay>ForwardForward</ReactionToTimeDecay>\n      <Names>\n        <Name id=\"COMDTY_WTI_USD\">\n          <Expiries>1Y,5Y,10Y</Expiries>\n          <Moneyness>0.0,1.0</Moneyness>\n        </Name>\n      </Names>\n    </CommodityVolatilities>\n\n  \n    <Securities><Simulate>false</Simulate></Securities>\n    <Securities>\n      <Simulate>false</Simulate>\n      <Names>\n      <Name>SECURITY_2</Name>\n      <Name>SECURITY_3</Name>\n      <Name>SECURITY_4</Name>\n      <Name>SECURITY_5</Name>\n      </Names>\n    </Securities>\n  \n    <AggregationScenarioDataCurrencies><Currency>EUR</Currency><Currency>USD</Currency></AggregationScenarioDataCurrencies>\n    <AggregationScenarioDataIndices><Index>EUR-EONIA</Index><Index>EUR-ESTER</Index><Index>EUR-EURIBOR-12M</Index><Index>EUR-EURIBOR-1M</Index><Index>EUR-EURIBOR-3M</Index><Index>EUR-EURIBOR-6M</Index><Index>USD-FedFunds</Index><Index>USD-LIBOR-1M</Index><Index>USD-LIBOR-3M</Index><Index>USD-LIBOR-6M</Index><Index>USD-SOFR</Index></AggregationScenarioDataIndices></Market>\n\n",
+    "marketDefinition": {
+      "BaseCurrency": "EUR",
+      "Commodities": {
+        "Names": {
+          "Name": "COMDTY_WTI_USD"
+        },
+        "Simulate": true,
+        "Tenors": "0D,1Y,5Y,10Y"
+      },
+      "CommodityVolatilities": {
+        "Names": {
+          "Name": {
+            "Expiries": "1Y,5Y,10Y",
+            "Moneyness": "0.0,1.0",
+            "_attributes": {
+              "id": "COMDTY_WTI_USD"
+            }
+          }
+        },
+        "ReactionToTimeDecay": "ForwardForward",
+        "Simulate": true
+      },
+      "Currencies": {
+        "Currency": [
+          "EUR",
+          "USD"
+        ]
+      },
+      "Equities": {
+        "DividendTenors": "6M,1Y,2Y",
+        "Names": {
+          "Name": "SP5"
+        },
+        "SimulateDividendYield": false
+      },
+      "EquityVolatilities": {
+        "Expiries": "6M,5Y,10Y",
+        "Names": {
+          "Name": "SP5"
+        },
+        "ReactionToTimeDecay": "ForwardVariance",
+        "Simulate": true
+      },
+      "FxRates": {
+        "CurrencyPairs": {
+          "CurrencyPair": [
+            "EURUSD",
+            "USDEUR"
+          ]
+        },
+        "Simulate": true
+      },
+      "FxVolatilities": {
+        "CurrencyPairs": {
+          "CurrencyPair": "USDEUR"
+        },
+        "Expiries": "6M,1Y,5Y,10Y",
+        "ReactionToTimeDecay": "ForwardVariance",
+        "Simulate": false,
+        "Surface": {
+          "StandardDeviations": "0.0"
+        }
+      },
+      "Indices": {
+        "Index": [
+          "EUR-EONIA",
+          "EUR-ESTER",
+          "EUR-EURIBOR-12M",
+          "EUR-EURIBOR-1M",
+          "EUR-EURIBOR-3M",
+          "EUR-EURIBOR-6M",
+          "USD-FedFunds",
+          "USD-LIBOR-1M",
+          "USD-LIBOR-3M",
+          "USD-LIBOR-6M",
+          "USD-SOFR"
+        ]
+      },
+      "SwapIndices": {
+        "SwapIndex": [
+          {
+            "DiscountingIndex": "EUR-ESTER",
+            "Name": "EUR-CMS-1Y"
+          },
+          {
+            "DiscountingIndex": "EUR-ESTER",
+            "Name": "EUR-CMS-30Y"
+          },
+          {
+            "DiscountingIndex": "USD-SOFR",
+            "Name": "USD-CMS-1Y"
+          },
+          {
+            "DiscountingIndex": "USD-SOFR",
+            "Name": "USD-CMS-30Y"
+          }
+        ]
+      },
+      "SwaptionVolatilities": {
+        "Currencies": {
+          "Currency": [
+            "EUR",
+            "USD"
+          ]
+        },
+        "Expiries": "1Y,2Y,3Y,4Y,5Y,7Y,10Y,12Y,15Y,20Y,30Y",
+        "ReactionToTimeDecay": "ForwardVariance",
+        "Simulate": false,
+        "SimulateATMOnly": true,
+        "Terms": "1Y,2Y,3Y,4Y,5Y,7Y,10Y,12Y,15Y,20Y,30Y"
+      },
+      "YieldCurves": {
+        "Configuration": [
+          {
+            "Extrapolation": true,
+            "Interpolation": "LogLinear",
+            "Tenors": "1Y,5Y"
+          },
+          {
+            "_attributes": {
+              "curve": "BOND_YIELD_EUR"
+            },
+            "Tenors": "5Y,10Y",
+            "Interpolation": "LogLinear",
+            "Extrapolation": true
+          }
+        ]
+      },
+      "Securities": {
+        "Simulate": false,
+        "Names": {
+          "Name": [
+            "SECURITY_2",
+            "SECURITY_3",
+            "SECURITY_4",
+            "SECURITY_5"
+          ]
+        }
+      },
+      "AggregationScenarioDataCurrencies": {
+        "Currency": [
+          "EUR",
+          "USD"
+        ]
+      },
+      "AggregationScenarioDataIndices": {
+        "Index": [
+          "EUR-EONIA",
+          "EUR-ESTER",
+          "EUR-EURIBOR-12M",
+          "EUR-EURIBOR-1M",
+          "EUR-EURIBOR-3M",
+          "EUR-EURIBOR-6M",
+          "USD-FedFunds",
+          "USD-LIBOR-1M",
+          "USD-LIBOR-3M",
+          "USD-LIBOR-6M",
+          "USD-SOFR"
+        ]
+      },
+      "AggregationScenarioDataSurvivalWeights": {
+        "Name": [
+          "BANK",
+          "CPTY_A"
+        ]
+      },
+      "DefaultCurves": {
+        "Names": {
+          "Name": [
+            "BANK",
+            "CPTY_A"
+          ]
+        },
+        "Tenors": "6M,1Y,2Y,3Y,5Y,10Y",
+        "SimulateSurvivalProbabilities": true,
+        "SimulateRecoveryRates": false,
+        "Calendars": {
+          "Calendar": "TARGET"
+        },
+        "Extrapolation": "FlatZero"
+      }
+    }
+  }
+}

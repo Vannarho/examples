@@ -1,0 +1,53 @@
+[setup]
+asofDate = "2019-02-25"
+baseCurrency = "USD"
+inputPath = "input_bundle/8_3__vre_pnl"
+outputPath = "Output/8_3/pnl"
+logFile = "log.txt"
+logMask = "15"
+marketDataFile = "market.txt"
+fixingDataFile = "fixings.txt"
+implyTodaysFixings = "Y"
+fixingCutoff = "2019-03-11"
+curveConfigFile = "runtime_policy/resolved_curve_configuration.json"
+conventionsFile = "reference_registry/convention_manifest.json"
+marketConfigFile = "runtime_policy/resolved_todays_market.json"
+pricingEnginesFile = "runtime_policy/pricingengine/resolved_pricing_policy.json"
+portfolioFile = "portfolio.xml"
+observationModel = "None"
+continueOnError = "false"
+
+[markets]
+lgmcalibration = "inccy"
+fxcalibration = "default"
+infcalibration = "inccy"
+pricing = "default"
+simulation = "default"
+sensitivity = "default"
+
+[analytics]
+[analytics.npv]
+active = "Y"
+baseCurrency = "USD"
+outputFileName = "npv.csv"
+additionalResults = "Y"
+
+[analytics.cashflow]
+active = "Y"
+outputFileName = "flows.csv"
+
+[analytics.curves]
+active = "Y"
+configuration = "default"
+grid = "240,1M"
+outputFileName = "curves.csv"
+
+[analytics.pnl]
+active = "Y"
+mporDays = "10"
+mporCalendar = "US"
+curveConfigMporFile = "runtime_policy/resolved_curve_configuration.json"
+conventionsMporFile = "reference_registry/convention_manifest.json"
+portfolioMporFile = "mporportfolio.xml"
+simulationConfigFile = "runtime_policy/resolved_simulation.json"
+outputFileName = "pnl.csv"

@@ -1,0 +1,63 @@
+version: 1.0.0
+traceabilityRefs:
+  adr: docs/architecture/adr/0001-serialization-and-storage-format-standards.md
+  epic: docs/architecture/scope_runtime_migration.yaml
+  spec: docs/architecture/scope_runtime_migration.yaml
+  sourceXml: vre_python/notebooks/example_5/input/simulation.xml
+domesticCurrency: USD
+factors:
+  currencies:
+  - USD
+  - EUR
+  equities: []
+  inflationIndices: []
+  creditNames: []
+  commodities: []
+bootstrapTolerance: 0.0001
+integration:
+  discretization: Exact
+  salvagingAlgorithm: None
+  piecewise: true
+modelBlocks:
+  interestRate:
+  - modelType: LGM
+    key: default
+    parameters:
+      CalibrationType: Bootstrap
+      Volatility:
+        Calibrate: true
+        VolatilityType: Hagan
+        ParamType: Piecewise
+        TimeGrid: 1.0, 2.0, 3.0, 4.0, 5.0, 7.0, 10.0
+        InitialValue: 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01
+      Reversion:
+        Calibrate: false
+        ReversionType: HullWhite
+        ParamType: Constant
+        TimeGrid: ''
+        InitialValue: 0.005
+      CalibrationSwaptions:
+        Expiries: 1Y,  2Y,  4Y,  6Y,  8Y, 10Y, 12Y, 14Y, 16Y, 18Y, 19Y
+        Terms: 19Y, 18Y, 16Y, 14Y, 12Y, 10Y,  8Y,  6Y,  4Y,  2Y,  1Y
+        Strikes: ''
+      ParameterTransformation:
+        ShiftHorizon: 0.0
+        Scaling: 1.0
+  foreignExchange:
+  - modelType: CrossCcyLGM
+    key: default
+    parameters:
+      DomesticCcy: USD
+      CalibrationType: Bootstrap
+      Sigma:
+        Calibrate: true
+        ParamType: Piecewise
+        TimeGrid: 1.0, 2.0, 3.0, 4.0, 5.0, 7.0, 10.0
+        InitialValue: 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1
+      CalibrationOptions:
+        Expiries: 2W, 1M, 3M, 6M, 1Y, 2Y, 3Y, 4Y, 5Y, 10Y
+        Strikes: ''
+  equity: []
+  inflation: []
+  credit: []
+  commodity: []

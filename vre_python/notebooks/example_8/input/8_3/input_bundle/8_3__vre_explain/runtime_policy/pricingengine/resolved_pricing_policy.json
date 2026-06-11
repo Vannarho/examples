@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "1.0.0",
+  "seedVersion": "1.0.0",
+  "publishedAt": "examples/vre_python/notebooks/example_8/input/8_3/vre_explain.toml",
+  "contentHash": "c76716764a1fdd308eeb11057a5f817cbedd5a5c7696d92d55eb57cf0f4c3b1f",
+  "sourceLineage": {
+    "runtimePath": "examples/vre_python/notebooks/example_8/input_bundle/8_3__vre_explain/runtime_policy/pricing_runtime_pricingengine.toml",
+    "policyPath": "examples/vre_python/notebooks/example_8/input_bundle/8_3__vre_explain/runtime_policy/pricing_policy_pricingengine.yaml",
+    "generator": "tools/ci/publish_pricing_engine_contracts.py"
+  },
+  "pricingRuntime": {
+    "profileId": "pricingengine",
+    "allowedOverrides": []
+  },
+  "pricingPolicy": {
+    "profileId": "pricingengine",
+    "globalParameters": {},
+    "products": [
+      {
+        "productType": "MyInstrument",
+        "model": {
+          "name": "Deterministic",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "MyInstrumentEngine",
+          "parameters": {}
+        }
+      },
+      {
+        "productType": "Swap",
+        "model": {
+          "name": "DiscountedCashflows",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "DiscountingSwapEngine",
+          "parameters": {}
+        }
+      },
+      {
+        "productType": "ScriptedTrade",
+        "model": {
+          "name": "Generic",
+          "parameters": {
+            "BaseCcy": "USD",
+            "EnforceBaseCcy": "false",
+            "FullDynamicFx": "true",
+            "FullDynamicIr": "true",
+            "GridCoarsening": "3M(1W),1Y(1M),5Y(3M),10Y(1Y),50Y(5Y)",
+            "IrReversion_USD": "0.01",
+            "Model": "GaussianCam"
+          }
+        },
+        "engine": {
+          "name": "Generic",
+          "parameters": {
+            "BootstrapTolerance": "1.0",
+            "Engine": "MC",
+            "Interactive": "false",
+            "RegressionOrder": "6",
+            "Samples": "10000",
+            "TimeStepsPerYear": "24"
+          }
+        }
+      }
+    ]
+  }
+}

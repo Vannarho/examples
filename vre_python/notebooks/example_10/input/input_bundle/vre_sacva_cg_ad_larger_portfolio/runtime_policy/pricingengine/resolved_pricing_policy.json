@@ -1,0 +1,100 @@
+{
+  "schemaVersion": "1.0.0",
+  "seedVersion": "1.0.0",
+  "publishedAt": "examples/vre_python/notebooks/example_10/input/vre_sacva_cg_ad_larger_portfolio.toml",
+  "contentHash": "18cd87670f56a6f429de91542eddbf4d4617bae7cdd94c3658b3aaece4ccaf83",
+  "sourceLineage": {
+    "runtimePath": "examples/vre_python/notebooks/example_10/input_bundle/vre_sacva_cg_ad_larger_portfolio/runtime_policy/pricing_runtime_pricingengine.toml",
+    "policyPath": "examples/vre_python/notebooks/example_10/input_bundle/vre_sacva_cg_ad_larger_portfolio/runtime_policy/pricing_policy_pricingengine.yaml",
+    "generator": "tools/ci/publish_pricing_engine_contracts.py"
+  },
+  "pricingRuntime": {
+    "profileId": "pricingengine",
+    "allowedOverrides": []
+  },
+  "pricingPolicy": {
+    "profileId": "pricingengine",
+    "globalParameters": {
+      "ContinueOnCalibrationError": "true"
+    },
+    "products": [
+      {
+        "productType": "EquityForward",
+        "model": {
+          "name": "DiscountedCashflows",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "DiscountingEquityForwardEngine",
+          "parameters": {}
+        }
+      },
+      {
+        "productType": "Swap",
+        "model": {
+          "name": "DiscountedCashflows",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "DiscountingSwapEngine",
+          "parameters": {}
+        }
+      },
+      {
+        "productType": "EquityOption",
+        "model": {
+          "name": "BlackScholesMerton",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "AnalyticEuropeanEngine",
+          "parameters": {}
+        }
+      },
+      {
+        "productType": "EquityBarrierOption",
+        "model": {
+          "name": "BlackScholesMerton",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "AnalyticBarrierEngine",
+          "parameters": {}
+        }
+      },
+      {
+        "productType": "ScriptedTrade",
+        "model": {
+          "name": "Generic",
+          "parameters": {
+            "BaseCcy": "EUR",
+            "EnforceBaseCcy": "false",
+            "FullDynamicFx": "true",
+            "FullDynamicIr": "true",
+            "GridCoarsening": "3M(1W),1Y(1M),5Y(3M),10Y(1Y),50Y(5Y)",
+            "InfModelType": "JY",
+            "IrReversion_EUR": "0.01",
+            "IrReversion_GBP": "0.01",
+            "IrReversion_HKD": "0.01",
+            "IrReversion_USD": "0.01",
+            "Model": "GaussianCam"
+          }
+        },
+        "engine": {
+          "name": "Generic",
+          "parameters": {
+            "BootstrapTolerance": "1.0",
+            "Engine": "MC",
+            "Interactive": "false",
+            "RegressionOrder": "4",
+            "Samples": "8192",
+            "TimeStepsPerYear": "24",
+            "UseAD": "false",
+            "UseCG": "false",
+            "ZeroVolatility": "false"
+          }
+        }
+      }
+    ]
+  }
+}

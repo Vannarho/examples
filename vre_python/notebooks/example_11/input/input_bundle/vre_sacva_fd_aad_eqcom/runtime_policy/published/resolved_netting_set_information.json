@@ -1,0 +1,118 @@
+{
+  "schemaVersion": "1.0.0",
+  "publishedAt": "examples/vre_python/notebooks/example_11/input/vre_sacva_fd_aad_eqcom.toml",
+  "contentHash": "f1ed82e99f87ed5ffaab6583d7ee8b696355e7e7953ef51b9caef539bb649f4c",
+  "sourceLineage": {
+    "nettingAgreementMaster": "examples/vre_python/notebooks/example_11/input_bundle/vre_sacva_fd_aad_eqcom/runtime_policy/netting_agreement_master.json",
+    "csaTerms": "examples/vre_python/notebooks/example_11/input_bundle/vre_sacva_fd_aad_eqcom/runtime_policy/csa_terms.json",
+    "clearingAndRegulatoryProfile": "examples/vre_python/notebooks/example_11/input_bundle/vre_sacva_fd_aad_eqcom/runtime_policy/clearing_and_regulatory_profile.json",
+    "collateralBalance": "examples/vre_python/notebooks/example_11/input_bundle/vre_sacva_fd_aad_eqcom/runtime_policy/collateral_balance.json"
+  },
+  "nettingSets": [
+    {
+      "nettingSetId": "CPTY_A",
+      "legalEntityId": "LE_VREPY_NOTEBOOK",
+      "immApproved": true,
+      "immScopeProducts": "OTC_DERIVATIVES",
+      "ccrMethod": "IMM",
+      "ccrMethodScope": "OTC_DERIVATIVES",
+      "ccrExposureType": "TRADE",
+      "activeCsa": false,
+      "csaTerms": {
+        "bilateralType": "Bilateral",
+        "csaCurrency": "EUR",
+        "index": "EUR-EONIA",
+        "marginPeriodOfRisk": "0W",
+        "thresholdPay": 100000.0,
+        "thresholdReceive": 100000.0,
+        "minimumTransferAmountPay": 0.0,
+        "minimumTransferAmountReceive": 0.0,
+        "collateralCompoundingSpreadReceive": 0.0,
+        "collateralCompoundingSpreadPay": 0.0,
+        "marginingFrequency": {
+          "call": "1D",
+          "post": "1D"
+        },
+        "independentAmount": {
+          "held": 0.0,
+          "type": "FIXED"
+        },
+        "eligibleCollaterals": {
+          "currencies": [
+            "EUR"
+          ]
+        }
+      }
+    },
+    {
+      "nettingSetId": "CPTY_B",
+      "legalEntityId": "LE_VREPY_NOTEBOOK",
+      "immApproved": true,
+      "immScopeProducts": "OTC_DERIVATIVES",
+      "ccrMethod": "IMM",
+      "ccrMethodScope": "OTC_DERIVATIVES",
+      "ccrExposureType": "TRADE",
+      "activeCsa": true,
+      "csaTerms": {
+        "bilateralType": "Bilateral",
+        "csaCurrency": "EUR",
+        "index": "EUR-EONIA",
+        "marginPeriodOfRisk": "2W",
+        "thresholdPay": 0.0,
+        "thresholdReceive": 0.0,
+        "minimumTransferAmountPay": 5000000.0,
+        "minimumTransferAmountReceive": 5000000.0,
+        "collateralCompoundingSpreadReceive": 0.0,
+        "collateralCompoundingSpreadPay": 0.0,
+        "marginingFrequency": {
+          "call": "1D",
+          "post": "1D"
+        },
+        "independentAmount": {
+          "held": 0.0,
+          "type": "FIXED"
+        },
+        "eligibleCollaterals": {
+          "currencies": [
+            "EUR"
+          ]
+        }
+      }
+    },
+    {
+      "nettingSetId": "CPTY_C",
+      "legalEntityId": "LE_VREPY_NOTEBOOK",
+      "immApproved": true,
+      "immScopeProducts": "OTC_DERIVATIVES",
+      "ccrMethod": "IMM",
+      "ccrMethodScope": "OTC_DERIVATIVES",
+      "ccrExposureType": "TRADE",
+      "activeCsa": true,
+      "csaTerms": {
+        "bilateralType": "Bilateral",
+        "csaCurrency": "EUR",
+        "index": "EUR-EONIA",
+        "marginPeriodOfRisk": "2W",
+        "thresholdPay": 0.0,
+        "thresholdReceive": 0.0,
+        "minimumTransferAmountPay": 5000000.0,
+        "minimumTransferAmountReceive": 5000000.0,
+        "collateralCompoundingSpreadReceive": 0.0,
+        "collateralCompoundingSpreadPay": 0.0,
+        "marginingFrequency": {
+          "call": "1D",
+          "post": "1D"
+        },
+        "independentAmount": {
+          "held": 0.0,
+          "type": "FIXED"
+        },
+        "eligibleCollaterals": {
+          "currencies": [
+            "EUR"
+          ]
+        }
+      }
+    }
+  ]
+}

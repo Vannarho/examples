@@ -1,0 +1,106 @@
+version: 1.0.0
+profileId: pricingengine_amccg
+traceabilityRefs:
+  adr: docs/architecture/adr/0001-serialization-and-storage-format-standards.md
+  epic: docs/architecture/scope_runtime_migration.yaml
+  spec: docs/architecture/scope_runtime_migration.yaml
+  sourceXml: vre_python/notebooks/example_11/input/sacva_cg_eqcom/pricingengine_amccg.xml
+globalParameters: {}
+products:
+- productType: ScriptedTrade
+  model:
+    name: Generic
+    parameters:
+      Model: GaussianCam
+      BaseCcy: EUR
+      EnforceBaseCcy: 'false'
+      GridCoarsening: 3M(1W),1Y(1M),5Y(3M),10Y(1Y),50Y(5Y)
+      IrReversion_EUR: '0.01'
+      IrReversion_GBP: '0.01'
+      IrReversion_USD: '0.01'
+      IrReversion_HKD: '0.01'
+      FullDynamicFx: 'true'
+      FullDynamicIr: 'true'
+      InfModelType: JY
+      EquityCgUseDomesticMeasure: 'true'
+      EquityCgUseMidpoint: 'true'
+      CommodityCgUseDomesticMeasure: 'true'
+      EquityCgUseCompact: 'true'
+      EquityCgLambdaSweep: 1e-10,5e-10,1e-9,5e-9,1e-8,1e-7,1e-6
+      EquityCgDisableFxEqDrift: 'false'
+  engine:
+    name: Generic
+    parameters:
+      Engine: MC
+      Samples: '8192'
+      RegressionOrder: '4'
+      TimeStepsPerYear: '24'
+      Interactive: 'false'
+      BootstrapTolerance: '1.0'
+      ZeroVolatility: 'false'
+      UseCG: 'true'
+      CeOnlyAddReg: 'false'
+      AdCeFreezeBasis: 'true'
+- productType: Swap
+  model:
+    name: CrossAssetModel
+    parameters: {}
+  engine:
+    name: AMCCG
+    parameters: {}
+- productType: FxForward
+  model:
+    name: CrossAssetModel
+    parameters: {}
+  engine:
+    name: AMCCG
+    parameters: {}
+- productType: CrossCurrencySwap
+  model:
+    name: CrossAssetModel
+    parameters: {}
+  engine:
+    name: AMCCG
+    parameters: {}
+- productType: FxOption
+  model:
+    name: CrossAssetModel
+    parameters: {}
+  engine:
+    name: AMCCG
+    parameters: {}
+- productType: EquityForward
+  model:
+    name: DiscountedCashflows
+    parameters: {}
+  engine:
+    name: DiscountingEquityForwardEngine
+    parameters: {}
+- productType: EquityOption
+  model:
+    name: CrossAssetModel
+    parameters: {}
+  engine:
+    name: AMCCG
+    parameters: {}
+- productType: CommodityForward
+  model:
+    name: CrossAssetModel
+    parameters: {}
+  engine:
+    name: AMCCG
+    parameters: {}
+- productType: BermudanSwaption
+  model:
+    name: LGM
+    parameters: {}
+  engine:
+    name: AMCCG
+    parameters: {}
+- productType: MultiLegOption
+  model:
+    name: CrossAssetModel
+    parameters: {}
+  engine:
+    name: AMCCG
+    parameters: {}

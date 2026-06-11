@@ -1,0 +1,798 @@
+{
+  "schemaVersion": "1.0.0",
+  "seedVersion": "1.0.0",
+  "publishedAt": "examples/vre_python/notebooks/example_8/input/8_2/vre.toml",
+  "contentHash": "9d9e6abd41e03671e28f236711d7b15d67024a5c794ea26f1db828266112262a",
+  "sourceLineage": {
+    "runtimePath": "examples/vre_python/notebooks/example_8/input_bundle/8_2__vre/runtime_policy/pricing_runtime_pricingengine.toml",
+    "policyPath": "examples/vre_python/notebooks/example_8/input_bundle/8_2__vre/runtime_policy/pricing_policy_pricingengine.yaml",
+    "generator": "tools/ci/publish_pricing_engine_contracts.py"
+  },
+  "pricingRuntime": {
+    "profileId": "pricingengine",
+    "allowedOverrides": []
+  },
+  "pricingPolicy": {
+    "profileId": "pricingengine",
+    "globalParameters": {
+      "ContinueOnCalibrationError": "true",
+      "PseudoCurrency.BaseCurrency": "USD",
+      "PseudoCurrency.Curve.XAG": "PM:XAGUSD",
+      "PseudoCurrency.Curve.XAU": "PM:XAUUSD",
+      "PseudoCurrency.Curve.XPD": "PM:XPDUSD",
+      "PseudoCurrency.Curve.XPT": "PM:XPTUSD",
+      "PseudoCurrency.FXIndexTag": "GENERIC",
+      "PseudoCurrency.TreatAsFX": "false"
+    },
+    "products": [
+      {
+        "productType": "BondTRS",
+        "model": {
+          "name": "DiscountedCashflows",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "DiscountingBondTRSEngine",
+          "parameters": {
+            "TimestepPeriod": "6M"
+          }
+        }
+      },
+      {
+        "productType": "ForwardBond",
+        "model": {
+          "name": "DiscountedCashflows",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "DiscountingForwardBondEngine",
+          "parameters": {
+            "TimestepPeriod": "3M"
+          }
+        }
+      },
+      {
+        "productType": "Swap",
+        "model": {
+          "name": "DiscountedCashflows",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "DiscountingSwapEngine",
+          "parameters": {}
+        }
+      },
+      {
+        "productType": "CrossCurrencySwap",
+        "model": {
+          "name": "DiscountedCashflows",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "DiscountingCrossCurrencySwapEngine",
+          "parameters": {}
+        }
+      },
+      {
+        "productType": "FxForward",
+        "model": {
+          "name": "DiscountedCashflows",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "DiscountingFxForwardEngine",
+          "parameters": {}
+        }
+      },
+      {
+        "productType": "FxOption",
+        "model": {
+          "name": "GarmanKohlhagen",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "AnalyticEuropeanEngine",
+          "parameters": {}
+        }
+      },
+      {
+        "productType": "FxOptionAmerican",
+        "model": {
+          "name": "GarmanKohlhagen",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "FdBlackScholesVanillaEngine",
+          "parameters": {
+            "DampingSteps": "0",
+            "EnforceMonotoneVariance": "true",
+            "Scheme": "Douglas",
+            "TimeGridPerYear": "100",
+            "XGrid": "100"
+          }
+        }
+      },
+      {
+        "productType": "EuropeanSwaption",
+        "model": {
+          "name": "BlackBachelier",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "BlackBachelierSwaptionEngine",
+          "parameters": {}
+        }
+      },
+      {
+        "productType": "BermudanSwaption",
+        "model": {
+          "name": "LGM",
+          "parameters": {
+            "Calibration": "Bootstrap",
+            "CalibrationStrategy": "CoterminalATM",
+            "Reversion": "0.0",
+            "ReversionType": "HullWhite",
+            "ShiftHorizon": "0.5",
+            "Tolerance": "0.10",
+            "Volatility": "0.01",
+            "VolatilityType": "Hagan"
+          }
+        },
+        "engine": {
+          "name": "Grid",
+          "parameters": {
+            "nx": "10",
+            "ny": "10",
+            "sx": "3.0",
+            "sy": "3.0"
+          }
+        }
+      },
+      {
+        "productType": "CapFloor",
+        "model": {
+          "name": "IborCapModel",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "IborCapEngine",
+          "parameters": {}
+        }
+      },
+      {
+        "productType": "YYCapFloor",
+        "model": {
+          "name": "YYCapModel",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "YYCapEngine",
+          "parameters": {}
+        }
+      },
+      {
+        "productType": "CapFlooredIborLeg",
+        "model": {
+          "name": "BlackOrBachelier",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "BlackIborCouponPricer",
+          "parameters": {
+            "Correlation": "1.0",
+            "TimingAdjustment": "Black76"
+          }
+        }
+      },
+      {
+        "productType": "EquityForward",
+        "model": {
+          "name": "DiscountedCashflows",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "DiscountingEquityForwardEngine",
+          "parameters": {}
+        }
+      },
+      {
+        "productType": "EquityOption",
+        "model": {
+          "name": "BlackScholesMerton",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "AnalyticEuropeanEngine",
+          "parameters": {}
+        }
+      },
+      {
+        "productType": "QuantoEquityOption",
+        "model": {
+          "name": "BlackScholes",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "AnalyticEuropeanEngine",
+          "parameters": {}
+        }
+      },
+      {
+        "productType": "EquityOptionAmerican",
+        "model": {
+          "name": "BlackScholesMerton",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "FdBlackScholesVanillaEngine",
+          "parameters": {
+            "DampingSteps": "0",
+            "EnforceMonotoneVariance": "true",
+            "Scheme": "Douglas",
+            "TimeGridPerYear": "100",
+            "XGrid": "100"
+          }
+        }
+      },
+      {
+        "productType": "VarianceSwap",
+        "model": {
+          "name": "BlackScholesMerton",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "ReplicatingVarianceSwapEngine",
+          "parameters": {
+            "MoneynessStep": "0.05",
+            "NumberOfCalls": "8",
+            "NumberOfPuts": "11"
+          }
+        }
+      },
+      {
+        "productType": "Bond",
+        "model": {
+          "name": "DiscountedCashflows",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "DiscountingRiskyBondEngine",
+          "parameters": {
+            "TimestepPeriod": "6M"
+          }
+        }
+      },
+      {
+        "productType": "CreditDefaultSwap",
+        "model": {
+          "name": "DiscountedCashflows",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "MidPointCdsEngine",
+          "parameters": {}
+        }
+      },
+      {
+        "productType": "CMS",
+        "model": {
+          "name": "LinearTSR",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "LinearTSRPricer",
+          "parameters": {
+            "BsStdDev": "3.0",
+            "LowerRateBoundLogNormal": "0.0001",
+            "LowerRateBoundNormal": "-2.0000",
+            "MeanReversion": "0.0",
+            "Policy": "RateBound",
+            "PriceThreshold": "0.0000001",
+            "UpperRateBoundLogNormal": "2.0000",
+            "UpperRateBoundNormal": "2.0000",
+            "VegaRatio": "0.01"
+          }
+        }
+      },
+      {
+        "productType": "CMS_DEACTIVATED",
+        "model": {
+          "name": "Hagan",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "Analytic",
+          "parameters": {
+            "MeanReversion": "0.0",
+            "YieldCurveModel": "Standard"
+          }
+        }
+      },
+      {
+        "productType": "CMS_DEACTIVATED",
+        "model": {
+          "name": "Hagan",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "Numerical",
+          "parameters": {
+            "LowerLimit": "1.0",
+            "MeanReversion": "0.0",
+            "Precision": "0.000001",
+            "UpperLimit": "0.0",
+            "YieldCurveModel": "Standard"
+          }
+        }
+      },
+      {
+        "productType": "CMSSpread",
+        "model": {
+          "name": "BrigoMercurio",
+          "parameters": {
+            "Correlation_CHF": "0.7",
+            "Correlation_EUR": "0.8",
+            "Correlation_GBP": "0.72",
+            "Correlation_USD": "0.75"
+          }
+        },
+        "engine": {
+          "name": "Analytic",
+          "parameters": {
+            "IntegrationPoints": "16"
+          }
+        }
+      },
+      {
+        "productType": "CommodityForward",
+        "model": {
+          "name": "DiscountedCashflows",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "DiscountingCommodityForwardEngine",
+          "parameters": {}
+        }
+      },
+      {
+        "productType": "CommoditySwap",
+        "model": {
+          "name": "DiscountedCashflows",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "CommoditySwapEngine",
+          "parameters": {}
+        }
+      },
+      {
+        "productType": "CommoditySwaption",
+        "model": {
+          "name": "Black",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "AnalyticalApproximation",
+          "parameters": {
+            "beta": "2.25"
+          }
+        }
+      },
+      {
+        "productType": "CommodityOption",
+        "model": {
+          "name": "BlackScholes",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "AnalyticEuropeanEngine",
+          "parameters": {}
+        }
+      },
+      {
+        "productType": "CommodityAveragePriceOption",
+        "model": {
+          "name": "Black",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "AnalyticalApproximation",
+          "parameters": {
+            "beta": "0"
+          }
+        }
+      },
+      {
+        "productType": "IndexCreditDefaultSwap",
+        "model": {
+          "name": "DiscountedCashflows",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "MidPointIndexCdsEngine",
+          "parameters": {
+            "Curve": "Underlying"
+          }
+        }
+      },
+      {
+        "productType": "IndexCreditDefaultSwapOption",
+        "model": {
+          "name": "Black",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "BlackIndexCdsOptionEngine",
+          "parameters": {
+            "Curve": "Underlying"
+          }
+        }
+      },
+      {
+        "productType": "FlexiSwap",
+        "model": {
+          "name": "LGM",
+          "parameters": {
+            "Calibration": "Bootstrap",
+            "CalibrationStrategy": "CoterminalDealStrike",
+            "MinGapCalibrationExpiries": "80",
+            "Reversion": "0.0",
+            "ReversionType": "HullWhite",
+            "Tolerance": "0.02",
+            "Volatility": "0.01",
+            "VolatilityType": "HullWhite"
+          }
+        },
+        "engine": {
+          "name": "Grid",
+          "parameters": {
+            "method": "Automatic",
+            "nx": "30",
+            "ny": "30",
+            "singleSwaptionThreshold": "20.0",
+            "sx": "5.0",
+            "sy": "5.0"
+          }
+        }
+      },
+      {
+        "productType": "BalanceGuaranteedSwap",
+        "model": {
+          "name": "LGM-FlexiSwap",
+          "parameters": {
+            "Calibration": "Bootstrap",
+            "CalibrationStrategy": "CoterminalDealStrike",
+            "MaxCPRMultiplier": "2.0",
+            "MinCPRMultiplier": "0.0",
+            "MinGapCalibrationExpiries": "80",
+            "Reversion": "0.0",
+            "ReversionType": "HullWhite",
+            "Tolerance": "0.02",
+            "Volatility": "0.01",
+            "VolatilityType": "HullWhite"
+          }
+        },
+        "engine": {
+          "name": "Grid",
+          "parameters": {
+            "method": "Automatic",
+            "nx": "30",
+            "ny": "30",
+            "singleSwaptionThreshold": "20.0",
+            "sx": "5.0",
+            "sy": "5.0"
+          }
+        }
+      },
+      {
+        "productType": "SensiTrade",
+        "model": {
+          "name": "SensiTrade",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "SensiTradeEngine",
+          "parameters": {
+            "CapFloorStrikes": "0.01",
+            "SwaptionTenors": "1Y,2Y"
+          }
+        }
+      },
+      {
+        "productType": "SyntheticCDO",
+        "model": {
+          "name": "GaussCopula",
+          "parameters": {
+            "correlation": "0.0",
+            "max": "5.0",
+            "min": "-5.0",
+            "steps": "64"
+          }
+        },
+        "engine": {
+          "name": "Bucketing",
+          "parameters": {
+            "buckets": "124",
+            "homogeneousPoolWhenJustified": "Y"
+          }
+        }
+      },
+      {
+        "productType": "FormulaBasedCoupon",
+        "model": {
+          "name": "BrigoMercurio",
+          "parameters": {
+            "FXSource": "GENERIC"
+          }
+        },
+        "engine": {
+          "name": "MC",
+          "parameters": {
+            "SalvageCorrelationMatrix": "Y",
+            "Samples": "10000",
+            "Seed": "42",
+            "Sobol": "Y"
+          }
+        }
+      },
+      {
+        "productType": "FxVarianceSwap",
+        "model": {
+          "name": "BlackScholesMerton",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "ReplicatingVarianceSwapEngine",
+          "parameters": {
+            "MoneynessStep": "0.005",
+            "NumberOfCalls": "80",
+            "NumberOfPuts": "110",
+            "StrikePivotType": "Forward"
+          }
+        }
+      },
+      {
+        "productType": "EquityVarianceSwap",
+        "model": {
+          "name": "BlackScholesMerton",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "ReplicatingVarianceSwapEngine",
+          "parameters": {
+            "MoneynessStep": "0.005",
+            "NumberOfCalls": "80",
+            "NumberOfPuts": "110",
+            "StrikePivotType": "Forward"
+          }
+        }
+      },
+      {
+        "productType": "FxDigitalOption",
+        "model": {
+          "name": "GarmanKohlhagen",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "AnalyticEuropeanEngine",
+          "parameters": {}
+        }
+      },
+      {
+        "productType": "FxBarrierOption",
+        "model": {
+          "name": "GarmanKohlhagen",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "AnalyticBarrierEngine",
+          "parameters": {}
+        }
+      },
+      {
+        "productType": "FxDigitalBarrierOption",
+        "model": {
+          "name": "GarmanKohlhagen",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "FdBlackScholesBarrierEngine",
+          "parameters": {
+            "DampingSteps": "0",
+            "Scheme": "Douglas",
+            "TimeGridPerYear": "100",
+            "XGrid": "400"
+          }
+        }
+      },
+      {
+        "productType": "FxDoubleBarrierOption",
+        "model": {
+          "name": "GarmanKohlhagen",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "AnalyticDoubleBarrierEngine",
+          "parameters": {}
+        }
+      },
+      {
+        "productType": "FxDoubleTouchOption",
+        "model": {
+          "name": "GarmanKohlhagen",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "AnalyticDoubleBarrierBinaryEngine",
+          "parameters": {}
+        }
+      },
+      {
+        "productType": "FxTouchOption",
+        "model": {
+          "name": "GarmanKohlhagen",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "AnalyticDigitalAmericanEngine",
+          "parameters": {}
+        }
+      },
+      {
+        "productType": "CommodityForward",
+        "model": {
+          "name": "DiscountedCashflows",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "DiscountingCommodityForwardEngine",
+          "parameters": {}
+        }
+      },
+      {
+        "productType": "RiskParticipationAgreement_Vanilla",
+        "model": {
+          "name": "Black",
+          "parameters": {
+            "Reversion": "0.0"
+          }
+        },
+        "engine": {
+          "name": "Analytic",
+          "parameters": {
+            "AlwaysRecomputeOptionRepresentation": "false",
+            "MaxDiscretisationPoints": "20",
+            "MaxGapDays": "400"
+          }
+        }
+      },
+      {
+        "productType": "RiskParticipationAgreement_Structured",
+        "model": {
+          "name": "LGM",
+          "parameters": {
+            "Calibration": "Bootstrap",
+            "CalibrationStrategy": "CoterminalATM",
+            "MinGapCalibrationExpiries": "80",
+            "Reversion": "0.0",
+            "ReversionType": "HullWhite",
+            "ShiftHorizon": "0.5",
+            "Tolerance": "0.02",
+            "Volatility": "0.01",
+            "VolatilityType": "Hagan"
+          }
+        },
+        "engine": {
+          "name": "Grid",
+          "parameters": {
+            "MaxDiscretisationPoints": "20",
+            "MaxGapDays": "400",
+            "nx": "10",
+            "ny": "10",
+            "sx": "3.0",
+            "sy": "3.0"
+          }
+        }
+      },
+      {
+        "productType": "EquityAsianOptionArithmeticPrice",
+        "model": {
+          "name": "ScriptedTrade",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "ScriptedTrade",
+          "parameters": {}
+        }
+      },
+      {
+        "productType": "EquityAsianOptionArithmeticStrike",
+        "model": {
+          "name": "ScriptedTrade",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "ScriptedTrade",
+          "parameters": {}
+        }
+      },
+      {
+        "productType": "FxAsianOptionArithmeticPrice",
+        "model": {
+          "name": "ScriptedTrade",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "ScriptedTrade",
+          "parameters": {}
+        }
+      },
+      {
+        "productType": "FxAsianOptionArithmeticStrike",
+        "model": {
+          "name": "ScriptedTrade",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "ScriptedTrade",
+          "parameters": {}
+        }
+      },
+      {
+        "productType": "ScriptedTrade",
+        "model": {
+          "name": "Generic",
+          "parameters": {
+            "BaseCcy": "USD",
+            "Calibration": "Deal",
+            "EnforceBaseCcy": "false",
+            "FullDynamicFx": "true",
+            "FullDynamicIr": "true",
+            "GridCoarsening": "3M(1W),1Y(1M),5Y(3M),10Y(1Y),50Y(5Y)",
+            "IrReversion_EUR": "0.0",
+            "IrReversion_GBP": "0.0",
+            "IrReversion_JPY": "0.0",
+            "IrReversion_USD": "0.0",
+            "Model": "BlackScholes",
+            "Model_IrHybrid(COMM)": "GaussianCam",
+            "Model_IrHybrid(EQ)": "GaussianCam",
+            "Model_IrHybrid(FX)": "GaussianCam",
+            "Model_MultiUnderlyingIrOption": "GaussianCam",
+            "Model_SingleAssetOption(COMM)": "BlackScholes",
+            "Model_SingleAssetOption(EQ)": "BlackScholes",
+            "Model_SingleAssetOption(FX)": "BlackScholes",
+            "Model_SingleAssetOptionBwd(COMM)": "BlackScholes",
+            "Model_SingleAssetOptionBwd(EQ)": "BlackScholes",
+            "Model_SingleAssetOptionBwd(FX)": "BlackScholes",
+            "Model_SingleUnderlyingIrOption": "GaussianCam",
+            "ReferenceCalibrationGrid": "400,3M"
+          }
+        },
+        "engine": {
+          "name": "Generic",
+          "parameters": {
+            "BootstrapTolerance": "0.1",
+            "Engine": "MC",
+            "Engine_SingleAssetOptionBwd(COMM)": "FD",
+            "Engine_SingleAssetOptionBwd(EQ)": "FD",
+            "Engine_SingleAssetOptionBwd(FX)": "FD",
+            "Engine_SingleUnderlyingIrOption": "6",
+            "Interactive": "false",
+            "MesherConcentration": "0.1",
+            "MesherEpsilon": "1E-4",
+            "MesherIsStatic": "true",
+            "MesherMaxConcentratingPoints": "9999",
+            "MesherScaling": "1.5",
+            "RegressionOrder": "2",
+            "RegressionOrder_SingleAssetOption(COMM)": "6",
+            "RegressionOrder_SingleAssetOption(EQ)": "6",
+            "RegressionOrder_SingleAssetOption(FX)": "6",
+            "Samples": "10000",
+            "StateGridPoints": "200",
+            "TimeStepsPerYear": "24"
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "schemaVersion": "1.0.0",
+  "seedVersion": "1.0.0",
+  "traceabilityRefs": {
+    "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+    "epic": "docs/architecture/scope_runtime_migration.yaml",
+    "sourceXml": "vre_python/notebooks/example_4/input/simulation.xml",
+    "spec": "docs/architecture/scope_runtime_migration.yaml"
+  },
+  "domesticCurrency": "EUR",
+  "factors": {
+    "currencies": [
+      "EUR"
+    ],
+    "equities": [],
+    "inflationIndices": [],
+    "creditNames": [],
+    "commodities": []
+  },
+  "bootstrapTolerance": 0.0001,
+  "measure": "BA",
+  "integration": {
+    "discretization": "Euler",
+    "salvagingAlgorithm": "None",
+    "piecewise": true
+  },
+  "modelBlocks": {
+    "interestRate": [
+      {
+        "modelType": "HWModel",
+        "key": "default",
+        "parameters": {
+          "CalibrationType": "None",
+          "Reversion": {
+            "Calibrate": false,
+            "InitialValue": {
+              "Kappa": "-0.000000048673,-0.24532070948,-0.056427887126,0.510590372873"
+            },
+            "ParamType": "Constant",
+            "TimeGrid": ""
+          },
+          "Volatility": {
+            "Calibrate": false,
+            "InitialValue": {
+              "Sigma": {
+                "Row": [
+                  "0.002474873734151,0,0,0",
+                  "0,0,0.000706612189017,-0.00298902380928"
+                ]
+              }
+            },
+            "ParamType": "Constant",
+            "TimeGrid": ""
+          }
+        }
+      }
+    ],
+    "foreignExchange": [
+      {
+        "modelType": "CrossCcyLGM",
+        "key": "default",
+        "parameters": {
+          "CalibrationOptions": "",
+          "CalibrationType": "None",
+          "DomesticCcy": "EUR",
+          "Sigma": {
+            "Calibrate": false,
+            "InitialValue": 0.1,
+            "ParamType": "Constant",
+            "TimeGrid": ""
+          }
+        }
+      }
+    ],
+    "equity": [],
+    "inflation": [],
+    "credit": [],
+    "commodity": []
+  }
+}

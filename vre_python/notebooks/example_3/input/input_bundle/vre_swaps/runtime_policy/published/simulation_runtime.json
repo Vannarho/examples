@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "1.0.0",
+  "seedVersion": "1.0.0",
+  "traceabilityRefs": {
+    "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+    "epic": "docs/architecture/scope_runtime_migration.yaml",
+    "sourceXml": "vre_python/notebooks/example_3/input/simulation_multi.xml",
+    "spec": "docs/architecture/scope_runtime_migration.yaml"
+  },
+  "grid": "81,3M",
+  "calendar": "EUR,USD,GBP",
+  "sequence": "SobolBrownianBridge",
+  "scenarioGenerator": "Simple",
+  "seed": 42,
+  "samples": 200,
+  "ordering": "Steps",
+  "directionIntegers": "JoeKuoD7"
+}

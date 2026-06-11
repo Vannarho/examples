@@ -1,0 +1,6 @@
+ALERT    [2026-Jun-11 23:05:34.843606]  (...re_python/src/vred/log_submodule.cpp:43) : Alert Message
+CRITICAL [2026-Jun-11 23:05:34.844022]  (...re_python/src/vred/log_submodule.cpp:44) : Critical Message
+ERROR    [2026-Jun-11 23:05:34.844029]  (...re_python/src/vred/log_submodule.cpp:45) : Error Message
+DEBUG    [2026-Jun-11 23:05:34.844038]  (...re_python/src/vred/log_submodule.cpp:48) : This is a debug message.
+WARNING  [2026-Jun-11 23:05:34.844043]  (...re_python/src/vred/log_submodule.cpp:46) : This is a warning message.
+ERROR    [2026-Jun-11 23:05:34.844048]  (...re_python/src/vred/log_submodule.cpp:45) : This is an error message.

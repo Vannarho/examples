@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "1.0.0",
+  "seedVersion": "1.0.0",
+  "traceabilityRefs": {
+    "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+    "epic": "docs/architecture/scope_runtime_migration.yaml",
+    "sourceXml": "vre_python/notebooks/example_2/input/netting_dim.xml",
+    "spec": "docs/architecture/scope_runtime_migration.yaml"
+  },
+  "nettingSets": [
+    {
+      "nettingSetId": "CPTY_A",
+      "activeCsa": true,
+      "bilateralType": "Bilateral",
+      "csaCurrency": "EUR",
+      "index": "EUR-EONIA",
+      "marginPeriodOfRisk": "2W",
+      "thresholdPay": 0.0,
+      "thresholdReceive": 0.0,
+      "minimumTransferAmountPay": 0.0,
+      "minimumTransferAmountReceive": 0.0,
+      "collateralCompoundingSpreadReceive": 0.001,
+      "collateralCompoundingSpreadPay": 0.001,
+      "marginingFrequency": {
+        "call": "1D",
+        "post": "1D"
+      },
+      "independentAmount": {
+        "held": 0.0,
+        "type": "FIXED"
+      },
+      "eligibleCollaterals": {
+        "currencies": [
+          "EUR"
+        ]
+      }
+    },
+    {
+      "nettingSetId": "CPTY_B",
+      "activeCsa": true,
+      "bilateralType": "Bilateral",
+      "csaCurrency": "EUR",
+      "index": "EUR-EONIA",
+      "marginPeriodOfRisk": "2W",
+      "thresholdPay": 2000000.0,
+      "thresholdReceive": 2000000.0,
+      "minimumTransferAmountPay": 1000000.0,
+      "minimumTransferAmountReceive": 1000000.0,
+      "collateralCompoundingSpreadReceive": 0.0,
+      "collateralCompoundingSpreadPay": 0.0,
+      "marginingFrequency": {
+        "call": "1D",
+        "post": "1D"
+      },
+      "independentAmount": {
+        "held": 0.0,
+        "type": "FIXED"
+      },
+      "eligibleCollaterals": {
+        "currencies": [
+          "EUR"
+        ]
+      }
+    }
+  ]
+}

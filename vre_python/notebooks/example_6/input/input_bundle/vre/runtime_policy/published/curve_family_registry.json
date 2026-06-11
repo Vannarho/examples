@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "1.0.0",
+  "seedVersion": "1.0.0",
+  "traceabilityRefs": {
+    "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+    "epic": "docs/architecture/scope_runtime_migration.yaml",
+    "sourceXml": "vre_python/notebooks/example_6/input/curveconfig.xml",
+    "spec": "docs/architecture/scope_runtime_migration.yaml"
+  },
+  "setId": "curveconfig",
+  "families": [
+    {
+      "familyId": "default_curves",
+      "curveType": "DefaultCurve",
+      "xmlParent": "DefaultCurves",
+      "xmlTag": "DefaultCurve",
+      "description": "DefaultCurves"
+    },
+    {
+      "familyId": "fx_volatilities",
+      "curveType": "FXVolatility",
+      "xmlParent": "FXVolatilities",
+      "xmlTag": "FXVolatility",
+      "description": "FXVolatilities"
+    },
+    {
+      "familyId": "swaption_volatilities",
+      "curveType": "SwaptionVolatility",
+      "xmlParent": "SwaptionVolatilities",
+      "xmlTag": "SwaptionVolatility",
+      "description": "SwaptionVolatilities"
+    },
+    {
+      "familyId": "yield_curves",
+      "curveType": "YieldCurve",
+      "xmlParent": "YieldCurves",
+      "xmlTag": "YieldCurve",
+      "description": "YieldCurves"
+    }
+  ],
+  "reportDefaults": {}
+}

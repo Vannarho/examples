@@ -1,0 +1,152 @@
+{
+  "schemaVersion": "1.0.0",
+  "seedVersion": "1.0.0",
+  "publishedAt": "examples/vre_python/notebooks/example_3/input/vre_amc.toml",
+  "contentHash": "ba9678a3d645078bf91fefdc9a1fe772425c870af7ddc9bc97d4b4f19f0b0107",
+  "sourceLineage": {
+    "seedPath": "examples/vre_python/notebooks/example_3/input_bundle/vre_amc/runtime_policy/calendar_adjustments.yaml",
+    "generator": "tools/ci/publish_calendar_adjustment_contracts.py",
+    "traceabilityRefs": {
+      "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+      "epic": "docs/architecture/scope_runtime_migration.yaml",
+      "sourceXml": "vre_python/notebooks/example_3/input/calendaradjustment.xml",
+      "spec": "docs/architecture/scope_runtime_migration.yaml"
+    }
+  },
+  "calendars": [
+    {
+      "name": "CHF",
+      "additionalHolidays": [
+        "2019-12-24",
+        "2019-12-31",
+        "2020-12-24",
+        "2020-12-31"
+      ],
+      "additionalBusinessDays": [],
+      "versionedId": "CHF::1.0.0"
+    },
+    {
+      "name": "CNH",
+      "additionalHolidays": [
+        "2019-02-04",
+        "2019-02-05",
+        "2019-02-06",
+        "2019-02-07",
+        "2019-02-08",
+        "2019-04-05",
+        "2019-05-01",
+        "2019-05-02",
+        "2019-05-03",
+        "2019-06-07",
+        "2019-09-13",
+        "2019-10-01",
+        "2019-10-02",
+        "2019-10-03",
+        "2019-10-04",
+        "2019-10-07",
+        "2020-01-24",
+        "2020-01-27",
+        "2020-01-28",
+        "2020-01-29",
+        "2020-01-30",
+        "2020-04-06",
+        "2020-05-01",
+        "2020-06-25",
+        "2020-06-26",
+        "2020-10-01",
+        "2020-10-02",
+        "2020-10-05",
+        "2020-10-06",
+        "2020-10-07"
+      ],
+      "additionalBusinessDays": [],
+      "versionedId": "CNH::1.0.0"
+    },
+    {
+      "name": "DKK",
+      "additionalHolidays": [
+        "2019-05-31",
+        "2019-12-24",
+        "2019-12-31",
+        "2020-05-22",
+        "2020-12-24",
+        "2020-12-31"
+      ],
+      "additionalBusinessDays": [],
+      "versionedId": "DKK::1.0.0"
+    },
+    {
+      "name": "FRA",
+      "additionalHolidays": [],
+      "additionalBusinessDays": [
+        "2019-06-20"
+      ],
+      "versionedId": "FRA::1.0.0"
+    },
+    {
+      "name": "ITL",
+      "additionalHolidays": [
+        "2019-04-19",
+        "2020-04-10"
+      ],
+      "additionalBusinessDays": [],
+      "versionedId": "ITL::1.0.0"
+    },
+    {
+      "name": "Japan",
+      "additionalHolidays": [
+        "2019-04-30",
+        "2019-05-01",
+        "2019-05-02",
+        "2019-10-22",
+        "2020-02-24",
+        "2020-07-23",
+        "2020-07-24",
+        "2020-08-10"
+      ],
+      "additionalBusinessDays": [
+        "2019-12-23",
+        "2020-07-20",
+        "2020-08-11",
+        "2020-10-12",
+        "2020-12-23"
+      ],
+      "versionedId": "Japan::1.0.0"
+    },
+    {
+      "name": "NZD",
+      "additionalHolidays": [
+        "2019-01-28",
+        "2020-01-27",
+        "2020-04-27"
+      ],
+      "additionalBusinessDays": [],
+      "versionedId": "NZD::1.0.0"
+    },
+    {
+      "name": "SEK",
+      "additionalHolidays": [
+        "2019-06-06"
+      ],
+      "additionalBusinessDays": [],
+      "versionedId": "SEK::1.0.0"
+    },
+    {
+      "name": "SGD",
+      "additionalHolidays": [
+        "2019-02-05",
+        "2019-02-06",
+        "2019-05-20",
+        "2019-06-05",
+        "2019-08-12",
+        "2019-10-28",
+        "2020-01-27",
+        "2020-05-07",
+        "2020-05-25",
+        "2020-07-31"
+      ],
+      "additionalBusinessDays": [],
+      "versionedId": "SGD::1.0.0"
+    }
+  ]
+}

@@ -1,0 +1,576 @@
+version: 1.0.0
+traceabilityRefs:
+  adr: docs/architecture/adr/0001-serialization-and-storage-format-standards.md
+  epic: docs/architecture/scope_runtime_migration.yaml
+  spec: docs/architecture/scope_runtime_migration.yaml
+  sourceXml: vre_python/notebooks/example_8/input/8_2/conventions.xml
+cds:
+- id: CDS-STANDARD-CONVENTIONS
+  terms:
+    SettlementDays: 0
+    Calendar: WeekendsOnly
+    Frequency: Quarterly
+    PaymentConvention: Following
+    Rule: CDS2015
+    DayCounter: A360
+    SettlesAccrual: true
+    PaysAtDefaultTime: true
+fra:
+- id: DKK-3M-FRA
+  terms:
+    Index: DKK-CIBOR-3M
+- id: DKK-6M-FRA
+  terms:
+    Index: DKK-CIBOR-6M
+- id: EUR-3M-FRA
+  terms:
+    Index: EUR-EURIBOR-3M
+- id: EUR-6M-FRA
+  terms:
+    Index: EUR-EURIBOR-6M
+- id: JPY-3M-FRA
+  terms:
+    Index: JPY-LIBOR-3M
+- id: JPY-6M-FRA
+  terms:
+    Index: JPY-LIBOR-6M
+- id: NOK-3M-FRA
+  terms:
+    Index: NOK-NIBOR-3M
+- id: NOK-6M-FRA
+  terms:
+    Index: NOK-NIBOR-6M
+- id: SEK-3M-FRA
+  terms:
+    Index: SEK-STIBOR-3M
+- id: USD-3M-FRA
+  terms:
+    Index: USD-LIBOR-3M
+- id: USD-6M-FRA
+  terms:
+    Index: USD-LIBOR-6M
+tenor_basis_swap:
+- id: DKK-CIBOR-3M-6M-BASIS
+  terms:
+    PayIndex: DKK-CIBOR-6M
+    ReceiveIndex: DKK-CIBOR-3M
+- id: JPY-LIBOR-3M-6M-BASIS
+  terms:
+    PayIndex: JPY-LIBOR-6M
+    ReceiveIndex: JPY-LIBOR-3M
+- id: NOK-NIBOR-3M-6M-BASIS
+  terms:
+    PayIndex: NOK-NIBOR-6M
+    ReceiveIndex: NOK-NIBOR-3M
+- id: USD-LIBOR-3M-6M-BASIS
+  terms:
+    PayIndex: USD-LIBOR-6M
+    ReceiveIndex: USD-LIBOR-3M
+    ReceiveFrequency: 6M
+    SpreadOnRec: true
+    IncludeSpread: false
+    SubPeriodsCouponType: Compounding
+swap:
+- id: DKK-CIBOR-3M-SWAP
+  terms:
+    FixedCalendar: DEN
+    FixedFrequency: Annual
+    FixedConvention: MF
+    FixedDayCounter: 30/360
+    Index: DKK-CIBOR-3M
+- id: DKK-CIBOR-6M-SWAP
+  terms:
+    FixedCalendar: DEN
+    FixedFrequency: Annual
+    FixedConvention: MF
+    FixedDayCounter: 30/360
+    Index: DKK-CIBOR-6M
+- id: DKK-SWAP
+  terms:
+    FixedCalendar: DEN
+    FixedFrequency: Annual
+    FixedConvention: MF
+    FixedDayCounter: 30/360
+    Index: DKK-CIBOR-6M
+- id: EUR-EURIBOR-3M-SWAP
+  terms:
+    FixedCalendar: TARGET
+    FixedFrequency: Annual
+    FixedConvention: MF
+    FixedDayCounter: 30/360
+    Index: EUR-EURIBOR-3M
+- id: EUR-EURIBOR-6M-SWAP
+  terms:
+    FixedCalendar: TARGET
+    FixedFrequency: Annual
+    FixedConvention: MF
+    FixedDayCounter: 30/360
+    Index: EUR-EURIBOR-6M
+- id: EUR-SWAP
+  terms:
+    FixedCalendar: TARGET
+    FixedFrequency: Annual
+    FixedConvention: MF
+    FixedDayCounter: 30/360
+    Index: EUR-EURIBOR-6M
+- id: JPY-LIBOR-3M-SWAP
+  terms:
+    FixedCalendar: JP,UK
+    FixedFrequency: Semiannual
+    FixedConvention: MF
+    FixedDayCounter: A365
+    Index: JPY-LIBOR-3M
+- id: JPY-LIBOR-6M-SWAP
+  terms:
+    FixedCalendar: JP,UK
+    FixedFrequency: Semiannual
+    FixedConvention: MF
+    FixedDayCounter: A365
+    Index: JPY-LIBOR-6M
+- id: JPY-SWAP
+  terms:
+    FixedCalendar: JP,UK
+    FixedFrequency: Semiannual
+    FixedConvention: MF
+    FixedDayCounter: A365
+    Index: JPY-LIBOR-6M
+- id: NOK-NIBOR-3M-SWAP
+  terms:
+    FixedCalendar: NOK
+    FixedFrequency: Annual
+    FixedConvention: MF
+    FixedDayCounter: 30/360
+    Index: NOK-NIBOR-3M
+- id: NOK-NIBOR-6M-SWAP
+  terms:
+    FixedCalendar: NOK
+    FixedFrequency: Annual
+    FixedConvention: MF
+    FixedDayCounter: 30/360
+    Index: NOK-NIBOR-6M
+- id: NOK-SWAP
+  terms:
+    FixedCalendar: NOK
+    FixedFrequency: Annual
+    FixedConvention: MF
+    FixedDayCounter: 30/360
+    Index: NOK-NIBOR-6M
+- id: SEK-STIBOR-3M-SWAP
+  terms:
+    FixedCalendar: SS
+    FixedFrequency: Annual
+    FixedConvention: MF
+    FixedDayCounter: 30/360
+    Index: SEK-STIBOR-3M
+- id: SEK-SWAP
+  terms:
+    FixedCalendar: SS
+    FixedFrequency: Annual
+    FixedConvention: MF
+    FixedDayCounter: 30/360
+    Index: SEK-STIBOR-3M
+- id: TWD-SWAP
+  terms:
+    FixedCalendar: TWD
+    FixedFrequency: Quarterly
+    FixedConvention: MF
+    FixedDayCounter: A365
+    Index: TWD-TAIBOR-3M
+- id: TWD-TAIBOR-3M-SWAP
+  terms:
+    FixedCalendar: TWD
+    FixedFrequency: Quarterly
+    FixedConvention: MF
+    FixedDayCounter: A365
+    Index: TWD-TAIBOR-3M
+- id: USD-LIBOR-3M-SWAP
+  terms:
+    FixedCalendar: US,UK
+    FixedFrequency: Semiannual
+    FixedConvention: MF
+    FixedDayCounter: 30/360
+    Index: USD-LIBOR-3M
+- id: USD-SWAP
+  terms:
+    FixedCalendar: US,UK
+    FixedFrequency: Semiannual
+    FixedConvention: MF
+    FixedDayCounter: 30/360
+    Index: USD-LIBOR-3M
+deposit:
+- id: DKK-DEPOSIT
+  terms:
+    IndexBased: true
+    Index: DKK-CIBOR
+- id: DKK-ON-DEPOSIT
+  terms:
+    IndexBased: true
+    Index: DKK-DKKOIS
+- id: EUR-DEPOSIT
+  terms:
+    IndexBased: true
+    Index: EUR-EURIBOR
+- id: EUR-ON-DEPOSIT
+  terms:
+    IndexBased: true
+    Index: EUR-EONIA
+- id: JPY-DEPOSIT
+  terms:
+    IndexBased: true
+    Index: JPY-LIBOR
+- id: JPY-ON-DEPOSIT
+  terms:
+    IndexBased: true
+    Index: JPY-TONAR
+- id: NOK-DEPOSIT
+  terms:
+    IndexBased: true
+    Index: NOK-NIBOR
+- id: NOK-ON-DEPOSIT
+  terms:
+    IndexBased: true
+    Index: NOK-NOWA
+- id: SEK-DEPOSIT
+  terms:
+    IndexBased: true
+    Index: SEK-STIBOR
+- id: SEK-ON-DEPOSIT
+  terms:
+    IndexBased: true
+    Index: SEK-SIOR
+- id: TWD-DEPOSIT
+  terms:
+    IndexBased: true
+    Index: TWD-TAIBOR
+- id: USD-DEPOSIT
+  terms:
+    IndexBased: true
+    Index: USD-LIBOR
+- id: USD-ON-DEPOSIT
+  terms:
+    IndexBased: true
+    Index: USD-FedFunds
+ois:
+- id: DKK-OIS
+  terms:
+    SpotLag: 2
+    Index: DKK-DKKOIS
+    FixedDayCounter: A360
+    PaymentLag: 0
+    EOM: false
+    FixedFrequency: Annual
+    FixedConvention: Following
+    FixedPaymentConvention: Following
+    Rule: Backward
+- id: EUR-OIS
+  terms:
+    SpotLag: 2
+    Index: EUR-EONIA
+    FixedDayCounter: A360
+    PaymentLag: 1
+    EOM: false
+    FixedFrequency: Annual
+    FixedConvention: Following
+    FixedPaymentConvention: Following
+    Rule: Backward
+- id: JPY-OIS
+  terms:
+    SpotLag: 2
+    Index: JPY-TONAR
+    FixedDayCounter: A360
+    PaymentLag: 1
+    EOM: false
+    FixedFrequency: Annual
+    FixedConvention: Following
+    FixedPaymentConvention: Following
+    Rule: Backward
+- id: NOK-OIS
+  terms:
+    SpotLag: 2
+    Index: NOK-NOWA
+    FixedDayCounter: A360
+    PaymentLag: 1
+    EOM: false
+    FixedFrequency: Annual
+    FixedConvention: Following
+    FixedPaymentConvention: Following
+    Rule: Backward
+- id: SEK-OIS
+  terms:
+    SpotLag: 2
+    Index: SEK-SIOR
+    FixedDayCounter: A360
+    PaymentLag: 0
+    EOM: false
+    FixedFrequency: Annual
+    FixedConvention: Following
+    FixedPaymentConvention: Following
+    Rule: Backward
+- id: USD-OIS
+  terms:
+    SpotLag: 2
+    Index: USD-FedFunds
+    FixedDayCounter: A360
+    PaymentLag: 2
+    EOM: false
+    FixedFrequency: Annual
+    FixedConvention: Following
+    FixedPaymentConvention: Following
+    Rule: Backward
+inflation_swap:
+- id: EUHICPXT_INFLATIONSWAP
+  terms:
+    FixCalendar: TARGET
+    FixConvention: MF
+    DayCounter: 30/360
+    Index: EUHICPXT
+    Interpolated: false
+    ObservationLag: 3M
+    AdjustInflationObservationDates: false
+    InflationCalendar: TARGET
+    InflationConvention: MF
+cross_currency_basis:
+- id: EUR-DKK-XCCY-BASIS
+  terms:
+    SettlementDays: 2
+    SettlementCalendar: TARGET,DKK
+    RollConvention: MF
+    FlatIndex: EUR-EURIBOR-3M
+    SpreadIndex: DKK-CIBOR-3M
+    IsResettable: true
+    FlatIndexIsResettable: true
+- id: EUR-JPY-XCCY-BASIS
+  terms:
+    SettlementDays: 2
+    SettlementCalendar: TARGET,JPY
+    RollConvention: MF
+    FlatIndex: EUR-EURIBOR-3M
+    SpreadIndex: JPY-LIBOR-3M
+    IsResettable: true
+    FlatIndexIsResettable: true
+- id: EUR-NOK-XCCY-BASIS
+  terms:
+    SettlementDays: 2
+    SettlementCalendar: TARGET,NOK
+    RollConvention: MF
+    FlatIndex: EUR-EURIBOR-3M
+    SpreadIndex: NOK-NIBOR-3M
+    IsResettable: true
+    FlatIndexIsResettable: true
+- id: EUR-SEK-XCCY-BASIS
+  terms:
+    SettlementDays: 2
+    SettlementCalendar: TARGET,SEK
+    RollConvention: MF
+    FlatIndex: EUR-EURIBOR-3M
+    SpreadIndex: SEK-STIBOR-3M
+    IsResettable: true
+    FlatIndexIsResettable: true
+- id: EUR-TWD-XCCY-BASIS
+  terms:
+    SettlementDays: 2
+    SettlementCalendar: TARGET,TWD
+    RollConvention: MF
+    FlatIndex: EUR-EURIBOR-3M
+    SpreadIndex: TWD-TAIBOR-3M
+    IsResettable: true
+    FlatIndexIsResettable: true
+- id: EUR-USD-XCCY-BASIS
+  terms:
+    SettlementDays: 2
+    SettlementCalendar: TARGET,US,UK
+    RollConvention: MF
+    FlatIndex: USD-LIBOR-3M
+    SpreadIndex: EUR-EURIBOR-3M
+    IsResettable: true
+    FlatIndexIsResettable: true
+- id: USD-DKK-XCCY-BASIS
+  terms:
+    SettlementDays: 2
+    SettlementCalendar: DKK,US,UK
+    RollConvention: MF
+    FlatIndex: USD-LIBOR-3M
+    SpreadIndex: DKK-CIBOR-3M
+    IsResettable: true
+    FlatIndexIsResettable: true
+- id: USD-JPY-XCCY-BASIS
+  terms:
+    SettlementDays: 2
+    SettlementCalendar: JP,US,UK
+    RollConvention: MF
+    FlatIndex: USD-LIBOR-3M
+    SpreadIndex: JPY-LIBOR-3M
+    IsResettable: true
+    FlatIndexIsResettable: true
+- id: USD-NOK-XCCY-BASIS
+  terms:
+    SettlementDays: 2
+    SettlementCalendar: NOK,US,UK
+    RollConvention: MF
+    FlatIndex: USD-LIBOR-3M
+    SpreadIndex: NOK-NIBOR-3M
+    IsResettable: true
+    FlatIndexIsResettable: true
+- id: USD-SEK-XCCY-BASIS
+  terms:
+    SettlementDays: 2
+    SettlementCalendar: SEK,US,UK
+    RollConvention: MF
+    FlatIndex: USD-LIBOR-3M
+    SpreadIndex: SEK-STIBOR-3M
+    IsResettable: true
+    FlatIndexIsResettable: true
+- id: USD-TWD-XCCY-BASIS
+  terms:
+    SettlementDays: 2
+    SettlementCalendar: TWD,US,UK
+    RollConvention: MF
+    FlatIndex: USD-LIBOR-3M
+    SpreadIndex: TWD-TAIBOR-3M
+    IsResettable: true
+    FlatIndexIsResettable: true
+fx:
+- id: EUR-USD-FX
+  terms:
+    SpotDays: 2
+    SourceCurrency: EUR
+    TargetCurrency: USD
+    PointsFactor: 10000
+    AdvanceCalendar: TARGET,US
+    SpotRelative: true
+- id: USD-DKK-FX
+  terms:
+    SpotDays: 2
+    SourceCurrency: USD
+    TargetCurrency: DKK
+    PointsFactor: 10000
+    AdvanceCalendar: US,DKK
+    SpotRelative: true
+- id: USD-JPY-FX
+  terms:
+    SpotDays: 2
+    SourceCurrency: USD
+    TargetCurrency: JPY
+    PointsFactor: 100
+    AdvanceCalendar: US,JP
+    SpotRelative: true
+- id: USD-NOK-FX
+  terms:
+    SpotDays: 2
+    SourceCurrency: USD
+    TargetCurrency: NOK
+    PointsFactor: 10000
+    AdvanceCalendar: US,NOK
+    SpotRelative: true
+- id: USD-SEK-FX
+  terms:
+    SpotDays: 2
+    SourceCurrency: USD
+    TargetCurrency: SEK
+    PointsFactor: 10000
+    AdvanceCalendar: US,SEK
+    SpotRelative: true
+- id: USD-TWD-FX
+  terms:
+    SpotDays: 2
+    SourceCurrency: USD
+    TargetCurrency: TWD
+    PointsFactor: 1
+    AdvanceCalendar: USD,TWD
+    SpotRelative: true
+- id: NOK-SEK-FX
+  terms:
+    SpotDays: 2
+    SourceCurrency: NOK
+    TargetCurrency: SEK
+    PointsFactor: 10000
+    AdvanceCalendar: NOK,SEK,USD
+    SpotRelative: true
+zero:
+- id: EUR-ZERO-TENOR-BASED
+  terms:
+    TenorBased: true
+    DayCounter: A365
+    CompoundingFrequency: Daily
+    Compounding: Continuous
+    TenorCalendar: TARGET
+    SpotLag: 2
+    SpotCalendar: TARGET
+    RollConvention: Following
+    EOM: false
+tenor_basis_two_swap:
+- id: EURIBOR-3M-6M-BASIS
+  terms:
+    Calendar: TARGET
+    LongFixedFrequency: Annual
+    LongFixedConvention: MF
+    LongFixedDayCounter: 30/360
+    LongIndex: EUR-EURIBOR-6M
+    ShortFixedFrequency: Annual
+    ShortFixedConvention: MF
+    ShortFixedDayCounter: 30/360
+    ShortIndex: EUR-EURIBOR-3M
+    LongMinusShort: true
+average_ois:
+- id: USD-AVERAGE-OIS
+  terms:
+    SpotLag: 2
+    FixedTenor: 6M
+    FixedDayCounter: 30/360
+    FixedCalendar: US
+    FixedConvention: MF
+    FixedPaymentConvention: MF
+    Index: USD-FedFunds
+    OnTenor: 3M
+    RateCutoff: 2
+swap_index:
+- id: USD-CMS-1Y
+  terms:
+    Conventions: USD-LIBOR-3M-SWAP
+    FixingCalendar: US
+- id: USD-CMS-30Y
+  terms:
+    Conventions: USD-LIBOR-3M-SWAP
+    FixingCalendar: US
+cross_currency_fix_float:
+- id: USD-TWD-XCCY-FIX-FLOAT-CONVENTIONS
+  terms:
+    SettlementDays: 2
+    SettlementCalendar: TWD,US,UK
+    SettlementConvention: F
+    FixedCurrency: TWD
+    FixedFrequency: Semiannual
+    FixedConvention: F
+    FixedDayCounter: ACT/365
+    Index: USD-LIBOR-6M
+fx_option:
+- id: EUR-USD-FXOPTION
+  terms:
+    FXConventionID: EUR-USD-FX
+    AtmType: AtmDeltaNeutral
+    LongTermAtmType: AtmDeltaNeutral
+    DeltaType: Spot
+    LongTermDeltaType: Fwd
+    SwitchTenor: 2Y
+    RiskReversalInFavorOf: Call
+    ButterflyStyle: Broker
+- id: NOK-SEK-FXOPTION
+  terms:
+    FXConventionID: NOK-SEK-FX
+    AtmType: AtmDeltaNeutral
+    LongTermAtmType: AtmDeltaNeutral
+    DeltaType: PaSpot
+    LongTermDeltaType: PaFwd
+    SwitchTenor: 2Y
+    RiskReversalInFavorOf: Call
+    ButterflyStyle: Broker
+- id: USD-JPY-FXOPTION
+  terms:
+    FXConventionID: USD-JPY-FX
+    AtmType: AtmDeltaNeutral
+    LongTermAtmType: AtmDeltaNeutral
+    DeltaType: PaSpot
+    LongTermDeltaType: PaFwd
+    SwitchTenor: 2Y
+    RiskReversalInFavorOf: Call
+    ButterflyStyle: Broker

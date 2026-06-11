@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "1.0.0",
+  "seedVersion": "1.0.0",
+  "traceabilityRefs": {
+    "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+    "epic": "docs/architecture/scope_runtime_migration.yaml",
+    "sourceXml": "vre_python/notebooks/example_1/input/curveconfig.xml",
+    "spec": "docs/architecture/scope_runtime_migration.yaml"
+  },
+  "setId": "curveconfig",
+  "entries": [
+    {
+      "familyId": "default_curves",
+      "curveType": "DefaultCurve",
+      "curveId": "BANK_SR_EUR",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "default_curves",
+      "curveType": "DefaultCurve",
+      "curveId": "CPTY_A_SR_EUR",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "fx_volatilities",
+      "curveType": "FXVolatility",
+      "curveId": "EURGBP",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "swaption_volatilities",
+      "curveType": "SwaptionVolatility",
+      "curveId": "EUR_SWPTN",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "swaption_volatilities",
+      "curveType": "SwaptionVolatility",
+      "curveId": "GBP_SWPTN",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "yield_curves",
+      "curveType": "YieldCurve",
+      "curveId": "EUR1D",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "yield_curves",
+      "curveType": "YieldCurve",
+      "curveId": "EUR6M",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "yield_curves",
+      "curveType": "YieldCurve",
+      "curveId": "GBP1D",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "yield_curves",
+      "curveType": "YieldCurve",
+      "curveId": "GBP6M",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "yield_curves",
+      "curveType": "YieldCurve",
+      "curveId": "USD1D",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    }
+  ]
+}

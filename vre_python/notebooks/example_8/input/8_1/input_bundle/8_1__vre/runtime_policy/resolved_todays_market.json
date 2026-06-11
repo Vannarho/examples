@@ -1,0 +1,1818 @@
+{
+  "schemaVersion": "1.0.0",
+  "seedVersion": "1.0.0",
+  "publishedAt": "examples/vre_python/notebooks/example_8/input/8_1/vre.toml",
+  "contentHash": "e2f4b6affb708395b732c014f0d1d696de823945b76703d39daf4c6f9914a19b",
+  "sourceLineage": {
+    "viewPath": "examples/vre_python/notebooks/example_8/input_bundle/8_1__vre/runtime_policy/market_view.toml",
+    "manifestPath": "examples/vre_python/notebooks/example_8/input_bundle/8_1__vre/runtime_policy/market_manifest.yaml",
+    "objectMapPath": "examples/vre_python/notebooks/example_8/input_bundle/8_1__vre/runtime_policy/market_object_map.json",
+    "generator": "tools/ci/publish_todays_market_contracts.py"
+  },
+  "marketView": {
+    "viewId": "default",
+    "asOfDate": "2019-02-25"
+  },
+  "marketManifest": {
+    "views": [
+      {
+        "viewId": "collateral_inccy",
+        "families": {
+          "discounting_curves": "discount_curve__ois",
+          "index_forwarding_curves": "index_forwarding_curve__default",
+          "yield_curves": "yield_curve__ois"
+        }
+      },
+      {
+        "viewId": "default",
+        "families": {
+          "discounting_curves": "discount_curve__xois_eur",
+          "index_forwarding_curves": "index_forwarding_curve__default",
+          "yield_curves": "yield_curve__xois_eur"
+        }
+      },
+      {
+        "viewId": "libor",
+        "families": {
+          "discounting_curves": "discount_curve__inccy_swap",
+          "index_forwarding_curves": "index_forwarding_curve__default",
+          "yield_curves": "yield_curve__inccy_swap"
+        }
+      },
+      {
+        "viewId": "xois_eur",
+        "families": {
+          "discounting_curves": "discount_curve__xois_eur",
+          "index_forwarding_curves": "index_forwarding_curve__default"
+        }
+      },
+      {
+        "viewId": "xois_usd",
+        "families": {
+          "discounting_curves": "discount_curve__xois_usd",
+          "index_forwarding_curves": "index_forwarding_curve__default"
+        }
+      }
+    ]
+  },
+  "marketObjectMap": {
+    "families": [
+      {
+        "familyId": "base_correlation__default",
+        "marketObject": "BaseCorrelation"
+      },
+      {
+        "familyId": "cds_vol__collateral_eur",
+        "marketObject": "CDSVol"
+      },
+      {
+        "familyId": "cds_vol__default",
+        "marketObject": "CDSVol"
+      },
+      {
+        "familyId": "cap_floor_vol__default",
+        "marketObject": "CapFloorVol"
+      },
+      {
+        "familyId": "commodity_curve__default",
+        "marketObject": "CommodityCurves"
+      },
+      {
+        "familyId": "commodity_volatility__default",
+        "marketObject": "CommodityVolatilities"
+      },
+      {
+        "familyId": "default_curve__default",
+        "marketObject": "DefaultCurve"
+      },
+      {
+        "familyId": "discount_curve__inccy_swap",
+        "marketObject": "DiscountCurve"
+      },
+      {
+        "familyId": "discount_curve__ois",
+        "marketObject": "DiscountCurve"
+      },
+      {
+        "familyId": "discount_curve__xois_eur",
+        "marketObject": "DiscountCurve"
+      },
+      {
+        "familyId": "discount_curve__xois_usd",
+        "marketObject": "DiscountCurve"
+      },
+      {
+        "familyId": "equity_curve__default",
+        "marketObject": "EquityCurves"
+      },
+      {
+        "familyId": "equity_vol__default",
+        "marketObject": "EquityVols"
+      },
+      {
+        "familyId": "fx_spot__default",
+        "marketObject": "FXSpot"
+      },
+      {
+        "familyId": "fx_vol__default",
+        "marketObject": "FXVol"
+      },
+      {
+        "familyId": "index_forwarding_curve__default",
+        "marketObject": "IndexCurve"
+      },
+      {
+        "familyId": "security__collateral_eur",
+        "marketObject": "Securities"
+      },
+      {
+        "familyId": "security__default",
+        "marketObject": "Securities"
+      },
+      {
+        "familyId": "swap_index_curve__default",
+        "marketObject": "SwapIndexCurve"
+      },
+      {
+        "familyId": "swaption_vol__default",
+        "marketObject": "SwaptionVol"
+      },
+      {
+        "familyId": "yield_curve__default",
+        "marketObject": "YieldCurve"
+      },
+      {
+        "familyId": "yield_curve__inccy_swap",
+        "marketObject": "YieldCurve"
+      },
+      {
+        "familyId": "yield_curve__ois",
+        "marketObject": "YieldCurve"
+      },
+      {
+        "familyId": "yield_curve__xois_eur",
+        "marketObject": "YieldCurve"
+      },
+      {
+        "familyId": "yy_inflation_cap_floor_vol__default",
+        "marketObject": "YoYInflationCapFloorVol"
+      },
+      {
+        "familyId": "yy_inflation_curve__default",
+        "marketObject": "YoYInflationCurve"
+      },
+      {
+        "familyId": "zero_inflation_cap_floor_vol__default",
+        "marketObject": "ZeroInflationCapFloorVol"
+      },
+      {
+        "familyId": "zero_inflation_curve__default",
+        "marketObject": "ZeroInflationCurve"
+      }
+    ],
+    "entries": [
+      {
+        "familyId": "base_correlation__default",
+        "marketObject": "BaseCorrelation",
+        "objectKey": "base_correlation:CDXIG",
+        "lookupKey": "CDXIG",
+        "objectId": "BaseCorrelation/CDXIG"
+      },
+      {
+        "familyId": "cap_floor_vol__default",
+        "marketObject": "CapFloorVol",
+        "objectKey": "cap_floor_vol:EUR",
+        "lookupKey": "EUR",
+        "objectId": "CapFloorVolatility/EUR/EUR_CF_N"
+      },
+      {
+        "familyId": "cap_floor_vol__default",
+        "marketObject": "CapFloorVol",
+        "objectKey": "cap_floor_vol:GBP",
+        "lookupKey": "GBP",
+        "objectId": "CapFloorVolatility/GBP/GBP_CF_N"
+      },
+      {
+        "familyId": "cap_floor_vol__default",
+        "marketObject": "CapFloorVol",
+        "objectKey": "cap_floor_vol:USD",
+        "lookupKey": "USD",
+        "objectId": "CapFloorVolatility/USD/USD_CF_N"
+      },
+      {
+        "familyId": "cds_vol__collateral_eur",
+        "marketObject": "CDSVol",
+        "objectKey": "cds_vol:BANK",
+        "lookupKey": "BANK",
+        "objectId": "CDSVolatility/CDXIG"
+      },
+      {
+        "familyId": "cds_vol__collateral_eur",
+        "marketObject": "CDSVol",
+        "objectKey": "cds_vol:CDXIG",
+        "lookupKey": "CDXIG",
+        "objectId": "CDSVolatility/CDXIG"
+      },
+      {
+        "familyId": "cds_vol__collateral_eur",
+        "marketObject": "CDSVol",
+        "objectKey": "cds_vol:CPTY_A",
+        "lookupKey": "CPTY_A",
+        "objectId": "CDSVolatility/CPTY_A"
+      },
+      {
+        "familyId": "cds_vol__collateral_eur",
+        "marketObject": "CDSVol",
+        "objectKey": "cds_vol:CPTY_B",
+        "lookupKey": "CPTY_B",
+        "objectId": "CDSVolatility/CPTY_A"
+      },
+      {
+        "familyId": "cds_vol__default",
+        "marketObject": "CDSVol",
+        "objectKey": "cds_vol:BANK",
+        "lookupKey": "BANK",
+        "objectId": "CDSVolatility/CDXIG"
+      },
+      {
+        "familyId": "cds_vol__default",
+        "marketObject": "CDSVol",
+        "objectKey": "cds_vol:CDXIG",
+        "lookupKey": "CDXIG",
+        "objectId": "CDSVolatility/CDXIG"
+      },
+      {
+        "familyId": "cds_vol__default",
+        "marketObject": "CDSVol",
+        "objectKey": "cds_vol:CPTY_A",
+        "lookupKey": "CPTY_A",
+        "objectId": "CDSVolatility/CPTY_A"
+      },
+      {
+        "familyId": "cds_vol__default",
+        "marketObject": "CDSVol",
+        "objectKey": "cds_vol:CPTY_B",
+        "lookupKey": "CPTY_B",
+        "objectId": "CDSVolatility/CPTY_A"
+      },
+      {
+        "familyId": "cds_vol__default",
+        "marketObject": "CDSVol",
+        "objectKey": "cds_vol:FirmA",
+        "lookupKey": "FirmA",
+        "objectId": "CDSVolatility/CPTY_A"
+      },
+      {
+        "familyId": "cds_vol__default",
+        "marketObject": "CDSVol",
+        "objectKey": "cds_vol:FirmB",
+        "lookupKey": "FirmB",
+        "objectId": "CDSVolatility/CPTY_A"
+      },
+      {
+        "familyId": "discount_curve__inccy_swap",
+        "marketObject": "DiscountCurve",
+        "objectKey": "discount_curve:CHF",
+        "lookupKey": "CHF",
+        "objectId": "Yield/CHF/CHF6M"
+      },
+      {
+        "familyId": "discount_curve__inccy_swap",
+        "marketObject": "DiscountCurve",
+        "objectKey": "discount_curve:EUR",
+        "lookupKey": "EUR",
+        "objectId": "Yield/EUR/EUR6M"
+      },
+      {
+        "familyId": "discount_curve__inccy_swap",
+        "marketObject": "DiscountCurve",
+        "objectKey": "discount_curve:GBP",
+        "lookupKey": "GBP",
+        "objectId": "Yield/GBP/GBP6M"
+      },
+      {
+        "familyId": "discount_curve__inccy_swap",
+        "marketObject": "DiscountCurve",
+        "objectKey": "discount_curve:JPY",
+        "lookupKey": "JPY",
+        "objectId": "Yield/JPY/JPY6M"
+      },
+      {
+        "familyId": "discount_curve__inccy_swap",
+        "marketObject": "DiscountCurve",
+        "objectKey": "discount_curve:USD",
+        "lookupKey": "USD",
+        "objectId": "Yield/USD/USD3M"
+      },
+      {
+        "familyId": "discount_curve__ois",
+        "marketObject": "DiscountCurve",
+        "objectKey": "discount_curve:CHF",
+        "lookupKey": "CHF",
+        "objectId": "Yield/CHF/CHF1D"
+      },
+      {
+        "familyId": "discount_curve__ois",
+        "marketObject": "DiscountCurve",
+        "objectKey": "discount_curve:EUR",
+        "lookupKey": "EUR",
+        "objectId": "Yield/EUR/EUR1D"
+      },
+      {
+        "familyId": "discount_curve__ois",
+        "marketObject": "DiscountCurve",
+        "objectKey": "discount_curve:GBP",
+        "lookupKey": "GBP",
+        "objectId": "Yield/GBP/GBP1D"
+      },
+      {
+        "familyId": "discount_curve__ois",
+        "marketObject": "DiscountCurve",
+        "objectKey": "discount_curve:JPY",
+        "lookupKey": "JPY",
+        "objectId": "Yield/JPY/JPY1D"
+      },
+      {
+        "familyId": "discount_curve__ois",
+        "marketObject": "DiscountCurve",
+        "objectKey": "discount_curve:USD",
+        "lookupKey": "USD",
+        "objectId": "Yield/USD/USD1D"
+      },
+      {
+        "familyId": "discount_curve__xois_eur",
+        "marketObject": "DiscountCurve",
+        "objectKey": "discount_curve:CHF",
+        "lookupKey": "CHF",
+        "objectId": "Yield/CHF/CHF-IN-EUR"
+      },
+      {
+        "familyId": "discount_curve__xois_eur",
+        "marketObject": "DiscountCurve",
+        "objectKey": "discount_curve:EUR",
+        "lookupKey": "EUR",
+        "objectId": "Yield/EUR/EUR1D"
+      },
+      {
+        "familyId": "discount_curve__xois_eur",
+        "marketObject": "DiscountCurve",
+        "objectKey": "discount_curve:GBP",
+        "lookupKey": "GBP",
+        "objectId": "Yield/GBP/GBP-IN-EUR"
+      },
+      {
+        "familyId": "discount_curve__xois_eur",
+        "marketObject": "DiscountCurve",
+        "objectKey": "discount_curve:JPY",
+        "lookupKey": "JPY",
+        "objectId": "Yield/JPY/JPY6M"
+      },
+      {
+        "familyId": "discount_curve__xois_eur",
+        "marketObject": "DiscountCurve",
+        "objectKey": "discount_curve:USD",
+        "lookupKey": "USD",
+        "objectId": "Yield/USD/USD-IN-EUR"
+      },
+      {
+        "familyId": "discount_curve__xois_usd",
+        "marketObject": "DiscountCurve",
+        "objectKey": "discount_curve:CHF",
+        "lookupKey": "CHF",
+        "objectId": "Yield/CHF/CHF-IN-USD"
+      },
+      {
+        "familyId": "discount_curve__xois_usd",
+        "marketObject": "DiscountCurve",
+        "objectKey": "discount_curve:EUR",
+        "lookupKey": "EUR",
+        "objectId": "Yield/EUR/EUR-IN-USD"
+      },
+      {
+        "familyId": "discount_curve__xois_usd",
+        "marketObject": "DiscountCurve",
+        "objectKey": "discount_curve:GBP",
+        "lookupKey": "GBP",
+        "objectId": "Yield/GBP/GBP-IN-USD"
+      },
+      {
+        "familyId": "discount_curve__xois_usd",
+        "marketObject": "DiscountCurve",
+        "objectKey": "discount_curve:JPY",
+        "lookupKey": "JPY",
+        "objectId": "Yield/JPY/JPY6M"
+      },
+      {
+        "familyId": "discount_curve__xois_usd",
+        "marketObject": "DiscountCurve",
+        "objectKey": "discount_curve:USD",
+        "lookupKey": "USD",
+        "objectId": "Yield/USD/USD1D"
+      },
+      {
+        "familyId": "equity_curve__default",
+        "marketObject": "EquityCurves",
+        "objectKey": "equity_curve:FTSE",
+        "lookupKey": "FTSE",
+        "objectId": "Equity/GBP/FTSE"
+      },
+      {
+        "familyId": "equity_curve__default",
+        "marketObject": "EquityCurves",
+        "objectKey": "equity_curve:Lufthansa",
+        "lookupKey": "Lufthansa",
+        "objectId": "Equity/EUR/Lufthansa"
+      },
+      {
+        "familyId": "equity_curve__default",
+        "marketObject": "EquityCurves",
+        "objectKey": "equity_curve:SP5",
+        "lookupKey": "SP5",
+        "objectId": "Equity/USD/SP5"
+      },
+      {
+        "familyId": "equity_curve__default",
+        "marketObject": "EquityCurves",
+        "objectKey": "equity_curve:SPX",
+        "lookupKey": "SPX",
+        "objectId": "Equity/USD/SPX"
+      },
+      {
+        "familyId": "equity_curve__default",
+        "marketObject": "EquityCurves",
+        "objectKey": "equity_curve:SX5E",
+        "lookupKey": "SX5E",
+        "objectId": "Equity/EUR/SX5E"
+      },
+      {
+        "familyId": "equity_vol__default",
+        "marketObject": "EquityVols",
+        "objectKey": "equity_vol:FTSE",
+        "lookupKey": "FTSE",
+        "objectId": "EquityVolatility/GBP/FTSE"
+      },
+      {
+        "familyId": "equity_vol__default",
+        "marketObject": "EquityVols",
+        "objectKey": "equity_vol:Lufthansa",
+        "lookupKey": "Lufthansa",
+        "objectId": "EquityVolatility/EUR/Lufthansa"
+      },
+      {
+        "familyId": "equity_vol__default",
+        "marketObject": "EquityVols",
+        "objectKey": "equity_vol:SP5",
+        "lookupKey": "SP5",
+        "objectId": "EquityVolatility/USD/SP5"
+      },
+      {
+        "familyId": "equity_vol__default",
+        "marketObject": "EquityVols",
+        "objectKey": "equity_vol:SPX",
+        "lookupKey": "SPX",
+        "objectId": "EquityVolatility/USD/SPX"
+      },
+      {
+        "familyId": "equity_vol__default",
+        "marketObject": "EquityVols",
+        "objectKey": "equity_vol:SX5E",
+        "lookupKey": "SX5E",
+        "objectId": "EquityVolatility/EUR/SX5E"
+      },
+      {
+        "familyId": "fx_spot__default",
+        "marketObject": "FXSpot",
+        "objectKey": "fx_spot:EURCHF",
+        "lookupKey": "EURCHF",
+        "objectId": "FX/EUR/CHF"
+      },
+      {
+        "familyId": "fx_spot__default",
+        "marketObject": "FXSpot",
+        "objectKey": "fx_spot:EURGBP",
+        "lookupKey": "EURGBP",
+        "objectId": "FX/EUR/GBP"
+      },
+      {
+        "familyId": "fx_spot__default",
+        "marketObject": "FXSpot",
+        "objectKey": "fx_spot:EURJPY",
+        "lookupKey": "EURJPY",
+        "objectId": "FX/EUR/JPY"
+      },
+      {
+        "familyId": "fx_spot__default",
+        "marketObject": "FXSpot",
+        "objectKey": "fx_spot:EURUSD",
+        "lookupKey": "EURUSD",
+        "objectId": "FX/EUR/USD"
+      },
+      {
+        "familyId": "fx_spot__default",
+        "marketObject": "FXSpot",
+        "objectKey": "fx_spot:GBPUSD",
+        "lookupKey": "GBPUSD",
+        "objectId": "FX/GBP/USD"
+      },
+      {
+        "familyId": "fx_spot__default",
+        "marketObject": "FXSpot",
+        "objectKey": "fx_spot:USDCHF",
+        "lookupKey": "USDCHF",
+        "objectId": "FX/USD/CHF"
+      },
+      {
+        "familyId": "fx_vol__default",
+        "marketObject": "FXVol",
+        "objectKey": "fx_vol:EURCHF",
+        "lookupKey": "EURCHF",
+        "objectId": "FXVolatility/EUR/CHF/EURCHF"
+      },
+      {
+        "familyId": "fx_vol__default",
+        "marketObject": "FXVol",
+        "objectKey": "fx_vol:EURGBP",
+        "lookupKey": "EURGBP",
+        "objectId": "FXVolatility/EUR/GBP/EURGBP"
+      },
+      {
+        "familyId": "fx_vol__default",
+        "marketObject": "FXVol",
+        "objectKey": "fx_vol:EURJPY",
+        "lookupKey": "EURJPY",
+        "objectId": "FXVolatility/EUR/JPY/EURJPY"
+      },
+      {
+        "familyId": "fx_vol__default",
+        "marketObject": "FXVol",
+        "objectKey": "fx_vol:EURUSD",
+        "lookupKey": "EURUSD",
+        "objectId": "FXVolatility/EUR/USD/EURUSD"
+      },
+      {
+        "familyId": "fx_vol__default",
+        "marketObject": "FXVol",
+        "objectKey": "fx_vol:GBPUSD",
+        "lookupKey": "GBPUSD",
+        "objectId": "FXVolatility/GBP/USD/GBPUSD"
+      },
+      {
+        "familyId": "index_forwarding_curve__default",
+        "marketObject": "IndexCurve",
+        "objectKey": "index_forwarding_curve:CHF-LIBOR-3M",
+        "lookupKey": "CHF-LIBOR-3M",
+        "objectId": "Yield/CHF/CHF3M"
+      },
+      {
+        "familyId": "index_forwarding_curve__default",
+        "marketObject": "IndexCurve",
+        "objectKey": "index_forwarding_curve:CHF-LIBOR-6M",
+        "lookupKey": "CHF-LIBOR-6M",
+        "objectId": "Yield/CHF/CHF6M"
+      },
+      {
+        "familyId": "index_forwarding_curve__default",
+        "marketObject": "IndexCurve",
+        "objectKey": "index_forwarding_curve:CHF-TOIS",
+        "lookupKey": "CHF-TOIS",
+        "objectId": "Yield/CHF/CHF1D"
+      },
+      {
+        "familyId": "index_forwarding_curve__default",
+        "marketObject": "IndexCurve",
+        "objectKey": "index_forwarding_curve:EUR-EONIA",
+        "lookupKey": "EUR-EONIA",
+        "objectId": "Yield/EUR/EUR1D"
+      },
+      {
+        "familyId": "index_forwarding_curve__default",
+        "marketObject": "IndexCurve",
+        "objectKey": "index_forwarding_curve:EUR-EURIBOR-12M",
+        "lookupKey": "EUR-EURIBOR-12M",
+        "objectId": "Yield/EUR/EUR12M"
+      },
+      {
+        "familyId": "index_forwarding_curve__default",
+        "marketObject": "IndexCurve",
+        "objectKey": "index_forwarding_curve:EUR-EURIBOR-1M",
+        "lookupKey": "EUR-EURIBOR-1M",
+        "objectId": "Yield/EUR/EUR1M"
+      },
+      {
+        "familyId": "index_forwarding_curve__default",
+        "marketObject": "IndexCurve",
+        "objectKey": "index_forwarding_curve:EUR-EURIBOR-3M",
+        "lookupKey": "EUR-EURIBOR-3M",
+        "objectId": "Yield/EUR/EUR3M"
+      },
+      {
+        "familyId": "index_forwarding_curve__default",
+        "marketObject": "IndexCurve",
+        "objectKey": "index_forwarding_curve:EUR-EURIBOR-6M",
+        "lookupKey": "EUR-EURIBOR-6M",
+        "objectId": "Yield/EUR/EUR6M"
+      },
+      {
+        "familyId": "index_forwarding_curve__default",
+        "marketObject": "IndexCurve",
+        "objectKey": "index_forwarding_curve:GBP-LIBOR-3M",
+        "lookupKey": "GBP-LIBOR-3M",
+        "objectId": "Yield/GBP/GBP3M"
+      },
+      {
+        "familyId": "index_forwarding_curve__default",
+        "marketObject": "IndexCurve",
+        "objectKey": "index_forwarding_curve:GBP-LIBOR-6M",
+        "lookupKey": "GBP-LIBOR-6M",
+        "objectId": "Yield/GBP/GBP6M"
+      },
+      {
+        "familyId": "index_forwarding_curve__default",
+        "marketObject": "IndexCurve",
+        "objectKey": "index_forwarding_curve:GBP-SONIA",
+        "lookupKey": "GBP-SONIA",
+        "objectId": "Yield/GBP/GBP1D"
+      },
+      {
+        "familyId": "index_forwarding_curve__default",
+        "marketObject": "IndexCurve",
+        "objectKey": "index_forwarding_curve:JPY-LIBOR-6M",
+        "lookupKey": "JPY-LIBOR-6M",
+        "objectId": "Yield/JPY/JPY6M"
+      },
+      {
+        "familyId": "index_forwarding_curve__default",
+        "marketObject": "IndexCurve",
+        "objectKey": "index_forwarding_curve:JPY-TONAR",
+        "lookupKey": "JPY-TONAR",
+        "objectId": "Yield/JPY/JPY1D"
+      },
+      {
+        "familyId": "index_forwarding_curve__default",
+        "marketObject": "IndexCurve",
+        "objectKey": "index_forwarding_curve:USD-FedFunds",
+        "lookupKey": "USD-FedFunds",
+        "objectId": "Yield/USD/USD1D"
+      },
+      {
+        "familyId": "index_forwarding_curve__default",
+        "marketObject": "IndexCurve",
+        "objectKey": "index_forwarding_curve:USD-LIBOR-3M",
+        "lookupKey": "USD-LIBOR-3M",
+        "objectId": "Yield/USD/USD3M"
+      },
+      {
+        "familyId": "index_forwarding_curve__default",
+        "marketObject": "IndexCurve",
+        "objectKey": "index_forwarding_curve:USD-LIBOR-6M",
+        "lookupKey": "USD-LIBOR-6M",
+        "objectId": "Yield/USD/USD6M"
+      },
+      {
+        "familyId": "index_forwarding_curve__default",
+        "marketObject": "IndexCurve",
+        "objectKey": "index_forwarding_curve:USD-SIFMA",
+        "lookupKey": "USD-SIFMA",
+        "objectId": "Yield/USD/USDBMA"
+      },
+      {
+        "familyId": "security__collateral_eur",
+        "marketObject": "Securities",
+        "objectKey": "security:SECURITY_1",
+        "lookupKey": "SECURITY_1",
+        "objectId": "Security/SECURITY_1"
+      },
+      {
+        "familyId": "security__default",
+        "marketObject": "Securities",
+        "objectKey": "security:ISIN:XS0983610930",
+        "lookupKey": "ISIN:XS0983610930",
+        "objectId": "Security/ISIN:XS0983610930"
+      },
+      {
+        "familyId": "security__default",
+        "marketObject": "Securities",
+        "objectKey": "security:SECURITY_1",
+        "lookupKey": "SECURITY_1",
+        "objectId": "Security/SECURITY_1"
+      },
+      {
+        "familyId": "security__default",
+        "marketObject": "Securities",
+        "objectKey": "security:SECURITY_2",
+        "lookupKey": "SECURITY_2",
+        "objectId": "Security/SECURITY_2"
+      },
+      {
+        "familyId": "swap_index_curve__default",
+        "marketObject": "SwapIndexCurve",
+        "objectKey": "swap_index_curve:CHF-CMS-1Y",
+        "lookupKey": "CHF-CMS-1Y",
+        "objectId": "CHF-TOIS"
+      },
+      {
+        "familyId": "swap_index_curve__default",
+        "marketObject": "SwapIndexCurve",
+        "objectKey": "swap_index_curve:CHF-CMS-30Y",
+        "lookupKey": "CHF-CMS-30Y",
+        "objectId": "CHF-TOIS"
+      },
+      {
+        "familyId": "swap_index_curve__default",
+        "marketObject": "SwapIndexCurve",
+        "objectKey": "swap_index_curve:EUR-CMS-10Y",
+        "lookupKey": "EUR-CMS-10Y",
+        "objectId": "EUR-EONIA"
+      },
+      {
+        "familyId": "swap_index_curve__default",
+        "marketObject": "SwapIndexCurve",
+        "objectKey": "swap_index_curve:EUR-CMS-1Y",
+        "lookupKey": "EUR-CMS-1Y",
+        "objectId": "EUR-EONIA"
+      },
+      {
+        "familyId": "swap_index_curve__default",
+        "marketObject": "SwapIndexCurve",
+        "objectKey": "swap_index_curve:EUR-CMS-2Y",
+        "lookupKey": "EUR-CMS-2Y",
+        "objectId": "EUR-EONIA"
+      },
+      {
+        "familyId": "swap_index_curve__default",
+        "marketObject": "SwapIndexCurve",
+        "objectKey": "swap_index_curve:EUR-CMS-30Y",
+        "lookupKey": "EUR-CMS-30Y",
+        "objectId": "EUR-EONIA"
+      },
+      {
+        "familyId": "swap_index_curve__default",
+        "marketObject": "SwapIndexCurve",
+        "objectKey": "swap_index_curve:GBP-CMS-1Y",
+        "lookupKey": "GBP-CMS-1Y",
+        "objectId": "GBP-SONIA"
+      },
+      {
+        "familyId": "swap_index_curve__default",
+        "marketObject": "SwapIndexCurve",
+        "objectKey": "swap_index_curve:GBP-CMS-30Y",
+        "lookupKey": "GBP-CMS-30Y",
+        "objectId": "GBP-SONIA"
+      },
+      {
+        "familyId": "swap_index_curve__default",
+        "marketObject": "SwapIndexCurve",
+        "objectKey": "swap_index_curve:JPY-CMS-1Y",
+        "lookupKey": "JPY-CMS-1Y",
+        "objectId": "JPY-TONAR"
+      },
+      {
+        "familyId": "swap_index_curve__default",
+        "marketObject": "SwapIndexCurve",
+        "objectKey": "swap_index_curve:JPY-CMS-30Y",
+        "lookupKey": "JPY-CMS-30Y",
+        "objectId": "JPY-TONAR"
+      },
+      {
+        "familyId": "swap_index_curve__default",
+        "marketObject": "SwapIndexCurve",
+        "objectKey": "swap_index_curve:USD-CMS-1Y",
+        "lookupKey": "USD-CMS-1Y",
+        "objectId": "USD-FedFunds"
+      },
+      {
+        "familyId": "swap_index_curve__default",
+        "marketObject": "SwapIndexCurve",
+        "objectKey": "swap_index_curve:USD-CMS-30Y",
+        "lookupKey": "USD-CMS-30Y",
+        "objectId": "USD-FedFunds"
+      },
+      {
+        "familyId": "swaption_vol__default",
+        "marketObject": "SwaptionVol",
+        "objectKey": "swaption_vol:CHF",
+        "lookupKey": "CHF",
+        "objectId": "SwaptionVolatility/CHF/CHF_SW_N"
+      },
+      {
+        "familyId": "swaption_vol__default",
+        "marketObject": "SwaptionVol",
+        "objectKey": "swaption_vol:EUR",
+        "lookupKey": "EUR",
+        "objectId": "SwaptionVolatility/EUR/EUR_SW_N"
+      },
+      {
+        "familyId": "swaption_vol__default",
+        "marketObject": "SwaptionVol",
+        "objectKey": "swaption_vol:GBP",
+        "lookupKey": "GBP",
+        "objectId": "SwaptionVolatility/GBP/GBP_SW_N"
+      },
+      {
+        "familyId": "swaption_vol__default",
+        "marketObject": "SwaptionVol",
+        "objectKey": "swaption_vol:JPY",
+        "lookupKey": "JPY",
+        "objectId": "SwaptionVolatility/CHF/CHF_SW_N"
+      },
+      {
+        "familyId": "swaption_vol__default",
+        "marketObject": "SwaptionVol",
+        "objectKey": "swaption_vol:USD",
+        "lookupKey": "USD",
+        "objectId": "SwaptionVolatility/USD/USD_SW_N"
+      },
+      {
+        "familyId": "yield_curve__default",
+        "marketObject": "YieldCurve",
+        "objectKey": "yield_curve:BANK_EUR_BORROW",
+        "lookupKey": "BANK_EUR_BORROW",
+        "objectId": "Yield/EUR/BANK_EUR_BORROW"
+      },
+      {
+        "familyId": "yield_curve__default",
+        "marketObject": "YieldCurve",
+        "objectKey": "yield_curve:BANK_EUR_LEND",
+        "lookupKey": "BANK_EUR_LEND",
+        "objectId": "Yield/EUR/BANK_EUR_LEND"
+      },
+      {
+        "familyId": "yield_curve__default",
+        "marketObject": "YieldCurve",
+        "objectKey": "yield_curve:BENCHMARK_EUR",
+        "lookupKey": "BENCHMARK_EUR",
+        "objectId": "Yield/EUR/BENCHMARK_EUR"
+      },
+      {
+        "familyId": "yield_curve__default",
+        "marketObject": "YieldCurve",
+        "objectKey": "yield_curve:BOND_YIELD_EUR",
+        "lookupKey": "BOND_YIELD_EUR",
+        "objectId": "Yield/EUR/BOND_YIELD_EUR"
+      },
+      {
+        "familyId": "yield_curve__inccy_swap",
+        "marketObject": "YieldCurve",
+        "objectKey": "yield_curve:BANK_EUR_BORROW",
+        "lookupKey": "BANK_EUR_BORROW",
+        "objectId": "Yield/EUR/BANK_EUR_BORROW"
+      },
+      {
+        "familyId": "yield_curve__inccy_swap",
+        "marketObject": "YieldCurve",
+        "objectKey": "yield_curve:BANK_EUR_LEND",
+        "lookupKey": "BANK_EUR_LEND",
+        "objectId": "Yield/EUR/BANK_EUR_LEND"
+      },
+      {
+        "familyId": "yield_curve__inccy_swap",
+        "marketObject": "YieldCurve",
+        "objectKey": "yield_curve:BENCHMARK_EUR",
+        "lookupKey": "BENCHMARK_EUR",
+        "objectId": "Yield/EUR/BENCHMARK_EUR"
+      },
+      {
+        "familyId": "yield_curve__inccy_swap",
+        "marketObject": "YieldCurve",
+        "objectKey": "yield_curve:BOND_YIELD_EUR",
+        "lookupKey": "BOND_YIELD_EUR",
+        "objectId": "Yield/EUR/BOND_YIELD_EUR"
+      },
+      {
+        "familyId": "yield_curve__ois",
+        "marketObject": "YieldCurve",
+        "objectKey": "yield_curve:BANK_EUR_BORROW",
+        "lookupKey": "BANK_EUR_BORROW",
+        "objectId": "Yield/EUR/BANK_EUR_BORROW"
+      },
+      {
+        "familyId": "yield_curve__ois",
+        "marketObject": "YieldCurve",
+        "objectKey": "yield_curve:BANK_EUR_LEND",
+        "lookupKey": "BANK_EUR_LEND",
+        "objectId": "Yield/EUR/BANK_EUR_LEND"
+      },
+      {
+        "familyId": "yield_curve__ois",
+        "marketObject": "YieldCurve",
+        "objectKey": "yield_curve:BENCHMARK_EUR",
+        "lookupKey": "BENCHMARK_EUR",
+        "objectId": "Yield/EUR/BENCHMARK_EUR"
+      },
+      {
+        "familyId": "yield_curve__ois",
+        "marketObject": "YieldCurve",
+        "objectKey": "yield_curve:BOND_YIELD_EUR",
+        "lookupKey": "BOND_YIELD_EUR",
+        "objectId": "Yield/EUR/BOND_YIELD_EUR"
+      },
+      {
+        "familyId": "yield_curve__xois_eur",
+        "marketObject": "YieldCurve",
+        "objectKey": "yield_curve:BANK_EUR_BORROW",
+        "lookupKey": "BANK_EUR_BORROW",
+        "objectId": "Yield/EUR/BANK_EUR_BORROW"
+      },
+      {
+        "familyId": "yield_curve__xois_eur",
+        "marketObject": "YieldCurve",
+        "objectKey": "yield_curve:BANK_EUR_LEND",
+        "lookupKey": "BANK_EUR_LEND",
+        "objectId": "Yield/EUR/BANK_EUR_LEND"
+      },
+      {
+        "familyId": "yield_curve__xois_eur",
+        "marketObject": "YieldCurve",
+        "objectKey": "yield_curve:BENCHMARK_EUR",
+        "lookupKey": "BENCHMARK_EUR",
+        "objectId": "Yield/EUR/BENCHMARK_EUR"
+      },
+      {
+        "familyId": "yield_curve__xois_eur",
+        "marketObject": "YieldCurve",
+        "objectKey": "yield_curve:BOND_YIELD_EUR",
+        "lookupKey": "BOND_YIELD_EUR",
+        "objectId": "Yield/EUR/BOND_YIELD_EUR"
+      },
+      {
+        "familyId": "yy_inflation_cap_floor_vol__default",
+        "marketObject": "YoYInflationCapFloorVol",
+        "objectKey": "yy_inflation_cap_floor_vol:EUHICPXT",
+        "lookupKey": "EUHICPXT",
+        "objectId": "InflationCapFloorVolatility/EUHICPXT/EUHICPXT_YY_CF_N"
+      },
+      {
+        "familyId": "yy_inflation_curve__default",
+        "marketObject": "YoYInflationCurve",
+        "objectKey": "yy_inflation_curve:EUHICPXT",
+        "lookupKey": "EUHICPXT",
+        "objectId": "Inflation/EUHICPXT/EUHICPXT_YY_Swaps"
+      },
+      {
+        "familyId": "zero_inflation_cap_floor_vol__default",
+        "marketObject": "ZeroInflationCapFloorVol",
+        "objectKey": "zero_inflation_cap_floor_vol:EUHICPXT",
+        "lookupKey": "EUHICPXT",
+        "objectId": "InflationCapFloorVolatility/EUHICPXT/EUHICPXT_ZC_CF"
+      },
+      {
+        "familyId": "zero_inflation_cap_floor_vol__default",
+        "marketObject": "ZeroInflationCapFloorVol",
+        "objectKey": "zero_inflation_cap_floor_vol:UKRPI",
+        "lookupKey": "UKRPI",
+        "objectId": "InflationCapFloorVolatility/UKRPI/UKRPI_ZC_CF"
+      },
+      {
+        "familyId": "zero_inflation_cap_floor_vol__default",
+        "marketObject": "ZeroInflationCapFloorVol",
+        "objectKey": "zero_inflation_cap_floor_vol:USCPI",
+        "lookupKey": "USCPI",
+        "objectId": "InflationCapFloorVolatility/USCPI/USCPI_ZC_CF"
+      },
+      {
+        "familyId": "zero_inflation_curve__default",
+        "marketObject": "ZeroInflationCurve",
+        "objectKey": "zero_inflation_curve:EUHICP",
+        "lookupKey": "EUHICP",
+        "objectId": "Inflation/EUHICP/EUHICP_ZC_Swaps"
+      },
+      {
+        "familyId": "zero_inflation_curve__default",
+        "marketObject": "ZeroInflationCurve",
+        "objectKey": "zero_inflation_curve:EUHICPXT",
+        "lookupKey": "EUHICPXT",
+        "objectId": "Inflation/EUHICPXT/EUHICPXT_ZC_Swaps"
+      },
+      {
+        "familyId": "zero_inflation_curve__default",
+        "marketObject": "ZeroInflationCurve",
+        "objectKey": "zero_inflation_curve:FRHICP",
+        "lookupKey": "FRHICP",
+        "objectId": "Inflation/FRHICP/FRHICP_ZC_Swaps"
+      },
+      {
+        "familyId": "zero_inflation_curve__default",
+        "marketObject": "ZeroInflationCurve",
+        "objectKey": "zero_inflation_curve:UKRPI",
+        "lookupKey": "UKRPI",
+        "objectId": "Inflation/UKRPI/UKRPI_ZC_Swaps"
+      },
+      {
+        "familyId": "zero_inflation_curve__default",
+        "marketObject": "ZeroInflationCurve",
+        "objectKey": "zero_inflation_curve:USCPI",
+        "lookupKey": "USCPI",
+        "objectId": "Inflation/USCPI/USCPI_ZC_Swaps"
+      },
+      {
+        "familyId": "zero_inflation_curve__default",
+        "marketObject": "ZeroInflationCurve",
+        "objectKey": "zero_inflation_curve:ZACPI",
+        "lookupKey": "ZACPI",
+        "objectId": "Inflation/ZACPI/ZACPI_ZC_Swaps"
+      },
+      {
+        "familyId": "index_forwarding_curve__default",
+        "marketObject": "IndexCurve",
+        "objectKey": "index_forwarding_curve:CAD-CDOR-3M",
+        "lookupKey": "CAD-CDOR-3M",
+        "objectId": "Yield/CAD/CAD3M"
+      },
+      {
+        "familyId": "index_forwarding_curve__default",
+        "marketObject": "IndexCurve",
+        "objectKey": "index_forwarding_curve:CHF-LIBOR-1M",
+        "lookupKey": "CHF-LIBOR-1M",
+        "objectId": "Yield/CHF/CHF1M"
+      },
+      {
+        "familyId": "index_forwarding_curve__default",
+        "marketObject": "IndexCurve",
+        "objectKey": "index_forwarding_curve:DKK-CIBOR-3M",
+        "lookupKey": "DKK-CIBOR-3M",
+        "objectId": "Yield/DKK/DKK3M"
+      },
+      {
+        "familyId": "index_forwarding_curve__default",
+        "marketObject": "IndexCurve",
+        "objectKey": "index_forwarding_curve:JPY-LIBOR-3M",
+        "lookupKey": "JPY-LIBOR-3M",
+        "objectId": "Yield/JPY/JPY3M"
+      },
+      {
+        "familyId": "index_forwarding_curve__default",
+        "marketObject": "IndexCurve",
+        "objectKey": "index_forwarding_curve:SEK-STIBOR-3M",
+        "lookupKey": "SEK-STIBOR-3M",
+        "objectId": "Yield/SEK/SEK3M"
+      },
+      {
+        "familyId": "index_forwarding_curve__default",
+        "marketObject": "IndexCurve",
+        "objectKey": "index_forwarding_curve:SEK-STIBOR-6M",
+        "lookupKey": "SEK-STIBOR-6M",
+        "objectId": "Yield/SEK/SEK6M"
+      },
+      {
+        "familyId": "index_forwarding_curve__default",
+        "marketObject": "IndexCurve",
+        "objectKey": "index_forwarding_curve:USD-LIBOR-1M",
+        "lookupKey": "USD-LIBOR-1M",
+        "objectId": "Yield/USD/USD1M"
+      },
+      {
+        "familyId": "index_forwarding_curve__default",
+        "marketObject": "IndexCurve",
+        "objectKey": "index_forwarding_curve:CHF-SARON",
+        "lookupKey": "CHF-SARON",
+        "objectId": "Yield/CHF/CHF1D"
+      },
+      {
+        "familyId": "index_forwarding_curve__default",
+        "marketObject": "IndexCurve",
+        "objectKey": "index_forwarding_curve:EUR-ESTER",
+        "lookupKey": "EUR-ESTER",
+        "objectId": "Yield/EUR/EUR1D"
+      },
+      {
+        "familyId": "index_forwarding_curve__default",
+        "marketObject": "IndexCurve",
+        "objectKey": "index_forwarding_curve:USD-SOFR",
+        "lookupKey": "USD-SOFR",
+        "objectId": "Yield/USD/USD1D"
+      },
+      {
+        "familyId": "discount_curve__inccy_swap",
+        "marketObject": "DiscountCurve",
+        "objectKey": "discount_curve:CAD",
+        "lookupKey": "CAD",
+        "objectId": "Yield/CAD/CAD3M"
+      },
+      {
+        "familyId": "discount_curve__inccy_swap",
+        "marketObject": "DiscountCurve",
+        "objectKey": "discount_curve:DKK",
+        "lookupKey": "DKK",
+        "objectId": "Yield/DKK/DKK3M"
+      },
+      {
+        "familyId": "discount_curve__ois",
+        "marketObject": "DiscountCurve",
+        "objectKey": "discount_curve:CAD",
+        "lookupKey": "CAD",
+        "objectId": "Yield/CAD/CAD1D"
+      },
+      {
+        "familyId": "discount_curve__ois",
+        "marketObject": "DiscountCurve",
+        "objectKey": "discount_curve:DKK",
+        "lookupKey": "DKK",
+        "objectId": "Yield/DKK/DKK1D"
+      },
+      {
+        "familyId": "discount_curve__xois_eur",
+        "marketObject": "DiscountCurve",
+        "objectKey": "discount_curve:CAD",
+        "lookupKey": "CAD",
+        "objectId": "Yield/CAD/CAD1D"
+      },
+      {
+        "familyId": "discount_curve__xois_eur",
+        "marketObject": "DiscountCurve",
+        "objectKey": "discount_curve:DKK",
+        "lookupKey": "DKK",
+        "objectId": "Yield/DKK/DKK1D"
+      },
+      {
+        "familyId": "discount_curve__xois_usd",
+        "marketObject": "DiscountCurve",
+        "objectKey": "discount_curve:CAD",
+        "lookupKey": "CAD",
+        "objectId": "Yield/CAD/CAD-IN-USD"
+      },
+      {
+        "familyId": "discount_curve__xois_usd",
+        "marketObject": "DiscountCurve",
+        "objectKey": "discount_curve:DKK",
+        "lookupKey": "DKK",
+        "objectId": "Yield/DKK/DKK1D"
+      }
+    ]
+  },
+  "todaysMarketParameters": {
+    "configurations": [
+      {
+        "configurationId": "collateral_inccy",
+        "marketObjectIds": {
+          "YieldCurve": "yield_curve__ois",
+          "DiscountCurve": "discount_curve__ois",
+          "IndexCurve": "index_forwarding_curve__default",
+          "BaseCorrelation": "base_correlation__default",
+          "CDSVol": "cds_vol__default",
+          "CapFloorVol": "cap_floor_vol__default",
+          "CommodityCurves": "commodity_curve__default",
+          "CommodityVolatilities": "commodity_volatility__default",
+          "DefaultCurve": "default_curve__default",
+          "EquityCurves": "equity_curve__default",
+          "EquityVols": "equity_vol__default",
+          "FXSpot": "fx_spot__default",
+          "FXVol": "fx_vol__default",
+          "Securities": "security__default",
+          "SwapIndexCurve": "swap_index_curve__default",
+          "SwaptionVol": "swaption_vol__default",
+          "YoYInflationCapFloorVol": "yy_inflation_cap_floor_vol__default",
+          "YoYInflationCurve": "yy_inflation_curve__default",
+          "ZeroInflationCapFloorVol": "zero_inflation_cap_floor_vol__default",
+          "ZeroInflationCurve": "zero_inflation_curve__default"
+        }
+      },
+      {
+        "configurationId": "default",
+        "marketObjectIds": {
+          "YieldCurve": "yield_curve__xois_eur",
+          "DiscountCurve": "discount_curve__xois_eur",
+          "IndexCurve": "index_forwarding_curve__default",
+          "SwapIndexCurve": "swap_index_curve__default",
+          "ZeroInflationCurve": "zero_inflation_curve__default",
+          "YoYInflationCurve": "yy_inflation_curve__default",
+          "FXSpot": "fx_spot__default",
+          "FXVol": "fx_vol__default",
+          "SwaptionVol": "swaption_vol__default",
+          "CapFloorVol": "cap_floor_vol__default",
+          "CDSVol": "cds_vol__default",
+          "DefaultCurve": "default_curve__default",
+          "YoYInflationCapFloorVol": "yy_inflation_cap_floor_vol__default",
+          "ZeroInflationCapFloorVol": "zero_inflation_cap_floor_vol__default",
+          "EquityCurves": "equity_curve__default",
+          "EquityVols": "equity_vol__default",
+          "Securities": "security__default",
+          "BaseCorrelation": "base_correlation__default",
+          "CommodityCurves": "commodity_curve__default",
+          "CommodityVolatilities": "commodity_volatility__default"
+        }
+      },
+      {
+        "configurationId": "libor",
+        "marketObjectIds": {
+          "YieldCurve": "yield_curve__inccy_swap",
+          "DiscountCurve": "discount_curve__inccy_swap",
+          "IndexCurve": "index_forwarding_curve__default",
+          "BaseCorrelation": "base_correlation__default",
+          "CDSVol": "cds_vol__default",
+          "CapFloorVol": "cap_floor_vol__default",
+          "CommodityCurves": "commodity_curve__default",
+          "CommodityVolatilities": "commodity_volatility__default",
+          "DefaultCurve": "default_curve__default",
+          "EquityCurves": "equity_curve__default",
+          "EquityVols": "equity_vol__default",
+          "FXSpot": "fx_spot__default",
+          "FXVol": "fx_vol__default",
+          "Securities": "security__default",
+          "SwapIndexCurve": "swap_index_curve__default",
+          "SwaptionVol": "swaption_vol__default",
+          "YoYInflationCapFloorVol": "yy_inflation_cap_floor_vol__default",
+          "YoYInflationCurve": "yy_inflation_curve__default",
+          "ZeroInflationCapFloorVol": "zero_inflation_cap_floor_vol__default",
+          "ZeroInflationCurve": "zero_inflation_curve__default"
+        }
+      },
+      {
+        "configurationId": "xois_eur",
+        "marketObjectIds": {
+          "DiscountCurve": "discount_curve__xois_eur",
+          "IndexCurve": "index_forwarding_curve__default",
+          "BaseCorrelation": "base_correlation__default",
+          "CDSVol": "cds_vol__default",
+          "CapFloorVol": "cap_floor_vol__default",
+          "CommodityCurves": "commodity_curve__default",
+          "CommodityVolatilities": "commodity_volatility__default",
+          "DefaultCurve": "default_curve__default",
+          "EquityCurves": "equity_curve__default",
+          "EquityVols": "equity_vol__default",
+          "FXSpot": "fx_spot__default",
+          "FXVol": "fx_vol__default",
+          "Securities": "security__default",
+          "SwapIndexCurve": "swap_index_curve__default",
+          "SwaptionVol": "swaption_vol__default",
+          "YoYInflationCapFloorVol": "yy_inflation_cap_floor_vol__default",
+          "YoYInflationCurve": "yy_inflation_curve__default",
+          "ZeroInflationCapFloorVol": "zero_inflation_cap_floor_vol__default",
+          "ZeroInflationCurve": "zero_inflation_curve__default"
+        }
+      },
+      {
+        "configurationId": "xois_usd",
+        "marketObjectIds": {
+          "DiscountCurve": "discount_curve__xois_usd",
+          "IndexCurve": "index_forwarding_curve__default",
+          "BaseCorrelation": "base_correlation__default",
+          "CDSVol": "cds_vol__default",
+          "CapFloorVol": "cap_floor_vol__default",
+          "CommodityCurves": "commodity_curve__default",
+          "CommodityVolatilities": "commodity_volatility__default",
+          "DefaultCurve": "default_curve__default",
+          "EquityCurves": "equity_curve__default",
+          "EquityVols": "equity_vol__default",
+          "FXSpot": "fx_spot__default",
+          "FXVol": "fx_vol__default",
+          "Securities": "security__default",
+          "SwapIndexCurve": "swap_index_curve__default",
+          "SwaptionVol": "swaption_vol__default",
+          "YoYInflationCapFloorVol": "yy_inflation_cap_floor_vol__default",
+          "YoYInflationCurve": "yy_inflation_curve__default",
+          "ZeroInflationCapFloorVol": "zero_inflation_cap_floor_vol__default",
+          "ZeroInflationCurve": "zero_inflation_curve__default"
+        }
+      }
+    ],
+    "marketObjects": [
+      {
+        "marketObject": "BaseCorrelation",
+        "familyId": "base_correlation__default",
+        "assignments": {
+          "CDXIG": "BaseCorrelation/CDXIG"
+        }
+      },
+      {
+        "marketObject": "CDSVol",
+        "familyId": "cds_vol__default",
+        "assignments": {
+          "BANK": "CDSVolatility/CDXIG",
+          "CDXIG": "CDSVolatility/CDXIG",
+          "CPTY_A": "CDSVolatility/CPTY_A",
+          "CPTY_B": "CDSVolatility/CPTY_A",
+          "FirmA": "CDSVolatility/CPTY_A",
+          "FirmB": "CDSVolatility/CPTY_A"
+        }
+      },
+      {
+        "marketObject": "CapFloorVol",
+        "familyId": "cap_floor_vol__default",
+        "assignments": {
+          "EUR": "CapFloorVolatility/EUR/EUR_CF_N",
+          "GBP": "CapFloorVolatility/GBP/GBP_CF_N",
+          "USD": "CapFloorVolatility/USD/USD_CF_N",
+          "EUR_CF_N": "CapFloorVolatility/EUR/EUR_CF_N",
+          "GBP_CF_N": "CapFloorVolatility/GBP/GBP_CF_N",
+          "USD_CF_N": "CapFloorVolatility/USD/USD_CF_N"
+        }
+      },
+      {
+        "marketObject": "CommodityCurves",
+        "familyId": "commodity_curve__default",
+        "assignments": {
+          "GOLD_USD": "Commodity/USD/GOLD_USD",
+          "WTI_USD": "Commodity/USD/WTI_USD"
+        }
+      },
+      {
+        "marketObject": "CommodityVolatilities",
+        "familyId": "commodity_volatility__default",
+        "assignments": {
+          "GOLD_USD_VOLS": "CommodityVolatility/USD/GOLD_USD_VOLS",
+          "WTI_USD_VOLS": "CommodityVolatility/USD/WTI_USD_VOLS"
+        }
+      },
+      {
+        "marketObject": "DefaultCurve",
+        "familyId": "default_curve__default",
+        "assignments": {
+          "BANK": "Default/USD/BANK",
+          "CDXIG": "Default/USD/CDXIG",
+          "CPTY_A": "Default/USD/CPTY_A",
+          "FirmA": "Default/USD/FirmA",
+          "FirmB": "Default/USD/FirmB"
+        }
+      },
+      {
+        "marketObject": "DiscountCurve",
+        "familyId": "discount_curve__inccy_swap",
+        "assignments": {
+          "CHF": "Yield/CHF/CHF3M",
+          "EUR": "Yield/EUR/EUR3M",
+          "GBP": "Yield/GBP/GBP3M",
+          "JPY": "Yield/JPY/JPY3M",
+          "USD": "Yield/USD/USD3M",
+          "CAD": "Yield/CAD/CAD3M",
+          "DKK": "Yield/DKK/DKK3M"
+        }
+      },
+      {
+        "marketObject": "DiscountCurve",
+        "familyId": "discount_curve__ois",
+        "assignments": {
+          "CHF": "Yield/CHF/CHF1D",
+          "EUR": "Yield/EUR/EUR1D",
+          "GBP": "Yield/GBP/GBP1D",
+          "JPY": "Yield/JPY/JPY1D",
+          "USD": "Yield/USD/USD1D",
+          "CAD": "Yield/CAD/CAD1D",
+          "DKK": "Yield/DKK/DKK1D"
+        }
+      },
+      {
+        "marketObject": "DiscountCurve",
+        "familyId": "discount_curve__xois_eur",
+        "assignments": {
+          "CHF": "Yield/CHF/CHF-IN-EUR",
+          "EUR": "Yield/EUR/EUR1D",
+          "GBP": "Yield/GBP/GBP-IN-EUR",
+          "JPY": "Yield/JPY/JPY1D",
+          "USD": "Yield/USD/USD-IN-EUR",
+          "CAD": "Yield/CAD/CAD1D",
+          "DKK": "Yield/DKK/DKK1D"
+        }
+      },
+      {
+        "marketObject": "DiscountCurve",
+        "familyId": "discount_curve__xois_usd",
+        "assignments": {
+          "CHF": "Yield/CHF/CHF-IN-USD",
+          "EUR": "Yield/EUR/EUR-IN-USD",
+          "GBP": "Yield/GBP/GBP-IN-USD",
+          "JPY": "Yield/JPY/JPY-IN-USD",
+          "USD": "Yield/USD/USD1D",
+          "CAD": "Yield/CAD/CAD-IN-USD",
+          "DKK": "Yield/DKK/DKK1D"
+        }
+      },
+      {
+        "marketObject": "EquityCurves",
+        "familyId": "equity_curve__default",
+        "assignments": {
+          "FTSE": "Equity/GBP/FTSE",
+          "Lufthansa": "Equity/EUR/Lufthansa",
+          "SP5": "Equity/USD/SP5",
+          "SPX": "Equity/USD/SPX",
+          "SX5E": "Equity/EUR/SX5E"
+        }
+      },
+      {
+        "marketObject": "EquityVols",
+        "familyId": "equity_vol__default",
+        "assignments": {
+          "FTSE": "EquityVolatility/GBP/FTSE",
+          "Lufthansa": "EquityVolatility/EUR/Lufthansa",
+          "SP5": "EquityVolatility/USD/SP5",
+          "SPX": "EquityVolatility/USD/SPX",
+          "SX5E": "EquityVolatility/EUR/SX5E"
+        }
+      },
+      {
+        "marketObject": "FXSpot",
+        "familyId": "fx_spot__default",
+        "assignments": {
+          "EURCHF": "FX/EUR/CHF",
+          "EURGBP": "FX/EUR/GBP",
+          "EURJPY": "FX/EUR/JPY",
+          "EURUSD": "FX/EUR/USD",
+          "GBPUSD": "FX/GBP/USD",
+          "USDCHF": "FX/USD/CHF"
+        }
+      },
+      {
+        "marketObject": "FXVol",
+        "familyId": "fx_vol__default",
+        "assignments": {
+          "EURCHF": "FXVolatility/EUR/CHF/EURCHF",
+          "EURGBP": "FXVolatility/EUR/GBP/EURGBP",
+          "EURJPY": "FXVolatility/EUR/JPY/EURJPY",
+          "EURUSD": "FXVolatility/EUR/USD/EURUSD",
+          "GBPUSD": "FXVolatility/GBP/USD/GBPUSD"
+        }
+      },
+      {
+        "marketObject": "IndexCurve",
+        "familyId": "index_forwarding_curve__default",
+        "assignments": {
+          "CHF-LIBOR-3M": "Yield/CHF/CHF3M",
+          "CHF-LIBOR-6M": "Yield/CHF/CHF6M",
+          "CHF-TOIS": "Yield/CHF/CHF1D",
+          "EUR-EONIA": "Yield/EUR/EUR1D",
+          "EUR-EURIBOR-12M": "Yield/EUR/EUR12M",
+          "EUR-EURIBOR-1M": "Yield/EUR/EUR1M",
+          "EUR-EURIBOR-3M": "Yield/EUR/EUR3M",
+          "EUR-EURIBOR-6M": "Yield/EUR/EUR6M",
+          "GBP-LIBOR-3M": "Yield/GBP/GBP3M",
+          "GBP-LIBOR-6M": "Yield/GBP/GBP6M",
+          "GBP-SONIA": "Yield/GBP/GBP1D",
+          "JPY-LIBOR-6M": "Yield/JPY/JPY6M",
+          "JPY-TONAR": "Yield/JPY/JPY1D",
+          "USD-FedFunds": "Yield/USD/USD1D",
+          "USD-LIBOR-3M": "Yield/USD/USD3M",
+          "USD-LIBOR-6M": "Yield/USD/USD6M",
+          "USD-SIFMA": "Yield/USD/USDBMA",
+          "CAD-CDOR-3M": "Yield/CAD/CAD3M",
+          "CHF-LIBOR-1M": "Yield/CHF/CHF1M",
+          "DKK-CIBOR-3M": "Yield/DKK/DKK3M",
+          "JPY-LIBOR-3M": "Yield/JPY/JPY3M",
+          "SEK-STIBOR-3M": "Yield/SEK/SEK3M",
+          "SEK-STIBOR-6M": "Yield/SEK/SEK6M",
+          "USD-LIBOR-1M": "Yield/USD/USD1M",
+          "CHF-SARON": "Yield/CHF/CHF1D",
+          "EUR-ESTER": "Yield/EUR/EUR1D",
+          "USD-SOFR": "Yield/USD/USD1D"
+        }
+      },
+      {
+        "marketObject": "Securities",
+        "familyId": "security__default",
+        "assignments": {
+          "ISIN:XS0983610930": "Security/ISIN:XS0983610930",
+          "SECURITY_1": "Security/SECURITY_1",
+          "SECURITY_2": "Security/SECURITY_2"
+        }
+      },
+      {
+        "marketObject": "SwapIndexCurve",
+        "familyId": "swap_index_curve__default",
+        "assignments": {
+          "CHF-CMS-1Y": "CHF-TOIS",
+          "CHF-CMS-30Y": "CHF-TOIS",
+          "EUR-CMS-10Y": "EUR-EONIA",
+          "EUR-CMS-1Y": "EUR-EONIA",
+          "EUR-CMS-2Y": "EUR-EONIA",
+          "EUR-CMS-30Y": "EUR-EONIA",
+          "GBP-CMS-1Y": "GBP-SONIA",
+          "GBP-CMS-30Y": "GBP-SONIA",
+          "JPY-CMS-1Y": "JPY-TONAR",
+          "JPY-CMS-30Y": "JPY-TONAR",
+          "USD-CMS-1Y": "USD-FedFunds",
+          "USD-CMS-30Y": "USD-FedFunds"
+        }
+      },
+      {
+        "marketObject": "SwaptionVol",
+        "familyId": "swaption_vol__default",
+        "assignments": {
+          "CHF": "SwaptionVolatility/CHF/CHF_SW_N",
+          "EUR": "SwaptionVolatility/EUR/EUR_SW_N",
+          "GBP": "SwaptionVolatility/GBP/GBP_SW_N",
+          "JPY": "SwaptionVolatility/CHF/CHF_SW_N",
+          "USD": "SwaptionVolatility/USD/USD_SW_N",
+          "CHF_SW_N": "SwaptionVolatility/CHF/CHF_SW_N",
+          "EUR_SW_N": "SwaptionVolatility/EUR/EUR_SW_N",
+          "GBP_SW_N": "SwaptionVolatility/GBP/GBP_SW_N",
+          "USD_SW_N": "SwaptionVolatility/USD/USD_SW_N"
+        }
+      },
+      {
+        "marketObject": "YieldCurve",
+        "familyId": "yield_curve__default",
+        "assignments": {
+          "BANK_EUR_BORROW": "Yield/EUR/BANK_EUR_BORROW",
+          "BANK_EUR_LEND": "Yield/EUR/BANK_EUR_LEND",
+          "BENCHMARK_EUR": "Yield/EUR/BENCHMARK_EUR",
+          "BOND_YIELD_EUR": "Yield/EUR/BOND_YIELD_EUR",
+          "Yield/EUR/BANK_EUR_BORROW": "Yield/EUR/BANK_EUR_BORROW",
+          "Yield/EUR/BANK_EUR_LEND": "Yield/EUR/BANK_EUR_LEND",
+          "Yield/EUR/BENCHMARK_EUR": "Yield/EUR/BENCHMARK_EUR",
+          "Yield/EUR/BOND_YIELD_EUR": "Yield/EUR/BOND_YIELD_EUR",
+          "CAD": "Yield/CAD/CAD1D",
+          "CHF": "Yield/CHF/CHF1D",
+          "DKK": "Yield/DKK/DKK1D",
+          "EUR": "Yield/EUR/EUR1D",
+          "GBP": "Yield/GBP/GBP1D",
+          "JPY": "Yield/JPY/JPY1D",
+          "USD": "Yield/USD/USD1D"
+        }
+      },
+      {
+        "marketObject": "YieldCurve",
+        "familyId": "yield_curve__inccy_swap",
+        "assignments": {
+          "BANK_EUR_BORROW": "Yield/EUR/BANK_EUR_BORROW",
+          "BANK_EUR_LEND": "Yield/EUR/BANK_EUR_LEND",
+          "BENCHMARK_EUR": "Yield/EUR/BENCHMARK_EUR",
+          "BOND_YIELD_EUR": "Yield/EUR/BOND_YIELD_EUR",
+          "CHF-IN-EUR": "Yield/CHF/CHF-IN-EUR",
+          "Yield/CHF/CHF-IN-EUR": "Yield/CHF/CHF-IN-EUR",
+          "CHF-IN-USD": "Yield/CHF/CHF-IN-USD",
+          "Yield/CHF/CHF-IN-USD": "Yield/CHF/CHF-IN-USD",
+          "CHF1D": "Yield/CHF/CHF1D",
+          "Yield/CHF/CHF1D": "Yield/CHF/CHF1D",
+          "CHF3M": "Yield/CHF/CHF3M",
+          "Yield/CHF/CHF3M": "Yield/CHF/CHF3M",
+          "CHF6M": "Yield/CHF/CHF6M",
+          "Yield/CHF/CHF6M": "Yield/CHF/CHF6M",
+          "EUR-IN-USD": "Yield/EUR/EUR-IN-USD",
+          "Yield/EUR/EUR-IN-USD": "Yield/EUR/EUR-IN-USD",
+          "EUR12M": "Yield/EUR/EUR12M",
+          "Yield/EUR/EUR12M": "Yield/EUR/EUR12M",
+          "EUR1D": "Yield/EUR/EUR1D",
+          "Yield/EUR/EUR1D": "Yield/EUR/EUR1D",
+          "EUR1M": "Yield/EUR/EUR1M",
+          "Yield/EUR/EUR1M": "Yield/EUR/EUR1M",
+          "EUR3M": "Yield/EUR/EUR3M",
+          "Yield/EUR/EUR3M": "Yield/EUR/EUR3M",
+          "EUR6M": "Yield/EUR/EUR6M",
+          "Yield/EUR/EUR6M": "Yield/EUR/EUR6M",
+          "GBP-IN-EUR": "Yield/GBP/GBP-IN-EUR",
+          "Yield/GBP/GBP-IN-EUR": "Yield/GBP/GBP-IN-EUR",
+          "GBP-IN-USD": "Yield/GBP/GBP-IN-USD",
+          "Yield/GBP/GBP-IN-USD": "Yield/GBP/GBP-IN-USD",
+          "GBP1D": "Yield/GBP/GBP1D",
+          "Yield/GBP/GBP1D": "Yield/GBP/GBP1D",
+          "GBP3M": "Yield/GBP/GBP3M",
+          "Yield/GBP/GBP3M": "Yield/GBP/GBP3M",
+          "GBP6M": "Yield/GBP/GBP6M",
+          "Yield/GBP/GBP6M": "Yield/GBP/GBP6M",
+          "JPY1D": "Yield/JPY/JPY1D",
+          "Yield/JPY/JPY1D": "Yield/JPY/JPY1D",
+          "JPY6M": "Yield/JPY/JPY6M",
+          "Yield/JPY/JPY6M": "Yield/JPY/JPY6M",
+          "USD-IN-EUR": "Yield/USD/USD-IN-EUR",
+          "Yield/USD/USD-IN-EUR": "Yield/USD/USD-IN-EUR",
+          "USD1D": "Yield/USD/USD1D",
+          "Yield/USD/USD1D": "Yield/USD/USD1D",
+          "USD3M": "Yield/USD/USD3M",
+          "Yield/USD/USD3M": "Yield/USD/USD3M",
+          "USD6M": "Yield/USD/USD6M",
+          "Yield/USD/USD6M": "Yield/USD/USD6M",
+          "USDBMA": "Yield/USD/USDBMA",
+          "Yield/USD/USDBMA": "Yield/USD/USDBMA",
+          "Yield/EUR/BANK_EUR_BORROW": "Yield/EUR/BANK_EUR_BORROW",
+          "Yield/EUR/BANK_EUR_LEND": "Yield/EUR/BANK_EUR_LEND",
+          "Yield/EUR/BENCHMARK_EUR": "Yield/EUR/BENCHMARK_EUR",
+          "Yield/EUR/BOND_YIELD_EUR": "Yield/EUR/BOND_YIELD_EUR",
+          "CAD-IN-USD": "Yield/CAD/CAD-IN-USD",
+          "Yield/CAD/CAD-IN-USD": "Yield/CAD/CAD-IN-USD",
+          "CAD1D": "Yield/CAD/CAD1D",
+          "Yield/CAD/CAD1D": "Yield/CAD/CAD1D",
+          "CAD3M": "Yield/CAD/CAD3M",
+          "Yield/CAD/CAD3M": "Yield/CAD/CAD3M",
+          "CHF1M": "Yield/CHF/CHF1M",
+          "Yield/CHF/CHF1M": "Yield/CHF/CHF1M",
+          "DKK1D": "Yield/DKK/DKK1D",
+          "Yield/DKK/DKK1D": "Yield/DKK/DKK1D",
+          "DKK3M": "Yield/DKK/DKK3M",
+          "Yield/DKK/DKK3M": "Yield/DKK/DKK3M",
+          "JPY3M": "Yield/JPY/JPY3M",
+          "Yield/JPY/JPY3M": "Yield/JPY/JPY3M",
+          "SEK3M": "Yield/SEK/SEK3M",
+          "Yield/SEK/SEK3M": "Yield/SEK/SEK3M",
+          "SEK6M": "Yield/SEK/SEK6M",
+          "Yield/SEK/SEK6M": "Yield/SEK/SEK6M",
+          "USD1M": "Yield/USD/USD1M",
+          "Yield/USD/USD1M": "Yield/USD/USD1M",
+          "CAD": "Yield/CAD/CAD1D",
+          "CHF": "Yield/CHF/CHF1D",
+          "DKK": "Yield/DKK/DKK1D",
+          "EUR": "Yield/EUR/EUR1D",
+          "GBP": "Yield/GBP/GBP1D",
+          "JPY": "Yield/JPY/JPY1D",
+          "USD": "Yield/USD/USD1D"
+        }
+      },
+      {
+        "marketObject": "YieldCurve",
+        "familyId": "yield_curve__ois",
+        "assignments": {
+          "BANK_EUR_BORROW": "Yield/EUR/BANK_EUR_BORROW",
+          "BANK_EUR_LEND": "Yield/EUR/BANK_EUR_LEND",
+          "BENCHMARK_EUR": "Yield/EUR/BENCHMARK_EUR",
+          "BOND_YIELD_EUR": "Yield/EUR/BOND_YIELD_EUR",
+          "CHF-IN-EUR": "Yield/CHF/CHF-IN-EUR",
+          "Yield/CHF/CHF-IN-EUR": "Yield/CHF/CHF-IN-EUR",
+          "CHF-IN-USD": "Yield/CHF/CHF-IN-USD",
+          "Yield/CHF/CHF-IN-USD": "Yield/CHF/CHF-IN-USD",
+          "CHF1D": "Yield/CHF/CHF1D",
+          "Yield/CHF/CHF1D": "Yield/CHF/CHF1D",
+          "CHF3M": "Yield/CHF/CHF3M",
+          "Yield/CHF/CHF3M": "Yield/CHF/CHF3M",
+          "CHF6M": "Yield/CHF/CHF6M",
+          "Yield/CHF/CHF6M": "Yield/CHF/CHF6M",
+          "EUR-IN-USD": "Yield/EUR/EUR-IN-USD",
+          "Yield/EUR/EUR-IN-USD": "Yield/EUR/EUR-IN-USD",
+          "EUR12M": "Yield/EUR/EUR12M",
+          "Yield/EUR/EUR12M": "Yield/EUR/EUR12M",
+          "EUR1D": "Yield/EUR/EUR1D",
+          "Yield/EUR/EUR1D": "Yield/EUR/EUR1D",
+          "EUR1M": "Yield/EUR/EUR1M",
+          "Yield/EUR/EUR1M": "Yield/EUR/EUR1M",
+          "EUR3M": "Yield/EUR/EUR3M",
+          "Yield/EUR/EUR3M": "Yield/EUR/EUR3M",
+          "EUR6M": "Yield/EUR/EUR6M",
+          "Yield/EUR/EUR6M": "Yield/EUR/EUR6M",
+          "GBP-IN-EUR": "Yield/GBP/GBP-IN-EUR",
+          "Yield/GBP/GBP-IN-EUR": "Yield/GBP/GBP-IN-EUR",
+          "GBP-IN-USD": "Yield/GBP/GBP-IN-USD",
+          "Yield/GBP/GBP-IN-USD": "Yield/GBP/GBP-IN-USD",
+          "GBP1D": "Yield/GBP/GBP1D",
+          "Yield/GBP/GBP1D": "Yield/GBP/GBP1D",
+          "GBP3M": "Yield/GBP/GBP3M",
+          "Yield/GBP/GBP3M": "Yield/GBP/GBP3M",
+          "GBP6M": "Yield/GBP/GBP6M",
+          "Yield/GBP/GBP6M": "Yield/GBP/GBP6M",
+          "JPY1D": "Yield/JPY/JPY1D",
+          "Yield/JPY/JPY1D": "Yield/JPY/JPY1D",
+          "JPY6M": "Yield/JPY/JPY6M",
+          "Yield/JPY/JPY6M": "Yield/JPY/JPY6M",
+          "USD-IN-EUR": "Yield/USD/USD-IN-EUR",
+          "Yield/USD/USD-IN-EUR": "Yield/USD/USD-IN-EUR",
+          "USD1D": "Yield/USD/USD1D",
+          "Yield/USD/USD1D": "Yield/USD/USD1D",
+          "USD3M": "Yield/USD/USD3M",
+          "Yield/USD/USD3M": "Yield/USD/USD3M",
+          "USD6M": "Yield/USD/USD6M",
+          "Yield/USD/USD6M": "Yield/USD/USD6M",
+          "USDBMA": "Yield/USD/USDBMA",
+          "Yield/USD/USDBMA": "Yield/USD/USDBMA",
+          "Yield/EUR/BANK_EUR_BORROW": "Yield/EUR/BANK_EUR_BORROW",
+          "Yield/EUR/BANK_EUR_LEND": "Yield/EUR/BANK_EUR_LEND",
+          "Yield/EUR/BENCHMARK_EUR": "Yield/EUR/BENCHMARK_EUR",
+          "Yield/EUR/BOND_YIELD_EUR": "Yield/EUR/BOND_YIELD_EUR",
+          "CAD-IN-USD": "Yield/CAD/CAD-IN-USD",
+          "Yield/CAD/CAD-IN-USD": "Yield/CAD/CAD-IN-USD",
+          "CAD1D": "Yield/CAD/CAD1D",
+          "Yield/CAD/CAD1D": "Yield/CAD/CAD1D",
+          "CAD3M": "Yield/CAD/CAD3M",
+          "Yield/CAD/CAD3M": "Yield/CAD/CAD3M",
+          "CHF1M": "Yield/CHF/CHF1M",
+          "Yield/CHF/CHF1M": "Yield/CHF/CHF1M",
+          "DKK1D": "Yield/DKK/DKK1D",
+          "Yield/DKK/DKK1D": "Yield/DKK/DKK1D",
+          "DKK3M": "Yield/DKK/DKK3M",
+          "Yield/DKK/DKK3M": "Yield/DKK/DKK3M",
+          "JPY3M": "Yield/JPY/JPY3M",
+          "Yield/JPY/JPY3M": "Yield/JPY/JPY3M",
+          "SEK3M": "Yield/SEK/SEK3M",
+          "Yield/SEK/SEK3M": "Yield/SEK/SEK3M",
+          "SEK6M": "Yield/SEK/SEK6M",
+          "Yield/SEK/SEK6M": "Yield/SEK/SEK6M",
+          "USD1M": "Yield/USD/USD1M",
+          "Yield/USD/USD1M": "Yield/USD/USD1M",
+          "CAD": "Yield/CAD/CAD1D",
+          "CHF": "Yield/CHF/CHF1D",
+          "DKK": "Yield/DKK/DKK1D",
+          "EUR": "Yield/EUR/EUR1D",
+          "GBP": "Yield/GBP/GBP1D",
+          "JPY": "Yield/JPY/JPY1D",
+          "USD": "Yield/USD/USD1D"
+        }
+      },
+      {
+        "marketObject": "YieldCurve",
+        "familyId": "yield_curve__xois_eur",
+        "assignments": {
+          "BANK_EUR_BORROW": "Yield/EUR/BANK_EUR_BORROW",
+          "BANK_EUR_LEND": "Yield/EUR/BANK_EUR_LEND",
+          "BENCHMARK_EUR": "Yield/EUR/BENCHMARK_EUR",
+          "BOND_YIELD_EUR": "Yield/EUR/BOND_YIELD_EUR",
+          "CHF-IN-EUR": "Yield/CHF/CHF-IN-EUR",
+          "Yield/CHF/CHF-IN-EUR": "Yield/CHF/CHF-IN-EUR",
+          "CHF-IN-USD": "Yield/CHF/CHF-IN-USD",
+          "Yield/CHF/CHF-IN-USD": "Yield/CHF/CHF-IN-USD",
+          "CHF1D": "Yield/CHF/CHF1D",
+          "Yield/CHF/CHF1D": "Yield/CHF/CHF1D",
+          "CHF3M": "Yield/CHF/CHF3M",
+          "Yield/CHF/CHF3M": "Yield/CHF/CHF3M",
+          "CHF6M": "Yield/CHF/CHF6M",
+          "Yield/CHF/CHF6M": "Yield/CHF/CHF6M",
+          "EUR-IN-USD": "Yield/EUR/EUR-IN-USD",
+          "Yield/EUR/EUR-IN-USD": "Yield/EUR/EUR-IN-USD",
+          "EUR12M": "Yield/EUR/EUR12M",
+          "Yield/EUR/EUR12M": "Yield/EUR/EUR12M",
+          "EUR1D": "Yield/EUR/EUR1D",
+          "Yield/EUR/EUR1D": "Yield/EUR/EUR1D",
+          "EUR1M": "Yield/EUR/EUR1M",
+          "Yield/EUR/EUR1M": "Yield/EUR/EUR1M",
+          "EUR3M": "Yield/EUR/EUR3M",
+          "Yield/EUR/EUR3M": "Yield/EUR/EUR3M",
+          "EUR6M": "Yield/EUR/EUR6M",
+          "Yield/EUR/EUR6M": "Yield/EUR/EUR6M",
+          "GBP-IN-EUR": "Yield/GBP/GBP-IN-EUR",
+          "Yield/GBP/GBP-IN-EUR": "Yield/GBP/GBP-IN-EUR",
+          "GBP-IN-USD": "Yield/GBP/GBP-IN-USD",
+          "Yield/GBP/GBP-IN-USD": "Yield/GBP/GBP-IN-USD",
+          "GBP1D": "Yield/GBP/GBP1D",
+          "Yield/GBP/GBP1D": "Yield/GBP/GBP1D",
+          "GBP3M": "Yield/GBP/GBP3M",
+          "Yield/GBP/GBP3M": "Yield/GBP/GBP3M",
+          "GBP6M": "Yield/GBP/GBP6M",
+          "Yield/GBP/GBP6M": "Yield/GBP/GBP6M",
+          "JPY1D": "Yield/JPY/JPY1D",
+          "Yield/JPY/JPY1D": "Yield/JPY/JPY1D",
+          "JPY6M": "Yield/JPY/JPY6M",
+          "Yield/JPY/JPY6M": "Yield/JPY/JPY6M",
+          "USD-IN-EUR": "Yield/USD/USD-IN-EUR",
+          "Yield/USD/USD-IN-EUR": "Yield/USD/USD-IN-EUR",
+          "USD1D": "Yield/USD/USD1D",
+          "Yield/USD/USD1D": "Yield/USD/USD1D",
+          "USD3M": "Yield/USD/USD3M",
+          "Yield/USD/USD3M": "Yield/USD/USD3M",
+          "USD6M": "Yield/USD/USD6M",
+          "Yield/USD/USD6M": "Yield/USD/USD6M",
+          "USDBMA": "Yield/USD/USDBMA",
+          "Yield/USD/USDBMA": "Yield/USD/USDBMA",
+          "Yield/EUR/BANK_EUR_BORROW": "Yield/EUR/BANK_EUR_BORROW",
+          "Yield/EUR/BANK_EUR_LEND": "Yield/EUR/BANK_EUR_LEND",
+          "Yield/EUR/BENCHMARK_EUR": "Yield/EUR/BENCHMARK_EUR",
+          "Yield/EUR/BOND_YIELD_EUR": "Yield/EUR/BOND_YIELD_EUR",
+          "CAD-IN-USD": "Yield/CAD/CAD-IN-USD",
+          "Yield/CAD/CAD-IN-USD": "Yield/CAD/CAD-IN-USD",
+          "CAD1D": "Yield/CAD/CAD1D",
+          "Yield/CAD/CAD1D": "Yield/CAD/CAD1D",
+          "CAD3M": "Yield/CAD/CAD3M",
+          "Yield/CAD/CAD3M": "Yield/CAD/CAD3M",
+          "CHF1M": "Yield/CHF/CHF1M",
+          "Yield/CHF/CHF1M": "Yield/CHF/CHF1M",
+          "DKK1D": "Yield/DKK/DKK1D",
+          "Yield/DKK/DKK1D": "Yield/DKK/DKK1D",
+          "DKK3M": "Yield/DKK/DKK3M",
+          "Yield/DKK/DKK3M": "Yield/DKK/DKK3M",
+          "JPY3M": "Yield/JPY/JPY3M",
+          "Yield/JPY/JPY3M": "Yield/JPY/JPY3M",
+          "SEK3M": "Yield/SEK/SEK3M",
+          "Yield/SEK/SEK3M": "Yield/SEK/SEK3M",
+          "SEK6M": "Yield/SEK/SEK6M",
+          "Yield/SEK/SEK6M": "Yield/SEK/SEK6M",
+          "USD1M": "Yield/USD/USD1M",
+          "Yield/USD/USD1M": "Yield/USD/USD1M",
+          "CAD": "Yield/CAD/CAD1D",
+          "CHF": "Yield/CHF/CHF1D",
+          "DKK": "Yield/DKK/DKK1D",
+          "EUR": "Yield/EUR/EUR1D",
+          "GBP": "Yield/GBP/GBP1D",
+          "JPY": "Yield/JPY/JPY1D",
+          "USD": "Yield/USD/USD1D"
+        }
+      },
+      {
+        "marketObject": "YoYInflationCapFloorVol",
+        "familyId": "yy_inflation_cap_floor_vol__default",
+        "assignments": {
+          "EUHICPXT": "InflationCapFloorVolatility/EUHICPXT/EUHICPXT_YY_CF_N"
+        }
+      },
+      {
+        "marketObject": "YoYInflationCurve",
+        "familyId": "yy_inflation_curve__default",
+        "assignments": {
+          "EUHICPXT": "Inflation/EUHICPXT/EUHICPXT_YY_Swaps"
+        }
+      },
+      {
+        "marketObject": "ZeroInflationCapFloorVol",
+        "familyId": "zero_inflation_cap_floor_vol__default",
+        "assignments": {
+          "EUHICPXT": "InflationCapFloorVolatility/EUHICPXT/EUHICPXT_ZC_CF",
+          "UKRPI": "InflationCapFloorVolatility/UKRPI/UKRPI_ZC_CF",
+          "USCPI": "InflationCapFloorVolatility/USCPI/USCPI_ZC_CF"
+        }
+      },
+      {
+        "marketObject": "ZeroInflationCurve",
+        "familyId": "zero_inflation_curve__default",
+        "assignments": {
+          "EUHICP": "Inflation/EUHICP/EUHICP_ZC_Swaps",
+          "EUHICPXT": "Inflation/EUHICPXT/EUHICPXT_ZC_Swaps",
+          "FRHICP": "Inflation/FRHICP/FRHICP_ZC_Swaps",
+          "UKRPI": "Inflation/UKRPI/UKRPI_ZC_Swaps",
+          "USCPI": "Inflation/USCPI/USCPI_ZC_Swaps",
+          "ZACPI": "Inflation/ZACPI/ZACPI_ZC_Swaps"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "schemaVersion": "1.0.0",
+  "seedVersion": "1.0.0",
+  "traceabilityRefs": {
+    "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+    "epic": "docs/architecture/scope_runtime_migration.yaml",
+    "sourceXml": "vre_python/notebooks/example_3/input/pricingengine_amc.xml",
+    "spec": "docs/architecture/scope_runtime_migration.yaml"
+  },
+  "profileId": "pricingengine_amc",
+  "globalParameters": {},
+  "products": [
+    {
+      "productType": "Swap",
+      "model": {
+        "name": "CrossAssetModel",
+        "parameters": {}
+      },
+      "engine": {
+        "name": "AMC",
+        "parameters": {
+          "BrownianBridgeOrdering": "Steps",
+          "MinObsDate": "true",
+          "Pricing.Samples": "0",
+          "Pricing.Seed": "17",
+          "Pricing.Sequence": "SobolBrownianBridge",
+          "RegressionOnExerciseOnly": "false",
+          "SobolDirectionIntegers": "JoeKuoD7",
+          "Training.BasisFunction": "Monomial",
+          "Training.BasisFunctionOrder": "6",
+          "Training.Samples": "10000",
+          "Training.Seed": "42",
+          "Training.Sequence": "MersenneTwisterAntithetic"
+        }
+      }
+    },
+    {
+      "productType": "CrossCurrencySwap",
+      "model": {
+        "name": "CrossAssetModel",
+        "parameters": {}
+      },
+      "engine": {
+        "name": "AMC",
+        "parameters": {
+          "BrownianBridgeOrdering": "Steps",
+          "MinObsDate": "true",
+          "Pricing.Samples": "0",
+          "Pricing.Seed": "17",
+          "Pricing.Sequence": "SobolBrownianBridge",
+          "RegressionOnExerciseOnly": "false",
+          "SobolDirectionIntegers": "JoeKuoD7",
+          "Training.BasisFunction": "Monomial",
+          "Training.BasisFunctionOrder": "2",
+          "Training.Samples": "10000",
+          "Training.Seed": "42",
+          "Training.Sequence": "MersenneTwisterAntithetic"
+        }
+      }
+    },
+    {
+      "productType": "FxOption",
+      "model": {
+        "name": "CrossAssetModel",
+        "parameters": {}
+      },
+      "engine": {
+        "name": "AMC",
+        "parameters": {
+          "BrownianBridgeOrdering": "Steps",
+          "MinObsDate": "true",
+          "Pricing.Samples": "0",
+          "Pricing.Seed": "17",
+          "Pricing.Sequence": "SobolBrownianBridge",
+          "RegressionOnExerciseOnly": "false",
+          "SobolDirectionIntegers": "JoeKuoD7",
+          "Training.BasisFunction": "Monomial",
+          "Training.BasisFunctionOrder": "2",
+          "Training.Samples": "10000",
+          "Training.Seed": "42",
+          "Training.Sequence": "MersenneTwisterAntithetic"
+        }
+      }
+    },
+    {
+      "productType": "BermudanSwaption",
+      "model": {
+        "name": "LGM",
+        "parameters": {}
+      },
+      "engine": {
+        "name": "AMC",
+        "parameters": {
+          "BrownianBridgeOrdering": "Steps",
+          "MinObsDate": "true",
+          "Pricing.Samples": "0",
+          "Pricing.Seed": "17",
+          "Pricing.Sequence": "SobolBrownianBridge",
+          "RegressionOnExerciseOnly": "false",
+          "SobolDirectionIntegers": "JoeKuoD7",
+          "Training.BasisFunction": "Monomial",
+          "Training.BasisFunctionOrder": "6",
+          "Training.Samples": "10000",
+          "Training.Seed": "42",
+          "Training.Sequence": "MersenneTwisterAntithetic"
+        }
+      }
+    },
+    {
+      "productType": "MultiLegOption",
+      "model": {
+        "name": "CrossAssetModel",
+        "parameters": {}
+      },
+      "engine": {
+        "name": "AMC",
+        "parameters": {
+          "BrownianBridgeOrdering": "Steps",
+          "MinObsDate": "true",
+          "Pricing.Samples": "0",
+          "Pricing.Seed": "17",
+          "Pricing.Sequence": "SobolBrownianBridge",
+          "RegressionOnExerciseOnly": "false",
+          "SobolDirectionIntegers": "JoeKuoD7",
+          "Training.BasisFunction": "Monomial",
+          "Training.BasisFunctionOrder": "4",
+          "Training.Samples": "10000",
+          "Training.Seed": "42",
+          "Training.Sequence": "MersenneTwisterAntithetic"
+        }
+      }
+    },
+    {
+      "productType": "CapFlooredIborLeg",
+      "model": {
+        "name": "BlackOrBachelier",
+        "parameters": {}
+      },
+      "engine": {
+        "name": "BlackIborCouponPricer",
+        "parameters": {}
+      }
+    },
+    {
+      "productType": "CMS",
+      "model": {
+        "name": "LinearTSR",
+        "parameters": {}
+      },
+      "engine": {
+        "name": "LinearTSRPricer",
+        "parameters": {
+          "BsStdDev": "3.0",
+          "LowerRateBoundLogNormal": "0.0001",
+          "LowerRateBoundNormal": "-2.0000",
+          "MeanReversion": "0.0",
+          "Policy": "RateBound",
+          "PriceThreshold": "0.0000001",
+          "UpperRateBoundLogNormal": "2.0000",
+          "UpperRateBoundNormal": "2.0000",
+          "VegaRatio": "0.01"
+        }
+      }
+    }
+  ]
+}

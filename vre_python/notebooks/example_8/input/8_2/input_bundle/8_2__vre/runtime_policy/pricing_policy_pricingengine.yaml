@@ -1,0 +1,545 @@
+version: 1.0.0
+profileId: pricingengine
+traceabilityRefs:
+  adr: docs/architecture/adr/0001-serialization-and-storage-format-standards.md
+  epic: docs/architecture/scope_runtime_migration.yaml
+  spec: docs/architecture/scope_runtime_migration.yaml
+  sourceXml: vre_python/notebooks/example_8/input/8_2/pricingengine.xml
+globalParameters:
+  ContinueOnCalibrationError: 'true'
+  PseudoCurrency.TreatAsFX: 'false'
+  PseudoCurrency.BaseCurrency: USD
+  PseudoCurrency.FXIndexTag: GENERIC
+  PseudoCurrency.Curve.XAU: PM:XAUUSD
+  PseudoCurrency.Curve.XAG: PM:XAGUSD
+  PseudoCurrency.Curve.XPT: PM:XPTUSD
+  PseudoCurrency.Curve.XPD: PM:XPDUSD
+products:
+- productType: BondTRS
+  model:
+    name: DiscountedCashflows
+    parameters: {}
+  engine:
+    name: DiscountingBondTRSEngine
+    parameters:
+      TimestepPeriod: 6M
+- productType: ForwardBond
+  model:
+    name: DiscountedCashflows
+    parameters: {}
+  engine:
+    name: DiscountingForwardBondEngine
+    parameters:
+      TimestepPeriod: 3M
+- productType: Swap
+  model:
+    name: DiscountedCashflows
+    parameters: {}
+  engine:
+    name: DiscountingSwapEngine
+    parameters: {}
+- productType: CrossCurrencySwap
+  model:
+    name: DiscountedCashflows
+    parameters: {}
+  engine:
+    name: DiscountingCrossCurrencySwapEngine
+    parameters: {}
+- productType: FxForward
+  model:
+    name: DiscountedCashflows
+    parameters: {}
+  engine:
+    name: DiscountingFxForwardEngine
+    parameters: {}
+- productType: FxOption
+  model:
+    name: GarmanKohlhagen
+    parameters: {}
+  engine:
+    name: AnalyticEuropeanEngine
+    parameters: {}
+- productType: FxOptionAmerican
+  model:
+    name: GarmanKohlhagen
+    parameters: {}
+  engine:
+    name: FdBlackScholesVanillaEngine
+    parameters:
+      Scheme: Douglas
+      TimeGridPerYear: '100'
+      XGrid: '100'
+      DampingSteps: '0'
+      EnforceMonotoneVariance: 'true'
+- productType: EuropeanSwaption
+  model:
+    name: BlackBachelier
+    parameters: {}
+  engine:
+    name: BlackBachelierSwaptionEngine
+    parameters: {}
+- productType: BermudanSwaption
+  model:
+    name: LGM
+    parameters:
+      Calibration: Bootstrap
+      CalibrationStrategy: CoterminalATM
+      Reversion: '0.0'
+      ReversionType: HullWhite
+      Volatility: '0.01'
+      VolatilityType: Hagan
+      ShiftHorizon: '0.5'
+      Tolerance: '0.10'
+  engine:
+    name: Grid
+    parameters:
+      sy: '3.0'
+      ny: '10'
+      sx: '3.0'
+      nx: '10'
+- productType: CapFloor
+  model:
+    name: IborCapModel
+    parameters: {}
+  engine:
+    name: IborCapEngine
+    parameters: {}
+- productType: YYCapFloor
+  model:
+    name: YYCapModel
+    parameters: {}
+  engine:
+    name: YYCapEngine
+    parameters: {}
+- productType: CapFlooredIborLeg
+  model:
+    name: BlackOrBachelier
+    parameters: {}
+  engine:
+    name: BlackIborCouponPricer
+    parameters:
+      TimingAdjustment: Black76
+      Correlation: '1.0'
+- productType: EquityForward
+  model:
+    name: DiscountedCashflows
+    parameters: {}
+  engine:
+    name: DiscountingEquityForwardEngine
+    parameters: {}
+- productType: EquityOption
+  model:
+    name: BlackScholesMerton
+    parameters: {}
+  engine:
+    name: AnalyticEuropeanEngine
+    parameters: {}
+- productType: QuantoEquityOption
+  model:
+    name: BlackScholes
+    parameters: {}
+  engine:
+    name: AnalyticEuropeanEngine
+    parameters: {}
+- productType: EquityOptionAmerican
+  model:
+    name: BlackScholesMerton
+    parameters: {}
+  engine:
+    name: FdBlackScholesVanillaEngine
+    parameters:
+      Scheme: Douglas
+      TimeGridPerYear: '100'
+      XGrid: '100'
+      DampingSteps: '0'
+      EnforceMonotoneVariance: 'true'
+- productType: VarianceSwap
+  model:
+    name: BlackScholesMerton
+    parameters: {}
+  engine:
+    name: ReplicatingVarianceSwapEngine
+    parameters:
+      NumberOfCalls: '8'
+      NumberOfPuts: '11'
+      MoneynessStep: '0.05'
+- productType: Bond
+  model:
+    name: DiscountedCashflows
+    parameters: {}
+  engine:
+    name: DiscountingRiskyBondEngine
+    parameters:
+      TimestepPeriod: 6M
+- productType: CreditDefaultSwap
+  model:
+    name: DiscountedCashflows
+    parameters: {}
+  engine:
+    name: MidPointCdsEngine
+    parameters: {}
+- productType: CMS
+  model:
+    name: LinearTSR
+    parameters: {}
+  engine:
+    name: LinearTSRPricer
+    parameters:
+      MeanReversion: '0.0'
+      Policy: RateBound
+      LowerRateBoundLogNormal: '0.0001'
+      UpperRateBoundLogNormal: '2.0000'
+      LowerRateBoundNormal: '-2.0000'
+      UpperRateBoundNormal: '2.0000'
+      VegaRatio: '0.01'
+      PriceThreshold: '0.0000001'
+      BsStdDev: '3.0'
+- productType: CMS_DEACTIVATED
+  model:
+    name: Hagan
+    parameters: {}
+  engine:
+    name: Analytic
+    parameters:
+      YieldCurveModel: Standard
+      MeanReversion: '0.0'
+- productType: CMS_DEACTIVATED
+  model:
+    name: Hagan
+    parameters: {}
+  engine:
+    name: Numerical
+    parameters:
+      YieldCurveModel: Standard
+      MeanReversion: '0.0'
+      UpperLimit: '0.0'
+      LowerLimit: '1.0'
+      Precision: '0.000001'
+- productType: CMSSpread
+  model:
+    name: BrigoMercurio
+    parameters:
+      Correlation_EUR: '0.8'
+      Correlation_USD: '0.75'
+      Correlation_GBP: '0.72'
+      Correlation_CHF: '0.7'
+  engine:
+    name: Analytic
+    parameters:
+      IntegrationPoints: '16'
+- productType: CommodityForward
+  model:
+    name: DiscountedCashflows
+    parameters: {}
+  engine:
+    name: DiscountingCommodityForwardEngine
+    parameters: {}
+- productType: CommoditySwap
+  model:
+    name: DiscountedCashflows
+    parameters: {}
+  engine:
+    name: CommoditySwapEngine
+    parameters: {}
+- productType: CommoditySwaption
+  model:
+    name: Black
+    parameters: {}
+  engine:
+    name: AnalyticalApproximation
+    parameters:
+      beta: '2.25'
+- productType: CommodityOption
+  model:
+    name: BlackScholes
+    parameters: {}
+  engine:
+    name: AnalyticEuropeanEngine
+    parameters: {}
+- productType: CommodityAveragePriceOption
+  model:
+    name: Black
+    parameters: {}
+  engine:
+    name: AnalyticalApproximation
+    parameters:
+      beta: '0'
+- productType: IndexCreditDefaultSwap
+  model:
+    name: DiscountedCashflows
+    parameters: {}
+  engine:
+    name: MidPointIndexCdsEngine
+    parameters:
+      Curve: Underlying
+- productType: IndexCreditDefaultSwapOption
+  model:
+    name: Black
+    parameters: {}
+  engine:
+    name: BlackIndexCdsOptionEngine
+    parameters:
+      Curve: Underlying
+- productType: FlexiSwap
+  model:
+    name: LGM
+    parameters:
+      Calibration: Bootstrap
+      CalibrationStrategy: CoterminalDealStrike
+      MinGapCalibrationExpiries: '80'
+      Reversion: '0.0'
+      ReversionType: HullWhite
+      Volatility: '0.01'
+      VolatilityType: HullWhite
+      Tolerance: '0.02'
+  engine:
+    name: Grid
+    parameters:
+      method: Automatic
+      singleSwaptionThreshold: '20.0'
+      sy: '5.0'
+      ny: '30'
+      sx: '5.0'
+      nx: '30'
+- productType: BalanceGuaranteedSwap
+  model:
+    name: LGM-FlexiSwap
+    parameters:
+      MinCPRMultiplier: '0.0'
+      MaxCPRMultiplier: '2.0'
+      Calibration: Bootstrap
+      CalibrationStrategy: CoterminalDealStrike
+      MinGapCalibrationExpiries: '80'
+      Reversion: '0.0'
+      ReversionType: HullWhite
+      Volatility: '0.01'
+      VolatilityType: HullWhite
+      Tolerance: '0.02'
+  engine:
+    name: Grid
+    parameters:
+      method: Automatic
+      singleSwaptionThreshold: '20.0'
+      sy: '5.0'
+      ny: '30'
+      sx: '5.0'
+      nx: '30'
+- productType: SensiTrade
+  model:
+    name: SensiTrade
+    parameters: {}
+  engine:
+    name: SensiTradeEngine
+    parameters:
+      SwaptionTenors: 1Y,2Y
+      CapFloorStrikes: '0.01'
+- productType: SyntheticCDO
+  model:
+    name: GaussCopula
+    parameters:
+      correlation: '0.0'
+      min: '-5.0'
+      max: '5.0'
+      steps: '64'
+  engine:
+    name: Bucketing
+    parameters:
+      buckets: '124'
+      homogeneousPoolWhenJustified: Y
+- productType: FormulaBasedCoupon
+  model:
+    name: BrigoMercurio
+    parameters:
+      FXSource: GENERIC
+  engine:
+    name: MC
+    parameters:
+      Samples: '10000'
+      Seed: '42'
+      Sobol: Y
+      SalvageCorrelationMatrix: Y
+- productType: FxVarianceSwap
+  model:
+    name: BlackScholesMerton
+    parameters: {}
+  engine:
+    name: ReplicatingVarianceSwapEngine
+    parameters:
+      NumberOfCalls: '80'
+      NumberOfPuts: '110'
+      MoneynessStep: '0.005'
+      StrikePivotType: Forward
+- productType: EquityVarianceSwap
+  model:
+    name: BlackScholesMerton
+    parameters: {}
+  engine:
+    name: ReplicatingVarianceSwapEngine
+    parameters:
+      NumberOfCalls: '80'
+      NumberOfPuts: '110'
+      MoneynessStep: '0.005'
+      StrikePivotType: Forward
+- productType: FxDigitalOption
+  model:
+    name: GarmanKohlhagen
+    parameters: {}
+  engine:
+    name: AnalyticEuropeanEngine
+    parameters: {}
+- productType: FxBarrierOption
+  model:
+    name: GarmanKohlhagen
+    parameters: {}
+  engine:
+    name: AnalyticBarrierEngine
+    parameters: {}
+- productType: FxDigitalBarrierOption
+  model:
+    name: GarmanKohlhagen
+    parameters: {}
+  engine:
+    name: FdBlackScholesBarrierEngine
+    parameters:
+      Scheme: Douglas
+      TimeGridPerYear: '100'
+      XGrid: '400'
+      DampingSteps: '0'
+- productType: FxDoubleBarrierOption
+  model:
+    name: GarmanKohlhagen
+    parameters: {}
+  engine:
+    name: AnalyticDoubleBarrierEngine
+    parameters: {}
+- productType: FxDoubleTouchOption
+  model:
+    name: GarmanKohlhagen
+    parameters: {}
+  engine:
+    name: AnalyticDoubleBarrierBinaryEngine
+    parameters: {}
+- productType: FxTouchOption
+  model:
+    name: GarmanKohlhagen
+    parameters: {}
+  engine:
+    name: AnalyticDigitalAmericanEngine
+    parameters: {}
+- productType: CommodityForward
+  model:
+    name: DiscountedCashflows
+    parameters: {}
+  engine:
+    name: DiscountingCommodityForwardEngine
+    parameters: {}
+- productType: RiskParticipationAgreement_Vanilla
+  model:
+    name: Black
+    parameters:
+      Reversion: '0.0'
+  engine:
+    name: Analytic
+    parameters:
+      AlwaysRecomputeOptionRepresentation: 'false'
+      MaxGapDays: '400'
+      MaxDiscretisationPoints: '20'
+- productType: RiskParticipationAgreement_Structured
+  model:
+    name: LGM
+    parameters:
+      Calibration: Bootstrap
+      CalibrationStrategy: CoterminalATM
+      MinGapCalibrationExpiries: '80'
+      Reversion: '0.0'
+      ReversionType: HullWhite
+      Volatility: '0.01'
+      VolatilityType: Hagan
+      ShiftHorizon: '0.5'
+      Tolerance: '0.02'
+  engine:
+    name: Grid
+    parameters:
+      sy: '3.0'
+      ny: '10'
+      sx: '3.0'
+      nx: '10'
+      MaxGapDays: '400'
+      MaxDiscretisationPoints: '20'
+- productType: EquityAsianOptionArithmeticPrice
+  model:
+    name: ScriptedTrade
+    parameters: {}
+  engine:
+    name: ScriptedTrade
+    parameters: {}
+- productType: EquityAsianOptionArithmeticStrike
+  model:
+    name: ScriptedTrade
+    parameters: {}
+  engine:
+    name: ScriptedTrade
+    parameters: {}
+- productType: FxAsianOptionArithmeticPrice
+  model:
+    name: ScriptedTrade
+    parameters: {}
+  engine:
+    name: ScriptedTrade
+    parameters: {}
+- productType: FxAsianOptionArithmeticStrike
+  model:
+    name: ScriptedTrade
+    parameters: {}
+  engine:
+    name: ScriptedTrade
+    parameters: {}
+- productType: ScriptedTrade
+  model:
+    name: Generic
+    parameters:
+      BaseCcy: USD
+      EnforceBaseCcy: 'false'
+      GridCoarsening: 3M(1W),1Y(1M),5Y(3M),10Y(1Y),50Y(5Y)
+      IrReversion_EUR: '0.0'
+      IrReversion_GBP: '0.0'
+      IrReversion_USD: '0.0'
+      IrReversion_JPY: '0.0'
+      FullDynamicIr: 'true'
+      FullDynamicFx: 'true'
+      ReferenceCalibrationGrid: 400,3M
+      Calibration: Deal
+      Model: BlackScholes
+      Model_SingleAssetOption(EQ): BlackScholes
+      Model_SingleAssetOption(FX): BlackScholes
+      Model_SingleAssetOption(COMM): BlackScholes
+      Model_SingleAssetOptionBwd(EQ): BlackScholes
+      Model_SingleAssetOptionBwd(FX): BlackScholes
+      Model_SingleAssetOptionBwd(COMM): BlackScholes
+      Model_SingleUnderlyingIrOption: GaussianCam
+      Model_MultiUnderlyingIrOption: GaussianCam
+      Model_IrHybrid(EQ): GaussianCam
+      Model_IrHybrid(FX): GaussianCam
+      Model_IrHybrid(COMM): GaussianCam
+  engine:
+    name: Generic
+    parameters:
+      Engine: MC
+      Samples: '10000'
+      StateGridPoints: '200'
+      MesherEpsilon: 1E-4
+      MesherScaling: '1.5'
+      MesherConcentration: '0.1'
+      MesherMaxConcentratingPoints: '9999'
+      MesherIsStatic: 'true'
+      RegressionOrder: '2'
+      TimeStepsPerYear: '24'
+      Interactive: 'false'
+      BootstrapTolerance: '0.1'
+      RegressionOrder_SingleAssetOption(EQ): '6'
+      RegressionOrder_SingleAssetOption(FX): '6'
+      RegressionOrder_SingleAssetOption(COMM): '6'
+      Engine_SingleAssetOptionBwd(EQ): FD
+      Engine_SingleAssetOptionBwd(FX): FD
+      Engine_SingleAssetOptionBwd(COMM): FD
+      Engine_SingleUnderlyingIrOption: '6'

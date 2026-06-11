@@ -1,0 +1,604 @@
+{
+  "schemaVersion": "1.0.0",
+  "seedVersion": "1.0.0",
+  "traceabilityRefs": {
+    "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+    "epic": "docs/architecture/scope_runtime_migration.yaml",
+    "sourceXml": "vre_python/notebooks/example_5/input/conventions.xml",
+    "spec": "docs/architecture/scope_runtime_migration.yaml"
+  },
+  "zero": [
+    {
+      "id": "EUR-ZERO-TENOR-BASED",
+      "terms": {
+        "Compounding": "Continuous",
+        "CompoundingFrequency": "Daily",
+        "DayCounter": "A365",
+        "EOM": false,
+        "RollConvention": "Following",
+        "SpotCalendar": "TARGET",
+        "SpotLag": 2,
+        "TenorBased": true,
+        "TenorCalendar": "TARGET"
+      }
+    }
+  ],
+  "deposit": [
+    {
+      "id": "USD-DEPOSIT",
+      "terms": {
+        "Index": "USD-LIBOR",
+        "IndexBased": true
+      }
+    },
+    {
+      "id": "USD-ON-DEPOSIT",
+      "terms": {
+        "Index": "USD-FedFunds",
+        "IndexBased": true
+      }
+    },
+    {
+      "id": "USD-ON-SOFR-DEPOSIT",
+      "terms": {
+        "Index": "USD-SOFR",
+        "IndexBased": true
+      }
+    },
+    {
+      "id": "EUR-ON-DEPOSIT-ESTER",
+      "terms": {
+        "Index": "EUR-ESTER",
+        "IndexBased": true
+      }
+    },
+    {
+      "id": "EUR-DEPOSIT",
+      "terms": {
+        "Index": "EUR-EURIBOR",
+        "IndexBased": true
+      }
+    }
+  ],
+  "future": [
+    {
+      "id": "USD-LIBOR-3M-FUTURES",
+      "terms": {
+        "DateGenerationRule": "IMM",
+        "Index": "USD-LIBOR-3M",
+        "OvernightIndexFutureNettingType": "Compounding"
+      }
+    }
+  ],
+  "fra": [
+    {
+      "id": "EUR-6M-FRA",
+      "terms": {
+        "Index": "EUR-EURIBOR-6M"
+      }
+    },
+    {
+      "id": "EUR-3M-FRA",
+      "terms": {
+        "Index": "EUR-EURIBOR-3M"
+      }
+    }
+  ],
+  "ois": [
+    {
+      "id": "EUR-ESTER-OIS",
+      "terms": {
+        "EOM": false,
+        "FixedConvention": "MF",
+        "FixedDayCounter": "A360",
+        "FixedFrequency": "Annual",
+        "FixedPaymentConvention": "MF",
+        "Index": "EUR-ESTER",
+        "PaymentLag": 1,
+        "Rule": "Backward",
+        "SpotLag": 1
+      }
+    },
+    {
+      "id": "USD-FedFunds-OIS",
+      "terms": {
+        "EOM": false,
+        "FixedConvention": "Following",
+        "FixedDayCounter": "A360",
+        "FixedFrequency": "Annual",
+        "FixedPaymentConvention": "Following",
+        "Index": "USD-FedFunds",
+        "PaymentLag": 2,
+        "Rule": "Backward",
+        "SpotLag": 2
+      }
+    },
+    {
+      "id": "USD-SOFR-OIS",
+      "terms": {
+        "EOM": false,
+        "FixedConvention": "MF",
+        "FixedDayCounter": "A360",
+        "FixedFrequency": "Annual",
+        "FixedPaymentConvention": "MF",
+        "Index": "USD-SOFR",
+        "PaymentLag": 2,
+        "Rule": "Backward",
+        "SpotLag": 0
+      }
+    }
+  ],
+  "swap": [
+    {
+      "id": "EUR-EURIBOR-6M-SWAP",
+      "terms": {
+        "FixedCalendar": "TARGET",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "30/360",
+        "FixedFrequency": "Annual",
+        "Index": "EUR-EURIBOR-6M"
+      }
+    },
+    {
+      "id": "EUR-EURIBOR-3M-SWAP",
+      "terms": {
+        "FixedCalendar": "TARGET",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "30/360",
+        "FixedFrequency": "Annual",
+        "Index": "EUR-EURIBOR-3M"
+      }
+    },
+    {
+      "id": "USD-LIBOR-3M-SWAP",
+      "terms": {
+        "FixedCalendar": "US,UK",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "30/360",
+        "FixedFrequency": "Semiannual",
+        "Index": "USD-LIBOR-3M"
+      }
+    }
+  ],
+  "average_ois": [
+    {
+      "id": "USD-AVERAGE-OIS",
+      "terms": {
+        "FixedCalendar": "US",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "30/360",
+        "FixedPaymentConvention": "MF",
+        "FixedTenor": "6M",
+        "Index": "USD-FedFunds",
+        "OnTenor": "3M",
+        "RateCutoff": 2,
+        "SpotLag": 2
+      }
+    }
+  ],
+  "tenor_basis_swap": [],
+  "tenor_basis_two_swap": [
+    {
+      "id": "EURIBOR-3M-6M-BASIS",
+      "terms": {
+        "Calendar": "TARGET",
+        "LongFixedConvention": "MF",
+        "LongFixedDayCounter": "30/360",
+        "LongFixedFrequency": "Annual",
+        "LongIndex": "EUR-EURIBOR-6M",
+        "LongMinusShort": true,
+        "ShortFixedConvention": "MF",
+        "ShortFixedDayCounter": "30/360",
+        "ShortFixedFrequency": "Annual",
+        "ShortIndex": "EUR-EURIBOR-3M"
+      }
+    }
+  ],
+  "bma_basis_swap": [],
+  "fx": [
+    {
+      "id": "EUR-USD-FX",
+      "terms": {
+        "AdvanceCalendar": "TARGET,US",
+        "PointsFactor": 10000,
+        "SourceCurrency": "EUR",
+        "SpotDays": 2,
+        "SpotRelative": true,
+        "TargetCurrency": "USD"
+      }
+    }
+  ],
+  "cross_currency_basis": [
+    {
+      "id": "EUR-USD-ON-XCCY-BASIS",
+      "terms": {
+        "FlatIndex": "USD-SOFR",
+        "FlatIndexIsResettable": true,
+        "FlatTenor": "3M",
+        "IsResettable": true,
+        "RollConvention": "MF",
+        "SettlementCalendar": "TARGET,US,UK",
+        "SettlementDays": 2,
+        "SpreadIndex": "EUR-ESTER",
+        "SpreadTenor": "3M"
+      }
+    }
+  ],
+  "cross_currency_fix_float": [],
+  "cds": [
+    {
+      "id": "CDS-STANDARD-CONVENTIONS",
+      "terms": {
+        "Calendar": "WeekendsOnly",
+        "DayCounter": "A360",
+        "Frequency": "Quarterly",
+        "PaymentConvention": "Following",
+        "PaysAtDefaultTime": true,
+        "Rule": "CDS2015",
+        "SettlementDays": 0,
+        "SettlesAccrual": true
+      }
+    }
+  ],
+  "ibor_index": [
+    {
+      "id": "AED-EIBOR-3M",
+      "terms": {
+        "BusinessDayConvention": "MF",
+        "DayCounter": "ACT/360",
+        "EndOfMonth": false,
+        "FixingCalendar": "AED",
+        "SettlementDays": 2
+      }
+    },
+    {
+      "id": "USD-BSBY-1M",
+      "terms": {
+        "BusinessDayConvention": "MF",
+        "DayCounter": "ACT/360",
+        "EndOfMonth": false,
+        "FixingCalendar": "US",
+        "SettlementDays": 0
+      }
+    },
+    {
+      "id": "USD-BSBY-3M",
+      "terms": {
+        "BusinessDayConvention": "MF",
+        "DayCounter": "ACT/360",
+        "EndOfMonth": false,
+        "FixingCalendar": "US",
+        "SettlementDays": 0
+      }
+    },
+    {
+      "id": "CNY-DEPO-1Y",
+      "terms": {
+        "BusinessDayConvention": "MF",
+        "DayCounter": "ACT/360",
+        "EndOfMonth": false,
+        "FixingCalendar": "CNY",
+        "SettlementDays": 2
+      }
+    },
+    {
+      "id": "RUB-KEYRATE-1W",
+      "terms": {
+        "BusinessDayConvention": "MF",
+        "DayCounter": "ACT/ACT",
+        "EndOfMonth": false,
+        "FixingCalendar": "RUB",
+        "SettlementDays": 2
+      }
+    },
+    {
+      "id": "NGN-NIBOR-3M",
+      "terms": {
+        "BusinessDayConvention": "MF",
+        "DayCounter": "30/360",
+        "EndOfMonth": false,
+        "FixingCalendar": "NGN",
+        "SettlementDays": 2
+      }
+    },
+    {
+      "id": "NGN-NIBOR-1M",
+      "terms": {
+        "BusinessDayConvention": "MF",
+        "DayCounter": "30/360",
+        "EndOfMonth": false,
+        "FixingCalendar": "NGN",
+        "SettlementDays": 2
+      }
+    }
+  ],
+  "overnight_index": [
+    {
+      "id": "GBP-BoEBASE",
+      "terms": {
+        "DayCounter": "A365",
+        "FixingCalendar": "UK",
+        "SettlementDays": 0
+      }
+    },
+    {
+      "id": "ZAR-SABOR",
+      "terms": {
+        "DayCounter": "A360",
+        "FixingCalendar": "ZA",
+        "SettlementDays": 0
+      }
+    },
+    {
+      "id": "USD-OBFR",
+      "terms": {
+        "DayCounter": "A360",
+        "FixingCalendar": "US",
+        "SettlementDays": 0
+      }
+    },
+    {
+      "id": "HKD-HIBOROIS",
+      "terms": {
+        "DayCounter": "A365",
+        "FixingCalendar": "HKD",
+        "SettlementDays": 0
+      }
+    },
+    {
+      "id": "RUB-RUONIA",
+      "terms": {
+        "DayCounter": "A365",
+        "FixingCalendar": "RUONIA",
+        "SettlementDays": 0
+      }
+    },
+    {
+      "id": "SGD-SORA",
+      "terms": {
+        "DayCounter": "A365",
+        "FixingCalendar": "SGD",
+        "SettlementDays": 0
+      }
+    },
+    {
+      "id": "THB-THOR",
+      "terms": {
+        "DayCounter": "A365",
+        "FixingCalendar": "THB",
+        "SettlementDays": 0
+      }
+    },
+    {
+      "id": "HKD-HONIA",
+      "terms": {
+        "DayCounter": "A365",
+        "FixingCalendar": "HKD",
+        "SettlementDays": 0
+      }
+    },
+    {
+      "id": "HUF-BUBORON",
+      "terms": {
+        "DayCounter": "A365",
+        "FixingCalendar": "HUF",
+        "SettlementDays": 0
+      }
+    },
+    {
+      "id": "PLN-WIBORON",
+      "terms": {
+        "DayCounter": "A365",
+        "FixingCalendar": "PLN",
+        "SettlementDays": 0
+      }
+    },
+    {
+      "id": "ILS-TELBORON",
+      "terms": {
+        "DayCounter": "A365",
+        "FixingCalendar": "ILS",
+        "SettlementDays": 0
+      }
+    },
+    {
+      "id": "TRY-TRIBORON",
+      "terms": {
+        "DayCounter": "A365",
+        "FixingCalendar": "TRY",
+        "SettlementDays": 0
+      }
+    },
+    {
+      "id": "TRY-TLREF",
+      "terms": {
+        "DayCounter": "A365",
+        "FixingCalendar": "TRY",
+        "SettlementDays": 0
+      }
+    },
+    {
+      "id": "AED-EIBORON",
+      "terms": {
+        "DayCounter": "A365",
+        "FixingCalendar": "AED",
+        "SettlementDays": 0
+      }
+    },
+    {
+      "id": "DKK-DESTR",
+      "terms": {
+        "DayCounter": "A365",
+        "FixingCalendar": "DKK",
+        "SettlementDays": 0
+      }
+    }
+  ],
+  "swap_index": [
+    {
+      "id": "EUR-CMS-1Y",
+      "terms": {
+        "Conventions": "EUR-EURIBOR-3M-SWAP",
+        "FixingCalendar": ""
+      }
+    },
+    {
+      "id": "EUR-CMS-30Y",
+      "terms": {
+        "Conventions": "EUR-EURIBOR-6M-SWAP",
+        "FixingCalendar": ""
+      }
+    },
+    {
+      "id": "USD-CMS-1Y",
+      "terms": {
+        "Conventions": "USD-LIBOR-3M-SWAP",
+        "FixingCalendar": "US"
+      }
+    },
+    {
+      "id": "USD-CMS-30Y",
+      "terms": {
+        "Conventions": "USD-LIBOR-3M-SWAP",
+        "FixingCalendar": "US"
+      }
+    },
+    {
+      "id": "USD-CMS-SOFR-1Y",
+      "terms": {
+        "Conventions": "USD-SOFR-OIS",
+        "FixingCalendar": ""
+      }
+    },
+    {
+      "id": "USD-CMS-SOFR-30Y",
+      "terms": {
+        "Conventions": "USD-SOFR-OIS",
+        "FixingCalendar": ""
+      }
+    }
+  ],
+  "zero_inflation_index": [
+    {
+      "id": "UKCPI",
+      "terms": {
+        "AvailabilityLag": "1M",
+        "Currency": "GBP",
+        "Frequency": "Monthly",
+        "RegionCode": "UK",
+        "RegionName": "UK",
+        "Revised": false
+      }
+    },
+    {
+      "id": "ITCPI",
+      "terms": {
+        "AvailabilityLag": "1M",
+        "Currency": "EUR",
+        "Frequency": "Monthly",
+        "RegionCode": "IT",
+        "RegionName": "Italy",
+        "Revised": false
+      }
+    },
+    {
+      "id": "BECPIHL",
+      "terms": {
+        "AvailabilityLag": "1M",
+        "Currency": "EUR",
+        "Frequency": "Monthly",
+        "RegionCode": "BE",
+        "RegionName": "Belgium",
+        "Revised": false
+      }
+    },
+    {
+      "id": "UKCPIH",
+      "terms": {
+        "AvailabilityLag": "1M",
+        "Currency": "GBP",
+        "Frequency": "Monthly",
+        "RegionCode": "UK",
+        "RegionName": "UK",
+        "Revised": false
+      }
+    },
+    {
+      "id": "UKRPIX",
+      "terms": {
+        "AvailabilityLag": "1M",
+        "Currency": "GBP",
+        "Frequency": "Monthly",
+        "RegionCode": "UK",
+        "RegionName": "UK",
+        "Revised": false
+      }
+    },
+    {
+      "id": "USCPIA",
+      "terms": {
+        "AvailabilityLag": "1M",
+        "Currency": "USD",
+        "Frequency": "Monthly",
+        "RegionCode": "US",
+        "RegionName": "US",
+        "Revised": false
+      }
+    },
+    {
+      "id": "CLCPI",
+      "terms": {
+        "AvailabilityLag": "1M",
+        "Currency": "CLP",
+        "Frequency": "Monthly",
+        "RegionCode": "CL",
+        "RegionName": "Chile",
+        "Revised": false
+      }
+    },
+    {
+      "id": "ESHICP",
+      "terms": {
+        "AvailabilityLag": "1M",
+        "Currency": "EUR",
+        "Frequency": "Monthly",
+        "RegionCode": "SP",
+        "RegionName": "Spain",
+        "Revised": false
+      }
+    },
+    {
+      "id": "BRCPIIPCA",
+      "terms": {
+        "AvailabilityLag": "1M",
+        "Currency": "BRL",
+        "Frequency": "Monthly",
+        "RegionCode": "BR",
+        "RegionName": "Brazil",
+        "Revised": false
+      }
+    }
+  ],
+  "inflation_swap": [],
+  "security_spread": [],
+  "cms_spread_option": [],
+  "commodity_forward": [],
+  "commodity_future": [],
+  "fx_option": [
+    {
+      "id": "EUR-USD-FXOPTION",
+      "terms": {
+        "AtmType": "AtmDeltaNeutral",
+        "ButterflyStyle": "Broker",
+        "DeltaType": "Spot",
+        "FXConventionID": "EUR-USD-FX",
+        "LongTermAtmType": "AtmDeltaNeutral",
+        "LongTermDeltaType": "Fwd",
+        "RiskReversalInFavorOf": "Call",
+        "SwitchTenor": "2Y"
+      }
+    }
+  ],
+  "fx_option_time_weighting": [],
+  "bond_yield": []
+}

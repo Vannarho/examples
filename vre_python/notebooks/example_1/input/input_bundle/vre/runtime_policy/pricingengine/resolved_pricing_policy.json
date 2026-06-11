@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0.0",
+  "seedVersion": "1.0.0",
+  "publishedAt": "examples/vre_python/notebooks/example_1/input/vre.toml",
+  "contentHash": "ac312092503a2f50fe6f9f23bb2e642bd7573ea227f1835121980f3b613634af",
+  "sourceLineage": {
+    "runtimePath": "examples/vre_python/notebooks/example_1/input_bundle/vre/runtime_policy/pricing_runtime_pricingengine.toml",
+    "policyPath": "examples/vre_python/notebooks/example_1/input_bundle/vre/runtime_policy/pricing_policy_pricingengine.yaml",
+    "generator": "tools/ci/publish_pricing_engine_contracts.py"
+  },
+  "pricingRuntime": {
+    "profileId": "pricingengine",
+    "allowedOverrides": []
+  },
+  "pricingPolicy": {
+    "profileId": "pricingengine",
+    "globalParameters": {},
+    "products": [
+      {
+        "productType": "Swap",
+        "model": {
+          "name": "DiscountedCashflows",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "DiscountingSwapEngine",
+          "parameters": {}
+        }
+      }
+    ]
+  }
+}

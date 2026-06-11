@@ -1,0 +1,101 @@
+<Portfolio>
+  <!-- Removed Swap_EUR_1 scripted swap to avoid CG graph on swap in this SA-CVA CG example -->
+  <Trade id="EqCall_SP5_FD">
+    <TradeType>ScriptedTrade</TradeType>
+    <Envelope>
+      <CounterParty>CPTY_A</CounterParty>
+      <NettingSetId>CPTY_A</NettingSetId>
+      <DeskId>EQUITY_DESK</DeskId>
+    </Envelope>
+    <ScriptedTradeData>
+      <ScriptName>EquityOption</ScriptName>
+      <Data>
+        <Number>
+          <Name>LongShort</Name>
+          <Value>1</Value>
+        </Number>
+        <Number>
+          <Name>PutCall</Name>
+          <Value>1</Value>
+        </Number>
+        <Number>
+          <Name>Quantity</Name>
+          <Value>8000</Value>
+        </Number>
+        <Index>
+          <Name>Underlying</Name>
+          <Value>EQ-SP5</Value>
+        </Index>
+        <Currency>
+          <Name>PayCcy</Name>
+          <Value>USD</Value>
+        </Currency>
+        <Number>
+          <Name>Strike</Name>
+          <Value>2200</Value>
+        </Number>
+        <Event>
+          <Name>Expiry</Name>
+          <Value>2021-02-25</Value>
+        </Event>
+        <Event>
+          <Name>Settlement</Name>
+          <Value>2021-02-25</Value>
+        </Event>
+        <Number>
+          <Name>OptionFlow</Name>
+          <Value>0</Value>
+        </Number>
+      </Data>
+    </ScriptedTradeData>
+  </Trade>
+
+
+
+  <!-- WTI forwards targeted at ~5Y and ~10Y to activate 5Y/10Y curve keys -->
+  <Trade id="ComFwd_WTI_QuantoEUR_5Y">
+    <TradeType>ScriptedTrade</TradeType>
+    <Envelope>
+      <CounterParty>CPTY_A</CounterParty>
+      <NettingSetId>CPTY_A</NettingSetId>
+      <DeskId>COMMODITY_DESK</DeskId>
+    </Envelope>
+    <ScriptedTradeData>
+      <ScriptName>CommodityForward</ScriptName>
+      <Data>
+        <Number>
+          <Name>LongShort</Name>
+          <Value>1</Value>
+        </Number>
+        <Index>
+          <Name>Underlying</Name>
+          <Value>COMM-COMDTY_WTI_USD</Value>
+        </Index>
+        <Number>
+          <Name>Quantity</Name>
+          <Value>20000</Value>
+        </Number>
+        <Number>
+          <Name>Strike</Name>
+          <Value>49.5</Value>
+        </Number>
+        <Currency>
+          <Name>PayCcy</Name>
+          <Value>USD</Value>
+        </Currency>
+        <Event>
+          <Name>Maturity</Name>
+          <Value>2024-02-26</Value>
+        </Event>
+        <Event>
+          <Name>PayDate</Name>
+          <Value>2024-02-26</Value>
+        </Event>
+      </Data>
+    </ScriptedTradeData>
+  </Trade>
+
+
+
+
+</Portfolio>

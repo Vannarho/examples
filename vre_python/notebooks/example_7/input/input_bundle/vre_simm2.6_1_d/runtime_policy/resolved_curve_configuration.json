@@ -1,0 +1,776 @@
+{
+  "schemaVersion": "1.0.0",
+  "seedVersion": "1.0.0",
+  "publishedAt": "examples/vre_python/notebooks/example_7/input/vre_SIMM2.6_1D.toml",
+  "curveSet": {
+    "schemaVersion": "1.0.0",
+    "seedVersion": "1.0.0",
+    "traceabilityRefs": {
+      "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+      "epic": "docs/architecture/scope_runtime_migration.yaml",
+      "sourceXml": "vre_python/notebooks/example_7/input/curveconfig.xml",
+      "spec": "docs/architecture/scope_runtime_migration.yaml"
+    },
+    "setId": "curveconfig",
+    "description": "Imported from curveconfig.xml"
+  },
+  "curveFamilyRegistry": {
+    "schemaVersion": "1.0.0",
+    "seedVersion": "1.0.0",
+    "traceabilityRefs": {
+      "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+      "epic": "docs/architecture/scope_runtime_migration.yaml",
+      "sourceXml": "vre_python/notebooks/example_7/input/curveconfig.xml",
+      "spec": "docs/architecture/scope_runtime_migration.yaml"
+    },
+    "setId": "curveconfig",
+    "families": [
+      {
+        "familyId": "default_curves",
+        "curveType": "DefaultCurve",
+        "xmlParent": "DefaultCurves",
+        "xmlTag": "DefaultCurve",
+        "description": "DefaultCurves"
+      },
+      {
+        "familyId": "fx_volatilities",
+        "curveType": "FXVolatility",
+        "xmlParent": "FXVolatilities",
+        "xmlTag": "FXVolatility",
+        "description": "FXVolatilities"
+      },
+      {
+        "familyId": "swaption_volatilities",
+        "curveType": "SwaptionVolatility",
+        "xmlParent": "SwaptionVolatilities",
+        "xmlTag": "SwaptionVolatility",
+        "description": "SwaptionVolatilities"
+      },
+      {
+        "familyId": "yield_curves",
+        "curveType": "YieldCurve",
+        "xmlParent": "YieldCurves",
+        "xmlTag": "YieldCurve",
+        "description": "YieldCurves"
+      }
+    ],
+    "reportDefaults": {}
+  },
+  "curveBuildRecipes": {
+    "schemaVersion": "1.0.0",
+    "seedVersion": "1.0.0",
+    "traceabilityRefs": {
+      "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+      "epic": "docs/architecture/scope_runtime_migration.yaml",
+      "sourceXml": "vre_python/notebooks/example_7/input/curveconfig.xml",
+      "spec": "docs/architecture/scope_runtime_migration.yaml"
+    },
+    "setId": "curveconfig",
+    "records": [
+      {
+        "familyId": "default_curves",
+        "curveType": "DefaultCurve",
+        "xmlParent": "DefaultCurves",
+        "xmlTag": "DefaultCurve",
+        "curveId": "BANK_SR_EUR",
+        "description": "BANK SR CDS EUR",
+        "recipeVariant": "structured_mapping",
+        "dependencies": {
+          "quotes": [],
+          "conventions": [],
+          "relatedCurveIds": []
+        },
+        "definition": {
+          "Currency": "EUR",
+          "Type": "SpreadCDS",
+          "DiscountCurve": "Yield/EUR/EUR6M",
+          "DayCounter": "A365",
+          "RecoveryRate": "RECOVERY_RATE/RATE/BANK/SR/EUR",
+          "Quotes": {
+            "Quote": "CDS/CREDIT_SPREAD/BANK/SR/EUR/1Y"
+          },
+          "Conventions": "CDS-STANDARD-CONVENTIONS"
+        }
+      },
+      {
+        "familyId": "default_curves",
+        "curveType": "DefaultCurve",
+        "xmlParent": "DefaultCurves",
+        "xmlTag": "DefaultCurve",
+        "curveId": "CPTY_A_SR_EUR",
+        "description": "CPTY_A SR HR EUR",
+        "recipeVariant": "structured_mapping",
+        "dependencies": {
+          "quotes": [],
+          "conventions": [],
+          "relatedCurveIds": []
+        },
+        "definition": {
+          "Currency": "EUR",
+          "Type": "HazardRate",
+          "DiscountCurve": "",
+          "DayCounter": "A365",
+          "RecoveryRate": "RECOVERY_RATE/RATE/CPTY_A/SR/EUR",
+          "Quotes": {
+            "Quote": "HAZARD_RATE/RATE/CPTY_A/SR/EUR/1Y"
+          },
+          "Conventions": "CDS-STANDARD-CONVENTIONS"
+        }
+      },
+      {
+        "familyId": "fx_volatilities",
+        "curveType": "FXVolatility",
+        "xmlParent": "FXVolatilities",
+        "xmlTag": "FXVolatility",
+        "curveId": "EURGBP",
+        "description": "",
+        "recipeVariant": "structured_mapping",
+        "dependencies": {
+          "quotes": [],
+          "conventions": [],
+          "relatedCurveIds": []
+        },
+        "definition": {
+          "Dimension": "ATM",
+          "Expiries": "1Y",
+          "FXSpotID": "FX/EUR/GBP"
+        }
+      },
+      {
+        "familyId": "swaption_volatilities",
+        "curveType": "SwaptionVolatility",
+        "xmlParent": "SwaptionVolatilities",
+        "xmlTag": "SwaptionVolatility",
+        "curveId": "EUR_SWPTN",
+        "description": "EUR lognormal swaption volatilities",
+        "recipeVariant": "structured_mapping",
+        "dependencies": {
+          "quotes": [],
+          "conventions": [],
+          "relatedCurveIds": []
+        },
+        "definition": {
+          "Dimension": "ATM",
+          "VolatilityType": "Lognormal",
+          "Extrapolation": "Flat",
+          "DayCounter": "Actual/365 (Fixed)",
+          "Calendar": "TARGET",
+          "BusinessDayConvention": "Following",
+          "OptionTenors": "1Y",
+          "SwapTenors": "1Y",
+          "ShortSwapIndexBase": "EUR-CMS-1Y",
+          "SwapIndexBase": "EUR-CMS-30Y"
+        }
+      },
+      {
+        "familyId": "swaption_volatilities",
+        "curveType": "SwaptionVolatility",
+        "xmlParent": "SwaptionVolatilities",
+        "xmlTag": "SwaptionVolatility",
+        "curveId": "GBP_SWPTN",
+        "description": "GBP normal swaption volatilities",
+        "recipeVariant": "structured_mapping",
+        "dependencies": {
+          "quotes": [],
+          "conventions": [],
+          "relatedCurveIds": []
+        },
+        "definition": {
+          "Dimension": "ATM",
+          "VolatilityType": "Normal",
+          "Extrapolation": "Flat",
+          "DayCounter": "Actual/365 (Fixed)",
+          "Calendar": "UK",
+          "BusinessDayConvention": "Following",
+          "OptionTenors": "1Y",
+          "SwapTenors": "1Y",
+          "ShortSwapIndexBase": "GBP-CMS-1Y",
+          "SwapIndexBase": "GBP-CMS-30Y"
+        }
+      },
+      {
+        "familyId": "yield_curves",
+        "curveType": "YieldCurve",
+        "xmlParent": "YieldCurves",
+        "xmlTag": "YieldCurve",
+        "curveId": "EUR1D",
+        "description": "EUR discount curve bootstrapped from EONIA swap rates",
+        "recipeVariant": "structured_mapping",
+        "dependencies": {
+          "quotes": [],
+          "conventions": [],
+          "relatedCurveIds": []
+        },
+        "definition": {
+          "Currency": "EUR",
+          "DiscountCurve": "",
+          "Segments": {
+            "Direct": {
+              "Type": "Zero",
+              "Quotes": {
+                "Quote": "ZERO/RATE/EUR/EUR1D/A360/1Y"
+              },
+              "Conventions": "EUR-ZERO-CONVENTIONS-TENOR-BASED"
+            }
+          },
+          "InterpolationVariable": "Discount",
+          "InterpolationMethod": "LogLinear",
+          "YieldCurveDayCounter": "A360",
+          "Tolerance": "0.000000000001"
+        }
+      },
+      {
+        "familyId": "yield_curves",
+        "curveType": "YieldCurve",
+        "xmlParent": "YieldCurves",
+        "xmlTag": "YieldCurve",
+        "curveId": "EUR6M",
+        "description": "",
+        "recipeVariant": "structured_mapping",
+        "dependencies": {
+          "quotes": [],
+          "conventions": [],
+          "relatedCurveIds": []
+        },
+        "definition": {
+          "Currency": "EUR",
+          "DiscountCurve": "",
+          "Segments": {
+            "Direct": {
+              "Type": "Zero",
+              "Quotes": {
+                "Quote": "ZERO/RATE/EUR/EUR6M/A360/1Y"
+              },
+              "Conventions": "EUR-ZERO-CONVENTIONS-TENOR-BASED"
+            }
+          },
+          "InterpolationVariable": "Discount",
+          "InterpolationMethod": "LogLinear",
+          "YieldCurveDayCounter": "A360"
+        }
+      },
+      {
+        "familyId": "yield_curves",
+        "curveType": "YieldCurve",
+        "xmlParent": "YieldCurves",
+        "xmlTag": "YieldCurve",
+        "curveId": "GBP1D",
+        "description": "",
+        "recipeVariant": "structured_mapping",
+        "dependencies": {
+          "quotes": [],
+          "conventions": [],
+          "relatedCurveIds": []
+        },
+        "definition": {
+          "Currency": "GBP",
+          "DiscountCurve": "",
+          "Segments": {
+            "Direct": {
+              "Type": "Zero",
+              "Quotes": {
+                "Quote": "ZERO/RATE/GBP/GBP1D/A365F/1Y"
+              },
+              "Conventions": "GBP-ZERO-CONVENTIONS-TENOR-BASED"
+            }
+          }
+        }
+      },
+      {
+        "familyId": "yield_curves",
+        "curveType": "YieldCurve",
+        "xmlParent": "YieldCurves",
+        "xmlTag": "YieldCurve",
+        "curveId": "GBP6M",
+        "description": "",
+        "recipeVariant": "structured_mapping",
+        "dependencies": {
+          "quotes": [],
+          "conventions": [],
+          "relatedCurveIds": []
+        },
+        "definition": {
+          "Currency": "GBP",
+          "DiscountCurve": "",
+          "Segments": {
+            "Direct": {
+              "Type": "Zero",
+              "Quotes": {
+                "Quote": "ZERO/RATE/GBP/GBP6M/A365F/1Y"
+              },
+              "Conventions": "GBP-ZERO-CONVENTIONS-TENOR-BASED"
+            }
+          }
+        }
+      },
+      {
+        "familyId": "yield_curves",
+        "curveType": "YieldCurve",
+        "xmlParent": "YieldCurves",
+        "xmlTag": "YieldCurve",
+        "curveId": "USD1D",
+        "description": "USD discount curve bootstrapped from FED FUNDS swap rates",
+        "recipeVariant": "structured_mapping",
+        "dependencies": {
+          "quotes": [],
+          "conventions": [],
+          "relatedCurveIds": []
+        },
+        "definition": {
+          "Currency": "USD",
+          "DiscountCurve": "USD1D",
+          "Segments": {
+            "Simple": [
+              {
+                "Type": "Deposit",
+                "Quotes": {
+                  "Quote": "MM/RATE/USD/0D/1D"
+                },
+                "Conventions": "USD-FED-FUNDS-CONVENTIONS"
+              },
+              {
+                "Type": "OIS",
+                "Quotes": {
+                  "Quote": [
+                    "IR_SWAP/RATE/USD/2D/1D/1M",
+                    "IR_SWAP/RATE/USD/2D/1D/3M",
+                    "IR_SWAP/RATE/USD/2D/1D/6M",
+                    "IR_SWAP/RATE/USD/2D/1D/9M",
+                    "IR_SWAP/RATE/USD/2D/1D/1Y",
+                    "IR_SWAP/RATE/USD/2D/1D/1Y3M",
+                    "IR_SWAP/RATE/USD/2D/1D/1Y6M",
+                    "IR_SWAP/RATE/USD/2D/1D/1Y9M",
+                    "IR_SWAP/RATE/USD/2D/1D/2Y",
+                    "IR_SWAP/RATE/USD/2D/1D/3Y",
+                    "IR_SWAP/RATE/USD/2D/1D/4Y",
+                    "IR_SWAP/RATE/USD/2D/1D/5Y",
+                    "IR_SWAP/RATE/USD/2D/1D/7Y",
+                    "IR_SWAP/RATE/USD/2D/1D/10Y",
+                    "IR_SWAP/RATE/USD/2D/1D/12Y",
+                    "IR_SWAP/RATE/USD/2D/1D/15Y",
+                    "IR_SWAP/RATE/USD/2D/1D/20Y",
+                    "IR_SWAP/RATE/USD/2D/1D/25Y",
+                    "IR_SWAP/RATE/USD/2D/1D/30Y"
+                  ]
+                },
+                "Conventions": "USD-OIS-CONVENTIONS"
+              }
+            ]
+          },
+          "InterpolationVariable": "Discount",
+          "InterpolationMethod": "LogLinear",
+          "YieldCurveDayCounter": "A365",
+          "Tolerance": "0.000000000001"
+        }
+      }
+    ]
+  },
+  "curveDependencyMap": {
+    "schemaVersion": "1.0.0",
+    "seedVersion": "1.0.0",
+    "traceabilityRefs": {
+      "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+      "epic": "docs/architecture/scope_runtime_migration.yaml",
+      "sourceXml": "vre_python/notebooks/example_7/input/curveconfig.xml",
+      "spec": "docs/architecture/scope_runtime_migration.yaml"
+    },
+    "setId": "curveconfig",
+    "entries": [
+      {
+        "familyId": "default_curves",
+        "curveType": "DefaultCurve",
+        "curveId": "BANK_SR_EUR",
+        "recipeVariant": "structured_mapping",
+        "quotes": [],
+        "conventions": [],
+        "relatedCurveIds": []
+      },
+      {
+        "familyId": "default_curves",
+        "curveType": "DefaultCurve",
+        "curveId": "CPTY_A_SR_EUR",
+        "recipeVariant": "structured_mapping",
+        "quotes": [],
+        "conventions": [],
+        "relatedCurveIds": []
+      },
+      {
+        "familyId": "fx_volatilities",
+        "curveType": "FXVolatility",
+        "curveId": "EURGBP",
+        "recipeVariant": "structured_mapping",
+        "quotes": [],
+        "conventions": [],
+        "relatedCurveIds": []
+      },
+      {
+        "familyId": "swaption_volatilities",
+        "curveType": "SwaptionVolatility",
+        "curveId": "EUR_SWPTN",
+        "recipeVariant": "structured_mapping",
+        "quotes": [],
+        "conventions": [],
+        "relatedCurveIds": []
+      },
+      {
+        "familyId": "swaption_volatilities",
+        "curveType": "SwaptionVolatility",
+        "curveId": "GBP_SWPTN",
+        "recipeVariant": "structured_mapping",
+        "quotes": [],
+        "conventions": [],
+        "relatedCurveIds": []
+      },
+      {
+        "familyId": "yield_curves",
+        "curveType": "YieldCurve",
+        "curveId": "EUR1D",
+        "recipeVariant": "structured_mapping",
+        "quotes": [],
+        "conventions": [],
+        "relatedCurveIds": []
+      },
+      {
+        "familyId": "yield_curves",
+        "curveType": "YieldCurve",
+        "curveId": "EUR6M",
+        "recipeVariant": "structured_mapping",
+        "quotes": [],
+        "conventions": [],
+        "relatedCurveIds": []
+      },
+      {
+        "familyId": "yield_curves",
+        "curveType": "YieldCurve",
+        "curveId": "GBP1D",
+        "recipeVariant": "structured_mapping",
+        "quotes": [],
+        "conventions": [],
+        "relatedCurveIds": []
+      },
+      {
+        "familyId": "yield_curves",
+        "curveType": "YieldCurve",
+        "curveId": "GBP6M",
+        "recipeVariant": "structured_mapping",
+        "quotes": [],
+        "conventions": [],
+        "relatedCurveIds": []
+      },
+      {
+        "familyId": "yield_curves",
+        "curveType": "YieldCurve",
+        "curveId": "USD1D",
+        "recipeVariant": "structured_mapping",
+        "quotes": [],
+        "conventions": [],
+        "relatedCurveIds": []
+      }
+    ]
+  },
+  "reportConfiguration": {},
+  "records": [
+    {
+      "familyId": "default_curves",
+      "curveType": "DefaultCurve",
+      "xmlParent": "DefaultCurves",
+      "xmlTag": "DefaultCurve",
+      "curveId": "BANK_SR_EUR",
+      "description": "BANK SR CDS EUR",
+      "recipeVariant": "structured_mapping",
+      "dependencies": {
+        "quotes": [],
+        "conventions": [],
+        "relatedCurveIds": []
+      },
+      "definition": {
+        "Currency": "EUR",
+        "Type": "SpreadCDS",
+        "DiscountCurve": "Yield/EUR/EUR6M",
+        "DayCounter": "A365",
+        "RecoveryRate": "RECOVERY_RATE/RATE/BANK/SR/EUR",
+        "Quotes": {
+          "Quote": "CDS/CREDIT_SPREAD/BANK/SR/EUR/1Y"
+        },
+        "Conventions": "CDS-STANDARD-CONVENTIONS"
+      }
+    },
+    {
+      "familyId": "default_curves",
+      "curveType": "DefaultCurve",
+      "xmlParent": "DefaultCurves",
+      "xmlTag": "DefaultCurve",
+      "curveId": "CPTY_A_SR_EUR",
+      "description": "CPTY_A SR HR EUR",
+      "recipeVariant": "structured_mapping",
+      "dependencies": {
+        "quotes": [],
+        "conventions": [],
+        "relatedCurveIds": []
+      },
+      "definition": {
+        "Currency": "EUR",
+        "Type": "HazardRate",
+        "DiscountCurve": "",
+        "DayCounter": "A365",
+        "RecoveryRate": "RECOVERY_RATE/RATE/CPTY_A/SR/EUR",
+        "Quotes": {
+          "Quote": "HAZARD_RATE/RATE/CPTY_A/SR/EUR/1Y"
+        },
+        "Conventions": "CDS-STANDARD-CONVENTIONS"
+      }
+    },
+    {
+      "familyId": "fx_volatilities",
+      "curveType": "FXVolatility",
+      "xmlParent": "FXVolatilities",
+      "xmlTag": "FXVolatility",
+      "curveId": "EURGBP",
+      "description": "",
+      "recipeVariant": "structured_mapping",
+      "dependencies": {
+        "quotes": [],
+        "conventions": [],
+        "relatedCurveIds": []
+      },
+      "definition": {
+        "Dimension": "ATM",
+        "Expiries": "1Y",
+        "FXSpotID": "FX/EUR/GBP"
+      }
+    },
+    {
+      "familyId": "swaption_volatilities",
+      "curveType": "SwaptionVolatility",
+      "xmlParent": "SwaptionVolatilities",
+      "xmlTag": "SwaptionVolatility",
+      "curveId": "EUR_SWPTN",
+      "description": "EUR lognormal swaption volatilities",
+      "recipeVariant": "structured_mapping",
+      "dependencies": {
+        "quotes": [],
+        "conventions": [],
+        "relatedCurveIds": []
+      },
+      "definition": {
+        "Dimension": "ATM",
+        "VolatilityType": "Lognormal",
+        "Extrapolation": "Flat",
+        "DayCounter": "Actual/365 (Fixed)",
+        "Calendar": "TARGET",
+        "BusinessDayConvention": "Following",
+        "OptionTenors": "1Y",
+        "SwapTenors": "1Y",
+        "ShortSwapIndexBase": "EUR-CMS-1Y",
+        "SwapIndexBase": "EUR-CMS-30Y"
+      }
+    },
+    {
+      "familyId": "swaption_volatilities",
+      "curveType": "SwaptionVolatility",
+      "xmlParent": "SwaptionVolatilities",
+      "xmlTag": "SwaptionVolatility",
+      "curveId": "GBP_SWPTN",
+      "description": "GBP normal swaption volatilities",
+      "recipeVariant": "structured_mapping",
+      "dependencies": {
+        "quotes": [],
+        "conventions": [],
+        "relatedCurveIds": []
+      },
+      "definition": {
+        "Dimension": "ATM",
+        "VolatilityType": "Normal",
+        "Extrapolation": "Flat",
+        "DayCounter": "Actual/365 (Fixed)",
+        "Calendar": "UK",
+        "BusinessDayConvention": "Following",
+        "OptionTenors": "1Y",
+        "SwapTenors": "1Y",
+        "ShortSwapIndexBase": "GBP-CMS-1Y",
+        "SwapIndexBase": "GBP-CMS-30Y"
+      }
+    },
+    {
+      "familyId": "yield_curves",
+      "curveType": "YieldCurve",
+      "xmlParent": "YieldCurves",
+      "xmlTag": "YieldCurve",
+      "curveId": "EUR1D",
+      "description": "EUR discount curve bootstrapped from EONIA swap rates",
+      "recipeVariant": "structured_mapping",
+      "dependencies": {
+        "quotes": [],
+        "conventions": [],
+        "relatedCurveIds": []
+      },
+      "definition": {
+        "Currency": "EUR",
+        "DiscountCurve": "",
+        "Segments": {
+          "Direct": {
+            "Type": "Zero",
+            "Quotes": {
+              "Quote": "ZERO/RATE/EUR/EUR1D/A360/1Y"
+            },
+            "Conventions": "EUR-ZERO-CONVENTIONS-TENOR-BASED"
+          }
+        },
+        "InterpolationVariable": "Discount",
+        "InterpolationMethod": "LogLinear",
+        "YieldCurveDayCounter": "A360",
+        "Tolerance": "0.000000000001"
+      }
+    },
+    {
+      "familyId": "yield_curves",
+      "curveType": "YieldCurve",
+      "xmlParent": "YieldCurves",
+      "xmlTag": "YieldCurve",
+      "curveId": "EUR6M",
+      "description": "",
+      "recipeVariant": "structured_mapping",
+      "dependencies": {
+        "quotes": [],
+        "conventions": [],
+        "relatedCurveIds": []
+      },
+      "definition": {
+        "Currency": "EUR",
+        "DiscountCurve": "",
+        "Segments": {
+          "Direct": {
+            "Type": "Zero",
+            "Quotes": {
+              "Quote": "ZERO/RATE/EUR/EUR6M/A360/1Y"
+            },
+            "Conventions": "EUR-ZERO-CONVENTIONS-TENOR-BASED"
+          }
+        },
+        "InterpolationVariable": "Discount",
+        "InterpolationMethod": "LogLinear",
+        "YieldCurveDayCounter": "A360"
+      }
+    },
+    {
+      "familyId": "yield_curves",
+      "curveType": "YieldCurve",
+      "xmlParent": "YieldCurves",
+      "xmlTag": "YieldCurve",
+      "curveId": "GBP1D",
+      "description": "",
+      "recipeVariant": "structured_mapping",
+      "dependencies": {
+        "quotes": [],
+        "conventions": [],
+        "relatedCurveIds": []
+      },
+      "definition": {
+        "Currency": "GBP",
+        "DiscountCurve": "",
+        "Segments": {
+          "Direct": {
+            "Type": "Zero",
+            "Quotes": {
+              "Quote": "ZERO/RATE/GBP/GBP1D/A365F/1Y"
+            },
+            "Conventions": "GBP-ZERO-CONVENTIONS-TENOR-BASED"
+          }
+        }
+      }
+    },
+    {
+      "familyId": "yield_curves",
+      "curveType": "YieldCurve",
+      "xmlParent": "YieldCurves",
+      "xmlTag": "YieldCurve",
+      "curveId": "GBP6M",
+      "description": "",
+      "recipeVariant": "structured_mapping",
+      "dependencies": {
+        "quotes": [],
+        "conventions": [],
+        "relatedCurveIds": []
+      },
+      "definition": {
+        "Currency": "GBP",
+        "DiscountCurve": "",
+        "Segments": {
+          "Direct": {
+            "Type": "Zero",
+            "Quotes": {
+              "Quote": "ZERO/RATE/GBP/GBP6M/A365F/1Y"
+            },
+            "Conventions": "GBP-ZERO-CONVENTIONS-TENOR-BASED"
+          }
+        }
+      }
+    },
+    {
+      "familyId": "yield_curves",
+      "curveType": "YieldCurve",
+      "xmlParent": "YieldCurves",
+      "xmlTag": "YieldCurve",
+      "curveId": "USD1D",
+      "description": "USD discount curve bootstrapped from FED FUNDS swap rates",
+      "recipeVariant": "structured_mapping",
+      "dependencies": {
+        "quotes": [],
+        "conventions": [],
+        "relatedCurveIds": []
+      },
+      "definition": {
+        "Currency": "USD",
+        "DiscountCurve": "USD1D",
+        "Segments": {
+          "Simple": [
+            {
+              "Type": "Deposit",
+              "Quotes": {
+                "Quote": "MM/RATE/USD/0D/1D"
+              },
+              "Conventions": "USD-FED-FUNDS-CONVENTIONS"
+            },
+            {
+              "Type": "OIS",
+              "Quotes": {
+                "Quote": [
+                  "IR_SWAP/RATE/USD/2D/1D/1M",
+                  "IR_SWAP/RATE/USD/2D/1D/3M",
+                  "IR_SWAP/RATE/USD/2D/1D/6M",
+                  "IR_SWAP/RATE/USD/2D/1D/9M",
+                  "IR_SWAP/RATE/USD/2D/1D/1Y",
+                  "IR_SWAP/RATE/USD/2D/1D/1Y3M",
+                  "IR_SWAP/RATE/USD/2D/1D/1Y6M",
+                  "IR_SWAP/RATE/USD/2D/1D/1Y9M",
+                  "IR_SWAP/RATE/USD/2D/1D/2Y",
+                  "IR_SWAP/RATE/USD/2D/1D/3Y",
+                  "IR_SWAP/RATE/USD/2D/1D/4Y",
+                  "IR_SWAP/RATE/USD/2D/1D/5Y",
+                  "IR_SWAP/RATE/USD/2D/1D/7Y",
+                  "IR_SWAP/RATE/USD/2D/1D/10Y",
+                  "IR_SWAP/RATE/USD/2D/1D/12Y",
+                  "IR_SWAP/RATE/USD/2D/1D/15Y",
+                  "IR_SWAP/RATE/USD/2D/1D/20Y",
+                  "IR_SWAP/RATE/USD/2D/1D/25Y",
+                  "IR_SWAP/RATE/USD/2D/1D/30Y"
+                ]
+              },
+              "Conventions": "USD-OIS-CONVENTIONS"
+            }
+          ]
+        },
+        "InterpolationVariable": "Discount",
+        "InterpolationMethod": "LogLinear",
+        "YieldCurveDayCounter": "A365",
+        "Tolerance": "0.000000000001"
+      }
+    }
+  ],
+  "sourceLineage": {
+    "curveSetPath": "examples/vre_python/notebooks/example_7/input_bundle/vre_simm2.6_1_d/runtime_policy/curve_set.toml",
+    "curveFamilyRegistryPath": "examples/vre_python/notebooks/example_7/input_bundle/vre_simm2.6_1_d/runtime_policy/curve_family_registry.yaml",
+    "curveBuildRecipesPath": "examples/vre_python/notebooks/example_7/input_bundle/vre_simm2.6_1_d/runtime_policy/curve_build_recipes.yaml"
+  },
+  "contentHash": "ccd6ba9ce97e3652b1d6ff733af0961b7e2aa80fa7dc583d2cc4a6a1d3deb3c3"
+}

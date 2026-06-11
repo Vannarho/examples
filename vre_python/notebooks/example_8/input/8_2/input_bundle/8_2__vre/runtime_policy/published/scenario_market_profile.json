@@ -1,0 +1,72 @@
+{
+  "version": "1.0.0",
+  "traceabilityRefs": {
+    "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+    "epic": "docs/architecture/scope_runtime_migration.yaml",
+    "spec": "docs/architecture/scope_runtime_migration.yaml",
+    "sourceXml": "vre_python/notebooks/example_8/input/8_2/simulation.xml"
+  },
+  "marketDefinitionText": "<Market>\n\t\t<BaseCurrency>EUR</BaseCurrency>\n\t\t<Currencies>\n\t\t\t<Currency>EUR</Currency>\n\t\t\t<Currency>USD</Currency>\n\t\t</Currencies>\n\t\t<YieldCurves>\n\t\t\t<Configuration curve=\"\">\n\t\t\t\t<Tenors>2W, 1M, 3M, 6M, 1Y, 2Y, 3Y, 5Y, 10Y, 15Y, 20Y, 30Y</Tenors>\n\t\t\t\t<Interpolation>LogLinear</Interpolation>\n\t\t\t\t<Extrapolation>FlatZero</Extrapolation>\n\t\t\t</Configuration>\n\t\t</YieldCurves>\n\t\t<FxRates>\n\t\t\t<CurrencyPairs>\n\t\t\t\t<CurrencyPair>USDEUR</CurrencyPair>\n\t\t\t</CurrencyPairs>\n\t\t</FxRates>\n\t\t<Indices>\n\t\t\t<Index>EUR-EONIA</Index>\n\t\t\t<Index>EUR-EURIBOR-3M</Index>\n\t\t\t<Index>EUR-EURIBOR-6M</Index>\n\t\t\t<Index>USD-FedFunds</Index>\n\t\t\t<Index>USD-LIBOR-3M</Index>\n\t\t\n      <Index>EUR-ESTER</Index>\n      <Index>USD-SOFR</Index></Indices>\n\t\t<CreditStates>\n\t\t\t<NumberOfFactors>0</NumberOfFactors>\n\t\t</CreditStates>\n\t\t<AggregationScenarioDataCreditStates>\n\t\t\t<NumberOfFactors>0</NumberOfFactors>\n\t\t</AggregationScenarioDataCreditStates>\n\t</Market>\n",
+  "marketDefinition": {
+    "BaseCurrency": "EUR",
+    "Currencies": {
+      "Currency": [
+        "EUR",
+        "USD"
+      ]
+    },
+    "YieldCurves": {
+      "Configuration": {
+        "_attributes": {
+          "curve": ""
+        },
+        "Tenors": "2W, 1M, 3M, 6M, 1Y, 2Y, 3Y, 5Y, 10Y, 15Y, 20Y, 30Y",
+        "Interpolation": "LogLinear",
+        "Extrapolation": "FlatZero"
+      }
+    },
+    "FxRates": {
+      "CurrencyPairs": {
+        "CurrencyPair": "USDEUR"
+      }
+    },
+    "Indices": {
+      "Index": [
+        "EUR-EONIA",
+        "EUR-EURIBOR-3M",
+        "EUR-EURIBOR-6M",
+        "USD-FedFunds",
+        "USD-LIBOR-3M",
+        "EUR-ESTER",
+        "USD-SOFR"
+      ]
+    },
+    "CreditStates": {
+      "NumberOfFactors": 0
+    },
+    "AggregationScenarioDataCreditStates": {
+      "NumberOfFactors": 0
+    },
+    "AggregationScenarioDataIndices": {
+      "Index": [
+        "EUR-ESTER",
+        "USD-SOFR"
+      ]
+    },
+    "DefaultCurves": {
+      "Names": {
+        "Name": [
+          "CPTY_A",
+          "PricerStaticDate"
+        ]
+      },
+      "Tenors": "1Y,2Y,3Y,5Y,10Y",
+      "SimulateSurvivalProbabilities": false,
+      "SimulateRecoveryRates": false,
+      "Calendars": {
+        "Calendar": "TARGET"
+      },
+      "Extrapolation": "FlatZero"
+    }
+  }
+}

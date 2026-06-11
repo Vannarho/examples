@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "1.0.0",
+  "seedVersion": "1.0.0",
+  "publishedAt": "examples/vre_python/notebooks/example_10/input/vre_sacva_cg_gpu.toml",
+  "contentHash": "d093a5f73fee9247b54f2365b0dd4310e6bb4ba1164e31c80afd118e9a6e665b",
+  "sourceLineage": {
+    "runtimePath": "examples/vre_python/notebooks/example_10/input_bundle/vre_sacva_cg_gpu/runtime_policy/pricing_runtime_pricingengine_gpu.toml",
+    "policyPath": "examples/vre_python/notebooks/example_10/input_bundle/vre_sacva_cg_gpu/runtime_policy/pricing_policy_pricingengine_gpu.yaml",
+    "generator": "tools/ci/publish_pricing_engine_contracts.py"
+  },
+  "pricingRuntime": {
+    "profileId": "pricingengine_gpu",
+    "allowedOverrides": []
+  },
+  "pricingPolicy": {
+    "profileId": "pricingengine_gpu",
+    "globalParameters": {},
+    "products": [
+      {
+        "productType": "Swap",
+        "model": {
+          "name": "CrossAssetModel",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "AMCCG",
+          "parameters": {}
+        }
+      },
+      {
+        "productType": "EquityOption",
+        "model": {
+          "name": "BlackScholesMerton",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "AnalyticEuropeanEngine",
+          "parameters": {}
+        }
+      },
+      {
+        "productType": "EquityBarrierOption",
+        "model": {
+          "name": "BlackScholesMerton",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "AnalyticBarrierEngine",
+          "parameters": {}
+        }
+      },
+      {
+        "productType": "ScriptedTrade",
+        "model": {
+          "name": "Generic",
+          "parameters": {
+            "BaseCcy": "EUR",
+            "BootstrapTolerance": "0.0001",
+            "EnforceBaseCcy": "false",
+            "FullDynamicFx": "false",
+            "FullDynamicIr": "false",
+            "GridCoarsening": "3M(1W),1Y(1M),5Y(3M),10Y(1Y),50Y(5Y)",
+            "IrReversion_EUR": "0.01",
+            "Model": "GaussianCam"
+          }
+        },
+        "engine": {
+          "name": "Generic",
+          "parameters": {
+            "BootstrapTolerance": "0.0001",
+            "Engine": "MC",
+            "ExternalComputeDevice": "OpenCL/Apple/Apple M4 Max",
+            "Interactive": "false",
+            "RegressionOrder": "6",
+            "Samples": "10000",
+            "Seed": "42",
+            "SequenceType": "MersenneTwister",
+            "StateGridPoints": "100",
+            "TimeStepsPerYear": "24",
+            "UseCG": "true",
+            "UseExternalComputeDevice": "true"
+          }
+        }
+      }
+    ]
+  }
+}

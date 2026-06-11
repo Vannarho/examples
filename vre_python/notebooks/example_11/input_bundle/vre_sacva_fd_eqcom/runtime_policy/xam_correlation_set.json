@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "1.0.0",
+  "seedVersion": "1.0.0",
+  "traceabilityRefs": {
+    "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+    "epic": "docs/architecture/scope_runtime_migration.yaml",
+    "sourceXml": "vre_python/notebooks/example_11/input/sacva_fd_eqcom/simulation.xml",
+    "spec": "docs/architecture/scope_runtime_migration.yaml"
+  },
+  "correlations": [
+    {
+      "factor1": {
+        "type": "IR",
+        "name": "EUR"
+      },
+      "factor2": {
+        "type": "IR",
+        "name": "USD"
+      },
+      "value": 0.3
+    },
+    {
+      "factor1": {
+        "type": "IR",
+        "name": "EUR"
+      },
+      "factor2": {
+        "type": "FX",
+        "name": "EURUSD"
+      },
+      "value": 0.0
+    },
+    {
+      "factor1": {
+        "type": "IR",
+        "name": "USD"
+      },
+      "factor2": {
+        "type": "FX",
+        "name": "EURUSD"
+      },
+      "value": 0.0
+    },
+    {
+      "factor1": {
+        "type": "COM",
+        "name": "WTI_USD"
+      },
+      "factor2": {
+        "type": "FX",
+        "name": "EURUSD"
+      },
+      "value": -0.2
+    },
+    {
+      "factor1": {
+        "type": "COM",
+        "name": "WTI_USD"
+      },
+      "factor2": {
+        "type": "IR",
+        "name": "USD"
+      },
+      "value": 0.1
+    }
+  ]
+}

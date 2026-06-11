@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1.0.0",
+  "seedVersion": "1.0.0",
+  "traceabilityRefs": {
+    "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+    "epic": "docs/architecture/scope_runtime_migration.yaml",
+    "sourceXml": "vre_python/notebooks/example_11/input/sacva_fd_eqcom/todaysmarket_fd_eqcom.xml",
+    "spec": "docs/architecture/scope_runtime_migration.yaml"
+  },
+  "viewId": "default",
+  "asOfDate": "2019-02-25"
+}

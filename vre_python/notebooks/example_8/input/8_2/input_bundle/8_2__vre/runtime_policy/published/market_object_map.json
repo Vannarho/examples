@@ -1,0 +1,146 @@
+{
+  "schemaVersion": "1.0.0",
+  "seedVersion": "1.0.0",
+  "traceabilityRefs": {
+    "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+    "epic": "docs/architecture/scope_runtime_migration.yaml",
+    "sourceXml": "vre_python/notebooks/example_8/input/8_2/todaysmarket.xml",
+    "spec": "docs/architecture/scope_runtime_migration.yaml"
+  },
+  "families": [
+    {
+      "familyId": "discount_curve__default",
+      "marketObject": "DiscountCurve"
+    },
+    {
+      "familyId": "discount_curve__inccy",
+      "marketObject": "DiscountCurve"
+    },
+    {
+      "familyId": "fx_spot__default",
+      "marketObject": "FXSpot"
+    },
+    {
+      "familyId": "index_forwarding_curve__default",
+      "marketObject": "IndexCurve"
+    },
+    {
+      "familyId": "yield_curve__default",
+      "marketObject": "YieldCurve"
+    }
+  ],
+  "entries": [
+    {
+      "familyId": "discount_curve__default",
+      "marketObject": "DiscountCurve",
+      "objectKey": "discount_curve:EUR",
+      "lookupKey": "EUR",
+      "objectId": "Yield/EUR/EUR-EONIA"
+    },
+    {
+      "familyId": "discount_curve__default",
+      "marketObject": "DiscountCurve",
+      "objectKey": "discount_curve:USD",
+      "lookupKey": "USD",
+      "objectId": "Yield/USD/USD-IN-EUR"
+    },
+    {
+      "familyId": "discount_curve__inccy",
+      "marketObject": "DiscountCurve",
+      "objectKey": "discount_curve:EUR",
+      "lookupKey": "EUR",
+      "objectId": "Yield/EUR/EUR-EONIA"
+    },
+    {
+      "familyId": "discount_curve__inccy",
+      "marketObject": "DiscountCurve",
+      "objectKey": "discount_curve:USD",
+      "lookupKey": "USD",
+      "objectId": "Yield/USD/USD-FedFunds"
+    },
+    {
+      "familyId": "fx_spot__default",
+      "marketObject": "FXSpot",
+      "objectKey": "fx_spot:EURUSD",
+      "lookupKey": "EURUSD",
+      "objectId": "FX/EUR/USD"
+    },
+    {
+      "familyId": "index_forwarding_curve__default",
+      "marketObject": "IndexCurve",
+      "objectKey": "index_forwarding_curve:EUR-EONIA",
+      "lookupKey": "EUR-EONIA",
+      "objectId": "Yield/EUR/EUR-EONIA"
+    },
+    {
+      "familyId": "index_forwarding_curve__default",
+      "marketObject": "IndexCurve",
+      "objectKey": "index_forwarding_curve:EUR-ESTER",
+      "lookupKey": "EUR-ESTER",
+      "objectId": "Yield/EUR/EUR-EONIA"
+    },
+    {
+      "familyId": "index_forwarding_curve__default",
+      "marketObject": "IndexCurve",
+      "objectKey": "index_forwarding_curve:EUR-EURIBOR-3M",
+      "lookupKey": "EUR-EURIBOR-3M",
+      "objectId": "Yield/EUR/EUR-EURIBOR-3M"
+    },
+    {
+      "familyId": "index_forwarding_curve__default",
+      "marketObject": "IndexCurve",
+      "objectKey": "index_forwarding_curve:EUR-EURIBOR-6M",
+      "lookupKey": "EUR-EURIBOR-6M",
+      "objectId": "Yield/EUR/EUR-EURIBOR-6M"
+    },
+    {
+      "familyId": "index_forwarding_curve__default",
+      "marketObject": "IndexCurve",
+      "objectKey": "index_forwarding_curve:USD-FedFunds",
+      "lookupKey": "USD-FedFunds",
+      "objectId": "Yield/USD/USD-FedFunds"
+    },
+    {
+      "familyId": "index_forwarding_curve__default",
+      "marketObject": "IndexCurve",
+      "objectKey": "index_forwarding_curve:USD-LIBOR-3M",
+      "lookupKey": "USD-LIBOR-3M",
+      "objectId": "Yield/USD/USD-LIBOR-3M"
+    },
+    {
+      "familyId": "index_forwarding_curve__default",
+      "marketObject": "IndexCurve",
+      "objectKey": "index_forwarding_curve:USD-LIBOR-6M",
+      "lookupKey": "USD-LIBOR-6M",
+      "objectId": "Yield/USD/USD-LIBOR-6M"
+    },
+    {
+      "familyId": "yield_curve__default",
+      "marketObject": "YieldCurve",
+      "objectKey": "yield_curve:EUR-IN-USD",
+      "lookupKey": "EUR-IN-USD",
+      "objectId": "Yield/EUR/EUR-IN-USD"
+    },
+    {
+      "familyId": "index_forwarding_curve__default",
+      "marketObject": "IndexCurve",
+      "objectKey": "index_forwarding_curve:USD-SOFR",
+      "lookupKey": "USD-SOFR",
+      "objectId": "Yield/USD/USD-FedFunds"
+    },
+    {
+      "familyId": "default_curve__default",
+      "marketObject": "DefaultCurve",
+      "objectKey": "default_curve:CPTY_A",
+      "lookupKey": "CPTY_A",
+      "objectId": "Default/EUR/CPTY_A"
+    },
+    {
+      "familyId": "default_curve__default",
+      "marketObject": "DefaultCurve",
+      "objectKey": "default_curve:PricerStaticDate",
+      "lookupKey": "PricerStaticDate",
+      "objectId": "Default/EUR/PricerStaticDate"
+    }
+  ]
+}

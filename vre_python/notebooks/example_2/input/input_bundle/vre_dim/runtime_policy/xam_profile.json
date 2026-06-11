@@ -1,0 +1,152 @@
+{
+  "schemaVersion": "1.0.0",
+  "seedVersion": "1.0.0",
+  "traceabilityRefs": {
+    "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+    "epic": "docs/architecture/scope_runtime_migration.yaml",
+    "sourceXml": "vre_python/notebooks/example_2/input/simulation_dim.xml",
+    "spec": "docs/architecture/scope_runtime_migration.yaml"
+  },
+  "domesticCurrency": "EUR",
+  "factors": {
+    "currencies": [
+      "EUR",
+      "USD",
+      "GBP"
+    ],
+    "equities": [],
+    "inflationIndices": [],
+    "creditNames": [],
+    "commodities": []
+  },
+  "bootstrapTolerance": 0.0001,
+  "integration": {
+    "discretization": "Exact",
+    "salvagingAlgorithm": "None",
+    "piecewise": true
+  },
+  "modelBlocks": {
+    "interestRate": [
+      {
+        "modelType": "LGM",
+        "key": "default",
+        "parameters": {
+          "CalibrationSwaptions": {
+            "Expiries": "1Y,2Y,3Y,4Y,5Y,7Y,10Y,12Y,15Y,20Y,25Y",
+            "Strikes": "",
+            "Terms": "29Y,28Y,27Y,26Y,25Y,23Y,20Y,18Y,15Y,10Y,5Y"
+          },
+          "CalibrationType": "Bootstrap",
+          "ParameterTransformation": {
+            "Scaling": 1.0,
+            "ShiftHorizon": 0.0
+          },
+          "Reversion": {
+            "Calibrate": false,
+            "InitialValue": 0.03,
+            "ParamType": "Constant",
+            "ReversionType": "HullWhite",
+            "TimeGrid": ""
+          },
+          "Volatility": {
+            "Calibrate": true,
+            "InitialValue": "0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01",
+            "ParamType": "Piecewise",
+            "TimeGrid": "1.0, 2.0, 3.0, 4.0, 5.0, 7.0, 10.0",
+            "VolatilityType": "Hagan"
+          }
+        }
+      },
+      {
+        "modelType": "LGM",
+        "key": "EUR",
+        "parameters": {
+          "CalibrationSwaptions": {
+            "Expiries": "1Y,2Y,3Y,4Y,5Y,7Y,10Y,12Y,15Y,20Y,25Y",
+            "Strikes": "",
+            "Terms": "29Y,28Y,27Y,26Y,25Y,23Y,20Y,18Y,15Y,10Y,5Y"
+          },
+          "CalibrationType": "Bootstrap",
+          "ParameterTransformation": {
+            "Scaling": 1.0,
+            "ShiftHorizon": 0.0
+          },
+          "Reversion": {
+            "Calibrate": false,
+            "InitialValue": 0.03,
+            "ParamType": "Constant",
+            "ReversionType": "HullWhite",
+            "TimeGrid": ""
+          },
+          "Volatility": {
+            "Calibrate": true,
+            "InitialValue": "0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01",
+            "ParamType": "Piecewise",
+            "TimeGrid": "1.0, 2.0, 3.0, 4.0, 5.0, 7.0, 10.0",
+            "VolatilityType": "Hagan"
+          }
+        }
+      }
+    ],
+    "foreignExchange": [
+      {
+        "modelType": "CrossCcyLGM",
+        "key": "default",
+        "parameters": {
+          "CalibrationOptions": {
+            "Expiries": "1Y, 2Y, 3Y, 4Y, 5Y, 10Y",
+            "Strikes": ""
+          },
+          "CalibrationType": "Bootstrap",
+          "DomesticCcy": "EUR",
+          "Sigma": {
+            "Calibrate": true,
+            "InitialValue": "0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1",
+            "ParamType": "Piecewise",
+            "TimeGrid": "1.0, 2.0, 3.0, 4.0, 5.0, 7.0, 10.0"
+          }
+        }
+      },
+      {
+        "modelType": "CrossCcyLGM",
+        "key": "USD",
+        "parameters": {
+          "CalibrationOptions": {
+            "Expiries": "1Y, 2Y, 3Y, 4Y, 5Y, 10Y",
+            "Strikes": ""
+          },
+          "CalibrationType": "Bootstrap",
+          "DomesticCcy": "EUR",
+          "Sigma": {
+            "Calibrate": true,
+            "InitialValue": "0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1",
+            "ParamType": "Piecewise",
+            "TimeGrid": "1.0, 2.0, 3.0, 4.0, 5.0, 7.0, 10.0"
+          }
+        }
+      },
+      {
+        "modelType": "CrossCcyLGM",
+        "key": "GBP",
+        "parameters": {
+          "CalibrationOptions": {
+            "Expiries": "1Y, 2Y, 3Y, 4Y, 5Y, 10Y",
+            "Strikes": ""
+          },
+          "CalibrationType": "Bootstrap",
+          "DomesticCcy": "EUR",
+          "Sigma": {
+            "Calibrate": true,
+            "InitialValue": "0.1, 0.1, 0.1, 0.1, 0.1, 0.1,  0.1, 0.1",
+            "ParamType": "Piecewise",
+            "TimeGrid": "1.0, 2.0, 3.0, 4.0, 5.0, 7.0, 10.0"
+          }
+        }
+      }
+    ],
+    "equity": [],
+    "inflation": [],
+    "credit": [],
+    "commodity": []
+  }
+}

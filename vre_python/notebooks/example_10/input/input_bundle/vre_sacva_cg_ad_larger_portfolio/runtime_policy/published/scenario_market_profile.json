@@ -1,0 +1,224 @@
+{
+  "version": "1.0.0",
+  "traceabilityRefs": {
+    "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+    "epic": "docs/architecture/scope_runtime_migration.yaml",
+    "spec": "docs/architecture/scope_runtime_migration.yaml",
+    "sourceXml": "vre_python/notebooks/example_10/input/sacva_larger_porfolio/sensimarket.xml"
+  },
+  "marketDefinitionText": "<Market>\n    <BaseCurrency>EUR</BaseCurrency>\n    <Currencies><Currency>EUR</Currency><Currency>HKD</Currency><Currency>USD</Currency></Currencies>\n    <FxRates><CurrencyPairs><CurrencyPair>EURHKD</CurrencyPair><CurrencyPair>EURUSD</CurrencyPair><CurrencyPair>HKDEUR</CurrencyPair><CurrencyPair>USDEUR</CurrencyPair></CurrencyPairs></FxRates>\n    <Equities><Name>HSCEI</Name><Name>SP5</Name><Name>SPX</Name><Name>SX5E</Name></Equities>\n    <EquityVolatilities><Name>SP5</Name><Name>SPX</Name><Name>SX5E</Name></EquityVolatilities>\n  \n    <Securities><Simulate>false</Simulate></Securities>\n    <Securities>\n      <Simulate>false</Simulate>\n      <Names>\n      <Name>SECURITY_2</Name>\n      <Name>SECURITY_3</Name>\n      <Name>SECURITY_4</Name>\n      <Name>SECURITY_5</Name>\n      </Names>\n    </Securities>\n  \n    <AggregationScenarioDataCurrencies><Currency>EUR</Currency><Currency>HKD</Currency><Currency>USD</Currency></AggregationScenarioDataCurrencies>\n    <Indices><Index>EUR-EONIA</Index><Index>EUR-ESTER</Index><Index>EUR-EURIBOR-12M</Index><Index>EUR-EURIBOR-1M</Index><Index>EUR-EURIBOR-3M</Index><Index>EUR-EURIBOR-6M</Index><Index>HKD-HIBOR-3M</Index><Index>USD-FedFunds</Index><Index>USD-LIBOR-1M</Index><Index>USD-LIBOR-3M</Index><Index>USD-LIBOR-6M</Index><Index>USD-SOFR</Index></Indices>\n    <AggregationScenarioDataIndices><Index>EUR-EONIA</Index><Index>EUR-ESTER</Index><Index>EUR-EURIBOR-12M</Index><Index>EUR-EURIBOR-1M</Index><Index>EUR-EURIBOR-3M</Index><Index>EUR-EURIBOR-6M</Index><Index>HKD-HIBOR-3M</Index><Index>USD-FedFunds</Index><Index>USD-LIBOR-1M</Index><Index>USD-LIBOR-3M</Index><Index>USD-LIBOR-6M</Index><Index>USD-SOFR</Index></AggregationScenarioDataIndices>\n    <SwapIndices><SwapIndex><Name>EUR-CMS-1Y</Name><DiscountingIndex>EUR-ESTER</DiscountingIndex></SwapIndex><SwapIndex><Name>EUR-CMS-30Y</Name><DiscountingIndex>EUR-ESTER</DiscountingIndex></SwapIndex><SwapIndex><Name>USD-CMS-1Y</Name><DiscountingIndex>USD-FedFunds</DiscountingIndex></SwapIndex><SwapIndex><Name>USD-CMS-30Y</Name><DiscountingIndex>USD-FedFunds</DiscountingIndex></SwapIndex><SwapIndex><Name>HKD-CMS-1Y</Name><DiscountingIndex>HKD-HIBOR-3M</DiscountingIndex></SwapIndex><SwapIndex><Name>HKD-CMS-30Y</Name><DiscountingIndex>HKD-HIBOR-3M</DiscountingIndex></SwapIndex></SwapIndices>\n    <FxVolatilities><Simulate>false</Simulate><CurrencyPairs><CurrencyPair>HKDEUR</CurrencyPair><CurrencyPair>USDEUR</CurrencyPair><CurrencyPair>EURUSD</CurrencyPair></CurrencyPairs><ReactionToTimeDecay>ForwardVariance</ReactionToTimeDecay><Expiries>6M,1Y,2Y,3Y,4Y,5Y,7Y,10Y</Expiries><Surface><StandardDeviations>0.0</StandardDeviations></Surface></FxVolatilities>\n    <AggregationScenarioDataSurvivalWeights><Name>BANK</Name><Name>CPTY_A</Name></AggregationScenarioDataSurvivalWeights>\n    <Commodities><Names><Name>COMDTY_GOLD_USD</Name><Name>COMDTY_WTI_USD</Name></Names>\n      <Tenors>1Y,2Y,3Y,5Y,10Y</Tenors>\n      <Simulate>false</Simulate></Commodities>\n    <CommodityVolatilities><ReactionToTimeDecay>ForwardVariance</ReactionToTimeDecay>\n      <Simulate>false</Simulate>\n      <Names><Name id=\"COMDTY_GOLD_USD\"><Expiries>1Y,5Y,10Y</Expiries></Name><Name id=\"COMDTY_WTI_USD\"><Expiries>1Y,5Y,10Y</Expiries><Moneyness>30.0,35.0,40.0,45.0,50.0,55.0,60.0</Moneyness></Name></Names></CommodityVolatilities>\n    <DefaultCurves><SimulateSurvivalProbabilities>true</SimulateSurvivalProbabilities>\n      <Tenors>6M,1Y,2Y,3Y,5Y,7Y,10Y</Tenors>\n      <Names><Name>BANK</Name><Name>CPTY_A</Name></Names></DefaultCurves></Market>\n",
+  "marketDefinition": {
+    "BaseCurrency": "EUR",
+    "Currencies": {
+      "Currency": [
+        "EUR",
+        "HKD",
+        "USD"
+      ]
+    },
+    "FxRates": {
+      "Simulate": true,
+      "CurrencyPairs": {
+        "CurrencyPair": [
+          "EURHKD",
+          "EURUSD",
+          "HKDEUR",
+          "USDEUR"
+        ]
+      }
+    },
+    "Equities": {
+      "SimulateDividendYield": true,
+      "Names": {
+        "Name": [
+          "SP5",
+          "SPX",
+          "SX5E",
+          "HSCEI"
+        ]
+      },
+      "DividendTenors": "6M,1Y,2Y",
+      "Name": [
+        "HSCEI",
+        "SP5",
+        "SPX",
+        "SX5E"
+      ]
+    },
+    "EquityVolatilities": {
+      "Names": {
+        "Name": [
+          "SP5",
+          "SPX",
+          "SX5E"
+        ]
+      },
+      "Simulate": true,
+      "ReactionToTimeDecay": "ForwardVariance",
+      "Expiries": "6M,1Y,5Y",
+      "Name": [
+        "SP5",
+        "SPX",
+        "SX5E"
+      ]
+    },
+    "Securities": {
+      "Simulate": false,
+      "Names": {
+        "Name": [
+          "SECURITY_2",
+          "SECURITY_3",
+          "SECURITY_4",
+          "SECURITY_5"
+        ]
+      }
+    },
+    "AggregationScenarioDataCurrencies": {
+      "Currency": [
+        "EUR",
+        "HKD",
+        "USD"
+      ]
+    },
+    "Indices": {
+      "Index": [
+        "EUR-EONIA",
+        "EUR-ESTER",
+        "EUR-EURIBOR-12M",
+        "EUR-EURIBOR-1M",
+        "EUR-EURIBOR-3M",
+        "EUR-EURIBOR-6M",
+        "HKD-HIBOR-3M",
+        "USD-FedFunds",
+        "USD-LIBOR-1M",
+        "USD-LIBOR-3M",
+        "USD-LIBOR-6M",
+        "USD-SOFR"
+      ]
+    },
+    "AggregationScenarioDataIndices": {
+      "Index": [
+        "EUR-EONIA",
+        "EUR-ESTER",
+        "EUR-EURIBOR-12M",
+        "EUR-EURIBOR-1M",
+        "EUR-EURIBOR-3M",
+        "EUR-EURIBOR-6M",
+        "HKD-HIBOR-3M",
+        "USD-FedFunds",
+        "USD-LIBOR-1M",
+        "USD-LIBOR-3M",
+        "USD-LIBOR-6M",
+        "USD-SOFR"
+      ]
+    },
+    "SwapIndices": {
+      "SwapIndex": [
+        {
+          "Name": "EUR-CMS-1Y",
+          "DiscountingIndex": "EUR-ESTER"
+        },
+        {
+          "Name": "EUR-CMS-30Y",
+          "DiscountingIndex": "EUR-ESTER"
+        },
+        {
+          "Name": "USD-CMS-1Y",
+          "DiscountingIndex": "USD-FedFunds"
+        },
+        {
+          "Name": "USD-CMS-30Y",
+          "DiscountingIndex": "USD-FedFunds"
+        },
+        {
+          "Name": "HKD-CMS-1Y",
+          "DiscountingIndex": "HKD-HIBOR-3M"
+        },
+        {
+          "Name": "HKD-CMS-30Y",
+          "DiscountingIndex": "HKD-HIBOR-3M"
+        }
+      ]
+    },
+    "FxVolatilities": {
+      "CurrencyPairs": {
+        "CurrencyPair": [
+          "HKDEUR",
+          "USDEUR",
+          "EURUSD"
+        ]
+      },
+      "Expiries": "6M,1Y,2Y,3Y,4Y,5Y,7Y,10Y",
+      "ReactionToTimeDecay": "ForwardVariance",
+      "Simulate": false,
+      "Surface": {
+        "StandardDeviations": "0.0"
+      }
+    },
+    "AggregationScenarioDataSurvivalWeights": {
+      "Name": [
+        "BANK",
+        "CPTY_A"
+      ]
+    },
+    "YieldCurves": {
+      "Configuration": [
+        {
+          "_attributes": {
+            "curve": "BOND_YIELD_EUR"
+          },
+          "Tenors": "5Y,10Y",
+          "Interpolation": "LogLinear",
+          "Extrapolation": true
+        }
+      ]
+    },
+    "Commodities": {
+      "Names": {
+        "Name": [
+          "COMDTY_GOLD_USD",
+          "COMDTY_WTI_USD"
+        ]
+      },
+      "Tenors": "1Y,2Y,3Y,5Y,10Y",
+      "Simulate": false
+    },
+    "CommodityVolatilities": {
+      "ReactionToTimeDecay": "ForwardVariance",
+      "Simulate": false,
+      "Names": {
+        "Name": [
+          {
+            "_attributes": {
+              "id": "COMDTY_GOLD_USD"
+            },
+            "Expiries": "1Y,5Y,10Y",
+            "Moneyness": 0.0
+          },
+          {
+            "_attributes": {
+              "id": "COMDTY_WTI_USD"
+            },
+            "Expiries": "1Y,5Y,10Y",
+            "Moneyness": "30.0,35.0,40.0,45.0,50.0,55.0,60.0"
+          }
+        ]
+      }
+    },
+    "DefaultCurves": {
+      "Names": {
+        "Name": [
+          "BANK",
+          "CPTY_A"
+        ]
+      },
+      "Tenors": "6M,1Y,2Y,3Y,5Y,7Y,10Y",
+      "SimulateSurvivalProbabilities": true,
+      "SimulateRecoveryRates": false,
+      "Calendars": {
+        "Calendar": "TARGET"
+      },
+      "Extrapolation": "FlatZero"
+    }
+  }
+}

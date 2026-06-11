@@ -1,0 +1,652 @@
+version: 1.0.0
+setId: curveconfig
+traceabilityRefs:
+  adr: docs/architecture/adr/0001-serialization-and-storage-format-standards.md
+  epic: docs/architecture/scope_runtime_migration.yaml
+  spec: docs/architecture/scope_runtime_migration.yaml
+  sourceXml: vre_python/notebooks/example_8/input/8_2/curveconfig.xml
+records:
+- familyId: yield_curves
+  curveId: EUR-EONIA
+  description: EUR discount curve bootstrapped from OIS swap rates
+  recipeVariant: structured_mapping
+  dependencies:
+    quotes: []
+    conventions: []
+    relatedCurveIds: []
+  definition:
+    Currency: EUR
+    DiscountCurve: EUR-EONIA
+    Segments:
+      Simple:
+      - Type: Deposit
+        Quotes:
+          Quote: MM/RATE/EUR/0D/1D
+        Conventions: EUR-ON-DEPOSIT
+      - Type: OIS
+        Quotes:
+          Quote:
+          - IR_SWAP/RATE/EUR/2D/1D/1W
+          - IR_SWAP/RATE/EUR/2D/1D/2W
+          - IR_SWAP/RATE/EUR/2D/1D/3W
+          - IR_SWAP/RATE/EUR/2D/1D/1M
+          - IR_SWAP/RATE/EUR/2D/1D/2M
+          - IR_SWAP/RATE/EUR/2D/1D/3M
+          - IR_SWAP/RATE/EUR/2D/1D/4M
+          - IR_SWAP/RATE/EUR/2D/1D/5M
+          - IR_SWAP/RATE/EUR/2D/1D/6M
+          - IR_SWAP/RATE/EUR/2D/1D/7M
+          - IR_SWAP/RATE/EUR/2D/1D/8M
+          - IR_SWAP/RATE/EUR/2D/1D/9M
+          - IR_SWAP/RATE/EUR/2D/1D/10M
+          - IR_SWAP/RATE/EUR/2D/1D/11M
+          - IR_SWAP/RATE/EUR/2D/1D/1Y
+          - IR_SWAP/RATE/EUR/2D/1D/15M
+          - IR_SWAP/RATE/EUR/2D/1D/18M
+          - IR_SWAP/RATE/EUR/2D/1D/21M
+          - IR_SWAP/RATE/EUR/2D/1D/2Y
+          - IR_SWAP/RATE/EUR/2D/1D/3Y
+          - IR_SWAP/RATE/EUR/2D/1D/4Y
+          - IR_SWAP/RATE/EUR/2D/1D/5Y
+          - IR_SWAP/RATE/EUR/2D/1D/6Y
+          - IR_SWAP/RATE/EUR/2D/1D/7Y
+          - IR_SWAP/RATE/EUR/2D/1D/8Y
+          - IR_SWAP/RATE/EUR/2D/1D/9Y
+          - IR_SWAP/RATE/EUR/2D/1D/10Y
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/EUR/2D/1D/11Y
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/EUR/2D/1D/12Y
+          - IR_SWAP/RATE/EUR/2D/1D/15Y
+          - IR_SWAP/RATE/EUR/2D/1D/20Y
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/EUR/2D/1D/25Y
+          - IR_SWAP/RATE/EUR/2D/1D/30Y
+        Conventions: EUR-OIS
+    InterpolationVariable: Discount
+    InterpolationMethod: LogLinear
+    YieldCurveDayCounter: A365
+    Tolerance: '0.0000000000010000'
+    Extrapolation: 'true'
+    BootstrapConfig:
+      Accuracy: '0.0000000000010000'
+      GlobalAccuracy: '0.0000000000010000'
+      DontThrow: 'false'
+      MaxAttempts: '5'
+      MaxFactor: '2'
+      MinFactor: '2'
+      DontThrowSteps: '10'
+- familyId: yield_curves
+  curveId: EUR-ESTER
+  description: ESTER curve as spread over Eonia
+  recipeVariant: structured_mapping
+  dependencies:
+    quotes: []
+    conventions: []
+    relatedCurveIds: []
+  definition:
+    Currency: EUR
+    DiscountCurve: ''
+    Segments:
+      ZeroSpread:
+        Type: Zero Spread
+        Quotes:
+          Quote:
+          - ZERO/YIELD_SPREAD/EUR/Ester_Eonia_Spread/A365/1D
+          - ZERO/YIELD_SPREAD/EUR/Ester_Eonia_Spread/A365/50Y
+        Conventions: EUR-ZERO-TENOR-BASED
+        ReferenceCurve: EUR-EONIA
+    InterpolationVariable: Discount
+    InterpolationMethod: LogLinear
+    YieldCurveDayCounter: A365
+    Tolerance: '0.0000000000010000'
+    Extrapolation: 'true'
+    BootstrapConfig:
+      Accuracy: '0.0000000000010000'
+      GlobalAccuracy: '0.0000000000010000'
+      DontThrow: 'false'
+      MaxAttempts: '5'
+      MaxFactor: '2'
+      MinFactor: '2'
+      DontThrowSteps: '10'
+- familyId: yield_curves
+  curveId: EUR-EURIBOR-3M
+  description: EUR EURIBOR 3M Index Curve
+  recipeVariant: structured_mapping
+  dependencies:
+    quotes: []
+    conventions: []
+    relatedCurveIds: []
+  definition:
+    Currency: EUR
+    DiscountCurve: EUR-EONIA
+    Segments:
+      Simple:
+      - Type: Deposit
+        Quotes:
+          Quote: MM/RATE/EUR/2D/3M
+        Conventions: EUR-DEPOSIT
+      - Type: FRA
+        Quotes:
+          Quote:
+          - FRA/RATE/EUR/1M/3M
+          - FRA/RATE/EUR/2M/3M
+          - FRA/RATE/EUR/3M/3M
+          - FRA/RATE/EUR/4M/3M
+          - FRA/RATE/EUR/5M/3M
+          - FRA/RATE/EUR/6M/3M
+          - FRA/RATE/EUR/7M/3M
+          - FRA/RATE/EUR/8M/3M
+          - FRA/RATE/EUR/9M/3M
+          - FRA/RATE/EUR/12M/3M
+          - _attributes:
+              optional: 'true'
+            _text: FRA/RATE/EUR/15M/3M
+          - _attributes:
+              optional: 'true'
+            _text: FRA/RATE/EUR/18M/3M
+        Conventions: EUR-3M-FRA
+        ProjectionCurve: EUR-EURIBOR-3M
+      TenorBasis:
+        Type: Tenor Basis Two Swaps
+        Quotes:
+          Quote:
+          - BASIS_SWAP/BASIS_SPREAD/3M/6M/EUR/2Y
+          - BASIS_SWAP/BASIS_SPREAD/3M/6M/EUR/3Y
+          - BASIS_SWAP/BASIS_SPREAD/3M/6M/EUR/4Y
+          - BASIS_SWAP/BASIS_SPREAD/3M/6M/EUR/5Y
+          - BASIS_SWAP/BASIS_SPREAD/3M/6M/EUR/6Y
+          - BASIS_SWAP/BASIS_SPREAD/3M/6M/EUR/7Y
+          - BASIS_SWAP/BASIS_SPREAD/3M/6M/EUR/8Y
+          - BASIS_SWAP/BASIS_SPREAD/3M/6M/EUR/9Y
+          - BASIS_SWAP/BASIS_SPREAD/3M/6M/EUR/10Y
+          - _attributes:
+              optional: 'true'
+            _text: BASIS_SWAP/BASIS_SPREAD/3M/6M/EUR/12Y
+          - _attributes:
+              optional: 'true'
+            _text: BASIS_SWAP/BASIS_SPREAD/3M/6M/EUR/15Y
+          - _attributes:
+              optional: 'true'
+            _text: BASIS_SWAP/BASIS_SPREAD/3M/6M/EUR/20Y
+          - _attributes:
+              optional: 'true'
+            _text: BASIS_SWAP/BASIS_SPREAD/3M/6M/EUR/25Y
+          - _attributes:
+              optional: 'true'
+            _text: BASIS_SWAP/BASIS_SPREAD/3M/6M/EUR/30Y
+        Conventions: EURIBOR-3M-6M-BASIS
+        ProjectionCurvePay: EUR-EURIBOR-6M
+        ProjectionCurveReceive: EUR-EURIBOR-3M
+    InterpolationVariable: Discount
+    InterpolationMethod: LogLinear
+    YieldCurveDayCounter: A365
+    Tolerance: '0.0000000000010000'
+    Extrapolation: 'true'
+    BootstrapConfig:
+      Accuracy: '0.0000000000010000'
+      GlobalAccuracy: '0.0000000000010000'
+      DontThrow: 'false'
+      MaxAttempts: '5'
+      MaxFactor: '2'
+      MinFactor: '2'
+      DontThrowSteps: '10'
+- familyId: yield_curves
+  curveId: EUR-EURIBOR-6M
+  description: EUR EURIBOR 6M Index Curve
+  recipeVariant: structured_mapping
+  dependencies:
+    quotes: []
+    conventions: []
+    relatedCurveIds: []
+  definition:
+    Currency: EUR
+    DiscountCurve: EUR-EONIA
+    Segments:
+      Simple:
+      - Type: Deposit
+        Quotes:
+          Quote: MM/RATE/EUR/2D/6M
+        Conventions: EUR-DEPOSIT
+      - Type: FRA
+        Quotes:
+          Quote:
+          - FRA/RATE/EUR/1M/6M
+          - FRA/RATE/EUR/2M/6M
+          - FRA/RATE/EUR/3M/6M
+          - FRA/RATE/EUR/4M/6M
+          - FRA/RATE/EUR/5M/6M
+          - FRA/RATE/EUR/6M/6M
+          - FRA/RATE/EUR/9M/6M
+          - FRA/RATE/EUR/12M/6M
+        Conventions: EUR-6M-FRA
+        ProjectionCurve: EUR-EURIBOR-6M
+      - Type: Swap
+        Quotes:
+          Quote:
+          - IR_SWAP/RATE/EUR/2D/6M/2Y
+          - IR_SWAP/RATE/EUR/2D/6M/3Y
+          - IR_SWAP/RATE/EUR/2D/6M/4Y
+          - IR_SWAP/RATE/EUR/2D/6M/5Y
+          - IR_SWAP/RATE/EUR/2D/6M/6Y
+          - IR_SWAP/RATE/EUR/2D/6M/7Y
+          - IR_SWAP/RATE/EUR/2D/6M/8Y
+          - IR_SWAP/RATE/EUR/2D/6M/9Y
+          - IR_SWAP/RATE/EUR/2D/6M/10Y
+          - IR_SWAP/RATE/EUR/2D/6M/12Y
+          - IR_SWAP/RATE/EUR/2D/6M/15Y
+          - IR_SWAP/RATE/EUR/2D/6M/20Y
+          - IR_SWAP/RATE/EUR/2D/6M/25Y
+          - IR_SWAP/RATE/EUR/2D/6M/30Y
+          - IR_SWAP/RATE/EUR/2D/6M/40Y
+          - IR_SWAP/RATE/EUR/2D/6M/50Y
+        Conventions: EUR-EURIBOR-6M-SWAP
+        ProjectionCurve: EUR-EURIBOR-6M
+    InterpolationVariable: Discount
+    InterpolationMethod: LogLinear
+    YieldCurveDayCounter: A365
+    Tolerance: '0.0000000000010000'
+    Extrapolation: 'true'
+    BootstrapConfig:
+      Accuracy: '0.0000000000010000'
+      GlobalAccuracy: '0.0000000000010000'
+      DontThrow: 'false'
+      MaxAttempts: '5'
+      MaxFactor: '2'
+      MinFactor: '2'
+      DontThrowSteps: '10'
+- familyId: yield_curves
+  curveId: EUR-IN-USD
+  description: EUR collateralised in USD discount curve
+  recipeVariant: structured_mapping
+  dependencies:
+    quotes: []
+    conventions: []
+    relatedCurveIds: []
+  definition:
+    Currency: EUR
+    DiscountCurve: ''
+    Segments:
+      CrossCurrency:
+      - Type: FX Forward
+        Quotes:
+          Quote:
+          - FXFWD/RATE/EUR/USD/1W
+          - FXFWD/RATE/EUR/USD/2W
+          - FXFWD/RATE/EUR/USD/3W
+          - FXFWD/RATE/EUR/USD/1M
+          - FXFWD/RATE/EUR/USD/2M
+          - FXFWD/RATE/EUR/USD/3M
+          - FXFWD/RATE/EUR/USD/4M
+          - FXFWD/RATE/EUR/USD/5M
+          - FXFWD/RATE/EUR/USD/6M
+          - FXFWD/RATE/EUR/USD/7M
+          - FXFWD/RATE/EUR/USD/8M
+          - FXFWD/RATE/EUR/USD/9M
+          - FXFWD/RATE/EUR/USD/10M
+          - FXFWD/RATE/EUR/USD/11M
+          - FXFWD/RATE/EUR/USD/1Y
+          - FXFWD/RATE/EUR/USD/15M
+          - FXFWD/RATE/EUR/USD/18M
+          - _attributes:
+              optional: 'true'
+            _text: FXFWD/RATE/EUR/USD/21M
+        Conventions: EUR-USD-FX
+        DiscountCurve: USD-FedFunds
+        SpotRate: FX/RATE/EUR/USD
+      - Type: Cross Currency Basis Swap
+        Quotes:
+          Quote:
+          - CC_BASIS_SWAP/BASIS_SPREAD/USD/3M/EUR/3M/2Y
+          - CC_BASIS_SWAP/BASIS_SPREAD/USD/3M/EUR/3M/3Y
+          - CC_BASIS_SWAP/BASIS_SPREAD/USD/3M/EUR/3M/4Y
+          - CC_BASIS_SWAP/BASIS_SPREAD/USD/3M/EUR/3M/5Y
+          - _attributes:
+              optional: 'true'
+            _text: CC_BASIS_SWAP/BASIS_SPREAD/USD/3M/EUR/3M/6Y
+          - CC_BASIS_SWAP/BASIS_SPREAD/USD/3M/EUR/3M/7Y
+          - _attributes:
+              optional: 'true'
+            _text: CC_BASIS_SWAP/BASIS_SPREAD/USD/3M/EUR/3M/8Y
+          - _attributes:
+              optional: 'true'
+            _text: CC_BASIS_SWAP/BASIS_SPREAD/USD/3M/EUR/3M/9Y
+          - CC_BASIS_SWAP/BASIS_SPREAD/USD/3M/EUR/3M/10Y
+          - _attributes:
+              optional: 'true'
+            _text: CC_BASIS_SWAP/BASIS_SPREAD/USD/3M/EUR/3M/12Y
+          - CC_BASIS_SWAP/BASIS_SPREAD/USD/3M/EUR/3M/15Y
+          - CC_BASIS_SWAP/BASIS_SPREAD/USD/3M/EUR/3M/20Y
+          - _attributes:
+              optional: 'true'
+            _text: CC_BASIS_SWAP/BASIS_SPREAD/USD/3M/EUR/3M/25Y
+          - CC_BASIS_SWAP/BASIS_SPREAD/USD/3M/EUR/3M/30Y
+        Conventions: EUR-USD-XCCY-BASIS
+        DiscountCurve: USD-FedFunds
+        SpotRate: FX/RATE/EUR/USD
+        ProjectionCurveDomestic: EUR-EURIBOR-3M
+        ProjectionCurveForeign: USD-LIBOR-3M
+    InterpolationVariable: Discount
+    InterpolationMethod: LogLinear
+    YieldCurveDayCounter: A365
+    Tolerance: '0.0000000000010000'
+    Extrapolation: 'true'
+    BootstrapConfig:
+      Accuracy: '0.0000000000010000'
+      GlobalAccuracy: '0.0000000000010000'
+      DontThrow: 'false'
+      MaxAttempts: '5'
+      MaxFactor: '2'
+      MinFactor: '2'
+      DontThrowSteps: '10'
+- familyId: yield_curves
+  curveId: USD-FedFunds
+  description: USD discount curve bootstrapped from FED FUNDS swap rates
+  recipeVariant: structured_mapping
+  dependencies:
+    quotes: []
+    conventions: []
+    relatedCurveIds: []
+  definition:
+    Currency: USD
+    DiscountCurve: USD-FedFunds
+    Segments:
+      Simple:
+      - Type: Deposit
+        Quotes:
+          Quote: MM/RATE/USD/0D/1D
+        Conventions: USD-ON-DEPOSIT
+      - Type: OIS
+        Quotes:
+          Quote:
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/USD/2D/1D/2W
+          - IR_SWAP/RATE/USD/2D/1D/1M
+          - IR_SWAP/RATE/USD/2D/1D/2M
+          - IR_SWAP/RATE/USD/2D/1D/3M
+          - IR_SWAP/RATE/USD/2D/1D/4M
+          - IR_SWAP/RATE/USD/2D/1D/5M
+          - IR_SWAP/RATE/USD/2D/1D/6M
+          - IR_SWAP/RATE/USD/2D/1D/7M
+          - IR_SWAP/RATE/USD/2D/1D/8M
+          - IR_SWAP/RATE/USD/2D/1D/9M
+          - IR_SWAP/RATE/USD/2D/1D/10M
+          - IR_SWAP/RATE/USD/2D/1D/11M
+          - IR_SWAP/RATE/USD/2D/1D/1Y
+        Conventions: USD-OIS
+      AverageOIS:
+        Type: Average OIS
+        Quotes:
+          CompositeQuote:
+          - SpreadQuote: BASIS_SWAP/BASIS_SPREAD/3M/1D/USD/2Y
+            RateQuote: IR_SWAP/RATE/USD/2D/3M/2Y
+          - SpreadQuote: BASIS_SWAP/BASIS_SPREAD/3M/1D/USD/3Y
+            RateQuote: IR_SWAP/RATE/USD/2D/3M/3Y
+          - SpreadQuote: BASIS_SWAP/BASIS_SPREAD/3M/1D/USD/4Y
+            RateQuote: IR_SWAP/RATE/USD/2D/3M/4Y
+          - SpreadQuote: BASIS_SWAP/BASIS_SPREAD/3M/1D/USD/5Y
+            RateQuote: IR_SWAP/RATE/USD/2D/3M/5Y
+          - SpreadQuote: BASIS_SWAP/BASIS_SPREAD/3M/1D/USD/7Y
+            RateQuote: IR_SWAP/RATE/USD/2D/3M/7Y
+          - SpreadQuote: BASIS_SWAP/BASIS_SPREAD/3M/1D/USD/10Y
+            RateQuote: IR_SWAP/RATE/USD/2D/3M/10Y
+          - SpreadQuote: BASIS_SWAP/BASIS_SPREAD/3M/1D/USD/15Y
+            RateQuote: IR_SWAP/RATE/USD/2D/3M/15Y
+          - SpreadQuote: BASIS_SWAP/BASIS_SPREAD/3M/1D/USD/20Y
+            RateQuote: IR_SWAP/RATE/USD/2D/3M/20Y
+          - SpreadQuote: BASIS_SWAP/BASIS_SPREAD/3M/1D/USD/30Y
+            RateQuote: IR_SWAP/RATE/USD/2D/3M/30Y
+        Conventions: USD-AVERAGE-OIS
+    InterpolationVariable: Discount
+    InterpolationMethod: LogLinear
+    YieldCurveDayCounter: A365F
+    Tolerance: '0.0000000000010000'
+    Extrapolation: 'true'
+    BootstrapConfig:
+      Accuracy: '0.0000000000010000'
+      GlobalAccuracy: '0.0000000000010000'
+      DontThrow: 'false'
+      MaxAttempts: '5'
+      MaxFactor: '2'
+      MinFactor: '2'
+      DontThrowSteps: '10'
+- familyId: yield_curves
+  curveId: USD-IN-EUR
+  description: USD collateralised in EUR discount curve
+  recipeVariant: structured_mapping
+  dependencies:
+    quotes: []
+    conventions: []
+    relatedCurveIds: []
+  definition:
+    Currency: USD
+    DiscountCurve: ''
+    Segments:
+      CrossCurrency:
+      - Type: FX Forward
+        Quotes:
+          Quote:
+          - FXFWD/RATE/EUR/USD/1W
+          - FXFWD/RATE/EUR/USD/2W
+          - FXFWD/RATE/EUR/USD/3W
+          - FXFWD/RATE/EUR/USD/1M
+          - FXFWD/RATE/EUR/USD/2M
+          - FXFWD/RATE/EUR/USD/3M
+          - FXFWD/RATE/EUR/USD/4M
+          - FXFWD/RATE/EUR/USD/5M
+          - FXFWD/RATE/EUR/USD/6M
+          - FXFWD/RATE/EUR/USD/7M
+          - FXFWD/RATE/EUR/USD/8M
+          - FXFWD/RATE/EUR/USD/9M
+          - FXFWD/RATE/EUR/USD/10M
+          - FXFWD/RATE/EUR/USD/11M
+          - FXFWD/RATE/EUR/USD/1Y
+          - FXFWD/RATE/EUR/USD/15M
+          - FXFWD/RATE/EUR/USD/18M
+          - _attributes:
+              optional: 'true'
+            _text: FXFWD/RATE/EUR/USD/21M
+        Conventions: EUR-USD-FX
+        DiscountCurve: EUR-EONIA
+        SpotRate: FX/RATE/EUR/USD
+      - Type: Cross Currency Basis Swap
+        Quotes:
+          Quote:
+          - CC_BASIS_SWAP/BASIS_SPREAD/USD/3M/EUR/3M/2Y
+          - CC_BASIS_SWAP/BASIS_SPREAD/USD/3M/EUR/3M/3Y
+          - CC_BASIS_SWAP/BASIS_SPREAD/USD/3M/EUR/3M/4Y
+          - CC_BASIS_SWAP/BASIS_SPREAD/USD/3M/EUR/3M/5Y
+          - _attributes:
+              optional: 'true'
+            _text: CC_BASIS_SWAP/BASIS_SPREAD/USD/3M/EUR/3M/6Y
+          - CC_BASIS_SWAP/BASIS_SPREAD/USD/3M/EUR/3M/7Y
+          - _attributes:
+              optional: 'true'
+            _text: CC_BASIS_SWAP/BASIS_SPREAD/USD/3M/EUR/3M/8Y
+          - _attributes:
+              optional: 'true'
+            _text: CC_BASIS_SWAP/BASIS_SPREAD/USD/3M/EUR/3M/9Y
+          - CC_BASIS_SWAP/BASIS_SPREAD/USD/3M/EUR/3M/10Y
+          - _attributes:
+              optional: 'true'
+            _text: CC_BASIS_SWAP/BASIS_SPREAD/USD/3M/EUR/3M/12Y
+          - CC_BASIS_SWAP/BASIS_SPREAD/USD/3M/EUR/3M/15Y
+          - CC_BASIS_SWAP/BASIS_SPREAD/USD/3M/EUR/3M/20Y
+          - _attributes:
+              optional: 'true'
+            _text: CC_BASIS_SWAP/BASIS_SPREAD/USD/3M/EUR/3M/25Y
+          - CC_BASIS_SWAP/BASIS_SPREAD/USD/3M/EUR/3M/30Y
+        Conventions: EUR-USD-XCCY-BASIS
+        DiscountCurve: EUR-EONIA
+        SpotRate: FX/RATE/EUR/USD
+        ProjectionCurveDomestic: USD-LIBOR-3M
+        ProjectionCurveForeign: EUR-EURIBOR-3M
+    InterpolationVariable: Discount
+    InterpolationMethod: LogLinear
+    YieldCurveDayCounter: A365
+    Tolerance: '0.0000000000010000'
+    Extrapolation: 'true'
+    BootstrapConfig:
+      Accuracy: '0.0000000000010000'
+      GlobalAccuracy: '0.0000000000010000'
+      DontThrow: 'false'
+      MaxAttempts: '5'
+      MaxFactor: '2'
+      MinFactor: '2'
+      DontThrowSteps: '10'
+- familyId: yield_curves
+  curveId: USD-LIBOR-3M
+  description: USD LIBOR 3M Index Curve
+  recipeVariant: structured_mapping
+  dependencies:
+    quotes: []
+    conventions: []
+    relatedCurveIds: []
+  definition:
+    Currency: USD
+    DiscountCurve: USD-FedFunds
+    Segments:
+      Simple:
+      - Type: Deposit
+        Quotes:
+          Quote: MM/RATE/USD/2D/3M
+        Conventions: USD-DEPOSIT
+      - Type: FRA
+        Quotes:
+          Quote:
+          - FRA/RATE/USD/1M/3M
+          - FRA/RATE/USD/2M/3M
+          - FRA/RATE/USD/3M/3M
+          - FRA/RATE/USD/4M/3M
+          - FRA/RATE/USD/5M/3M
+          - FRA/RATE/USD/6M/3M
+          - FRA/RATE/USD/7M/3M
+          - FRA/RATE/USD/8M/3M
+          - FRA/RATE/USD/9M/3M
+        Conventions: USD-3M-FRA
+        ProjectionCurve: USD-LIBOR-3M
+      - Type: Swap
+        Quotes:
+          Quote:
+          - IR_SWAP/RATE/USD/2D/3M/2Y
+          - IR_SWAP/RATE/USD/2D/3M/3Y
+          - IR_SWAP/RATE/USD/2D/3M/4Y
+          - IR_SWAP/RATE/USD/2D/3M/5Y
+          - IR_SWAP/RATE/USD/2D/3M/6Y
+          - IR_SWAP/RATE/USD/2D/3M/7Y
+          - IR_SWAP/RATE/USD/2D/3M/8Y
+          - IR_SWAP/RATE/USD/2D/3M/9Y
+          - IR_SWAP/RATE/USD/2D/3M/10Y
+          - IR_SWAP/RATE/USD/2D/3M/12Y
+          - IR_SWAP/RATE/USD/2D/3M/15Y
+          - IR_SWAP/RATE/USD/2D/3M/20Y
+          - IR_SWAP/RATE/USD/2D/3M/25Y
+          - IR_SWAP/RATE/USD/2D/3M/30Y
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/USD/2D/3M/40Y
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/USD/2D/3M/50Y
+        Conventions: USD-LIBOR-3M-SWAP
+        ProjectionCurve: USD-LIBOR-3M
+    InterpolationVariable: Discount
+    InterpolationMethod: LogLinear
+    YieldCurveDayCounter: A365
+    Tolerance: '0.0000000000010000'
+    Extrapolation: 'true'
+    BootstrapConfig:
+      Accuracy: '0.0000000000010000'
+      GlobalAccuracy: '0.0000000000010000'
+      DontThrow: 'false'
+      MaxAttempts: '5'
+      MaxFactor: '2'
+      MinFactor: '2'
+      DontThrowSteps: '10'
+- familyId: yield_curves
+  curveId: USD-LIBOR-6M
+  description: USD LIBOR 6M Index Curve
+  recipeVariant: structured_mapping
+  dependencies:
+    quotes: []
+    conventions: []
+    relatedCurveIds: []
+  definition:
+    Currency: USD
+    DiscountCurve: USD-FedFunds
+    Segments:
+      Simple:
+      - Type: Deposit
+        Quotes:
+          Quote: MM/RATE/USD/2D/6M
+        Conventions: USD-DEPOSIT
+      - Type: FRA
+        Quotes:
+          Quote:
+          - FRA/RATE/USD/1M/6M
+          - FRA/RATE/USD/2M/6M
+          - FRA/RATE/USD/3M/6M
+          - FRA/RATE/USD/4M/6M
+          - FRA/RATE/USD/5M/6M
+          - FRA/RATE/USD/6M/6M
+          - FRA/RATE/USD/9M/6M
+          - FRA/RATE/USD/12M/6M
+        Conventions: USD-6M-FRA
+        ProjectionCurve: USD-LIBOR-6M
+      TenorBasis:
+        Type: Tenor Basis Swap
+        Quotes:
+          Quote:
+          - BASIS_SWAP/BASIS_SPREAD/3M/6M/USD/2Y
+          - BASIS_SWAP/BASIS_SPREAD/3M/6M/USD/3Y
+          - BASIS_SWAP/BASIS_SPREAD/3M/6M/USD/4Y
+          - BASIS_SWAP/BASIS_SPREAD/3M/6M/USD/5Y
+          - _attributes:
+              optional: 'true'
+            _text: BASIS_SWAP/BASIS_SPREAD/3M/6M/USD/6Y
+          - BASIS_SWAP/BASIS_SPREAD/3M/6M/USD/7Y
+          - _attributes:
+              optional: 'true'
+            _text: BASIS_SWAP/BASIS_SPREAD/3M/6M/USD/8Y
+          - _attributes:
+              optional: 'true'
+            _text: BASIS_SWAP/BASIS_SPREAD/3M/6M/USD/9Y
+          - BASIS_SWAP/BASIS_SPREAD/3M/6M/USD/10Y
+          - _attributes:
+              optional: 'true'
+            _text: BASIS_SWAP/BASIS_SPREAD/3M/6M/USD/11Y
+          - _attributes:
+              optional: 'true'
+            _text: BASIS_SWAP/BASIS_SPREAD/3M/6M/USD/12Y
+          - _attributes:
+              optional: 'true'
+            _text: BASIS_SWAP/BASIS_SPREAD/3M/6M/USD/15Y
+          - _attributes:
+              optional: 'true'
+            _text: BASIS_SWAP/BASIS_SPREAD/3M/6M/USD/20Y
+          - _attributes:
+              optional: 'true'
+            _text: BASIS_SWAP/BASIS_SPREAD/3M/6M/USD/25Y
+          - _attributes:
+              optional: 'true'
+            _text: BASIS_SWAP/BASIS_SPREAD/3M/6M/USD/30Y
+        Conventions: USD-LIBOR-3M-6M-BASIS
+        ProjectionCurvePay: USD-LIBOR-6M
+        ProjectionCurveReceive: USD-LIBOR-3M
+    InterpolationVariable: Discount
+    InterpolationMethod: LogLinear
+    YieldCurveDayCounter: A365
+    Tolerance: '0.0000000000010000'
+    Extrapolation: 'true'
+    BootstrapConfig:
+      Accuracy: '0.0000000000010000'
+      GlobalAccuracy: '0.0000000000010000'
+      DontThrow: 'false'
+      MaxAttempts: '5'
+      MaxFactor: '2'
+      MinFactor: '2'
+      DontThrowSteps: '10'

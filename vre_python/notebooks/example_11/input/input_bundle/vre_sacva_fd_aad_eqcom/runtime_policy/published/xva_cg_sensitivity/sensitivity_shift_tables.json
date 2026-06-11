@@ -1,0 +1,342 @@
+{
+  "schemaVersion": "1.0.0",
+  "seedVersion": "1.0.0",
+  "traceabilityRefs": {
+    "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+    "epic": "docs/architecture/scope_runtime_migration.yaml",
+    "sourceXml": "vre_python/notebooks/example_11/input/sacva_fd_eqcom/xvasensiconfig.xml",
+    "spec": "docs/architecture/scope_runtime_migration.yaml"
+  },
+  "profileId": "xvasensiconfig",
+  "families": {
+    "commodityCurves": [
+      {
+        "name": "COMDTY_WTI_USD",
+        "shiftType": "Relative",
+        "shiftSize": 0.01,
+        "shiftScheme": "Forward",
+        "shiftTenors": [
+          "1Y",
+          "5Y",
+          "10Y"
+        ],
+        "currency": "USD"
+      }
+    ],
+    "commodityVolatilities": [
+      {
+        "name": "COMDTY_WTI_USD",
+        "shiftType": "Relative",
+        "shiftSize": 0.01,
+        "shiftExpiries": [
+          "1Y",
+          "5Y",
+          "10Y"
+        ],
+        "shiftStrikes": [
+          0.0,
+          1.0
+        ]
+      }
+    ],
+    "creditCurves": [
+      {
+        "name": "BANK",
+        "shiftType": "Absolute",
+        "shiftSize": 0.0001,
+        "shiftTenors": [
+          "6M",
+          "1Y",
+          "5Y"
+        ],
+        "currency": "USD"
+      },
+      {
+        "name": "CPTY_A",
+        "shiftType": "Absolute",
+        "shiftSize": 0.0001,
+        "shiftTenors": [
+          "6M",
+          "1Y",
+          "5Y"
+        ],
+        "currency": "USD"
+      }
+    ],
+    "discountCurves": [
+      {
+        "ccy": "EUR",
+        "shiftType": "Absolute",
+        "shiftSize": 0.0001,
+        "shiftTenors": [
+          "1Y",
+          "5Y"
+        ],
+        "parConversion": {
+          "instruments": [
+            "OIS",
+            "OIS"
+          ],
+          "singleCurve": true,
+          "conventions": {
+            "DEP": "EUR-ON-DEPOSIT-ESTER",
+            "OIS": "EUR-ESTER-OIS"
+          }
+        }
+      },
+      {
+        "ccy": "USD",
+        "shiftType": "Absolute",
+        "shiftSize": 0.0001,
+        "shiftTenors": [
+          "1Y",
+          "5Y"
+        ],
+        "parConversion": {
+          "instruments": [
+            "OIS",
+            "OIS"
+          ],
+          "singleCurve": true,
+          "conventions": {
+            "DEP": "USD-ON-SOFR-DEPOSIT",
+            "OIS": "USD-SOFR-OIS"
+          }
+        }
+      }
+    ],
+    "dividendYieldCurves": [
+      {
+        "equity": "SP5",
+        "shiftType": "Absolute",
+        "shiftSize": 1e-06,
+        "shiftScheme": "Forward",
+        "shiftTenors": [
+          "6M",
+          "1Y",
+          "2Y"
+        ]
+      }
+    ],
+    "equitySpots": [
+      {
+        "equity": "SP5",
+        "shiftType": "Relative",
+        "shiftSize": 0.01,
+        "shiftScheme": "Forward"
+      }
+    ],
+    "equityVolatilities": [
+      {
+        "equity": "SP5",
+        "shiftType": "Relative",
+        "shiftSize": 0.01,
+        "shiftExpiries": [
+          "6M",
+          "1Y",
+          "5Y"
+        ],
+        "shiftStrikes": [
+          0.0
+        ]
+      }
+    ],
+    "fxSpots": [
+      {
+        "ccypair": "EURUSD",
+        "shiftType": "Relative",
+        "shiftSize": 0.01,
+        "shiftScheme": "Forward"
+      }
+    ],
+    "fxVolatilities": [],
+    "indexCurves": [
+      {
+        "index": "EUR-ESTER",
+        "shiftType": "Absolute",
+        "shiftSize": 0.0001,
+        "shiftTenors": [
+          "1Y",
+          "5Y"
+        ],
+        "parConversion": {
+          "instruments": [
+            "DEP",
+            "DEP",
+            "DEP",
+            "DEP",
+            "OIS",
+            "OIS",
+            "OIS",
+            "OIS",
+            "OIS",
+            "OIS",
+            "OIS",
+            "OIS"
+          ],
+          "singleCurve": true,
+          "conventions": {
+            "DEP": "EUR-ON-DEPOSIT-ESTER",
+            "OIS": "EUR-ESTER-OIS"
+          }
+        }
+      },
+      {
+        "index": "EUR-EURIBOR-3M",
+        "shiftType": "Absolute",
+        "shiftSize": 0.0001,
+        "shiftTenors": [
+          "1Y",
+          "5Y"
+        ],
+        "parConversion": {
+          "instruments": [
+            "DEP",
+            "DEP",
+            "DEP",
+            "DEP",
+            "IRS",
+            "IRS",
+            "IRS",
+            "IRS",
+            "IRS",
+            "IRS",
+            "IRS",
+            "IRS"
+          ],
+          "singleCurve": false,
+          "conventions": {
+            "DEP": "EUR-DEPOSIT",
+            "IRS": "EUR-EURIBOR-3M-SWAP"
+          }
+        }
+      },
+      {
+        "index": "EUR-EURIBOR-6M",
+        "shiftType": "Absolute",
+        "shiftSize": 0.0001,
+        "shiftTenors": [
+          "1Y",
+          "5Y"
+        ],
+        "parConversion": {
+          "instruments": [
+            "DEP",
+            "DEP",
+            "DEP",
+            "DEP",
+            "IRS",
+            "IRS",
+            "IRS",
+            "IRS",
+            "IRS",
+            "IRS",
+            "IRS",
+            "IRS"
+          ],
+          "singleCurve": false,
+          "conventions": {
+            "DEP": "EUR-DEPOSIT",
+            "IRS": "EUR-EURIBOR-6M-SWAP"
+          }
+        }
+      },
+      {
+        "index": "USD-FedFunds",
+        "shiftType": "Absolute",
+        "shiftSize": 0.0001,
+        "shiftTenors": [
+          "1Y",
+          "5Y"
+        ],
+        "parConversion": {
+          "instruments": [
+            "DEP",
+            "DEP",
+            "DEP",
+            "DEP",
+            "OIS",
+            "OIS",
+            "OIS",
+            "OIS",
+            "OIS",
+            "OIS",
+            "OIS",
+            "OIS"
+          ],
+          "singleCurve": true,
+          "conventions": {
+            "DEP": "USD-ON-SOFR-DEPOSIT",
+            "OIS": "USD-SOFR-OIS"
+          }
+        }
+      },
+      {
+        "index": "USD-SOFR",
+        "shiftType": "Absolute",
+        "shiftSize": 0.0001,
+        "shiftTenors": [
+          "1Y",
+          "5Y"
+        ],
+        "parConversion": {
+          "instruments": [
+            "DEP",
+            "DEP",
+            "DEP",
+            "DEP",
+            "OIS",
+            "OIS",
+            "OIS",
+            "OIS",
+            "OIS",
+            "OIS",
+            "OIS",
+            "OIS"
+          ],
+          "singleCurve": true,
+          "conventions": {
+            "DEP": "USD-ON-SOFR-DEPOSIT",
+            "OIS": "USD-SOFR-OIS"
+          }
+        }
+      }
+    ],
+    "swaptionVolatilities": [
+      {
+        "key": "EUR",
+        "shiftType": "Absolute",
+        "shiftSize": 1e-06,
+        "shiftExpiries": [
+          "1Y",
+          "2Y",
+          "3Y",
+          "4Y",
+          "5Y",
+          "7Y",
+          "10Y",
+          "12Y",
+          "15Y",
+          "20Y",
+          "30Y"
+        ],
+        "shiftStrikes": [
+          0.0
+        ],
+        "shiftTerms": [
+          "1Y",
+          "2Y",
+          "3Y",
+          "4Y",
+          "5Y",
+          "7Y",
+          "10Y",
+          "12Y",
+          "15Y",
+          "20Y",
+          "30Y"
+        ]
+      }
+    ]
+  }
+}

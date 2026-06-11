@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "1.0.0",
+  "seedVersion": "1.0.0",
+  "traceabilityRefs": {
+    "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+    "epic": "docs/architecture/scope_runtime_migration.yaml",
+    "sourceXml": "vre_python/notebooks/example_10/input/sacva_larger_porfolio/referencedata.xml",
+    "spec": "docs/architecture/scope_runtime_migration.yaml"
+  },
+  "records": [
+    {
+      "referenceId": "COMDTY_GOLD_USD",
+      "validFrom": "1900-01-01",
+      "type": "Commodity",
+      "payloadRoot": "CommodityReferenceData",
+      "metadata": {},
+      "payloadXml": "<CommodityReferenceData><SubCategory>Metals</SubCategory></CommodityReferenceData>"
+    },
+    {
+      "referenceId": "COMDTY_WTI_USD",
+      "validFrom": "1900-01-01",
+      "type": "Commodity",
+      "payloadRoot": "CommodityReferenceData",
+      "metadata": {},
+      "payloadXml": "<CommodityReferenceData><SubCategory>Energy</SubCategory></CommodityReferenceData>"
+    },
+    {
+      "referenceId": "COMDTY_GOLD_USD",
+      "validFrom": "1900-01-01",
+      "type": "CommodityIndex",
+      "payloadRoot": "CommodityIndexReferenceData",
+      "metadata": {},
+      "payloadXml": "<CommodityIndexReferenceData><Underlying><Name>COMDTY_GOLD_USD</Name><Weight>1</Weight></Underlying></CommodityIndexReferenceData>"
+    },
+    {
+      "referenceId": "COMM-COMDTY_GOLD_USD",
+      "validFrom": "1900-01-01",
+      "type": "CommodityIndex",
+      "payloadRoot": "CommodityIndexReferenceData",
+      "metadata": {},
+      "payloadXml": "<CommodityIndexReferenceData><Underlying><Name>COMDTY_GOLD_USD</Name><Weight>1</Weight></Underlying></CommodityIndexReferenceData>"
+    },
+    {
+      "referenceId": "COMDTY_WTI_USD",
+      "validFrom": "1900-01-01",
+      "type": "CommodityIndex",
+      "payloadRoot": "CommodityIndexReferenceData",
+      "metadata": {},
+      "payloadXml": "<CommodityIndexReferenceData><Underlying><Name>COMDTY_WTI_USD</Name><Weight>1</Weight></Underlying></CommodityIndexReferenceData>"
+    },
+    {
+      "referenceId": "COMM-COMDTY_WTI_USD",
+      "validFrom": "1900-01-01",
+      "type": "CommodityIndex",
+      "payloadRoot": "CommodityIndexReferenceData",
+      "metadata": {},
+      "payloadXml": "<CommodityIndexReferenceData><Underlying><Name>COMDTY_WTI_USD</Name><Weight>1</Weight></Underlying></CommodityIndexReferenceData>"
+    }
+  ]
+}

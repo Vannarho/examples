@@ -1,0 +1,173 @@
+{
+  "schemaVersion": "1.0.0",
+  "seedVersion": "1.0.0",
+  "publishedAt": "examples/vre_python/notebooks/example_4/input/vre.toml",
+  "contentHash": "a9f2eb626b6690da3d41939cf612b2d20959e82775415c9ec7e1456f87ede577",
+  "sourceLineage": {
+    "runtimePath": "examples/vre_python/notebooks/example_4/input_bundle/vre/runtime_policy/simulation_runtime.toml",
+    "profilePath": "examples/vre_python/notebooks/example_4/input_bundle/vre/runtime_policy/xam_profile.yaml",
+    "correlationsPath": "examples/vre_python/notebooks/example_4/input_bundle/vre/runtime_policy/xam_correlation_set.json",
+    "generator": "tools/ci/publish_simulation_contracts.py",
+    "traceabilityRefs": {
+      "runtime": {
+        "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+        "epic": "docs/architecture/scope_runtime_migration.yaml",
+        "sourceXml": "vre_python/notebooks/example_4/input/simulation.xml",
+        "spec": "docs/architecture/scope_runtime_migration.yaml"
+      },
+      "profile": {
+        "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+        "epic": "docs/architecture/scope_runtime_migration.yaml",
+        "sourceXml": "vre_python/notebooks/example_4/input/simulation.xml",
+        "spec": "docs/architecture/scope_runtime_migration.yaml"
+      },
+      "correlations": {
+        "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+        "epic": "docs/architecture/scope_runtime_migration.yaml",
+        "sourceXml": "vre_python/notebooks/example_4/input/simulation.xml",
+        "spec": "docs/architecture/scope_runtime_migration.yaml"
+      },
+      "market": {
+        "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+        "epic": "docs/architecture/scope_runtime_migration.yaml",
+        "sourceXml": "vre_python/notebooks/example_4/input/simulation.xml",
+        "spec": "docs/architecture/scope_runtime_migration.yaml"
+      }
+    },
+    "marketPath": "examples/vre_python/notebooks/example_4/input_bundle/vre/runtime_policy/scenario_market_profile.json"
+  },
+  "simulationRuntime": {
+    "schemaVersion": "1.0.0",
+    "seedVersion": "1.0.0",
+    "traceabilityRefs": {
+      "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+      "epic": "docs/architecture/scope_runtime_migration.yaml",
+      "sourceXml": "vre_python/notebooks/example_4/input/simulation.xml",
+      "spec": "docs/architecture/scope_runtime_migration.yaml"
+    },
+    "grid": "5000,1D",
+    "calendar": "EUR",
+    "sequence": "MersenneTwister",
+    "scenarioGenerator": "Simple",
+    "seed": 42,
+    "samples": 1,
+    "ordering": "Steps",
+    "directionIntegers": "JoeKuoD7"
+  },
+  "crossAssetModelProfile": {
+    "schemaVersion": "1.0.0",
+    "seedVersion": "1.0.0",
+    "traceabilityRefs": {
+      "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+      "epic": "docs/architecture/scope_runtime_migration.yaml",
+      "sourceXml": "vre_python/notebooks/example_4/input/simulation.xml",
+      "spec": "docs/architecture/scope_runtime_migration.yaml"
+    },
+    "domesticCurrency": "EUR",
+    "factors": {
+      "currencies": [
+        "EUR"
+      ],
+      "equities": [],
+      "inflationIndices": [],
+      "creditNames": [],
+      "commodities": []
+    },
+    "bootstrapTolerance": 0.0001,
+    "measure": "BA",
+    "integration": {
+      "discretization": "Euler",
+      "salvagingAlgorithm": "None",
+      "piecewise": true
+    },
+    "modelBlocks": {
+      "interestRate": [
+        {
+          "modelType": "HWModel",
+          "key": "default",
+          "parameters": {
+            "CalibrationType": "None",
+            "Reversion": {
+              "Calibrate": false,
+              "InitialValue": {
+                "Kappa": "-0.000000048673,-0.24532070948,-0.056427887126,0.510590372873"
+              },
+              "ParamType": "Constant",
+              "TimeGrid": ""
+            },
+            "Volatility": {
+              "Calibrate": false,
+              "InitialValue": {
+                "Sigma": {
+                  "Row": [
+                    "0.002474873734151,0,0,0",
+                    "0,0,0.000706612189017,-0.00298902380928"
+                  ]
+                }
+              },
+              "ParamType": "Constant",
+              "TimeGrid": ""
+            }
+          }
+        }
+      ],
+      "foreignExchange": [
+        {
+          "modelType": "CrossCcyLGM",
+          "key": "default",
+          "parameters": {
+            "CalibrationOptions": "",
+            "CalibrationType": "None",
+            "DomesticCcy": "EUR",
+            "Sigma": {
+              "Calibrate": false,
+              "InitialValue": 0.1,
+              "ParamType": "Constant",
+              "TimeGrid": ""
+            }
+          }
+        }
+      ],
+      "equity": [],
+      "inflation": [],
+      "credit": [],
+      "commodity": []
+    }
+  },
+  "crossAssetModelCorrelations": {
+    "schemaVersion": "1.0.0",
+    "seedVersion": "1.0.0",
+    "traceabilityRefs": {
+      "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+      "epic": "docs/architecture/scope_runtime_migration.yaml",
+      "sourceXml": "vre_python/notebooks/example_4/input/simulation.xml",
+      "spec": "docs/architecture/scope_runtime_migration.yaml"
+    },
+    "correlations": []
+  },
+  "scenarioMarketProfile": {
+    "schemaVersion": "1.0.0",
+    "seedVersion": "1.0.0",
+    "traceabilityRefs": {
+      "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+      "epic": "docs/architecture/scope_runtime_migration.yaml",
+      "sourceXml": "vre_python/notebooks/example_4/input/simulation.xml",
+      "spec": "docs/architecture/scope_runtime_migration.yaml"
+    },
+    "marketDefinitionText": "<Market>\n    <BaseCurrency>EUR</BaseCurrency>\n    <Currencies>\n      <Currency>EUR</Currency>\n    </Currencies>\n    <YieldCurves>\n      <Configuration>\n        <Tenors>1Y,2Y,3Y,5Y,10Y,15Y,20Y,30Y</Tenors>\n        <Interpolation>LogLinear</Interpolation>\n        <Extrapolation>Y</Extrapolation>\n      </Configuration>\n    </YieldCurves>\n    <Indices />\n  </Market>\n",
+    "marketDefinition": {
+      "BaseCurrency": "EUR",
+      "Currencies": {
+        "Currency": "EUR"
+      },
+      "Indices": "",
+      "YieldCurves": {
+        "Configuration": {
+          "Extrapolation": true,
+          "Interpolation": "LogLinear",
+          "Tenors": "1Y,2Y,3Y,5Y,10Y,15Y,20Y,30Y"
+        }
+      }
+    }
+  }
+}

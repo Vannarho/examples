@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "1.0.0",
+  "ruleId": "P1-SCENARIO-SECURITY-SPREAD-001",
+  "rulebook": "product/wip/examples_estate_get_well/phase1_date_roll/date_roll_rulebook.yaml",
+  "decision": "market_support_only",
+  "activeSecuritySpreadScenarioSource": true,
+  "securityCount": 4,
+  "securities": [
+    "SECURITY_2",
+    "SECURITY_3",
+    "SECURITY_4",
+    "SECURITY_5"
+  ],
+  "reason": "Phase 1 date-roll repair preserves security market support but does not activate SecuritySpread simulation unless full scenario coverage is explicitly governed."
+}

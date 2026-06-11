@@ -1,0 +1,119 @@
+{
+  "schemaVersion": "1.0.0",
+  "seedVersion": "1.0.0",
+  "traceabilityRefs": {
+    "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+    "epic": "docs/architecture/scope_runtime_migration.yaml",
+    "sourceXml": "vre_python/notebooks/example_11/input/sacva_fd_eqcom/curveconfig.xml",
+    "spec": "docs/architecture/scope_runtime_migration.yaml"
+  },
+  "setId": "curveconfig",
+  "families": [
+    {
+      "familyId": "base_correlations",
+      "curveType": "BaseCorrelation",
+      "xmlParent": "BaseCorrelations",
+      "xmlTag": "BaseCorrelation",
+      "description": "BaseCorrelations"
+    },
+    {
+      "familyId": "cap_floor_volatilities",
+      "curveType": "CapFloorVolatility",
+      "xmlParent": "CapFloorVolatilities",
+      "xmlTag": "CapFloorVolatility",
+      "description": "CapFloorVolatilities"
+    },
+    {
+      "familyId": "cds_volatilities",
+      "curveType": "CDSVolatility",
+      "xmlParent": "CDSVolatilities",
+      "xmlTag": "CDSVolatility",
+      "description": "CDSVolatilities"
+    },
+    {
+      "familyId": "commodity_curves",
+      "curveType": "CommodityCurve",
+      "xmlParent": "CommodityCurves",
+      "xmlTag": "CommodityCurve",
+      "description": "CommodityCurves"
+    },
+    {
+      "familyId": "commodity_volatilities",
+      "curveType": "CommodityVolatility",
+      "xmlParent": "CommodityVolatilities",
+      "xmlTag": "CommodityVolatility",
+      "description": "CommodityVolatilities"
+    },
+    {
+      "familyId": "correlations",
+      "curveType": "Correlation",
+      "xmlParent": "Correlations",
+      "xmlTag": "Correlation",
+      "description": "Correlations"
+    },
+    {
+      "familyId": "default_curves",
+      "curveType": "DefaultCurve",
+      "xmlParent": "DefaultCurves",
+      "xmlTag": "DefaultCurve",
+      "description": "DefaultCurves"
+    },
+    {
+      "familyId": "equity_curves",
+      "curveType": "EquityCurve",
+      "xmlParent": "EquityCurves",
+      "xmlTag": "EquityCurve",
+      "description": "EquityCurves"
+    },
+    {
+      "familyId": "equity_volatilities",
+      "curveType": "EquityVolatility",
+      "xmlParent": "EquityVolatilities",
+      "xmlTag": "EquityVolatility",
+      "description": "EquityVolatilities"
+    },
+    {
+      "familyId": "fx_volatilities",
+      "curveType": "FXVolatility",
+      "xmlParent": "FXVolatilities",
+      "xmlTag": "FXVolatility",
+      "description": "FXVolatilities"
+    },
+    {
+      "familyId": "inflation_cap_floor_volatilities",
+      "curveType": "InflationCapFloorVolatility",
+      "xmlParent": "InflationCapFloorVolatilities",
+      "xmlTag": "InflationCapFloorVolatility",
+      "description": "InflationCapFloorVolatilities"
+    },
+    {
+      "familyId": "inflation_curves",
+      "curveType": "InflationCurve",
+      "xmlParent": "InflationCurves",
+      "xmlTag": "InflationCurve",
+      "description": "InflationCurves"
+    },
+    {
+      "familyId": "securities",
+      "curveType": "Security",
+      "xmlParent": "Securities",
+      "xmlTag": "Security",
+      "description": "Securities"
+    },
+    {
+      "familyId": "swaption_volatilities",
+      "curveType": "SwaptionVolatility",
+      "xmlParent": "SwaptionVolatilities",
+      "xmlTag": "SwaptionVolatility",
+      "description": "SwaptionVolatilities"
+    },
+    {
+      "familyId": "yield_curves",
+      "curveType": "YieldCurve",
+      "xmlParent": "YieldCurves",
+      "xmlTag": "YieldCurve",
+      "description": "YieldCurves"
+    }
+  ],
+  "reportDefaults": {}
+}

@@ -1,0 +1,513 @@
+{
+  "schemaVersion": "1.0.0",
+  "publishedAt": "examples/vre_python/notebooks/example_11/input/vre_sacva_fd_eqcom.toml",
+  "sourceLineage": {
+    "runtimePath": "examples/vre_python/notebooks/example_11/input_bundle/vre_sacva_fd_eqcom/runtime_policy/sensitivity/sensitivity_runtime.toml",
+    "profilePath": "examples/vre_python/notebooks/example_11/input_bundle/vre_sacva_fd_eqcom/runtime_policy/sensitivity/sensitivity_profile.yaml",
+    "shiftTablesPath": "examples/vre_python/notebooks/example_11/input_bundle/vre_sacva_fd_eqcom/runtime_policy/sensitivity/sensitivity_shift_tables.json"
+  },
+  "sensitivityRuntime": {
+    "schemaVersion": "1.0.0",
+    "seedVersion": "1.0.0",
+    "traceabilityRefs": {
+      "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+      "epic": "docs/architecture/scope_runtime_migration.yaml",
+      "sourceXml": "vre_python/notebooks/example_11/input/sacva_fd_eqcom/sensitivity.xml",
+      "spec": "docs/architecture/scope_runtime_migration.yaml"
+    },
+    "profileId": "sensitivity",
+    "parConversionEnabled": true,
+    "parSensiRemoveFixing": ".*",
+    "computeGamma": false,
+    "useSpreadedTermStructures": true,
+    "creditShockPrimitive": "HazardRate",
+    "clampRecoveryRates": true
+  },
+  "sensitivityProfile": {
+    "schemaVersion": "1.0.0",
+    "seedVersion": "1.0.0",
+    "traceabilityRefs": {
+      "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+      "epic": "docs/architecture/scope_runtime_migration.yaml",
+      "sourceXml": "vre_python/notebooks/example_11/input/sacva_fd_eqcom/sensitivity.xml",
+      "spec": "docs/architecture/scope_runtime_migration.yaml"
+    },
+    "profileId": "sensitivity",
+    "parConversionExcludes": [],
+    "twoSidedDeltaKeyTypes": [],
+    "crossGammaFilter": []
+  },
+  "sensitivityShiftTables": {
+    "schemaVersion": "1.0.0",
+    "seedVersion": "1.0.0",
+    "traceabilityRefs": {
+      "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+      "epic": "docs/architecture/scope_runtime_migration.yaml",
+      "sourceXml": "vre_python/notebooks/example_11/input/sacva_fd_eqcom/sensitivity.xml",
+      "spec": "docs/architecture/scope_runtime_migration.yaml"
+    },
+    "profileId": "sensitivity",
+    "families": {
+      "commodityCurves": [
+        {
+          "name": "COMDTY_WTI_USD",
+          "shiftType": "Relative",
+          "shiftSize": 0.01,
+          "shiftScheme": "Forward",
+          "shiftTenors": [
+            "1Y"
+          ],
+          "currency": "USD"
+        }
+      ],
+      "commodityVolatilities": [
+        {
+          "name": "COMDTY_WTI_USD",
+          "shiftType": "Relative",
+          "shiftSize": 0.01,
+          "shiftExpiries": [
+            "1Y",
+            "5Y",
+            "10Y"
+          ],
+          "shiftStrikes": [
+            30.0,
+            40.0,
+            50.0,
+            60.0
+          ]
+        }
+      ],
+      "creditCurves": [
+        {
+          "name": "CPTY_A",
+          "shiftType": "Absolute",
+          "shiftSize": 0.0001,
+          "shiftScheme": "Forward",
+          "shiftTenors": [
+            "1Y",
+            "5Y"
+          ],
+          "currency": "USD",
+          "parConversion": {
+            "instruments": [
+              "CDS",
+              "CDS"
+            ],
+            "singleCurve": false,
+            "conventions": {
+              "CDS": "CDS-STANDARD-CONVENTIONS"
+            }
+          }
+        },
+        {
+          "name": "BANK",
+          "shiftType": "Absolute",
+          "shiftSize": 0.0001,
+          "shiftScheme": "Forward",
+          "shiftTenors": [
+            "1Y",
+            "5Y"
+          ],
+          "currency": "USD",
+          "parConversion": {
+            "instruments": [
+              "CDS",
+              "CDS"
+            ],
+            "singleCurve": false,
+            "conventions": {
+              "CDS": "CDS-STANDARD-CONVENTIONS"
+            }
+          }
+        }
+      ],
+      "discountCurves": [
+        {
+          "ccy": "EUR",
+          "shiftType": "Absolute",
+          "shiftSize": 0.0001,
+          "shiftScheme": "Forward",
+          "shiftTenors": [
+            "1Y",
+            "5Y"
+          ],
+          "parConversion": {
+            "instruments": [
+              "OIS",
+              "OIS"
+            ],
+            "singleCurve": true,
+            "conventions": {
+              "DEP": "EUR-ON-DEPOSIT-ESTER",
+              "OIS": "EUR-ESTER-OIS"
+            }
+          }
+        },
+        {
+          "ccy": "USD",
+          "shiftType": "Absolute",
+          "shiftSize": 0.0001,
+          "shiftScheme": "Forward",
+          "shiftTenors": [
+            "1Y",
+            "5Y"
+          ],
+          "parConversion": {
+            "instruments": [
+              "DEP",
+              "OIS"
+            ],
+            "singleCurve": true,
+            "conventions": {
+              "DEP": "USD-ON-SOFR-DEPOSIT",
+              "OIS": "USD-SOFR-OIS"
+            }
+          }
+        }
+      ],
+      "equitySpots": [
+        {
+          "equity": "SP5",
+          "shiftType": "Relative",
+          "shiftSize": 0.01,
+          "shiftScheme": "Forward"
+        }
+      ],
+      "equityVolatilities": [
+        {
+          "equity": "SP5",
+          "shiftType": "Relative",
+          "shiftSize": 0.01,
+          "shiftExpiries": [
+            "6M",
+            "5Y",
+            "10Y"
+          ]
+        }
+      ],
+      "fxSpots": [
+        {
+          "ccypair": "EURUSD",
+          "shiftType": "Relative",
+          "shiftSize": 0.01,
+          "shiftScheme": "Forward"
+        },
+        {
+          "ccypair": "USDEUR",
+          "shiftType": "Relative",
+          "shiftSize": 0.01,
+          "shiftScheme": "Forward"
+        }
+      ],
+      "fxVolatilities": [
+        {
+          "ccypair": "EURUSD",
+          "shiftType": "Relative",
+          "shiftSize": 0.01,
+          "shiftScheme": "Forward",
+          "shiftExpiries": [
+            "1Y",
+            "5Y"
+          ],
+          "shiftStrikes": [
+            0.0
+          ]
+        }
+      ],
+      "recoveryRates": [
+        {
+          "name": "CPTY_A",
+          "shiftType": "Absolute",
+          "shiftSize": 0.0001,
+          "shiftScheme": "Forward"
+        }
+      ],
+      "securitySpreads": [
+        {
+          "security": "SECURITY_2",
+          "shiftType": "Absolute",
+          "shiftSize": 0.0001
+        },
+        {
+          "security": "SECURITY_3",
+          "shiftType": "Absolute",
+          "shiftSize": 0.0001
+        },
+        {
+          "security": "SECURITY_4",
+          "shiftType": "Absolute",
+          "shiftSize": 0.0001
+        },
+        {
+          "security": "SECURITY_5",
+          "shiftType": "Absolute",
+          "shiftSize": 0.0001
+        }
+      ]
+    }
+  },
+  "sensitivityAnalysis": {
+    "parConversion": true,
+    "parSensiRemoveFixing": ".*",
+    "computeGamma": false,
+    "useSpreadedTermStructures": true,
+    "creditShockPrimitive": "HazardRate",
+    "clampRecoveryRates": true,
+    "parConversionExcludes": [],
+    "twoSidedDeltaKeyTypes": [],
+    "crossGammaFilter": [],
+    "commodityCurves": [
+      {
+        "name": "COMDTY_WTI_USD",
+        "shiftType": "Relative",
+        "shiftSize": 0.01,
+        "shiftScheme": "Forward",
+        "shiftTenors": [
+          "1Y"
+        ],
+        "currency": "USD"
+      }
+    ],
+    "commodityVolatilities": [
+      {
+        "name": "COMDTY_WTI_USD",
+        "shiftType": "Relative",
+        "shiftSize": 0.01,
+        "shiftExpiries": [
+          "1Y",
+          "5Y",
+          "10Y"
+        ],
+        "shiftStrikes": [
+          30.0,
+          40.0,
+          50.0,
+          60.0
+        ]
+      }
+    ],
+    "creditCurves": [
+      {
+        "name": "CPTY_A",
+        "shiftType": "Absolute",
+        "shiftSize": 0.0001,
+        "shiftScheme": "Forward",
+        "shiftTenors": [
+          "1Y",
+          "5Y"
+        ],
+        "currency": "USD",
+        "parConversion": {
+          "instruments": [
+            "CDS",
+            "CDS"
+          ],
+          "singleCurve": false,
+          "conventions": {
+            "CDS": "CDS-STANDARD-CONVENTIONS"
+          }
+        }
+      },
+      {
+        "name": "BANK",
+        "shiftType": "Absolute",
+        "shiftSize": 0.0001,
+        "shiftScheme": "Forward",
+        "shiftTenors": [
+          "1Y",
+          "5Y"
+        ],
+        "currency": "USD",
+        "parConversion": {
+          "instruments": [
+            "CDS",
+            "CDS"
+          ],
+          "singleCurve": false,
+          "conventions": {
+            "CDS": "CDS-STANDARD-CONVENTIONS"
+          }
+        }
+      }
+    ],
+    "discountCurves": [
+      {
+        "ccy": "EUR",
+        "shiftType": "Absolute",
+        "shiftSize": 0.0001,
+        "shiftScheme": "Forward",
+        "shiftTenors": [
+          "1Y",
+          "5Y"
+        ],
+        "parConversion": {
+          "instruments": [
+            "OIS",
+            "OIS"
+          ],
+          "singleCurve": true,
+          "conventions": {
+            "DEP": "EUR-ON-DEPOSIT-ESTER",
+            "OIS": "EUR-ESTER-OIS"
+          }
+        }
+      },
+      {
+        "ccy": "USD",
+        "shiftType": "Absolute",
+        "shiftSize": 0.0001,
+        "shiftScheme": "Forward",
+        "shiftTenors": [
+          "1Y",
+          "5Y"
+        ],
+        "parConversion": {
+          "instruments": [
+            "DEP",
+            "OIS"
+          ],
+          "singleCurve": true,
+          "conventions": {
+            "DEP": "USD-ON-SOFR-DEPOSIT",
+            "OIS": "USD-SOFR-OIS"
+          }
+        }
+      }
+    ],
+    "equitySpots": [
+      {
+        "equity": "SP5",
+        "shiftType": "Relative",
+        "shiftSize": 0.01,
+        "shiftScheme": "Forward"
+      }
+    ],
+    "equityVolatilities": [
+      {
+        "equity": "SP5",
+        "shiftType": "Relative",
+        "shiftSize": 0.01,
+        "shiftExpiries": [
+          "6M",
+          "5Y",
+          "10Y"
+        ]
+      }
+    ],
+    "fxSpots": [
+      {
+        "ccypair": "EURUSD",
+        "shiftType": "Relative",
+        "shiftSize": 0.01,
+        "shiftScheme": "Forward"
+      },
+      {
+        "ccypair": "USDEUR",
+        "shiftType": "Relative",
+        "shiftSize": 0.01,
+        "shiftScheme": "Forward"
+      }
+    ],
+    "fxVolatilities": [
+      {
+        "ccypair": "EURUSD",
+        "shiftType": "Relative",
+        "shiftSize": 0.01,
+        "shiftScheme": "Forward",
+        "shiftExpiries": [
+          "1Y",
+          "5Y"
+        ],
+        "shiftStrikes": [
+          0.0
+        ]
+      }
+    ],
+    "recoveryRates": [
+      {
+        "name": "CPTY_A",
+        "shiftType": "Absolute",
+        "shiftSize": 0.0001,
+        "shiftScheme": "Forward"
+      }
+    ],
+    "securitySpreads": [
+      {
+        "security": "SECURITY_2",
+        "shiftType": "Absolute",
+        "shiftSize": 0.0001
+      },
+      {
+        "security": "SECURITY_3",
+        "shiftType": "Absolute",
+        "shiftSize": 0.0001
+      },
+      {
+        "security": "SECURITY_4",
+        "shiftType": "Absolute",
+        "shiftSize": 0.0001
+      },
+      {
+        "security": "SECURITY_5",
+        "shiftType": "Absolute",
+        "shiftSize": 0.0001
+      }
+    ]
+  },
+  "contentHash": "fb6e49a815fdde21e01c811cf9d443f39f355eff6e925d1e9a88b7896aa9c494",
+  "families": {
+    "securitySpreads": [
+      {
+        "security": "SECURITY_2",
+        "shiftType": "Absolute",
+        "shiftSize": 0.0001
+      },
+      {
+        "security": "SECURITY_3",
+        "shiftType": "Absolute",
+        "shiftSize": 0.0001
+      },
+      {
+        "security": "SECURITY_4",
+        "shiftType": "Absolute",
+        "shiftSize": 0.0001
+      },
+      {
+        "security": "SECURITY_5",
+        "shiftType": "Absolute",
+        "shiftSize": 0.0001
+      }
+    ],
+    "creditCurves": [
+      {
+        "name": "BANK",
+        "shiftType": "Absolute",
+        "shiftSize": 0.0001,
+        "shiftScheme": "Forward",
+        "shiftTenors": [
+          "1Y",
+          "2Y",
+          "3Y",
+          "5Y",
+          "10Y"
+        ],
+        "currency": "USD"
+      },
+      {
+        "name": "CPTY_A",
+        "shiftType": "Absolute",
+        "shiftSize": 0.0001,
+        "shiftScheme": "Forward",
+        "shiftTenors": [
+          "1Y",
+          "2Y",
+          "3Y",
+          "5Y",
+          "10Y"
+        ],
+        "currency": "USD"
+      }
+    ]
+  }
+}

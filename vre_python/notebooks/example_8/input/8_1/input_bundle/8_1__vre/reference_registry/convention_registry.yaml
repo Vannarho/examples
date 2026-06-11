@@ -1,0 +1,1433 @@
+version: 1.0.0
+traceabilityRefs:
+  adr: docs/architecture/adr/0001-serialization-and-storage-format-standards.md
+  epic: docs/architecture/scope_runtime_migration.yaml
+  spec: docs/architecture/scope_runtime_migration.yaml
+  sourceXml: vre_python/notebooks/example_8/input/8_1/other/conventions.xml
+zero:
+- id: EUR-ZERO-CONVENTIONS
+  terms:
+    TenorBased: false
+    DayCounter: A365
+    CompoundingFrequency: Daily
+- id: EUR-ZERO-CONVENTIONS-TENOR-BASED
+  terms:
+    TenorBased: true
+    DayCounter: A365
+    Compounding: Continuous
+    CompoundingFrequency: Daily
+    TenorCalendar: TARGET
+    SpotLag: 2
+    SpotCalendar: TARGET
+    RollConvention: Following
+    EOM: false
+- id: CHF-ZERO-CONVENTIONS
+  terms:
+    TenorBased: false
+    DayCounter: A365
+    CompoundingFrequency: Daily
+- id: GBP-ZERO-CONVENTIONS
+  terms:
+    TenorBased: false
+    DayCounter: A365
+    CompoundingFrequency: Daily
+- id: USD-ZERO-CONVENTIONS
+  terms:
+    TenorBased: false
+    DayCounter: A365
+    CompoundingFrequency: Daily
+cds:
+- id: CDS-STANDARD-CONVENTIONS
+  terms:
+    SettlementDays: 1
+    Calendar: WeekendsOnly
+    Frequency: Quarterly
+    PaymentConvention: Following
+    Rule: CDS2015
+    DayCounter: A360
+    SettlesAccrual: true
+    PaysAtDefaultTime: true
+deposit:
+- id: USD-LIBOR-CONVENTIONS
+  terms:
+    IndexBased: true
+    Index: USD-LIBOR
+- id: USD-FED-FUNDS-CONVENTIONS
+  terms:
+    IndexBased: true
+    Index: USD-FedFunds
+- id: CHF-LIBOR-CONVENTIONS
+  terms:
+    IndexBased: true
+    Index: CHF-LIBOR
+- id: CHF-TOIS-CONVENTIONS
+  terms:
+    IndexBased: true
+    Index: CHF-TOIS
+- id: CHF-SARON-CONVENTIONS
+  terms:
+    IndexBased: true
+    Index: CHF-SARON
+- id: DKK-DKKOIS-CONVENTIONS
+  terms:
+    IndexBased: true
+    Index: DKK-DKKOIS
+- id: SEK-SIOR-CONVENTIONS
+  terms:
+    IndexBased: true
+    Index: SEK-SIOR
+- id: EUR-EONIA-CONVENTIONS
+  terms:
+    IndexBased: true
+    Index: EUR-EONIA
+- id: EUR-EURIBOR-CONVENTIONS
+  terms:
+    IndexBased: true
+    Index: EUR-EURIBOR
+- id: EUR-DEPOSIT
+  terms:
+    IndexBased: true
+    Index: EUR-EURIBOR
+- id: GBP-SONIA-CONVENTIONS
+  terms:
+    IndexBased: true
+    Index: GBP-SONIA
+- id: GBP-LIBOR-CONVENTIONS
+  terms:
+    IndexBased: true
+    Index: GBP-LIBOR
+- id: GBP-DEPOSIT
+  terms:
+    IndexBased: true
+    Index: GBP-LIBOR
+- id: CAD-DEPOSIT
+  terms:
+    IndexBased: true
+    Index: CAD-CDOR
+- id: CAD-CORRA-CONVENTIONS
+  terms:
+    IndexBased: true
+    Index: CAD-CORRA
+- id: CZK-DEPOSIT
+  terms:
+    IndexBased: true
+    Index: CZK-PRIBOR
+- id: DKK-DEPOSIT
+  terms:
+    IndexBased: true
+    Index: DKK-CIBOR
+- id: NOK-DEPOSIT
+  terms:
+    IndexBased: true
+    Index: NOK-NIBOR
+- id: SEK-DEPOSIT
+  terms:
+    IndexBased: true
+    Index: SEK-STIBOR
+- id: HUF-DEPOSIT
+  terms:
+    IndexBased: true
+    Index: HUF-BUBOR
+- id: PLN-DEPOSIT
+  terms:
+    IndexBased: true
+    Index: PLN-WIBOR
+- id: SGD-DEPOSIT
+  terms:
+    IndexBased: true
+    Index: SGD-SIBOR
+- id: NZD-DEPOSIT
+  terms:
+    IndexBased: true
+    Index: NZD-BKBM
+- id: JPY-LIBOR-CONVENTIONS
+  terms:
+    IndexBased: true
+    Index: JPY-LIBOR
+- id: JPY-TIBOR-CONVENTIONS
+  terms:
+    IndexBased: true
+    Index: JPY-TIBOR
+- id: AUD-BBSW-CONVENTIONS
+  terms:
+    IndexBased: true
+    Index: AUD-BBSW
+- id: SEK-STIBOR-CONVENTIONS
+  terms:
+    IndexBased: true
+    Index: SEK-STIBOR
+- id: MXN-TIIE-CONVENTIONS
+  terms:
+    IndexBased: true
+    Index: MXN-TIIE
+- id: RUB-MOSPRIME-CONVENTIONS
+  terms:
+    IndexBased: true
+    Index: RUB-MOSPRIME
+- id: BRL-GENERIC-CONVENTIONS
+  terms:
+    IndexBased: true
+    Index: BRL-GENERIC
+- id: CLP-GENERIC-CONVENTIONS
+  terms:
+    IndexBased: true
+    Index: CLP-GENERIC
+- id: CNY-GENERIC-CONVENTIONS
+  terms:
+    IndexBased: true
+    Index: CNY-GENERIC
+- id: IDR-GENERIC-CONVENTIONS
+  terms:
+    IndexBased: true
+    Index: IDR-GENERIC
+- id: INR-GENERIC-CONVENTIONS
+  terms:
+    IndexBased: true
+    Index: INR-GENERIC
+- id: KRW-GENERIC-CONVENTIONS
+  terms:
+    IndexBased: true
+    Index: KRW-GENERIC
+- id: MYR-GENERIC-CONVENTIONS
+  terms:
+    IndexBased: true
+    Index: MYR-GENERIC
+- id: PHP-GENERIC-CONVENTIONS
+  terms:
+    IndexBased: true
+    Index: PHP-GENERIC
+- id: TWD-GENERIC-CONVENTIONS
+  terms:
+    IndexBased: true
+    Index: TWD-GENERIC
+future:
+- id: USD-LIBOR-3M-FUTURES-CONVENTIONS
+  terms:
+    Index: USD-LIBOR-3M
+- id: EURIBOR-3M-FUTURES-CONVENTIONS
+  terms:
+    Index: EUR-EURIBOR-3M
+- id: AUD-BBSW-3M-FUTURES-CONVENTIONS
+  terms:
+    Index: AUD-BBSW-3M
+- id: JPY-LIBOR-3M-FUTURES-CONVENTIONS
+  terms:
+    Index: JPY-LIBOR-3M
+- id: SEK-STIBOR-3M-FUTURES-CONVENTIONS
+  terms:
+    Index: SEK-STIBOR-3M
+fra:
+- id: EUR-12M-FRA-CONVENTIONS
+  terms:
+    Index: EUR-EURIBOR-12M
+- id: EUR-6M-FRA-CONVENTIONS
+  terms:
+    Index: EUR-EURIBOR-6M
+- id: EUR-3M-FRA-CONVENTIONS
+  terms:
+    Index: EUR-EURIBOR-3M
+- id: EUR-1M-FRA-CONVENTIONS
+  terms:
+    Index: EUR-EURIBOR-1M
+- id: AUD-3M-FRA-CONVENTIONS
+  terms:
+    Index: AUD-BBSW-3M
+- id: CHF-6M-FRA-CONVENTIONS
+  terms:
+    Index: CHF-LIBOR-6M
+- id: CHF-3M-FRA-CONVENTIONS
+  terms:
+    Index: CHF-LIBOR-3M
+- id: GBP-3M-FRA
+  terms:
+    Index: GBP-LIBOR-3M
+- id: GBP-6M-FRA
+  terms:
+    Index: GBP-LIBOR-6M
+- id: USD-6M-FRA-CONVENTIONS
+  terms:
+    Index: USD-LIBOR-6M
+- id: USD-3M-FRA-CONVENTIONS
+  terms:
+    Index: USD-LIBOR-3M
+- id: USD-1M-FRA-CONVENTIONS
+  terms:
+    Index: USD-LIBOR-1M
+- id: CAD-FRA-3M
+  terms:
+    Index: CAD-CDOR-3M
+- id: CZK-6M-FRA
+  terms:
+    Index: CZK-PRIBOR-6M
+- id: CZK-3M-FRA
+  terms:
+    Index: CZK-PRIBOR-3M
+- id: NZD-3M-FRA
+  terms:
+    Index: NZD-BKBM-3M
+- id: HUF-6M-FRA
+  terms:
+    Index: HUF-BUBOR-6M
+- id: PLN-6M-FRA
+  terms:
+    Index: PLN-WIBOR-6M
+- id: PLN-3M-FRA
+  terms:
+    Index: PLN-WIBOR-3M
+- id: SEK-3M-FRA
+  terms:
+    Index: SEK-STIBOR-3M
+- id: JPY-6M-FRA-CONVENTIONS
+  terms:
+    Index: JPY-LIBOR-6M
+- id: JPY-3M-FRA-CONVENTIONS
+  terms:
+    Index: JPY-LIBOR-3M
+swap_index:
+- id: EUR-CMS-1Y
+  terms:
+    Conventions: EUR-3M-SWAP-CONVENTIONS
+- id: EUR-CMS-2Y
+  terms:
+    Conventions: EUR-6M-SWAP-CONVENTIONS
+- id: EUR-CMS-5Y
+  terms:
+    Conventions: EUR-6M-SWAP-CONVENTIONS
+- id: EUR-CMS-10Y
+  terms:
+    Conventions: EUR-6M-SWAP-CONVENTIONS
+- id: EUR-CMS-20Y
+  terms:
+    Conventions: EUR-6M-SWAP-CONVENTIONS
+- id: EUR-CMS-30Y
+  terms:
+    Conventions: EUR-6M-SWAP-CONVENTIONS
+- id: USD-CMS-1Y
+  terms:
+    Conventions: USD-3M-SWAP-CONVENTIONS
+- id: USD-CMS-2Y
+  terms:
+    Conventions: USD-3M-SWAP-CONVENTIONS
+- id: USD-CMS-5Y
+  terms:
+    Conventions: USD-3M-SWAP-CONVENTIONS
+- id: USD-CMS-10Y
+  terms:
+    Conventions: USD-3M-SWAP-CONVENTIONS
+- id: USD-CMS-20Y
+  terms:
+    Conventions: USD-3M-SWAP-CONVENTIONS
+- id: USD-CMS-30Y
+  terms:
+    Conventions: USD-3M-SWAP-CONVENTIONS
+- id: GBP-CMS-1Y
+  terms:
+    Conventions: GBP-3M-SWAP-CONVENTIONS
+- id: GBP-CMS-2Y
+  terms:
+    Conventions: GBP-6M-SWAP-CONVENTIONS
+- id: GBP-CMS-5Y
+  terms:
+    Conventions: GBP-6M-SWAP-CONVENTIONS
+- id: GBP-CMS-10Y
+  terms:
+    Conventions: GBP-6M-SWAP-CONVENTIONS
+- id: GBP-CMS-20Y
+  terms:
+    Conventions: GBP-6M-SWAP-CONVENTIONS
+- id: GBP-CMS-30Y
+  terms:
+    Conventions: GBP-6M-SWAP-CONVENTIONS
+- id: CHF-CMS-1Y
+  terms:
+    Conventions: CHF-3M-SWAP-CONVENTIONS
+- id: CHF-CMS-30Y
+  terms:
+    Conventions: CHF-6M-SWAP-CONVENTIONS
+- id: JPY-CMS-1Y
+  terms:
+    Conventions: JPY-LIBOR-6M-SWAP-CONVENTIONS
+- id: JPY-CMS-30Y
+  terms:
+    Conventions: JPY-LIBOR-6M-SWAP-CONVENTIONS
+swap:
+- id: EUR-6M-SWAP-CONVENTIONS
+  terms:
+    FixedCalendar: TARGET
+    FixedFrequency: Annual
+    FixedConvention: MF
+    FixedDayCounter: 30/360
+    Index: EUR-EURIBOR-6M
+- id: EUR-1M-SWAP-CONVENTIONS
+  terms:
+    FixedCalendar: TARGET
+    FixedFrequency: Annual
+    FixedConvention: MF
+    FixedDayCounter: 30/360
+    Index: EUR-EURIBOR-1M
+- id: EUR-3M-SWAP-CONVENTIONS
+  terms:
+    FixedCalendar: TARGET
+    FixedFrequency: Annual
+    FixedConvention: MF
+    FixedDayCounter: 30/360
+    Index: EUR-EURIBOR-3M
+- id: EUR-12M-SWAP-CONVENTIONS
+  terms:
+    FixedCalendar: TARGET
+    FixedFrequency: Annual
+    FixedConvention: MF
+    FixedDayCounter: 30/360
+    Index: EUR-EURIBOR-12M
+- id: USD-1M-SWAP-CONVENTIONS
+  terms:
+    FixedCalendar: US,UK
+    FixedFrequency: Annual
+    FixedConvention: MF
+    FixedDayCounter: 30/360
+    Index: USD-LIBOR-1M
+- id: USD-3M-SWAP-CONVENTIONS
+  terms:
+    FixedCalendar: US,UK
+    FixedFrequency: Semiannual
+    FixedConvention: MF
+    FixedDayCounter: 30/360
+    Index: USD-LIBOR-3M
+- id: USD-1M-SWAP-ANNUAL-CONVENTIONS
+  terms:
+    FixedCalendar: US,UK
+    FixedFrequency: Annual
+    FixedConvention: MF
+    FixedDayCounter: ACT/360
+    Index: USD-LIBOR-1M
+- id: USD-3M-SWAP-ANNUAL-CONVENTIONS
+  terms:
+    FixedCalendar: US,UK
+    FixedFrequency: Annual
+    FixedConvention: MF
+    FixedDayCounter: ACT/360
+    Index: USD-LIBOR-3M
+- id: USD-6M-SWAP-CONVENTIONS
+  terms:
+    FixedCalendar: US,UK
+    FixedFrequency: Semiannual
+    FixedConvention: MF
+    FixedDayCounter: 30/360
+    Index: USD-LIBOR-6M
+- id: CHF-6M-SWAP-CONVENTIONS
+  terms:
+    FixedCalendar: ZUB,UK
+    FixedFrequency: Annual
+    FixedConvention: MF
+    FixedDayCounter: 30/360
+    Index: CHF-LIBOR-6M
+- id: CHF-3M-SWAP-CONVENTIONS
+  terms:
+    FixedCalendar: ZUB,UK
+    FixedFrequency: Annual
+    FixedConvention: MF
+    FixedDayCounter: 30/360
+    Index: CHF-LIBOR-3M
+- id: AUD-6M-SWAP-CONVENTIONS
+  terms:
+    FixedCalendar: AU
+    FixedFrequency: Semiannual
+    FixedConvention: MF
+    FixedDayCounter: A365
+    Index: AUD-BBSW-6M
+- id: AUD-3M-SWAP-CONVENTIONS
+  terms:
+    FixedCalendar: AU
+    FixedFrequency: Quarterly
+    FixedConvention: MF
+    FixedDayCounter: A365
+    Index: AUD-BBSW-3M
+- id: CAD-3M-SWAP-CONVENTIONS-1Y
+  terms:
+    FixedCalendar: CA
+    FixedFrequency: Annual
+    FixedConvention: MF
+    FixedDayCounter: ACT/365
+    Index: CAD-CDOR-3M
+    FloatFrequency: Annual
+    SubPeriodsCouponType: Compounding
+- id: CAD-3M-SWAP-CONVENTIONS
+  terms:
+    FixedCalendar: CA
+    FixedFrequency: Semiannual
+    FixedConvention: MF
+    FixedDayCounter: ACT/365
+    Index: CAD-CDOR-3M
+    FloatFrequency: Semiannual
+    SubPeriodsCouponType: Compounding
+- id: DKK-3M-SWAP-CONVENTIONS
+  terms:
+    FixedCalendar: DEN
+    FixedFrequency: Annual
+    FixedConvention: MF
+    FixedDayCounter: 30/360
+    Index: DKK-CIBOR-3M
+- id: DKK-6M-SWAP-CONVENTIONS
+  terms:
+    FixedCalendar: DEN
+    FixedFrequency: Annual
+    FixedConvention: MF
+    FixedDayCounter: 30/360
+    Index: DKK-CIBOR-6M
+- id: NOK-3M-SWAP-CONVENTIONS
+  terms:
+    FixedCalendar: NOK
+    FixedFrequency: Annual
+    FixedConvention: MF
+    FixedDayCounter: 30/360
+    Index: NOK-NIBOR-3M
+- id: NOK-6M-SWAP-CONVENTIONS
+  terms:
+    FixedCalendar: NOK
+    FixedFrequency: Annual
+    FixedConvention: MF
+    FixedDayCounter: 30/360
+    Index: NOK-NIBOR-6M
+- id: JPY-LIBOR-6M-SWAP-CONVENTIONS
+  terms:
+    FixedCalendar: JP,UK
+    FixedFrequency: Semiannual
+    FixedConvention: MF
+    FixedDayCounter: A365
+    Index: JPY-LIBOR-6M
+- id: JPY-LIBOR-3M-SWAP-CONVENTIONS
+  terms:
+    FixedCalendar: JP,UK
+    FixedFrequency: Semiannual
+    FixedConvention: MF
+    FixedDayCounter: A365
+    Index: JPY-LIBOR-3M
+- id: JPY-TIBOR-3M-SWAP-CONVENTIONS
+  terms:
+    FixedCalendar: JP
+    FixedFrequency: Semiannual
+    FixedConvention: MF
+    FixedDayCounter: A365
+    Index: JPY-TIBOR-3M
+- id: SEK-3M-SWAP-CONVENTIONS
+  terms:
+    FixedCalendar: SS
+    FixedFrequency: Annual
+    FixedConvention: MF
+    FixedDayCounter: 30/360
+    Index: SEK-STIBOR-3M
+- id: SEK-6M-SWAP-CONVENTIONS
+  terms:
+    FixedCalendar: SS
+    FixedFrequency: Annual
+    FixedConvention: MF
+    FixedDayCounter: 30/360
+    Index: SEK-STIBOR-6M
+- id: SGD-6M-SWAP-CONVENTIONS
+  terms:
+    FixedCalendar: SGD
+    FixedFrequency: Annual
+    FixedConvention: MF
+    FixedDayCounter: 30/360
+    Index: SGD-SIBOR-6M
+- id: GBP-6M-SWAP-CONVENTIONS
+  terms:
+    FixedCalendar: UK
+    FixedFrequency: Semiannual
+    FixedConvention: MF
+    FixedDayCounter: A365
+    Index: GBP-LIBOR-6M
+- id: GBP-3M-SWAP-CONVENTIONS
+  terms:
+    FixedCalendar: UK
+    FixedFrequency: Annual
+    FixedConvention: MF
+    FixedDayCounter: A365
+    Index: GBP-LIBOR-3M
+- id: CZK-6M-SWAP
+  terms:
+    FixedCalendar: CZK
+    FixedFrequency: Annual
+    FixedConvention: MF
+    FixedDayCounter: ACT/360
+    Index: CZK-PRIBOR-6M
+- id: CZK-3M-SWAP
+  terms:
+    FixedCalendar: CZK
+    FixedFrequency: Annual
+    FixedConvention: MF
+    FixedDayCounter: ACT/360
+    Index: CZK-PRIBOR-3M
+- id: HUF-6M-SWAP
+  terms:
+    FixedCalendar: HUF
+    FixedFrequency: Annual
+    FixedConvention: MF
+    FixedDayCounter: A365
+    Index: HUF-BUBOR-6M
+- id: PLN-6M-SWAP
+  terms:
+    FixedCalendar: PLN
+    FixedFrequency: Annual
+    FixedConvention: MF
+    FixedDayCounter: ACT/ACT
+    Index: PLN-WIBOR-6M
+- id: PLN-3M-SWAP
+  terms:
+    FixedCalendar: PLN
+    FixedFrequency: Annual
+    FixedConvention: MF
+    FixedDayCounter: ACT/ACT
+    Index: PLN-WIBOR-3M
+- id: NZD-6M-SWAP
+  terms:
+    FixedCalendar: NZD
+    FixedFrequency: Semiannual
+    FixedConvention: MF
+    FixedDayCounter: A365
+    Index: NZD-BKBM-6M
+- id: NZD-3M-SWAP
+  terms:
+    FixedCalendar: NZD
+    FixedFrequency: Semiannual
+    FixedConvention: MF
+    FixedDayCounter: A365
+    Index: NZD-BKBM-3M
+- id: MXN-28D-SWAP-CONVENTIONS
+  terms:
+    FixedCalendar: MXN
+    FixedFrequency: Lunarmonth
+    FixedConvention: MF
+    FixedDayCounter: ACT/360
+    Index: MXN-TIIE-28D
+- id: HKD-3M-SWAP
+  terms:
+    FixedCalendar: HKD
+    FixedFrequency: Quarterly
+    FixedConvention: MF
+    FixedDayCounter: A365
+    Index: HKD-HIBOR-3M
+- id: INR-3M-SWAP
+  terms:
+    FixedCalendar: INR
+    FixedFrequency: Semiannual
+    FixedConvention: MF
+    FixedDayCounter: A365
+    Index: INR-MIFOR-3M
+- id: INR-6M-SWAP
+  terms:
+    FixedCalendar: INR
+    FixedFrequency: Semiannual
+    FixedConvention: MF
+    FixedDayCounter: A365
+    Index: INR-MIFOR-6M
+- id: KRW-3M-SWAP
+  terms:
+    FixedCalendar: KRW
+    FixedFrequency: Quarterly
+    FixedConvention: MF
+    FixedDayCounter: A365
+    Index: KRW-KORIBOR-3M
+- id: MYR-3M-SWAP
+  terms:
+    FixedCalendar: MYR
+    FixedFrequency: Quarterly
+    FixedConvention: MF
+    FixedDayCounter: A365
+    Index: MYR-KLIBOR-3M
+- id: RUB-3M-SWAP
+  terms:
+    FixedCalendar: RUB
+    FixedFrequency: Annual
+    FixedConvention: MF
+    FixedDayCounter: ACT/ACT
+    Index: RUB-MOSPRIME-3M
+- id: THB-6M-SWAP
+  terms:
+    FixedCalendar: THB
+    FixedFrequency: Semiannual
+    FixedConvention: MF
+    FixedDayCounter: A365
+    Index: THB-BIBOR-6M
+- id: PHP-3M-SWAP
+  terms:
+    FixedCalendar: PHP
+    FixedFrequency: Quarterly
+    FixedConvention: MF
+    FixedDayCounter: ACT/360
+    Index: PHP-PHIREF-3M
+- id: TWD-3M-SWAP
+  terms:
+    FixedCalendar: TWD
+    FixedFrequency: Quarterly
+    FixedConvention: MF
+    FixedDayCounter: A365
+    Index: TWD-TAIBOR-3M
+- id: ZAR-3M-SWAP
+  terms:
+    FixedCalendar: ZAR
+    FixedFrequency: Quarterly
+    FixedConvention: MF
+    FixedDayCounter: A365
+    Index: ZAR-JIBAR-3M
+- id: BRL-GENERIC-3M-SWAP-CONVENTIONS
+  terms:
+    FixedCalendar: TARGET
+    FixedFrequency: Annual
+    FixedConvention: MF
+    FixedDayCounter: 30/360
+    Index: BRL-GENERIC-3M
+- id: CLP-GENERIC-3M-SWAP-CONVENTIONS
+  terms:
+    FixedCalendar: TARGET
+    FixedFrequency: Annual
+    FixedConvention: MF
+    FixedDayCounter: 30/360
+    Index: CLP-GENERIC-3M
+- id: CNY-GENERIC-3M-SWAP-CONVENTIONS
+  terms:
+    FixedCalendar: TARGET
+    FixedFrequency: Annual
+    FixedConvention: MF
+    FixedDayCounter: 30/360
+    Index: CNY-GENERIC-3M
+- id: IDR-GENERIC-3M-SWAP-CONVENTIONS
+  terms:
+    FixedCalendar: TARGET
+    FixedFrequency: Annual
+    FixedConvention: MF
+    FixedDayCounter: 30/360
+    Index: IDR-GENERIC-3M
+- id: INR-GENERIC-3M-SWAP-CONVENTIONS
+  terms:
+    FixedCalendar: TARGET
+    FixedFrequency: Annual
+    FixedConvention: MF
+    FixedDayCounter: 30/360
+    Index: INR-GENERIC-3M
+- id: KRW-GENERIC-3M-SWAP-CONVENTIONS
+  terms:
+    FixedCalendar: TARGET
+    FixedFrequency: Annual
+    FixedConvention: MF
+    FixedDayCounter: 30/360
+    Index: KRW-GENERIC-3M
+- id: MYR-GENERIC-3M-SWAP-CONVENTIONS
+  terms:
+    FixedCalendar: TARGET
+    FixedFrequency: Annual
+    FixedConvention: MF
+    FixedDayCounter: 30/360
+    Index: MYR-GENERIC-3M
+- id: PHP-GENERIC-3M-SWAP-CONVENTIONS
+  terms:
+    FixedCalendar: TARGET
+    FixedFrequency: Annual
+    FixedConvention: MF
+    FixedDayCounter: 30/360
+    Index: PHP-GENERIC-3M
+- id: TWD-GENERIC-3M-SWAP-CONVENTIONS
+  terms:
+    FixedCalendar: TARGET
+    FixedFrequency: Annual
+    FixedConvention: MF
+    FixedDayCounter: 30/360
+    Index: TWD-GENERIC-3M
+ois:
+- id: EUR-OIS-CONVENTIONS
+  terms:
+    SpotLag: 2
+    Index: EUR-EONIA
+    FixedDayCounter: A360
+    PaymentLag: 1
+    EOM: false
+    FixedFrequency: Annual
+    FixedConvention: Following
+    FixedPaymentConvention: Following
+    Rule: Backward
+    RateCutoff: 1
+- id: DKK-OIS-CONVENTIONS
+  terms:
+    SpotLag: 2
+    Index: DKK-DKKOIS
+    FixedDayCounter: A360
+    PaymentLag: 0
+    EOM: false
+    FixedFrequency: Annual
+    FixedConvention: Following
+    FixedPaymentConvention: Following
+    Rule: Backward
+    RateCutoff: 1
+- id: SEK-OIS-CONVENTIONS
+  terms:
+    SpotLag: 2
+    Index: SEK-SIOR
+    FixedDayCounter: A360
+    PaymentLag: 0
+    EOM: false
+    FixedFrequency: Annual
+    FixedConvention: Following
+    FixedPaymentConvention: Following
+    Rule: Backward
+    RateCutoff: 1
+- id: CHF-OIS-CONVENTIONS
+  terms:
+    SpotLag: 1
+    Index: CHF-TOIS
+    FixedDayCounter: 30/360
+    PaymentLag: 2
+    EOM: false
+    FixedFrequency: Annual
+    FixedConvention: Following
+    FixedPaymentConvention: Following
+    Rule: Backward
+    RateCutoff: 1
+- id: CHF-OIS-SARON-CONVENTIONS
+  terms:
+    SpotLag: 1
+    Index: CHF-SARON
+    FixedDayCounter: 30/360
+    PaymentLag: 2
+    EOM: false
+    FixedFrequency: Annual
+    FixedConvention: Following
+    FixedPaymentConvention: Following
+    Rule: Backward
+    RateCutoff: 1
+- id: USD-OIS-CONVENTIONS
+  terms:
+    SpotLag: 2
+    Index: USD-FedFunds
+    FixedDayCounter: A360
+    PaymentLag: 2
+    EOM: false
+    FixedFrequency: Annual
+    FixedConvention: Following
+    FixedPaymentConvention: Following
+    Rule: Backward
+    RateCutoff: 1
+- id: GBP-OIS-CONVENTIONS
+  terms:
+    SpotLag: 0
+    Index: GBP-SONIA
+    FixedDayCounter: A365
+    PaymentLag: 0
+    EOM: false
+    FixedFrequency: Annual
+    FixedConvention: Following
+    FixedPaymentConvention: Following
+    Rule: Backward
+    RateCutoff: 1
+- id: JPY-OIS-CONVENTIONS
+  terms:
+    SpotLag: 2
+    Index: JPY-TONAR
+    FixedDayCounter: A360
+    PaymentLag: 1
+    EOM: false
+    FixedFrequency: Annual
+    FixedConvention: Following
+    FixedPaymentConvention: Following
+    Rule: Backward
+    RateCutoff: 1
+- id: CAD-OIS-CONVENTIONS
+  terms:
+    SpotLag: 2
+    Index: CAD-CORRA
+    FixedDayCounter: A365
+    PaymentLag: 2
+    EOM: false
+    FixedFrequency: Annual
+    FixedConvention: Following
+    FixedPaymentConvention: Following
+    Rule: Backward
+    RateCutoff: 1
+average_ois:
+- id: USD-AVERAGE-OIS-CONVENTIONS
+  terms:
+    SpotLag: 2
+    FixedTenor: 6M
+    FixedDayCounter: 30/360
+    FixedCalendar: US
+    FixedConvention: MF
+    FixedPaymentConvention: MF
+    Index: USD-FedFunds
+    OnTenor: 3M
+    RateCutoff: 2
+tenor_basis_two_swap:
+- id: EURIBOR-3M-6M-BASIS-CONVENTIONS
+  terms:
+    Calendar: TARGET
+    LongFixedFrequency: Annual
+    LongFixedConvention: MF
+    LongFixedDayCounter: 30/360
+    LongIndex: EUR-EURIBOR-6M
+    ShortFixedFrequency: Annual
+    ShortFixedConvention: MF
+    ShortFixedDayCounter: 30/360
+    ShortIndex: EUR-EURIBOR-3M
+    LongMinusShort: true
+- id: EUR-EURIBOR-6M-12M-BASIS-CONVENTIONS
+  terms:
+    Calendar: TARGET
+    LongFixedFrequency: Annual
+    LongFixedConvention: MF
+    LongFixedDayCounter: 30/360
+    LongIndex: EUR-EURIBOR-12M
+    ShortFixedFrequency: Annual
+    ShortFixedConvention: MF
+    ShortFixedDayCounter: 30/360
+    ShortIndex: EUR-EURIBOR-6M
+    LongMinusShort: true
+tenor_basis_swap:
+- id: USD-LIBOR-3M-6M-BASIS-CONVENTIONS
+  terms:
+    PayIndex: USD-LIBOR-6M
+    ReceiveIndex: USD-LIBOR-3M
+    ReceiveFrequency: 6M
+    SpreadOnRec: true
+    IncludeSpread: false
+    SubPeriodsCouponType: Compounding
+- id: USD-LIBOR-1M-3M-BASIS-CONVENTIONS
+  terms:
+    PayIndex: USD-LIBOR-3M
+    ReceiveIndex: USD-LIBOR-1M
+    ReceiveFrequency: 3M
+    SpreadOnRec: true
+    IncludeSpread: false
+    SubPeriodsCouponType: Compounding
+- id: GBP-LIBOR-3M-6M-BASIS-CONVENTIONS
+  terms:
+    PayIndex: GBP-LIBOR-6M
+    ReceiveIndex: GBP-LIBOR-3M
+- id: CHF-LIBOR-3M-6M-BASIS-CONVENTIONS
+  terms:
+    PayIndex: CHF-LIBOR-6M
+    ReceiveIndex: CHF-LIBOR-3M
+- id: JPY-LIBOR-3M-6M-BASIS-CONVENTIONS
+  terms:
+    PayIndex: JPY-LIBOR-6M
+    ReceiveIndex: JPY-LIBOR-3M
+- id: EUR-OIS-1M-BASIS-CONVENTIONS
+  terms:
+    PayIndex: EUR-EURIBOR-1M
+    ReceiveIndex: EUR-EONIA
+    ReceiveFrequency: 1Y
+bma_basis_swap:
+- id: USD-LIBOR-SIFMA-3M-BASIS-CONVENTIONS
+  terms:
+    Index: USD-LIBOR-3M
+    BMAIndex: USD-SIFMA
+fx:
+- id: GBP-USD-FX-CONVENTIONS
+  terms:
+    SpotDays: 0
+    SourceCurrency: GBP
+    TargetCurrency: USD
+    PointsFactor: 10000
+    AdvanceCalendar: UK,US
+    SpotRelative: true
+- id: USD-GBP-FX-CONVENTIONS
+  terms:
+    SpotDays: 0
+    SourceCurrency: USD
+    TargetCurrency: GBP
+    PointsFactor: 10000
+    AdvanceCalendar: UK,US
+    SpotRelative: true
+- id: EUR-USD-FX-CONVENTIONS
+  terms:
+    SpotDays: 0
+    SourceCurrency: EUR
+    TargetCurrency: USD
+    PointsFactor: 10000
+    AdvanceCalendar: TARGET,US, UK
+    SpotRelative: true
+- id: FX-ECB-EUR-USD
+  terms:
+    SpotDays: 2
+    SourceCurrency: EUR
+    TargetCurrency: USD
+    PointsFactor: 10000
+    AdvanceCalendar: TARGET,US, UK
+    SpotRelative: true
+- id: EUR-JPY-FX-CONVENTIONS
+  terms:
+    SpotDays: 0
+    SourceCurrency: EUR
+    TargetCurrency: JPY
+    PointsFactor: 10000
+    AdvanceCalendar: TARGET,JPY
+    SpotRelative: true
+- id: CHF-USD-FX-CONVENTIONS
+  terms:
+    SpotDays: 0
+    SourceCurrency: CHF
+    TargetCurrency: USD
+    PointsFactor: 10000
+    AdvanceCalendar: ZUB,US
+    SpotRelative: true
+- id: USD-CHF-FX-CONVENTIONS
+  terms:
+    SpotDays: 0
+    SourceCurrency: USD
+    TargetCurrency: CHF
+    PointsFactor: 10000
+    AdvanceCalendar: ZUB,US
+    SpotRelative: true
+- id: EUR-GBP-FX-CONVENTIONS
+  terms:
+    SpotDays: 0
+    SourceCurrency: EUR
+    TargetCurrency: GBP
+    PointsFactor: 10000
+    AdvanceCalendar: TARGET,UK
+    SpotRelative: true
+- id: EUR-CHF-FX-CONVENTIONS
+  terms:
+    SpotDays: 0
+    SourceCurrency: EUR
+    TargetCurrency: CHF
+    PointsFactor: 10000
+    AdvanceCalendar: TARGET,ZUB
+    SpotRelative: true
+- id: USD-NOK-FX-CONVENTIONS
+  terms:
+    SpotDays: 0
+    SourceCurrency: USD
+    TargetCurrency: NOK
+    PointsFactor: 10000
+    AdvanceCalendar: US,NOK
+    SpotRelative: true
+- id: USD-SEK-FX-CONVENTIONS
+  terms:
+    SpotDays: 0
+    SourceCurrency: USD
+    TargetCurrency: SEK
+    PointsFactor: 10000
+    AdvanceCalendar: US,SEK
+    SpotRelative: true
+- id: USD-MXN-FX-CONVENTIONS
+  terms:
+    SpotDays: 0
+    SourceCurrency: USD
+    TargetCurrency: MXN
+    PointsFactor: 1
+    AdvanceCalendar: US
+    SpotRelative: true
+- id: USD-JPY-FX-CONVENTIONS
+  terms:
+    SpotDays: 0
+    SourceCurrency: USD
+    TargetCurrency: JPY
+    PointsFactor: 100
+    AdvanceCalendar: US,JP
+    SpotRelative: true
+- id: USD-CAD-FX-CONVENTIONS
+  terms:
+    SpotDays: 0
+    SourceCurrency: USD
+    TargetCurrency: CAD
+    PointsFactor: 10000
+    AdvanceCalendar: US,CA
+    SpotRelative: true
+- id: USD-TWD-FX-CONVENTIONS
+  terms:
+    SpotDays: 0
+    SourceCurrency: USD
+    TargetCurrency: TWD
+    PointsFactor: 1
+    AdvanceCalendar: US
+    SpotRelative: true
+- id: USD-KRW-FX-CONVENTIONS
+  terms:
+    SpotDays: 0
+    SourceCurrency: USD
+    TargetCurrency: KRW
+    PointsFactor: 100
+    AdvanceCalendar: US
+    SpotRelative: true
+- id: USD-TRY-FX
+  terms:
+    SpotDays: 0
+    SourceCurrency: USD
+    TargetCurrency: TRY
+    PointsFactor: 10000
+    AdvanceCalendar: US
+    SpotRelative: true
+- id: USD-INR-FX-CONVENTIONS
+  terms:
+    SpotDays: 0
+    SourceCurrency: USD
+    TargetCurrency: INR
+    PointsFactor: 100
+    AdvanceCalendar: US
+    SpotRelative: true
+- id: USD-BRL-FX-CONVENTIONS
+  terms:
+    SpotDays: 0
+    SourceCurrency: USD
+    TargetCurrency: BRL
+    PointsFactor: 10000
+    AdvanceCalendar: US
+    SpotRelative: true
+- id: USD-CLP-FX-CONVENTIONS
+  terms:
+    SpotDays: 0
+    SourceCurrency: USD
+    TargetCurrency: CLP
+    PointsFactor: 1
+    AdvanceCalendar: US
+    SpotRelative: true
+- id: USD-IDR-FX-CONVENTIONS
+  terms:
+    SpotDays: 0
+    SourceCurrency: USD
+    TargetCurrency: IDR
+    PointsFactor: 1
+    AdvanceCalendar: US
+    SpotRelative: true
+- id: USD-CNY-FX-CONVENTIONS
+  terms:
+    SpotDays: 0
+    SourceCurrency: USD
+    TargetCurrency: CNY
+    PointsFactor: 10000
+    AdvanceCalendar: US
+    SpotRelative: true
+- id: USD-MYR-FX-CONVENTIONS
+  terms:
+    SpotDays: 0
+    SourceCurrency: USD
+    TargetCurrency: MYR
+    PointsFactor: 10000
+    AdvanceCalendar: US
+    SpotRelative: true
+- id: USD-PHP-FX-CONVENTIONS
+  terms:
+    SpotDays: 0
+    SourceCurrency: USD
+    TargetCurrency: PHP
+    PointsFactor: 10
+    AdvanceCalendar: US
+    SpotRelative: true
+cross_currency_basis:
+- id: EUR-USD-XCCY-BASIS-CONVENTIONS
+  terms:
+    SettlementDays: 2
+    SettlementCalendar: TARGET,US,UK
+    RollConvention: MF
+    FlatIndex: USD-LIBOR-3M
+    SpreadIndex: EUR-EURIBOR-3M
+    IsResettable: true
+    FlatIndexIsResettable: true
+- id: USD-GBP-XCCY-BASIS-CONVENTIONS
+  terms:
+    SettlementDays: 2
+    SettlementCalendar: UK,US
+    RollConvention: MF
+    FlatIndex: USD-LIBOR-3M
+    SpreadIndex: GBP-LIBOR-3M
+- id: EUR-GBP-XCCY-BASIS-CONVENTIONS
+  terms:
+    SettlementDays: 2
+    SettlementCalendar: UK,TARGET
+    RollConvention: MF
+    FlatIndex: EUR-EURIBOR-3M
+    SpreadIndex: GBP-LIBOR-3M
+- id: EUR-CHF-XCCY-BASIS-CONVENTIONS
+  terms:
+    SettlementDays: 2
+    SettlementCalendar: ZUB,TARGET,UK
+    RollConvention: MF
+    FlatIndex: EUR-EURIBOR-3M
+    SpreadIndex: CHF-LIBOR-3M
+- id: USD-CHF-XCCY-BASIS-CONVENTIONS
+  terms:
+    SettlementDays: 2
+    SettlementCalendar: ZUB,US,UK
+    RollConvention: MF
+    FlatIndex: USD-LIBOR-3M
+    SpreadIndex: CHF-LIBOR-3M
+- id: USD-NOK-XCCY-BASIS-CONVENTIONS
+  terms:
+    SettlementDays: 2
+    SettlementCalendar: NOK,US,UK
+    RollConvention: MF
+    FlatIndex: USD-LIBOR-3M
+    SpreadIndex: NOK-NIBOR-3M
+- id: USD-SEK-XCCY-BASIS-CONVENTIONS
+  terms:
+    SettlementDays: 2
+    SettlementCalendar: SEK,US,UK
+    RollConvention: MF
+    FlatIndex: USD-LIBOR-3M
+    SpreadIndex: SEK-STIBOR-3M
+- id: USD-MXN-XCCY-BASIS-CONVENTIONS
+  terms:
+    SettlementDays: 2
+    SettlementCalendar: MXN,US,UK
+    RollConvention: MF
+    FlatIndex: MXN-TIIE-28D
+    SpreadIndex: USD-LIBOR-1M
+- id: USD-MXN-3M-XCCY-BASIS-CONVENTIONS
+  terms:
+    SettlementDays: 2
+    SettlementCalendar: MXN,US,UK
+    RollConvention: MF
+    FlatIndex: USD-LIBOR-3M
+    SpreadIndex: MXN-TIIE-3M
+- id: USD-JPY-XCCY-BASIS-CONVENTIONS
+  terms:
+    SettlementDays: 2
+    SettlementCalendar: JP,US,UK
+    RollConvention: MF
+    FlatIndex: USD-LIBOR-3M
+    SpreadIndex: JPY-LIBOR-3M
+- id: USD-CAD-XCCY-BASIS-CONVENTIONS
+  terms:
+    SettlementDays: 2
+    SettlementCalendar: CA,US,UK
+    RollConvention: MF
+    FlatIndex: USD-LIBOR-3M
+    SpreadIndex: CAD-CDOR-3M
+- id: USD-BRL-GENERIC-XCCY-BASIS-CONVENTIONS
+  terms:
+    SettlementDays: 2
+    SettlementCalendar: TARGET,US,UK
+    RollConvention: MF
+    FlatIndex: USD-LIBOR-3M
+    SpreadIndex: BRL-GENERIC-3M
+- id: USD-CLP-GENERIC-XCCY-BASIS-CONVENTIONS
+  terms:
+    SettlementDays: 2
+    SettlementCalendar: TARGET,US,UK
+    RollConvention: MF
+    FlatIndex: USD-LIBOR-3M
+    SpreadIndex: CLP-GENERIC-3M
+- id: USD-CNY-GENERIC-XCCY-BASIS-CONVENTIONS
+  terms:
+    SettlementDays: 2
+    SettlementCalendar: TARGET,US,UK
+    RollConvention: MF
+    FlatIndex: USD-LIBOR-3M
+    SpreadIndex: CNY-GENERIC-3M
+- id: USD-IDR-GENERIC-XCCY-BASIS-CONVENTIONS
+  terms:
+    SettlementDays: 2
+    SettlementCalendar: TARGET,US,UK
+    RollConvention: MF
+    FlatIndex: USD-LIBOR-3M
+    SpreadIndex: IDR-GENERIC-3M
+- id: USD-INR-GENERIC-XCCY-BASIS-CONVENTIONS
+  terms:
+    SettlementDays: 2
+    SettlementCalendar: TARGET,US,UK
+    RollConvention: MF
+    FlatIndex: USD-LIBOR-3M
+    SpreadIndex: INR-GENERIC-3M
+- id: USD-KRW-GENERIC-XCCY-BASIS-CONVENTIONS
+  terms:
+    SettlementDays: 2
+    SettlementCalendar: TARGET,US,UK
+    RollConvention: MF
+    FlatIndex: USD-LIBOR-3M
+    SpreadIndex: KRW-GENERIC-3M
+- id: USD-MYR-GENERIC-XCCY-BASIS-CONVENTIONS
+  terms:
+    SettlementDays: 2
+    SettlementCalendar: TARGET,US,UK
+    RollConvention: MF
+    FlatIndex: USD-LIBOR-3M
+    SpreadIndex: MYR-GENERIC-3M
+- id: USD-PHP-GENERIC-XCCY-BASIS-CONVENTIONS
+  terms:
+    SettlementDays: 2
+    SettlementCalendar: TARGET,US,UK
+    RollConvention: MF
+    FlatIndex: USD-LIBOR-3M
+    SpreadIndex: PHP-GENERIC-3M
+- id: USD-TWD-GENERIC-XCCY-BASIS-CONVENTIONS
+  terms:
+    SettlementDays: 2
+    SettlementCalendar: TARGET,US,UK
+    RollConvention: MF
+    FlatIndex: USD-LIBOR-3M
+    SpreadIndex: TWD-GENERIC-3M
+cross_currency_fix_float:
+- id: USD-TRY-XCCY-FIX-FLOAT-CONVENTIONS
+  terms:
+    SettlementDays: 2
+    SettlementCalendar: US,UK,TRY
+    SettlementConvention: F
+    FixedCurrency: TRY
+    FixedFrequency: Annual
+    FixedConvention: F
+    FixedDayCounter: A360
+    Index: USD-LIBOR-3M
+inflation_swap:
+- id: EUHICP_INFLATIONSWAP
+  terms:
+    FixCalendar: TARGET
+    FixConvention: MF
+    DayCounter: 30/360
+    Index: EUHICP
+    Interpolated: false
+    ObservationLag: 3M
+    AdjustInflationObservationDates: false
+    InflationCalendar: TARGET
+    InflationConvention: MF
+- id: EUHICPXT_INFLATIONSWAP
+  terms:
+    FixCalendar: TARGET
+    FixConvention: MF
+    DayCounter: 30/360
+    Index: EUHICPXT
+    Interpolated: false
+    ObservationLag: 3M
+    AdjustInflationObservationDates: false
+    InflationCalendar: TARGET
+    InflationConvention: MF
+- id: FRHICP_INFLATIONSWAP
+  terms:
+    FixCalendar: TARGET
+    FixConvention: MF
+    DayCounter: 30/360
+    Index: FRHICP
+    Interpolated: false
+    ObservationLag: 3M
+    AdjustInflationObservationDates: false
+    InflationCalendar: TARGET
+    InflationConvention: MF
+- id: UKRPI_INFLATIONSWAP
+  terms:
+    FixCalendar: UK
+    FixConvention: MF
+    DayCounter: 30/360
+    Index: UKRPI
+    Interpolated: false
+    ObservationLag: 2M
+    AdjustInflationObservationDates: false
+    InflationCalendar: UK
+    InflationConvention: MF
+- id: USCPI_INFLATIONSWAP
+  terms:
+    FixCalendar: US
+    FixConvention: MF
+    DayCounter: 30/360
+    Index: USCPI
+    Interpolated: false
+    ObservationLag: 3M
+    AdjustInflationObservationDates: false
+    InflationCalendar: US
+    InflationConvention: MF
+- id: ZACPI_INFLATIONSWAP
+  terms:
+    FixCalendar: ZAR
+    FixConvention: MF
+    DayCounter: 30/360
+    Index: ZACPI
+    Interpolated: false
+    ObservationLag: 3M
+    AdjustInflationObservationDates: false
+    InflationCalendar: ZAR
+    InflationConvention: MF
+cms_spread_option:
+- id: EUR-CMS-10Y-2Y-CONVENTION
+  terms:
+    ForwardStart: 0M
+    SpotDays: 2D
+    SwapTenor: 3M
+    FixingDays: 2
+    Calendar: TARGET
+    DayCounter: A360
+    RollConvention: MF
+fx_option:
+- id: FX-EUR-USD-OPTION-CONVENTIONS
+  terms:
+    AtmType: AtmDeltaNeutral
+    DeltaType: Fwd
+- id: FX-GBP-USD-OPTION-CONVENTIONS
+  terms:
+    AtmType: AtmDeltaNeutral
+    DeltaType: Fwd
+- id: FX-AUD-USD-OPTION-CONVENTIONS
+  terms:
+    AtmType: AtmDeltaNeutral
+    DeltaType: Fwd
+- id: FX-NZD-USD-OPTION-CONVENTIONS
+  terms:
+    AtmType: AtmDeltaNeutral
+    DeltaType: Fwd
+- id: FX-USD-CAD-OPTION-CONVENTIONS
+  terms:
+    AtmType: AtmDeltaNeutral
+    DeltaType: PaFwd
+- id: FX-USD-CHF-OPTION-CONVENTIONS
+  terms:
+    AtmType: AtmDeltaNeutral
+    DeltaType: PaFwd
+- id: FX-USD-JPY-OPTION-CONVENTIONS
+  terms:
+    AtmType: AtmDeltaNeutral
+    DeltaType: PaFwd
+- id: FX-EUR-GBP-OPTION-CONVENTIONS
+  terms:
+    AtmType: AtmDeltaNeutral
+    DeltaType: PaFwd
+- id: FX-EUR-AUD-OPTION-CONVENTIONS
+  terms:
+    AtmType: AtmDeltaNeutral
+    DeltaType: PaFwd
+- id: FX-EUR-CAD-OPTION-CONVENTIONS
+  terms:
+    AtmType: AtmDeltaNeutral
+    DeltaType: PaFwd
+- id: FX-EUR-CHF-OPTION-CONVENTIONS
+  terms:
+    AtmType: AtmDeltaNeutral
+    DeltaType: PaFwd
+- id: FX-EUR-JPY-OPTION-CONVENTIONS
+  terms:
+    AtmType: AtmDeltaNeutral
+    DeltaType: PaFwd
+- id: FX-GBP-AUD-OPTION-CONVENTIONS
+  terms:
+    AtmType: AtmDeltaNeutral
+    DeltaType: PaFwd
+- id: FX-GBP-CAD-OPTION-CONVENTIONS
+  terms:
+    AtmType: AtmDeltaNeutral
+    DeltaType: PaFwd
+- id: FX-GBP-CHF-OPTION-CONVENTIONS
+  terms:
+    AtmType: AtmDeltaNeutral
+    DeltaType: PaFwd
+- id: FX-GBP-JPY-OPTION-CONVENTIONS
+  terms:
+    AtmType: AtmDeltaNeutral
+    DeltaType: PaFwd
+- id: FX-AUD-NZD-OPTION-CONVENTIONS
+  terms:
+    AtmType: AtmDeltaNeutral
+    DeltaType: PaFwd
+- id: FX-AUD-CAD-OPTION-CONVENTIONS
+  terms:
+    AtmType: AtmDeltaNeutral
+    DeltaType: PaFwd
+- id: FX-AUD-JPY-OPTION-CONVENTIONS
+  terms:
+    AtmType: AtmDeltaNeutral
+    DeltaType: PaFwd
+- id: FX-NZD-JPY-OPTION-CONVENTIONS
+  terms:
+    AtmType: AtmDeltaNeutral
+    DeltaType: PaFwd
+- id: FX-CAD-JPY-OPTION-CONVENTIONS
+  terms:
+    AtmType: AtmDeltaNeutral
+    DeltaType: PaFwd
+- id: FX-CHF-JPY-OPTION-CONVENTIONS
+  terms:
+    AtmType: AtmDeltaNeutral
+    DeltaType: PaFwd

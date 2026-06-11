@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0.0",
+  "seedVersion": "1.0.0",
+  "publishedAt": "examples/vre_python/notebooks/example_11/input/vre_sacva_fd_eqcom.toml",
+  "contentHash": "345606d6518665de1813875ed82a2a84a2e2243346a178c43f3c8b4f0794bbea",
+  "sourceLineage": {
+    "masterPath": "examples/vre_python/notebooks/example_11/input_bundle/vre_sacva_fd_eqcom/runtime_policy/legal_entity_master.yaml",
+    "policyPath": "examples/vre_python/notebooks/example_11/input_bundle/vre_sacva_fd_eqcom/runtime_policy/legal_entity_reporting_policy.json",
+    "effectivityPath": "examples/vre_python/notebooks/example_11/input_bundle/vre_sacva_fd_eqcom/runtime_policy/legal_entity_effectivity.json",
+    "generator": "tools/ci/publish_legal_entity_contracts.py",
+    "traceabilityRefs": {
+      "master": {
+        "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+        "epic": "docs/architecture/scope_runtime_migration.yaml",
+        "sourceXml": "vre_python/notebooks/example_11/input/legalentity_master.xml",
+        "spec": "docs/architecture/scope_runtime_migration.yaml"
+      },
+      "policy": {
+        "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+        "epic": "docs/architecture/scope_runtime_migration.yaml",
+        "sourceXml": "vre_python/notebooks/example_11/input/legalentity_master.xml",
+        "spec": "docs/architecture/scope_runtime_migration.yaml"
+      },
+      "effectivity": {
+        "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+        "epic": "docs/architecture/scope_runtime_migration.yaml",
+        "sourceXml": "vre_python/notebooks/example_11/input/legalentity_master.xml",
+        "spec": "docs/architecture/scope_runtime_migration.yaml"
+      }
+    }
+  },
+  "entities": [
+    {
+      "legalEntityId": "LE_VREPY_NOTEBOOK",
+      "lei": "5493001KJTIIGC8Y1R12",
+      "jurisdiction": "AU",
+      "regulatorCode": "APRA",
+      "cvaCapitalPerimeter": true,
+      "immApproved": false,
+      "active": true,
+      "effectiveFrom": "2019-02-25",
+      "creditRiskRwaApproach": "STANDARDISED",
+      "cvaMethod": "SACVA",
+      "immScopeProducts": [
+        "OTC_DERIVATIVES"
+      ]
+    }
+  ]
+}

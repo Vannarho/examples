@@ -1,0 +1,134 @@
+{
+  "schemaVersion": "1.0.0",
+  "seedVersion": "1.0.0",
+  "publishedAt": "examples/vre_python/notebooks/example_10/input/vre_sacva_cg_ad.toml",
+  "contentHash": "bdff1029bd5b46e8ce00c98b68d6a2af90c7922ea03e657f50ab4ff7d6ca381d",
+  "sourceLineage": {
+    "runtimePath": "examples/vre_python/notebooks/example_10/input_bundle/vre_sacva_cg_ad/runtime_policy/pricing_runtime_pricingengine_amccg.toml",
+    "policyPath": "examples/vre_python/notebooks/example_10/input_bundle/vre_sacva_cg_ad/runtime_policy/pricing_policy_pricingengine_amccg.yaml",
+    "generator": "tools/ci/publish_pricing_engine_contracts.py"
+  },
+  "pricingRuntime": {
+    "profileId": "pricingengine_amccg",
+    "allowedOverrides": []
+  },
+  "pricingPolicy": {
+    "profileId": "pricingengine_amccg",
+    "globalParameters": {},
+    "products": [
+      {
+        "productType": "ScriptedTrade",
+        "model": {
+          "name": "Generic",
+          "parameters": {
+            "BaseCcy": "EUR",
+            "CommodityCgUseDomesticMeasure": "true",
+            "EnforceBaseCcy": "false",
+            "EquityCgUseDomesticMeasure": "true",
+            "EquityCgUseMidpoint": "true",
+            "FullDynamicFx": "true",
+            "FullDynamicIr": "true",
+            "GridCoarsening": "3M(1W),1Y(1M),5Y(3M),10Y(1Y),50Y(5Y)",
+            "InfModelType": "JY",
+            "IrReversion_EUR": "0.01",
+            "IrReversion_GBP": "0.01",
+            "Model": "GaussianCam"
+          }
+        },
+        "engine": {
+          "name": "Generic",
+          "parameters": {
+            "AdCeFreezeBasis": "true",
+            "BootstrapTolerance": "1.0",
+            "CeOnlyAddReg": "true",
+            "Engine": "MC",
+            "Interactive": "false",
+            "RegressionOrder": "4",
+            "Samples": "8192",
+            "TimeStepsPerYear": "24",
+            "UseAD": "true",
+            "UseCG": "true",
+            "ZeroVolatility": "false"
+          }
+        }
+      },
+      {
+        "productType": "Swap",
+        "model": {
+          "name": "CrossAssetModel",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "AMCCG",
+          "parameters": {}
+        }
+      },
+      {
+        "productType": "ForwardRateAgreement",
+        "model": {
+          "name": "CrossAssetModel",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "AMCCG",
+          "parameters": {}
+        }
+      },
+      {
+        "productType": "FxForward",
+        "model": {
+          "name": "CrossAssetModel",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "AMCCG",
+          "parameters": {}
+        }
+      },
+      {
+        "productType": "CrossCurrencySwap",
+        "model": {
+          "name": "CrossAssetModel",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "AMCCG",
+          "parameters": {}
+        }
+      },
+      {
+        "productType": "FxOption",
+        "model": {
+          "name": "CrossAssetModel",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "AMCCG",
+          "parameters": {}
+        }
+      },
+      {
+        "productType": "BermudanSwaption",
+        "model": {
+          "name": "LGM",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "AMCCG",
+          "parameters": {}
+        }
+      },
+      {
+        "productType": "MultiLegOption",
+        "model": {
+          "name": "CrossAssetModel",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "AMCCG",
+          "parameters": {}
+        }
+      }
+    ]
+  }
+}

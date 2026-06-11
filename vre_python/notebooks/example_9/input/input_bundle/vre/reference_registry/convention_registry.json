@@ -1,0 +1,2141 @@
+{
+  "schemaVersion": "1.0.0",
+  "seedVersion": "1.0.0",
+  "traceabilityRefs": {
+    "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+    "epic": "docs/architecture/scope_runtime_migration.yaml",
+    "sourceXml": "vre_python/notebooks/example_9/input/conventions.xml",
+    "spec": "docs/architecture/scope_runtime_migration.yaml"
+  },
+  "zero": [
+    {
+      "id": "EUR-ZERO-CONVENTIONS",
+      "terms": {
+        "CompoundingFrequency": "Daily",
+        "DayCounter": "A365",
+        "TenorBased": false
+      }
+    },
+    {
+      "id": "EUR-ZERO-CONVENTIONS-TENOR-BASED",
+      "terms": {
+        "Compounding": "Continuous",
+        "CompoundingFrequency": "Daily",
+        "DayCounter": "A365",
+        "EOM": false,
+        "RollConvention": "Following",
+        "SpotCalendar": "TARGET",
+        "SpotLag": 2,
+        "TenorBased": true,
+        "TenorCalendar": "TARGET"
+      }
+    },
+    {
+      "id": "CHF-ZERO-CONVENTIONS",
+      "terms": {
+        "CompoundingFrequency": "Daily",
+        "DayCounter": "A365",
+        "TenorBased": false
+      }
+    },
+    {
+      "id": "GBP-ZERO-CONVENTIONS",
+      "terms": {
+        "CompoundingFrequency": "Daily",
+        "DayCounter": "A365",
+        "TenorBased": false
+      }
+    },
+    {
+      "id": "USD-ZERO-CONVENTIONS",
+      "terms": {
+        "CompoundingFrequency": "Daily",
+        "DayCounter": "A365",
+        "TenorBased": false
+      }
+    }
+  ],
+  "deposit": [
+    {
+      "id": "USD-LIBOR-CONVENTIONS",
+      "terms": {
+        "Index": "USD-LIBOR",
+        "IndexBased": true
+      }
+    },
+    {
+      "id": "USD-FED-FUNDS-CONVENTIONS",
+      "terms": {
+        "Index": "USD-FedFunds",
+        "IndexBased": true
+      }
+    },
+    {
+      "id": "CHF-LIBOR-CONVENTIONS",
+      "terms": {
+        "Index": "CHF-LIBOR",
+        "IndexBased": true
+      }
+    },
+    {
+      "id": "CHF-TOIS-CONVENTIONS",
+      "terms": {
+        "Index": "CHF-TOIS",
+        "IndexBased": true
+      }
+    },
+    {
+      "id": "CHF-SARON-CONVENTIONS",
+      "terms": {
+        "Index": "CHF-SARON",
+        "IndexBased": true
+      }
+    },
+    {
+      "id": "DKK-DKKOIS-CONVENTIONS",
+      "terms": {
+        "Index": "DKK-DKKOIS",
+        "IndexBased": true
+      }
+    },
+    {
+      "id": "SEK-SIOR-CONVENTIONS",
+      "terms": {
+        "Index": "SEK-SIOR",
+        "IndexBased": true
+      }
+    },
+    {
+      "id": "EUR-EONIA-CONVENTIONS",
+      "terms": {
+        "Index": "EUR-EONIA",
+        "IndexBased": true
+      }
+    },
+    {
+      "id": "EUR-EURIBOR-CONVENTIONS",
+      "terms": {
+        "Index": "EUR-EURIBOR",
+        "IndexBased": true
+      }
+    },
+    {
+      "id": "EUR-DEPOSIT",
+      "terms": {
+        "Index": "EUR-EURIBOR",
+        "IndexBased": true
+      }
+    },
+    {
+      "id": "GBP-SONIA-CONVENTIONS",
+      "terms": {
+        "Index": "GBP-SONIA",
+        "IndexBased": true
+      }
+    },
+    {
+      "id": "GBP-LIBOR-CONVENTIONS",
+      "terms": {
+        "Index": "GBP-LIBOR",
+        "IndexBased": true
+      }
+    },
+    {
+      "id": "GBP-DEPOSIT",
+      "terms": {
+        "Index": "GBP-LIBOR",
+        "IndexBased": true
+      }
+    },
+    {
+      "id": "CAD-DEPOSIT",
+      "terms": {
+        "Index": "CAD-CDOR",
+        "IndexBased": true
+      }
+    },
+    {
+      "id": "CAD-CORRA-CONVENTIONS",
+      "terms": {
+        "Index": "CAD-CORRA",
+        "IndexBased": true
+      }
+    },
+    {
+      "id": "CZK-DEPOSIT",
+      "terms": {
+        "Index": "CZK-PRIBOR",
+        "IndexBased": true
+      }
+    },
+    {
+      "id": "DKK-DEPOSIT",
+      "terms": {
+        "Index": "DKK-CIBOR",
+        "IndexBased": true
+      }
+    },
+    {
+      "id": "NOK-DEPOSIT",
+      "terms": {
+        "Index": "NOK-NIBOR",
+        "IndexBased": true
+      }
+    },
+    {
+      "id": "SEK-DEPOSIT",
+      "terms": {
+        "Index": "SEK-STIBOR",
+        "IndexBased": true
+      }
+    },
+    {
+      "id": "HUF-DEPOSIT",
+      "terms": {
+        "Index": "HUF-BUBOR",
+        "IndexBased": true
+      }
+    },
+    {
+      "id": "PLN-DEPOSIT",
+      "terms": {
+        "Index": "PLN-WIBOR",
+        "IndexBased": true
+      }
+    },
+    {
+      "id": "SGD-DEPOSIT",
+      "terms": {
+        "Index": "SGD-SIBOR",
+        "IndexBased": true
+      }
+    },
+    {
+      "id": "NZD-DEPOSIT",
+      "terms": {
+        "Index": "NZD-BKBM",
+        "IndexBased": true
+      }
+    },
+    {
+      "id": "JPY-LIBOR-CONVENTIONS",
+      "terms": {
+        "Index": "JPY-LIBOR",
+        "IndexBased": true
+      }
+    },
+    {
+      "id": "JPY-TIBOR-CONVENTIONS",
+      "terms": {
+        "Index": "JPY-TIBOR",
+        "IndexBased": true
+      }
+    },
+    {
+      "id": "AUD-BBSW-CONVENTIONS",
+      "terms": {
+        "Index": "AUD-BBSW",
+        "IndexBased": true
+      }
+    },
+    {
+      "id": "SEK-STIBOR-CONVENTIONS",
+      "terms": {
+        "Index": "SEK-STIBOR",
+        "IndexBased": true
+      }
+    },
+    {
+      "id": "MXN-TIIE-CONVENTIONS",
+      "terms": {
+        "Index": "MXN-TIIE",
+        "IndexBased": true
+      }
+    },
+    {
+      "id": "RUB-MOSPRIME-CONVENTIONS",
+      "terms": {
+        "Index": "RUB-MOSPRIME",
+        "IndexBased": true
+      }
+    },
+    {
+      "id": "BRL-GENERIC-CONVENTIONS",
+      "terms": {
+        "Index": "BRL-GENERIC",
+        "IndexBased": true
+      }
+    },
+    {
+      "id": "CLP-GENERIC-CONVENTIONS",
+      "terms": {
+        "Index": "CLP-GENERIC",
+        "IndexBased": true
+      }
+    },
+    {
+      "id": "CNY-GENERIC-CONVENTIONS",
+      "terms": {
+        "Index": "CNY-GENERIC",
+        "IndexBased": true
+      }
+    },
+    {
+      "id": "IDR-GENERIC-CONVENTIONS",
+      "terms": {
+        "Index": "IDR-GENERIC",
+        "IndexBased": true
+      }
+    },
+    {
+      "id": "INR-GENERIC-CONVENTIONS",
+      "terms": {
+        "Index": "INR-GENERIC",
+        "IndexBased": true
+      }
+    },
+    {
+      "id": "KRW-GENERIC-CONVENTIONS",
+      "terms": {
+        "Index": "KRW-GENERIC",
+        "IndexBased": true
+      }
+    },
+    {
+      "id": "MYR-GENERIC-CONVENTIONS",
+      "terms": {
+        "Index": "MYR-GENERIC",
+        "IndexBased": true
+      }
+    },
+    {
+      "id": "PHP-GENERIC-CONVENTIONS",
+      "terms": {
+        "Index": "PHP-GENERIC",
+        "IndexBased": true
+      }
+    },
+    {
+      "id": "TWD-GENERIC-CONVENTIONS",
+      "terms": {
+        "Index": "TWD-GENERIC",
+        "IndexBased": true
+      }
+    }
+  ],
+  "future": [
+    {
+      "id": "USD-LIBOR-3M-FUTURES-CONVENTIONS",
+      "terms": {
+        "Index": "USD-LIBOR-3M"
+      }
+    },
+    {
+      "id": "EURIBOR-3M-FUTURES-CONVENTIONS",
+      "terms": {
+        "Index": "EUR-EURIBOR-3M"
+      }
+    },
+    {
+      "id": "AUD-BBSW-3M-FUTURES-CONVENTIONS",
+      "terms": {
+        "Index": "AUD-BBSW-3M"
+      }
+    },
+    {
+      "id": "JPY-LIBOR-3M-FUTURES-CONVENTIONS",
+      "terms": {
+        "Index": "JPY-LIBOR-3M"
+      }
+    },
+    {
+      "id": "SEK-STIBOR-3M-FUTURES-CONVENTIONS",
+      "terms": {
+        "Index": "SEK-STIBOR-3M"
+      }
+    }
+  ],
+  "fra": [
+    {
+      "id": "EUR-12M-FRA-CONVENTIONS",
+      "terms": {
+        "Index": "EUR-EURIBOR-12M"
+      }
+    },
+    {
+      "id": "EUR-6M-FRA-CONVENTIONS",
+      "terms": {
+        "Index": "EUR-EURIBOR-6M"
+      }
+    },
+    {
+      "id": "EUR-3M-FRA-CONVENTIONS",
+      "terms": {
+        "Index": "EUR-EURIBOR-3M"
+      }
+    },
+    {
+      "id": "EUR-1M-FRA-CONVENTIONS",
+      "terms": {
+        "Index": "EUR-EURIBOR-1M"
+      }
+    },
+    {
+      "id": "AUD-3M-FRA-CONVENTIONS",
+      "terms": {
+        "Index": "AUD-BBSW-3M"
+      }
+    },
+    {
+      "id": "CHF-6M-FRA-CONVENTIONS",
+      "terms": {
+        "Index": "CHF-LIBOR-6M"
+      }
+    },
+    {
+      "id": "CHF-3M-FRA-CONVENTIONS",
+      "terms": {
+        "Index": "CHF-LIBOR-3M"
+      }
+    },
+    {
+      "id": "GBP-3M-FRA",
+      "terms": {
+        "Index": "GBP-LIBOR-3M"
+      }
+    },
+    {
+      "id": "GBP-6M-FRA",
+      "terms": {
+        "Index": "GBP-LIBOR-6M"
+      }
+    },
+    {
+      "id": "USD-6M-FRA-CONVENTIONS",
+      "terms": {
+        "Index": "USD-LIBOR-6M"
+      }
+    },
+    {
+      "id": "USD-3M-FRA-CONVENTIONS",
+      "terms": {
+        "Index": "USD-LIBOR-3M"
+      }
+    },
+    {
+      "id": "USD-1M-FRA-CONVENTIONS",
+      "terms": {
+        "Index": "USD-LIBOR-1M"
+      }
+    },
+    {
+      "id": "CAD-FRA-3M",
+      "terms": {
+        "Index": "CAD-CDOR-3M"
+      }
+    },
+    {
+      "id": "CZK-6M-FRA",
+      "terms": {
+        "Index": "CZK-PRIBOR-6M"
+      }
+    },
+    {
+      "id": "CZK-3M-FRA",
+      "terms": {
+        "Index": "CZK-PRIBOR-3M"
+      }
+    },
+    {
+      "id": "NZD-3M-FRA",
+      "terms": {
+        "Index": "NZD-BKBM-3M"
+      }
+    },
+    {
+      "id": "HUF-6M-FRA",
+      "terms": {
+        "Index": "HUF-BUBOR-6M"
+      }
+    },
+    {
+      "id": "PLN-6M-FRA",
+      "terms": {
+        "Index": "PLN-WIBOR-6M"
+      }
+    },
+    {
+      "id": "PLN-3M-FRA",
+      "terms": {
+        "Index": "PLN-WIBOR-3M"
+      }
+    },
+    {
+      "id": "SEK-3M-FRA",
+      "terms": {
+        "Index": "SEK-STIBOR-3M"
+      }
+    },
+    {
+      "id": "JPY-6M-FRA-CONVENTIONS",
+      "terms": {
+        "Index": "JPY-LIBOR-6M"
+      }
+    },
+    {
+      "id": "JPY-3M-FRA-CONVENTIONS",
+      "terms": {
+        "Index": "JPY-LIBOR-3M"
+      }
+    }
+  ],
+  "ois": [
+    {
+      "id": "EUR-OIS-CONVENTIONS",
+      "terms": {
+        "EOM": false,
+        "FixedConvention": "Following",
+        "FixedDayCounter": "A360",
+        "FixedFrequency": "Annual",
+        "FixedPaymentConvention": "Following",
+        "Index": "EUR-EONIA",
+        "PaymentLag": 1,
+        "Rule": "Backward",
+        "SpotLag": 2
+      }
+    },
+    {
+      "id": "DKK-OIS-CONVENTIONS",
+      "terms": {
+        "EOM": false,
+        "FixedConvention": "Following",
+        "FixedDayCounter": "A360",
+        "FixedFrequency": "Annual",
+        "FixedPaymentConvention": "Following",
+        "Index": "DKK-DKKOIS",
+        "PaymentLag": 0,
+        "Rule": "Backward",
+        "SpotLag": 2
+      }
+    },
+    {
+      "id": "SEK-OIS-CONVENTIONS",
+      "terms": {
+        "EOM": false,
+        "FixedConvention": "Following",
+        "FixedDayCounter": "A360",
+        "FixedFrequency": "Annual",
+        "FixedPaymentConvention": "Following",
+        "Index": "SEK-SIOR",
+        "PaymentLag": 0,
+        "Rule": "Backward",
+        "SpotLag": 2
+      }
+    },
+    {
+      "id": "CHF-OIS-CONVENTIONS",
+      "terms": {
+        "EOM": false,
+        "FixedConvention": "Following",
+        "FixedDayCounter": "30/360",
+        "FixedFrequency": "Annual",
+        "FixedPaymentConvention": "Following",
+        "Index": "CHF-TOIS",
+        "PaymentLag": 2,
+        "Rule": "Backward",
+        "SpotLag": 1
+      }
+    },
+    {
+      "id": "CHF-OIS-SARON-CONVENTIONS",
+      "terms": {
+        "EOM": false,
+        "FixedConvention": "Following",
+        "FixedDayCounter": "30/360",
+        "FixedFrequency": "Annual",
+        "FixedPaymentConvention": "Following",
+        "Index": "CHF-SARON",
+        "PaymentLag": 2,
+        "Rule": "Backward",
+        "SpotLag": 1
+      }
+    },
+    {
+      "id": "USD-OIS-CONVENTIONS",
+      "terms": {
+        "EOM": false,
+        "FixedConvention": "Following",
+        "FixedDayCounter": "A360",
+        "FixedFrequency": "Annual",
+        "FixedPaymentConvention": "Following",
+        "Index": "USD-FedFunds",
+        "PaymentLag": 2,
+        "Rule": "Backward",
+        "SpotLag": 2
+      }
+    },
+    {
+      "id": "GBP-OIS-CONVENTIONS",
+      "terms": {
+        "EOM": false,
+        "FixedConvention": "Following",
+        "FixedDayCounter": "A365",
+        "FixedFrequency": "Annual",
+        "FixedPaymentConvention": "Following",
+        "Index": "GBP-SONIA",
+        "PaymentLag": 0,
+        "Rule": "Backward",
+        "SpotLag": 0
+      }
+    },
+    {
+      "id": "JPY-OIS-CONVENTIONS",
+      "terms": {
+        "EOM": false,
+        "FixedConvention": "Following",
+        "FixedDayCounter": "A360",
+        "FixedFrequency": "Annual",
+        "FixedPaymentConvention": "Following",
+        "Index": "JPY-TONAR",
+        "PaymentLag": 1,
+        "Rule": "Backward",
+        "SpotLag": 2
+      }
+    },
+    {
+      "id": "CAD-OIS-CONVENTIONS",
+      "terms": {
+        "EOM": false,
+        "FixedConvention": "Following",
+        "FixedDayCounter": "A365",
+        "FixedFrequency": "Annual",
+        "FixedPaymentConvention": "Following",
+        "Index": "CAD-CORRA",
+        "PaymentLag": 2,
+        "Rule": "Backward",
+        "SpotLag": 2
+      }
+    }
+  ],
+  "swap": [
+    {
+      "id": "EUR-6M-SWAP-CONVENTIONS",
+      "terms": {
+        "FixedCalendar": "TARGET",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "30/360",
+        "FixedFrequency": "Annual",
+        "Index": "EUR-EURIBOR-6M"
+      }
+    },
+    {
+      "id": "EUR-1M-SWAP-CONVENTIONS",
+      "terms": {
+        "FixedCalendar": "TARGET",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "30/360",
+        "FixedFrequency": "Annual",
+        "Index": "EUR-EURIBOR-1M"
+      }
+    },
+    {
+      "id": "EUR-3M-SWAP-CONVENTIONS",
+      "terms": {
+        "FixedCalendar": "TARGET",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "30/360",
+        "FixedFrequency": "Annual",
+        "Index": "EUR-EURIBOR-3M"
+      }
+    },
+    {
+      "id": "EUR-12M-SWAP-CONVENTIONS",
+      "terms": {
+        "FixedCalendar": "TARGET",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "30/360",
+        "FixedFrequency": "Annual",
+        "Index": "EUR-EURIBOR-12M"
+      }
+    },
+    {
+      "id": "USD-1M-SWAP-CONVENTIONS",
+      "terms": {
+        "FixedCalendar": "US,UK",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "30/360",
+        "FixedFrequency": "Annual",
+        "Index": "USD-LIBOR-1M"
+      }
+    },
+    {
+      "id": "USD-3M-SWAP-CONVENTIONS",
+      "terms": {
+        "FixedCalendar": "US,UK",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "30/360",
+        "FixedFrequency": "Semiannual",
+        "Index": "USD-LIBOR-3M"
+      }
+    },
+    {
+      "id": "USD-1M-SWAP-ANNUAL-CONVENTIONS",
+      "terms": {
+        "FixedCalendar": "US,UK",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "ACT/360",
+        "FixedFrequency": "Annual",
+        "Index": "USD-LIBOR-1M"
+      }
+    },
+    {
+      "id": "USD-3M-SWAP-ANNUAL-CONVENTIONS",
+      "terms": {
+        "FixedCalendar": "US,UK",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "ACT/360",
+        "FixedFrequency": "Annual",
+        "Index": "USD-LIBOR-3M"
+      }
+    },
+    {
+      "id": "USD-6M-SWAP-CONVENTIONS",
+      "terms": {
+        "FixedCalendar": "US,UK",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "30/360",
+        "FixedFrequency": "Semiannual",
+        "Index": "USD-LIBOR-6M"
+      }
+    },
+    {
+      "id": "CHF-6M-SWAP-CONVENTIONS",
+      "terms": {
+        "FixedCalendar": "ZUB,UK",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "30/360",
+        "FixedFrequency": "Annual",
+        "Index": "CHF-LIBOR-6M"
+      }
+    },
+    {
+      "id": "CHF-3M-SWAP-CONVENTIONS",
+      "terms": {
+        "FixedCalendar": "ZUB,UK",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "30/360",
+        "FixedFrequency": "Annual",
+        "Index": "CHF-LIBOR-3M"
+      }
+    },
+    {
+      "id": "AUD-6M-SWAP-CONVENTIONS",
+      "terms": {
+        "FixedCalendar": "AU",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "A365",
+        "FixedFrequency": "Semiannual",
+        "Index": "AUD-BBSW-6M"
+      }
+    },
+    {
+      "id": "AUD-3M-SWAP-CONVENTIONS",
+      "terms": {
+        "FixedCalendar": "AU",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "A365",
+        "FixedFrequency": "Quarterly",
+        "Index": "AUD-BBSW-3M"
+      }
+    },
+    {
+      "id": "CAD-3M-SWAP-CONVENTIONS-1Y",
+      "terms": {
+        "FixedCalendar": "CA",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "ACT/365",
+        "FixedFrequency": "Annual",
+        "FloatFrequency": "Annual",
+        "Index": "CAD-CDOR-3M",
+        "SubPeriodsCouponType": "Compounding"
+      }
+    },
+    {
+      "id": "CAD-3M-SWAP-CONVENTIONS",
+      "terms": {
+        "FixedCalendar": "CA",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "ACT/365",
+        "FixedFrequency": "Semiannual",
+        "FloatFrequency": "Semiannual",
+        "Index": "CAD-CDOR-3M",
+        "SubPeriodsCouponType": "Compounding"
+      }
+    },
+    {
+      "id": "DKK-3M-SWAP-CONVENTIONS",
+      "terms": {
+        "FixedCalendar": "DEN",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "30/360",
+        "FixedFrequency": "Annual",
+        "Index": "DKK-CIBOR-3M"
+      }
+    },
+    {
+      "id": "DKK-6M-SWAP-CONVENTIONS",
+      "terms": {
+        "FixedCalendar": "DEN",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "30/360",
+        "FixedFrequency": "Annual",
+        "Index": "DKK-CIBOR-6M"
+      }
+    },
+    {
+      "id": "NOK-3M-SWAP-CONVENTIONS",
+      "terms": {
+        "FixedCalendar": "NOK",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "30/360",
+        "FixedFrequency": "Annual",
+        "Index": "NOK-NIBOR-3M"
+      }
+    },
+    {
+      "id": "NOK-6M-SWAP-CONVENTIONS",
+      "terms": {
+        "FixedCalendar": "NOK",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "30/360",
+        "FixedFrequency": "Annual",
+        "Index": "NOK-NIBOR-6M"
+      }
+    },
+    {
+      "id": "JPY-LIBOR-6M-SWAP-CONVENTIONS",
+      "terms": {
+        "FixedCalendar": "JP,UK",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "A365",
+        "FixedFrequency": "Semiannual",
+        "Index": "JPY-LIBOR-6M"
+      }
+    },
+    {
+      "id": "JPY-LIBOR-3M-SWAP-CONVENTIONS",
+      "terms": {
+        "FixedCalendar": "JP,UK",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "A365",
+        "FixedFrequency": "Semiannual",
+        "Index": "JPY-LIBOR-3M"
+      }
+    },
+    {
+      "id": "JPY-TIBOR-3M-SWAP-CONVENTIONS",
+      "terms": {
+        "FixedCalendar": "JP",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "A365",
+        "FixedFrequency": "Semiannual",
+        "Index": "JPY-TIBOR-3M"
+      }
+    },
+    {
+      "id": "SEK-3M-SWAP-CONVENTIONS",
+      "terms": {
+        "FixedCalendar": "SS",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "30/360",
+        "FixedFrequency": "Annual",
+        "Index": "SEK-STIBOR-3M"
+      }
+    },
+    {
+      "id": "SEK-6M-SWAP-CONVENTIONS",
+      "terms": {
+        "FixedCalendar": "SS",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "30/360",
+        "FixedFrequency": "Annual",
+        "Index": "SEK-STIBOR-6M"
+      }
+    },
+    {
+      "id": "SGD-6M-SWAP-CONVENTIONS",
+      "terms": {
+        "FixedCalendar": "SGD",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "30/360",
+        "FixedFrequency": "Annual",
+        "Index": "SGD-SIBOR-6M"
+      }
+    },
+    {
+      "id": "GBP-6M-SWAP-CONVENTIONS",
+      "terms": {
+        "FixedCalendar": "UK",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "A365",
+        "FixedFrequency": "Semiannual",
+        "Index": "GBP-LIBOR-6M"
+      }
+    },
+    {
+      "id": "GBP-3M-SWAP-CONVENTIONS",
+      "terms": {
+        "FixedCalendar": "UK",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "A365",
+        "FixedFrequency": "Annual",
+        "Index": "GBP-LIBOR-3M"
+      }
+    },
+    {
+      "id": "CZK-6M-SWAP",
+      "terms": {
+        "FixedCalendar": "CZK",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "ACT/360",
+        "FixedFrequency": "Annual",
+        "Index": "CZK-PRIBOR-6M"
+      }
+    },
+    {
+      "id": "CZK-3M-SWAP",
+      "terms": {
+        "FixedCalendar": "CZK",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "ACT/360",
+        "FixedFrequency": "Annual",
+        "Index": "CZK-PRIBOR-3M"
+      }
+    },
+    {
+      "id": "HUF-6M-SWAP",
+      "terms": {
+        "FixedCalendar": "HUF",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "A365",
+        "FixedFrequency": "Annual",
+        "Index": "HUF-BUBOR-6M"
+      }
+    },
+    {
+      "id": "PLN-6M-SWAP",
+      "terms": {
+        "FixedCalendar": "PLN",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "ACT/ACT",
+        "FixedFrequency": "Annual",
+        "Index": "PLN-WIBOR-6M"
+      }
+    },
+    {
+      "id": "PLN-3M-SWAP",
+      "terms": {
+        "FixedCalendar": "PLN",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "ACT/ACT",
+        "FixedFrequency": "Annual",
+        "Index": "PLN-WIBOR-3M"
+      }
+    },
+    {
+      "id": "NZD-6M-SWAP",
+      "terms": {
+        "FixedCalendar": "NZD",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "A365",
+        "FixedFrequency": "Semiannual",
+        "Index": "NZD-BKBM-6M"
+      }
+    },
+    {
+      "id": "NZD-3M-SWAP",
+      "terms": {
+        "FixedCalendar": "NZD",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "A365",
+        "FixedFrequency": "Semiannual",
+        "Index": "NZD-BKBM-3M"
+      }
+    },
+    {
+      "id": "MXN-28D-SWAP-CONVENTIONS",
+      "terms": {
+        "FixedCalendar": "MXN",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "ACT/360",
+        "FixedFrequency": "Lunarmonth",
+        "Index": "MXN-TIIE-28D"
+      }
+    },
+    {
+      "id": "HKD-3M-SWAP",
+      "terms": {
+        "FixedCalendar": "HKD",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "A365",
+        "FixedFrequency": "Quarterly",
+        "Index": "HKD-HIBOR-3M"
+      }
+    },
+    {
+      "id": "INR-3M-SWAP",
+      "terms": {
+        "FixedCalendar": "INR",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "A365",
+        "FixedFrequency": "Semiannual",
+        "Index": "INR-MIFOR-3M"
+      }
+    },
+    {
+      "id": "INR-6M-SWAP",
+      "terms": {
+        "FixedCalendar": "INR",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "A365",
+        "FixedFrequency": "Semiannual",
+        "Index": "INR-MIFOR-6M"
+      }
+    },
+    {
+      "id": "KRW-3M-SWAP",
+      "terms": {
+        "FixedCalendar": "KRW",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "A365",
+        "FixedFrequency": "Quarterly",
+        "Index": "KRW-KORIBOR-3M"
+      }
+    },
+    {
+      "id": "MYR-3M-SWAP",
+      "terms": {
+        "FixedCalendar": "MYR",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "A365",
+        "FixedFrequency": "Quarterly",
+        "Index": "MYR-KLIBOR-3M"
+      }
+    },
+    {
+      "id": "RUB-3M-SWAP",
+      "terms": {
+        "FixedCalendar": "RUB",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "ACT/ACT",
+        "FixedFrequency": "Annual",
+        "Index": "RUB-MOSPRIME-3M"
+      }
+    },
+    {
+      "id": "THB-6M-SWAP",
+      "terms": {
+        "FixedCalendar": "THB",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "A365",
+        "FixedFrequency": "Semiannual",
+        "Index": "THB-BIBOR-6M"
+      }
+    },
+    {
+      "id": "PHP-3M-SWAP",
+      "terms": {
+        "FixedCalendar": "PHP",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "ACT/360",
+        "FixedFrequency": "Quarterly",
+        "Index": "PHP-PHIREF-3M"
+      }
+    },
+    {
+      "id": "TWD-3M-SWAP",
+      "terms": {
+        "FixedCalendar": "TWD",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "A365",
+        "FixedFrequency": "Quarterly",
+        "Index": "TWD-TAIBOR-3M"
+      }
+    },
+    {
+      "id": "ZAR-3M-SWAP",
+      "terms": {
+        "FixedCalendar": "ZAR",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "A365",
+        "FixedFrequency": "Quarterly",
+        "Index": "ZAR-JIBAR-3M"
+      }
+    },
+    {
+      "id": "BRL-GENERIC-3M-SWAP-CONVENTIONS",
+      "terms": {
+        "FixedCalendar": "TARGET",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "30/360",
+        "FixedFrequency": "Annual",
+        "Index": "BRL-GENERIC-3M"
+      }
+    },
+    {
+      "id": "CLP-GENERIC-3M-SWAP-CONVENTIONS",
+      "terms": {
+        "FixedCalendar": "TARGET",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "30/360",
+        "FixedFrequency": "Annual",
+        "Index": "CLP-GENERIC-3M"
+      }
+    },
+    {
+      "id": "CNY-GENERIC-3M-SWAP-CONVENTIONS",
+      "terms": {
+        "FixedCalendar": "TARGET",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "30/360",
+        "FixedFrequency": "Annual",
+        "Index": "CNY-GENERIC-3M"
+      }
+    },
+    {
+      "id": "IDR-GENERIC-3M-SWAP-CONVENTIONS",
+      "terms": {
+        "FixedCalendar": "TARGET",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "30/360",
+        "FixedFrequency": "Annual",
+        "Index": "IDR-GENERIC-3M"
+      }
+    },
+    {
+      "id": "INR-GENERIC-3M-SWAP-CONVENTIONS",
+      "terms": {
+        "FixedCalendar": "TARGET",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "30/360",
+        "FixedFrequency": "Annual",
+        "Index": "INR-GENERIC-3M"
+      }
+    },
+    {
+      "id": "KRW-GENERIC-3M-SWAP-CONVENTIONS",
+      "terms": {
+        "FixedCalendar": "TARGET",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "30/360",
+        "FixedFrequency": "Annual",
+        "Index": "KRW-GENERIC-3M"
+      }
+    },
+    {
+      "id": "MYR-GENERIC-3M-SWAP-CONVENTIONS",
+      "terms": {
+        "FixedCalendar": "TARGET",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "30/360",
+        "FixedFrequency": "Annual",
+        "Index": "MYR-GENERIC-3M"
+      }
+    },
+    {
+      "id": "PHP-GENERIC-3M-SWAP-CONVENTIONS",
+      "terms": {
+        "FixedCalendar": "TARGET",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "30/360",
+        "FixedFrequency": "Annual",
+        "Index": "PHP-GENERIC-3M"
+      }
+    },
+    {
+      "id": "TWD-GENERIC-3M-SWAP-CONVENTIONS",
+      "terms": {
+        "FixedCalendar": "TARGET",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "30/360",
+        "FixedFrequency": "Annual",
+        "Index": "TWD-GENERIC-3M"
+      }
+    }
+  ],
+  "average_ois": [
+    {
+      "id": "USD-AVERAGE-OIS-CONVENTIONS",
+      "terms": {
+        "FixedCalendar": "US",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "30/360",
+        "FixedPaymentConvention": "MF",
+        "FixedTenor": "6M",
+        "Index": "USD-FedFunds",
+        "OnTenor": "3M",
+        "RateCutoff": 2,
+        "SpotLag": 2
+      }
+    }
+  ],
+  "tenor_basis_swap": [
+    {
+      "id": "USD-LIBOR-3M-6M-BASIS-CONVENTIONS",
+      "terms": {
+        "IncludeSpread": false,
+        "PayIndex": "USD-LIBOR-6M",
+        "ReceiveFrequency": "6M",
+        "ReceiveIndex": "USD-LIBOR-3M",
+        "SpreadOnRec": true,
+        "SubPeriodsCouponType": "Compounding"
+      }
+    },
+    {
+      "id": "USD-LIBOR-1M-3M-BASIS-CONVENTIONS",
+      "terms": {
+        "IncludeSpread": false,
+        "PayIndex": "USD-LIBOR-3M",
+        "ReceiveFrequency": "3M",
+        "ReceiveIndex": "USD-LIBOR-1M",
+        "SpreadOnRec": true,
+        "SubPeriodsCouponType": "Compounding"
+      }
+    },
+    {
+      "id": "GBP-LIBOR-3M-6M-BASIS-CONVENTIONS",
+      "terms": {
+        "PayIndex": "GBP-LIBOR-6M",
+        "ReceiveIndex": "GBP-LIBOR-3M"
+      }
+    },
+    {
+      "id": "CHF-LIBOR-3M-6M-BASIS-CONVENTIONS",
+      "terms": {
+        "PayIndex": "CHF-LIBOR-6M",
+        "ReceiveIndex": "CHF-LIBOR-3M"
+      }
+    },
+    {
+      "id": "JPY-LIBOR-3M-6M-BASIS-CONVENTIONS",
+      "terms": {
+        "PayIndex": "JPY-LIBOR-6M",
+        "ReceiveIndex": "JPY-LIBOR-3M"
+      }
+    },
+    {
+      "id": "EUR-OIS-1M-BASIS-CONVENTIONS",
+      "terms": {
+        "PayIndex": "EUR-EURIBOR-1M",
+        "ReceiveFrequency": "1Y",
+        "ReceiveIndex": "EUR-EONIA"
+      }
+    }
+  ],
+  "tenor_basis_two_swap": [
+    {
+      "id": "EURIBOR-3M-6M-BASIS-CONVENTIONS",
+      "terms": {
+        "Calendar": "TARGET",
+        "LongFixedConvention": "MF",
+        "LongFixedDayCounter": "30/360",
+        "LongFixedFrequency": "Annual",
+        "LongIndex": "EUR-EURIBOR-6M",
+        "LongMinusShort": true,
+        "ShortFixedConvention": "MF",
+        "ShortFixedDayCounter": "30/360",
+        "ShortFixedFrequency": "Annual",
+        "ShortIndex": "EUR-EURIBOR-3M"
+      }
+    },
+    {
+      "id": "EUR-EURIBOR-6M-12M-BASIS-CONVENTIONS",
+      "terms": {
+        "Calendar": "TARGET",
+        "LongFixedConvention": "MF",
+        "LongFixedDayCounter": "30/360",
+        "LongFixedFrequency": "Annual",
+        "LongIndex": "EUR-EURIBOR-12M",
+        "LongMinusShort": true,
+        "ShortFixedConvention": "MF",
+        "ShortFixedDayCounter": "30/360",
+        "ShortFixedFrequency": "Annual",
+        "ShortIndex": "EUR-EURIBOR-6M"
+      }
+    }
+  ],
+  "bma_basis_swap": [
+    {
+      "id": "USD-LIBOR-SIFMA-3M-BASIS-CONVENTIONS",
+      "terms": {
+        "BMAIndex": "USD-SIFMA",
+        "Index": "USD-LIBOR-3M"
+      }
+    }
+  ],
+  "fx": [
+    {
+      "id": "GBP-USD-FX-CONVENTIONS",
+      "terms": {
+        "AdvanceCalendar": "UK,US",
+        "PointsFactor": 10000,
+        "SourceCurrency": "GBP",
+        "SpotDays": 2,
+        "SpotRelative": true,
+        "TargetCurrency": "USD"
+      }
+    },
+    {
+      "id": "USD-GBP-FX-CONVENTIONS",
+      "terms": {
+        "AdvanceCalendar": "UK,US",
+        "PointsFactor": 10000,
+        "SourceCurrency": "USD",
+        "SpotDays": 2,
+        "SpotRelative": true,
+        "TargetCurrency": "GBP"
+      }
+    },
+    {
+      "id": "EUR-USD-FX-CONVENTIONS",
+      "terms": {
+        "AdvanceCalendar": "TARGET,US",
+        "PointsFactor": 10000,
+        "SourceCurrency": "EUR",
+        "SpotDays": 2,
+        "SpotRelative": true,
+        "TargetCurrency": "USD"
+      }
+    },
+    {
+      "id": "CHF-USD-FX-CONVENTIONS",
+      "terms": {
+        "AdvanceCalendar": "ZUB,US",
+        "PointsFactor": 10000,
+        "SourceCurrency": "CHF",
+        "SpotDays": 2,
+        "SpotRelative": true,
+        "TargetCurrency": "USD"
+      }
+    },
+    {
+      "id": "USD-CHF-FX-CONVENTIONS",
+      "terms": {
+        "AdvanceCalendar": "ZUB,US",
+        "PointsFactor": 10000,
+        "SourceCurrency": "USD",
+        "SpotDays": 2,
+        "SpotRelative": true,
+        "TargetCurrency": "CHF"
+      }
+    },
+    {
+      "id": "EUR-GBP-FX-CONVENTIONS",
+      "terms": {
+        "AdvanceCalendar": "TARGET,UK",
+        "PointsFactor": 10000,
+        "SourceCurrency": "EUR",
+        "SpotDays": 2,
+        "SpotRelative": true,
+        "TargetCurrency": "GBP"
+      }
+    },
+    {
+      "id": "EUR-CHF-FX-CONVENTIONS",
+      "terms": {
+        "AdvanceCalendar": "TARGET,ZUB",
+        "PointsFactor": 10000,
+        "SourceCurrency": "EUR",
+        "SpotDays": 2,
+        "SpotRelative": true,
+        "TargetCurrency": "CHF"
+      }
+    },
+    {
+      "id": "USD-NOK-FX-CONVENTIONS",
+      "terms": {
+        "AdvanceCalendar": "US,NOK",
+        "PointsFactor": 10000,
+        "SourceCurrency": "USD",
+        "SpotDays": 2,
+        "SpotRelative": true,
+        "TargetCurrency": "NOK"
+      }
+    },
+    {
+      "id": "USD-SEK-FX-CONVENTIONS",
+      "terms": {
+        "AdvanceCalendar": "US,SEK",
+        "PointsFactor": 10000,
+        "SourceCurrency": "USD",
+        "SpotDays": 2,
+        "SpotRelative": true,
+        "TargetCurrency": "SEK"
+      }
+    },
+    {
+      "id": "USD-MXN-FX-CONVENTIONS",
+      "terms": {
+        "AdvanceCalendar": "US",
+        "PointsFactor": 1,
+        "SourceCurrency": "USD",
+        "SpotDays": 2,
+        "SpotRelative": true,
+        "TargetCurrency": "MXN"
+      }
+    },
+    {
+      "id": "USD-JPY-FX-CONVENTIONS",
+      "terms": {
+        "AdvanceCalendar": "US,JP",
+        "PointsFactor": 100,
+        "SourceCurrency": "USD",
+        "SpotDays": 2,
+        "SpotRelative": true,
+        "TargetCurrency": "JPY"
+      }
+    },
+    {
+      "id": "USD-CAD-FX-CONVENTIONS",
+      "terms": {
+        "AdvanceCalendar": "US,CA",
+        "PointsFactor": 10000,
+        "SourceCurrency": "USD",
+        "SpotDays": 2,
+        "SpotRelative": true,
+        "TargetCurrency": "CAD"
+      }
+    },
+    {
+      "id": "USD-TWD-FX-CONVENTIONS",
+      "terms": {
+        "AdvanceCalendar": "US",
+        "PointsFactor": 1,
+        "SourceCurrency": "USD",
+        "SpotDays": 2,
+        "SpotRelative": true,
+        "TargetCurrency": "TWD"
+      }
+    },
+    {
+      "id": "USD-KRW-FX-CONVENTIONS",
+      "terms": {
+        "AdvanceCalendar": "US",
+        "PointsFactor": 100,
+        "SourceCurrency": "USD",
+        "SpotDays": 2,
+        "SpotRelative": true,
+        "TargetCurrency": "KRW"
+      }
+    },
+    {
+      "id": "USD-INR-FX-CONVENTIONS",
+      "terms": {
+        "AdvanceCalendar": "US",
+        "PointsFactor": 100,
+        "SourceCurrency": "USD",
+        "SpotDays": 2,
+        "SpotRelative": true,
+        "TargetCurrency": "INR"
+      }
+    },
+    {
+      "id": "USD-BRL-FX-CONVENTIONS",
+      "terms": {
+        "AdvanceCalendar": "US",
+        "PointsFactor": 10000,
+        "SourceCurrency": "USD",
+        "SpotDays": 2,
+        "SpotRelative": true,
+        "TargetCurrency": "BRL"
+      }
+    },
+    {
+      "id": "USD-CLP-FX-CONVENTIONS",
+      "terms": {
+        "AdvanceCalendar": "US",
+        "PointsFactor": 1,
+        "SourceCurrency": "USD",
+        "SpotDays": 2,
+        "SpotRelative": true,
+        "TargetCurrency": "CLP"
+      }
+    },
+    {
+      "id": "USD-IDR-FX-CONVENTIONS",
+      "terms": {
+        "AdvanceCalendar": "US",
+        "PointsFactor": 1,
+        "SourceCurrency": "USD",
+        "SpotDays": 2,
+        "SpotRelative": true,
+        "TargetCurrency": "IDR"
+      }
+    },
+    {
+      "id": "USD-CNY-FX-CONVENTIONS",
+      "terms": {
+        "AdvanceCalendar": "US",
+        "PointsFactor": 10000,
+        "SourceCurrency": "USD",
+        "SpotDays": 2,
+        "SpotRelative": true,
+        "TargetCurrency": "CNY"
+      }
+    },
+    {
+      "id": "USD-MYR-FX-CONVENTIONS",
+      "terms": {
+        "AdvanceCalendar": "US",
+        "PointsFactor": 10000,
+        "SourceCurrency": "USD",
+        "SpotDays": 2,
+        "SpotRelative": true,
+        "TargetCurrency": "MYR"
+      }
+    },
+    {
+      "id": "USD-PHP-FX-CONVENTIONS",
+      "terms": {
+        "AdvanceCalendar": "US",
+        "PointsFactor": 10,
+        "SourceCurrency": "USD",
+        "SpotDays": 2,
+        "SpotRelative": true,
+        "TargetCurrency": "PHP"
+      }
+    }
+  ],
+  "cross_currency_basis": [
+    {
+      "id": "EUR-USD-XCCY-BASIS-CONVENTIONS",
+      "terms": {
+        "FlatIndex": "USD-LIBOR-3M",
+        "FlatIndexIsResettable": true,
+        "IsResettable": true,
+        "RollConvention": "MF",
+        "SettlementCalendar": "TARGET,US,UK",
+        "SettlementDays": 2,
+        "SpreadIndex": "EUR-EURIBOR-3M"
+      }
+    },
+    {
+      "id": "USD-GBP-XCCY-BASIS-CONVENTIONS",
+      "terms": {
+        "FlatIndex": "USD-LIBOR-3M",
+        "RollConvention": "MF",
+        "SettlementCalendar": "UK,US",
+        "SettlementDays": 2,
+        "SpreadIndex": "GBP-LIBOR-3M"
+      }
+    },
+    {
+      "id": "EUR-GBP-XCCY-BASIS-CONVENTIONS",
+      "terms": {
+        "FlatIndex": "EUR-EURIBOR-3M",
+        "RollConvention": "MF",
+        "SettlementCalendar": "UK,TARGET",
+        "SettlementDays": 2,
+        "SpreadIndex": "GBP-LIBOR-3M"
+      }
+    },
+    {
+      "id": "EUR-CHF-XCCY-BASIS-CONVENTIONS",
+      "terms": {
+        "FlatIndex": "EUR-EURIBOR-3M",
+        "RollConvention": "MF",
+        "SettlementCalendar": "ZUB,TARGET,UK",
+        "SettlementDays": 2,
+        "SpreadIndex": "CHF-LIBOR-3M"
+      }
+    },
+    {
+      "id": "USD-CHF-XCCY-BASIS-CONVENTIONS",
+      "terms": {
+        "FlatIndex": "USD-LIBOR-3M",
+        "RollConvention": "MF",
+        "SettlementCalendar": "ZUB,US,UK",
+        "SettlementDays": 2,
+        "SpreadIndex": "CHF-LIBOR-3M"
+      }
+    },
+    {
+      "id": "USD-NOK-XCCY-BASIS-CONVENTIONS",
+      "terms": {
+        "FlatIndex": "USD-LIBOR-3M",
+        "RollConvention": "MF",
+        "SettlementCalendar": "NOK,US,UK",
+        "SettlementDays": 2,
+        "SpreadIndex": "NOK-NIBOR-3M"
+      }
+    },
+    {
+      "id": "USD-SEK-XCCY-BASIS-CONVENTIONS",
+      "terms": {
+        "FlatIndex": "USD-LIBOR-3M",
+        "RollConvention": "MF",
+        "SettlementCalendar": "SEK,US,UK",
+        "SettlementDays": 2,
+        "SpreadIndex": "SEK-STIBOR-3M"
+      }
+    },
+    {
+      "id": "USD-MXN-XCCY-BASIS-CONVENTIONS",
+      "terms": {
+        "FlatIndex": "MXN-TIIE-28D",
+        "RollConvention": "MF",
+        "SettlementCalendar": "MXN,US,UK",
+        "SettlementDays": 2,
+        "SpreadIndex": "USD-LIBOR-1M"
+      }
+    },
+    {
+      "id": "USD-MXN-3M-XCCY-BASIS-CONVENTIONS",
+      "terms": {
+        "FlatIndex": "USD-LIBOR-3M",
+        "RollConvention": "MF",
+        "SettlementCalendar": "MXN,US,UK",
+        "SettlementDays": 2,
+        "SpreadIndex": "MXN-TIIE-3M"
+      }
+    },
+    {
+      "id": "USD-JPY-XCCY-BASIS-CONVENTIONS",
+      "terms": {
+        "FlatIndex": "USD-LIBOR-3M",
+        "RollConvention": "MF",
+        "SettlementCalendar": "JP,US,UK",
+        "SettlementDays": 2,
+        "SpreadIndex": "JPY-LIBOR-3M"
+      }
+    },
+    {
+      "id": "USD-CAD-XCCY-BASIS-CONVENTIONS",
+      "terms": {
+        "FlatIndex": "USD-LIBOR-3M",
+        "RollConvention": "MF",
+        "SettlementCalendar": "CA,US,UK",
+        "SettlementDays": 2,
+        "SpreadIndex": "CAD-CDOR-3M"
+      }
+    },
+    {
+      "id": "USD-BRL-GENERIC-XCCY-BASIS-CONVENTIONS",
+      "terms": {
+        "FlatIndex": "USD-LIBOR-3M",
+        "RollConvention": "MF",
+        "SettlementCalendar": "TARGET,US,UK",
+        "SettlementDays": 2,
+        "SpreadIndex": "BRL-GENERIC-3M"
+      }
+    },
+    {
+      "id": "USD-CLP-GENERIC-XCCY-BASIS-CONVENTIONS",
+      "terms": {
+        "FlatIndex": "USD-LIBOR-3M",
+        "RollConvention": "MF",
+        "SettlementCalendar": "TARGET,US,UK",
+        "SettlementDays": 2,
+        "SpreadIndex": "CLP-GENERIC-3M"
+      }
+    },
+    {
+      "id": "USD-CNY-GENERIC-XCCY-BASIS-CONVENTIONS",
+      "terms": {
+        "FlatIndex": "USD-LIBOR-3M",
+        "RollConvention": "MF",
+        "SettlementCalendar": "TARGET,US,UK",
+        "SettlementDays": 2,
+        "SpreadIndex": "CNY-GENERIC-3M"
+      }
+    },
+    {
+      "id": "USD-IDR-GENERIC-XCCY-BASIS-CONVENTIONS",
+      "terms": {
+        "FlatIndex": "USD-LIBOR-3M",
+        "RollConvention": "MF",
+        "SettlementCalendar": "TARGET,US,UK",
+        "SettlementDays": 2,
+        "SpreadIndex": "IDR-GENERIC-3M"
+      }
+    },
+    {
+      "id": "USD-INR-GENERIC-XCCY-BASIS-CONVENTIONS",
+      "terms": {
+        "FlatIndex": "USD-LIBOR-3M",
+        "RollConvention": "MF",
+        "SettlementCalendar": "TARGET,US,UK",
+        "SettlementDays": 2,
+        "SpreadIndex": "INR-GENERIC-3M"
+      }
+    },
+    {
+      "id": "USD-KRW-GENERIC-XCCY-BASIS-CONVENTIONS",
+      "terms": {
+        "FlatIndex": "USD-LIBOR-3M",
+        "RollConvention": "MF",
+        "SettlementCalendar": "TARGET,US,UK",
+        "SettlementDays": 2,
+        "SpreadIndex": "KRW-GENERIC-3M"
+      }
+    },
+    {
+      "id": "USD-MYR-GENERIC-XCCY-BASIS-CONVENTIONS",
+      "terms": {
+        "FlatIndex": "USD-LIBOR-3M",
+        "RollConvention": "MF",
+        "SettlementCalendar": "TARGET,US,UK",
+        "SettlementDays": 2,
+        "SpreadIndex": "MYR-GENERIC-3M"
+      }
+    },
+    {
+      "id": "USD-PHP-GENERIC-XCCY-BASIS-CONVENTIONS",
+      "terms": {
+        "FlatIndex": "USD-LIBOR-3M",
+        "RollConvention": "MF",
+        "SettlementCalendar": "TARGET,US,UK",
+        "SettlementDays": 2,
+        "SpreadIndex": "PHP-GENERIC-3M"
+      }
+    },
+    {
+      "id": "USD-TWD-GENERIC-XCCY-BASIS-CONVENTIONS",
+      "terms": {
+        "FlatIndex": "USD-LIBOR-3M",
+        "RollConvention": "MF",
+        "SettlementCalendar": "TARGET,US,UK",
+        "SettlementDays": 2,
+        "SpreadIndex": "TWD-GENERIC-3M"
+      }
+    }
+  ],
+  "cross_currency_fix_float": [
+    {
+      "id": "USD-TRY-XCCY-FIX-FLOAT-CONVENTIONS",
+      "terms": {
+        "FixedConvention": "F",
+        "FixedCurrency": "TRY",
+        "FixedDayCounter": "A360",
+        "FixedFrequency": "Annual",
+        "Index": "USD-LIBOR-3M",
+        "SettlementCalendar": "US,UK,TRY",
+        "SettlementConvention": "F",
+        "SettlementDays": 2
+      }
+    }
+  ],
+  "cds": [
+    {
+      "id": "CDS-STANDARD-CONVENTIONS",
+      "terms": {
+        "Calendar": "WeekendsOnly",
+        "DayCounter": "A360",
+        "Frequency": "Quarterly",
+        "PaymentConvention": "Following",
+        "PaysAtDefaultTime": true,
+        "Rule": "CDS2015",
+        "SettlementDays": 1,
+        "SettlesAccrual": true
+      }
+    }
+  ],
+  "ibor_index": [],
+  "overnight_index": [],
+  "swap_index": [
+    {
+      "id": "EUR-CMS-1Y",
+      "terms": {
+        "Conventions": "EUR-3M-SWAP-CONVENTIONS"
+      }
+    },
+    {
+      "id": "EUR-CMS-2Y",
+      "terms": {
+        "Conventions": "EUR-6M-SWAP-CONVENTIONS"
+      }
+    },
+    {
+      "id": "EUR-CMS-5Y",
+      "terms": {
+        "Conventions": "EUR-6M-SWAP-CONVENTIONS"
+      }
+    },
+    {
+      "id": "EUR-CMS-10Y",
+      "terms": {
+        "Conventions": "EUR-6M-SWAP-CONVENTIONS"
+      }
+    },
+    {
+      "id": "EUR-CMS-20Y",
+      "terms": {
+        "Conventions": "EUR-6M-SWAP-CONVENTIONS"
+      }
+    },
+    {
+      "id": "EUR-CMS-30Y",
+      "terms": {
+        "Conventions": "EUR-6M-SWAP-CONVENTIONS"
+      }
+    },
+    {
+      "id": "USD-CMS-1Y",
+      "terms": {
+        "Conventions": "USD-3M-SWAP-CONVENTIONS"
+      }
+    },
+    {
+      "id": "USD-CMS-2Y",
+      "terms": {
+        "Conventions": "USD-3M-SWAP-CONVENTIONS"
+      }
+    },
+    {
+      "id": "USD-CMS-5Y",
+      "terms": {
+        "Conventions": "USD-3M-SWAP-CONVENTIONS"
+      }
+    },
+    {
+      "id": "USD-CMS-10Y",
+      "terms": {
+        "Conventions": "USD-3M-SWAP-CONVENTIONS"
+      }
+    },
+    {
+      "id": "USD-CMS-20Y",
+      "terms": {
+        "Conventions": "USD-3M-SWAP-CONVENTIONS"
+      }
+    },
+    {
+      "id": "USD-CMS-30Y",
+      "terms": {
+        "Conventions": "USD-3M-SWAP-CONVENTIONS"
+      }
+    },
+    {
+      "id": "GBP-CMS-1Y",
+      "terms": {
+        "Conventions": "GBP-3M-SWAP-CONVENTIONS"
+      }
+    },
+    {
+      "id": "GBP-CMS-2Y",
+      "terms": {
+        "Conventions": "GBP-6M-SWAP-CONVENTIONS"
+      }
+    },
+    {
+      "id": "GBP-CMS-5Y",
+      "terms": {
+        "Conventions": "GBP-6M-SWAP-CONVENTIONS"
+      }
+    },
+    {
+      "id": "GBP-CMS-10Y",
+      "terms": {
+        "Conventions": "GBP-6M-SWAP-CONVENTIONS"
+      }
+    },
+    {
+      "id": "GBP-CMS-20Y",
+      "terms": {
+        "Conventions": "GBP-6M-SWAP-CONVENTIONS"
+      }
+    },
+    {
+      "id": "GBP-CMS-30Y",
+      "terms": {
+        "Conventions": "GBP-6M-SWAP-CONVENTIONS"
+      }
+    },
+    {
+      "id": "CHF-CMS-1Y",
+      "terms": {
+        "Conventions": "CHF-3M-SWAP-CONVENTIONS"
+      }
+    },
+    {
+      "id": "CHF-CMS-30Y",
+      "terms": {
+        "Conventions": "CHF-6M-SWAP-CONVENTIONS"
+      }
+    },
+    {
+      "id": "JPY-CMS-1Y",
+      "terms": {
+        "Conventions": "JPY-LIBOR-6M-SWAP-CONVENTIONS"
+      }
+    },
+    {
+      "id": "JPY-CMS-30Y",
+      "terms": {
+        "Conventions": "JPY-LIBOR-6M-SWAP-CONVENTIONS"
+      }
+    }
+  ],
+  "zero_inflation_index": [],
+  "inflation_swap": [
+    {
+      "id": "EUHICP_INFLATIONSWAP",
+      "terms": {
+        "AdjustInflationObservationDates": false,
+        "DayCounter": "30/360",
+        "FixCalendar": "TARGET",
+        "FixConvention": "MF",
+        "Index": "EUHICP",
+        "InflationCalendar": "TARGET",
+        "InflationConvention": "MF",
+        "Interpolated": false,
+        "ObservationLag": "3M"
+      }
+    },
+    {
+      "id": "EUHICPXT_INFLATIONSWAP",
+      "terms": {
+        "AdjustInflationObservationDates": false,
+        "DayCounter": "30/360",
+        "FixCalendar": "TARGET",
+        "FixConvention": "MF",
+        "Index": "EUHICPXT",
+        "InflationCalendar": "TARGET",
+        "InflationConvention": "MF",
+        "Interpolated": false,
+        "ObservationLag": "3M"
+      }
+    },
+    {
+      "id": "FRHICP_INFLATIONSWAP",
+      "terms": {
+        "AdjustInflationObservationDates": false,
+        "DayCounter": "30/360",
+        "FixCalendar": "TARGET",
+        "FixConvention": "MF",
+        "Index": "FRHICP",
+        "InflationCalendar": "TARGET",
+        "InflationConvention": "MF",
+        "Interpolated": false,
+        "ObservationLag": "3M"
+      }
+    },
+    {
+      "id": "UKRPI_INFLATIONSWAP",
+      "terms": {
+        "AdjustInflationObservationDates": false,
+        "DayCounter": "30/360",
+        "FixCalendar": "UK",
+        "FixConvention": "MF",
+        "Index": "UKRPI",
+        "InflationCalendar": "UK",
+        "InflationConvention": "MF",
+        "Interpolated": false,
+        "ObservationLag": "2M"
+      }
+    },
+    {
+      "id": "USCPI_INFLATIONSWAP",
+      "terms": {
+        "AdjustInflationObservationDates": false,
+        "DayCounter": "30/360",
+        "FixCalendar": "US",
+        "FixConvention": "MF",
+        "Index": "USCPI",
+        "InflationCalendar": "US",
+        "InflationConvention": "MF",
+        "Interpolated": false,
+        "ObservationLag": "3M"
+      }
+    },
+    {
+      "id": "ZACPI_INFLATIONSWAP",
+      "terms": {
+        "AdjustInflationObservationDates": false,
+        "DayCounter": "30/360",
+        "FixCalendar": "ZAR",
+        "FixConvention": "MF",
+        "Index": "ZACPI",
+        "InflationCalendar": "ZAR",
+        "InflationConvention": "MF",
+        "Interpolated": false,
+        "ObservationLag": "3M"
+      }
+    }
+  ],
+  "security_spread": [],
+  "cms_spread_option": [
+    {
+      "id": "EUR-CMS-10Y-2Y-CONVENTION",
+      "terms": {
+        "Calendar": "TARGET",
+        "DayCounter": "A360",
+        "FixingDays": 2,
+        "ForwardStart": "0M",
+        "RollConvention": "MF",
+        "SpotDays": "2D",
+        "SwapTenor": "3M"
+      }
+    }
+  ],
+  "commodity_forward": [],
+  "commodity_future": [],
+  "fx_option": [
+    {
+      "id": "FX-EUR-USD-OPTION-CONVENTIONS",
+      "terms": {
+        "AtmType": "AtmDeltaNeutral",
+        "DeltaType": "Fwd"
+      }
+    },
+    {
+      "id": "FX-GBP-USD-OPTION-CONVENTIONS",
+      "terms": {
+        "AtmType": "AtmDeltaNeutral",
+        "DeltaType": "Fwd"
+      }
+    },
+    {
+      "id": "FX-AUD-USD-OPTION-CONVENTIONS",
+      "terms": {
+        "AtmType": "AtmDeltaNeutral",
+        "DeltaType": "Fwd"
+      }
+    },
+    {
+      "id": "FX-NZD-USD-OPTION-CONVENTIONS",
+      "terms": {
+        "AtmType": "AtmDeltaNeutral",
+        "DeltaType": "Fwd"
+      }
+    },
+    {
+      "id": "FX-USD-CAD-OPTION-CONVENTIONS",
+      "terms": {
+        "AtmType": "AtmDeltaNeutral",
+        "DeltaType": "PaFwd"
+      }
+    },
+    {
+      "id": "FX-USD-CHF-OPTION-CONVENTIONS",
+      "terms": {
+        "AtmType": "AtmDeltaNeutral",
+        "DeltaType": "PaFwd"
+      }
+    },
+    {
+      "id": "FX-USD-JPY-OPTION-CONVENTIONS",
+      "terms": {
+        "AtmType": "AtmDeltaNeutral",
+        "DeltaType": "PaFwd"
+      }
+    },
+    {
+      "id": "FX-EUR-GBP-OPTION-CONVENTIONS",
+      "terms": {
+        "AtmType": "AtmDeltaNeutral",
+        "DeltaType": "PaFwd"
+      }
+    },
+    {
+      "id": "FX-EUR-AUD-OPTION-CONVENTIONS",
+      "terms": {
+        "AtmType": "AtmDeltaNeutral",
+        "DeltaType": "PaFwd"
+      }
+    },
+    {
+      "id": "FX-EUR-CAD-OPTION-CONVENTIONS",
+      "terms": {
+        "AtmType": "AtmDeltaNeutral",
+        "DeltaType": "PaFwd"
+      }
+    },
+    {
+      "id": "FX-EUR-CHF-OPTION-CONVENTIONS",
+      "terms": {
+        "AtmType": "AtmDeltaNeutral",
+        "DeltaType": "PaFwd"
+      }
+    },
+    {
+      "id": "FX-EUR-JPY-OPTION-CONVENTIONS",
+      "terms": {
+        "AtmType": "AtmDeltaNeutral",
+        "DeltaType": "PaFwd"
+      }
+    },
+    {
+      "id": "FX-GBP-AUD-OPTION-CONVENTIONS",
+      "terms": {
+        "AtmType": "AtmDeltaNeutral",
+        "DeltaType": "PaFwd"
+      }
+    },
+    {
+      "id": "FX-GBP-CAD-OPTION-CONVENTIONS",
+      "terms": {
+        "AtmType": "AtmDeltaNeutral",
+        "DeltaType": "PaFwd"
+      }
+    },
+    {
+      "id": "FX-GBP-CHF-OPTION-CONVENTIONS",
+      "terms": {
+        "AtmType": "AtmDeltaNeutral",
+        "DeltaType": "PaFwd"
+      }
+    },
+    {
+      "id": "FX-GBP-JPY-OPTION-CONVENTIONS",
+      "terms": {
+        "AtmType": "AtmDeltaNeutral",
+        "DeltaType": "PaFwd"
+      }
+    },
+    {
+      "id": "FX-AUD-NZD-OPTION-CONVENTIONS",
+      "terms": {
+        "AtmType": "AtmDeltaNeutral",
+        "DeltaType": "PaFwd"
+      }
+    },
+    {
+      "id": "FX-AUD-CAD-OPTION-CONVENTIONS",
+      "terms": {
+        "AtmType": "AtmDeltaNeutral",
+        "DeltaType": "PaFwd"
+      }
+    },
+    {
+      "id": "FX-AUD-JPY-OPTION-CONVENTIONS",
+      "terms": {
+        "AtmType": "AtmDeltaNeutral",
+        "DeltaType": "PaFwd"
+      }
+    },
+    {
+      "id": "FX-NZD-JPY-OPTION-CONVENTIONS",
+      "terms": {
+        "AtmType": "AtmDeltaNeutral",
+        "DeltaType": "PaFwd"
+      }
+    },
+    {
+      "id": "FX-CAD-JPY-OPTION-CONVENTIONS",
+      "terms": {
+        "AtmType": "AtmDeltaNeutral",
+        "DeltaType": "PaFwd"
+      }
+    },
+    {
+      "id": "FX-CHF-JPY-OPTION-CONVENTIONS",
+      "terms": {
+        "AtmType": "AtmDeltaNeutral",
+        "DeltaType": "PaFwd"
+      }
+    }
+  ],
+  "fx_option_time_weighting": [],
+  "bond_yield": []
+}

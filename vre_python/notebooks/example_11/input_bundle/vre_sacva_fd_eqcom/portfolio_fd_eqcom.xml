@@ -1,0 +1,48 @@
+<Portfolio>
+
+  <!-- Equity call mirroring scripted EqCall_SP5 -->
+  <Trade id="EqCall_SP5_FD">
+    <TradeType>EquityOption</TradeType>
+    <Envelope>
+      <CounterParty>CPTY_A</CounterParty>
+      <NettingSetId>CPTY_A</NettingSetId>
+      <DeskId>EQUITY_DESK</DeskId>
+    </Envelope>
+    <EquityOptionData>
+      <OptionData>
+        <LongShort>Long</LongShort>
+        <OptionType>Call</OptionType>
+        <Style>European</Style>
+        <Settlement>Cash</Settlement>
+        <PayOffAtExpiry>false</PayOffAtExpiry>
+        <ExerciseDates>
+          <ExerciseDate>2021-02-25</ExerciseDate>
+        </ExerciseDates>
+      </OptionData>
+      <Name>SP5</Name>
+      <Currency>USD</Currency>
+      <Strike>2200</Strike>
+      <Quantity>8000</Quantity>
+    </EquityOptionData>
+  </Trade>
+
+  <!-- Commodity forward mirroring scripted ComFwd_WTI_QuantoEUR_5Y -->
+  <Trade id="ComFwd_WTI_QuantoEUR_5Y">
+    <TradeType>CommodityForward</TradeType>
+    <Envelope>
+      <CounterParty>CPTY_A</CounterParty>
+      <NettingSetId>CPTY_A</NettingSetId>
+      <DeskId>COMMODITY_DESK</DeskId>
+    </Envelope>
+    <CommodityForwardData>
+      <Position>Long</Position>
+      <Maturity>2024-02-26</Maturity>
+      <Name>COMDTY_WTI_USD</Name>
+      <Currency>USD</Currency>
+      <Strike>49.5</Strike>
+      <Quantity>20000</Quantity>
+      <PaymentDate>2024-02-26</PaymentDate>
+    </CommodityForwardData>
+  </Trade>
+
+</Portfolio>

@@ -1,0 +1,60 @@
+[setup]
+asofDate = "2016-02-05"
+inputPath = "input_bundle/vre_swaps"
+outputPath = "Output"
+logFile = "log.txt"
+logMask = "15"
+marketDataFile = "market.txt"
+fixingDataFile = "fixings.txt"
+implyTodaysFixings = "Y"
+curveConfigFile = "runtime_policy/resolved_curve_configuration.json"
+conventionsFile = "reference_registry/convention_manifest.json"
+marketConfigFile = "runtime_policy/resolved_todays_market.json"
+pricingEnginesFile = "runtime_policy/pricingengine/resolved_pricing_policy.json"
+portfolioFile = "portfolio_swaps.xml"
+observationModel = "None"
+continueOnError = "false"
+calendarAdjustment = "runtime_policy/resolved_calendar_adjustments_manifest.json"
+currencyConfiguration = "runtime_policy/resolved_currency_registry.json"
+nThreads = "1"
+
+[markets]
+lgmcalibration = "libor"
+fxcalibration = "libor"
+eqcalibration = "libor"
+pricing = "libor"
+simulation = "libor"
+
+[analytics]
+[analytics.npv]
+active = "Y"
+baseCurrency = "EUR"
+outputFileName = "npv.csv"
+additionalResults = "Y"
+
+[analytics.cashflow]
+active = "Y"
+outputFileName = "flows.csv"
+
+[analytics.curves]
+active = "Y"
+configuration = "default"
+grid = "240,1M"
+outputFileName = "curves.csv"
+outputTodaysMarketCalibration = "Y"
+
+[analytics.simulation]
+active = "Y"
+simulationConfigFile = "runtime_policy/resolved_simulation.json"
+pricingEnginesFile = "runtime_policy/pricingengine/resolved_pricing_policy.json"
+baseCurrency = "EUR"
+observationModel = "Disable"
+
+[analytics.xva]
+active = "Y"
+csaFile = "runtime_policy/resolved_netting_set_information.json"
+baseCurrency = "EUR"
+exposureProfiles = "Y"
+exposureProfilesByTrade = "N"
+quantile = "0.95"
+calculationType = "NoLag"

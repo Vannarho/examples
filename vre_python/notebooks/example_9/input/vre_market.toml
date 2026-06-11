@@ -1,0 +1,29 @@
+[setup]
+asofDate = "2016-02-05"
+inputPath = "input_bundle/vre_market"
+outputPath = "Output"
+logFile = "log.txt"
+logMask = "15"
+marketDataFile = "market_20160205.txt"
+fixingDataFile = "fixings_20160205.txt"
+implyTodaysFixings = "Y"
+curveConfigFile = "runtime_policy/resolved_curve_configuration.json"
+conventionsFile = "reference_registry/convention_manifest.json"
+marketConfigFile = "runtime_policy/resolved_todays_market.json"
+pricingEnginesFile = "runtime_policy/pricingengine/resolved_pricing_policy.json"
+portfolioFile = ""
+observationModel = "None"
+
+[markets]
+lgmcalibration = "libor"
+fxcalibration = "libor"
+eqcalibration = "libor"
+pricing = "libor"
+simulation = "libor"
+
+[analytics]
+[analytics.curves]
+active = "Y"
+configuration = "default"
+grid = "240,1M"
+outputFileName = "curves.csv"

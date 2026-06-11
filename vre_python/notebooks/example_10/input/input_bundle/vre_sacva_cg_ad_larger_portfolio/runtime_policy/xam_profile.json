@@ -1,0 +1,323 @@
+{
+  "schemaVersion": "1.0.0",
+  "seedVersion": "1.0.0",
+  "traceabilityRefs": {
+    "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+    "epic": "docs/architecture/scope_runtime_migration.yaml",
+    "sourceXml": "vre_python/notebooks/example_10/input/sacva_larger_porfolio/simulation.xml",
+    "spec": "docs/architecture/scope_runtime_migration.yaml"
+  },
+  "domesticCurrency": "EUR",
+  "factors": {
+    "currencies": [
+      "EUR",
+      "USD",
+      "HKD"
+    ],
+    "equities": [
+      "SP5",
+      "SX5E",
+      "SPX",
+      "HSCEI"
+    ],
+    "inflationIndices": [],
+    "creditNames": [
+      "BANK",
+      "CPTY_A"
+    ],
+    "commodities": [
+      "COMDTY_WTI_USD",
+      "COMDTY_GOLD_USD"
+    ]
+  },
+  "bootstrapTolerance": 0.0001,
+  "integration": {
+    "discretization": "Euler",
+    "salvagingAlgorithm": "None",
+    "piecewise": true
+  },
+  "modelBlocks": {
+    "interestRate": [
+      {
+        "modelType": "LGM",
+        "key": "default",
+        "parameters": {
+          "CalibrationSwaptions": {
+            "Expiries": "1Y,  2Y,  4Y,  6Y,  8Y, 10Y, 12Y, 14Y, 16Y, 18Y, 19Y",
+            "Strikes": "",
+            "Terms": "19Y, 18Y, 16Y, 14Y, 12Y, 10Y,  8Y,  6Y,  4Y,  2Y,  1Y"
+          },
+          "CalibrationType": "Bootstrap",
+          "ParameterTransformation": {
+            "Scaling": 1.0,
+            "ShiftHorizon": 0.0
+          },
+          "Reversion": {
+            "Calibrate": false,
+            "InitialValue": 0.03,
+            "ParamType": "Constant",
+            "ReversionType": "HullWhite",
+            "TimeGrid": ""
+          },
+          "Volatility": {
+            "Calibrate": true,
+            "InitialValue": "0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01",
+            "ParamType": "Piecewise",
+            "TimeGrid": "1.0, 2.0, 3.0, 4.0, 5.0, 7.0, 10.0",
+            "VolatilityType": "Hagan"
+          }
+        }
+      },
+      {
+        "modelType": "LGM",
+        "key": "EUR",
+        "parameters": {
+          "CalibrationSwaptions": {
+            "Expiries": "1Y,  2Y,  4Y,  6Y,  8Y, 10Y, 12Y, 14Y, 16Y, 18Y, 19Y",
+            "Strikes": "",
+            "Terms": "19Y, 18Y, 16Y, 14Y, 12Y, 10Y,  8Y,  6Y,  4Y,  2Y,  1Y"
+          },
+          "CalibrationType": "Bootstrap",
+          "ParameterTransformation": {
+            "Scaling": 1.0,
+            "ShiftHorizon": 0.0
+          },
+          "Reversion": {
+            "Calibrate": false,
+            "InitialValue": 0.03,
+            "ParamType": "Constant",
+            "ReversionType": "HullWhite",
+            "TimeGrid": ""
+          },
+          "Volatility": {
+            "Calibrate": true,
+            "InitialValue": "0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01",
+            "ParamType": "Piecewise",
+            "TimeGrid": "1.0, 2.0, 3.0, 4.0, 5.0, 7.0, 10.0",
+            "VolatilityType": "Hagan"
+          }
+        }
+      }
+    ],
+    "foreignExchange": [
+      {
+        "modelType": "CrossCcyLGM",
+        "key": "default",
+        "parameters": {
+          "CalibrationOptions": {
+            "Expiries": "1Y, 2Y, 3Y, 4Y, 5Y, 10Y",
+            "Strikes": ""
+          },
+          "CalibrationType": "Bootstrap",
+          "DomesticCcy": "EUR",
+          "Sigma": {
+            "Calibrate": true,
+            "InitialValue": "0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1",
+            "ParamType": "Piecewise",
+            "TimeGrid": "1.0, 2.0, 3.0, 4.0, 5.0, 7.0, 10.0"
+          }
+        }
+      },
+      {
+        "modelType": "CrossCcyLGM",
+        "key": "USD",
+        "parameters": {
+          "CalibrationOptions": {
+            "Expiries": "1Y, 2Y, 3Y, 4Y, 5Y, 10Y",
+            "Strikes": ""
+          },
+          "CalibrationType": "Bootstrap",
+          "DomesticCcy": "EUR",
+          "Sigma": {
+            "Calibrate": true,
+            "InitialValue": "0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1",
+            "ParamType": "Piecewise",
+            "TimeGrid": "1.0, 2.0, 3.0, 4.0, 5.0, 7.0, 10.0"
+          }
+        }
+      },
+      {
+        "modelType": "CrossCcyLGM",
+        "key": "HKD",
+        "parameters": {
+          "CalibrationOptions": {
+            "Expiries": "1Y, 2Y, 3Y, 4Y, 5Y, 10Y",
+            "Strikes": ""
+          },
+          "CalibrationType": "Bootstrap",
+          "DomesticCcy": "EUR",
+          "Sigma": {
+            "Calibrate": false,
+            "InitialValue": "0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1",
+            "ParamType": "Piecewise",
+            "TimeGrid": "1.0, 2.0, 3.0, 4.0, 5.0, 7.0, 10.0"
+          }
+        }
+      }
+    ],
+    "equity": [
+      {
+        "modelType": "CrossAssetLGM",
+        "key": "default",
+        "parameters": {
+          "CalibrationOptions": {
+            "Expiries": "1Y, 2Y, 3Y, 4Y, 5Y, 10Y",
+            "Strikes": ""
+          },
+          "CalibrationType": "Bootstrap",
+          "Currency": "EUR",
+          "Sigma": {
+            "Calibrate": true,
+            "InitialValue": "0.1, 0.1, 0.1, 0.1, 0.1, 0.1,  0.1, 0.1",
+            "ParamType": "Piecewise",
+            "TimeGrid": "1.0, 2.0, 3.0, 4.0, 5.0, 7.0, 10.0"
+          }
+        }
+      },
+      {
+        "modelType": "CrossAssetLGM",
+        "key": "HSCEI",
+        "parameters": {
+          "CalibrationOptions": {
+            "Expiries": "6M, 5Y, 10Y",
+            "Strikes": ""
+          },
+          "CalibrationType": "Bootstrap",
+          "Currency": "HKD",
+          "Sigma": {
+            "Calibrate": true,
+            "InitialValue": "0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1",
+            "ParamType": "Piecewise",
+            "TimeGrid": "1.0, 2.0, 3.0, 4.0, 5.0, 7.0, 10.0"
+          }
+        }
+      },
+      {
+        "modelType": "CrossAssetLGM",
+        "key": "SP5",
+        "parameters": {
+          "CalibrationOptions": {
+            "Expiries": "6M, 5Y, 10Y",
+            "Strikes": ""
+          },
+          "CalibrationType": "Bootstrap",
+          "Currency": "USD",
+          "Sigma": {
+            "Calibrate": true,
+            "InitialValue": "0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1",
+            "ParamType": "Piecewise",
+            "TimeGrid": "1.0, 2.0, 3.0, 4.0, 5.0, 7.0, 10.0"
+          }
+        }
+      },
+      {
+        "modelType": "CrossAssetLGM",
+        "key": "SPX",
+        "parameters": {
+          "CalibrationOptions": {
+            "Expiries": "6M, 5Y, 10Y",
+            "Strikes": ""
+          },
+          "CalibrationType": "Bootstrap",
+          "Currency": "USD",
+          "Sigma": {
+            "Calibrate": true,
+            "InitialValue": "0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1",
+            "ParamType": "Piecewise",
+            "TimeGrid": "1.0, 2.0, 3.0, 4.0, 5.0, 7.0, 10.0"
+          }
+        }
+      },
+      {
+        "modelType": "CrossAssetLGM",
+        "key": "SX5E",
+        "parameters": {
+          "CalibrationOptions": {
+            "Expiries": "6M, 5Y, 10Y",
+            "Strikes": ""
+          },
+          "CalibrationType": "Bootstrap",
+          "Currency": "EUR",
+          "Sigma": {
+            "Calibrate": true,
+            "InitialValue": "0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1",
+            "ParamType": "Piecewise",
+            "TimeGrid": "1.0, 2.0, 3.0, 4.0, 5.0, 7.0, 10.0"
+          }
+        }
+      }
+    ],
+    "inflation": [],
+    "credit": [
+      {
+        "modelType": "LGM",
+        "key": "default",
+        "parameters": {
+          "CalibrationCdsOptions": {
+            "Expiries": "1Y,2Y,4Y,6Y,8Y,10Y,12Y,14Y,16Y,18Y,19Y",
+            "Strikes": "",
+            "Terms": "19Y,18Y,16Y,14Y,12Y,10Y,8Y,6Y,4Y,2Y,1Y"
+          },
+          "CalibrationType": "None",
+          "ParameterTransformation": {
+            "Scaling": 1.0,
+            "ShiftHorizon": 0.0
+          },
+          "Reversion": {
+            "Calibrate": false,
+            "InitialValue": 0.03,
+            "ParamType": "Constant",
+            "ReversionType": "HullWhite",
+            "TimeGrid": ""
+          },
+          "Volatility": {
+            "Calibrate": false,
+            "InitialValue": "0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01",
+            "ParamType": "Constant",
+            "TimeGrid": "1.0,2.0,3.0,4.0,5.0,7.0,10.0",
+            "VolatilityType": "Hagan"
+          }
+        }
+      }
+    ],
+    "commodity": [
+      {
+        "modelType": "CommoditySchwartz",
+        "key": "COMDTY_WTI_USD",
+        "parameters": {
+          "CalibrationType": "None",
+          "Currency": "USD",
+          "DriftFreeState": true,
+          "Kappa": {
+            "Calibrate": false,
+            "InitialValue": 0.5
+          },
+          "Sigma": {
+            "Calibrate": false,
+            "InitialValue": 0.25
+          }
+        }
+      },
+      {
+        "modelType": "CommoditySchwartz",
+        "key": "COMDTY_GOLD_USD",
+        "parameters": {
+          "CalibrationType": "None",
+          "Currency": "USD",
+          "DriftFreeState": true,
+          "Kappa": {
+            "Calibrate": false,
+            "InitialValue": 0.3
+          },
+          "Sigma": {
+            "Calibrate": false,
+            "InitialValue": 0.2
+          }
+        }
+      }
+    ]
+  },
+  "creditStates": {
+    "numberOfFactors": 2
+  }
+}

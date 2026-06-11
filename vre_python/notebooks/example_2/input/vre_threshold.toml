@@ -1,0 +1,65 @@
+[setup]
+asofDate = "2016-02-05"
+inputPath = "input_bundle/vre_threshold"
+outputPath = "Output"
+logFile = "log_threshold.txt"
+logMask = "15"
+marketDataFile = "market.txt"
+fixingDataFile = "fixings.txt"
+implyTodaysFixings = "N"
+curveConfigFile = "runtime_policy/resolved_curve_configuration.json"
+conventionsFile = "reference_registry/convention_manifest.json"
+marketConfigFile = "runtime_policy/resolved_todays_market.json"
+pricingEnginesFile = "runtime_policy/pricingengine/resolved_pricing_policy.json"
+portfolioFile = "portfolio.xml"
+observationModel = "Disable"
+
+[markets]
+lgmcalibration = "collateral_inccy"
+fxcalibration = "default"
+pricing = "default"
+simulation = "default"
+
+[analytics]
+[analytics.npv]
+active = "N"
+baseCurrency = "EUR"
+outputFileName = "npv.csv"
+
+[analytics.cashflow]
+active = "N"
+outputFileName = "flows.csv"
+
+[analytics.curves]
+active = "N"
+configuration = "default"
+grid = "240,1M"
+outputFileName = "curves.csv"
+
+[analytics.simulation]
+active = "N"
+simulationConfigFile = "runtime_policy/resolved_simulation.json"
+pricingEnginesFile = "runtime_policy/pricingengine/resolved_pricing_policy.json"
+baseCurrency = "EUR"
+
+[analytics.xva]
+active = "Y"
+csaFile = "runtime_policy/resolved_netting_set_information.json"
+cubeFile = "cube.csv.gz"
+scenarioFile = "scenariodata.csv.gz"
+baseCurrency = "EUR"
+exposureProfiles = "Y"
+exposureProfilesByTrade = "Y"
+quantile = "0.95"
+calculationType = "NoLag"
+allocationMethod = "Marginal"
+marginalAllocationLimit = "1.0"
+exerciseNextBreak = "N"
+cva = "Y"
+dva = "N"
+dvaName = "BANK"
+fva = "Y"
+fvaBorrowingCurve = "BANK_EUR_BORROW"
+fvaLendingCurve = "BANK_EUR_LEND"
+colva = "Y"
+collateralFloor = "Y"

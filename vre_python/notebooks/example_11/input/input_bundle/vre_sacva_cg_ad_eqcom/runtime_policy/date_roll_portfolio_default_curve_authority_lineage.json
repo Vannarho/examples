@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "1.0.0",
+  "authority": "Phase 1 deterministic portfolio scenario default-curve materialization",
+  "reason": "Scenario market requested portfolio counterparty default curves, but the bundle had no curve configuration or market quote authority for those names.",
+  "targetDate": "20190225",
+  "records": [
+    {
+      "name": "CPTY_A_REF",
+      "currency": "EUR",
+      "tenors": [
+        "6M",
+        "1Y",
+        "2Y",
+        "3Y",
+        "5Y",
+        "10Y"
+      ]
+    }
+  ]
+}

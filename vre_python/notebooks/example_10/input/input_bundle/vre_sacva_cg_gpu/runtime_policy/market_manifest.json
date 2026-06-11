@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0.0",
+  "seedVersion": "1.0.0",
+  "traceabilityRefs": {
+    "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+    "epic": "docs/architecture/scope_runtime_migration.yaml",
+    "sourceXml": "vre_python/notebooks/example_10/input/cg/todaysmarket.xml",
+    "spec": "docs/architecture/scope_runtime_migration.yaml"
+  },
+  "views": [
+    {
+      "viewId": "default",
+      "families": {
+        "default_curves": "default_curve__default",
+        "discounting_curves": "discount_curve__default",
+        "fx_spots": "fx_spot__default",
+        "index_forwarding_curves": "index_forwarding_curve__default",
+        "swap_index_curves": "swap_index_curve__default",
+        "yield_curves": "yield_curve__default"
+      }
+    },
+    {
+      "viewId": "xois_eur",
+      "families": {
+        "default_curves": "default_curve__xois_eur",
+        "discounting_curves": "discount_curve__xois_eur",
+        "fx_spots": "fx_spot__default",
+        "index_forwarding_curves": "index_forwarding_curve__xois_eur",
+        "swap_index_curves": "swap_index_curve__default",
+        "yield_curves": "yield_curve__default"
+      }
+    }
+  ]
+}

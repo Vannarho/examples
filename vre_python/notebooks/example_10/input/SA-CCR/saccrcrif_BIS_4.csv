@@ -1,0 +1,8 @@
+TradeID,PortfolioID,ProductClass,RiskType,Qualifier,Bucket,Label1,Label2,AmountCurrency,Amount
+IRS_10Y_FixPay,,RatesFX,PV,,,2023-11-07,,USD,30000
+IRS_4Y_FltPay,,RatesFX,PV,,,2023-11-07,,USD,-20000
+EUR_Swptn_1x10_FltPay,,RatesFX,PV,,,2023-11-07,,EUR,50000
+EUR_Swptn_1x10_FltPay,,RatesFX,UnderlyingPrice,,,2023-11-07,,USD,0.06
+CDS_FirmA,,RatesFX,PV,FirmA,AA,,,USD,20000
+CDS_FirmB,,RatesFX,PV,FirmB,BBB,,,EUR,-40000
+CDS_CDX_IG,,RatesFX,PV,CDXIG,IG,,,USD,0

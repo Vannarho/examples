@@ -1,0 +1,446 @@
+version: 1.0.0
+setId: curveconfig
+traceabilityRefs:
+  adr: docs/architecture/adr/0001-serialization-and-storage-format-standards.md
+  epic: docs/architecture/scope_runtime_migration.yaml
+  spec: docs/architecture/scope_runtime_migration.yaml
+  sourceXml: vre_python/notebooks/example_10/input/cg/curveconfig.xml
+records:
+- familyId: default_curves
+  curveId: BANK
+  description: BANK SR CDS USD
+  recipeVariant: structured_mapping
+  dependencies:
+    quotes: []
+    conventions: []
+    relatedCurveIds: []
+  definition:
+    Currency: USD
+    Configurations:
+      Configuration:
+        _attributes:
+          priority: '0'
+        Type: SpreadCDS
+        DiscountCurve: Yield/USD/USD-SOFR
+        DayCounter: Actual/365 (Fixed)
+        RecoveryRate: RECOVERY_RATE/RATE/BANK/SR/USD
+        Quotes:
+          Quote:
+          - CDS/CREDIT_SPREAD/BANK/SR/USD/1Y
+          - CDS/CREDIT_SPREAD/BANK/SR/USD/2Y
+          - CDS/CREDIT_SPREAD/BANK/SR/USD/3Y
+          - CDS/CREDIT_SPREAD/BANK/SR/USD/4Y
+          - CDS/CREDIT_SPREAD/BANK/SR/USD/5Y
+          - CDS/CREDIT_SPREAD/BANK/SR/USD/7Y
+          - CDS/CREDIT_SPREAD/BANK/SR/USD/10Y
+        Conventions: CDS-STANDARD-CONVENTIONS
+        Extrapolation: 'true'
+        BootstrapConfig:
+          Accuracy: '0.0000000000010000'
+          GlobalAccuracy: '0.0000000000010000'
+          DontThrow: 'false'
+          MaxAttempts: '5'
+          MaxFactor: '2'
+          MinFactor: '2'
+          DontThrowSteps: '10'
+        AllowNegativeRates: 'false'
+- familyId: default_curves
+  curveId: BANK_SR_USD
+  description: BANK SR CDS USD (alias)
+  recipeVariant: structured_mapping
+  dependencies:
+    quotes: []
+    conventions: []
+    relatedCurveIds: []
+  definition:
+    Currency: USD
+    Configurations:
+      Configuration:
+        _attributes:
+          priority: '0'
+        Type: SpreadCDS
+        DiscountCurve: Yield/USD/USD-SOFR
+        DayCounter: Actual/365 (Fixed)
+        RecoveryRate: RECOVERY_RATE/RATE/BANK/SR/USD
+        Quotes:
+          Quote:
+          - CDS/CREDIT_SPREAD/BANK/SR/USD/1Y
+          - CDS/CREDIT_SPREAD/BANK/SR/USD/2Y
+          - CDS/CREDIT_SPREAD/BANK/SR/USD/3Y
+          - CDS/CREDIT_SPREAD/BANK/SR/USD/4Y
+          - CDS/CREDIT_SPREAD/BANK/SR/USD/5Y
+          - CDS/CREDIT_SPREAD/BANK/SR/USD/7Y
+          - CDS/CREDIT_SPREAD/BANK/SR/USD/10Y
+        Conventions: CDS-STANDARD-CONVENTIONS
+        Extrapolation: 'true'
+        BootstrapConfig:
+          Accuracy: '0.0000000000010000'
+          GlobalAccuracy: '0.0000000000010000'
+          DontThrow: 'false'
+          MaxAttempts: '5'
+          MaxFactor: '2'
+          MinFactor: '2'
+          DontThrowSteps: '10'
+        AllowNegativeRates: 'false'
+- familyId: default_curves
+  curveId: CPTY_A
+  description: CPTY_A SR HR USD
+  recipeVariant: structured_mapping
+  dependencies:
+    quotes: []
+    conventions: []
+    relatedCurveIds: []
+  definition:
+    Currency: USD
+    Type: HazardRate
+    DiscountCurve: ''
+    DayCounter: A365
+    RecoveryRate: RECOVERY_RATE/RATE/CPTY_A/SR/USD
+    Quotes:
+      Quote:
+      - HAZARD_RATE/RATE/CPTY_A/SR/USD/0Y
+      - HAZARD_RATE/RATE/CPTY_A/SR/USD/1Y
+      - HAZARD_RATE/RATE/CPTY_A/SR/USD/2Y
+      - HAZARD_RATE/RATE/CPTY_A/SR/USD/3Y
+      - HAZARD_RATE/RATE/CPTY_A/SR/USD/4Y
+      - HAZARD_RATE/RATE/CPTY_A/SR/USD/5Y
+      - HAZARD_RATE/RATE/CPTY_A/SR/USD/7Y
+      - HAZARD_RATE/RATE/CPTY_A/SR/USD/10Y
+      - HAZARD_RATE/RATE/CPTY_A/SR/USD/15Y
+      - HAZARD_RATE/RATE/CPTY_A/SR/USD/20Y
+      - HAZARD_RATE/RATE/CPTY_A/SR/USD/30Y
+    Conventions: CDS-STANDARD-CONVENTIONS
+- familyId: default_curves
+  curveId: CPTY_A_SR_USD
+  description: CPTY_A SR HR USD (alias)
+  recipeVariant: structured_mapping
+  dependencies:
+    quotes: []
+    conventions: []
+    relatedCurveIds: []
+  definition:
+    Currency: USD
+    Type: HazardRate
+    DiscountCurve: ''
+    DayCounter: A365
+    RecoveryRate: RECOVERY_RATE/RATE/CPTY_A/SR/USD
+    Quotes:
+      Quote:
+      - HAZARD_RATE/RATE/CPTY_A/SR/USD/0Y
+      - HAZARD_RATE/RATE/CPTY_A/SR/USD/1Y
+      - HAZARD_RATE/RATE/CPTY_A/SR/USD/2Y
+      - HAZARD_RATE/RATE/CPTY_A/SR/USD/3Y
+      - HAZARD_RATE/RATE/CPTY_A/SR/USD/4Y
+      - HAZARD_RATE/RATE/CPTY_A/SR/USD/5Y
+      - HAZARD_RATE/RATE/CPTY_A/SR/USD/7Y
+      - HAZARD_RATE/RATE/CPTY_A/SR/USD/10Y
+      - HAZARD_RATE/RATE/CPTY_A/SR/USD/15Y
+      - HAZARD_RATE/RATE/CPTY_A/SR/USD/20Y
+      - HAZARD_RATE/RATE/CPTY_A/SR/USD/30Y
+    Conventions: CDS-STANDARD-CONVENTIONS
+- familyId: fx_volatilities
+  curveId: EURUSD
+  description: Flat EURUSD FX vol (no-op)
+  recipeVariant: structured_mapping
+  dependencies:
+    quotes: []
+    conventions: []
+    relatedCurveIds: []
+  definition:
+    Dimension: ATM
+    VolatilityType: Lognormal
+    Extrapolation: Flat
+    DayCounter: Actual/365 (Fixed)
+    Calendar: TARGET
+    BusinessDayConvention: Following
+    Expiries: 1Y
+    FXSpotID: FX/EUR/USD
+    FXForeignCurveID: Yield/EUR/EUR-ESTER
+    FXDomesticCurveID: Yield/USD/USD-SOFR
+    Quotes:
+      Quote: FX_OPTION/RR_25/EUR/USD/1Y
+    Report: ''
+- familyId: swaption_volatilities
+  curveId: EUR
+  description: EUR normal swaption vol (flat grid)
+  recipeVariant: structured_mapping
+  dependencies:
+    quotes: []
+    conventions: []
+    relatedCurveIds: []
+  definition:
+    Dimension: ATM
+    VolatilityType: Normal
+    Extrapolation: Flat
+    DayCounter: Actual/365 (Fixed)
+    Calendar: TARGET
+    BusinessDayConvention: Following
+    OptionTenors: 1Y,5Y,10Y
+    SwapTenors: 1Y,5Y,10Y
+    ShortSwapIndexBase: EUR-CMS-1Y
+    SwapIndexBase: EUR-CMS-30Y
+- familyId: swaption_volatilities
+  curveId: EUR-EURIBOR-6M
+  description: EUR-EURIBOR-6M normal swaption vol (flat grid)
+  recipeVariant: structured_mapping
+  dependencies:
+    quotes: []
+    conventions: []
+    relatedCurveIds: []
+  definition:
+    Dimension: ATM
+    VolatilityType: Normal
+    Extrapolation: Flat
+    DayCounter: Actual/365 (Fixed)
+    Calendar: TARGET
+    BusinessDayConvention: Following
+    OptionTenors: 1Y,5Y,10Y
+    SwapTenors: 1Y,5Y,10Y
+    ShortSwapIndexBase: EUR-CMS-1Y
+    SwapIndexBase: EUR-CMS-30Y
+- familyId: yield_curves
+  curveId: EUR-ESTER
+  description: EUR ESTER OIS
+  recipeVariant: structured_mapping
+  dependencies:
+    quotes: []
+    conventions: []
+    relatedCurveIds: []
+  definition:
+    Currency: EUR
+    DiscountCurve: EUR-ESTER
+    Segments:
+      Simple:
+        Type: OIS
+        Quotes:
+          Quote:
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/EUR/2D/1D/1W
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/EUR/2D/1D/1M
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/EUR/2D/1D/3M
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/EUR/2D/1D/6M
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/EUR/2D/1D/1Y
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/EUR/2D/1D/2Y
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/EUR/2D/1D/3Y
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/EUR/2D/1D/5Y
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/EUR/2D/1D/10Y
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/EUR/2D/1D/30Y
+        Conventions: EUR-ESTER-OIS
+        PillarChoice: LastRelevantPillarDate
+        Priority: '0'
+        MinDistance: '1'
+    InterpolationVariable: Discount
+    InterpolationMethod: LogLinear
+    YieldCurveDayCounter: A365
+    Extrapolation: 'true'
+- familyId: yield_curves
+  curveId: EUR-EURIBOR-3M
+  description: EUR EURIBOR 3M forward curve
+  recipeVariant: structured_mapping
+  dependencies:
+    quotes: []
+    conventions: []
+    relatedCurveIds: []
+  definition:
+    Currency: EUR
+    DiscountCurve: EUR-ESTER
+    Segments:
+      Simple:
+      - Type: Deposit
+        Quotes:
+          Quote:
+          - MM/RATE/EUR/2D/1W
+          - MM/RATE/EUR/2D/1M
+          - MM/RATE/EUR/2D/3M
+        Conventions: EUR-DEPOSIT
+        PillarChoice: LastRelevantPillarDate
+        Priority: '0'
+        MinDistance: '1'
+      - Type: Swap
+        Quotes:
+          Quote:
+          - IR_SWAP/RATE/EUR/2D/3M/1Y
+          - IR_SWAP/RATE/EUR/2D/3M/2Y
+          - IR_SWAP/RATE/EUR/2D/3M/3Y
+          - IR_SWAP/RATE/EUR/2D/3M/5Y
+          - IR_SWAP/RATE/EUR/2D/3M/7Y
+          - IR_SWAP/RATE/EUR/2D/3M/10Y
+          - IR_SWAP/RATE/EUR/2D/3M/15Y
+          - IR_SWAP/RATE/EUR/2D/3M/20Y
+          - IR_SWAP/RATE/EUR/2D/3M/30Y
+        Conventions: EUR-EURIBOR-3M-SWAP
+        PillarChoice: LastRelevantPillarDate
+        Priority: '0'
+        MinDistance: '1'
+    InterpolationVariable: Discount
+    InterpolationMethod: LogLinear
+    YieldCurveDayCounter: A365
+    Extrapolation: 'true'
+- familyId: yield_curves
+  curveId: EUR-EURIBOR-6M
+  description: EUR EURIBOR 6M forward curve
+  recipeVariant: structured_mapping
+  dependencies:
+    quotes: []
+    conventions: []
+    relatedCurveIds: []
+  definition:
+    Currency: EUR
+    DiscountCurve: EUR-ESTER
+    Segments:
+      Simple:
+      - Type: Deposit
+        Quotes:
+          Quote:
+          - MM/RATE/EUR/2D/1M
+          - MM/RATE/EUR/2D/6M
+        Conventions: EUR-DEPOSIT
+        PillarChoice: LastRelevantPillarDate
+        Priority: '0'
+        MinDistance: '1'
+      - Type: Swap
+        Quotes:
+          Quote:
+          - IR_SWAP/RATE/EUR/2D/6M/2Y
+          - IR_SWAP/RATE/EUR/2D/6M/3Y
+          - IR_SWAP/RATE/EUR/2D/6M/5Y
+          - IR_SWAP/RATE/EUR/2D/6M/7Y
+          - IR_SWAP/RATE/EUR/2D/6M/10Y
+          - IR_SWAP/RATE/EUR/2D/6M/15Y
+          - IR_SWAP/RATE/EUR/2D/6M/20Y
+          - IR_SWAP/RATE/EUR/2D/6M/30Y
+        Conventions: EUR-EURIBOR-6M-SWAP
+        PillarChoice: LastRelevantPillarDate
+        Priority: '0'
+        MinDistance: '1'
+    InterpolationVariable: Discount
+    InterpolationMethod: LogLinear
+    YieldCurveDayCounter: A365
+    Extrapolation: 'true'
+- familyId: yield_curves
+  curveId: GBP-SONIA
+  description: GBP SONIA OIS
+  recipeVariant: structured_mapping
+  dependencies:
+    quotes: []
+    conventions: []
+    relatedCurveIds: []
+  definition:
+    Currency: GBP
+    DiscountCurve: GBP-SONIA
+    Segments:
+      Simple:
+        Type: OIS
+        Quotes:
+          Quote:
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/GBP/SONIA/0D/0D/1W
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/GBP/SONIA/0D/0D/1M
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/GBP/SONIA/0D/0D/3M
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/GBP/SONIA/0D/0D/6M
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/GBP/SONIA/0D/0D/1Y
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/GBP/SONIA/0D/0D/2Y
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/GBP/SONIA/0D/0D/3Y
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/GBP/SONIA/0D/0D/5Y
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/GBP/SONIA/0D/0D/10Y
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/GBP/SONIA/0D/0D/30Y
+        Conventions: GBP-SONIA-OIS
+        PillarChoice: LastRelevantPillarDate
+        Priority: '0'
+        MinDistance: '1'
+    InterpolationVariable: Discount
+    InterpolationMethod: LogLinear
+    YieldCurveDayCounter: A365
+    Extrapolation: 'true'
+- familyId: yield_curves
+  curveId: USD-SOFR
+  description: USD SOFR OIS
+  recipeVariant: structured_mapping
+  dependencies:
+    quotes: []
+    conventions: []
+    relatedCurveIds: []
+  definition:
+    Currency: USD
+    DiscountCurve: USD-SOFR
+    Segments:
+      Simple:
+        Type: OIS
+        Quotes:
+          Quote:
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/USD/2D/1D/1W
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/USD/2D/1D/1M
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/USD/2D/1D/3M
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/USD/2D/1D/6M
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/USD/2D/1D/1Y
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/USD/2D/1D/2Y
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/USD/2D/1D/3Y
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/USD/2D/1D/5Y
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/USD/2D/1D/10Y
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/USD/2D/1D/30Y
+        Conventions: USD-SOFR-OIS
+        PillarChoice: LastRelevantPillarDate
+        Priority: '0'
+        MinDistance: '1'
+    InterpolationVariable: Discount
+    InterpolationMethod: LogLinear
+    YieldCurveDayCounter: A365
+    Extrapolation: 'true'

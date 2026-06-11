@@ -1,0 +1,33 @@
+version: 1.0.0
+profileId: pricingengine
+traceabilityRefs:
+  adr: docs/architecture/adr/0001-serialization-and-storage-format-standards.md
+  epic: docs/architecture/scope_runtime_migration.yaml
+  spec: docs/architecture/scope_runtime_migration.yaml
+  sourceXml: vre_python/notebooks/example_5/input/pricingengine.xml
+globalParameters:
+  ContinueOnCalibrationError: 'true'
+products:
+- productType: ScriptedTrade
+  model:
+    name: Generic
+    parameters:
+      Model: GaussianCam
+      BaseCcy: USD
+      EnforceBaseCcy: 'false'
+      GridCoarsening: 3M(1W),1Y(1M),5Y(3M),10Y(1Y),50Y(5Y)
+      IrReversion_EUR: '0.0050'
+      IrReversion_USD: '0.0050'
+      FullDynamicFx: 'true'
+      FullDynamicIr: 'true'
+      InfModelType: JY
+  engine:
+    name: Generic
+    parameters:
+      Engine: MC
+      Samples: '10000'
+      RegressionOrder: '4'
+      TimeStepsPerYear: '24'
+      Interactive: 'false'
+      BootstrapTolerance: '1.0'
+      ZeroVolatility: 'false'

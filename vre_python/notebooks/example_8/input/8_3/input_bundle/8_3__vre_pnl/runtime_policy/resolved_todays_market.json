@@ -1,0 +1,358 @@
+{
+  "schemaVersion": "1.0.0",
+  "seedVersion": "1.0.0",
+  "publishedAt": "examples/vre_python/notebooks/example_8/input/8_3/vre_pnl.toml",
+  "contentHash": "204caf97c4a1bd42427bd1097dcef1dfab4326f7f03c3f023596515b4d81f822",
+  "sourceLineage": {
+    "viewPath": "examples/vre_python/notebooks/example_8/input_bundle/8_3__vre_pnl/runtime_policy/market_view.toml",
+    "manifestPath": "examples/vre_python/notebooks/example_8/input_bundle/8_3__vre_pnl/runtime_policy/market_manifest.yaml",
+    "objectMapPath": "examples/vre_python/notebooks/example_8/input_bundle/8_3__vre_pnl/runtime_policy/market_object_map.json",
+    "generator": "tools/ci/publish_todays_market_contracts.py"
+  },
+  "marketView": {
+    "viewId": "default",
+    "asOfDate": "2019-02-25"
+  },
+  "marketManifest": {
+    "views": [
+      {
+        "viewId": "default",
+        "families": {}
+      },
+      {
+        "viewId": "inccy",
+        "families": {
+          "discounting_curves": "discount_curve__inccy",
+          "index_forwarding_curves": "index_forwarding_curve__default"
+        }
+      }
+    ]
+  },
+  "marketObjectMap": {
+    "families": [
+      {
+        "familyId": "default_curve__default",
+        "marketObject": "DefaultCurve"
+      },
+      {
+        "familyId": "discount_curve__default",
+        "marketObject": "DiscountCurve"
+      },
+      {
+        "familyId": "discount_curve__inccy",
+        "marketObject": "DiscountCurve"
+      },
+      {
+        "familyId": "fx_spot__default",
+        "marketObject": "FXSpot"
+      },
+      {
+        "familyId": "fx_vol__default",
+        "marketObject": "FXVol"
+      },
+      {
+        "familyId": "index_forwarding_curve__default",
+        "marketObject": "IndexCurve"
+      },
+      {
+        "familyId": "swap_index_curve__default",
+        "marketObject": "SwapIndexCurve"
+      },
+      {
+        "familyId": "swaption_vol__default",
+        "marketObject": "SwaptionVol"
+      },
+      {
+        "familyId": "yield_curve__default",
+        "marketObject": "YieldCurve"
+      }
+    ],
+    "entries": [
+      {
+        "familyId": "discount_curve__default",
+        "marketObject": "DiscountCurve",
+        "objectKey": "discount_curve:EUR",
+        "lookupKey": "EUR",
+        "objectId": "Yield/EUR/EUR-IN-USD"
+      },
+      {
+        "familyId": "discount_curve__default",
+        "marketObject": "DiscountCurve",
+        "objectKey": "discount_curve:USD",
+        "lookupKey": "USD",
+        "objectId": "Yield/USD/USD-FedFunds"
+      },
+      {
+        "familyId": "discount_curve__inccy",
+        "marketObject": "DiscountCurve",
+        "objectKey": "discount_curve:EUR",
+        "lookupKey": "EUR",
+        "objectId": "Yield/EUR/EUR-EONIA"
+      },
+      {
+        "familyId": "discount_curve__inccy",
+        "marketObject": "DiscountCurve",
+        "objectKey": "discount_curve:USD",
+        "lookupKey": "USD",
+        "objectId": "Yield/USD/USD-FedFunds"
+      },
+      {
+        "familyId": "fx_spot__default",
+        "marketObject": "FXSpot",
+        "objectKey": "fx_spot:USDEUR",
+        "lookupKey": "USDEUR",
+        "objectId": "FX/USD/EUR"
+      },
+      {
+        "familyId": "fx_vol__default",
+        "marketObject": "FXVol",
+        "objectKey": "fx_vol:EURUSD",
+        "lookupKey": "EURUSD",
+        "objectId": "FXVolatility/EUR/USD/EURUSD"
+      },
+      {
+        "familyId": "index_forwarding_curve__default",
+        "marketObject": "IndexCurve",
+        "objectKey": "index_forwarding_curve:EUR-EONIA",
+        "lookupKey": "EUR-EONIA",
+        "objectId": "Yield/EUR/EUR-EONIA"
+      },
+      {
+        "familyId": "index_forwarding_curve__default",
+        "marketObject": "IndexCurve",
+        "objectKey": "index_forwarding_curve:EUR-ESTER",
+        "lookupKey": "EUR-ESTER",
+        "objectId": "Yield/EUR/EUR-EONIA"
+      },
+      {
+        "familyId": "index_forwarding_curve__default",
+        "marketObject": "IndexCurve",
+        "objectKey": "index_forwarding_curve:EUR-EURIBOR-3M",
+        "lookupKey": "EUR-EURIBOR-3M",
+        "objectId": "Yield/EUR/EUR-EURIBOR-3M"
+      },
+      {
+        "familyId": "index_forwarding_curve__default",
+        "marketObject": "IndexCurve",
+        "objectKey": "index_forwarding_curve:EUR-EURIBOR-6M",
+        "lookupKey": "EUR-EURIBOR-6M",
+        "objectId": "Yield/EUR/EUR-EURIBOR-6M"
+      },
+      {
+        "familyId": "index_forwarding_curve__default",
+        "marketObject": "IndexCurve",
+        "objectKey": "index_forwarding_curve:USD-FedFunds",
+        "lookupKey": "USD-FedFunds",
+        "objectId": "Yield/USD/USD-FedFunds"
+      },
+      {
+        "familyId": "index_forwarding_curve__default",
+        "marketObject": "IndexCurve",
+        "objectKey": "index_forwarding_curve:USD-LIBOR-3M",
+        "lookupKey": "USD-LIBOR-3M",
+        "objectId": "Yield/USD/USD-LIBOR-3M"
+      },
+      {
+        "familyId": "index_forwarding_curve__default",
+        "marketObject": "IndexCurve",
+        "objectKey": "index_forwarding_curve:USD-SOFR",
+        "lookupKey": "USD-SOFR",
+        "objectId": "Yield/USD/USD-FedFunds"
+      },
+      {
+        "familyId": "swap_index_curve__default",
+        "marketObject": "SwapIndexCurve",
+        "objectKey": "swap_index_curve:EUR-CMS-1Y",
+        "lookupKey": "EUR-CMS-1Y",
+        "objectId": "EUR-EONIA"
+      },
+      {
+        "familyId": "swap_index_curve__default",
+        "marketObject": "SwapIndexCurve",
+        "objectKey": "swap_index_curve:EUR-CMS-30Y",
+        "lookupKey": "EUR-CMS-30Y",
+        "objectId": "EUR-EONIA"
+      },
+      {
+        "familyId": "swap_index_curve__default",
+        "marketObject": "SwapIndexCurve",
+        "objectKey": "swap_index_curve:USD-CMS-1Y",
+        "lookupKey": "USD-CMS-1Y",
+        "objectId": "USD-FedFunds"
+      },
+      {
+        "familyId": "swap_index_curve__default",
+        "marketObject": "SwapIndexCurve",
+        "objectKey": "swap_index_curve:USD-CMS-30Y",
+        "lookupKey": "USD-CMS-30Y",
+        "objectId": "USD-FedFunds"
+      },
+      {
+        "familyId": "swap_index_curve__default",
+        "marketObject": "SwapIndexCurve",
+        "objectKey": "swap_index_curve:USD-CMS-SOFR-1Y",
+        "lookupKey": "USD-CMS-SOFR-1Y",
+        "objectId": "USD-SOFR"
+      },
+      {
+        "familyId": "swap_index_curve__default",
+        "marketObject": "SwapIndexCurve",
+        "objectKey": "swap_index_curve:USD-CMS-SOFR-30Y",
+        "lookupKey": "USD-CMS-SOFR-30Y",
+        "objectId": "USD-SOFR"
+      },
+      {
+        "familyId": "swaption_vol__default",
+        "marketObject": "SwaptionVol",
+        "objectKey": "swaption_vol:EUR",
+        "lookupKey": "EUR",
+        "objectId": "SwaptionVolatility/EUR/EUR"
+      },
+      {
+        "familyId": "swaption_vol__default",
+        "marketObject": "SwaptionVol",
+        "objectKey": "swaption_vol:USD",
+        "lookupKey": "USD",
+        "objectId": "SwaptionVolatility/USD/USD"
+      },
+      {
+        "familyId": "yield_curve__default",
+        "marketObject": "YieldCurve",
+        "objectKey": "yield_curve:EUR-IN-USD",
+        "lookupKey": "EUR-IN-USD",
+        "objectId": "Yield/EUR/EUR-IN-USD"
+      },
+      {
+        "familyId": "default_curve__default",
+        "marketObject": "DefaultCurve",
+        "objectKey": "default_curve:CPTY",
+        "lookupKey": "CPTY",
+        "objectId": "Default/USD/CPTY"
+      }
+    ]
+  },
+  "todaysMarketParameters": {
+    "configurations": [
+      {
+        "configurationId": "default",
+        "marketObjectIds": {
+          "YieldCurve": "yield_curve__default",
+          "DiscountCurve": "discount_curve__default",
+          "IndexCurve": "index_forwarding_curve__default",
+          "SwapIndexCurve": "swap_index_curve__default",
+          "FXSpot": "fx_spot__default",
+          "FXVol": "fx_vol__default",
+          "SwaptionVol": "swaption_vol__default",
+          "DefaultCurve": "default_curve__default"
+        }
+      },
+      {
+        "configurationId": "inccy",
+        "marketObjectIds": {
+          "DiscountCurve": "discount_curve__inccy",
+          "IndexCurve": "index_forwarding_curve__default",
+          "DefaultCurve": "default_curve__default",
+          "FXSpot": "fx_spot__default",
+          "FXVol": "fx_vol__default",
+          "SwapIndexCurve": "swap_index_curve__default",
+          "SwaptionVol": "swaption_vol__default",
+          "YieldCurve": "yield_curve__default"
+        }
+      }
+    ],
+    "marketObjects": [
+      {
+        "marketObject": "DefaultCurve",
+        "familyId": "default_curve__default",
+        "assignments": {
+          "CPTY": "Default/USD/CPTY"
+        }
+      },
+      {
+        "marketObject": "DiscountCurve",
+        "familyId": "discount_curve__default",
+        "assignments": {
+          "EUR": "Yield/EUR/EUR-IN-USD",
+          "USD": "Yield/USD/USD-FedFunds"
+        }
+      },
+      {
+        "marketObject": "DiscountCurve",
+        "familyId": "discount_curve__inccy",
+        "assignments": {
+          "EUR": "Yield/EUR/EUR-EONIA",
+          "USD": "Yield/USD/USD-FedFunds"
+        }
+      },
+      {
+        "marketObject": "FXSpot",
+        "familyId": "fx_spot__default",
+        "assignments": {
+          "USDEUR": "FX/USD/EUR"
+        }
+      },
+      {
+        "marketObject": "FXVol",
+        "familyId": "fx_vol__default",
+        "assignments": {
+          "EURUSD": "FXVolatility/EUR/USD/EURUSD"
+        }
+      },
+      {
+        "marketObject": "IndexCurve",
+        "familyId": "index_forwarding_curve__default",
+        "assignments": {
+          "EUR-EONIA": "Yield/EUR/EUR-EONIA",
+          "EUR-ESTER": "Yield/EUR/EUR-EONIA",
+          "EUR-EURIBOR-3M": "Yield/EUR/EUR-EURIBOR-3M",
+          "EUR-EURIBOR-6M": "Yield/EUR/EUR-EURIBOR-6M",
+          "USD-FedFunds": "Yield/USD/USD-FedFunds",
+          "USD-LIBOR-3M": "Yield/USD/USD-LIBOR-3M",
+          "USD-SOFR": "Yield/USD/USD-FedFunds"
+        }
+      },
+      {
+        "marketObject": "SwapIndexCurve",
+        "familyId": "swap_index_curve__default",
+        "assignments": {
+          "EUR-CMS-1Y": "EUR-EONIA",
+          "EUR-CMS-30Y": "EUR-EONIA",
+          "USD-CMS-1Y": "USD-FedFunds",
+          "USD-CMS-30Y": "USD-FedFunds",
+          "USD-CMS-SOFR-1Y": "USD-SOFR",
+          "USD-CMS-SOFR-30Y": "USD-SOFR"
+        }
+      },
+      {
+        "marketObject": "SwaptionVol",
+        "familyId": "swaption_vol__default",
+        "assignments": {
+          "EUR": "SwaptionVolatility/EUR/EUR",
+          "USD": "SwaptionVolatility/USD/USD"
+        }
+      },
+      {
+        "marketObject": "YieldCurve",
+        "familyId": "yield_curve__default",
+        "assignments": {
+          "EUR-IN-USD": "Yield/EUR/EUR-IN-USD",
+          "EUR-EONIA": "Yield/EUR/EUR-EONIA",
+          "Yield/EUR/EUR-EONIA": "Yield/EUR/EUR-EONIA",
+          "EUR-ESTER": "Yield/EUR/EUR-ESTER",
+          "Yield/EUR/EUR-ESTER": "Yield/EUR/EUR-ESTER",
+          "EUR-EURIBOR-3M": "Yield/EUR/EUR-EURIBOR-3M",
+          "Yield/EUR/EUR-EURIBOR-3M": "Yield/EUR/EUR-EURIBOR-3M",
+          "EUR-EURIBOR-6M": "Yield/EUR/EUR-EURIBOR-6M",
+          "Yield/EUR/EUR-EURIBOR-6M": "Yield/EUR/EUR-EURIBOR-6M",
+          "USD-FedFunds": "Yield/USD/USD-FedFunds",
+          "Yield/USD/USD-FedFunds": "Yield/USD/USD-FedFunds",
+          "USD-LIBOR-3M": "Yield/USD/USD-LIBOR-3M",
+          "Yield/USD/USD-LIBOR-3M": "Yield/USD/USD-LIBOR-3M",
+          "USD-SOFR": "Yield/USD/USD-SOFR",
+          "Yield/USD/USD-SOFR": "Yield/USD/USD-SOFR",
+          "Yield/EUR/EUR-IN-USD": "Yield/EUR/EUR-IN-USD"
+        }
+      }
+    ]
+  }
+}

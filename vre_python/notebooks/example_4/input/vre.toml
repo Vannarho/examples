@@ -1,0 +1,79 @@
+[setup]
+asofDate = "2016-02-05"
+inputPath = "input_bundle/vre"
+outputPath = "Output"
+logFile = "log.txt"
+logMask = "15"
+marketDataFile = "market_20160205_flat.txt"
+fixingDataFile = "fixings_20160205.txt"
+implyTodaysFixings = "Y"
+curveConfigFile = "runtime_policy/resolved_curve_configuration.json"
+conventionsFile = "reference_registry/convention_manifest.json"
+marketConfigFile = "runtime_policy/resolved_todays_market.json"
+pricingEnginesFile = "runtime_policy/pricingengine/resolved_pricing_policy.json"
+portfolioFile = "portfolio.xml"
+observationModel = "None"
+continueOnError = "false"
+calendarAdjustment = "runtime_policy/resolved_calendar_adjustments_manifest.json"
+currencyConfiguration = "runtime_policy/resolved_currency_registry.json"
+
+[markets]
+lgmcalibration = "libor"
+fxcalibration = "libor"
+eqcalibration = "libor"
+pricing = "libor"
+simulation = "libor"
+
+[analytics]
+[analytics.npv]
+active = "N"
+baseCurrency = "EUR"
+outputFileName = "npv.csv"
+
+[analytics.cashflow]
+active = "N"
+outputFileName = "flows.csv"
+
+[analytics.curves]
+active = "N"
+configuration = "default"
+grid = "240,1M"
+outputFileName = "curves.csv"
+
+[analytics.simulation]
+active = "Y"
+simulationConfigFile = "runtime_policy/resolved_simulation.json"
+pricingEnginesFile = "runtime_policy/pricingengine/resolved_pricing_policy.json"
+baseCurrency = "EUR"
+scenariodump = "scenariodump.csv"
+cubeFile = "cube.csv.gz"
+aggregationScenarioDataFileName = "scenariodata.csv.gz"
+
+[analytics.xva]
+active = "N"
+useXvaRunner = "N"
+csaFile = "runtime_policy/resolved_netting_set_information.json"
+cubeFile = "cube.csv.gz"
+scenarioFile = "scenariodata.csv.gz"
+baseCurrency = "EUR"
+exposureProfiles = "Y"
+exposureProfilesByTrade = "Y"
+quantile = "0.95"
+calculationType = "Symmetric"
+allocationMethod = "None"
+marginalAllocationLimit = "1.0"
+exerciseNextBreak = "N"
+cva = "Y"
+dva = "N"
+dvaName = "BANK"
+fva = "N"
+fvaBorrowingCurve = "BANK_EUR_BORROW"
+fvaLendingCurve = "BANK_EUR_LEND"
+colva = "N"
+collateralFloor = "N"
+rawCubeOutputFile = "rawcube.csv"
+netCubeOutputFile = "netcube.csv"
+
+[analytics.initialMargin]
+active = "N"
+method = ""

@@ -1,0 +1,272 @@
+{
+  "schemaVersion": "1.0.0",
+  "seedVersion": "1.0.0",
+  "traceabilityRefs": {
+    "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+    "epic": "docs/architecture/scope_runtime_migration.yaml",
+    "sourceXml": "vre_python/notebooks/example_8/input/8_3/sensitivity.xml",
+    "spec": "docs/architecture/scope_runtime_migration.yaml"
+  },
+  "profileId": "sensitivity",
+  "families": {
+    "discountCurves": [
+      {
+        "ccy": "EUR",
+        "shiftType": "Absolute",
+        "shiftSize": 0.0001,
+        "shiftScheme": "Forward",
+        "shiftTenors": [
+          "2W",
+          "1M",
+          "3M",
+          "6M",
+          "1Y",
+          "2Y",
+          "3Y",
+          "5Y",
+          "10Y",
+          "15Y",
+          "20Y",
+          "30Y"
+        ],
+        "parConversion": {
+          "instruments": [
+            "DEP",
+            "DEP",
+            "DEP",
+            "DEP",
+            "OIS",
+            "OIS",
+            "OIS",
+            "OIS",
+            "OIS",
+            "OIS",
+            "OIS",
+            "OIS"
+          ],
+          "singleCurve": true,
+          "conventions": {
+            "DEP": "EUR-ON-DEPOSIT",
+            "OIS": "EUR-OIS"
+          }
+        }
+      },
+      {
+        "ccy": "USD",
+        "shiftType": "Absolute",
+        "shiftSize": 0.0001,
+        "shiftScheme": "Forward",
+        "shiftTenors": [
+          "2W",
+          "1M",
+          "3M",
+          "6M",
+          "1Y",
+          "2Y",
+          "3Y",
+          "5Y",
+          "10Y",
+          "15Y",
+          "20Y",
+          "30Y"
+        ],
+        "parConversion": {
+          "instruments": [
+            "DEP",
+            "DEP",
+            "DEP",
+            "DEP",
+            "OIS",
+            "OIS",
+            "OIS",
+            "OIS",
+            "OIS",
+            "OIS",
+            "OIS",
+            "OIS"
+          ],
+          "singleCurve": true,
+          "conventions": {
+            "DEP": "USD-ON-DEPOSIT",
+            "OIS": "USD-OIS"
+          }
+        }
+      }
+    ],
+    "fxSpots": [
+      {
+        "ccypair": "USDEUR",
+        "shiftType": "Relative",
+        "shiftSize": 0.001,
+        "shiftScheme": "Central"
+      }
+    ],
+    "indexCurves": [
+      {
+        "index": "EUR-ESTER",
+        "shiftType": "Absolute",
+        "shiftSize": 0.0001,
+        "shiftScheme": "Forward",
+        "shiftTenors": [
+          "2W",
+          "1M",
+          "3M",
+          "6M",
+          "1Y",
+          "2Y",
+          "3Y",
+          "5Y",
+          "10Y",
+          "15Y",
+          "20Y",
+          "30Y"
+        ],
+        "parConversion": {
+          "instruments": [
+            "DEP",
+            "DEP",
+            "DEP",
+            "DEP",
+            "OIS",
+            "OIS",
+            "OIS",
+            "OIS",
+            "OIS",
+            "OIS",
+            "OIS",
+            "OIS"
+          ],
+          "singleCurve": true,
+          "conventions": {
+            "DEP": "EUR-ON-DEPOSIT",
+            "OIS": "EUR-OIS"
+          }
+        }
+      },
+      {
+        "index": "USD-FedFunds",
+        "shiftType": "Absolute",
+        "shiftSize": 0.0001,
+        "shiftScheme": "Forward",
+        "shiftTenors": [
+          "2W",
+          "1M",
+          "3M",
+          "6M",
+          "1Y",
+          "2Y",
+          "3Y",
+          "5Y",
+          "10Y",
+          "15Y",
+          "20Y",
+          "30Y"
+        ],
+        "parConversion": {
+          "instruments": [
+            "DEP",
+            "DEP",
+            "DEP",
+            "DEP",
+            "OIS",
+            "OIS",
+            "OIS",
+            "OIS",
+            "OIS",
+            "OIS",
+            "OIS",
+            "OIS"
+          ],
+          "singleCurve": true,
+          "conventions": {
+            "DEP": "USD-ON-DEPOSIT",
+            "OIS": "USD-OIS"
+          }
+        }
+      },
+      {
+        "index": "USD-SOFR",
+        "shiftType": "Absolute",
+        "shiftSize": 0.0001,
+        "shiftScheme": "Forward",
+        "shiftTenors": [
+          "2W",
+          "1M",
+          "3M",
+          "6M",
+          "1Y",
+          "2Y",
+          "3Y",
+          "5Y",
+          "10Y",
+          "15Y",
+          "20Y",
+          "30Y"
+        ],
+        "parConversion": {
+          "instruments": [
+            "DEP",
+            "DEP",
+            "DEP",
+            "DEP",
+            "OIS",
+            "OIS",
+            "OIS",
+            "OIS",
+            "OIS",
+            "OIS",
+            "OIS",
+            "OIS"
+          ],
+          "singleCurve": true,
+          "conventions": {
+            "DEP": "USD-ON-DEPOSIT",
+            "OIS": "USD-OIS"
+          }
+        }
+      }
+    ],
+    "yieldCurves": [
+      {
+        "name": "__XCCY__-USD",
+        "shiftType": "Absolute",
+        "shiftSize": 0.0001,
+        "shiftScheme": "Forward",
+        "shiftTenors": [
+          "2W",
+          "1M",
+          "3M",
+          "6M",
+          "1Y",
+          "2Y",
+          "3Y",
+          "5Y",
+          "10Y",
+          "15Y",
+          "20Y",
+          "30Y"
+        ],
+        "parConversion": {
+          "instruments": [
+            "XBS",
+            "XBS",
+            "XBS",
+            "XBS",
+            "XBS",
+            "XBS",
+            "XBS",
+            "XBS",
+            "XBS",
+            "XBS",
+            "XBS",
+            "XBS"
+          ],
+          "singleCurve": true,
+          "conventions": {
+            "XBS": "EUR-USD-XCCY-BASIS"
+          }
+        }
+      }
+    ]
+  }
+}

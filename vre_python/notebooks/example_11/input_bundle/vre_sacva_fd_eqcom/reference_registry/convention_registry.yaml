@@ -1,0 +1,224 @@
+version: 1.0.0
+traceabilityRefs:
+  adr: docs/architecture/adr/0001-serialization-and-storage-format-standards.md
+  epic: docs/architecture/scope_runtime_migration.yaml
+  spec: docs/architecture/scope_runtime_migration.yaml
+  sourceXml: vre_python/notebooks/example_11/input/sacva_fd_eqcom/conventions.xml
+deposit:
+- id: EUR-ON-DEPOSIT-ESTER
+  terms:
+    IndexBased: true
+    Index: EUR-ESTER
+- id: EUR-EONIA-CONVENTIONS
+  terms:
+    IndexBased: true
+    Index: EUR-ESTER
+- id: EUR-ON-DEPOSIT
+  terms:
+    IndexBased: true
+    Index: EUR-ESTER
+- id: EUR-DEPOSIT
+  terms:
+    IndexBased: true
+    Index: EUR-EURIBOR
+- id: EUR-EURIBOR-CONVENTIONS
+  terms:
+    IndexBased: true
+    Index: EUR-EURIBOR
+- id: USD-ON-SOFR-DEPOSIT
+  terms:
+    IndexBased: true
+    Index: USD-SOFR
+- id: USD-FEDFUNDS-DEPOSIT
+  terms:
+    IndexBased: true
+    Index: USD-SOFR
+- id: GBP-ON-DEPOSIT-SONIA
+  terms:
+    IndexBased: true
+    Index: GBP-SONIA
+- id: USD-LIBOR-3M-DEPOSIT
+  terms:
+    IndexBased: true
+    Index: USD-LIBOR
+- id: USD-LIBOR-6M-DEPOSIT
+  terms:
+    IndexBased: true
+    Index: USD-LIBOR
+zero:
+- id: EUR-ZERO-CONVENTIONS-TENOR-BASED
+  terms:
+    TenorBased: true
+    DayCounter: A365
+    Compounding: Continuous
+    CompoundingFrequency: Daily
+    TenorCalendar: TARGET
+    SpotLag: 2
+    SpotCalendar: TARGET
+    RollConvention: Following
+    EOM: false
+ois:
+- id: EUR-ESTER-OIS
+  terms:
+    SpotLag: 1
+    Index: EUR-ESTER
+    FixedDayCounter: A360
+    PaymentLag: 1
+    EOM: false
+    FixedFrequency: Annual
+    FixedConvention: MF
+    FixedPaymentConvention: MF
+    Rule: Backward
+- id: EUR-OIS-CONVENTIONS
+  terms:
+    SpotLag: 1
+    Index: EUR-ESTER
+    FixedDayCounter: A360
+    PaymentLag: 1
+    EOM: false
+    FixedFrequency: Annual
+    FixedConvention: MF
+    FixedPaymentConvention: MF
+    Rule: Backward
+- id: USD-SOFR-OIS
+  terms:
+    SpotLag: 0
+    Index: USD-SOFR
+    FixedDayCounter: A360
+    PaymentLag: 2
+    EOM: false
+    FixedFrequency: Annual
+    FixedConvention: MF
+    FixedPaymentConvention: MF
+    Rule: Backward
+- id: USD-FedFunds-OIS
+  terms:
+    SpotLag: 0
+    Index: USD-SOFR
+    FixedDayCounter: A360
+    PaymentLag: 2
+    EOM: false
+    FixedFrequency: Annual
+    FixedConvention: MF
+    FixedPaymentConvention: MF
+    Rule: Backward
+- id: GBP-SONIA-OIS
+  terms:
+    SpotLag: 0
+    Index: GBP-SONIA
+    FixedDayCounter: A365F
+    PaymentLag: 1
+    EOM: false
+    FixedFrequency: Annual
+    FixedConvention: Following
+    FixedPaymentConvention: Following
+    Rule: Backward
+swap:
+- id: EUR-6M-SWAP-CONVENTIONS
+  terms:
+    FixedCalendar: TARGET
+    FixedFrequency: Annual
+    FixedConvention: MF
+    FixedDayCounter: 30/360
+    Index: EUR-EURIBOR-6M
+- id: EUR-3M-SWAP-CONVENTIONS
+  terms:
+    FixedCalendar: TARGET
+    FixedFrequency: Annual
+    FixedConvention: MF
+    FixedDayCounter: 30/360
+    Index: EUR-EURIBOR-3M
+- id: USD-3M-SWAP-CONVENTIONS
+  terms:
+    FixedCalendar: US,UK
+    FixedFrequency: Semiannual
+    FixedConvention: MF
+    FixedDayCounter: 30/360
+    Index: USD-LIBOR-3M
+- id: GBP-6M-SWAP-CONVENTIONS
+  terms:
+    FixedCalendar: UK
+    FixedFrequency: Annual
+    FixedConvention: MF
+    FixedDayCounter: 30/360
+    Index: GBP-LIBOR-6M
+- id: EUR-EURIBOR-3M-SWAP
+  terms:
+    FixedCalendar: TARGET
+    FixedFrequency: Annual
+    FixedConvention: MF
+    FixedDayCounter: 30/360
+    Index: EUR-EURIBOR-3M
+- id: EUR-EURIBOR-6M-SWAP
+  terms:
+    FixedCalendar: TARGET
+    FixedFrequency: Annual
+    FixedConvention: MF
+    FixedDayCounter: 30/360
+    Index: EUR-EURIBOR-6M
+swap_index:
+- id: EUR-CMS-1Y
+  terms:
+    Conventions: EUR-6M-SWAP-CONVENTIONS
+- id: EUR-CMS-30Y
+  terms:
+    Conventions: EUR-6M-SWAP-CONVENTIONS
+- id: USD-CMS-SOFR-1Y
+  terms:
+    Conventions: USD-3M-SWAP-CONVENTIONS
+- id: USD-CMS-SOFR-30Y
+  terms:
+    Conventions: USD-3M-SWAP-CONVENTIONS
+- id: USD-CMS-1Y
+  terms:
+    Conventions: USD-3M-SWAP-CONVENTIONS
+- id: USD-CMS-30Y
+  terms:
+    Conventions: USD-3M-SWAP-CONVENTIONS
+- id: GBP-CMS-SONIA-1Y
+  terms:
+    Conventions: GBP-6M-SWAP-CONVENTIONS
+- id: GBP-CMS-SONIA-30Y
+  terms:
+    Conventions: GBP-6M-SWAP-CONVENTIONS
+cds:
+- id: CDS-STANDARD-CONVENTIONS
+  terms:
+    SettlementDays: 1
+    Calendar: WeekendsOnly
+    Frequency: Quarterly
+    PaymentConvention: Following
+    Rule: CDS2015
+    DayCounter: A360
+    SettlesAccrual: true
+    PaysAtDefaultTime: true
+fra:
+- id: EUR-3M-FRA-CONVENTIONS
+  terms:
+    Index: EUR-EURIBOR-3M
+- id: EUR-6M-FRA-CONVENTIONS
+  terms:
+    Index: EUR-EURIBOR-6M
+- id: USD-3M-FRA-CONVENTIONS
+  terms:
+    Index: USD-LIBOR-3M
+- id: USD-6M-FRA-CONVENTIONS
+  terms:
+    Index: USD-LIBOR-6M
+- id: USD-1M-FRA-CONVENTIONS
+  terms:
+    Index: USD-LIBOR-1M
+tenor_basis_swap:
+- id: USD-LIBOR-1M-3M-BASIS-CONVENTIONS
+  terms:
+    PayIndex: USD-LIBOR-3M
+    ReceiveIndex: USD-LIBOR-1M
+- id: USD-LIBOR-3M-6M-BASIS-CONVENTIONS
+  terms:
+    PayIndex: USD-LIBOR-6M
+    ReceiveIndex: USD-LIBOR-3M
+bma_basis_swap:
+- id: USD-LIBOR-SIFMA-3M-BASIS-CONVENTIONS
+  terms:
+    Index: USD-LIBOR-3M
+    BMAIndex: USD-SIFMA

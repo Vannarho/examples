@@ -1,0 +1,343 @@
+{
+  "schemaVersion": "1.0.0",
+  "seedVersion": "1.0.0",
+  "traceabilityRefs": {
+    "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+    "epic": "docs/architecture/scope_runtime_migration.yaml",
+    "sourceXml": "vre_python/notebooks/example_6/input/conventions.xml",
+    "spec": "docs/architecture/scope_runtime_migration.yaml"
+  },
+  "zero": [
+    {
+      "id": "EUR-ZERO-CONVENTIONS",
+      "terms": {
+        "CompoundingFrequency": "Daily",
+        "DayCounter": "A360",
+        "TenorBased": false
+      }
+    },
+    {
+      "id": "EUR-ZERO-CONVENTIONS-TENOR-BASED",
+      "terms": {
+        "Compounding": "Simple",
+        "DayCounter": "A360",
+        "EOM": false,
+        "SpotCalendar": "TARGET",
+        "SpotLag": 2,
+        "TenorBased": true,
+        "TenorCalendar": "TARGET"
+      }
+    },
+    {
+      "id": "GBP-ZERO-CONVENTIONS-TENOR-BASED",
+      "terms": {
+        "Compounding": "Continuous",
+        "CompoundingFrequency": "Daily",
+        "DayCounter": "A365",
+        "EOM": false,
+        "RollConvention": "Following",
+        "SpotCalendar": "TARGET",
+        "SpotLag": 0,
+        "TenorBased": true,
+        "TenorCalendar": "TARGET"
+      }
+    }
+  ],
+  "deposit": [
+    {
+      "id": "EUR-EURIBOR-CONVENTIONS",
+      "terms": {
+        "Index": "EUR-EURIBOR",
+        "IndexBased": true
+      }
+    },
+    {
+      "id": "EUR-DEPOSIT",
+      "terms": {
+        "Index": "EUR-EURIBOR",
+        "IndexBased": true
+      }
+    },
+    {
+      "id": "GBP-DEPOSIT",
+      "terms": {
+        "Index": "GBP-LIBOR",
+        "IndexBased": true
+      }
+    },
+    {
+      "id": "USD-FED-FUNDS-CONVENTIONS",
+      "terms": {
+        "Index": "USD-FedFunds",
+        "IndexBased": true
+      }
+    }
+  ],
+  "future": [
+    {
+      "id": "EURIBOR-3M-FUTURES-CONVENTIONS",
+      "terms": {
+        "Index": "EUR-EURIBOR-3M"
+      }
+    }
+  ],
+  "fra": [
+    {
+      "id": "EUR-12M-FRA-CONVENTIONS",
+      "terms": {
+        "Index": "EUR-EURIBOR-12M"
+      }
+    },
+    {
+      "id": "EUR-6M-FRA-CONVENTIONS",
+      "terms": {
+        "Index": "EUR-EURIBOR-6M"
+      }
+    },
+    {
+      "id": "EUR-3M-FRA-CONVENTIONS",
+      "terms": {
+        "Index": "EUR-EURIBOR-3M"
+      }
+    },
+    {
+      "id": "GBP-3M-FRA",
+      "terms": {
+        "Index": "GBP-LIBOR-3M"
+      }
+    },
+    {
+      "id": "GBP-6M-FRA",
+      "terms": {
+        "Index": "GBP-LIBOR-6M"
+      }
+    }
+  ],
+  "ois": [
+    {
+      "id": "EUR-OIS-CONVENTIONS",
+      "terms": {
+        "EOM": false,
+        "FixedConvention": "Following",
+        "FixedDayCounter": "A365",
+        "FixedFrequency": "Annual",
+        "FixedPaymentConvention": "Following",
+        "Index": "EUR-EONIA",
+        "PaymentLag": 0,
+        "Rule": "Backward",
+        "SpotLag": 0
+      }
+    },
+    {
+      "id": "GBP-OIS-CONVENTIONS",
+      "terms": {
+        "EOM": false,
+        "FixedConvention": "Following",
+        "FixedDayCounter": "A365",
+        "FixedFrequency": "Annual",
+        "FixedPaymentConvention": "Following",
+        "Index": "GBP-SONIA",
+        "PaymentLag": 0,
+        "Rule": "Backward",
+        "SpotLag": 0
+      }
+    },
+    {
+      "id": "USD-OIS-CONVENTIONS",
+      "terms": {
+        "EOM": false,
+        "FixedConvention": "Following",
+        "FixedDayCounter": "A360",
+        "FixedFrequency": "Annual",
+        "FixedPaymentConvention": "Following",
+        "Index": "USD-FedFunds",
+        "PaymentLag": 2,
+        "Rule": "Backward",
+        "SpotLag": 2
+      }
+    }
+  ],
+  "swap": [
+    {
+      "id": "EUR-6M-SWAP-CONVENTIONS",
+      "terms": {
+        "FixedCalendar": "TARGET",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "A365",
+        "FixedFrequency": "Annual",
+        "Index": "EUR-EURIBOR-6M"
+      }
+    },
+    {
+      "id": "EUR-1M-SWAP-CONVENTIONS",
+      "terms": {
+        "FixedCalendar": "TARGET",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "30/360",
+        "FixedFrequency": "Annual",
+        "Index": "EUR-EURIBOR-1M"
+      }
+    },
+    {
+      "id": "EUR-3M-SWAP-CONVENTIONS",
+      "terms": {
+        "FixedCalendar": "TARGET",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "30/360",
+        "FixedFrequency": "Annual",
+        "Index": "EUR-EURIBOR-3M"
+      }
+    },
+    {
+      "id": "EUR-12M-SWAP-CONVENTIONS",
+      "terms": {
+        "FixedCalendar": "TARGET",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "30/360",
+        "FixedFrequency": "Annual",
+        "Index": "EUR-EURIBOR-12M"
+      }
+    },
+    {
+      "id": "GBP-6M-SWAP-CONVENTIONS",
+      "terms": {
+        "FixedCalendar": "UK",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "A365",
+        "FixedFrequency": "Semiannual",
+        "Index": "GBP-LIBOR-6M"
+      }
+    },
+    {
+      "id": "GBP-3M-SWAP-CONVENTIONS",
+      "terms": {
+        "FixedCalendar": "UK",
+        "FixedConvention": "MF",
+        "FixedDayCounter": "A365",
+        "FixedFrequency": "Semiannual",
+        "Index": "GBP-LIBOR-3M"
+      }
+    }
+  ],
+  "average_ois": [],
+  "tenor_basis_swap": [
+    {
+      "id": "GBP-LIBOR-3M-6M-BASIS-CONVENTIONS",
+      "terms": {
+        "LongIndex": "GBP-LIBOR-6M",
+        "ShortIndex": "GBP-LIBOR-3M"
+      }
+    }
+  ],
+  "tenor_basis_two_swap": [
+    {
+      "id": "EURIBOR-3M-6M-BASIS-CONVENTIONS",
+      "terms": {
+        "Calendar": "TARGET",
+        "LongFixedConvention": "MF",
+        "LongFixedDayCounter": "30/360",
+        "LongFixedFrequency": "Annual",
+        "LongIndex": "EUR-EURIBOR-6M",
+        "LongMinusShort": true,
+        "ShortFixedConvention": "MF",
+        "ShortFixedDayCounter": "30/360",
+        "ShortFixedFrequency": "Annual",
+        "ShortIndex": "EUR-EURIBOR-3M"
+      }
+    },
+    {
+      "id": "EUR-EURIBOR-6M-12M-BASIS-CONVENTIONS",
+      "terms": {
+        "Calendar": "TARGET",
+        "LongFixedConvention": "MF",
+        "LongFixedDayCounter": "30/360",
+        "LongFixedFrequency": "Annual",
+        "LongIndex": "EUR-EURIBOR-12M",
+        "LongMinusShort": true,
+        "ShortFixedConvention": "MF",
+        "ShortFixedDayCounter": "30/360",
+        "ShortFixedFrequency": "Annual",
+        "ShortIndex": "EUR-EURIBOR-6M"
+      }
+    }
+  ],
+  "bma_basis_swap": [],
+  "fx": [
+    {
+      "id": "EUR-GBP-FX-CONVENTIONS",
+      "terms": {
+        "AdvanceCalendar": "TARGET,UK",
+        "PointsFactor": 10000,
+        "SourceCurrency": "EUR",
+        "SpotDays": 2,
+        "SpotRelative": true,
+        "TargetCurrency": "GBP"
+      }
+    }
+  ],
+  "cross_currency_basis": [
+    {
+      "id": "EUR-GBP-XCCY-BASIS-CONVENTIONS",
+      "terms": {
+        "FlatIndex": "EUR-EURIBOR-3M",
+        "RollConvention": "MF",
+        "SettlementCalendar": "UK,TARGET",
+        "SettlementDays": 2,
+        "SpreadIndex": "GBP-LIBOR-3M"
+      }
+    }
+  ],
+  "cross_currency_fix_float": [],
+  "cds": [
+    {
+      "id": "CDS-STANDARD-CONVENTIONS",
+      "terms": {
+        "Calendar": "WeekendsOnly",
+        "DayCounter": "A360",
+        "Frequency": "Quarterly",
+        "PaymentConvention": "ModifiedFollowing",
+        "PaysAtDefaultTime": true,
+        "Rule": "TwentiethIMM",
+        "SettlementDays": 0,
+        "SettlesAccrual": true
+      }
+    }
+  ],
+  "ibor_index": [],
+  "overnight_index": [],
+  "swap_index": [
+    {
+      "id": "EUR-CMS-1Y",
+      "terms": {
+        "Conventions": "EUR-6M-SWAP-CONVENTIONS"
+      }
+    },
+    {
+      "id": "EUR-CMS-30Y",
+      "terms": {
+        "Conventions": "EUR-6M-SWAP-CONVENTIONS"
+      }
+    },
+    {
+      "id": "GBP-CMS-1Y",
+      "terms": {
+        "Conventions": "GBP-3M-SWAP-CONVENTIONS"
+      }
+    },
+    {
+      "id": "GBP-CMS-30Y",
+      "terms": {
+        "Conventions": "GBP-6M-SWAP-CONVENTIONS"
+      }
+    }
+  ],
+  "zero_inflation_index": [],
+  "inflation_swap": [],
+  "security_spread": [],
+  "cms_spread_option": [],
+  "commodity_forward": [],
+  "commodity_future": [],
+  "fx_option": [],
+  "fx_option_time_weighting": [],
+  "bond_yield": []
+}

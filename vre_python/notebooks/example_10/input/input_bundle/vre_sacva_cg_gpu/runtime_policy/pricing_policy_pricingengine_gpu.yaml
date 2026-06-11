@@ -1,0 +1,57 @@
+version: 1.0.0
+profileId: pricingengine_gpu
+traceabilityRefs:
+  adr: docs/architecture/adr/0001-serialization-and-storage-format-standards.md
+  epic: docs/architecture/scope_runtime_migration.yaml
+  spec: docs/architecture/scope_runtime_migration.yaml
+  sourceXml: vre_python/notebooks/example_10/input/cg/pricingengine_gpu.xml
+globalParameters: {}
+products:
+- productType: Swap
+  model:
+    name: DiscountedCashflows
+    parameters: {}
+  engine:
+    name: DiscountingSwapEngine
+    parameters: {}
+- productType: EquityOption
+  model:
+    name: BlackScholesMerton
+    parameters: {}
+  engine:
+    name: AnalyticEuropeanEngine
+    parameters: {}
+- productType: EquityBarrierOption
+  model:
+    name: BlackScholesMerton
+    parameters: {}
+  engine:
+    name: AnalyticBarrierEngine
+    parameters: {}
+- productType: ScriptedTrade
+  model:
+    name: Generic
+    parameters:
+      Model: GaussianCam
+      BaseCcy: EUR
+      EnforceBaseCcy: 'false'
+      FullDynamicFx: 'false'
+      FullDynamicIr: 'false'
+      IrReversion_EUR: '0.01'
+      GridCoarsening: 3M(1W),1Y(1M),5Y(3M),10Y(1Y),50Y(5Y)
+      BootstrapTolerance: '0.0001'
+  engine:
+    name: Generic
+    parameters:
+      Engine: MC
+      BootstrapTolerance: '0.0001'
+      SequenceType: MersenneTwister
+      Samples: '10000'
+      Seed: '42'
+      StateGridPoints: '100'
+      RegressionOrder: '6'
+      TimeStepsPerYear: '24'
+      Interactive: 'false'
+      UseCG: 'true'
+      UseExternalComputeDevice: 'true'
+      ExternalComputeDevice: OpenCL/Apple/Apple M4 Max

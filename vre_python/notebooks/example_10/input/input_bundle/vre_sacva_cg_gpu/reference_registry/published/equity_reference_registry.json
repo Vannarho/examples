@@ -1,0 +1,100 @@
+{
+  "schemaVersion": "1.0.0",
+  "seedVersion": "1.0.0",
+  "traceabilityRefs": {
+    "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+    "epic": "docs/architecture/scope_runtime_migration.yaml",
+    "sourceXml": "vre_python/notebooks/example_10/input/cg/referencedata.xml",
+    "spec": "docs/architecture/scope_runtime_migration.yaml"
+  },
+  "records": [
+    {
+      "referenceId": "AS51",
+      "validFrom": "1900-01-01",
+      "type": "Equity",
+      "payloadRoot": "EquityReferenceData",
+      "metadata": {},
+      "payloadXml": "<EquityReferenceData>\n      <EquityId>AS51</EquityId>\n      <EquityName>S&amp;P/ASX 200</EquityName>\n      <Currency>AUD</Currency>\n      <ScalingFactor>1</ScalingFactor>\n      <ExchangeCode>AS51</ExchangeCode>\n      <IsIndex>true</IsIndex>\n      <EquityStartDate>20210522</EquityStartDate>\n      <ProxyIdentifier>AS51</ProxyIdentifier>\n      <SimmBucket>10</SimmBucket>\n      <CrifQualifier>AS51</CrifQualifier>\n      <ProxyVolatilityId>AS51_VOL</ProxyVolatilityId>\n      <MarketCap>2.5e12</MarketCap>\n      <Economy>Advanced</Economy>\n      <Sector>All</Sector>\n    </EquityReferenceData>\n  "
+    },
+    {
+      "referenceId": "CAC",
+      "validFrom": "1900-01-01",
+      "type": "Equity",
+      "payloadRoot": "EquityReferenceData",
+      "metadata": {},
+      "payloadXml": "<EquityReferenceData>\n      <EquityId>CAC</EquityId>\n      <EquityName>CAC 40</EquityName>\n      <Currency>EUR</Currency>\n      <ScalingFactor>1</ScalingFactor>\n      <ExchangeCode>CAC</ExchangeCode>\n      <IsIndex>true</IsIndex>\n      <EquityStartDate>20210522</EquityStartDate>\n      <ProxyIdentifier>CAC</ProxyIdentifier>\n      <SimmBucket>10</SimmBucket>\n      <CrifQualifier>CAC</CrifQualifier>\n      <ProxyVolatilityId>CAC_VOL</ProxyVolatilityId>\n      <MarketCap>5.0e12</MarketCap>\n      <Economy>Advanced</Economy>\n      <Sector>All</Sector>\n    </EquityReferenceData>\n  "
+    },
+    {
+      "referenceId": "DAX",
+      "validFrom": "1900-01-01",
+      "type": "Equity",
+      "payloadRoot": "EquityReferenceData",
+      "metadata": {},
+      "payloadXml": "<EquityReferenceData>\n      <EquityId>DAX</EquityId>\n      <EquityName>DAX</EquityName>\n      <Currency>EUR</Currency>\n      <ScalingFactor>1</ScalingFactor>\n      <ExchangeCode>DAX</ExchangeCode>\n      <IsIndex>true</IsIndex>\n      <EquityStartDate>20210522</EquityStartDate>\n      <ProxyIdentifier>DAX</ProxyIdentifier>\n      <SimmBucket>10</SimmBucket>\n      <CrifQualifier>DAX</CrifQualifier>\n      <ProxyVolatilityId>DAX_VOL</ProxyVolatilityId>\n      <MarketCap>7.0e12</MarketCap>\n      <Economy>Advanced</Economy>\n      <Sector>All</Sector>\n    </EquityReferenceData>\n  "
+    },
+    {
+      "referenceId": "HSCEI",
+      "validFrom": "1900-01-01",
+      "type": "Equity",
+      "payloadRoot": "EquityReferenceData",
+      "metadata": {},
+      "payloadXml": "<EquityReferenceData>\n      <EquityId>HSCEI</EquityId>\n      <EquityName>Hang Seng China Enterprises</EquityName>\n      <Currency>HKD</Currency>\n      <ScalingFactor>1</ScalingFactor>\n      <ExchangeCode>HSCEI</ExchangeCode>\n      <IsIndex>true</IsIndex>\n      <EquityStartDate>20210522</EquityStartDate>\n      <ProxyIdentifier>HSCEI</ProxyIdentifier>\n      <SimmBucket>10</SimmBucket>\n      <CrifQualifier>HSCEI</CrifQualifier>\n      <ProxyVolatilityId>HSCEI_VOL</ProxyVolatilityId>\n      <MarketCap>2.0e12</MarketCap>\n      <Economy>Emerging</Economy>\n      <Sector>All</Sector>\n    </EquityReferenceData>\n  "
+    },
+    {
+      "referenceId": "NDX",
+      "validFrom": "1900-01-01",
+      "type": "Equity",
+      "payloadRoot": "EquityReferenceData",
+      "metadata": {},
+      "payloadXml": "<EquityReferenceData>\n      <EquityId>NDX</EquityId>\n      <EquityName>NASDAQ 100</EquityName>\n      <Currency>USD</Currency>\n      <ScalingFactor>1</ScalingFactor>\n      <ExchangeCode>NDX</ExchangeCode>\n      <IsIndex>true</IsIndex>\n      <EquityStartDate>20210522</EquityStartDate>\n      <ProxyIdentifier>NDX</ProxyIdentifier>\n      <SimmBucket>10</SimmBucket>\n      <CrifQualifier>NDX</CrifQualifier>\n      <ProxyVolatilityId>NDX_VOL</ProxyVolatilityId>\n      <MarketCap>1.5e13</MarketCap>\n      <Economy>Advanced</Economy>\n      <Sector>All</Sector>\n    </EquityReferenceData>\n  "
+    },
+    {
+      "referenceId": "NKY",
+      "validFrom": "1900-01-01",
+      "type": "Equity",
+      "payloadRoot": "EquityReferenceData",
+      "metadata": {},
+      "payloadXml": "<EquityReferenceData>\n      <EquityId>NKY</EquityId>\n      <EquityName>Nikkei 225</EquityName>\n      <Currency>JPY</Currency>\n      <ScalingFactor>1</ScalingFactor>\n      <ExchangeCode>NKY</ExchangeCode>\n      <IsIndex>true</IsIndex>\n      <EquityStartDate>20210522</EquityStartDate>\n      <ProxyIdentifier>NKY</ProxyIdentifier>\n      <SimmBucket>10</SimmBucket>\n      <CrifQualifier>NKY</CrifQualifier>\n      <ProxyVolatilityId>NKY_VOL</ProxyVolatilityId>\n      <MarketCap>6.0e12</MarketCap>\n      <Economy>Advanced</Economy>\n      <Sector>All</Sector>\n    </EquityReferenceData>\n  "
+    },
+    {
+      "referenceId": "SMI",
+      "validFrom": "1900-01-01",
+      "type": "Equity",
+      "payloadRoot": "EquityReferenceData",
+      "metadata": {},
+      "payloadXml": "<EquityReferenceData>\n      <EquityId>SMI</EquityId>\n      <EquityName>Swiss Market Index</EquityName>\n      <Currency>CHF</Currency>\n      <ScalingFactor>1</ScalingFactor>\n      <ExchangeCode>SMI</ExchangeCode>\n      <IsIndex>true</IsIndex>\n      <EquityStartDate>20210522</EquityStartDate>\n      <ProxyIdentifier>SMI</ProxyIdentifier>\n      <SimmBucket>10</SimmBucket>\n      <CrifQualifier>SMI</CrifQualifier>\n      <ProxyVolatilityId>SMI_VOL</ProxyVolatilityId>\n      <MarketCap>3.0e12</MarketCap>\n      <Economy>Advanced</Economy>\n      <Sector>All</Sector>\n    </EquityReferenceData>\n  "
+    },
+    {
+      "referenceId": "SP5",
+      "validFrom": "1900-01-01",
+      "type": "Equity",
+      "payloadRoot": "EquityReferenceData",
+      "metadata": {},
+      "payloadXml": "<EquityReferenceData>\n      <EquityId>SP5</EquityId>\n      <EquityName>S&amp;P 500 (SP5)</EquityName>\n      <Currency>USD</Currency>\n      <ScalingFactor>1</ScalingFactor>\n      <ExchangeCode>SPX</ExchangeCode>\n      <IsIndex>true</IsIndex>\n      <EquityStartDate>20210522</EquityStartDate>\n      <ProxyIdentifier>SP5</ProxyIdentifier>\n      <SimmBucket>10</SimmBucket>\n      <CrifQualifier>SP5</CrifQualifier>\n      <ProxyVolatilityId>SP5_VOL</ProxyVolatilityId>\n      <MarketCap>3.0e13</MarketCap>\n      <Economy>Advanced</Economy>\n      <Sector>All</Sector>\n    </EquityReferenceData>\n  "
+    },
+    {
+      "referenceId": "SPX",
+      "validFrom": "1900-01-01",
+      "type": "Equity",
+      "payloadRoot": "EquityReferenceData",
+      "metadata": {},
+      "payloadXml": "<EquityReferenceData>\n      <EquityId>SPX</EquityId>\n      <EquityName>S&amp;P 500 (SPX)</EquityName>\n      <Currency>USD</Currency>\n      <ScalingFactor>1</ScalingFactor>\n      <ExchangeCode>SPX</ExchangeCode>\n      <IsIndex>true</IsIndex>\n      <EquityStartDate>20210522</EquityStartDate>\n      <ProxyIdentifier>SPX</ProxyIdentifier>\n      <SimmBucket>10</SimmBucket>\n      <CrifQualifier>SPX</CrifQualifier>\n      <ProxyVolatilityId>SPX_VOL</ProxyVolatilityId>\n      <MarketCap>3.0e13</MarketCap>\n      <Economy>Advanced</Economy>\n      <Sector>All</Sector>\n    </EquityReferenceData>\n  "
+    },
+    {
+      "referenceId": "SX5E",
+      "validFrom": "1900-01-01",
+      "type": "Equity",
+      "payloadRoot": "EquityReferenceData",
+      "metadata": {},
+      "payloadXml": "<EquityReferenceData>\n      <EquityId>SX5E</EquityId>\n      <EquityName>EURO STOXX 50</EquityName>\n      <Currency>EUR</Currency>\n      <ScalingFactor>1</ScalingFactor>\n      <ExchangeCode>SX5E</ExchangeCode>\n      <IsIndex>true</IsIndex>\n      <EquityStartDate>20210522</EquityStartDate>\n      <ProxyIdentifier>SX5E</ProxyIdentifier>\n      <SimmBucket>10</SimmBucket>\n      <CrifQualifier>SX5E</CrifQualifier>\n      <ProxyVolatilityId>SX5E_VOL</ProxyVolatilityId>\n      <MarketCap>1.0e13</MarketCap>\n      <Economy>Advanced</Economy>\n      <Sector>All</Sector>\n    </EquityReferenceData>\n  "
+    },
+    {
+      "referenceId": "UKX",
+      "validFrom": "1900-01-01",
+      "type": "Equity",
+      "payloadRoot": "EquityReferenceData",
+      "metadata": {},
+      "payloadXml": "<EquityReferenceData>\n      <EquityId>UKX</EquityId>\n      <EquityName>FTSE 100</EquityName>\n      <Currency>GBP</Currency>\n      <ScalingFactor>1</ScalingFactor>\n      <ExchangeCode>UKX</ExchangeCode>\n      <IsIndex>true</IsIndex>\n      <EquityStartDate>20210522</EquityStartDate>\n      <ProxyIdentifier>UKX</ProxyIdentifier>\n      <SimmBucket>10</SimmBucket>\n      <CrifQualifier>UKX</CrifQualifier>\n      <ProxyVolatilityId>UKX_VOL</ProxyVolatilityId>\n      <MarketCap>8.0e12</MarketCap>\n      <Economy>Advanced</Economy>\n      <Sector>All</Sector>\n    </EquityReferenceData>\n  "
+    }
+  ]
+}

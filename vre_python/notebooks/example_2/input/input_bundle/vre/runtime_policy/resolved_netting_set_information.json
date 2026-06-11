@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "1.0.0",
+  "publishedAt": "examples/vre_python/notebooks/example_2/input/vre.toml",
+  "contentHash": "9612d9c3d8fdd4ba9ad1a99d9888a0c474a61b16caecb2639c75bc588e84a5d3",
+  "sourceLineage": {
+    "nettingAgreementMaster": "examples/vre_python/notebooks/example_2/input_bundle/vre/runtime_policy/netting_agreement_master.json",
+    "csaTerms": "examples/vre_python/notebooks/example_2/input_bundle/vre/runtime_policy/csa_terms.json",
+    "clearingAndRegulatoryProfile": "examples/vre_python/notebooks/example_2/input_bundle/vre/runtime_policy/clearing_and_regulatory_profile.json",
+    "collateralBalance": "examples/vre_python/notebooks/example_2/input_bundle/vre/runtime_policy/collateral_balance.json"
+  },
+  "nettingSets": [
+    {
+      "nettingSetId": "CPTY_A",
+      "activeCsa": false,
+      "csaTerms": {
+        "bilateralType": "Bilateral",
+        "csaCurrency": "EUR",
+        "index": "EUR-EONIA",
+        "marginPeriodOfRisk": "2W",
+        "thresholdPay": 0.0,
+        "thresholdReceive": 0.0,
+        "minimumTransferAmountPay": 50000.0,
+        "minimumTransferAmountReceive": 50000.0,
+        "collateralCompoundingSpreadReceive": 0.0,
+        "collateralCompoundingSpreadPay": 0.0,
+        "marginingFrequency": {
+          "call": "1D",
+          "post": "1D"
+        },
+        "independentAmount": {
+          "held": 0.0,
+          "type": "FIXED"
+        },
+        "eligibleCollaterals": {
+          "currencies": [
+            "EUR"
+          ]
+        }
+      }
+    },
+    {
+      "nettingSetId": "CPTY_B",
+      "activeCsa": true,
+      "csaTerms": {
+        "bilateralType": "Bilateral",
+        "csaCurrency": "EUR",
+        "index": "EUR-EONIA",
+        "marginPeriodOfRisk": "2W",
+        "thresholdPay": 0.0,
+        "thresholdReceive": 0.0,
+        "minimumTransferAmountPay": 5000000.0,
+        "minimumTransferAmountReceive": 5000000.0,
+        "collateralCompoundingSpreadReceive": 0.0,
+        "collateralCompoundingSpreadPay": 0.0,
+        "marginingFrequency": {
+          "call": "1D",
+          "post": "1D"
+        },
+        "independentAmount": {
+          "held": 0.0,
+          "type": "FIXED"
+        },
+        "eligibleCollaterals": {
+          "currencies": [
+            "EUR"
+          ]
+        }
+      }
+    }
+  ]
+}

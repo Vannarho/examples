@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<ScriptLibrary>
+  <Script>
+    <Name>Swap</Name>
+    <Script>
+      <Code><![CDATA[
+      NUMBER _AMC_NPV[SIZE(_AMC_SimDates)];
+      NUMBER i, j, lastFixedLegIndex, lastFloatLegIndex;
+      NUMBER rollingNpv, couponPv, couponRate;
+      lastFixedLegIndex = SIZE(FixedLegSchedule);
+      lastFloatLegIndex = SIZE(FloatLegSchedule);
+      FOR i IN (SIZE(_AMC_SimDates), 1, -1) DO
+        rollingNpv = 0;
+        IF i < SIZE(_AMC_SimDates) THEN
+          rollingNpv = NPV(_AMC_NPV[i + 1], _AMC_SimDates[i]);
+        END;
+        FOR j IN (lastFixedLegIndex, 2, -1) DO
+          IF FixedLegSchedule[j] >= _AMC_SimDates[i] THEN
+            couponPv = PAY( Notional * FixedRate * dcf( FixedDayCounter, FixedLegSchedule[j-1], FixedLegSchedule[j] ),
+                            _AMC_SimDates[i], FixedLegSchedule[j], PayCurrency );
+            rollingNpv = rollingNpv + NPV( couponPv, _AMC_SimDates[i] );
+            lastFixedLegIndex = j - 1;
+          END;
+        END;
+        FOR j IN (lastFloatLegIndex, 2, -1) DO
+          IF FloatLegSchedule[j] >= _AMC_SimDates[i] THEN
+            couponRate = FloatIndex(FixingSchedule[j-1]) + FloatSpread;
+            couponPv = PAY( Notional * couponRate * dcf( FloatDayCounter, FloatLegSchedule[j-1], FloatLegSchedule[j] ),
+                            FixingSchedule[j-1], FloatLegSchedule[j], PayCurrency );
+            rollingNpv = rollingNpv - NPV( couponPv, _AMC_SimDates[i] );
+            lastFloatLegIndex = j - 1;
+          END;
+        END;
+        _AMC_NPV[i] = NPVMEM( rollingNpv, _AMC_SimDates[i], i );
+      END;
+      value = _AMC_NPV[1];
+      FOR j IN (lastFixedLegIndex, 2, -1) DO
+        value = value + PAY( Notional * FixedRate * dcf( FixedDayCounter, FixedLegSchedule[j-1], FixedLegSchedule[j] ),
+                             FixedLegSchedule[j-1], FixedLegSchedule[j], PayCurrency );
+      END;
+      FOR j IN (lastFloatLegIndex, 2, -1) DO
+        value = value - PAY( Notional * (FloatIndex(FixingSchedule[j-1]) + FloatSpread) * dcf( FloatDayCounter, FloatLegSchedule[j-1], FloatLegSchedule[j] ),
+                             FixingSchedule[j-1], FloatLegSchedule[j], PayCurrency );
+      END;
+      ]]></Code>
+      <NPV>value</NPV>
+    </Script>
+  </Script>
+  <Script>
+    <Name>EuropeanOption</Name>
+    <Script>
+      <Code>
+        <![CDATA[
+          NUMBER Payoff, CurrentNotional;
+          Payoff = PutCall * (Underlying(Expiry) - Strike);
+          Option = LOGPAY( LongShort * Quantity * max( Payoff, 0 ), Expiry, Settlement, PayCcy, 1, OptionFlow);
+          CurrentNotional = Strike * Quantity;
+        ]]></Code>
+      <NPV>Option</NPV>
+      <Results>
+        <Result rename="notionalCurrency">PayCcy</Result>
+        <Result rename="currentNotional">CurrentNotional</Result>
+      </Results>
+      <CalibrationSpec>
+        <Calibration>
+          <Index>Underlying</Index>
+          <Strikes>
+            <Strike>Strike</Strike>
+          </Strikes>
+        </Calibration>
+      </CalibrationSpec>
+    </Script>
+  </Script>
+</ScriptLibrary>

@@ -1,0 +1,400 @@
+version: 1.0.0
+traceabilityRefs:
+  adr: docs/architecture/adr/0001-serialization-and-storage-format-standards.md
+  epic: docs/architecture/scope_runtime_migration.yaml
+  spec: docs/architecture/scope_runtime_migration.yaml
+  sourceXml: vre_python/notebooks/example_8/input/8_3/conventions.xml
+zero:
+- id: EUR-ZERO-TENOR-BASED
+  terms:
+    TenorBased: true
+    DayCounter: A365
+    CompoundingFrequency: Daily
+    Compounding: Continuous
+    TenorCalendar: TARGET
+    SpotLag: 2
+    SpotCalendar: TARGET
+    RollConvention: Following
+    EOM: false
+cds:
+- id: CDS-STANDARD-CONVENTIONS
+  terms:
+    SettlementDays: 0
+    Calendar: WeekendsOnly
+    Frequency: Quarterly
+    PaymentConvention: Following
+    Rule: CDS2015
+    DayCounter: A360
+    SettlesAccrual: true
+    PaysAtDefaultTime: true
+deposit:
+- id: USD-DEPOSIT
+  terms:
+    IndexBased: true
+    Index: USD-LIBOR
+- id: USD-ON-DEPOSIT
+  terms:
+    IndexBased: true
+    Index: USD-FedFunds
+- id: USD-ON-SOFR-DEPOSIT
+  terms:
+    IndexBased: true
+    Index: USD-SOFR
+- id: EUR-ON-DEPOSIT-ESTER
+  terms:
+    IndexBased: true
+    Index: EUR-ESTER
+- id: EUR-DEPOSIT
+  terms:
+    IndexBased: true
+    Index: EUR-EURIBOR
+future:
+- id: USD-LIBOR-3M-FUTURES
+  terms:
+    Index: USD-LIBOR-3M
+    OvernightIndexFutureNettingType: Compounding
+    DateGenerationRule: IMM
+fra:
+- id: EUR-6M-FRA
+  terms:
+    Index: EUR-EURIBOR-6M
+- id: EUR-3M-FRA
+  terms:
+    Index: EUR-EURIBOR-3M
+swap_index:
+- id: EUR-CMS-1Y
+  terms:
+    Conventions: EUR-EURIBOR-3M-SWAP
+    FixingCalendar: ''
+- id: EUR-CMS-30Y
+  terms:
+    Conventions: EUR-EURIBOR-6M-SWAP
+    FixingCalendar: ''
+- id: USD-CMS-1Y
+  terms:
+    Conventions: USD-LIBOR-3M-SWAP
+    FixingCalendar: US
+- id: USD-CMS-30Y
+  terms:
+    Conventions: USD-LIBOR-3M-SWAP
+    FixingCalendar: US
+- id: USD-CMS-SOFR-1Y
+  terms:
+    Conventions: USD-SOFR-OIS
+    FixingCalendar: ''
+- id: USD-CMS-SOFR-30Y
+  terms:
+    Conventions: USD-SOFR-OIS
+    FixingCalendar: ''
+swap:
+- id: EUR-EURIBOR-6M-SWAP
+  terms:
+    FixedCalendar: TARGET
+    FixedFrequency: Annual
+    FixedConvention: MF
+    FixedDayCounter: 30/360
+    Index: EUR-EURIBOR-6M
+- id: EUR-EURIBOR-3M-SWAP
+  terms:
+    FixedCalendar: TARGET
+    FixedFrequency: Annual
+    FixedConvention: MF
+    FixedDayCounter: 30/360
+    Index: EUR-EURIBOR-3M
+- id: USD-LIBOR-3M-SWAP
+  terms:
+    FixedCalendar: US,UK
+    FixedFrequency: Semiannual
+    FixedConvention: MF
+    FixedDayCounter: 30/360
+    Index: USD-LIBOR-3M
+ois:
+- id: EUR-ESTER-OIS
+  terms:
+    SpotLag: 1
+    Index: EUR-ESTER
+    FixedDayCounter: A360
+    PaymentLag: 1
+    EOM: false
+    FixedFrequency: Annual
+    FixedConvention: MF
+    FixedPaymentConvention: MF
+    Rule: Backward
+- id: USD-FedFunds-OIS
+  terms:
+    SpotLag: 2
+    Index: USD-FedFunds
+    FixedDayCounter: A360
+    PaymentLag: 2
+    EOM: false
+    FixedFrequency: Annual
+    FixedConvention: Following
+    FixedPaymentConvention: Following
+    Rule: Backward
+- id: USD-SOFR-OIS
+  terms:
+    SpotLag: 0
+    Index: USD-SOFR
+    FixedDayCounter: A360
+    PaymentLag: 2
+    EOM: false
+    FixedFrequency: Annual
+    FixedConvention: MF
+    FixedPaymentConvention: MF
+    Rule: Backward
+average_ois:
+- id: USD-AVERAGE-OIS
+  terms:
+    SpotLag: 2
+    FixedTenor: 6M
+    FixedDayCounter: 30/360
+    FixedCalendar: US
+    FixedConvention: MF
+    FixedPaymentConvention: MF
+    Index: USD-FedFunds
+    OnTenor: 3M
+    RateCutoff: 2
+tenor_basis_two_swap:
+- id: EURIBOR-3M-6M-BASIS
+  terms:
+    Calendar: TARGET
+    LongFixedFrequency: Annual
+    LongFixedConvention: MF
+    LongFixedDayCounter: 30/360
+    LongIndex: EUR-EURIBOR-6M
+    ShortFixedFrequency: Annual
+    ShortFixedConvention: MF
+    ShortFixedDayCounter: 30/360
+    ShortIndex: EUR-EURIBOR-3M
+    LongMinusShort: true
+fx:
+- id: EUR-USD-FX
+  terms:
+    SpotDays: 2
+    SourceCurrency: EUR
+    TargetCurrency: USD
+    PointsFactor: 10000
+    AdvanceCalendar: TARGET,US
+    SpotRelative: true
+cross_currency_basis:
+- id: EUR-USD-ON-XCCY-BASIS
+  terms:
+    SettlementDays: 2
+    SettlementCalendar: TARGET,US,UK
+    RollConvention: MF
+    FlatIndex: USD-SOFR
+    SpreadIndex: EUR-ESTER
+    IsResettable: true
+    FlatIndexIsResettable: true
+    FlatTenor: 3M
+    SpreadTenor: 3M
+overnight_index:
+- id: GBP-BoEBASE
+  terms:
+    FixingCalendar: UK
+    DayCounter: A365
+    SettlementDays: 0
+- id: ZAR-SABOR
+  terms:
+    FixingCalendar: ZA
+    DayCounter: A360
+    SettlementDays: 0
+- id: USD-OBFR
+  terms:
+    FixingCalendar: US
+    DayCounter: A360
+    SettlementDays: 0
+- id: HKD-HIBOROIS
+  terms:
+    FixingCalendar: HKD
+    DayCounter: A365
+    SettlementDays: 0
+- id: RUB-RUONIA
+  terms:
+    FixingCalendar: RUONIA
+    DayCounter: A365
+    SettlementDays: 0
+- id: SGD-SORA
+  terms:
+    FixingCalendar: SGD
+    DayCounter: A365
+    SettlementDays: 0
+- id: THB-THOR
+  terms:
+    FixingCalendar: THB
+    DayCounter: A365
+    SettlementDays: 0
+- id: HKD-HONIA
+  terms:
+    FixingCalendar: HKD
+    DayCounter: A365
+    SettlementDays: 0
+- id: HUF-BUBORON
+  terms:
+    FixingCalendar: HUF
+    DayCounter: A365
+    SettlementDays: 0
+- id: PLN-WIBORON
+  terms:
+    FixingCalendar: PLN
+    DayCounter: A365
+    SettlementDays: 0
+- id: ILS-TELBORON
+  terms:
+    FixingCalendar: ILS
+    DayCounter: A365
+    SettlementDays: 0
+- id: TRY-TRIBORON
+  terms:
+    FixingCalendar: TRY
+    DayCounter: A365
+    SettlementDays: 0
+- id: TRY-TLREF
+  terms:
+    FixingCalendar: TRY
+    DayCounter: A365
+    SettlementDays: 0
+- id: AED-EIBORON
+  terms:
+    FixingCalendar: AED
+    DayCounter: A365
+    SettlementDays: 0
+- id: DKK-DESTR
+  terms:
+    FixingCalendar: DKK
+    DayCounter: A365
+    SettlementDays: 0
+ibor_index:
+- id: AED-EIBOR-3M
+  terms:
+    FixingCalendar: AED
+    DayCounter: ACT/360
+    SettlementDays: 2
+    BusinessDayConvention: MF
+    EndOfMonth: false
+- id: USD-BSBY-1M
+  terms:
+    FixingCalendar: US
+    DayCounter: ACT/360
+    SettlementDays: 0
+    BusinessDayConvention: MF
+    EndOfMonth: false
+- id: USD-BSBY-3M
+  terms:
+    FixingCalendar: US
+    DayCounter: ACT/360
+    SettlementDays: 0
+    BusinessDayConvention: MF
+    EndOfMonth: false
+- id: CNY-DEPO-1Y
+  terms:
+    FixingCalendar: CNY
+    DayCounter: ACT/360
+    SettlementDays: 2
+    BusinessDayConvention: MF
+    EndOfMonth: false
+- id: RUB-KEYRATE-1W
+  terms:
+    FixingCalendar: RUB
+    DayCounter: ACT/ACT
+    SettlementDays: 2
+    BusinessDayConvention: MF
+    EndOfMonth: false
+- id: NGN-NIBOR-3M
+  terms:
+    FixingCalendar: NGN
+    DayCounter: 30/360
+    SettlementDays: 2
+    BusinessDayConvention: MF
+    EndOfMonth: false
+- id: NGN-NIBOR-1M
+  terms:
+    FixingCalendar: NGN
+    DayCounter: 30/360
+    SettlementDays: 2
+    BusinessDayConvention: MF
+    EndOfMonth: false
+zero_inflation_index:
+- id: UKCPI
+  terms:
+    RegionName: UK
+    RegionCode: UK
+    Revised: false
+    Frequency: Monthly
+    AvailabilityLag: 1M
+    Currency: GBP
+- id: ITCPI
+  terms:
+    RegionName: Italy
+    RegionCode: IT
+    Revised: false
+    Frequency: Monthly
+    AvailabilityLag: 1M
+    Currency: EUR
+- id: BECPIHL
+  terms:
+    RegionName: Belgium
+    RegionCode: BE
+    Revised: false
+    Frequency: Monthly
+    AvailabilityLag: 1M
+    Currency: EUR
+- id: UKCPIH
+  terms:
+    RegionName: UK
+    RegionCode: UK
+    Revised: false
+    Frequency: Monthly
+    AvailabilityLag: 1M
+    Currency: GBP
+- id: UKRPIX
+  terms:
+    RegionName: UK
+    RegionCode: UK
+    Revised: false
+    Frequency: Monthly
+    AvailabilityLag: 1M
+    Currency: GBP
+- id: USCPIA
+  terms:
+    RegionName: US
+    RegionCode: US
+    Revised: false
+    Frequency: Monthly
+    AvailabilityLag: 1M
+    Currency: USD
+- id: CLCPI
+  terms:
+    RegionName: Chile
+    RegionCode: CL
+    Revised: false
+    Frequency: Monthly
+    AvailabilityLag: 1M
+    Currency: CLP
+- id: ESHICP
+  terms:
+    RegionName: Spain
+    RegionCode: SP
+    Revised: false
+    Frequency: Monthly
+    AvailabilityLag: 1M
+    Currency: EUR
+- id: BRCPIIPCA
+  terms:
+    RegionName: Brazil
+    RegionCode: BR
+    Revised: false
+    Frequency: Monthly
+    AvailabilityLag: 1M
+    Currency: BRL
+fx_option:
+- id: EUR-USD-FXOPTION
+  terms:
+    FXConventionID: EUR-USD-FX
+    AtmType: AtmDeltaNeutral
+    DeltaType: Spot
+    SwitchTenor: 2Y
+    LongTermAtmType: AtmDeltaNeutral
+    LongTermDeltaType: Fwd
+    RiskReversalInFavorOf: Call
+    ButterflyStyle: Broker

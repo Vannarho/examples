@@ -1,0 +1,84 @@
+{
+  "schemaVersion": "1.0.0",
+  "seedVersion": "1.0.0",
+  "traceabilityRefs": {
+    "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+    "epic": "docs/architecture/scope_runtime_migration.yaml",
+    "sourceXml": "vre_python/notebooks/example_11/input/sacva_fd_eqcom/referencedata.xml",
+    "spec": "docs/architecture/scope_runtime_migration.yaml"
+  },
+  "entries": [
+    {
+      "referenceId": "SP5",
+      "validFrom": "1900-01-01",
+      "type": "Equity",
+      "registry": "equity_reference_registry.json"
+    },
+    {
+      "referenceId": "SPX",
+      "validFrom": "1900-01-01",
+      "type": "Equity",
+      "registry": "equity_reference_registry.json"
+    },
+    {
+      "referenceId": "SX5E",
+      "validFrom": "1900-01-01",
+      "type": "Equity",
+      "registry": "equity_reference_registry.json"
+    },
+    {
+      "referenceId": "NDX",
+      "validFrom": "1900-01-01",
+      "type": "Equity",
+      "registry": "equity_reference_registry.json"
+    },
+    {
+      "referenceId": "UKX",
+      "validFrom": "1900-01-01",
+      "type": "Equity",
+      "registry": "equity_reference_registry.json"
+    },
+    {
+      "referenceId": "DAX",
+      "validFrom": "1900-01-01",
+      "type": "Equity",
+      "registry": "equity_reference_registry.json"
+    },
+    {
+      "referenceId": "CAC",
+      "validFrom": "1900-01-01",
+      "type": "Equity",
+      "registry": "equity_reference_registry.json"
+    },
+    {
+      "referenceId": "NKY",
+      "validFrom": "1900-01-01",
+      "type": "Equity",
+      "registry": "equity_reference_registry.json"
+    },
+    {
+      "referenceId": "SMI",
+      "validFrom": "1900-01-01",
+      "type": "Equity",
+      "registry": "equity_reference_registry.json"
+    },
+    {
+      "referenceId": "AS51",
+      "validFrom": "1900-01-01",
+      "type": "Equity",
+      "registry": "equity_reference_registry.json"
+    },
+    {
+      "referenceId": "HSCEI",
+      "validFrom": "1900-01-01",
+      "type": "Equity",
+      "registry": "equity_reference_registry.json"
+    },
+    {
+      "referenceId": "COMDTY_WTI_USD",
+      "validFrom": "1900-01-01",
+      "type": "Commodity",
+      "registry": "commodity_reference_registry.json"
+    }
+  ]
+}

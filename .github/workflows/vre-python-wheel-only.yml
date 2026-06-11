@@ -1,0 +1,97 @@
+name: VRE Python Wheel-Only Examples
+
+on:
+  workflow_dispatch:
+    inputs:
+      wheel_asset:
+        description: macOS arm64 wheel asset name to validate
+        required: false
+        default: vannarho_risk_engine-0.14.0-cp313-cp313-macosx_26_0_arm64.whl
+  push:
+    paths:
+      - vre_python/**
+      - .github/workflows/vre-python-wheel-only.yml
+  pull_request:
+    paths:
+      - vre_python/**
+      - .github/workflows/vre-python-wheel-only.yml
+
+jobs:
+  wheel-only-examples:
+    # The currently published wheel set is macOS arm64 only.
+    runs-on: [self-hosted, macOS, ARM64]
+    timeout-minutes: 90
+    env:
+      VRE_RELEASE_REPO: Vannarho/vre
+      VRE_RELEASE_TAG: v0.14.0
+      VRE_WHEEL_ASSET: ${{ github.event.inputs.wheel_asset || 'vannarho_risk_engine-0.14.0-cp313-cp313-macosx_26_0_arm64.whl' }}
+      PYTHONPATH: ""
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Create virtual environment
+        env:
+          GH_TOKEN: ${{ secrets.VRE_RELEASE_TOKEN || github.token }}
+        run: |
+          python3.13 -m venv .venv
+          .venv/bin/python -m pip install --upgrade pip
+          .venv/bin/python -m pip install -r vre_python/requirements.txt
+          mkdir -p wheelhouse
+          gh -R "$VRE_RELEASE_REPO" release download "$VRE_RELEASE_TAG" \
+            -p "$VRE_WHEEL_ASSET" \
+            -D wheelhouse
+          .venv/bin/python -m pip install --no-deps "wheelhouse/$VRE_WHEEL_ASSET"
+          .venv/bin/python -m ipykernel install --prefix .venv --name vre-wheel-313 --display-name "VRE wheel cp313"
+
+      - name: Prove installed wheel import
+        run: |
+          cd /tmp
+          "$GITHUB_WORKSPACE/.venv/bin/python" - <<'PY'
+          from pathlib import Path
+          import importlib.metadata as metadata
+          import VRE, VREData, vre
+          print("version", metadata.version("vannarho-risk-engine"))
+          for name, module in [("VRE", VRE), ("VREData", VREData), ("vre", vre)]:
+              path = Path(module.__file__).resolve()
+              print(name, path)
+              assert "site-packages" in path.parts or "dist-packages" in path.parts
+              assert "build" not in path.parts
+          PY
+
+      - name: Run aggregate examples
+        run: |
+          cd vre_python
+          env PYTHONPATH= VRE_PYBIND_FORCE_BUILD_DIR= VRE_PYBIND_BUILD_DIR= VRE_NOTEBOOK_BUILD_ROOT= \
+            "$GITHUB_WORKSPACE/.venv/bin/python" run.py
+
+      - name: Execute notebooks
+        run: |
+          set -e
+          BASE="$GITHUB_WORKSPACE/vre_python/notebooks"
+          OUT="$RUNNER_TEMP/vre_notebook_exec"
+          for rel in \
+            example_1/hello.ipynb \
+            example_1/vre.ipynb \
+            example_2/vre.ipynb \
+            example_3/vre.ipynb \
+            example_4/vre.ipynb \
+            example_5/vre.ipynb \
+            example_6/vre.ipynb \
+            example_7/vre.ipynb \
+            example_8/vre.ipynb \
+            example_9/vre.ipynb \
+            example_10/vre.ipynb \
+            example_11/vre.ipynb
+          do
+            mkdir -p "$OUT/$(dirname "$rel")"
+            (
+              cd "$BASE/$(dirname "$rel")"
+              env PYTHONPATH= VRE_PYBIND_FORCE_BUILD_DIR= VRE_PYBIND_BUILD_DIR= VRE_NOTEBOOK_BUILD_ROOT= \
+                "$GITHUB_WORKSPACE/.venv/bin/python" -m nbconvert \
+                  --to notebook \
+                  --execute "$(basename "$rel")" \
+                  --output-dir "$OUT/$(dirname "$rel")" \
+                  --ExecutePreprocessor.kernel_name=vre-wheel-313 \
+                  --ExecutePreprocessor.timeout=1800
+            )
+          done

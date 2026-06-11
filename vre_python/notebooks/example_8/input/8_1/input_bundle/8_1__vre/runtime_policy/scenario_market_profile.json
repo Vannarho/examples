@@ -1,0 +1,70 @@
+{
+  "version": "1.0.0",
+  "traceabilityRefs": {
+    "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+    "epic": "docs/architecture/scope_runtime_migration.yaml",
+    "spec": "docs/architecture/scope_runtime_migration.yaml",
+    "sourceXml": "vre_python/notebooks/example_8/input/8_1/simulation.xml"
+  },
+  "marketDefinitionText": "<Market>\n\t\t<BaseCurrency>EUR</BaseCurrency>\n\t\t<Currencies>\n\t\t\t<Currency>USD</Currency>\n\t\t\t<Currency>EUR</Currency>\n\t\t</Currencies>\n\t\t<YieldCurves>\n\t\t\t<Configuration curve=\"\">\n\t\t\t\t<Tenors>2W, 1M, 3M, 6M, 1Y, 2Y, 3Y, 5Y, 10Y, 15Y, 20Y, 30Y</Tenors>\n\t\t\t\t<Interpolation>LogLinear</Interpolation>\n\t\t\t\t<Extrapolation>FlatZero</Extrapolation>\n\t\t\t</Configuration>\n\t\t</YieldCurves>\n\t\t<Indices>\n\t\t\t<Index>USD-FedFunds</Index>\n\t\t\t<Index>USD-Libor-3M</Index>\n\t\t\t<Index>EUR-EONIA</Index>\n\t\t\t<Index>EUR-EURIBOR-3M</Index>\n\t\t\n      <Index>EUR-ESTER</Index></Indices>\n\t\t<BenchmarkCurves />\n\t\t<FxRates>\n\t\t\t<CurrencyPairs />\n\t\t</FxRates>\n\t\n    <Securities><Simulate>false</Simulate></Securities>\n    <Securities>\n      <Simulate>false</Simulate>\n      <Names>\n      <Name>ISIN:XS0983610930</Name>\n      <Name>SECURITY_1</Name>\n      <Name>SECURITY_2</Name>\n      <Name>SECURITY_3</Name>\n      <Name>SECURITY_4</Name>\n      <Name>SECURITY_5</Name>\n      </Names>\n    </Securities>\n  </Market>\n",
+  "marketDefinition": {
+    "BaseCurrency": "EUR",
+    "Currencies": {
+      "Currency": [
+        "USD",
+        "EUR"
+      ]
+    },
+    "YieldCurves": {
+      "Configuration": [
+        {
+          "_attributes": {
+            "curve": ""
+          },
+          "Tenors": "2W, 1M, 3M, 6M, 1Y, 2Y, 3Y, 5Y, 10Y, 15Y, 20Y, 30Y",
+          "Interpolation": "LogLinear",
+          "Extrapolation": "FlatZero"
+        },
+        {
+          "_attributes": {
+            "curve": "BOND_YIELD_EUR"
+          },
+          "Tenors": "5Y,10Y",
+          "Interpolation": "LogLinear",
+          "Extrapolation": true
+        }
+      ]
+    },
+    "Indices": {
+      "Index": [
+        "USD-FedFunds",
+        "USD-Libor-3M",
+        "EUR-EONIA",
+        "EUR-EURIBOR-3M",
+        "EUR-ESTER"
+      ]
+    },
+    "BenchmarkCurves": "",
+    "FxRates": {
+      "CurrencyPairs": ""
+    },
+    "Securities": {
+      "Simulate": false,
+      "Names": {
+        "Name": [
+          "ISIN:XS0983610930",
+          "SECURITY_1",
+          "SECURITY_2",
+          "SECURITY_3",
+          "SECURITY_4",
+          "SECURITY_5"
+        ]
+      }
+    },
+    "AggregationScenarioDataIndices": {
+      "Index": [
+        "EUR-ESTER"
+      ]
+    }
+  }
+}

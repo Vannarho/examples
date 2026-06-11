@@ -1,0 +1,2068 @@
+{
+  "schemaVersion": "1.0.0",
+  "seedVersion": "1.0.0",
+  "publishedAt": "examples/vre_python/notebooks/example_10/input/vre_sacva_cg_gpu_larger_portfolio.toml",
+  "contentHash": "c656c10c4b830588d5b04af8920c90c2f9d28b30c2b184db65fbb22e6f8895c5",
+  "sourceLineage": {
+    "runtimePath": "examples/vre_python/notebooks/example_10/input_bundle/vre_sacva_cg_gpu_larger_portfolio/runtime_policy/simulation_runtime.toml",
+    "profilePath": "examples/vre_python/notebooks/example_10/input_bundle/vre_sacva_cg_gpu_larger_portfolio/runtime_policy/xam_profile.yaml",
+    "correlationsPath": "examples/vre_python/notebooks/example_10/input_bundle/vre_sacva_cg_gpu_larger_portfolio/runtime_policy/xam_correlation_set.json",
+    "generator": "tools/ci/publish_simulation_contracts.py",
+    "traceabilityRefs": {
+      "runtime": {
+        "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+        "epic": "docs/architecture/scope_runtime_migration.yaml",
+        "sourceXml": "vre_python/notebooks/example_10/input/sacva_larger_porfolio/simulation.xml",
+        "spec": "docs/architecture/scope_runtime_migration.yaml"
+      },
+      "profile": {
+        "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+        "epic": "docs/architecture/scope_runtime_migration.yaml",
+        "sourceXml": "vre_python/notebooks/example_10/input/sacva_larger_porfolio/simulation.xml",
+        "spec": "docs/architecture/scope_runtime_migration.yaml"
+      },
+      "correlations": {
+        "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+        "epic": "docs/architecture/scope_runtime_migration.yaml",
+        "sourceXml": "vre_python/notebooks/example_10/input/sacva_larger_porfolio/simulation.xml",
+        "spec": "docs/architecture/scope_runtime_migration.yaml"
+      },
+      "market": {
+        "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+        "epic": "docs/architecture/scope_runtime_migration.yaml",
+        "sourceXml": "vre_python/notebooks/example_10/input/sacva_larger_porfolio/simulation.xml",
+        "spec": "docs/architecture/scope_runtime_migration.yaml"
+      }
+    },
+    "marketPath": "examples/vre_python/notebooks/example_10/input_bundle/vre_sacva_cg_gpu_larger_portfolio/runtime_policy/scenario_market_profile.json"
+  },
+  "simulationRuntime": {
+    "schemaVersion": "1.0.0",
+    "seedVersion": "1.0.0",
+    "traceabilityRefs": {
+      "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+      "epic": "docs/architecture/scope_runtime_migration.yaml",
+      "sourceXml": "vre_python/notebooks/example_10/input/sacva_larger_porfolio/simulation.xml",
+      "spec": "docs/architecture/scope_runtime_migration.yaml"
+    },
+    "grid": "24,1D",
+    "calendar": "EUR,USD,GBP,CHF",
+    "dayCounter": "A365F",
+    "sequence": "SobolBrownianBridge",
+    "scenarioGenerator": "Simple",
+    "seed": 42,
+    "samples": 1000,
+    "ordering": "Steps",
+    "directionIntegers": "JoeKuoD7"
+  },
+  "crossAssetModelProfile": {
+    "schemaVersion": "1.0.0",
+    "seedVersion": "1.0.0",
+    "traceabilityRefs": {
+      "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+      "epic": "docs/architecture/scope_runtime_migration.yaml",
+      "sourceXml": "vre_python/notebooks/example_10/input/sacva_larger_porfolio/simulation.xml",
+      "spec": "docs/architecture/scope_runtime_migration.yaml"
+    },
+    "domesticCurrency": "EUR",
+    "factors": {
+      "currencies": [
+        "EUR",
+        "USD",
+        "HKD"
+      ],
+      "equities": [
+        "SP5",
+        "SX5E",
+        "SPX",
+        "HSCEI"
+      ],
+      "inflationIndices": [],
+      "creditNames": [
+        "BANK",
+        "CPTY_A"
+      ],
+      "commodities": [
+        "COMDTY_WTI_USD",
+        "COMDTY_GOLD_USD"
+      ]
+    },
+    "bootstrapTolerance": 0.0001,
+    "integration": {
+      "discretization": "Euler",
+      "salvagingAlgorithm": "None",
+      "piecewise": true
+    },
+    "modelBlocks": {
+      "interestRate": [
+        {
+          "modelType": "LGM",
+          "key": "default",
+          "parameters": {
+            "CalibrationSwaptions": {
+              "Expiries": "1Y,  2Y,  4Y,  6Y,  8Y, 10Y, 12Y, 14Y, 16Y, 18Y, 19Y",
+              "Strikes": "",
+              "Terms": "19Y, 18Y, 16Y, 14Y, 12Y, 10Y,  8Y,  6Y,  4Y,  2Y,  1Y"
+            },
+            "CalibrationType": "Bootstrap",
+            "ParameterTransformation": {
+              "Scaling": 1.0,
+              "ShiftHorizon": 0.0
+            },
+            "Reversion": {
+              "Calibrate": false,
+              "InitialValue": 0.03,
+              "ParamType": "Constant",
+              "ReversionType": "HullWhite",
+              "TimeGrid": ""
+            },
+            "Volatility": {
+              "Calibrate": true,
+              "InitialValue": "0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01",
+              "ParamType": "Piecewise",
+              "TimeGrid": "1.0, 2.0, 3.0, 4.0, 5.0, 7.0, 10.0",
+              "VolatilityType": "Hagan"
+            }
+          }
+        },
+        {
+          "modelType": "LGM",
+          "key": "EUR",
+          "parameters": {
+            "CalibrationSwaptions": {
+              "Expiries": "1Y,  2Y,  4Y,  6Y,  8Y, 10Y, 12Y, 14Y, 16Y, 18Y, 19Y",
+              "Strikes": "",
+              "Terms": "19Y, 18Y, 16Y, 14Y, 12Y, 10Y,  8Y,  6Y,  4Y,  2Y,  1Y"
+            },
+            "CalibrationType": "Bootstrap",
+            "ParameterTransformation": {
+              "Scaling": 1.0,
+              "ShiftHorizon": 0.0
+            },
+            "Reversion": {
+              "Calibrate": false,
+              "InitialValue": 0.03,
+              "ParamType": "Constant",
+              "ReversionType": "HullWhite",
+              "TimeGrid": ""
+            },
+            "Volatility": {
+              "Calibrate": true,
+              "InitialValue": "0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01",
+              "ParamType": "Piecewise",
+              "TimeGrid": "1.0, 2.0, 3.0, 4.0, 5.0, 7.0, 10.0",
+              "VolatilityType": "Hagan"
+            }
+          }
+        }
+      ],
+      "foreignExchange": [
+        {
+          "modelType": "CrossCcyLGM",
+          "key": "default",
+          "parameters": {
+            "CalibrationOptions": {
+              "Expiries": "1Y, 2Y, 3Y, 4Y, 5Y, 10Y",
+              "Strikes": ""
+            },
+            "CalibrationType": "Bootstrap",
+            "DomesticCcy": "EUR",
+            "Sigma": {
+              "Calibrate": true,
+              "InitialValue": "0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1",
+              "ParamType": "Piecewise",
+              "TimeGrid": "1.0, 2.0, 3.0, 4.0, 5.0, 7.0, 10.0"
+            }
+          }
+        },
+        {
+          "modelType": "CrossCcyLGM",
+          "key": "USD",
+          "parameters": {
+            "CalibrationOptions": {
+              "Expiries": "1Y, 2Y, 3Y, 4Y, 5Y, 10Y",
+              "Strikes": ""
+            },
+            "CalibrationType": "Bootstrap",
+            "DomesticCcy": "EUR",
+            "Sigma": {
+              "Calibrate": true,
+              "InitialValue": "0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1",
+              "ParamType": "Piecewise",
+              "TimeGrid": "1.0, 2.0, 3.0, 4.0, 5.0, 7.0, 10.0"
+            }
+          }
+        },
+        {
+          "modelType": "CrossCcyLGM",
+          "key": "HKD",
+          "parameters": {
+            "CalibrationOptions": {
+              "Expiries": "1Y, 2Y, 3Y, 4Y, 5Y, 10Y",
+              "Strikes": ""
+            },
+            "CalibrationType": "Bootstrap",
+            "DomesticCcy": "EUR",
+            "Sigma": {
+              "Calibrate": false,
+              "InitialValue": "0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1",
+              "ParamType": "Piecewise",
+              "TimeGrid": "1.0, 2.0, 3.0, 4.0, 5.0, 7.0, 10.0"
+            }
+          }
+        }
+      ],
+      "equity": [
+        {
+          "modelType": "CrossAssetLGM",
+          "key": "default",
+          "parameters": {
+            "CalibrationOptions": {
+              "Expiries": "1Y, 2Y, 3Y, 4Y, 5Y, 10Y",
+              "Strikes": ""
+            },
+            "CalibrationType": "Bootstrap",
+            "Currency": "EUR",
+            "Sigma": {
+              "Calibrate": true,
+              "InitialValue": "0.1, 0.1, 0.1, 0.1, 0.1, 0.1,  0.1, 0.1",
+              "ParamType": "Piecewise",
+              "TimeGrid": "1.0, 2.0, 3.0, 4.0, 5.0, 7.0, 10.0"
+            }
+          }
+        },
+        {
+          "modelType": "CrossAssetLGM",
+          "key": "HSCEI",
+          "parameters": {
+            "CalibrationOptions": {
+              "Expiries": "6M, 5Y, 10Y",
+              "Strikes": ""
+            },
+            "CalibrationType": "Bootstrap",
+            "Currency": "HKD",
+            "Sigma": {
+              "Calibrate": true,
+              "InitialValue": "0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1",
+              "ParamType": "Piecewise",
+              "TimeGrid": "1.0, 2.0, 3.0, 4.0, 5.0, 7.0, 10.0"
+            }
+          }
+        },
+        {
+          "modelType": "CrossAssetLGM",
+          "key": "SP5",
+          "parameters": {
+            "CalibrationOptions": {
+              "Expiries": "6M, 5Y, 10Y",
+              "Strikes": ""
+            },
+            "CalibrationType": "Bootstrap",
+            "Currency": "USD",
+            "Sigma": {
+              "Calibrate": true,
+              "InitialValue": "0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1",
+              "ParamType": "Piecewise",
+              "TimeGrid": "1.0, 2.0, 3.0, 4.0, 5.0, 7.0, 10.0"
+            }
+          }
+        },
+        {
+          "modelType": "CrossAssetLGM",
+          "key": "SPX",
+          "parameters": {
+            "CalibrationOptions": {
+              "Expiries": "6M, 5Y, 10Y",
+              "Strikes": ""
+            },
+            "CalibrationType": "Bootstrap",
+            "Currency": "USD",
+            "Sigma": {
+              "Calibrate": true,
+              "InitialValue": "0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1",
+              "ParamType": "Piecewise",
+              "TimeGrid": "1.0, 2.0, 3.0, 4.0, 5.0, 7.0, 10.0"
+            }
+          }
+        },
+        {
+          "modelType": "CrossAssetLGM",
+          "key": "SX5E",
+          "parameters": {
+            "CalibrationOptions": {
+              "Expiries": "6M, 5Y, 10Y",
+              "Strikes": ""
+            },
+            "CalibrationType": "Bootstrap",
+            "Currency": "EUR",
+            "Sigma": {
+              "Calibrate": true,
+              "InitialValue": "0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1",
+              "ParamType": "Piecewise",
+              "TimeGrid": "1.0, 2.0, 3.0, 4.0, 5.0, 7.0, 10.0"
+            }
+          }
+        }
+      ],
+      "inflation": [],
+      "credit": [
+        {
+          "modelType": "LGM",
+          "key": "default",
+          "parameters": {
+            "CalibrationCdsOptions": {
+              "Expiries": "1Y,2Y,4Y,6Y,8Y,10Y,12Y,14Y,16Y,18Y,19Y",
+              "Strikes": "",
+              "Terms": "19Y,18Y,16Y,14Y,12Y,10Y,8Y,6Y,4Y,2Y,1Y"
+            },
+            "CalibrationType": "None",
+            "ParameterTransformation": {
+              "Scaling": 1.0,
+              "ShiftHorizon": 0.0
+            },
+            "Reversion": {
+              "Calibrate": false,
+              "InitialValue": 0.03,
+              "ParamType": "Constant",
+              "ReversionType": "HullWhite",
+              "TimeGrid": ""
+            },
+            "Volatility": {
+              "Calibrate": false,
+              "InitialValue": "0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01",
+              "ParamType": "Constant",
+              "TimeGrid": "1.0,2.0,3.0,4.0,5.0,7.0,10.0",
+              "VolatilityType": "Hagan"
+            }
+          }
+        }
+      ],
+      "commodity": [
+        {
+          "modelType": "CommoditySchwartz",
+          "key": "COMDTY_WTI_USD",
+          "parameters": {
+            "CalibrationType": "None",
+            "Currency": "USD",
+            "DriftFreeState": true,
+            "Kappa": {
+              "Calibrate": false,
+              "InitialValue": 0.5
+            },
+            "Sigma": {
+              "Calibrate": false,
+              "InitialValue": 0.25
+            }
+          }
+        },
+        {
+          "modelType": "CommoditySchwartz",
+          "key": "COMDTY_GOLD_USD",
+          "parameters": {
+            "CalibrationType": "None",
+            "Currency": "USD",
+            "DriftFreeState": true,
+            "Kappa": {
+              "Calibrate": false,
+              "InitialValue": 0.3
+            },
+            "Sigma": {
+              "Calibrate": false,
+              "InitialValue": 0.2
+            }
+          }
+        }
+      ]
+    },
+    "creditStates": {
+      "numberOfFactors": 2
+    }
+  },
+  "crossAssetModelCorrelations": {
+    "schemaVersion": "1.0.0",
+    "seedVersion": "1.0.0",
+    "traceabilityRefs": {
+      "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+      "epic": "docs/architecture/scope_runtime_migration.yaml",
+      "sourceXml": "vre_python/notebooks/example_10/input/sacva_larger_porfolio/simulation.xml",
+      "spec": "docs/architecture/scope_runtime_migration.yaml"
+    },
+    "correlations": [
+      {
+        "factor1": {
+          "type": "IR",
+          "name": "EUR"
+        },
+        "factor2": {
+          "type": "IR",
+          "name": "USD"
+        },
+        "value": 0.3
+      },
+      {
+        "factor1": {
+          "type": "IR",
+          "name": "EUR"
+        },
+        "factor2": {
+          "type": "FX",
+          "name": "EURUSD"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "IR",
+          "name": "USD"
+        },
+        "factor2": {
+          "type": "FX",
+          "name": "EURUSD"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "COM",
+          "name": "WTI_USD"
+        },
+        "factor2": {
+          "type": "FX",
+          "name": "EURUSD"
+        },
+        "value": -0.2
+      },
+      {
+        "factor1": {
+          "type": "COM",
+          "name": "GOLD_USD"
+        },
+        "factor2": {
+          "type": "FX",
+          "name": "EURUSD"
+        },
+        "value": -0.1
+      },
+      {
+        "factor1": {
+          "type": "COM",
+          "name": "WTI_USD"
+        },
+        "factor2": {
+          "type": "IR",
+          "name": "USD"
+        },
+        "value": 0.1
+      },
+      {
+        "factor1": {
+          "type": "COM",
+          "name": "GOLD_USD"
+        },
+        "factor2": {
+          "type": "IR",
+          "name": "USD"
+        },
+        "value": 0.1
+      },
+      {
+        "factor1": {
+          "type": "IR",
+          "name": "EUR"
+        },
+        "factor2": {
+          "type": "IR",
+          "name": "HKD"
+        },
+        "value": 0.3
+      },
+      {
+        "factor1": {
+          "type": "IR",
+          "name": "HKD"
+        },
+        "factor2": {
+          "type": "IR",
+          "name": "USD"
+        },
+        "value": 0.3
+      },
+      {
+        "factor1": {
+          "type": "IR",
+          "name": "EUR"
+        },
+        "factor2": {
+          "type": "FX",
+          "name": "HKDEUR"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "IR",
+          "name": "EUR"
+        },
+        "factor2": {
+          "type": "FX",
+          "name": "USDEUR"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "IR",
+          "name": "HKD"
+        },
+        "factor2": {
+          "type": "FX",
+          "name": "EURUSD"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "IR",
+          "name": "HKD"
+        },
+        "factor2": {
+          "type": "FX",
+          "name": "HKDEUR"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "IR",
+          "name": "HKD"
+        },
+        "factor2": {
+          "type": "FX",
+          "name": "USDEUR"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "IR",
+          "name": "USD"
+        },
+        "factor2": {
+          "type": "FX",
+          "name": "HKDEUR"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "IR",
+          "name": "USD"
+        },
+        "factor2": {
+          "type": "FX",
+          "name": "USDEUR"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "FX",
+          "name": "EURUSD"
+        },
+        "factor2": {
+          "type": "FX",
+          "name": "HKDEUR"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "FX",
+          "name": "EURUSD"
+        },
+        "factor2": {
+          "type": "FX",
+          "name": "USDEUR"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "FX",
+          "name": "HKDEUR"
+        },
+        "factor2": {
+          "type": "FX",
+          "name": "USDEUR"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "COM",
+          "name": "COMDTY_GOLD_USD"
+        },
+        "factor2": {
+          "type": "COM",
+          "name": "COMDTY_WTI_USD"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "COM",
+          "name": "COMDTY_GOLD_USD"
+        },
+        "factor2": {
+          "type": "EQ",
+          "name": "HSCEI"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "COM",
+          "name": "COMDTY_GOLD_USD"
+        },
+        "factor2": {
+          "type": "EQ",
+          "name": "SP5"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "COM",
+          "name": "COMDTY_GOLD_USD"
+        },
+        "factor2": {
+          "type": "EQ",
+          "name": "SPX"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "COM",
+          "name": "COMDTY_GOLD_USD"
+        },
+        "factor2": {
+          "type": "EQ",
+          "name": "SX5E"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "COM",
+          "name": "COMDTY_GOLD_USD"
+        },
+        "factor2": {
+          "type": "IR",
+          "name": "EUR"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "COM",
+          "name": "COMDTY_GOLD_USD"
+        },
+        "factor2": {
+          "type": "IR",
+          "name": "HKD"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "COM",
+          "name": "COMDTY_GOLD_USD"
+        },
+        "factor2": {
+          "type": "IR",
+          "name": "USD"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "COM",
+          "name": "COMDTY_WTI_USD"
+        },
+        "factor2": {
+          "type": "EQ",
+          "name": "HSCEI"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "COM",
+          "name": "COMDTY_WTI_USD"
+        },
+        "factor2": {
+          "type": "EQ",
+          "name": "SP5"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "COM",
+          "name": "COMDTY_WTI_USD"
+        },
+        "factor2": {
+          "type": "EQ",
+          "name": "SPX"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "COM",
+          "name": "COMDTY_WTI_USD"
+        },
+        "factor2": {
+          "type": "EQ",
+          "name": "SX5E"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "COM",
+          "name": "COMDTY_WTI_USD"
+        },
+        "factor2": {
+          "type": "IR",
+          "name": "EUR"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "COM",
+          "name": "COMDTY_WTI_USD"
+        },
+        "factor2": {
+          "type": "IR",
+          "name": "HKD"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "COM",
+          "name": "COMDTY_WTI_USD"
+        },
+        "factor2": {
+          "type": "IR",
+          "name": "USD"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "EQ",
+          "name": "HSCEI"
+        },
+        "factor2": {
+          "type": "EQ",
+          "name": "SP5"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "EQ",
+          "name": "HSCEI"
+        },
+        "factor2": {
+          "type": "EQ",
+          "name": "SPX"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "EQ",
+          "name": "HSCEI"
+        },
+        "factor2": {
+          "type": "EQ",
+          "name": "SX5E"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "EQ",
+          "name": "HSCEI"
+        },
+        "factor2": {
+          "type": "IR",
+          "name": "EUR"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "EQ",
+          "name": "HSCEI"
+        },
+        "factor2": {
+          "type": "IR",
+          "name": "HKD"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "EQ",
+          "name": "HSCEI"
+        },
+        "factor2": {
+          "type": "IR",
+          "name": "USD"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "EQ",
+          "name": "SP5"
+        },
+        "factor2": {
+          "type": "EQ",
+          "name": "SPX"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "EQ",
+          "name": "SP5"
+        },
+        "factor2": {
+          "type": "EQ",
+          "name": "SX5E"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "EQ",
+          "name": "SP5"
+        },
+        "factor2": {
+          "type": "IR",
+          "name": "EUR"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "EQ",
+          "name": "SP5"
+        },
+        "factor2": {
+          "type": "IR",
+          "name": "HKD"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "EQ",
+          "name": "SP5"
+        },
+        "factor2": {
+          "type": "IR",
+          "name": "USD"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "EQ",
+          "name": "SPX"
+        },
+        "factor2": {
+          "type": "EQ",
+          "name": "SX5E"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "EQ",
+          "name": "SPX"
+        },
+        "factor2": {
+          "type": "IR",
+          "name": "EUR"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "EQ",
+          "name": "SPX"
+        },
+        "factor2": {
+          "type": "IR",
+          "name": "HKD"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "EQ",
+          "name": "SPX"
+        },
+        "factor2": {
+          "type": "IR",
+          "name": "USD"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "EQ",
+          "name": "SX5E"
+        },
+        "factor2": {
+          "type": "IR",
+          "name": "EUR"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "EQ",
+          "name": "SX5E"
+        },
+        "factor2": {
+          "type": "IR",
+          "name": "HKD"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "EQ",
+          "name": "SX5E"
+        },
+        "factor2": {
+          "type": "IR",
+          "name": "USD"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "FX",
+          "name": "EURUSD"
+        },
+        "factor2": {
+          "type": "COM",
+          "name": "COMDTY_GOLD_USD"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "FX",
+          "name": "EURUSD"
+        },
+        "factor2": {
+          "type": "COM",
+          "name": "COMDTY_WTI_USD"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "FX",
+          "name": "EURUSD"
+        },
+        "factor2": {
+          "type": "EQ",
+          "name": "HSCEI"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "FX",
+          "name": "EURUSD"
+        },
+        "factor2": {
+          "type": "EQ",
+          "name": "SP5"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "FX",
+          "name": "EURUSD"
+        },
+        "factor2": {
+          "type": "EQ",
+          "name": "SPX"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "FX",
+          "name": "EURUSD"
+        },
+        "factor2": {
+          "type": "EQ",
+          "name": "SX5E"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "FX",
+          "name": "HKDEUR"
+        },
+        "factor2": {
+          "type": "COM",
+          "name": "COMDTY_GOLD_USD"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "FX",
+          "name": "HKDEUR"
+        },
+        "factor2": {
+          "type": "COM",
+          "name": "COMDTY_WTI_USD"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "FX",
+          "name": "HKDEUR"
+        },
+        "factor2": {
+          "type": "EQ",
+          "name": "HSCEI"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "FX",
+          "name": "HKDEUR"
+        },
+        "factor2": {
+          "type": "EQ",
+          "name": "SP5"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "FX",
+          "name": "HKDEUR"
+        },
+        "factor2": {
+          "type": "EQ",
+          "name": "SPX"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "FX",
+          "name": "HKDEUR"
+        },
+        "factor2": {
+          "type": "EQ",
+          "name": "SX5E"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "FX",
+          "name": "USDEUR"
+        },
+        "factor2": {
+          "type": "COM",
+          "name": "COMDTY_GOLD_USD"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "FX",
+          "name": "USDEUR"
+        },
+        "factor2": {
+          "type": "COM",
+          "name": "COMDTY_WTI_USD"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "FX",
+          "name": "USDEUR"
+        },
+        "factor2": {
+          "type": "EQ",
+          "name": "HSCEI"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "FX",
+          "name": "USDEUR"
+        },
+        "factor2": {
+          "type": "EQ",
+          "name": "SP5"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "FX",
+          "name": "USDEUR"
+        },
+        "factor2": {
+          "type": "EQ",
+          "name": "SPX"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "FX",
+          "name": "USDEUR"
+        },
+        "factor2": {
+          "type": "EQ",
+          "name": "SX5E"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "FX",
+          "name": "EURUSD"
+        },
+        "factor2": {
+          "type": "CR",
+          "name": "BANK"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "FX",
+          "name": "EURUSD"
+        },
+        "factor2": {
+          "type": "CR",
+          "name": "CPTY_A"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "FX",
+          "name": "HKDEUR"
+        },
+        "factor2": {
+          "type": "CR",
+          "name": "BANK"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "FX",
+          "name": "HKDEUR"
+        },
+        "factor2": {
+          "type": "CR",
+          "name": "CPTY_A"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "FX",
+          "name": "USDEUR"
+        },
+        "factor2": {
+          "type": "CR",
+          "name": "BANK"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "FX",
+          "name": "USDEUR"
+        },
+        "factor2": {
+          "type": "CR",
+          "name": "CPTY_A"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "COM",
+          "name": "COMDTY_GOLD_USD"
+        },
+        "factor2": {
+          "type": "CR",
+          "name": "BANK"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "COM",
+          "name": "COMDTY_GOLD_USD"
+        },
+        "factor2": {
+          "type": "CR",
+          "name": "CPTY_A"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "COM",
+          "name": "COMDTY_WTI_USD"
+        },
+        "factor2": {
+          "type": "CR",
+          "name": "BANK"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "COM",
+          "name": "COMDTY_WTI_USD"
+        },
+        "factor2": {
+          "type": "CR",
+          "name": "CPTY_A"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "CR",
+          "name": "BANK"
+        },
+        "factor2": {
+          "type": "CR",
+          "name": "CPTY_A"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "CR",
+          "name": "BANK"
+        },
+        "factor2": {
+          "type": "EQ",
+          "name": "HSCEI"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "CR",
+          "name": "BANK"
+        },
+        "factor2": {
+          "type": "EQ",
+          "name": "SP5"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "CR",
+          "name": "BANK"
+        },
+        "factor2": {
+          "type": "EQ",
+          "name": "SPX"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "CR",
+          "name": "BANK"
+        },
+        "factor2": {
+          "type": "EQ",
+          "name": "SX5E"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "CR",
+          "name": "BANK"
+        },
+        "factor2": {
+          "type": "IR",
+          "name": "EUR"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "CR",
+          "name": "BANK"
+        },
+        "factor2": {
+          "type": "IR",
+          "name": "HKD"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "CR",
+          "name": "BANK"
+        },
+        "factor2": {
+          "type": "IR",
+          "name": "USD"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "CR",
+          "name": "CPTY_A"
+        },
+        "factor2": {
+          "type": "EQ",
+          "name": "HSCEI"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "CR",
+          "name": "CPTY_A"
+        },
+        "factor2": {
+          "type": "EQ",
+          "name": "SP5"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "CR",
+          "name": "CPTY_A"
+        },
+        "factor2": {
+          "type": "EQ",
+          "name": "SPX"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "CR",
+          "name": "CPTY_A"
+        },
+        "factor2": {
+          "type": "EQ",
+          "name": "SX5E"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "CR",
+          "name": "CPTY_A"
+        },
+        "factor2": {
+          "type": "IR",
+          "name": "EUR"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "CR",
+          "name": "CPTY_A"
+        },
+        "factor2": {
+          "type": "IR",
+          "name": "HKD"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "CR",
+          "name": "CPTY_A"
+        },
+        "factor2": {
+          "type": "IR",
+          "name": "USD"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "FX",
+          "name": "EURUSD"
+        },
+        "factor2": {
+          "type": "CrState",
+          "name": "0"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "FX",
+          "name": "EURUSD"
+        },
+        "factor2": {
+          "type": "CrState",
+          "name": "1"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "FX",
+          "name": "HKDEUR"
+        },
+        "factor2": {
+          "type": "CrState",
+          "name": "0"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "FX",
+          "name": "HKDEUR"
+        },
+        "factor2": {
+          "type": "CrState",
+          "name": "1"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "FX",
+          "name": "USDEUR"
+        },
+        "factor2": {
+          "type": "CrState",
+          "name": "0"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "FX",
+          "name": "USDEUR"
+        },
+        "factor2": {
+          "type": "CrState",
+          "name": "1"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "COM",
+          "name": "COMDTY_GOLD_USD"
+        },
+        "factor2": {
+          "type": "CrState",
+          "name": "0"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "COM",
+          "name": "COMDTY_GOLD_USD"
+        },
+        "factor2": {
+          "type": "CrState",
+          "name": "1"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "COM",
+          "name": "COMDTY_WTI_USD"
+        },
+        "factor2": {
+          "type": "CrState",
+          "name": "0"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "COM",
+          "name": "COMDTY_WTI_USD"
+        },
+        "factor2": {
+          "type": "CrState",
+          "name": "1"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "CR",
+          "name": "BANK"
+        },
+        "factor2": {
+          "type": "CrState",
+          "name": "0"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "CR",
+          "name": "BANK"
+        },
+        "factor2": {
+          "type": "CrState",
+          "name": "1"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "CR",
+          "name": "CPTY_A"
+        },
+        "factor2": {
+          "type": "CrState",
+          "name": "0"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "CR",
+          "name": "CPTY_A"
+        },
+        "factor2": {
+          "type": "CrState",
+          "name": "1"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "CrState",
+          "name": "0"
+        },
+        "factor2": {
+          "type": "CrState",
+          "name": "1"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "CrState",
+          "name": "0"
+        },
+        "factor2": {
+          "type": "EQ",
+          "name": "HSCEI"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "CrState",
+          "name": "0"
+        },
+        "factor2": {
+          "type": "EQ",
+          "name": "SP5"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "CrState",
+          "name": "0"
+        },
+        "factor2": {
+          "type": "EQ",
+          "name": "SPX"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "CrState",
+          "name": "0"
+        },
+        "factor2": {
+          "type": "EQ",
+          "name": "SX5E"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "CrState",
+          "name": "0"
+        },
+        "factor2": {
+          "type": "IR",
+          "name": "EUR"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "CrState",
+          "name": "0"
+        },
+        "factor2": {
+          "type": "IR",
+          "name": "HKD"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "CrState",
+          "name": "0"
+        },
+        "factor2": {
+          "type": "IR",
+          "name": "USD"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "CrState",
+          "name": "1"
+        },
+        "factor2": {
+          "type": "EQ",
+          "name": "HSCEI"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "CrState",
+          "name": "1"
+        },
+        "factor2": {
+          "type": "EQ",
+          "name": "SP5"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "CrState",
+          "name": "1"
+        },
+        "factor2": {
+          "type": "EQ",
+          "name": "SPX"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "CrState",
+          "name": "1"
+        },
+        "factor2": {
+          "type": "EQ",
+          "name": "SX5E"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "CrState",
+          "name": "1"
+        },
+        "factor2": {
+          "type": "IR",
+          "name": "EUR"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "CrState",
+          "name": "1"
+        },
+        "factor2": {
+          "type": "IR",
+          "name": "HKD"
+        },
+        "value": 0.0
+      },
+      {
+        "factor1": {
+          "type": "CrState",
+          "name": "1"
+        },
+        "factor2": {
+          "type": "IR",
+          "name": "USD"
+        },
+        "value": 0.0
+      }
+    ]
+  },
+  "scenarioMarketProfile": {
+    "schemaVersion": "1.0.0",
+    "seedVersion": "1.0.0",
+    "traceabilityRefs": {
+      "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+      "epic": "docs/architecture/scope_runtime_migration.yaml",
+      "sourceXml": "vre_python/notebooks/example_10/input/sacva_larger_porfolio/simulation.xml",
+      "spec": "docs/architecture/scope_runtime_migration.yaml"
+    },
+    "marketDefinitionText": "<Market>\n\n    <BaseCurrency>EUR</BaseCurrency>\n\n    <Currencies><Currency>EUR</Currency><Currency>HKD</Currency><Currency>USD</Currency></Currencies>\n\n    <YieldCurves>\n      <Configuration>\n        \n        <Tenors>6M,1Y,2Y,3Y,5Y,7Y,10Y,15Y,20Y</Tenors>\n        <Interpolation>LogLinear</Interpolation>\n        \n        <Extrapolation>Y</Extrapolation>\n      </Configuration>\n    \n      <Simulate>true</Simulate></YieldCurves>\n\n    <Indices><Index>EUR-EONIA</Index><Index>EUR-ESTER</Index><Index>EUR-EURIBOR-12M</Index><Index>EUR-EURIBOR-1M</Index><Index>EUR-EURIBOR-3M</Index><Index>EUR-EURIBOR-6M</Index><Index>HKD-HIBOR-3M</Index><Index>USD-FedFunds</Index><Index>USD-LIBOR-1M</Index><Index>USD-LIBOR-3M</Index><Index>USD-LIBOR-6M</Index><Index>USD-SOFR</Index></Indices>\n\n    <Commodities>\n      <Simulate>true</Simulate>\n      <Names>\n        <Name>COMDTY_GOLD_USD</Name>\n        <Name>COMDTY_WTI_USD</Name>\n      </Names>\n      <Tenors>0D,1Y,5Y,10Y</Tenors>\n    </Commodities>\n\n    <CommodityVolatilities>\n      <Simulate>true</Simulate>\n      <ReactionToTimeDecay>ForwardForward</ReactionToTimeDecay>\n      <Names><Name id=\"COMDTY_GOLD_USD\"><Expiries>1Y,5Y,10Y</Expiries></Name><Name id=\"COMDTY_WTI_USD\"><Expiries>1Y,5Y,10Y</Expiries><Moneyness>30.0,35.0,40.0,45.0,50.0,55.0,60.0</Moneyness></Name></Names>\n    </CommodityVolatilities>\n<SwapIndices><SwapIndex><Name>EUR-CMS-1Y</Name><DiscountingIndex>EUR-EONIA</DiscountingIndex></SwapIndex><SwapIndex><Name>EUR-CMS-30Y</Name><DiscountingIndex>EUR-EONIA</DiscountingIndex></SwapIndex><SwapIndex><Name>USD-CMS-1Y</Name><DiscountingIndex>USD-FedFunds</DiscountingIndex></SwapIndex><SwapIndex><Name>USD-CMS-30Y</Name><DiscountingIndex>USD-FedFunds</DiscountingIndex></SwapIndex><SwapIndex><Name>HKD-CMS-1Y</Name><DiscountingIndex>HKD-HIBOR-3M</DiscountingIndex></SwapIndex><SwapIndex><Name>HKD-CMS-30Y</Name><DiscountingIndex>HKD-HIBOR-3M</DiscountingIndex></SwapIndex></SwapIndices>\n    <FxRates><CurrencyPairs><CurrencyPair>EURHKD</CurrencyPair><CurrencyPair>EURUSD</CurrencyPair><CurrencyPair>HKDEUR</CurrencyPair><CurrencyPair>USDEUR</CurrencyPair></CurrencyPairs></FxRates>\n\n\n\n    \n    \n    <Equities>\n      <SimulateDividendYield>true</SimulateDividendYield>\n      <Names>\n        <Name>SP5</Name>\n        <Name>SX5E</Name>\n        <Name>SPX</Name>\n        <Name>HSCEI</Name>\n      </Names>\n      <DividendTenors>6M,1Y,2Y</DividendTenors>\n    </Equities>    \n    \n    \n    <SwaptionVolatilities>\n      <Simulate>false</Simulate>\n      <ReactionToTimeDecay>ForwardVariance</ReactionToTimeDecay>\n      <Currencies><Currency>EUR</Currency><Currency>HKD</Currency><Currency>USD</Currency></Currencies>\n      <Expiries>6M,1Y,2Y,3Y,4Y,5Y,7Y,10Y,12Y,15Y,20Y,30Y</Expiries>\n      <Terms>1Y,2Y,3Y,4Y,5Y,7Y,10Y,12Y,15Y,20Y,30Y</Terms>\n    </SwaptionVolatilities>\n    \n    <CapFloorVolatilities>\n      <Simulate>false</Simulate>\n      <ReactionToTimeDecay>ConstantVariance</ReactionToTimeDecay>\n      <Currencies>\n        <Currency>EUR</Currency>\n        <Currency>USD</Currency>\n      </Currencies>\n      <Expiries>6M,1Y,2Y,3Y,5Y,7Y,10Y,15Y,20Y</Expiries>\n      <Strikes>0.00,0.01,0.02,0.03,0.04,0.05,0.06</Strikes>\n    </CapFloorVolatilities>\n\n    <FxVolatilities><Simulate>false</Simulate><CurrencyPairs><CurrencyPair>HKDEUR</CurrencyPair><CurrencyPair>USDEUR</CurrencyPair></CurrencyPairs><ReactionToTimeDecay>ForwardVariance</ReactionToTimeDecay><Expiries>6M,1Y,2Y,3Y,4Y,5Y,7Y,10Y</Expiries><Surface><StandardDeviations>0.0</StandardDeviations></Surface></FxVolatilities> \n\n    <EquityVolatilities>\n      <Simulate>false</Simulate>\n      <ReactionToTimeDecay>ForwardVariance</ReactionToTimeDecay>\n      \n      <Names>\n        <Name>SP5</Name>\n        <Name>SX5E</Name>\n        <Name>SPX</Name>\n        <Name>HSCEI</Name>\n      </Names>\n      <Expiries>6M,1Y,2Y,3Y,4Y,5Y,7Y,10Y</Expiries>\n    </EquityVolatilities>     \n\n    <BenchmarkCurves><BenchmarkCurve><Name>BENCHMARK_EUR</Name><Currency>EUR</Currency></BenchmarkCurve><BenchmarkCurve><Name>EUR1D</Name><Currency>EUR</Currency></BenchmarkCurve><BenchmarkCurve><Name>EUR3M</Name><Currency>EUR</Currency></BenchmarkCurve><BenchmarkCurve><Name>EUR6M</Name><Currency>EUR</Currency></BenchmarkCurve><BenchmarkCurve><Name>USD1D</Name><Currency>USD</Currency></BenchmarkCurve><BenchmarkCurve><Name>USD1D_HKD</Name><Currency>HKD</Currency></BenchmarkCurve><BenchmarkCurve><Name>USD3M</Name><Currency>USD</Currency></BenchmarkCurve><BenchmarkCurve><Name>USD6M</Name><Currency>USD</Currency></BenchmarkCurve><BenchmarkCurve><Name>EUR12M</Name><Currency>EUR</Currency></BenchmarkCurve><BenchmarkCurve><Name>EUR1M</Name><Currency>EUR</Currency></BenchmarkCurve><BenchmarkCurve><Name>USD1M</Name><Currency>USD</Currency></BenchmarkCurve></BenchmarkCurves>\n\n    \n    <AggregationScenarioDataCurrencies><Currency>EUR</Currency><Currency>HKD</Currency><Currency>USD</Currency></AggregationScenarioDataCurrencies>\n\n    <AggregationScenarioDataIndices><Index>EUR-EONIA</Index><Index>EUR-ESTER</Index><Index>EUR-EURIBOR-12M</Index><Index>EUR-EURIBOR-1M</Index><Index>EUR-EURIBOR-3M</Index><Index>EUR-EURIBOR-6M</Index><Index>HKD-HIBOR-3M</Index><Index>USD-FedFunds</Index><Index>USD-LIBOR-1M</Index><Index>USD-LIBOR-3M</Index><Index>USD-LIBOR-6M</Index><Index>USD-SOFR</Index></AggregationScenarioDataIndices>\n\n    <AggregationScenarioDataDividendEquities>\n      <Name>SP5</Name>\n      <Name>SPX</Name>\n      <Name>SX5E</Name>\n      <Name>HSCEI</Name>\n    </AggregationScenarioDataDividendEquities>\n\n    <AggregationScenarioDataSurvivalNames>\n      <Name>BANK</Name>\n    </AggregationScenarioDataSurvivalNames>\n\n    <AggregationScenarioDataCommodities>\n      <Name>COMDTY_WTI_USD</Name>\n      <Name>COMDTY_GOLD_USD</Name>\n    </AggregationScenarioDataCommodities>\n\n  \n    <Securities><Simulate>false</Simulate></Securities>\n    <Securities>\n      <Simulate>false</Simulate>\n      <Names>\n      <Name>SECURITY_2</Name>\n      <Name>SECURITY_3</Name>\n      <Name>SECURITY_4</Name>\n      <Name>SECURITY_5</Name>\n      </Names>\n    </Securities>\n  </Market>\n\n",
+    "marketDefinition": {
+      "AggregationScenarioDataCommodities": {
+        "Name": [
+          "COMDTY_WTI_USD",
+          "COMDTY_GOLD_USD"
+        ]
+      },
+      "AggregationScenarioDataCurrencies": {
+        "Currency": [
+          "EUR",
+          "HKD",
+          "USD"
+        ]
+      },
+      "AggregationScenarioDataDividendEquities": {
+        "Name": [
+          "SP5",
+          "SPX",
+          "SX5E",
+          "HSCEI"
+        ]
+      },
+      "AggregationScenarioDataIndices": {
+        "Index": [
+          "EUR-EONIA",
+          "EUR-ESTER",
+          "EUR-EURIBOR-12M",
+          "EUR-EURIBOR-1M",
+          "EUR-EURIBOR-3M",
+          "EUR-EURIBOR-6M",
+          "HKD-HIBOR-3M",
+          "USD-FedFunds",
+          "USD-LIBOR-1M",
+          "USD-LIBOR-3M",
+          "USD-LIBOR-6M",
+          "USD-SOFR"
+        ]
+      },
+      "AggregationScenarioDataSurvivalNames": {
+        "Name": "BANK"
+      },
+      "BaseCurrency": "EUR",
+      "BenchmarkCurves": {
+        "BenchmarkCurve": [
+          {
+            "Currency": "EUR",
+            "Name": "BENCHMARK_EUR"
+          },
+          {
+            "Name": "EUR1D",
+            "Currency": "EUR"
+          },
+          {
+            "Name": "EUR3M",
+            "Currency": "EUR"
+          },
+          {
+            "Name": "EUR6M",
+            "Currency": "EUR"
+          },
+          {
+            "Name": "USD1D",
+            "Currency": "USD"
+          },
+          {
+            "Name": "USD1D_HKD",
+            "Currency": "HKD"
+          },
+          {
+            "Name": "USD3M",
+            "Currency": "USD"
+          },
+          {
+            "Name": "USD6M",
+            "Currency": "USD"
+          },
+          {
+            "Name": "EUR12M",
+            "Currency": "EUR"
+          },
+          {
+            "Name": "EUR1M",
+            "Currency": "EUR"
+          },
+          {
+            "Name": "USD1M",
+            "Currency": "USD"
+          }
+        ]
+      },
+      "CapFloorVolatilities": {
+        "Currencies": {
+          "Currency": [
+            "EUR",
+            "USD"
+          ]
+        },
+        "Expiries": "6M,1Y,2Y,3Y,5Y,7Y,10Y,15Y,20Y",
+        "ReactionToTimeDecay": "ConstantVariance",
+        "Simulate": false,
+        "Strikes": "0.00,0.01,0.02,0.03,0.04,0.05,0.06"
+      },
+      "Commodities": {
+        "Names": {
+          "Name": [
+            "COMDTY_GOLD_USD",
+            "COMDTY_WTI_USD"
+          ]
+        },
+        "Simulate": true,
+        "Tenors": "0D,1Y,5Y,10Y"
+      },
+      "CommodityVolatilities": {
+        "Names": {
+          "Name": [
+            {
+              "Expiries": "1Y,5Y,10Y",
+              "Moneyness": 0.0,
+              "_attributes": {
+                "id": "COMDTY_GOLD_USD"
+              }
+            },
+            {
+              "Expiries": "1Y,5Y,10Y",
+              "Moneyness": "30.0,35.0,40.0,45.0,50.0,55.0,60.0",
+              "_attributes": {
+                "id": "COMDTY_WTI_USD"
+              }
+            }
+          ]
+        },
+        "ReactionToTimeDecay": "ForwardForward",
+        "Simulate": true
+      },
+      "Currencies": {
+        "Currency": [
+          "EUR",
+          "HKD",
+          "USD"
+        ]
+      },
+      "Equities": {
+        "DividendTenors": "6M,1Y,2Y",
+        "Names": {
+          "Name": [
+            "SP5",
+            "SX5E",
+            "SPX",
+            "HSCEI"
+          ]
+        },
+        "SimulateDividendYield": true
+      },
+      "EquityVolatilities": {
+        "Expiries": "6M,1Y,2Y,3Y,4Y,5Y,7Y,10Y",
+        "Names": {
+          "Name": [
+            "SP5",
+            "SX5E",
+            "SPX",
+            "HSCEI"
+          ]
+        },
+        "ReactionToTimeDecay": "ForwardVariance",
+        "Simulate": false
+      },
+      "FxRates": {
+        "CurrencyPairs": {
+          "CurrencyPair": [
+            "EURHKD",
+            "EURUSD",
+            "HKDEUR",
+            "USDEUR"
+          ]
+        },
+        "Simulate": true
+      },
+      "FxVolatilities": {
+        "CurrencyPairs": {
+          "CurrencyPair": [
+            "HKDEUR",
+            "USDEUR",
+            "EURUSD"
+          ]
+        },
+        "Expiries": "6M,1Y,2Y,3Y,4Y,5Y,7Y,10Y",
+        "ReactionToTimeDecay": "ForwardVariance",
+        "Simulate": false,
+        "Surface": {
+          "StandardDeviations": "0.0"
+        }
+      },
+      "Indices": {
+        "Index": [
+          "EUR-EONIA",
+          "EUR-ESTER",
+          "EUR-EURIBOR-12M",
+          "EUR-EURIBOR-1M",
+          "EUR-EURIBOR-3M",
+          "EUR-EURIBOR-6M",
+          "HKD-HIBOR-3M",
+          "USD-FedFunds",
+          "USD-LIBOR-1M",
+          "USD-LIBOR-3M",
+          "USD-LIBOR-6M",
+          "USD-SOFR"
+        ]
+      },
+      "SwapIndices": {
+        "SwapIndex": [
+          {
+            "DiscountingIndex": "EUR-EONIA",
+            "Name": "EUR-CMS-1Y"
+          },
+          {
+            "DiscountingIndex": "EUR-EONIA",
+            "Name": "EUR-CMS-30Y"
+          },
+          {
+            "DiscountingIndex": "USD-FedFunds",
+            "Name": "USD-CMS-1Y"
+          },
+          {
+            "DiscountingIndex": "USD-FedFunds",
+            "Name": "USD-CMS-30Y"
+          },
+          {
+            "Name": "HKD-CMS-1Y",
+            "DiscountingIndex": "HKD-HIBOR-3M"
+          },
+          {
+            "Name": "HKD-CMS-30Y",
+            "DiscountingIndex": "HKD-HIBOR-3M"
+          }
+        ]
+      },
+      "SwaptionVolatilities": {
+        "Currencies": {
+          "Currency": [
+            "EUR",
+            "HKD",
+            "USD"
+          ]
+        },
+        "Expiries": "6M,1Y,2Y,3Y,4Y,5Y,7Y,10Y,12Y,15Y,20Y,30Y",
+        "ReactionToTimeDecay": "ForwardVariance",
+        "Simulate": false,
+        "Terms": "1Y,2Y,3Y,4Y,5Y,7Y,10Y,12Y,15Y,20Y,30Y"
+      },
+      "YieldCurves": {
+        "Configuration": [
+          {
+            "Extrapolation": true,
+            "Interpolation": "LogLinear",
+            "Tenors": "6M,1Y,2Y,3Y,5Y,7Y,10Y,15Y,20Y"
+          },
+          {
+            "_attributes": {
+              "curve": "BOND_YIELD_EUR"
+            },
+            "Tenors": "5Y,10Y",
+            "Interpolation": "LogLinear",
+            "Extrapolation": true
+          }
+        ],
+        "Simulate": true
+      },
+      "Securities": {
+        "Simulate": false,
+        "Names": {
+          "Name": [
+            "SECURITY_2",
+            "SECURITY_3",
+            "SECURITY_4",
+            "SECURITY_5"
+          ]
+        }
+      },
+      "AggregationScenarioDataSurvivalWeights": {
+        "Name": [
+          "BANK",
+          "CPTY_A"
+        ]
+      },
+      "DefaultCurves": {
+        "Names": {
+          "Name": [
+            "BANK",
+            "CPTY_A"
+          ]
+        },
+        "Tenors": "6M,1Y,2Y,3Y,5Y,7Y,10Y",
+        "SimulateSurvivalProbabilities": true,
+        "SimulateRecoveryRates": false,
+        "Calendars": {
+          "Calendar": "TARGET"
+        },
+        "Extrapolation": "FlatZero"
+      }
+    }
+  }
+}

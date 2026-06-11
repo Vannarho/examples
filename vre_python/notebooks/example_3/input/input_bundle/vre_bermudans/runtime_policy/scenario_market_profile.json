@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "1.0.0",
+  "seedVersion": "1.0.0",
+  "traceabilityRefs": {
+    "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+    "epic": "docs/architecture/scope_runtime_migration.yaml",
+    "sourceXml": "vre_python/notebooks/example_3/input/simulation.xml",
+    "spec": "docs/architecture/scope_runtime_migration.yaml"
+  },
+  "marketDefinitionText": "<Market>\n    <BaseCurrency>EUR</BaseCurrency>\n    <Currencies>\n      <Currency>EUR</Currency>\n    </Currencies>\n    <YieldCurves>\n      <Configuration>\n        <Tenors>3M,6M,1Y,2Y,3Y,4Y,5Y,7Y,10Y,12Y,15Y,20Y</Tenors>\n        <Interpolation>LogLinear</Interpolation>\n        <Extrapolation>Y</Extrapolation>\n      </Configuration>\n    </YieldCurves>\n\n    <Indices>\n      <Index>EUR-EURIBOR-6M</Index>\n      <Index>EUR-EURIBOR-3M</Index>\n      <Index>EUR-EONIA</Index>\n    </Indices>\n\n    <SwapIndices>\n      <SwapIndex>\n        <Name>EUR-CMS-1Y</Name>\n        <DiscountingIndex>EUR-EONIA</DiscountingIndex>\n      </SwapIndex>\n      <SwapIndex>\n        <Name>EUR-CMS-30Y</Name>\n        <DiscountingIndex>EUR-EONIA</DiscountingIndex>\n      </SwapIndex>\n    </SwapIndices>\n\n    <DefaultCurves>\n      <Names />\n      <Tenors>6M,1Y,2Y</Tenors>\n    </DefaultCurves>\n\n    <SwaptionVolatilities>\n      <Simulate>false</Simulate>\n      \n      <ReactionToTimeDecay>ForwardVariance</ReactionToTimeDecay>\n      <Currencies>\n        <Currency>EUR</Currency>\n      </Currencies>\n      <Expiries>6M,1Y,2Y,3Y,5Y,10Y,12Y,15Y,20Y</Expiries>\n      <Terms>1Y,2Y,3Y,4Y,5Y,7Y,10Y,15Y,20Y,30Y</Terms>\n    </SwaptionVolatilities>\n    \n\n    <AggregationScenarioDataCurrencies>\n      <Currency>EUR</Currency>\n    </AggregationScenarioDataCurrencies>\n\n    <AggregationScenarioDataIndices>\n      <Index>EUR-EURIBOR-3M</Index>\n      <Index>EUR-EONIA</Index>\n    </AggregationScenarioDataIndices>\n\n  </Market>\n\n",
+  "marketDefinition": {
+    "AggregationScenarioDataCurrencies": {
+      "Currency": "EUR"
+    },
+    "AggregationScenarioDataIndices": {
+      "Index": [
+        "EUR-EURIBOR-3M",
+        "EUR-EONIA"
+      ]
+    },
+    "BaseCurrency": "EUR",
+    "Currencies": {
+      "Currency": "EUR"
+    },
+    "DefaultCurves": {
+      "Names": "",
+      "Tenors": "6M,1Y,2Y"
+    },
+    "Indices": {
+      "Index": [
+        "EUR-EURIBOR-6M",
+        "EUR-EURIBOR-3M",
+        "EUR-EONIA"
+      ]
+    },
+    "SwapIndices": {
+      "SwapIndex": [
+        {
+          "DiscountingIndex": "EUR-EONIA",
+          "Name": "EUR-CMS-1Y"
+        },
+        {
+          "DiscountingIndex": "EUR-EONIA",
+          "Name": "EUR-CMS-30Y"
+        }
+      ]
+    },
+    "SwaptionVolatilities": {
+      "Currencies": {
+        "Currency": "EUR"
+      },
+      "Expiries": "6M,1Y,2Y,3Y,5Y,10Y,12Y,15Y,20Y",
+      "ReactionToTimeDecay": "ForwardVariance",
+      "Simulate": false,
+      "Terms": "1Y,2Y,3Y,4Y,5Y,7Y,10Y,15Y,20Y,30Y"
+    },
+    "YieldCurves": {
+      "Configuration": {
+        "Extrapolation": true,
+        "Interpolation": "LogLinear",
+        "Tenors": "3M,6M,1Y,2Y,3Y,4Y,5Y,7Y,10Y,12Y,15Y,20Y"
+      }
+    }
+  }
+}

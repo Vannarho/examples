@@ -1,0 +1,80 @@
+{
+  "schemaVersion": "1.0.0",
+  "seedVersion": "1.0.0",
+  "traceabilityRefs": {
+    "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+    "epic": "docs/architecture/scope_runtime_migration.yaml",
+    "sourceXml": "vre_python/notebooks/example_10/input/cg/pricingengine_gpu.xml",
+    "spec": "docs/architecture/scope_runtime_migration.yaml"
+  },
+  "profileId": "pricingengine_gpu",
+  "globalParameters": {},
+  "products": [
+    {
+      "productType": "Swap",
+      "model": {
+        "name": "CrossAssetModel",
+        "parameters": {}
+      },
+      "engine": {
+        "name": "AMCCG",
+        "parameters": {}
+      }
+    },
+    {
+      "productType": "EquityOption",
+      "model": {
+        "name": "BlackScholesMerton",
+        "parameters": {}
+      },
+      "engine": {
+        "name": "AnalyticEuropeanEngine",
+        "parameters": {}
+      }
+    },
+    {
+      "productType": "EquityBarrierOption",
+      "model": {
+        "name": "BlackScholesMerton",
+        "parameters": {}
+      },
+      "engine": {
+        "name": "AnalyticBarrierEngine",
+        "parameters": {}
+      }
+    },
+    {
+      "productType": "ScriptedTrade",
+      "model": {
+        "name": "Generic",
+        "parameters": {
+          "BaseCcy": "EUR",
+          "BootstrapTolerance": "0.0001",
+          "EnforceBaseCcy": "false",
+          "FullDynamicFx": "false",
+          "FullDynamicIr": "false",
+          "GridCoarsening": "3M(1W),1Y(1M),5Y(3M),10Y(1Y),50Y(5Y)",
+          "IrReversion_EUR": "0.01",
+          "Model": "GaussianCam"
+        }
+      },
+      "engine": {
+        "name": "Generic",
+        "parameters": {
+          "BootstrapTolerance": "0.0001",
+          "Engine": "MC",
+          "ExternalComputeDevice": "OpenCL/Apple/Apple M4 Max",
+          "Interactive": "false",
+          "RegressionOrder": "6",
+          "Samples": "10000",
+          "Seed": "42",
+          "SequenceType": "MersenneTwister",
+          "StateGridPoints": "100",
+          "TimeStepsPerYear": "24",
+          "UseCG": "true",
+          "UseExternalComputeDevice": "true"
+        }
+      }
+    }
+  ]
+}

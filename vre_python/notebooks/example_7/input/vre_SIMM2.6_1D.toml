@@ -1,0 +1,30 @@
+[setup]
+asofDate = "2019-12-30"
+inputPath = "input_bundle/vre_simm2.6_1_d"
+outputPath = "Output/SIMM2.6_1D"
+logFile = "log.txt"
+logMask = "15"
+marketDataFile = "market.txt"
+fixingDataFile = ""
+implyTodaysFixings = "N"
+curveConfigFile = "runtime_policy/resolved_curve_configuration.json"
+conventionsFile = "reference_registry/convention_manifest.json"
+marketConfigFile = "runtime_policy/resolved_todays_market.json"
+pricingEnginesFile = "runtime_policy/pricingengine/resolved_pricing_policy.json"
+portfolioFile = ""
+observationModel = "None"
+
+[markets]
+lgmcalibration = "default"
+fxcalibration = "default"
+pricing = "default"
+simulation = "default"
+
+[analytics]
+[analytics.simm]
+active = "Y"
+version = "2.6"
+crif = "crif.csv"
+calculationCurrency = "USD"
+enforceIMRegulations = "Y"
+mporDays = "1"

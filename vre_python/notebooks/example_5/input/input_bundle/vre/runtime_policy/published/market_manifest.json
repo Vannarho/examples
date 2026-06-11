@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "1.0.0",
+  "seedVersion": "1.0.0",
+  "traceabilityRefs": {
+    "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+    "epic": "docs/architecture/scope_runtime_migration.yaml",
+    "sourceXml": "vre_python/notebooks/example_5/input/todaysmarket.xml",
+    "spec": "docs/architecture/scope_runtime_migration.yaml"
+  },
+  "views": [
+    {
+      "viewId": "default",
+      "families": {}
+    },
+    {
+      "viewId": "inccy",
+      "families": {
+        "discounting_curves": "discount_curve__inccy",
+        "index_forwarding_curves": "index_forwarding_curve__default"
+      }
+    }
+  ]
+}

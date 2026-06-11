@@ -1,0 +1,14 @@
+version = "1.0.0"
+grid = "30,2W"
+calendar = "EUR,USD"
+day_counter = "A365"
+sequence = "SobolBrownianBridge"
+scenario_generator = "Simple"
+seed = 42
+samples = 10000
+
+[traceability_refs]
+adr = "docs/architecture/adr/0001-serialization-and-storage-format-standards.md"
+epic = "docs/architecture/scope_runtime_migration.yaml"
+spec = "docs/architecture/scope_runtime_migration.yaml"
+sourceXml = "vre_python/notebooks/example_5/input/simulation.xml"

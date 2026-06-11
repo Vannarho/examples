@@ -1,0 +1,29 @@
+version: 1.0.0
+traceabilityRefs:
+  adr: docs/architecture/adr/0001-serialization-and-storage-format-standards.md
+  epic: docs/architecture/scope_runtime_migration.yaml
+  spec: docs/architecture/scope_runtime_migration.yaml
+  sourceXml: vre_python/notebooks/example_2/input/todaysmarket.xml
+views:
+- viewId: default
+  families:
+    yield_curves: yield_curve__xois_eur
+    discounting_curves: discount_curve__xois_eur
+- viewId: collateral_inccy
+  families:
+    yield_curves: yield_curve__ois
+    discounting_curves: discount_curve__ois
+    index_forwarding_curves: index_forwarding_curve__default
+- viewId: xois_eur
+  families:
+    discounting_curves: discount_curve__xois_eur
+    index_forwarding_curves: index_forwarding_curve__default
+- viewId: xois_usd
+  families:
+    discounting_curves: discount_curve__xois_usd
+    index_forwarding_curves: index_forwarding_curve__default
+- viewId: libor
+  families:
+    yield_curves: yield_curve__inccy_swap
+    discounting_curves: discount_curve__inccy_swap
+    index_forwarding_curves: index_forwarding_curve__default

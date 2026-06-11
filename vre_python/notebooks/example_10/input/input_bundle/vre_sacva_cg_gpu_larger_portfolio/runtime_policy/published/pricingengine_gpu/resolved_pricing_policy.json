@@ -1,0 +1,148 @@
+{
+  "schemaVersion": "1.0.0",
+  "seedVersion": "1.0.0",
+  "publishedAt": "examples/vre_python/notebooks/example_10/input/vre_sacva_cg_gpu_larger_portfolio.toml",
+  "contentHash": "4fec6b7c11506b1f927eda86680da80a4d3e3aa37d48f3f2e4f647a59c18c4df",
+  "sourceLineage": {
+    "runtimePath": "examples/vre_python/notebooks/example_10/input_bundle/vre_sacva_cg_gpu_larger_portfolio/runtime_policy/pricing_runtime_pricingengine_gpu.toml",
+    "policyPath": "examples/vre_python/notebooks/example_10/input_bundle/vre_sacva_cg_gpu_larger_portfolio/runtime_policy/pricing_policy_pricingengine_gpu.yaml",
+    "generator": "tools/ci/publish_pricing_engine_contracts.py"
+  },
+  "pricingRuntime": {
+    "profileId": "pricingengine_gpu",
+    "allowedOverrides": []
+  },
+  "pricingPolicy": {
+    "profileId": "pricingengine_gpu",
+    "globalParameters": {},
+    "products": [
+      {
+        "productType": "ScriptedTrade",
+        "model": {
+          "name": "Generic",
+          "parameters": {
+            "BaseCcy": "EUR",
+            "CommodityCgUseDomesticMeasure": "true",
+            "EnforceBaseCcy": "false",
+            "EquityCgUseDomesticMeasure": "true",
+            "EquityCgUseMidpoint": "true",
+            "FullDynamicFx": "true",
+            "FullDynamicIr": "true",
+            "GridCoarsening": "3M(1W),1Y(1M),5Y(3M),10Y(1Y),50Y(5Y)",
+            "InfModelType": "JY",
+            "IrReversion_EUR": "0.01",
+            "IrReversion_GBP": "0.01",
+            "IrReversion_HKD": "0.01",
+            "IrReversion_USD": "0.01",
+            "Model": "GaussianCam"
+          }
+        },
+        "engine": {
+          "name": "Generic",
+          "parameters": {
+            "AdCeFreezeBasis": "true",
+            "BootstrapTolerance": "1.0",
+            "CeOnlyAddReg": "true",
+            "Engine": "MC",
+            "ExternalComputeDevice": "CUDA/NVIDIA/NVIDIA GB10",
+            "Interactive": "false",
+            "RegressionOrder": "4",
+            "Samples": "8192",
+            "TimeStepsPerYear": "24",
+            "UseCG": "true",
+            "UseExternalComputeDevice": "true",
+            "ZeroVolatility": "false"
+          }
+        }
+      },
+      {
+        "productType": "Swap",
+        "model": {
+          "name": "CrossAssetModel",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "AMCCG",
+          "parameters": {}
+        }
+      },
+      {
+        "productType": "FxForward",
+        "model": {
+          "name": "CrossAssetModel",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "AMCCG",
+          "parameters": {}
+        }
+      },
+      {
+        "productType": "CrossCurrencySwap",
+        "model": {
+          "name": "CrossAssetModel",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "AMCCG",
+          "parameters": {}
+        }
+      },
+      {
+        "productType": "FxOption",
+        "model": {
+          "name": "CrossAssetModel",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "AMCCG",
+          "parameters": {}
+        }
+      },
+      {
+        "productType": "EquityForward",
+        "model": {
+          "name": "DiscountedCashflows",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "DiscountingEquityForwardEngine",
+          "parameters": {}
+        }
+      },
+      {
+        "productType": "EquityOption",
+        "model": {
+          "name": "BlackScholesMerton",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "AnalyticEuropeanEngine",
+          "parameters": {}
+        }
+      },
+      {
+        "productType": "BermudanSwaption",
+        "model": {
+          "name": "LGM",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "AMCCG",
+          "parameters": {}
+        }
+      },
+      {
+        "productType": "MultiLegOption",
+        "model": {
+          "name": "CrossAssetModel",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "AMCCG",
+          "parameters": {}
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "schemaVersion": "1.0.0",
+  "seedVersion": "1.0.0",
+  "publishedAt": "examples/vre_python/notebooks/example_10/input/vre_sacva_cg_ad_larger_portfolio.toml",
+  "contentHash": "7f2ba7f7fd1c607142d76a5af18aad66d0fbe70edd84a05796a48fb85751907b",
+  "sourceLineage": {
+    "runtimePath": "examples/vre_python/notebooks/example_10/input_bundle/vre_sacva_cg_ad_larger_portfolio/runtime_policy/pricing_runtime_pricingengine_amc.toml",
+    "policyPath": "examples/vre_python/notebooks/example_10/input_bundle/vre_sacva_cg_ad_larger_portfolio/runtime_policy/pricing_policy_pricingengine_amc.yaml",
+    "generator": "tools/ci/publish_pricing_engine_contracts.py"
+  },
+  "pricingRuntime": {
+    "profileId": "pricingengine_amc",
+    "allowedOverrides": []
+  },
+  "pricingPolicy": {
+    "profileId": "pricingengine_amc",
+    "globalParameters": {},
+    "products": [
+      {
+        "productType": "ScriptedTrade",
+        "model": {
+          "name": "Generic",
+          "parameters": {
+            "BaseCcy": "EUR",
+            "EnforceBaseCcy": "false",
+            "FullDynamicFx": "true",
+            "FullDynamicIr": "true",
+            "GridCoarsening": "3M(1W),1Y(1M),5Y(3M),10Y(1Y),50Y(5Y)",
+            "InfModelType": "JY",
+            "IrReversion_EUR": "0.01",
+            "IrReversion_GBP": "0.01",
+            "Model": "GaussianCam",
+            "IrReversion_USD": "0.01"
+          }
+        },
+        "engine": {
+          "name": "Generic",
+          "parameters": {
+            "BootstrapTolerance": "1.0",
+            "Engine": "MC",
+            "Interactive": "false",
+            "RegressionOrder": "4",
+            "Samples": "8192",
+            "TimeStepsPerYear": "24",
+            "UseCG": "true",
+            "ZeroVolatility": "false"
+          }
+        }
+      },
+      {
+        "productType": "Swap",
+        "model": {
+          "name": "CrossAssetModel",
+          "parameters": {}
+        },
+        "engine": {
+          "name": "AMC",
+          "parameters": {
+            "BrownianBridgeOrdering": "Steps",
+            "MinObsDate": "true",
+            "Pricing.Samples": "0",
+            "Pricing.Seed": "17",
+            "Pricing.Sequence": "SobolBrownianBridge",
+            "RegressionOnExerciseOnly": "false",
+            "SobolDirectionIntegers": "JoeKuoD7",
+            "Training.BasisFunction": "Monomial",
+            "Training.BasisFunctionOrder": "6",
+            "Training.Samples": "8192",
+            "Training.Seed": "42",
+            "Training.Sequence": "MersenneTwisterAntithetic"
+          }
+        }
+      }
+    ]
+  }
+}

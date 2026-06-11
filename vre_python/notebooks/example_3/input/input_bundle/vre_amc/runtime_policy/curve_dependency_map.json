@@ -1,0 +1,940 @@
+{
+  "schemaVersion": "1.0.0",
+  "seedVersion": "1.0.0",
+  "traceabilityRefs": {
+    "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+    "epic": "docs/architecture/scope_runtime_migration.yaml",
+    "sourceXml": "vre_python/notebooks/example_3/input/curveconfig.xml",
+    "spec": "docs/architecture/scope_runtime_migration.yaml"
+  },
+  "setId": "curveconfig",
+  "entries": [
+    {
+      "familyId": "base_correlations",
+      "curveType": "BaseCorrelation",
+      "curveId": "CDXIG",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "cap_floor_volatilities",
+      "curveType": "CapFloorVolatility",
+      "curveId": "EUR_CF_N",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "cap_floor_volatilities",
+      "curveType": "CapFloorVolatility",
+      "curveId": "GBP_CF_N",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "cap_floor_volatilities",
+      "curveType": "CapFloorVolatility",
+      "curveId": "USD_CF_N",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "cds_volatilities",
+      "curveType": "CDSVolatility",
+      "curveId": "CDXIG",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "cds_volatilities",
+      "curveType": "CDSVolatility",
+      "curveId": "CPTY_A",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "commodity_curves",
+      "curveType": "CommodityCurve",
+      "curveId": "GOLD_USD",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "commodity_curves",
+      "curveType": "CommodityCurve",
+      "curveId": "WTI_USD",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "commodity_volatilities",
+      "curveType": "CommodityVolatility",
+      "curveId": "GOLD_USD_VOLS",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "commodity_volatilities",
+      "curveType": "CommodityVolatility",
+      "curveId": "WTI_USD_VOLS",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "correlations",
+      "curveType": "Correlation",
+      "curveId": "EUR-CORR",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "correlations",
+      "curveType": "Correlation",
+      "curveId": "USD-CORR",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "default_curves",
+      "curveType": "DefaultCurve",
+      "curveId": "BANK_SR_USD",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "default_curves",
+      "curveType": "DefaultCurve",
+      "curveId": "BOND_YIELD_EUR_OVER_OIS",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "default_curves",
+      "curveType": "DefaultCurve",
+      "curveId": "CPTY_1_SR_EUR",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "default_curves",
+      "curveType": "DefaultCurve",
+      "curveId": "CPTY_2_SR_EUR",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "default_curves",
+      "curveType": "DefaultCurve",
+      "curveId": "CPTY_3_SR_EUR",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "default_curves",
+      "curveType": "DefaultCurve",
+      "curveId": "CPTY_A_SR_EUR",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "default_curves",
+      "curveType": "DefaultCurve",
+      "curveId": "CPTY_A_SR_USD",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "default_curves",
+      "curveType": "DefaultCurve",
+      "curveId": "CPTY_C_SR_EUR",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "equity_curves",
+      "curveType": "EquityCurve",
+      "curveId": "FTSE",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "equity_curves",
+      "curveType": "EquityCurve",
+      "curveId": "Lufthansa",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "equity_curves",
+      "curveType": "EquityCurve",
+      "curveId": "SP5",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "equity_curves",
+      "curveType": "EquityCurve",
+      "curveId": "SPX",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "equity_curves",
+      "curveType": "EquityCurve",
+      "curveId": "SX5E",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "equity_volatilities",
+      "curveType": "EquityVolatility",
+      "curveId": "FTSE",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "equity_volatilities",
+      "curveType": "EquityVolatility",
+      "curveId": "Lufthansa",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "equity_volatilities",
+      "curveType": "EquityVolatility",
+      "curveId": "SP5",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "equity_volatilities",
+      "curveType": "EquityVolatility",
+      "curveId": "SPX",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "equity_volatilities",
+      "curveType": "EquityVolatility",
+      "curveId": "SX5E",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "fx_volatilities",
+      "curveType": "FXVolatility",
+      "curveId": "EURCHF",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "fx_volatilities",
+      "curveType": "FXVolatility",
+      "curveId": "EURGBP",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "fx_volatilities",
+      "curveType": "FXVolatility",
+      "curveId": "EURJPY",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "fx_volatilities",
+      "curveType": "FXVolatility",
+      "curveId": "EURUSD",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "fx_volatilities",
+      "curveType": "FXVolatility",
+      "curveId": "GBPUSD",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "inflation_cap_floor_volatilities",
+      "curveType": "InflationCapFloorVolatility",
+      "curveId": "EUHICPXT_YY_CF_N",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "inflation_cap_floor_volatilities",
+      "curveType": "InflationCapFloorVolatility",
+      "curveId": "EUHICPXT_ZC_CF",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "inflation_cap_floor_volatilities",
+      "curveType": "InflationCapFloorVolatility",
+      "curveId": "UKRPI_ZC_CF",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "inflation_cap_floor_volatilities",
+      "curveType": "InflationCapFloorVolatility",
+      "curveId": "USCPI_ZC_CF",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "inflation_curves",
+      "curveType": "InflationCurve",
+      "curveId": "EUHICPXT_YY_Swaps",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "inflation_curves",
+      "curveType": "InflationCurve",
+      "curveId": "EUHICPXT_ZC_Swaps",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "inflation_curves",
+      "curveType": "InflationCurve",
+      "curveId": "EUHICP_ZC_Swaps",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "inflation_curves",
+      "curveType": "InflationCurve",
+      "curveId": "FRHICP_ZC_Swaps",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "inflation_curves",
+      "curveType": "InflationCurve",
+      "curveId": "UKRPI_ZC_Swaps",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "inflation_curves",
+      "curveType": "InflationCurve",
+      "curveId": "USCPI_ZC_Swaps",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "inflation_curves",
+      "curveType": "InflationCurve",
+      "curveId": "ZACPI_ZC_Swaps",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "securities",
+      "curveType": "Security",
+      "curveId": "SECURITY_1",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "securities",
+      "curveType": "Security",
+      "curveId": "SECURITY_2",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "securities",
+      "curveType": "Security",
+      "curveId": "SECURITY_3",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "swaption_volatilities",
+      "curveType": "SwaptionVolatility",
+      "curveId": "CHF_SW_N",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "swaption_volatilities",
+      "curveType": "SwaptionVolatility",
+      "curveId": "EUR_SW_N",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "swaption_volatilities",
+      "curveType": "SwaptionVolatility",
+      "curveId": "GBP_SW_N",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "swaption_volatilities",
+      "curveType": "SwaptionVolatility",
+      "curveId": "JPY_SW_N",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "swaption_volatilities",
+      "curveType": "SwaptionVolatility",
+      "curveId": "USD_SW_N",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "yield_curves",
+      "curveType": "YieldCurve",
+      "curveId": "BANK_EUR_BORROW",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "yield_curves",
+      "curveType": "YieldCurve",
+      "curveId": "BANK_EUR_LEND",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "yield_curves",
+      "curveType": "YieldCurve",
+      "curveId": "BENCHMARK_EUR",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "yield_curves",
+      "curveType": "YieldCurve",
+      "curveId": "BOND_YIELD_EUR",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "yield_curves",
+      "curveType": "YieldCurve",
+      "curveId": "BRL-IN-USD",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "yield_curves",
+      "curveType": "YieldCurve",
+      "curveId": "CAD-IN-USD",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "yield_curves",
+      "curveType": "YieldCurve",
+      "curveId": "CAD1D",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "yield_curves",
+      "curveType": "YieldCurve",
+      "curveId": "CAD3M",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "yield_curves",
+      "curveType": "YieldCurve",
+      "curveId": "CHF-IN-EUR",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "yield_curves",
+      "curveType": "YieldCurve",
+      "curveId": "CHF-IN-USD",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "yield_curves",
+      "curveType": "YieldCurve",
+      "curveId": "CHF1D",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "yield_curves",
+      "curveType": "YieldCurve",
+      "curveId": "CHF1M",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "yield_curves",
+      "curveType": "YieldCurve",
+      "curveId": "CHF3M",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "yield_curves",
+      "curveType": "YieldCurve",
+      "curveId": "CHF6M",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "yield_curves",
+      "curveType": "YieldCurve",
+      "curveId": "CLP-IN-USD",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "yield_curves",
+      "curveType": "YieldCurve",
+      "curveId": "CNY-IN-USD",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "yield_curves",
+      "curveType": "YieldCurve",
+      "curveId": "DKK1D",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "yield_curves",
+      "curveType": "YieldCurve",
+      "curveId": "DKK3M",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "yield_curves",
+      "curveType": "YieldCurve",
+      "curveId": "EUR-IN-USD",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "yield_curves",
+      "curveType": "YieldCurve",
+      "curveId": "EUR12M",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "yield_curves",
+      "curveType": "YieldCurve",
+      "curveId": "EUR1D",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "yield_curves",
+      "curveType": "YieldCurve",
+      "curveId": "EUR1M",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "yield_curves",
+      "curveType": "YieldCurve",
+      "curveId": "EUR3M",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "yield_curves",
+      "curveType": "YieldCurve",
+      "curveId": "EUR6M",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "yield_curves",
+      "curveType": "YieldCurve",
+      "curveId": "GBP-IN-EUR",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "yield_curves",
+      "curveType": "YieldCurve",
+      "curveId": "GBP-IN-USD",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "yield_curves",
+      "curveType": "YieldCurve",
+      "curveId": "GBP1D",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "yield_curves",
+      "curveType": "YieldCurve",
+      "curveId": "GBP3M",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "yield_curves",
+      "curveType": "YieldCurve",
+      "curveId": "GBP6M",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "yield_curves",
+      "curveType": "YieldCurve",
+      "curveId": "IDR-IN-USD",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "yield_curves",
+      "curveType": "YieldCurve",
+      "curveId": "INR-IN-USD",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "yield_curves",
+      "curveType": "YieldCurve",
+      "curveId": "JPY-IN-USD",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "yield_curves",
+      "curveType": "YieldCurve",
+      "curveId": "JPY1D",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "yield_curves",
+      "curveType": "YieldCurve",
+      "curveId": "JPY3M",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "yield_curves",
+      "curveType": "YieldCurve",
+      "curveId": "JPY6M",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "yield_curves",
+      "curveType": "YieldCurve",
+      "curveId": "KRW-IN-USD",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "yield_curves",
+      "curveType": "YieldCurve",
+      "curveId": "MYR-IN-USD",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "yield_curves",
+      "curveType": "YieldCurve",
+      "curveId": "PHP-IN-USD",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "yield_curves",
+      "curveType": "YieldCurve",
+      "curveId": "RUB3M",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "yield_curves",
+      "curveType": "YieldCurve",
+      "curveId": "SEK-IN-USD",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "yield_curves",
+      "curveType": "YieldCurve",
+      "curveId": "SEK3M",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "yield_curves",
+      "curveType": "YieldCurve",
+      "curveId": "SEK6M",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "yield_curves",
+      "curveType": "YieldCurve",
+      "curveId": "TWD-IN-USD",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "yield_curves",
+      "curveType": "YieldCurve",
+      "curveId": "USD-IN-EUR",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "yield_curves",
+      "curveType": "YieldCurve",
+      "curveId": "USD1D",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "yield_curves",
+      "curveType": "YieldCurve",
+      "curveId": "USD1M",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "yield_curves",
+      "curveType": "YieldCurve",
+      "curveId": "USD3M",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "yield_curves",
+      "curveType": "YieldCurve",
+      "curveId": "USD6M",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    },
+    {
+      "familyId": "yield_curves",
+      "curveType": "YieldCurve",
+      "curveId": "USDBMA",
+      "recipeVariant": "structured_mapping",
+      "quotes": [],
+      "conventions": [],
+      "relatedCurveIds": []
+    }
+  ]
+}

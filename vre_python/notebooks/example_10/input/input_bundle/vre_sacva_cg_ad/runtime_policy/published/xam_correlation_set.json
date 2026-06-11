@@ -1,0 +1,408 @@
+{
+  "schemaVersion": "1.0.0",
+  "seedVersion": "1.0.0",
+  "traceabilityRefs": {
+    "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+    "epic": "docs/architecture/scope_runtime_migration.yaml",
+    "sourceXml": "vre_python/notebooks/example_10/input/cg/simulation.xml",
+    "spec": "docs/architecture/scope_runtime_migration.yaml"
+  },
+  "correlations": [
+    {
+      "factor1": {
+        "type": "IR",
+        "name": "EUR"
+      },
+      "factor2": {
+        "type": "IR",
+        "name": "USD"
+      },
+      "value": 0.3
+    },
+    {
+      "factor1": {
+        "type": "IR",
+        "name": "EUR"
+      },
+      "factor2": {
+        "type": "FX",
+        "name": "USDEUR"
+      },
+      "value": 0.0
+    },
+    {
+      "factor1": {
+        "type": "IR",
+        "name": "USD"
+      },
+      "factor2": {
+        "type": "FX",
+        "name": "USDEUR"
+      },
+      "value": 0.0
+    },
+    {
+      "factor1": {
+        "type": "FX",
+        "name": "USDEUR"
+      },
+      "factor2": {
+        "type": "CR",
+        "name": "BANK"
+      },
+      "value": 0.0
+    },
+    {
+      "factor1": {
+        "type": "FX",
+        "name": "USDEUR"
+      },
+      "factor2": {
+        "type": "CR",
+        "name": "CPTY_A"
+      },
+      "value": 0.0
+    },
+    {
+      "factor1": {
+        "type": "CR",
+        "name": "BANK"
+      },
+      "factor2": {
+        "type": "CR",
+        "name": "CPTY_A"
+      },
+      "value": 0.0
+    },
+    {
+      "factor1": {
+        "type": "CR",
+        "name": "BANK"
+      },
+      "factor2": {
+        "type": "IR",
+        "name": "EUR"
+      },
+      "value": 0.0
+    },
+    {
+      "factor1": {
+        "type": "CR",
+        "name": "BANK"
+      },
+      "factor2": {
+        "type": "IR",
+        "name": "USD"
+      },
+      "value": 0.0
+    },
+    {
+      "factor1": {
+        "type": "CR",
+        "name": "CPTY_A"
+      },
+      "factor2": {
+        "type": "IR",
+        "name": "EUR"
+      },
+      "value": 0.0
+    },
+    {
+      "factor1": {
+        "type": "CR",
+        "name": "CPTY_A"
+      },
+      "factor2": {
+        "type": "IR",
+        "name": "USD"
+      },
+      "value": 0.0
+    },
+    {
+      "factor1": {
+        "type": "FX",
+        "name": "USDEUR"
+      },
+      "factor2": {
+        "type": "CrState",
+        "name": "0"
+      },
+      "value": 0.0
+    },
+    {
+      "factor1": {
+        "type": "FX",
+        "name": "USDEUR"
+      },
+      "factor2": {
+        "type": "CrState",
+        "name": "1"
+      },
+      "value": 0.0
+    },
+    {
+      "factor1": {
+        "type": "CR",
+        "name": "BANK"
+      },
+      "factor2": {
+        "type": "CrState",
+        "name": "0"
+      },
+      "value": 0.0
+    },
+    {
+      "factor1": {
+        "type": "CR",
+        "name": "BANK"
+      },
+      "factor2": {
+        "type": "CrState",
+        "name": "1"
+      },
+      "value": 0.0
+    },
+    {
+      "factor1": {
+        "type": "CR",
+        "name": "CPTY_A"
+      },
+      "factor2": {
+        "type": "CrState",
+        "name": "0"
+      },
+      "value": 0.0
+    },
+    {
+      "factor1": {
+        "type": "CR",
+        "name": "CPTY_A"
+      },
+      "factor2": {
+        "type": "CrState",
+        "name": "1"
+      },
+      "value": 0.0
+    },
+    {
+      "factor1": {
+        "type": "CrState",
+        "name": "0"
+      },
+      "factor2": {
+        "type": "CrState",
+        "name": "1"
+      },
+      "value": 0.0
+    },
+    {
+      "factor1": {
+        "type": "CrState",
+        "name": "0"
+      },
+      "factor2": {
+        "type": "IR",
+        "name": "EUR"
+      },
+      "value": 0.0
+    },
+    {
+      "factor1": {
+        "type": "CrState",
+        "name": "0"
+      },
+      "factor2": {
+        "type": "IR",
+        "name": "USD"
+      },
+      "value": 0.0
+    },
+    {
+      "factor1": {
+        "type": "CrState",
+        "name": "1"
+      },
+      "factor2": {
+        "type": "IR",
+        "name": "EUR"
+      },
+      "value": 0.0
+    },
+    {
+      "factor1": {
+        "type": "CrState",
+        "name": "1"
+      },
+      "factor2": {
+        "type": "IR",
+        "name": "USD"
+      },
+      "value": 0.0
+    },
+    {
+      "factor1": {
+        "type": "FX",
+        "name": "USDEUR"
+      },
+      "factor2": {
+        "type": "EQ",
+        "name": "RIC:.SPX"
+      },
+      "value": 0.0
+    },
+    {
+      "factor1": {
+        "type": "FX",
+        "name": "USDEUR"
+      },
+      "factor2": {
+        "type": "EQ",
+        "name": "RIC:.STOXX50E"
+      },
+      "value": 0.0
+    },
+    {
+      "factor1": {
+        "type": "CR",
+        "name": "BANK"
+      },
+      "factor2": {
+        "type": "EQ",
+        "name": "RIC:.SPX"
+      },
+      "value": 0.0
+    },
+    {
+      "factor1": {
+        "type": "CR",
+        "name": "BANK"
+      },
+      "factor2": {
+        "type": "EQ",
+        "name": "RIC:.STOXX50E"
+      },
+      "value": 0.0
+    },
+    {
+      "factor1": {
+        "type": "CR",
+        "name": "CPTY_A"
+      },
+      "factor2": {
+        "type": "EQ",
+        "name": "RIC:.SPX"
+      },
+      "value": 0.0
+    },
+    {
+      "factor1": {
+        "type": "CR",
+        "name": "CPTY_A"
+      },
+      "factor2": {
+        "type": "EQ",
+        "name": "RIC:.STOXX50E"
+      },
+      "value": 0.0
+    },
+    {
+      "factor1": {
+        "type": "CrState",
+        "name": "0"
+      },
+      "factor2": {
+        "type": "EQ",
+        "name": "RIC:.SPX"
+      },
+      "value": 0.0
+    },
+    {
+      "factor1": {
+        "type": "CrState",
+        "name": "0"
+      },
+      "factor2": {
+        "type": "EQ",
+        "name": "RIC:.STOXX50E"
+      },
+      "value": 0.0
+    },
+    {
+      "factor1": {
+        "type": "CrState",
+        "name": "1"
+      },
+      "factor2": {
+        "type": "EQ",
+        "name": "RIC:.SPX"
+      },
+      "value": 0.0
+    },
+    {
+      "factor1": {
+        "type": "CrState",
+        "name": "1"
+      },
+      "factor2": {
+        "type": "EQ",
+        "name": "RIC:.STOXX50E"
+      },
+      "value": 0.0
+    },
+    {
+      "factor1": {
+        "type": "EQ",
+        "name": "RIC:.SPX"
+      },
+      "factor2": {
+        "type": "EQ",
+        "name": "RIC:.STOXX50E"
+      },
+      "value": 0.0
+    },
+    {
+      "factor1": {
+        "type": "EQ",
+        "name": "RIC:.SPX"
+      },
+      "factor2": {
+        "type": "IR",
+        "name": "EUR"
+      },
+      "value": 0.0
+    },
+    {
+      "factor1": {
+        "type": "EQ",
+        "name": "RIC:.SPX"
+      },
+      "factor2": {
+        "type": "IR",
+        "name": "USD"
+      },
+      "value": 0.0
+    },
+    {
+      "factor1": {
+        "type": "EQ",
+        "name": "RIC:.STOXX50E"
+      },
+      "factor2": {
+        "type": "IR",
+        "name": "EUR"
+      },
+      "value": 0.0
+    },
+    {
+      "factor1": {
+        "type": "EQ",
+        "name": "RIC:.STOXX50E"
+      },
+      "factor2": {
+        "type": "IR",
+        "name": "USD"
+      },
+      "value": 0.0
+    }
+  ]
+}

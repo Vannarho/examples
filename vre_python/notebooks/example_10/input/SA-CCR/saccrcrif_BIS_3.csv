@@ -1,0 +1,4 @@
+TradeID,PortfolioID,ProductClass,RiskType,Qualifier,Bucket,Label1,Label2,AmountCurrency,Amount
+CommodityForward_WTI_9M,,RatesFX,PV,,,2023-11-07,,USD,-50
+CommodityForward_Brent_2Y,,RatesFX,PV,,,2023-11-07,,USD,-30
+CommodityForward_Silver_5Y,,RatesFX,PV,,,2023-11-07,,USD,100

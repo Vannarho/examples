@@ -1,0 +1,127 @@
+version: 1.0.0
+profileId: pricingengine_amc
+traceabilityRefs:
+  adr: docs/architecture/adr/0001-serialization-and-storage-format-standards.md
+  epic: docs/architecture/scope_runtime_migration.yaml
+  spec: docs/architecture/scope_runtime_migration.yaml
+  sourceXml: vre_python/notebooks/example_3/input/pricingengine_amc.xml
+globalParameters: {}
+products:
+- productType: Swap
+  model:
+    name: CrossAssetModel
+    parameters: {}
+  engine:
+    name: AMC
+    parameters:
+      Training.Sequence: MersenneTwisterAntithetic
+      Training.Seed: '42'
+      Training.Samples: '10000'
+      Pricing.Sequence: SobolBrownianBridge
+      Pricing.Seed: '17'
+      Pricing.Samples: '0'
+      Training.BasisFunction: Monomial
+      Training.BasisFunctionOrder: '6'
+      BrownianBridgeOrdering: Steps
+      SobolDirectionIntegers: JoeKuoD7
+      MinObsDate: 'true'
+      RegressionOnExerciseOnly: 'false'
+- productType: CrossCurrencySwap
+  model:
+    name: CrossAssetModel
+    parameters: {}
+  engine:
+    name: AMC
+    parameters:
+      Training.Sequence: MersenneTwisterAntithetic
+      Training.Seed: '42'
+      Training.Samples: '10000'
+      Pricing.Sequence: SobolBrownianBridge
+      Pricing.Seed: '17'
+      Pricing.Samples: '0'
+      Training.BasisFunction: Monomial
+      Training.BasisFunctionOrder: '2'
+      BrownianBridgeOrdering: Steps
+      SobolDirectionIntegers: JoeKuoD7
+      MinObsDate: 'true'
+      RegressionOnExerciseOnly: 'false'
+- productType: FxOption
+  model:
+    name: CrossAssetModel
+    parameters: {}
+  engine:
+    name: AMC
+    parameters:
+      Training.Sequence: MersenneTwisterAntithetic
+      Training.Seed: '42'
+      Training.Samples: '10000'
+      Pricing.Sequence: SobolBrownianBridge
+      Pricing.Seed: '17'
+      Pricing.Samples: '0'
+      Training.BasisFunction: Monomial
+      Training.BasisFunctionOrder: '2'
+      BrownianBridgeOrdering: Steps
+      SobolDirectionIntegers: JoeKuoD7
+      MinObsDate: 'true'
+      RegressionOnExerciseOnly: 'false'
+- productType: BermudanSwaption
+  model:
+    name: LGM
+    parameters: {}
+  engine:
+    name: AMC
+    parameters:
+      Training.Sequence: MersenneTwisterAntithetic
+      Training.Seed: '42'
+      Training.Samples: '10000'
+      Pricing.Sequence: SobolBrownianBridge
+      Pricing.Seed: '17'
+      Pricing.Samples: '0'
+      Training.BasisFunction: Monomial
+      Training.BasisFunctionOrder: '6'
+      BrownianBridgeOrdering: Steps
+      SobolDirectionIntegers: JoeKuoD7
+      MinObsDate: 'true'
+      RegressionOnExerciseOnly: 'false'
+- productType: MultiLegOption
+  model:
+    name: CrossAssetModel
+    parameters: {}
+  engine:
+    name: AMC
+    parameters:
+      Training.Sequence: MersenneTwisterAntithetic
+      Training.Seed: '42'
+      Training.Samples: '10000'
+      Pricing.Sequence: SobolBrownianBridge
+      Pricing.Seed: '17'
+      Pricing.Samples: '0'
+      Training.BasisFunction: Monomial
+      Training.BasisFunctionOrder: '4'
+      BrownianBridgeOrdering: Steps
+      SobolDirectionIntegers: JoeKuoD7
+      MinObsDate: 'true'
+      RegressionOnExerciseOnly: 'false'
+- productType: CapFlooredIborLeg
+  model:
+    name: BlackOrBachelier
+    parameters: {}
+  engine:
+    name: BlackIborCouponPricer
+    parameters: {}
+- productType: CMS
+  model:
+    name: LinearTSR
+    parameters: {}
+  engine:
+    name: LinearTSRPricer
+    parameters:
+      MeanReversion: '0.0'
+      Policy: RateBound
+      LowerRateBoundLogNormal: '0.0001'
+      UpperRateBoundLogNormal: '2.0000'
+      LowerRateBoundNormal: '-2.0000'
+      UpperRateBoundNormal: '2.0000'
+      VegaRatio: '0.01'
+      PriceThreshold: '0.0000001'
+      BsStdDev: '3.0'

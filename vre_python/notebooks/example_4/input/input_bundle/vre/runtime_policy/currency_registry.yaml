@@ -1,0 +1,1787 @@
+version: 1.0.0
+traceabilityRefs:
+  adr: docs/architecture/adr/0001-serialization-and-storage-format-standards.md
+  epic: docs/architecture/scope_runtime_migration.yaml
+  spec: docs/architecture/scope_runtime_migration.yaml
+  sourceXml: vre_python/notebooks/example_4/input/currencies.xml
+currencies:
+- name: United Arab Emirates dirham
+  isoCode: AED
+  numericCode: 784
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Afghan afghani
+  isoCode: AFN
+  numericCode: 971
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Albanian lek
+  isoCode: ALL
+  numericCode: 8
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Armenian dram
+  isoCode: AMD
+  numericCode: 51
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Netherlands Antillean guilder
+  isoCode: ANG
+  numericCode: 532
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Angolan kwanza
+  isoCode: AOA
+  numericCode: 973
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Argentine peso
+  isoCode: ARS
+  numericCode: 32
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Australian dollar
+  isoCode: AUD
+  numericCode: 36
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Aruban florin
+  isoCode: AWG
+  numericCode: 533
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Azerbaijani manat
+  isoCode: AZN
+  numericCode: 944
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Bosnia and Herzegovina convertible mark
+  isoCode: BAM
+  numericCode: 977
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Barbados dollar
+  isoCode: BBD
+  numericCode: 52
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Bangladeshi taka
+  isoCode: BDT
+  numericCode: 50
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Bulgarian lev
+  isoCode: BGN
+  numericCode: 975
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Bahraini dinar
+  isoCode: BHD
+  numericCode: 48
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 1000
+  roundingType: Closest
+  roundingPrecision: 3
+  currencyType: ''
+  minorUnitCodes: []
+- name: Burundian franc
+  isoCode: BIF
+  numericCode: 108
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 1
+  roundingType: Closest
+  roundingPrecision: 0
+  currencyType: ''
+  minorUnitCodes: []
+- name: Bermudian dollar
+  isoCode: BMD
+  numericCode: 60
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Brunei dollar
+  isoCode: BND
+  numericCode: 96
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Boliviano
+  isoCode: BOB
+  numericCode: 68
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Bolivian Mvdol (funds code)
+  isoCode: BOV
+  numericCode: 984
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Brazilian real
+  isoCode: BRL
+  numericCode: 986
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Bahamian dollar
+  isoCode: BSD
+  numericCode: 44
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Bhutanese ngultrum
+  isoCode: BTN
+  numericCode: 64
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Botswana pula
+  isoCode: BWP
+  numericCode: 72
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Belarusian ruble
+  isoCode: BYN
+  numericCode: 933
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Belize dollar
+  isoCode: BZD
+  numericCode: 84
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Canadian dollar
+  isoCode: CAD
+  numericCode: 124
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Congolese franc
+  isoCode: CDF
+  numericCode: 976
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: WIR euro (complementary currency)
+  isoCode: CHE
+  numericCode: 947
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Swiss franc
+  isoCode: CHF
+  numericCode: 756
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: WIR franc (complementary currency)
+  isoCode: CHW
+  numericCode: 948
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Unidad de Fomento (funds code)
+  isoCode: CLF
+  numericCode: 990
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 10000
+  roundingType: Closest
+  roundingPrecision: 4
+  currencyType: ''
+  minorUnitCodes: []
+- name: Chilean peso
+  isoCode: CLP
+  numericCode: 152
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 1
+  roundingType: Closest
+  roundingPrecision: 0
+  currencyType: ''
+  minorUnitCodes: []
+- name: Offshore Chinese Yuan traded in Hong Kong (Non-ISO)
+  isoCode: CNH
+  numericCode: 0
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Offshore Chinese Yuan traded in Taiwan (Non-ISO)
+  isoCode: CNT
+  numericCode: 0
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Chinese yuan
+  isoCode: CNY
+  numericCode: 156
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Colombian peso
+  isoCode: COP
+  numericCode: 170
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Unidad de Valor Real (UVR) (funds code)
+  isoCode: COU
+  numericCode: 970
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Costa Rican colon
+  isoCode: CRC
+  numericCode: 188
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Cuban convertible peso
+  isoCode: CUC
+  numericCode: 931
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Cuban peso
+  isoCode: CUP
+  numericCode: 192
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Cape Verdean escudo
+  isoCode: CVE
+  numericCode: 132
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Czech koruna
+  isoCode: CZK
+  numericCode: 203
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Djiboutian franc
+  isoCode: DJF
+  numericCode: 262
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 1
+  roundingType: Closest
+  roundingPrecision: 0
+  currencyType: ''
+  minorUnitCodes: []
+- name: Danish krone
+  isoCode: DKK
+  numericCode: 208
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Dominican peso
+  isoCode: DOP
+  numericCode: 214
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Algerian dinar
+  isoCode: DZD
+  numericCode: 12
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Egyptian pound
+  isoCode: EGP
+  numericCode: 818
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Eritrean nakfa
+  isoCode: ERN
+  numericCode: 232
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Ethiopian birr
+  isoCode: ETB
+  numericCode: 230
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Euro
+  isoCode: EUR
+  numericCode: 978
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Fiji dollar
+  isoCode: FJD
+  numericCode: 242
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Falkland Islands pound
+  isoCode: FKP
+  numericCode: 238
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Pound sterling
+  isoCode: GBP
+  numericCode: 826
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Georgian lari
+  isoCode: GEL
+  numericCode: 981
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Guernsey Pound (Non-ISO)
+  isoCode: GGP
+  numericCode: 0
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Ghanaian cedi
+  isoCode: GHS
+  numericCode: 936
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Gibraltar pound
+  isoCode: GIP
+  numericCode: 292
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Gambian dalasi
+  isoCode: GMD
+  numericCode: 270
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Guinean franc
+  isoCode: GNF
+  numericCode: 324
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 1
+  roundingType: Closest
+  roundingPrecision: 0
+  currencyType: ''
+  minorUnitCodes: []
+- name: Guatemalan quetzal
+  isoCode: GTQ
+  numericCode: 320
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Guyanese dollar
+  isoCode: GYD
+  numericCode: 328
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Hong Kong dollar
+  isoCode: HKD
+  numericCode: 344
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Honduran lempira
+  isoCode: HNL
+  numericCode: 340
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Croatian kuna
+  isoCode: HRK
+  numericCode: 191
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Haitian gourde
+  isoCode: HTG
+  numericCode: 332
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Hungarian forint
+  isoCode: HUF
+  numericCode: 348
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Indonesian rupiah
+  isoCode: IDR
+  numericCode: 360
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Israeli new shekel
+  isoCode: ILS
+  numericCode: 376
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Isle of Man Pound (Non-ISO)
+  isoCode: IMP
+  numericCode: 0
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Indian rupee
+  isoCode: INR
+  numericCode: 356
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Iraqi dinar
+  isoCode: IQD
+  numericCode: 368
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 1000
+  roundingType: Closest
+  roundingPrecision: 3
+  currencyType: ''
+  minorUnitCodes: []
+- name: Iranian rial
+  isoCode: IRR
+  numericCode: 364
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Icelandic krona
+  isoCode: ISK
+  numericCode: 352
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 1
+  roundingType: Closest
+  roundingPrecision: 0
+  currencyType: ''
+  minorUnitCodes: []
+- name: Jersey Pound (Non-ISO)
+  isoCode: JEP
+  numericCode: 0
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Jamaican dollar
+  isoCode: JMD
+  numericCode: 388
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Jordanian dinar
+  isoCode: JOD
+  numericCode: 400
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 1000
+  roundingType: Closest
+  roundingPrecision: 3
+  currencyType: ''
+  minorUnitCodes: []
+- name: Japanese yen
+  isoCode: JPY
+  numericCode: 392
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 1
+  roundingType: Closest
+  roundingPrecision: 0
+  currencyType: ''
+  minorUnitCodes: []
+- name: Kenyan shilling
+  isoCode: KES
+  numericCode: 404
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Kyrgyzstani som
+  isoCode: KGS
+  numericCode: 417
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Cambodian riel
+  isoCode: KHR
+  numericCode: 116
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Kiribati dollar (Non-ISO)
+  isoCode: KID
+  numericCode: 0
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Comoro franc
+  isoCode: KMF
+  numericCode: 174
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 1
+  roundingType: Closest
+  roundingPrecision: 0
+  currencyType: ''
+  minorUnitCodes: []
+- name: North Korean won
+  isoCode: KPW
+  numericCode: 408
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: South Korean won
+  isoCode: KRW
+  numericCode: 410
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 1
+  roundingType: Closest
+  roundingPrecision: 0
+  currencyType: ''
+  minorUnitCodes: []
+- name: Kuwaiti dinar
+  isoCode: KWD
+  numericCode: 414
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 1000
+  roundingType: Closest
+  roundingPrecision: 3
+  currencyType: ''
+  minorUnitCodes: []
+- name: Cayman Islands dollar
+  isoCode: KYD
+  numericCode: 136
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Kazakhstani tenge
+  isoCode: KZT
+  numericCode: 398
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Lao kip
+  isoCode: LAK
+  numericCode: 418
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Lebanese pound
+  isoCode: LBP
+  numericCode: 422
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Sri Lankan rupee
+  isoCode: LKR
+  numericCode: 144
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Liberian dollar
+  isoCode: LRD
+  numericCode: 430
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Lesotho loti
+  isoCode: LSL
+  numericCode: 426
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Libyan dinar
+  isoCode: LYD
+  numericCode: 434
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 1000
+  roundingType: Closest
+  roundingPrecision: 3
+  currencyType: ''
+  minorUnitCodes: []
+- name: Moroccan dirham
+  isoCode: MAD
+  numericCode: 504
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Moldovan leu
+  isoCode: MDL
+  numericCode: 498
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Malagasy ariary
+  isoCode: MGA
+  numericCode: 969
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Macedonian denar
+  isoCode: MKD
+  numericCode: 807
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Myanmar kyat
+  isoCode: MMK
+  numericCode: 104
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Mongolian toegroeg
+  isoCode: MNT
+  numericCode: 496
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Macanese pataca
+  isoCode: MOP
+  numericCode: 446
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Mauritanian ouguiya
+  isoCode: MRU
+  numericCode: 929
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Mauritian rupee
+  isoCode: MUR
+  numericCode: 480
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Maldivian rufiyaa
+  isoCode: MVR
+  numericCode: 462
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Malawian kwacha
+  isoCode: MWK
+  numericCode: 454
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Mexican peso
+  isoCode: MXN
+  numericCode: 484
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Mexican Unidad de Inversion (UDI) (funds code)
+  isoCode: MXV
+  numericCode: 979
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Malaysian ringgit
+  isoCode: MYR
+  numericCode: 458
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Mozambican metical
+  isoCode: MZN
+  numericCode: 943
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Namibian dollar
+  isoCode: NAD
+  numericCode: 516
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Nigerian naira
+  isoCode: NGN
+  numericCode: 566
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Nicaraguan cordoba
+  isoCode: NIO
+  numericCode: 558
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Norwegian krone
+  isoCode: NOK
+  numericCode: 578
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Nepalese rupee
+  isoCode: NPR
+  numericCode: 524
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: New Zealand dollar
+  isoCode: NZD
+  numericCode: 554
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Omani rial
+  isoCode: OMR
+  numericCode: 512
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 1000
+  roundingType: Closest
+  roundingPrecision: 3
+  currencyType: ''
+  minorUnitCodes: []
+- name: Panamanian balboa
+  isoCode: PAB
+  numericCode: 590
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Peruvian sol
+  isoCode: PEN
+  numericCode: 604
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Papua New Guinean kina
+  isoCode: PGK
+  numericCode: 598
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Philippine peso
+  isoCode: PHP
+  numericCode: 608
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Pakistani rupee
+  isoCode: PKR
+  numericCode: 586
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Polish z_oty
+  isoCode: PLN
+  numericCode: 985
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Paraguayan guarani
+  isoCode: PYG
+  numericCode: 600
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 1
+  roundingType: Closest
+  roundingPrecision: 0
+  currencyType: ''
+  minorUnitCodes: []
+- name: Qatari riyal
+  isoCode: QAR
+  numericCode: 634
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Romanian leu
+  isoCode: RON
+  numericCode: 946
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Serbian dinar
+  isoCode: RSD
+  numericCode: 941
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Russian ruble
+  isoCode: RUB
+  numericCode: 643
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Rwandan franc
+  isoCode: RWF
+  numericCode: 646
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 1
+  roundingType: Closest
+  roundingPrecision: 0
+  currencyType: ''
+  minorUnitCodes: []
+- name: Saudi riyal
+  isoCode: SAR
+  numericCode: 682
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Solomon Islands dollar
+  isoCode: SBD
+  numericCode: 90
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Seychelles rupee
+  isoCode: SCR
+  numericCode: 690
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Sudanese pound
+  isoCode: SDG
+  numericCode: 938
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Swedish krona/kronor
+  isoCode: SEK
+  numericCode: 752
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Singapore dollar
+  isoCode: SGD
+  numericCode: 702
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Saint Helena pound
+  isoCode: SHP
+  numericCode: 654
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Sierra Leonean leone
+  isoCode: SLL
+  numericCode: 694
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Somali shilling
+  isoCode: SOS
+  numericCode: 706
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Surinamese dollar
+  isoCode: SRD
+  numericCode: 968
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: South Sudanese pound
+  isoCode: SSP
+  numericCode: 728
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Sao Tome and Principe dobra
+  isoCode: STN
+  numericCode: 930
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Salvadoran colon
+  isoCode: SVC
+  numericCode: 222
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Syrian pound
+  isoCode: SYP
+  numericCode: 760
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Swazi lilangeni
+  isoCode: SZL
+  numericCode: 748
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Thai baht
+  isoCode: THB
+  numericCode: 764
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Tajikistani somoni
+  isoCode: TJS
+  numericCode: 972
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Turkmenistan manat
+  isoCode: TMT
+  numericCode: 934
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Tunisian dinar
+  isoCode: TND
+  numericCode: 788
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 1000
+  roundingType: Closest
+  roundingPrecision: 3
+  currencyType: ''
+  minorUnitCodes: []
+- name: Tongan pa_anga
+  isoCode: TOP
+  numericCode: 776
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Turkish lira
+  isoCode: TRY
+  numericCode: 949
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Trinidad and Tobago dollar
+  isoCode: TTD
+  numericCode: 780
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: New Taiwan dollar
+  isoCode: TWD
+  numericCode: 901
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Tanzanian shilling
+  isoCode: TZS
+  numericCode: 834
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Ukrainian hryvnia
+  isoCode: UAH
+  numericCode: 980
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Ugandan shilling
+  isoCode: UGX
+  numericCode: 800
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 1
+  roundingType: Closest
+  roundingPrecision: 0
+  currencyType: ''
+  minorUnitCodes: []
+- name: United States dollar
+  isoCode: USD
+  numericCode: 840
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: United States dollar (next day) (funds code)
+  isoCode: USN
+  numericCode: 997
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Uruguay Peso en Unidades Indexadas (URUIURUI) (funds code)
+  isoCode: UYI
+  numericCode: 940
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 1
+  roundingType: Closest
+  roundingPrecision: 0
+  currencyType: ''
+  minorUnitCodes: []
+- name: Uruguayan peso
+  isoCode: UYU
+  numericCode: 858
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Unidad previsional
+  isoCode: UYW
+  numericCode: 927
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 10000
+  roundingType: Closest
+  roundingPrecision: 4
+  currencyType: ''
+  minorUnitCodes: []
+- name: Uzbekistan som
+  isoCode: UZS
+  numericCode: 860
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Venezuelan bolivar soberano
+  isoCode: VES
+  numericCode: 928
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Vietnamese dong
+  isoCode: VND
+  numericCode: 704
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 1
+  roundingType: Closest
+  roundingPrecision: 0
+  currencyType: ''
+  minorUnitCodes: []
+- name: Vanuatu vatu
+  isoCode: VUV
+  numericCode: 548
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 1
+  roundingType: Closest
+  roundingPrecision: 0
+  currencyType: ''
+  minorUnitCodes: []
+- name: Samoan tala
+  isoCode: WST
+  numericCode: 882
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: CFA franc BEAC
+  isoCode: XAF
+  numericCode: 950
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 1
+  roundingType: Closest
+  roundingPrecision: 0
+  currencyType: ''
+  minorUnitCodes: []
+- name: Silver (one troy ounce)
+  isoCode: XAG
+  numericCode: 961
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Gold (one troy ounce)
+  isoCode: XAU
+  numericCode: 959
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: East Caribbean dollar
+  isoCode: XCD
+  numericCode: 951
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: CFA franc BCEAO
+  isoCode: XOF
+  numericCode: 952
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 1
+  roundingType: Closest
+  roundingPrecision: 0
+  currencyType: ''
+  minorUnitCodes: []
+- name: Palladium (one troy ounce)
+  isoCode: XPD
+  numericCode: 964
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: CFP franc (franc Pacifique)
+  isoCode: XPF
+  numericCode: 953
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 1
+  roundingType: Closest
+  roundingPrecision: 0
+  currencyType: ''
+  minorUnitCodes: []
+- name: Platinum (one troy ounce)
+  isoCode: XPT
+  numericCode: 962
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: SUCRE
+  isoCode: XSU
+  numericCode: 994
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: ADB Unit of Account
+  isoCode: XUA
+  numericCode: 965
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Yemeni rial
+  isoCode: YER
+  numericCode: 886
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: South African rand
+  isoCode: ZAR
+  numericCode: 710
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Zambian kwacha
+  isoCode: ZMW
+  numericCode: 967
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []
+- name: Zimbabwean dollar
+  isoCode: ZWL
+  numericCode: 932
+  symbol: ''
+  fractionSymbol: ''
+  fractionsPerUnit: 100
+  roundingType: Closest
+  roundingPrecision: 2
+  currencyType: ''
+  minorUnitCodes: []

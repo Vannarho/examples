@@ -1,0 +1,122 @@
+{
+  "schemaVersion": "1.0.0",
+  "seedVersion": "1.0.0",
+  "traceabilityRefs": {
+    "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+    "epic": "docs/architecture/scope_runtime_migration.yaml",
+    "sourceXml": "vre_python/notebooks/example_2/input/simulation_dim.xml",
+    "spec": "docs/architecture/scope_runtime_migration.yaml"
+  },
+  "correlations": [
+    {
+      "factor1": {
+        "type": "IR",
+        "name": "EUR"
+      },
+      "factor2": {
+        "type": "IR",
+        "name": "USD"
+      },
+      "value": 0.3
+    },
+    {
+      "factor1": {
+        "type": "IR",
+        "name": "EUR"
+      },
+      "factor2": {
+        "type": "IR",
+        "name": "GBP"
+      },
+      "value": 0.3
+    },
+    {
+      "factor1": {
+        "type": "IR",
+        "name": "USD"
+      },
+      "factor2": {
+        "type": "IR",
+        "name": "GBP"
+      },
+      "value": 0.3
+    },
+    {
+      "factor1": {
+        "type": "IR",
+        "name": "EUR"
+      },
+      "factor2": {
+        "type": "FX",
+        "name": "USDEUR"
+      },
+      "value": 0.0
+    },
+    {
+      "factor1": {
+        "type": "IR",
+        "name": "EUR"
+      },
+      "factor2": {
+        "type": "FX",
+        "name": "GBPEUR"
+      },
+      "value": 0.0
+    },
+    {
+      "factor1": {
+        "type": "IR",
+        "name": "GBP"
+      },
+      "factor2": {
+        "type": "FX",
+        "name": "USDEUR"
+      },
+      "value": 0.0
+    },
+    {
+      "factor1": {
+        "type": "IR",
+        "name": "GBP"
+      },
+      "factor2": {
+        "type": "FX",
+        "name": "GBPEUR"
+      },
+      "value": 0.0
+    },
+    {
+      "factor1": {
+        "type": "IR",
+        "name": "USD"
+      },
+      "factor2": {
+        "type": "FX",
+        "name": "USDEUR"
+      },
+      "value": 0.0
+    },
+    {
+      "factor1": {
+        "type": "IR",
+        "name": "USD"
+      },
+      "factor2": {
+        "type": "FX",
+        "name": "GBPEUR"
+      },
+      "value": 0.0
+    },
+    {
+      "factor1": {
+        "type": "FX",
+        "name": "USDEUR"
+      },
+      "factor2": {
+        "type": "FX",
+        "name": "GBPEUR"
+      },
+      "value": 0.0
+    }
+  ]
+}

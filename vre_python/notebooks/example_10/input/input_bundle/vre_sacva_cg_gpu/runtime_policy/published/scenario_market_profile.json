@@ -1,0 +1,122 @@
+{
+  "version": "1.0.0",
+  "traceabilityRefs": {
+    "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+    "epic": "docs/architecture/scope_runtime_migration.yaml",
+    "spec": "docs/architecture/scope_runtime_migration.yaml",
+    "sourceXml": "vre_python/notebooks/example_10/input/cg/sensimarket.xml"
+  },
+  "marketDefinitionText": "<Market>\n    <BaseCurrency>EUR</BaseCurrency>\n    <Currencies><Currency>EUR</Currency><Currency>USD</Currency></Currencies>\n    <YieldCurves>\n      <Configuration curve=\"\">\n\t<Tenors>2W, 1M, 3M, 6M, 1Y, 2Y, 3Y, 5Y, 10Y, 15Y, 20Y, 30Y</Tenors>\n\t<Interpolation>LogLinear</Interpolation>\n\t<Extrapolation>FlatZero</Extrapolation>\n      </Configuration>\n    \n      <Simulate>true</Simulate></YieldCurves>\n    <Indices><Index>EUR-EONIA</Index><Index>EUR-ESTER</Index><Index>EUR-EURIBOR-3M</Index><Index>EUR-EURIBOR-6M</Index><Index>USD-LIBOR-3M</Index></Indices>\n    <CreditStates>\n      <NumberOfFactors>0</NumberOfFactors>\n    </CreditStates>\n    <AggregationScenarioDataCreditStates>\n      <NumberOfFactors>0</NumberOfFactors>\n    </AggregationScenarioDataCreditStates>\n    <Correlations>\n      <Simulate>true</Simulate>\n      <Pairs>\n\t<Pair>EQ-RIC:.STOXX50E&amp;EQ-RIC:.SPX</Pair>\n      </Pairs>\n      <Expiries>1Y</Expiries>\n    </Correlations>\n  \n    <AggregationScenarioDataCurrencies><Currency>EUR</Currency><Currency>USD</Currency></AggregationScenarioDataCurrencies>\n    <AggregationScenarioDataIndices><Index>EUR-EONIA</Index><Index>EUR-ESTER</Index><Index>EUR-EURIBOR-3M</Index><Index>EUR-EURIBOR-6M</Index><Index>USD-LIBOR-3M</Index></AggregationScenarioDataIndices>\n    <FxVolatilities><CurrencyPairs><CurrencyPair>USDEUR</CurrencyPair><CurrencyPair>EURUSD</CurrencyPair></CurrencyPairs><ReactionToTimeDecay>ForwardVariance</ReactionToTimeDecay><Expiries>2W,1M,3M,6M,1Y,2Y,3Y,4Y,5Y,10Y,15Y,20Y,30Y</Expiries><Surface><StandardDeviations>-0.05,-0.1,-0.25,-0.5,-1.0,-2.0,-3.0,-4.0,-5.0,-6.0,-7.0,0.0,0.05,0.1,0.25,0.5,1.0,2.0,3.0,4.0,5.0,6.0,7.0</StandardDeviations></Surface></FxVolatilities>\n    <AggregationScenarioDataSurvivalWeights><Name>BANK</Name><Name>CPTY_A</Name></AggregationScenarioDataSurvivalWeights>\n    <FxRates><CurrencyPairs><CurrencyPair>EURUSD</CurrencyPair><CurrencyPair>USDEUR</CurrencyPair></CurrencyPairs></FxRates>\n    <DefaultCurves><SimulateSurvivalProbabilities>true</SimulateSurvivalProbabilities>\n      <Tenors>2W,1M,3M,6M,1Y,2Y,3Y,5Y,10Y,15Y,20Y,30Y</Tenors>\n      <Names><Name>BANK</Name><Name>CPTY_A</Name></Names></DefaultCurves>\n    <SwapIndices><SwapIndex><Name>USD-CMS-1Y</Name><DiscountingIndex>USD-LIBOR-3M</DiscountingIndex></SwapIndex><SwapIndex><Name>USD-CMS-30Y</Name><DiscountingIndex>USD-LIBOR-3M</DiscountingIndex></SwapIndex></SwapIndices></Market>\n",
+  "marketDefinition": {
+    "BaseCurrency": "EUR",
+    "Currencies": {
+      "Currency": [
+        "EUR",
+        "USD"
+      ]
+    },
+    "YieldCurves": {
+      "Configuration": {
+        "_attributes": {
+          "curve": ""
+        },
+        "Tenors": "2W, 1M, 3M, 6M, 1Y, 2Y, 3Y, 5Y, 10Y, 15Y, 20Y, 30Y",
+        "Interpolation": "LogLinear",
+        "Extrapolation": "FlatZero"
+      },
+      "Simulate": true
+    },
+    "FxRates": {
+      "CurrencyPairs": {
+        "CurrencyPair": [
+          "EURUSD",
+          "USDEUR"
+        ]
+      },
+      "Simulate": true
+    },
+    "Indices": {
+      "Index": [
+        "EUR-EONIA",
+        "EUR-ESTER",
+        "EUR-EURIBOR-3M",
+        "EUR-EURIBOR-6M",
+        "USD-LIBOR-3M"
+      ]
+    },
+    "FxVolatilities": {
+      "CurrencyPairs": {
+        "CurrencyPair": [
+          "USDEUR",
+          "EURUSD"
+        ]
+      },
+      "ReactionToTimeDecay": "ForwardVariance",
+      "Expiries": "2W,1M,3M,6M,1Y,2Y,3Y,4Y,5Y,10Y,15Y,20Y,30Y",
+      "Surface": {
+        "StandardDeviations": "-0.05,-0.1,-0.25,-0.5,-1.0,-2.0,-3.0,-4.0,-5.0,-6.0,-7.0,0.0,0.05,0.1,0.25,0.5,1.0,2.0,3.0,4.0,5.0,6.0,7.0"
+      }
+    },
+    "CreditStates": {
+      "NumberOfFactors": 0
+    },
+    "AggregationScenarioDataCreditStates": {
+      "NumberOfFactors": 0
+    },
+    "Correlations": {
+      "Simulate": true,
+      "Pairs": {
+        "Pair": "EQ-RIC:.STOXX50E&EQ-RIC:.SPX"
+      },
+      "Expiries": "1Y"
+    },
+    "AggregationScenarioDataCurrencies": {
+      "Currency": [
+        "EUR",
+        "USD"
+      ]
+    },
+    "AggregationScenarioDataIndices": {
+      "Index": [
+        "EUR-EONIA",
+        "EUR-ESTER",
+        "EUR-EURIBOR-3M",
+        "EUR-EURIBOR-6M",
+        "USD-LIBOR-3M"
+      ]
+    },
+    "AggregationScenarioDataSurvivalWeights": {
+      "Name": [
+        "BANK",
+        "CPTY_A"
+      ]
+    },
+    "DefaultCurves": {
+      "Names": {
+        "Name": [
+          "BANK",
+          "CPTY_A"
+        ]
+      },
+      "Tenors": "2W,1M,3M,6M,1Y,2Y,3Y,5Y,10Y,15Y,20Y,30Y",
+      "SimulateSurvivalProbabilities": true,
+      "SimulateRecoveryRates": false,
+      "Calendars": {
+        "Calendar": "TARGET"
+      },
+      "Extrapolation": "FlatZero"
+    },
+    "SwapIndices": {
+      "SwapIndex": [
+        {
+          "Name": "USD-CMS-1Y",
+          "DiscountingIndex": "USD-LIBOR-3M"
+        },
+        {
+          "Name": "USD-CMS-30Y",
+          "DiscountingIndex": "USD-LIBOR-3M"
+        }
+      ]
+    }
+  }
+}

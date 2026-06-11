@@ -1,0 +1,284 @@
+{
+  "schemaVersion": "1.0.0",
+  "seedVersion": "1.0.0",
+  "traceabilityRefs": {
+    "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+    "epic": "docs/architecture/scope_runtime_migration.yaml",
+    "sourceXml": "vre_python/notebooks/example_10/input/cg/sensitivity.xml",
+    "spec": "docs/architecture/scope_runtime_migration.yaml"
+  },
+  "profileId": "sensitivity",
+  "families": {
+    "discountCurves": [
+      {
+        "ccy": "EUR",
+        "shiftType": "Absolute",
+        "shiftSize": 0.0001,
+        "shiftScheme": "Forward",
+        "shiftTenors": [
+          "2W",
+          "1M",
+          "3M",
+          "6M",
+          "1Y",
+          "2Y",
+          "3Y",
+          "5Y",
+          "10Y",
+          "15Y",
+          "20Y",
+          "30Y"
+        ]
+      },
+      {
+        "ccy": "USD",
+        "shiftType": "Absolute",
+        "shiftSize": 0.0001,
+        "shiftScheme": "Forward",
+        "shiftTenors": [
+          "2W",
+          "1M",
+          "3M",
+          "6M",
+          "1Y",
+          "2Y",
+          "3Y",
+          "5Y",
+          "10Y",
+          "15Y",
+          "20Y",
+          "30Y"
+        ]
+      }
+    ],
+    "dividendYieldCurves": [
+      {
+        "equity": "RIC:.SPX",
+        "shiftType": "Absolute",
+        "shiftSize": 0.0001,
+        "shiftScheme": "Forward",
+        "shiftTenors": [
+          "2W",
+          "1M",
+          "3M",
+          "6M",
+          "1Y",
+          "2Y",
+          "3Y",
+          "5Y",
+          "10Y",
+          "15Y",
+          "20Y",
+          "30Y"
+        ]
+      },
+      {
+        "equity": "RIC:.STOXX50E",
+        "shiftType": "Absolute",
+        "shiftSize": 0.0001,
+        "shiftScheme": "Forward",
+        "shiftTenors": [
+          "2W",
+          "1M",
+          "3M",
+          "6M",
+          "1Y",
+          "2Y",
+          "3Y",
+          "5Y",
+          "10Y",
+          "15Y",
+          "20Y",
+          "30Y"
+        ]
+      }
+    ],
+    "equitySpots": [
+      {
+        "equity": "RIC:.SPX",
+        "shiftType": "Relative",
+        "shiftSize": 0.001,
+        "shiftScheme": "Central"
+      },
+      {
+        "equity": "RIC:.STOXX50E",
+        "shiftType": "Relative",
+        "shiftSize": 0.001,
+        "shiftScheme": "Central"
+      }
+    ],
+    "equityVolatilities": [
+      {
+        "equity": "RIC:.SPX",
+        "shiftType": "Relative",
+        "shiftSize": 0.001,
+        "shiftScheme": "Central",
+        "shiftExpiries": [
+          "2W",
+          "1M",
+          "3M",
+          "6M",
+          "1Y",
+          "2Y",
+          "3Y",
+          "5Y",
+          "10Y",
+          "15Y",
+          "20Y",
+          "30Y"
+        ],
+        "shiftStrikes": [
+          -3.0,
+          -2.0,
+          -1.0,
+          -0.5,
+          -0.25,
+          -0.1,
+          -0.05,
+          0.0,
+          0.05,
+          0.1,
+          0.25,
+          0.5,
+          1.0,
+          2.0,
+          3.0
+        ]
+      },
+      {
+        "equity": "RIC:.STOXX50E",
+        "shiftType": "Relative",
+        "shiftSize": 0.001,
+        "shiftScheme": "Central",
+        "shiftExpiries": [
+          "2W",
+          "1M",
+          "3M",
+          "6M",
+          "1Y",
+          "2Y",
+          "3Y",
+          "5Y",
+          "10Y",
+          "15Y",
+          "20Y",
+          "30Y"
+        ],
+        "shiftStrikes": [
+          -3.0,
+          -2.0,
+          -1.0,
+          -0.5,
+          -0.25,
+          -0.1,
+          -0.05,
+          0.0,
+          0.05,
+          0.1,
+          0.25,
+          0.5,
+          1.0,
+          2.0,
+          3.0
+        ]
+      }
+    ],
+    "fxSpots": [
+      {
+        "ccypair": "EURUSD",
+        "shiftType": "Relative",
+        "shiftSize": 0.001,
+        "shiftScheme": "Central"
+      }
+    ],
+    "fxVolatilities": [
+      {
+        "ccypair": "EURUSD",
+        "shiftType": "Relative",
+        "shiftSize": 0.001,
+        "shiftScheme": "Central",
+        "shiftExpiries": [
+          "2W",
+          "1M",
+          "3M",
+          "6M",
+          "1Y",
+          "2Y",
+          "3Y",
+          "5Y",
+          "10Y",
+          "15Y",
+          "20Y",
+          "30Y"
+        ],
+        "shiftStrikes": [
+          -7.0,
+          -6.0,
+          -5.0,
+          -4.0,
+          -3.0,
+          -2.0,
+          -1.0,
+          -0.5,
+          -0.25,
+          -0.1,
+          -0.05,
+          0.0,
+          0.05,
+          0.1,
+          0.25,
+          0.5,
+          1.0,
+          2.0,
+          3.0,
+          4.0,
+          5.0,
+          6.0,
+          7.0
+        ]
+      }
+    ],
+    "indexCurves": [
+      {
+        "index": "EUR-ESTER",
+        "shiftType": "Absolute",
+        "shiftSize": 0.0001,
+        "shiftScheme": "Forward",
+        "shiftTenors": [
+          "2W",
+          "1M",
+          "3M",
+          "6M",
+          "1Y",
+          "2Y",
+          "3Y",
+          "5Y",
+          "10Y",
+          "15Y",
+          "20Y",
+          "30Y"
+        ]
+      },
+      {
+        "index": "USD-SOFR",
+        "shiftType": "Absolute",
+        "shiftSize": 0.0001,
+        "shiftScheme": "Forward",
+        "shiftTenors": [
+          "2W",
+          "1M",
+          "3M",
+          "6M",
+          "1Y",
+          "2Y",
+          "3Y",
+          "5Y",
+          "10Y",
+          "15Y",
+          "20Y",
+          "30Y"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "1.0.0",
+  "seedVersion": "1.0.0",
+  "traceabilityRefs": {
+    "adr": "docs/architecture/adr/0001-serialization-and-storage-format-standards.md",
+    "epic": "docs/architecture/scope_runtime_migration.yaml",
+    "sourceXml": "vre_python/notebooks/example_4/input/simulation.xml",
+    "spec": "docs/architecture/scope_runtime_migration.yaml"
+  },
+  "grid": "5000,1D",
+  "calendar": "EUR",
+  "sequence": "MersenneTwister",
+  "scenarioGenerator": "Simple",
+  "seed": 42,
+  "samples": 1,
+  "ordering": "Steps",
+  "directionIntegers": "JoeKuoD7"
+}

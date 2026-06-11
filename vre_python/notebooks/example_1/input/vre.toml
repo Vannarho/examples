@@ -1,0 +1,37 @@
+[setup]
+asofDate = "2016-02-05"
+inputPath = "input_bundle/vre"
+outputPath = "Output"
+logFile = "log.txt"
+logMask = "15"
+marketDataFile = "market.txt"
+fixingDataFile = "fixings.txt"
+implyTodaysFixings = "Y"
+curveConfigFile = "runtime_policy/resolved_curve_configuration.json"
+conventionsFile = "reference_registry/convention_manifest.json"
+marketConfigFile = "runtime_policy/resolved_todays_market.json"
+pricingEnginesFile = "runtime_policy/pricingengine/resolved_pricing_policy.json"
+portfolioFile = "portfolio.xml"
+observationModel = "None"
+
+[markets]
+lgmcalibration = "default"
+fxcalibration = "default"
+pricing = "default"
+simulation = "default"
+
+[analytics]
+[analytics.npv]
+active = "Y"
+baseCurrency = "EUR"
+outputFileName = "npv.csv"
+
+[analytics.cashflow]
+active = "Y"
+outputFileName = "flows.csv"
+
+[analytics.curves]
+active = "Y"
+configuration = "default"
+grid = "240,1M"
+outputFileName = "curves.csv"

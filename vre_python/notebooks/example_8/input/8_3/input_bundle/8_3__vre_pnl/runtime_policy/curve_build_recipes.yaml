@@ -1,0 +1,869 @@
+version: 1.0.0
+setId: curveconfig
+traceabilityRefs:
+  adr: docs/architecture/adr/0001-serialization-and-storage-format-standards.md
+  epic: docs/architecture/scope_runtime_migration.yaml
+  spec: docs/architecture/scope_runtime_migration.yaml
+  sourceXml: vre_python/notebooks/example_8/input/8_3/curveconfig.xml
+records:
+- familyId: default_curves
+  curveId: BANK_SR_USD
+  description: BANK SR CDS USD
+  recipeVariant: structured_mapping
+  dependencies:
+    quotes: []
+    conventions: []
+    relatedCurveIds: []
+  definition:
+    Currency: USD
+    Configurations:
+      Configuration:
+        _attributes:
+          priority: '0'
+        Type: SpreadCDS
+        DiscountCurve: Yield/USD/USD-SOFR
+        DayCounter: Actual/365 (Fixed)
+        RecoveryRate: RECOVERY_RATE/RATE/BANK/SR/USD
+        Quotes:
+          Quote:
+          - CDS/CREDIT_SPREAD/BANK/SR/USD/1Y
+          - CDS/CREDIT_SPREAD/BANK/SR/USD/2Y
+          - CDS/CREDIT_SPREAD/BANK/SR/USD/3Y
+          - CDS/CREDIT_SPREAD/BANK/SR/USD/4Y
+          - CDS/CREDIT_SPREAD/BANK/SR/USD/5Y
+          - CDS/CREDIT_SPREAD/BANK/SR/USD/7Y
+          - CDS/CREDIT_SPREAD/BANK/SR/USD/10Y
+        Conventions: CDS-STANDARD-CONVENTIONS
+        Extrapolation: 'true'
+        BootstrapConfig:
+          Accuracy: '0.0000000000010000'
+          GlobalAccuracy: '0.0000000000010000'
+          DontThrow: 'false'
+          MaxAttempts: '5'
+          MaxFactor: '2'
+          MinFactor: '2'
+          DontThrowSteps: '10'
+        AllowNegativeRates: 'false'
+- familyId: default_curves
+  curveId: CPTY_A_SR_USD
+  description: CPTY_A SR HR USD
+  recipeVariant: structured_mapping
+  dependencies:
+    quotes: []
+    conventions: []
+    relatedCurveIds: []
+  definition:
+    Currency: USD
+    Configurations:
+      Configuration:
+        _attributes:
+          priority: '0'
+        Type: HazardRate
+        DiscountCurve: ''
+        DayCounter: Actual/365 (Fixed)
+        RecoveryRate: RECOVERY_RATE/RATE/CPTY_A/SR/USD
+        Quotes:
+          Quote:
+          - HAZARD_RATE/RATE/CPTY_A/SR/USD/0Y
+          - HAZARD_RATE/RATE/CPTY_A/SR/USD/1Y
+          - HAZARD_RATE/RATE/CPTY_A/SR/USD/2Y
+          - HAZARD_RATE/RATE/CPTY_A/SR/USD/3Y
+          - HAZARD_RATE/RATE/CPTY_A/SR/USD/4Y
+          - HAZARD_RATE/RATE/CPTY_A/SR/USD/5Y
+          - HAZARD_RATE/RATE/CPTY_A/SR/USD/7Y
+          - HAZARD_RATE/RATE/CPTY_A/SR/USD/10Y
+          - HAZARD_RATE/RATE/CPTY_A/SR/USD/15Y
+          - HAZARD_RATE/RATE/CPTY_A/SR/USD/20Y
+          - HAZARD_RATE/RATE/CPTY_A/SR/USD/30Y
+        Conventions: CDS-STANDARD-CONVENTIONS
+        Extrapolation: 'true'
+        BootstrapConfig:
+          Accuracy: '0.0000000000010000'
+          GlobalAccuracy: '0.0000000000010000'
+          DontThrow: 'false'
+          MaxAttempts: '5'
+          MaxFactor: '2'
+          MinFactor: '2'
+          DontThrowSteps: '10'
+        AllowNegativeRates: 'false'
+- familyId: fx_volatilities
+  curveId: EURUSD
+  description: Euro United States Dollar volatility surface
+  recipeVariant: structured_mapping
+  dependencies:
+    quotes: []
+    conventions: []
+    relatedCurveIds: []
+  definition:
+    Dimension: Smile
+    SmileType: BFRR
+    SmileInterpolation: Cubic
+    SmileDelta: '25'
+    Conventions: EUR-USD-FXOPTION
+    Expiries: '*'
+    FXSpotID: FX/EUR/USD
+    FXForeignCurveID: Yield/EUR/EUR-IN-USD
+    FXDomesticCurveID: Yield/USD/USD-FedFunds
+    Calendar: JoinHolidays(TARGET, US settlement)
+    DayCounter: Actual/365 (Fixed)
+    Report: ''
+- familyId: swaption_volatilities
+  curveId: EUR
+  description: EUR normal swaption volatilities
+  recipeVariant: structured_mapping
+  dependencies:
+    quotes: []
+    conventions: []
+    relatedCurveIds: []
+  definition:
+    Dimension: ATM
+    VolatilityType: Normal
+    Extrapolation: Flat
+    DayCounter: Actual/365 (Fixed)
+    Calendar: TARGET
+    BusinessDayConvention: Following
+    OptionTenors: 1Y, 10Y
+    SwapTenors: 1Y, 10Y
+    ShortSwapIndexBase: EUR-CMS-1Y
+    SwapIndexBase: EUR-CMS-30Y
+    Report: ''
+- familyId: swaption_volatilities
+  curveId: USD
+  description: USD normal swaption volatilities
+  recipeVariant: structured_mapping
+  dependencies:
+    quotes: []
+    conventions: []
+    relatedCurveIds: []
+  definition:
+    Dimension: ATM
+    VolatilityType: Normal
+    Extrapolation: Flat
+    DayCounter: Actual/365 (Fixed)
+    Calendar: JoinHolidays(US settlement, UK settlement)
+    BusinessDayConvention: Following
+    OptionTenors: 1Y, 10Y
+    SwapTenors: 1Y, 10Y
+    ShortSwapIndexBase: USD-CMS-1Y
+    SwapIndexBase: USD-CMS-30Y
+    Report: ''
+- familyId: yield_curves
+  curveId: EUR-EONIA
+  description: EONIA curve as spread over ESTER
+  recipeVariant: structured_mapping
+  dependencies:
+    quotes: []
+    conventions: []
+    relatedCurveIds: []
+  definition:
+    Currency: EUR
+    DiscountCurve: ''
+    Segments:
+      ZeroSpread:
+        Type: Zero Spread
+        Quotes:
+          Quote:
+          - ZERO/YIELD_SPREAD/EUR/EONIA_ESTER_SPREAD/A365/1D
+          - ZERO/YIELD_SPREAD/EUR/EONIA_ESTER_SPREAD/A365/50Y
+        Conventions: EUR-ZERO-TENOR-BASED
+        ReferenceCurve: EUR-ESTER
+    InterpolationVariable: Discount
+    InterpolationMethod: LogLinear
+    YieldCurveDayCounter: A365
+    Tolerance: '0.0000000000010000'
+    Extrapolation: 'true'
+    BootstrapConfig:
+      Accuracy: '0.0000000000010000'
+      GlobalAccuracy: '0.0000000000010000'
+      DontThrow: 'false'
+      MaxAttempts: '5'
+      MaxFactor: '2'
+      MinFactor: '2'
+      DontThrowSteps: '10'
+- familyId: yield_curves
+  curveId: EUR-ESTER
+  description: EUR ESTER discount curve bootstrapped from OIS swap rates
+  recipeVariant: structured_mapping
+  dependencies:
+    quotes: []
+    conventions: []
+    relatedCurveIds: []
+  definition:
+    Currency: EUR
+    DiscountCurve: EUR-ESTER
+    Segments:
+      Simple:
+      - Type: Deposit
+        Quotes:
+          Quote: MM/RATE/EUR/ESTER/0D/1D
+        Conventions: EUR-ON-DEPOSIT-ESTER
+      - Type: OIS
+        Quotes:
+          Quote:
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/EUR/ESTER/2D/1D/1W
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/EUR/ESTER/2D/1D/2W
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/EUR/ESTER/2D/1D/3W
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/EUR/ESTER/2D/1D/1M
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/EUR/ESTER/2D/1D/2M
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/EUR/ESTER/2D/1D/3M
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/EUR/ESTER/2D/1D/4M
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/EUR/ESTER/2D/1D/5M
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/EUR/ESTER/2D/1D/6M
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/EUR/ESTER/2D/1D/7M
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/EUR/ESTER/2D/1D/8M
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/EUR/ESTER/2D/1D/9M
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/EUR/ESTER/2D/1D/10M
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/EUR/ESTER/2D/1D/11M
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/EUR/ESTER/2D/1D/1Y
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/EUR/ESTER/2D/1D/15M
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/EUR/ESTER/2D/1D/18M
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/EUR/ESTER/2D/1D/21M
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/EUR/ESTER/2D/1D/2Y
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/EUR/ESTER/2D/1D/3Y
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/EUR/ESTER/2D/1D/4Y
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/EUR/ESTER/2D/1D/5Y
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/EUR/ESTER/2D/1D/6Y
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/EUR/ESTER/2D/1D/7Y
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/EUR/ESTER/2D/1D/8Y
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/EUR/ESTER/2D/1D/9Y
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/EUR/ESTER/2D/1D/10Y
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/EUR/ESTER/2D/1D/11Y
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/EUR/ESTER/2D/1D/12Y
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/EUR/ESTER/2D/1D/15Y
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/EUR/ESTER/2D/1D/20Y
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/EUR/ESTER/2D/1D/25Y
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/EUR/ESTER/2D/1D/30Y
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/EUR/ESTER/2D/1D/40Y
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/EUR/ESTER/2D/1D/50Y
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/EUR/ESTER/2D/1D/60Y
+        Conventions: EUR-ESTER-OIS
+    InterpolationVariable: Discount
+    InterpolationMethod: LogLinear
+    YieldCurveDayCounter: A365
+    Tolerance: '0.0000000000010000'
+    Extrapolation: 'true'
+    BootstrapConfig:
+      Accuracy: '0.0000000000010000'
+      GlobalAccuracy: '0.0000000000010000'
+      DontThrow: 'false'
+      MaxAttempts: '5'
+      MaxFactor: '2'
+      MinFactor: '2'
+      DontThrowSteps: '10'
+- familyId: yield_curves
+  curveId: EUR-EURIBOR-3M
+  description: EUR EURIBOR 3M Index Curve
+  recipeVariant: structured_mapping
+  dependencies:
+    quotes: []
+    conventions: []
+    relatedCurveIds: []
+  definition:
+    Currency: EUR
+    DiscountCurve: EUR-EONIA
+    Segments:
+      Simple:
+      - Type: Deposit
+        Quotes:
+          Quote: MM/RATE/EUR/2D/3M
+        Conventions: EUR-DEPOSIT
+      - Type: FRA
+        Quotes:
+          Quote:
+          - FRA/RATE/EUR/1M/3M
+          - FRA/RATE/EUR/2M/3M
+          - FRA/RATE/EUR/3M/3M
+          - FRA/RATE/EUR/4M/3M
+          - FRA/RATE/EUR/5M/3M
+          - FRA/RATE/EUR/6M/3M
+          - FRA/RATE/EUR/7M/3M
+          - FRA/RATE/EUR/8M/3M
+          - FRA/RATE/EUR/9M/3M
+          - FRA/RATE/EUR/12M/3M
+          - _attributes:
+              optional: 'true'
+            _text: FRA/RATE/EUR/15M/3M
+          - _attributes:
+              optional: 'true'
+            _text: FRA/RATE/EUR/18M/3M
+        Conventions: EUR-3M-FRA
+        ProjectionCurve: EUR-EURIBOR-3M
+      TenorBasis:
+        Type: Tenor Basis Two Swaps
+        Quotes:
+          Quote:
+          - BASIS_SWAP/BASIS_SPREAD/3M/6M/EUR/2Y
+          - BASIS_SWAP/BASIS_SPREAD/3M/6M/EUR/3Y
+          - BASIS_SWAP/BASIS_SPREAD/3M/6M/EUR/4Y
+          - BASIS_SWAP/BASIS_SPREAD/3M/6M/EUR/5Y
+          - BASIS_SWAP/BASIS_SPREAD/3M/6M/EUR/6Y
+          - BASIS_SWAP/BASIS_SPREAD/3M/6M/EUR/7Y
+          - BASIS_SWAP/BASIS_SPREAD/3M/6M/EUR/8Y
+          - BASIS_SWAP/BASIS_SPREAD/3M/6M/EUR/9Y
+          - BASIS_SWAP/BASIS_SPREAD/3M/6M/EUR/10Y
+          - _attributes:
+              optional: 'true'
+            _text: BASIS_SWAP/BASIS_SPREAD/3M/6M/EUR/12Y
+          - _attributes:
+              optional: 'true'
+            _text: BASIS_SWAP/BASIS_SPREAD/3M/6M/EUR/15Y
+          - _attributes:
+              optional: 'true'
+            _text: BASIS_SWAP/BASIS_SPREAD/3M/6M/EUR/20Y
+          - _attributes:
+              optional: 'true'
+            _text: BASIS_SWAP/BASIS_SPREAD/3M/6M/EUR/25Y
+          - _attributes:
+              optional: 'true'
+            _text: BASIS_SWAP/BASIS_SPREAD/3M/6M/EUR/30Y
+        Conventions: EURIBOR-3M-6M-BASIS
+        ProjectionCurvePay: EUR-EURIBOR-6M
+        ProjectionCurveReceive: EUR-EURIBOR-3M
+    InterpolationVariable: Discount
+    InterpolationMethod: LogLinear
+    YieldCurveDayCounter: A365
+    Tolerance: '0.0000000000010000'
+    Extrapolation: 'true'
+    BootstrapConfig:
+      Accuracy: '0.0000000000010000'
+      GlobalAccuracy: '0.0000000000010000'
+      DontThrow: 'false'
+      MaxAttempts: '5'
+      MaxFactor: '2'
+      MinFactor: '2'
+      DontThrowSteps: '10'
+- familyId: yield_curves
+  curveId: EUR-EURIBOR-6M
+  description: EUR EURIBOR 6M Index Curve
+  recipeVariant: structured_mapping
+  dependencies:
+    quotes: []
+    conventions: []
+    relatedCurveIds: []
+  definition:
+    Currency: EUR
+    DiscountCurve: EUR-EONIA
+    Segments:
+      Simple:
+      - Type: Deposit
+        Quotes:
+          Quote: MM/RATE/EUR/2D/6M
+        Conventions: EUR-DEPOSIT
+      - Type: FRA
+        Quotes:
+          Quote:
+          - FRA/RATE/EUR/1M/6M
+          - FRA/RATE/EUR/2M/6M
+          - FRA/RATE/EUR/3M/6M
+          - FRA/RATE/EUR/4M/6M
+          - FRA/RATE/EUR/5M/6M
+          - FRA/RATE/EUR/6M/6M
+          - FRA/RATE/EUR/9M/6M
+          - FRA/RATE/EUR/12M/6M
+        Conventions: EUR-6M-FRA
+        ProjectionCurve: EUR-EURIBOR-6M
+      - Type: Swap
+        Quotes:
+          Quote:
+          - IR_SWAP/RATE/EUR/2D/6M/2Y
+          - IR_SWAP/RATE/EUR/2D/6M/3Y
+          - IR_SWAP/RATE/EUR/2D/6M/4Y
+          - IR_SWAP/RATE/EUR/2D/6M/5Y
+          - IR_SWAP/RATE/EUR/2D/6M/6Y
+          - IR_SWAP/RATE/EUR/2D/6M/7Y
+          - IR_SWAP/RATE/EUR/2D/6M/8Y
+          - IR_SWAP/RATE/EUR/2D/6M/9Y
+          - IR_SWAP/RATE/EUR/2D/6M/10Y
+          - IR_SWAP/RATE/EUR/2D/6M/12Y
+          - IR_SWAP/RATE/EUR/2D/6M/15Y
+          - IR_SWAP/RATE/EUR/2D/6M/20Y
+          - IR_SWAP/RATE/EUR/2D/6M/25Y
+          - IR_SWAP/RATE/EUR/2D/6M/30Y
+          - IR_SWAP/RATE/EUR/2D/6M/40Y
+          - IR_SWAP/RATE/EUR/2D/6M/50Y
+        Conventions: EUR-EURIBOR-6M-SWAP
+        ProjectionCurve: EUR-EURIBOR-6M
+    InterpolationVariable: Discount
+    InterpolationMethod: LogLinear
+    YieldCurveDayCounter: A365
+    Tolerance: '0.0000000000010000'
+    Extrapolation: 'true'
+    BootstrapConfig:
+      Accuracy: '0.0000000000010000'
+      GlobalAccuracy: '0.0000000000010000'
+      DontThrow: 'false'
+      MaxAttempts: '5'
+      MaxFactor: '2'
+      MinFactor: '2'
+      DontThrowSteps: '10'
+- familyId: yield_curves
+  curveId: EUR-IN-USD
+  description: EUR collateralised in USD discount curve
+  recipeVariant: structured_mapping
+  dependencies:
+    quotes: []
+    conventions: []
+    relatedCurveIds: []
+  definition:
+    Currency: EUR
+    DiscountCurve: ''
+    Segments:
+      CrossCurrency:
+      - Type: FX Forward
+        Quotes:
+          Quote:
+          - _attributes:
+              optional: 'true'
+            _text: FXFWD/RATE/EUR/USD/ON
+          - _attributes:
+              optional: 'true'
+            _text: FXFWD/RATE/EUR/USD/TN
+          - _attributes:
+              optional: 'true'
+            _text: FXFWD/RATE/EUR/USD/SN
+          - _attributes:
+              optional: 'true'
+            _text: FXFWD/RATE/EUR/USD/1W
+          - _attributes:
+              optional: 'true'
+            _text: FXFWD/RATE/EUR/USD/2W
+          - _attributes:
+              optional: 'true'
+            _text: FXFWD/RATE/EUR/USD/3W
+          - _attributes:
+              optional: 'true'
+            _text: FXFWD/RATE/EUR/USD/1M
+          - _attributes:
+              optional: 'true'
+            _text: FXFWD/RATE/EUR/USD/2M
+          - _attributes:
+              optional: 'true'
+            _text: FXFWD/RATE/EUR/USD/3M
+          - _attributes:
+              optional: 'true'
+            _text: FXFWD/RATE/EUR/USD/4M
+          - _attributes:
+              optional: 'true'
+            _text: FXFWD/RATE/EUR/USD/5M
+          - _attributes:
+              optional: 'true'
+            _text: FXFWD/RATE/EUR/USD/6M
+          - _attributes:
+              optional: 'true'
+            _text: FXFWD/RATE/EUR/USD/7M
+          - _attributes:
+              optional: 'true'
+            _text: FXFWD/RATE/EUR/USD/8M
+          - _attributes:
+              optional: 'true'
+            _text: FXFWD/RATE/EUR/USD/9M
+          - _attributes:
+              optional: 'true'
+            _text: FXFWD/RATE/EUR/USD/10M
+          - _attributes:
+              optional: 'true'
+            _text: FXFWD/RATE/EUR/USD/11M
+          - _attributes:
+              optional: 'true'
+            _text: FXFWD/RATE/EUR/USD/1Y
+          - _attributes:
+              optional: 'true'
+            _text: FXFWD/RATE/EUR/USD/15M
+          - _attributes:
+              optional: 'true'
+            _text: FXFWD/RATE/EUR/USD/18M
+          - _attributes:
+              optional: 'true'
+            _text: FXFWD/RATE/EUR/USD/21M
+        Conventions: EUR-USD-FX
+        DiscountCurve: ''
+        SpotRate: FX/RATE/EUR/USD
+      - Type: Cross Currency Basis Swap
+        Quotes:
+          Quote:
+          - CC_BASIS_SWAP/BASIS_SPREAD/USD/1D/EUR/1D/2Y
+          - CC_BASIS_SWAP/BASIS_SPREAD/USD/1D/EUR/1D/3Y
+          - CC_BASIS_SWAP/BASIS_SPREAD/USD/1D/EUR/1D/4Y
+          - CC_BASIS_SWAP/BASIS_SPREAD/USD/1D/EUR/1D/5Y
+          - CC_BASIS_SWAP/BASIS_SPREAD/USD/1D/EUR/1D/6Y
+          - CC_BASIS_SWAP/BASIS_SPREAD/USD/1D/EUR/1D/7Y
+          - CC_BASIS_SWAP/BASIS_SPREAD/USD/1D/EUR/1D/8Y
+          - CC_BASIS_SWAP/BASIS_SPREAD/USD/1D/EUR/1D/9Y
+          - CC_BASIS_SWAP/BASIS_SPREAD/USD/1D/EUR/1D/10Y
+          - CC_BASIS_SWAP/BASIS_SPREAD/USD/1D/EUR/1D/12Y
+          - CC_BASIS_SWAP/BASIS_SPREAD/USD/1D/EUR/1D/15Y
+          - CC_BASIS_SWAP/BASIS_SPREAD/USD/1D/EUR/1D/20Y
+          - CC_BASIS_SWAP/BASIS_SPREAD/USD/1D/EUR/1D/25Y
+          - CC_BASIS_SWAP/BASIS_SPREAD/USD/1D/EUR/1D/30Y
+          - CC_BASIS_SWAP/BASIS_SPREAD/USD/1D/EUR/1D/40Y
+          - CC_BASIS_SWAP/BASIS_SPREAD/USD/1D/EUR/1D/50Y
+        Conventions: EUR-USD-ON-XCCY-BASIS
+        DiscountCurve: USD-SOFR
+        SpotRate: FX/RATE/EUR/USD
+        ProjectionCurveDomestic: EUR-ESTER
+        ProjectionCurveForeign: USD-SOFR
+    InterpolationVariable: Discount
+    InterpolationMethod: LogLinear
+    YieldCurveDayCounter: A365
+    Tolerance: '0.0000000000010000'
+    Extrapolation: 'true'
+    BootstrapConfig:
+      Accuracy: '0.0000000000010000'
+      GlobalAccuracy: '0.0000000000010000'
+      DontThrow: 'false'
+      MaxAttempts: '5'
+      MaxFactor: '2'
+      MinFactor: '2'
+      DontThrowSteps: '10'
+- familyId: yield_curves
+  curveId: USD-FedFunds
+  description: USD discount curve bootstrapped from FED FUNDS swap rates
+  recipeVariant: structured_mapping
+  dependencies:
+    quotes: []
+    conventions: []
+    relatedCurveIds: []
+  definition:
+    Currency: USD
+    DiscountCurve: USD-FedFunds
+    Segments:
+      Simple:
+      - Type: Deposit
+        Quotes:
+          Quote: MM/RATE/USD/0D/1D
+        Conventions: USD-ON-DEPOSIT
+      - Type: OIS
+        Quotes:
+          Quote:
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/USD/2D/1D/2W
+          - IR_SWAP/RATE/USD/2D/1D/1M
+          - IR_SWAP/RATE/USD/2D/1D/2M
+          - IR_SWAP/RATE/USD/2D/1D/3M
+          - IR_SWAP/RATE/USD/2D/1D/4M
+          - IR_SWAP/RATE/USD/2D/1D/5M
+          - IR_SWAP/RATE/USD/2D/1D/6M
+          - IR_SWAP/RATE/USD/2D/1D/7M
+          - IR_SWAP/RATE/USD/2D/1D/8M
+          - IR_SWAP/RATE/USD/2D/1D/9M
+          - IR_SWAP/RATE/USD/2D/1D/10M
+          - IR_SWAP/RATE/USD/2D/1D/11M
+          - IR_SWAP/RATE/USD/2D/1D/1Y
+        Conventions: USD-FedFunds-OIS
+      AverageOIS:
+        Type: Average OIS
+        Quotes:
+          CompositeQuote:
+          - SpreadQuote: BASIS_SWAP/BASIS_SPREAD/3M/1D/USD/2Y
+            RateQuote: IR_SWAP/RATE/USD/2D/3M/2Y
+          - SpreadQuote: BASIS_SWAP/BASIS_SPREAD/3M/1D/USD/3Y
+            RateQuote: IR_SWAP/RATE/USD/2D/3M/3Y
+          - SpreadQuote: BASIS_SWAP/BASIS_SPREAD/3M/1D/USD/4Y
+            RateQuote: IR_SWAP/RATE/USD/2D/3M/4Y
+          - SpreadQuote: BASIS_SWAP/BASIS_SPREAD/3M/1D/USD/5Y
+            RateQuote: IR_SWAP/RATE/USD/2D/3M/5Y
+          - SpreadQuote: BASIS_SWAP/BASIS_SPREAD/3M/1D/USD/7Y
+            RateQuote: IR_SWAP/RATE/USD/2D/3M/7Y
+          - SpreadQuote: BASIS_SWAP/BASIS_SPREAD/3M/1D/USD/10Y
+            RateQuote: IR_SWAP/RATE/USD/2D/3M/10Y
+          - SpreadQuote: BASIS_SWAP/BASIS_SPREAD/3M/1D/USD/15Y
+            RateQuote: IR_SWAP/RATE/USD/2D/3M/15Y
+          - SpreadQuote: BASIS_SWAP/BASIS_SPREAD/3M/1D/USD/20Y
+            RateQuote: IR_SWAP/RATE/USD/2D/3M/20Y
+          - SpreadQuote: BASIS_SWAP/BASIS_SPREAD/3M/1D/USD/30Y
+            RateQuote: IR_SWAP/RATE/USD/2D/3M/30Y
+        Conventions: USD-AVERAGE-OIS
+    InterpolationVariable: Discount
+    InterpolationMethod: LogLinear
+    YieldCurveDayCounter: A365F
+    Tolerance: '0.0000000000010000'
+    Extrapolation: 'true'
+    BootstrapConfig:
+      Accuracy: '0.0000000000010000'
+      GlobalAccuracy: '0.0000000000010000'
+      DontThrow: 'false'
+      MaxAttempts: '5'
+      MaxFactor: '2'
+      MinFactor: '2'
+      DontThrowSteps: '10'
+- familyId: yield_curves
+  curveId: USD-LIBOR-3M
+  description: USD LIBOR 3M Index Curve
+  recipeVariant: structured_mapping
+  dependencies:
+    quotes: []
+    conventions: []
+    relatedCurveIds: []
+  definition:
+    Currency: USD
+    DiscountCurve: USD-FedFunds
+    Segments:
+      Simple:
+      - Type: Deposit
+        Quotes:
+          Quote: MM/RATE/USD/2D/3M
+        Conventions: USD-DEPOSIT
+      - Type: Future
+        Quotes:
+          Quote:
+          - _attributes:
+              optional: 'true'
+            _text: MM_FUTURE/PRICE/USD/2023-02/XCME:ED/3M
+          - _attributes:
+              optional: 'true'
+            _text: MM_FUTURE/PRICE/USD/2023-03/XCME:ED/3M
+          - _attributes:
+              optional: 'true'
+            _text: MM_FUTURE/PRICE/USD/2023-04/XCME:ED/3M
+          - _attributes:
+              optional: 'true'
+            _text: MM_FUTURE/PRICE/USD/2023-05/XCME:ED/3M
+          - _attributes:
+              optional: 'true'
+            _text: MM_FUTURE/PRICE/USD/2023-06/XCME:ED/3M
+          - _attributes:
+              optional: 'true'
+            _text: MM_FUTURE/PRICE/USD/2023-09/XCME:ED/3M
+          - _attributes:
+              optional: 'true'
+            _text: MM_FUTURE/PRICE/USD/2023-12/XCME:ED/3M
+          - _attributes:
+              optional: 'true'
+            _text: MM_FUTURE/PRICE/USD/2024-03/XCME:ED/3M
+          - _attributes:
+              optional: 'true'
+            _text: MM_FUTURE/PRICE/USD/2024-06/XCME:ED/3M
+        Conventions: USD-LIBOR-3M-FUTURES
+      - Type: Swap
+        Quotes:
+          Quote:
+          - IR_SWAP/RATE/USD/2D/3M/2Y
+          - IR_SWAP/RATE/USD/2D/3M/3Y
+          - IR_SWAP/RATE/USD/2D/3M/4Y
+          - IR_SWAP/RATE/USD/2D/3M/5Y
+          - IR_SWAP/RATE/USD/2D/3M/6Y
+          - IR_SWAP/RATE/USD/2D/3M/7Y
+          - IR_SWAP/RATE/USD/2D/3M/8Y
+          - IR_SWAP/RATE/USD/2D/3M/9Y
+          - IR_SWAP/RATE/USD/2D/3M/10Y
+          - IR_SWAP/RATE/USD/2D/3M/12Y
+          - IR_SWAP/RATE/USD/2D/3M/15Y
+          - IR_SWAP/RATE/USD/2D/3M/20Y
+          - IR_SWAP/RATE/USD/2D/3M/25Y
+          - IR_SWAP/RATE/USD/2D/3M/30Y
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/USD/2D/3M/40Y
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/USD/2D/3M/50Y
+        Conventions: USD-LIBOR-3M-SWAP
+        ProjectionCurve: USD-LIBOR-3M
+    InterpolationVariable: Discount
+    InterpolationMethod: LogLinear
+    YieldCurveDayCounter: A365
+    Tolerance: '0.0000000000010000'
+    Extrapolation: 'true'
+    BootstrapConfig:
+      Accuracy: '0.0000000000010000'
+      GlobalAccuracy: '0.0000000000010000'
+      DontThrow: 'false'
+      MaxAttempts: '5'
+      MaxFactor: '2'
+      MinFactor: '2'
+      DontThrowSteps: '10'
+- familyId: yield_curves
+  curveId: USD-SOFR
+  description: ''
+  recipeVariant: structured_mapping
+  dependencies:
+    quotes: []
+    conventions: []
+    relatedCurveIds: []
+  definition:
+    Currency: USD
+    DiscountCurve: USD-SOFR
+    Segments:
+      Simple:
+      - Type: Deposit
+        Quotes:
+          Quote: MM/RATE/USD/SOFR/0D/1D
+        Conventions: USD-ON-SOFR-DEPOSIT
+        ProjectionCurve: USD-SOFR
+      - Type: OIS
+        Quotes:
+          Quote:
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/USD/SOFR/0D/1D/2W
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/USD/SOFR/0D/1D/3W
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/USD/SOFR/0D/1D/1M
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/USD/SOFR/0D/1D/2M
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/USD/SOFR/0D/1D/3M
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/USD/SOFR/0D/1D/4M
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/USD/SOFR/0D/1D/5M
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/USD/SOFR/0D/1D/6M
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/USD/SOFR/0D/1D/7M
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/USD/SOFR/0D/1D/8M
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/USD/SOFR/0D/1D/9M
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/USD/SOFR/0D/1D/10M
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/USD/SOFR/0D/1D/11M
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/USD/SOFR/0D/1D/1Y
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/USD/SOFR/0D/1D/2Y
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/USD/SOFR/0D/1D/3Y
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/USD/SOFR/0D/1D/4Y
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/USD/SOFR/0D/1D/5Y
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/USD/SOFR/0D/1D/6Y
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/USD/SOFR/0D/1D/7Y
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/USD/SOFR/0D/1D/8Y
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/USD/SOFR/0D/1D/9Y
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/USD/SOFR/0D/1D/10Y
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/USD/SOFR/0D/1D/12Y
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/USD/SOFR/0D/1D/15Y
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/USD/SOFR/0D/1D/20Y
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/USD/SOFR/0D/1D/25Y
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/USD/SOFR/0D/1D/30Y
+          - _attributes:
+              optional: 'true'
+            _text: IR_SWAP/RATE/USD/SOFR/0D/1D/40Y
+        Conventions: USD-SOFR-OIS
+    InterpolationVariable: Discount
+    InterpolationMethod: LogLinear
+    YieldCurveDayCounter: A365
+    Tolerance: '0.0000000000010000'
+    Extrapolation: 'true'
+    BootstrapConfig:
+      Accuracy: '0.0000000000010000'
+      GlobalAccuracy: '0.0000000000010000'
+      DontThrow: 'false'
+      MaxAttempts: '5'
+      MaxFactor: '2'
+      MinFactor: '2'
+      DontThrowSteps: '10'

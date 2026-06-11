@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0.0",
+  "seedVersion": "1.0.0",
+  "publishedAt": "examples/vre_python/notebooks/example_7/input/vre_SIMM2.4_1D.toml",
+  "contentHash": "5f21270b9e9787e131b0b83d57362ce64e1f998e2b9e7775a9459c770ae3b9f6",
+  "sourceLineage": {
+    "viewPath": "examples/vre_python/notebooks/example_7/input_bundle/vre_simm2.4_1_d/runtime_policy/market_view.toml",
+    "manifestPath": "examples/vre_python/notebooks/example_7/input_bundle/vre_simm2.4_1_d/runtime_policy/market_manifest.yaml",
+    "objectMapPath": "examples/vre_python/notebooks/example_7/input_bundle/vre_simm2.4_1_d/runtime_policy/market_object_map.json",
+    "generator": "tools/ci/publish_todays_market_contracts.py"
+  },
+  "marketView": {
+    "viewId": "default",
+    "asOfDate": "2016-02-05"
+  },
+  "marketManifest": {
+    "views": [
+      {
+        "viewId": "default",
+        "families": {}
+      }
+    ]
+  },
+  "marketObjectMap": {
+    "families": [],
+    "entries": []
+  },
+  "todaysMarketParameters": {
+    "configurations": [
+      {
+        "configurationId": "default",
+        "marketObjectIds": {}
+      }
+    ],
+    "marketObjects": []
+  }
+}

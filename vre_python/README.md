@@ -6,7 +6,9 @@ artifacts.
 
 ## macOS wheel install
 
-The current promoted macOS wheels are attached to the VRE `v0.14.0` release:
+The current promoted macOS wheels are attached to the examples
+`vre-python-v0.14.0` release. They were built from the VRE `v0.14.0` source
+release.
 
 - Python 3.13 macOS arm64:
   `vannarho_risk_engine-0.14.0-cp313-cp313-macosx_26_0_arm64.whl`
@@ -21,14 +23,14 @@ python3.13 -m venv .venv
 python -m pip install --upgrade pip
 python -m pip install -r vre_python/requirements.txt
 mkdir -p wheelhouse
-gh -R Vannarho/vre release download v0.14.0 \
+gh -R Vannarho/examples release download vre-python-v0.14.0 \
   -p vannarho_risk_engine-0.14.0-cp313-cp313-macosx_26_0_arm64.whl \
   -D wheelhouse
 python -m pip install wheelhouse/vannarho_risk_engine-0.14.0-cp313-cp313-macosx_26_0_arm64.whl
 ```
 
-If the VRE release is private, authenticate `gh` with a token that can read
-`Vannarho/vre` releases before running the download command.
+If the examples release is private, authenticate `gh` with a token that can read
+`Vannarho/examples` releases before running the download command.
 
 ## Run scripts
 

@@ -8,6 +8,8 @@ on:
         required: false
         default: vannarho_risk_engine-0.14.0-cp313-cp313-macosx_26_0_arm64.whl
   push:
+    branches:
+      - main
     paths:
       - vre_python/**
       - .github/workflows/vre-python-wheel-only.yml

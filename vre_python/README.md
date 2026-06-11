@@ -74,7 +74,7 @@ installed. The aggregate script runner and all active notebooks completed with
 exit code 0.
 
 CI runs the same wheel-only aggregate runner from a clean temporary copy. The
-service-runner CI job skips `notebooks/example_10/run_sacva_larger_portfolio.py`
-and the example 11 SA-CVA scripts/notebook because those cases hang under the
-self-hosted GitHub Actions service process while passing in the fresh local
-release proof.
+service-runner CI job skips `notebooks/example_5/vre.ipynb`,
+`notebooks/example_10/run_sacva_larger_portfolio.py`, and the example 11 SA-CVA
+scripts/notebook because those cases hang under the self-hosted GitHub Actions
+service process while passing in the fresh local release proof.

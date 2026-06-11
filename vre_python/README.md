@@ -73,7 +73,8 @@ environment, with only `requirements.txt` and the `v0.14.0` macOS arm64 wheel
 installed. The aggregate script runner and all active notebooks completed with
 exit code 0.
 
-CI runs the same wheel-only aggregate runner from a clean temporary copy, with
-`notebooks/example_10/run_sacva_larger_portfolio.py` skipped because that case
-hangs under the self-hosted GitHub Actions service process while passing in the
-fresh local release proof.
+CI runs the same wheel-only aggregate runner from a clean temporary copy. The
+service-runner CI job skips `notebooks/example_10/run_sacva_larger_portfolio.py`
+and the example 11 SA-CVA scripts/notebook because those cases hang under the
+self-hosted GitHub Actions service process while passing in the fresh local
+release proof.

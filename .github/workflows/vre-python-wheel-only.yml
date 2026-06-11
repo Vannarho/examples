@@ -27,7 +27,7 @@ jobs:
       VRE_RELEASE_REPO: ${{ github.repository }}
       VRE_RELEASE_TAG: vre-python-v0.14.0
       VRE_WHEEL_ASSET: ${{ github.event.inputs.wheel_asset || 'vannarho_risk_engine-0.14.0-cp313-cp313-macosx_26_0_arm64.whl' }}
-      VRE_PYTHON_EXAMPLE_SKIP: notebooks/example_10/run_sacva_larger_portfolio.py
+      VRE_PYTHON_EXAMPLE_SKIP: notebooks/example_10/run_sacva_larger_portfolio.py,notebooks/example_11/run_sacva_eqcom.py,notebooks/example_11/run_sacva_eqcom_fd.py,notebooks/example_11/run_sacva_eqcom_fd_aad.py
       PYTHONPATH: ""
     steps:
       - uses: actions/checkout@v4
@@ -98,8 +98,7 @@ jobs:
             example_7/vre.ipynb \
             example_8/vre.ipynb \
             example_9/vre.ipynb \
-            example_10/vre.ipynb \
-            example_11/vre.ipynb
+            example_10/vre.ipynb
           do
             mkdir -p "$OUT/$(dirname "$rel")"
             (

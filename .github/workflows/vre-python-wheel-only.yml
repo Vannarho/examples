@@ -25,6 +25,7 @@ jobs:
       VRE_RELEASE_REPO: ${{ github.repository }}
       VRE_RELEASE_TAG: vre-python-v0.14.0
       VRE_WHEEL_ASSET: ${{ github.event.inputs.wheel_asset || 'vannarho_risk_engine-0.14.0-cp313-cp313-macosx_26_0_arm64.whl' }}
+      VRE_EXAMPLES_DIR: ${{ runner.temp }}/vre_python_clean
       PYTHONPATH: ""
     steps:
       - uses: actions/checkout@v4
@@ -43,6 +44,19 @@ jobs:
           .venv/bin/python -m pip install --no-deps "wheelhouse/$VRE_WHEEL_ASSET"
           .venv/bin/python -m ipykernel install --prefix .venv --name vre-wheel-313 --display-name "VRE wheel cp313"
 
+      - name: Prepare clean examples tree
+        run: |
+          rm -rf "$VRE_EXAMPLES_DIR"
+          mkdir -p "$VRE_EXAMPLES_DIR"
+          rsync -a \
+            --exclude '__pycache__' \
+            --exclude '.ipynb_checkpoints' \
+            --exclude '.wheel_runtime_*.toml' \
+            --exclude 'Output' \
+            --exclude 'output' \
+            "$GITHUB_WORKSPACE/vre_python/" \
+            "$VRE_EXAMPLES_DIR/"
+
       - name: Prove installed wheel import
         run: |
           cd /tmp
@@ -60,14 +74,14 @@ jobs:
 
       - name: Run aggregate examples
         run: |
-          cd vre_python
+          cd "$VRE_EXAMPLES_DIR"
           env PYTHONPATH= VRE_PYBIND_FORCE_BUILD_DIR= VRE_PYBIND_BUILD_DIR= VRE_NOTEBOOK_BUILD_ROOT= \
             "$GITHUB_WORKSPACE/.venv/bin/python" run.py
 
       - name: Execute notebooks
         run: |
           set -e
-          BASE="$GITHUB_WORKSPACE/vre_python/notebooks"
+          BASE="$VRE_EXAMPLES_DIR/notebooks"
           OUT="$RUNNER_TEMP/vre_notebook_exec"
           for rel in \
             example_1/hello.ipynb \

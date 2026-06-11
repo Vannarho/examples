@@ -72,3 +72,8 @@ Promotion proof was run from a copied tree in a fresh Python 3.13 virtual
 environment, with only `requirements.txt` and the `v0.14.0` macOS arm64 wheel
 installed. The aggregate script runner and all active notebooks completed with
 exit code 0.
+
+CI runs the same wheel-only aggregate runner from a clean temporary copy, with
+`notebooks/example_10/run_sacva_larger_portfolio.py` skipped because that case
+hangs under the self-hosted GitHub Actions service process while passing in the
+fresh local release proof.

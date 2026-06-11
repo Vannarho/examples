@@ -24,6 +24,11 @@ def _child_env() -> dict[str, str]:
     return env
 
 
+def _skip_cases() -> set[str]:
+    raw = os.environ.get("VRE_PYTHON_EXAMPLE_SKIP", "")
+    return {item.strip() for item in raw.replace(os.pathsep, ",").split(",") if item.strip()}
+
+
 cases = [
     "example_scripts/commodityforward.py",
     "example_scripts/conventions.py",
@@ -41,7 +46,11 @@ cases = [
 
 def main() -> int:
     failures = []
+    skip_cases = _skip_cases()
     for case in cases:
+        if case in skip_cases:
+            print(f"Skipping: {case}")
+            continue
         case_path = (Path(__file__).resolve().parent / case).resolve()
         cmd = [_python_executable(), case_path.name]
         print("Calling:", " ".join(cmd))

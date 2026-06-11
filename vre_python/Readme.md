@@ -215,13 +215,12 @@ print("Today:", today)
 
 ## Supported Platforms
 
-Binary wheels are provided for:
+The `vre-python-v0.14.0` examples release provides macOS arm64 wheels for
+Python 3.13 and Python 3.14 only. Linux and Windows wheels are built and
+published separately.
 
-* Linux x86_64 (manylinux / musllinux where applicable — vanilla and kernel variants; CUDA enablement lands in an upcoming release)
-* macOS arm64 (universal2 when possible with vanilla and kernel variants, including Metal GPU support)
-* Windows x86_64 (vanilla variant today, CUDA support coming in a future post release)
-
-If your platform is not listed, pip may report “No matching distribution found”.
+If your platform or Python version is not listed, pip may report “No matching
+distribution found”.
 
 ## Project Links
 

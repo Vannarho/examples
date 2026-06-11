@@ -27,6 +27,7 @@ jobs:
       VRE_RELEASE_REPO: ${{ github.repository }}
       VRE_RELEASE_TAG: vre-python-v0.14.0
       VRE_WHEEL_ASSET: ${{ github.event.inputs.wheel_asset || 'vannarho_risk_engine-0.14.0-cp313-cp313-macosx_26_0_arm64.whl' }}
+      VRE_WHEEL_ASSET_CP314: vannarho_risk_engine-0.14.0-cp314-cp314-macosx_26_0_arm64.whl
       VRE_PYTHON_EXAMPLE_SKIP: notebooks/example_10/run_sacva_larger_portfolio.py,notebooks/example_11/run_sacva_eqcom.py,notebooks/example_11/run_sacva_eqcom_fd.py,notebooks/example_11/run_sacva_eqcom_fd_aad.py
       PYTHONPATH: ""
     steps:
@@ -42,6 +43,9 @@ jobs:
           mkdir -p wheelhouse
           gh -R "$VRE_RELEASE_REPO" release download "$VRE_RELEASE_TAG" \
             -p "$VRE_WHEEL_ASSET" \
+            -D wheelhouse
+          gh -R "$VRE_RELEASE_REPO" release download "$VRE_RELEASE_TAG" \
+            -p "$VRE_WHEEL_ASSET_CP314" \
             -D wheelhouse
           .venv/bin/python -m pip install --no-deps "wheelhouse/$VRE_WHEEL_ASSET"
           rm -rf .jupyter-kernels
@@ -69,6 +73,25 @@ jobs:
         run: |
           cd /tmp
           "$GITHUB_WORKSPACE/.venv/bin/python" - <<'PY'
+          from pathlib import Path
+          import importlib.metadata as metadata
+          import VRE, VREData, vre
+          print("version", metadata.version("vannarho-risk-engine"))
+          for name, module in [("VRE", VRE), ("VREData", VREData), ("vre", vre)]:
+              path = Path(module.__file__).resolve()
+              print(name, path)
+              assert "site-packages" in path.parts or "dist-packages" in path.parts
+              assert "build" not in path.parts
+          PY
+
+      - name: Prove Python 3.14 wheel import
+        run: |
+          command -v python3.14
+          python3.14 -m venv .venv314
+          .venv314/bin/python -m pip install --upgrade pip
+          .venv314/bin/python -m pip install --no-deps "wheelhouse/$VRE_WHEEL_ASSET_CP314"
+          cd /tmp
+          "$GITHUB_WORKSPACE/.venv314/bin/python" - <<'PY'
           from pathlib import Path
           import importlib.metadata as metadata
           import VRE, VREData, vre

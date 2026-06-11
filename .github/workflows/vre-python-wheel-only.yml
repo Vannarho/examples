@@ -25,7 +25,6 @@ jobs:
       VRE_RELEASE_REPO: ${{ github.repository }}
       VRE_RELEASE_TAG: vre-python-v0.14.0
       VRE_WHEEL_ASSET: ${{ github.event.inputs.wheel_asset || 'vannarho_risk_engine-0.14.0-cp313-cp313-macosx_26_0_arm64.whl' }}
-      VRE_EXAMPLES_DIR: ${{ runner.temp }}/vre_python_clean
       PYTHONPATH: ""
     steps:
       - uses: actions/checkout@v4
@@ -46,6 +45,8 @@ jobs:
 
       - name: Prepare clean examples tree
         run: |
+          VRE_EXAMPLES_DIR="$RUNNER_TEMP/vre_python_clean"
+          echo "VRE_EXAMPLES_DIR=$VRE_EXAMPLES_DIR" >> "$GITHUB_ENV"
           rm -rf "$VRE_EXAMPLES_DIR"
           mkdir -p "$VRE_EXAMPLES_DIR"
           rsync -a \

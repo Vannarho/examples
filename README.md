@@ -34,8 +34,6 @@ gh -R Vannarho/examples release download vre-python-v0.14.0 \
 python -m pip install wheelhouse/vannarho_risk_engine-0.14.0-cp313-cp313-macosx_26_0_arm64.whl
 ```
 
-If the examples release is private, authenticate `gh` with a token that can read
-`Vannarho/examples` releases before running the download command.
 
 ## Run scripts
 

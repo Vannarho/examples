@@ -1,8 +1,0 @@
-{ "@timestamp": "2025-12-03T09:10:29.209989", "key": "Running XVA Analytic", "progress": 0, "total": 1 }
-{ "@timestamp": "2025-12-03T09:10:29.210117", "key": "XVA: Build Today's Market", "progress": 0, "total": 1 }
-{ "@timestamp": "2025-12-03T09:10:29.211172", "key": "XVA: Build Today's Market", "progress": 1, "total": 1 }
-{ "@timestamp": "2025-12-03T09:10:29.215044", "key": "XVA: Build Portfolio", "progress": 0, "total": 1 }
-{ "@timestamp": "2025-12-03T09:10:29.215393", "key": "XVA: Build Portfolio", "progress": 1, "total": 1 }
-{ "@timestamp": "2025-12-03T09:10:29.291440", "detail": "1 trade, 1 sample", "key": "XVA: Building cube", "progress": 0, "total": 1 }
-{ "@timestamp": "2025-12-03T09:10:29.291503", "detail": "1 trade, 1 sample", "key": "XVA: Building cube", "progress": 1, "total": 1 }
-{ "@timestamp": "2025-12-03T09:10:29.294801", "key": "Running XVA Analytic", "progress": 1, "total": 1 }

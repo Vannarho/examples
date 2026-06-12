@@ -1,4 +1,0 @@
-TradeID,PortfolioID,ProductClass,RiskType,Qualifier,Bucket,Label1,Label2,AmountCurrency,Amount
-CDS_FirmA,,RatesFX,PV,FirmA,AA,,,USD,20000
-CDS_FirmB,,RatesFX,PV,FirmB,BBB,,,EUR,-40000
-CDS_CDX_IG,,RatesFX,PV,CDXIG,IG,,,USD,0

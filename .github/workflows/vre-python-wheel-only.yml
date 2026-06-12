@@ -11,11 +11,19 @@ on:
     branches:
       - main
     paths:
-      - vre_python/**
+      - example_scripts/**
+      - notebooks/**
+      - requirements.txt
+      - run.py
+      - README.md
       - .github/workflows/vre-python-wheel-only.yml
   pull_request:
     paths:
-      - vre_python/**
+      - example_scripts/**
+      - notebooks/**
+      - requirements.txt
+      - run.py
+      - README.md
       - .github/workflows/vre-python-wheel-only.yml
 
 jobs:
@@ -39,7 +47,7 @@ jobs:
         run: |
           python3.13 -m venv .venv
           .venv/bin/python -m pip install --upgrade pip
-          .venv/bin/python -m pip install -r vre_python/requirements.txt
+          .venv/bin/python -m pip install -r requirements.txt
           mkdir -p wheelhouse
           gh -R "$VRE_RELEASE_REPO" release download "$VRE_RELEASE_TAG" \
             -p "$VRE_WHEEL_ASSET" \
@@ -56,7 +64,7 @@ jobs:
 
       - name: Prepare clean examples tree
         run: |
-          VRE_EXAMPLES_DIR="$RUNNER_TEMP/vre_python_clean"
+          VRE_EXAMPLES_DIR="$RUNNER_TEMP/vre_examples_clean"
           echo "VRE_EXAMPLES_DIR=$VRE_EXAMPLES_DIR" >> "$GITHUB_ENV"
           rm -rf "$VRE_EXAMPLES_DIR"
           mkdir -p "$VRE_EXAMPLES_DIR"
@@ -64,9 +72,15 @@ jobs:
             --exclude '__pycache__' \
             --exclude '.ipynb_checkpoints' \
             --exclude '.wheel_runtime_*.toml' \
+            --exclude '.git' \
+            --exclude '.github' \
+            --exclude '.venv' \
+            --exclude '.venv314' \
+            --exclude '.jupyter-kernels' \
+            --exclude 'wheelhouse' \
             --exclude 'Output' \
             --exclude 'output' \
-            "$GITHUB_WORKSPACE/vre_python/" \
+            "$GITHUB_WORKSPACE/" \
             "$VRE_EXAMPLES_DIR/"
 
       - name: Prove installed wheel import

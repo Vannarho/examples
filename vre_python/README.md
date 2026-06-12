@@ -61,7 +61,8 @@ for nb in \
   notebooks/example_8/vre.ipynb \
   notebooks/example_9/vre.ipynb \
   notebooks/example_10/vre.ipynb \
-  notebooks/example_11/vre.ipynb
+  notebooks/example_11/vre.ipynb \
+  notebooks/southern_cross_cross_border/vre.ipynb
 do
   (cd "$(dirname "$nb")" && PYTHONPATH= python -m nbconvert \
     --to notebook --execute "$(basename "$nb")" \

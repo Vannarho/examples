@@ -171,7 +171,8 @@ jobs:
             example_7/vre.ipynb \
             example_8/vre.ipynb \
             example_9/vre.ipynb \
-            example_10/vre.ipynb
+            example_10/vre.ipynb \
+            southern_cross_cross_border/vre.ipynb
           do
             mkdir -p "$OUT/$(dirname "$rel")"
             (

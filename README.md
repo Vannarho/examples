@@ -1,10 +1,7 @@
 # Vannarho Risk Engine Python Examples
 
 This repository contains the Python wheel examples for the Vannarho Risk Engine
-(VRE). It is intentionally the Python examples surface itself: there is no
-nested `vre_python/` directory.
-
-The examples run against the installed `vannarho-risk-engine` pybind wheel only.
+(VRE). The examples run against the installed `vannarho-risk-engine` pybind wheel only.
 They do not require `PYTHONPATH`, local source-tree imports, or in-repo C++
 build artifacts. The script and notebook entrypoints fail closed if VRE binaries
 resolve outside the installed wheel distribution.

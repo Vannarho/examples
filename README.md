@@ -43,6 +43,43 @@ This is not the full managed RaaS platform. It does not include tenant control
 planes, governed approvals, production API routing, BigQuery serving layers, or
 client data isolation. For those flows, start with the website guides above.
 
+## Wheel variants and acceleration
+
+VRE ships in two binary wheel flavours per platform. Both expose the identical
+`VRE` Python API and produce the same results; they differ only in how the
+native compute is accelerated.
+
+- **Vanilla (no-kernels)** — portable build with standard automatic
+  differentiation and no JIT or explicit CPU vectorisation. The safe default:
+  maximum compatibility, smallest dependency surface. Wheel files carry the
+  `.post2` local version (for example `…-0.14.0.post2-…`).
+- **JIT Kernels (cpu-kernels)** — adds compiled, JIT automatic differentiation
+  via [LLVM](https://llvm.org/) + [Enzyme](https://enzyme.mit.edu/) and explicit
+  SIMD vectorisation (NEON on Apple Silicon / aarch64, AVX2 + FMA on x86_64).
+  This delivers materially faster sensitivities (AAD) and bulk numerics on
+  supported CPUs at the cost of a larger wheel and a hardware-specific build.
+  Wheel files carry the `.post1` local version (for example `…-0.14.0.post1-…`).
+
+If you are unsure which to use, start with the vanilla wheel. Move to the JIT
+Kernels wheel when AAD or large-scenario throughput matters and your CPU matches
+the build target.
+
+### GPU acceleration
+
+GPU backends are an additional, optional acceleration layer on top of either CPU
+flavour:
+
+- **macOS — Metal.** Enabled by default on Apple Silicon builds; the macOS
+  wheels are produced with the Metal compute backend.
+- **Linux / Windows — CUDA.** Built against the NVIDIA CUDA Toolkit 12.4
+  (host GCC ≤ 12), targeting compute capability 7.5 (for example NVIDIA T4).
+  CUDA-enabled Linux/Windows wheels are not part of this release and are
+  expected to be published separately.
+
+GPU execution is selected at run time by the relevant flow configuration; the
+notebooks make the executed path explicit so you can confirm whether a CPU or
+GPU kernel ran.
+
 ## Example scripts
 
 Run the aggregate script runner with `python run.py`. It executes the following
@@ -77,19 +114,31 @@ to be run in a clean virtual environment with an installed wheel.
 | `notebooks/example_11/vre.ipynb` | Equity and commodity SA-CVA smoke runner. |
 | `notebooks/southern_cross_cross_border/vre.ipynb` | Standalone Southern Cross cross-border pybind example with an Australia-scoped stage, a multi-jurisdiction regulatory slice, AUD-BBSW/AUD-AONIA parser checks, and synthetic IMA P&L/backtesting inputs. |
 
-## macOS wheel install
+## Wheel install
 
 The current promoted wheels are attached to the
 [`vre-python-v0.14.0`](https://github.com/Vannarho/examples/releases/tag/vre-python-v0.14.0)
-release. They were built from the VRE `v0.14.0` source release using the macOS
-Metal build preset.
+release. They were built from the VRE `v0.14.0` source release. See
+[Wheel variants and acceleration](#wheel-variants-and-acceleration) for the
+difference between the vanilla (`.post2`) and JIT Kernels (`.post1`) builds.
 
-- Python 3.13 macOS arm64:
+macOS arm64 (Metal GPU backend):
+
+- Python 3.13:
   `vannarho_risk_engine-0.14.0-cp313-cp313-macosx_26_0_arm64.whl`
-- Python 3.14 macOS arm64:
+- Python 3.14:
   `vannarho_risk_engine-0.14.0-cp314-cp314-macosx_26_0_arm64.whl`
 
-For Python 3.13:
+Linux aarch64 (Python 3.12, `manylinux_2_28` / `musllinux_1_2`):
+
+- Vanilla:
+  `vannarho_risk_engine-0.14.0.post2-cp312-cp312-manylinux_2_28_aarch64.whl`
+  / `…-musllinux_1_2_aarch64.whl`
+- JIT Kernels:
+  `vannarho_risk_engine-0.14.0.post1-cp312-cp312-manylinux_2_28_aarch64.whl`
+  / `…-musllinux_1_2_aarch64.whl`
+
+### macOS, Python 3.13
 
 ```bash
 python3.13 -m venv .venv
@@ -101,6 +150,24 @@ gh -R Vannarho/examples release download vre-python-v0.14.0 \
   -p vannarho_risk_engine-0.14.0-cp313-cp313-macosx_26_0_arm64.whl \
   -D wheelhouse
 python -m pip install wheelhouse/vannarho_risk_engine-0.14.0-cp313-cp313-macosx_26_0_arm64.whl
+```
+
+### Linux aarch64, Python 3.12 (vanilla)
+
+Use the `musllinux` wheel on Alpine/musl systems; use `manylinux` on glibc
+systems. Swap the `.post2` filename for the `.post1` JIT Kernels wheel if you
+want the LLVM/Enzyme + SIMD build.
+
+```bash
+python3.12 -m venv .venv
+. .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+mkdir -p wheelhouse
+gh -R Vannarho/examples release download vre-python-v0.14.0 \
+  -p vannarho_risk_engine-0.14.0.post2-cp312-cp312-manylinux_2_28_aarch64.whl \
+  -D wheelhouse
+python -m pip install wheelhouse/vannarho_risk_engine-0.14.0.post2-cp312-cp312-manylinux_2_28_aarch64.whl
 ```
 
 ## Run scripts
@@ -156,8 +223,9 @@ service process while passing in the fresh local release proof.
 
 ## Current limitations
 
-- The published wheels in this release are macOS arm64 only. Windows and Linux
-  wheels are expected to be built separately.
+- The published wheels in this release cover macOS arm64 and Linux aarch64.
+  x86_64 Linux, Windows, and CUDA-enabled GPU wheels are expected to be built
+  separately.
 - The examples are smoke and investigation surfaces. They are not a substitute
   for a governed RaaS tenant, production approvals, or client-specific validation
   evidence.

@@ -1,10 +1,13 @@
 # Vannarho Risk Engine Python Examples
 
 This repository contains the Python wheel examples for the Vannarho Risk Engine
-(VRE). The examples run against the installed `vannarho-risk-engine` pybind wheel only.
-They do not require `PYTHONPATH`, local source-tree imports, or in-repo C++
-build artifacts. The script and notebook entrypoints fail closed if VRE binaries
-resolve outside the installed wheel distribution.
+(VRE) — the same deterministic pricing and risk engine that powers
+[Vannarho Risk Results as a Service](https://vannarho.com/), packaged as a
+`pip`-installable wheel for macOS, Linux, and Windows. The examples run against
+the installed `vannarho-risk-engine` pybind wheel only. They do not require
+`PYTHONPATH`, local source-tree imports, or in-repo C++ build artifacts. The
+script and notebook entrypoints fail closed if VRE binaries resolve outside the
+installed wheel distribution.
 
 ## How this relates to Vannarho RaaS
 
@@ -138,6 +141,15 @@ Linux aarch64 (Python 3.12, `manylinux_2_28` / `musllinux_1_2`):
   `vannarho_risk_engine-0.14.0.post1-cp312-cp312-manylinux_2_28_aarch64.whl`
   / `…-musllinux_1_2_aarch64.whl`
 
+Windows x86_64 (Python 3.13 and 3.14):
+
+- Vanilla:
+  `vannarho_risk_engine-0.14.0.post2-cp313-cp313-win_amd64.whl`
+  / `…post2-cp314-cp314-win_amd64.whl`
+- JIT Kernels (AVX2):
+  `vannarho_risk_engine-0.14.0.post1-cp313-cp313-win_amd64.whl`
+  / `…post1-cp314-cp314-win_amd64.whl`
+
 ### macOS, Python 3.13
 
 ```bash
@@ -169,6 +181,31 @@ gh -R Vannarho/examples release download vre-python-v0.14.0 \
   -D wheelhouse
 python -m pip install wheelhouse/vannarho_risk_engine-0.14.0.post2-cp312-cp312-manylinux_2_28_aarch64.whl
 ```
+
+### Windows x86_64, Python 3.13 (vanilla)
+
+Run these in PowerShell. Both Windows wheels are self-contained: `delvewheel`
+bundles the native dependencies (QuantLib, QuantExt, VREData, VREAnalytics, and
+the JIT runtime for the kernel build) into the wheel, so there is no Visual C++
+redistributable to chase down. The vanilla wheel below runs on any x86_64 CPU.
+For the JIT Kernels build, swap the `.post2` filename for `.post1`; it needs a
+CPU with AVX2 support (anything since roughly 2013) and gives you the compiled
+LLVM/Enzyme AAD fast path.
+
+```powershell
+py -3.13 -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+mkdir wheelhouse
+gh -R Vannarho/examples release download vre-python-v0.14.0 `
+  -p vannarho_risk_engine-0.14.0.post2-cp313-cp313-win_amd64.whl `
+  -D wheelhouse
+python -m pip install wheelhouse\vannarho_risk_engine-0.14.0.post2-cp313-cp313-win_amd64.whl
+```
+
+The same engine that runs behind Vannarho Risk Results as a Service now installs
+on a Windows desktop or laptop with a single `pip install`.
 
 ## Run scripts
 
@@ -223,9 +260,9 @@ service process while passing in the fresh local release proof.
 
 ## Current limitations
 
-- The published wheels in this release cover macOS arm64 and Linux aarch64.
-  x86_64 Linux, Windows, and CUDA-enabled GPU wheels are expected to be built
-  separately.
+- The published wheels in this release cover macOS arm64, Linux aarch64, and
+  Windows x86_64. x86_64 Linux and CUDA-enabled GPU wheels are expected to be
+  built separately.
 - The examples are smoke and investigation surfaces. They are not a substitute
   for a governed RaaS tenant, production approvals, or client-specific validation
   evidence.

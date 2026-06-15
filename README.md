@@ -74,14 +74,19 @@ flavour:
 
 - **macOS — Metal.** Enabled by default on Apple Silicon builds; the macOS
   wheels are produced with the Metal compute backend.
-- **Linux / Windows — CUDA.** Built against the NVIDIA CUDA Toolkit 12.4
-  (host GCC ≤ 12), targeting compute capability 7.5 (for example NVIDIA T4).
-  CUDA-enabled Linux/Windows wheels are not part of this release and are
+- **Linux — CUDA (`.post3`).** A CUDA / GPU wheel is now published for Linux
+  aarch64 (`manylinux_2_28`; CUDA does not support musl libc). It is built
+  against the NVIDIA CUDA Toolkit 13 (compute capability 12.1, for example
+  NVIDIA GB10) and bundles the CUDA runtime (cudart, cublas, curand, cusolver,
+  cusparse, nvrtc). It additionally requires an NVIDIA driver (`libcuda.so.1`)
+  and a GPU at run time. The x86_64 Linux and Windows CUDA wheels are still
   expected to be published separately.
 
 GPU execution is selected at run time by the relevant flow configuration; the
 notebooks make the executed path explicit so you can confirm whether a CPU or
-GPU kernel ran.
+GPU kernel ran. On small example portfolios the GPU does not necessarily beat
+the CPU — device setup and NVRTC kernel compilation add fixed overhead — so the
+GPU advantage is most visible on larger scenario or path counts.
 
 ## Example scripts
 
@@ -140,6 +145,8 @@ Linux aarch64 (Python 3.12, `manylinux_2_28` / `musllinux_1_2`):
 - JIT Kernels:
   `vannarho_risk_engine-0.14.0.post1-cp312-cp312-manylinux_2_28_aarch64.whl`
   / `…-musllinux_1_2_aarch64.whl`
+- CUDA / GPU (`manylinux` only; needs an NVIDIA driver + GPU at run time):
+  `vannarho_risk_engine-0.14.0.post3-cp312-cp312-manylinux_2_28_aarch64.whl`
 
 Windows x86_64 (Python 3.13 and 3.14):
 
